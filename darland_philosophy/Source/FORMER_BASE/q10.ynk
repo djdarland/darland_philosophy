@@ -1,0 +1,20 @@
+pl_external_synonym_expanded(Number,Philosopher_1,Philosopher_2,Type,External_Term_1,External_Term_2,Abbreviation_for_Book,Abbreviation_for_Article,Pages,Quotation,Note, Book, Book_Year, Article, Article_Year)?
+;
+;
+;
+;
+;
+%%LIFE =;
+
+pl_external_synonym_basic(Number,Philosopher_1,Philosopher_2,Type,External_Term_1,External_Term_2,Pages,Quotation,Note, Book, Book_Year, Article, Article_Year)?
+;
+;
+;
+;
+;
+%%LIFE =;
+
+pl_ambiguity_1(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2A,External_Term_2B)?
+
+pl_ambiguity_2(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1A, External_Term_1B,External_Term_2)?
+%%LIFE =;

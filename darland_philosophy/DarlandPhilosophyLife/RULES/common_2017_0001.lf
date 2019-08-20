@@ -1,0 +1,292 @@
+%% Copyright (C) 2017 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+%% 
+%% This file is identical (actually linked with the Linux ln command).
+%% as common_2017_0001.pl for prolog and common_2017_0001.lf for Life
+%% 
+%%
+%% I have made the propositional attitude relatons support an arity up to 6.
+%% Changed limit of arity to 3. 1/17/2017
+%% This simplifies & reduces redundancy from what I did before.
+%% Before I treated each case individually.
+%% If fewer arguments are needed "nop" may be used (without quotes).
+%%
+%% It could be done, I think, generally, & more elegantly for an arbitrary
+%% number of arguments (by using lists), but the code would be harder
+%% to read & understand - so I chose not to do that.
+%% Six arguments is probably sufficient.
+%%
+%% Arity & Type are not much used yet, but they may be handy in the future.
+%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define sense (close to Frege's Sinn) (useless)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+sense_of_relation(Internal_Relation_Symbol) :- internal_relation_symbol(Subject, Time, Type, Arity, Internal_Relation_Symbol, Relation).
+
+sense_of_object(A_Internal_Symbol) :- internal_symbol(Subject, Time, Type, A_Internal_Symbol, A_Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% understands relation just state that symbol requirements for understanding are met
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+understands_external_internal_object(Subject, Time, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object) :- understands_external_internal(Subject, Time, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol), understands_internal_object(Subject, Time, Type, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object).
+
+understands_external_object(Subject, Time, Type, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object) :- type_p3(Type, Type_p3), type_p2(Type, Type_p2), type_p1(Type, Type_p1), external_relation_symbol(Subject, Time, Type_p3, Arity, External_Relation_Symbol, Internal_Relation_Symbol), external_symbol(Subject, Time, Type_p2, A_External_Symbol, A_Internal_Symbol), external_symbol(Subject, Time, Type_p2, B_External_Symbol, B_Internal_Symbol), external_symbol(Subject, Time, Type_p2, C_External_Symbol, C_Internal_Symbol), internal_relation_symbol(Subject, Time, Type_p1, Arity, Internal_Relation_Symbol, Relation), internal_symbol(Subject, Time, Type, A_Internal_Symbol, A_Object), internal_symbol(Subject, Time, Type, B_Internal_Symbol, B_Object), internal_symbol(Subject, Time, Type, C_Internal_Symbol, C_Object), check_arity(Arity, A_External_Symbol, B_External_Symbol, C_External_Symbol).
+
+understands_external_internal(Subject, Time, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol) :- type_p1(Type, Type_p1), type_p2(Type, Type_p2), type_p3(Type, Type_p3), external_relation_symbol(Subject, Time, Type_p3, Arity, External_Relation_Symbol, Internal_Relation_Symbol), external_symbol(Subject, Time, Type_p2, A_External_Symbol, A_Internal_Symbol), external_symbol(Subject, Time, Type_p2, B_External_Symbol, B_Internal_Symbol), external_symbol(Subject, Time, Type_p2, C_External_Symbol, C_Internal_Symbol), understands_internal_object(Subject, Time, Type, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object), check_arity(Arity, A_External_Symbol, B_External_Symbol, C_External_Symbol).
+
+understands_internal_object(Subject, Time, Type, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object) :- type_p1(Type, Type_p1), internal_relation_symbol(Subject, Time, Type_p1, Arity, Internal_Relation_Symbol, Relation), internal_symbol(Subject, Time, Type, A_Internal_Symbol, A_Object), internal_symbol(Subject, Time, Type, B_Internal_Symbol, B_Object), internal_symbol(Subject, Time, Type, C_Internal_Symbol, C_Object), check_arity(Arity, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+
+understands_object(Subject, Time, Type, Arity, Relation, A_Object, B_Object, C_Object) :- understands_internal_object(Subject, Time, Type, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2) :- type_p1(Type, Type_p1), understands_internal_object(Subject_2, Time_2, Type, Arity, Internal_Relation_Symbol_2, Relation, A_Internal_Symbol_2, A_Object, B_Internal_Symbol_2, B_Object, C_Internal_Symbol_2, C_Object), understands_internal_object(Subject_1, Time_1, Type, Arity, Internal_Relation_Symbol_1, Relation, A_Internal_Symbol_1, A_Object, B_Internal_Symbol_1, B_Object, C_Internal_Symbol_1, C_Object), different(Subject_1, Subject_2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+understands_internal_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2) :- understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2), understands_external_internal(Subject_2, Time_2, Type, Arity, External_Relation_Symbol_2, Internal_Relation_Symbol_2, A_External_Symbol_2, A_Internal_Symbol_2, B_External_Symbol_2, B_Internal_Symbol_2, C_External_Symbol_2, C_Internal_Symbol_2).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+understands_external_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1) :- understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2), understands_external_internal(Subject_1, Time_1, Type, Arity, External_Relation_Symbol_1, Internal_Relation_Symbol_1, A_External_Symbol_1, A_Internal_Symbol_1, B_External_Symbol_1, B_Internal_Symbol_1, C_External_Symbol_1, C_Internal_Symbol_1).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+understands_external_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2) :- understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2), understands_external_internal(Subject_1, Time_1, Type, Arity, External_Relation_Symbol_1, Internal_Relation_Symbol_1, A_External_Symbol_1, A_Internal_Symbol_1, B_External_Symbol_1, B_Internal_Symbol_1, C_External_Symbol_1, C_Internal_Symbol_1), understands_external_internal(Subject_2, Time_2, Type, Arity, External_Relation_Symbol_2, Internal_Relation_Symbol_2, A_External_Symbol_2, A_Internal_Symbol_2, B_External_Symbol_2, B_Internal_Symbol_2, C_External_Symbol_2, C_Internal_Symbol_2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% believes relation mean Subject understands & has proper belief_internal
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_external_internal_object(Subject, Time, Logical_Form, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object) :- understands_external_internal(Subject, Time, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol), understands_internal_object(Subject, Time, Type, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object), believes_internal(Subject, Time, Logical_Form, Type, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_external_object(Subject, Time, Logical_Form, Type, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object) :- believes_external_internal_object(Subject, Time, Logical_Form, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_external_internal(Subject, Time, Logical_Form, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol) :- believes_external_internal_object(Subject, Time, Logical_Form, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_internal_object(Subject, Time, Logical_Form, Type, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object) :- understands_internal_object(Subject, Time, Type, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object), believes_internal(Subject, Time, Logical_Form, Type, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_object(Subject, Time, Logical_Form, Type, Arity, Relation, A_Object, B_Object, C_Object) :- believes_internal_object(Subject, Time, Logical_Form, Type, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% These indicacate a Subject_1 believing a Subject_2 understanding
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2) :- type_p1(Type, Type_p1), understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_relation_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type_p1, Arity, Internal_Relation_Symbol_1, Internal_Relation_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, A_Internal_Symbol_1, A_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, B_Internal_Symbol_1, B_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, C_Internal_Symbol_1, C_Internal_Symbol_2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2) :- type_p1(Type, Type_p1), understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2), believes_there_is_internal_symbol_of_external_relation_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type_p1, Arity, Internal_Relation_Symbol_1, External_Relation_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, A_Internal_Symbol_1, A_External_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, B_Internal_Symbol_1, B_External_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, C_Internal_Symbol_1, C_External_Symbol_2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2) :- type_p1(Type, Type_p1), understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2), believes_there_is_internal_symbol_of_external_relation_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type_p1, Arity, Internal_Relation_Symbol_1, External_Relation_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, A_Internal_Symbol_1, A_External_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, B_Internal_Symbol_1, B_External_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, C_Internal_Symbol_1, C_External_Symbol_2), understands_external_internal(Subject_1, Time_1, Type, Arity, External_Relation_Symbol_1, Internal_Relation_Symbol_1, A_External_Symbol_1, A_Internal_Symbol_1, B_External_Symbol_1, B_Internal_Symbol_1, C_External_Symbol_1, C_Internal_Symbol_1).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1) :- type_p1(Type, Type_p1), understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_relation_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type_p1, Arity, Internal_Relation_Symbol_1, Internal_Relation_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, A_Internal_Symbol_1, A_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, B_Internal_Symbol_1, B_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, C_Internal_Symbol_1, C_Internal_Symbol_2), understands_external_internal(Subject_1, Time_1, Type, Arity, External_Relation_Symbol_1, Internal_Relation_Symbol_1, A_External_Symbol_1, A_Internal_Symbol_1, B_External_Symbol_1, B_Internal_Symbol_1, C_External_Symbol_1, C_Internal_Symbol_1).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% These indicacate a Subject_1 believing a Subject_2 believing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2) :- type_p1(Type, Type_p1), understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_relation_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type_p1, Arity, Internal_Relation_Symbol_1, Internal_Relation_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, A_Internal_Symbol_1, A_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, B_Internal_Symbol_1, B_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, C_Internal_Symbol_1, C_Internal_Symbol_2), believes_believes_internal(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, Type, Arity, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2) :- type_p1(Type, Type_p1), understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2), believes_there_is_internal_symbol_of_external_relation_symbol(Subject_1, Time_1, Logical_Form, Subject_2, Time_2, Type_p1, Arity, Internal_Relation_Symbol_1, External_Relation_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, A_Internal_Symbol_1, A_External_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, B_Internal_Symbol_1, B_External_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, C_Internal_Symbol_1, C_External_Symbol_2), believes_believes_internal(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, Type, Arity, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2) :- type_p1(Type, Type_p1), understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2), believes_there_is_internal_symbol_of_external_relation_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type_p1, Arity, Internal_Relation_Symbol_1, External_Relation_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, A_Internal_Symbol_1, A_External_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, B_Internal_Symbol_1, B_External_Symbol_2), believes_there_is_internal_symbol_of_external_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, C_Internal_Symbol_1, C_External_Symbol_2), understands_external_internal(Subject_1, Time_1, Type, Arity, External_Relation_Symbol_1, Internal_Relation_Symbol_1, A_External_Symbol_1, A_Internal_Symbol_1, B_External_Symbol_1, B_Internal_Symbol_1, C_External_Symbol_1, C_Internal_Symbol_1), believes_believes_internal(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, Type, Arity, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1) :- type_p1(Type, Type_p1), understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, Type, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_relation_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type_p1, Arity, Internal_Relation_Symbol_1, Internal_Relation_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, A_Internal_Symbol_1, A_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, B_Internal_Symbol_1, B_Internal_Symbol_2), believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, C_Internal_Symbol_1, C_Internal_Symbol_2), understands_external_internal(Subject_1, Time_1, Type, Arity, External_Relation_Symbol_1, Internal_Relation_Symbol_1, A_External_Symbol_1, A_Internal_Symbol_1, B_External_Symbol_1, B_Internal_Symbol_1, C_External_Symbol_1, C_Internal_Symbol_1), believes_believes_internal(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, Type, Arity, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% propositions are anything understood - ignoring Subject & Time
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% external symbols are shared between people (Subjects).
+%% People learn them - through the ability to connect internal symbols to 
+%% objects and the internal symbols to external symbols.
+%% 
+%% The internal symbols need not (often probably are not) the same for
+%% different people, but (mostly) the same objects are connected to the
+%% same external symbols via the differing internal symbols.
+%%
+%% internal_propositions are often called propositions
+%% external_propositions are often called sentences
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+internal_proposition(Type, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object) :- understands_internal_object(Subject, Time, Type, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object).
+
+external_proposition(Type, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object) :- understands_external_object(Subject, Time, Type, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% true_propositons are propositions corrseponding to facts (as deternined by apply_predicate - implemented differently - but equivalently in prolog & life.)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+true_internal_proposition(Logical_Form, Type, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol) :- understands_internal_object(Subject, Time, Type, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object), apply_predicate(Logical_Form, Type, Arity, Relation, A_Object, B_Object, C_Object).
+
+true_external_proposition(Logical_Form, Type, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol) :- understands_external_object(Subject, Time, Type, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object), apply_predicate(Logical_Form, Type, Arity, Relation, A_Object, B_Object, C_Object).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% true_beliefs are beliefs corrseponding to facts (as deternined by apply_predicate - implemented differently - but equivalently in prolog & life.)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+true_internal_belief(Subject, Time, Logical_Form, Type, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol) :- believes_internal_object(Subject, Time, Logical_Form, Type, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object), apply_predicate(Logical_Form, Type, Arity, Relation, A_Object, B_Object, C_Object).
+
+true_external_belief(Subject, Time, Logical_Form, Type, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol) :- believes_external_object(Subject, Time, Logical_Form, Type, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object), apply_predicate(Logical_Form, Type, Arity, Relation, A_Object, B_Object, C_Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The opaque_believes... test whether there are cases where the corresponding believes... is satisfied by different logical forms (everything else remaining the same.) I.e. the same subject believes the same thing is both true and false. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+opaque_believes_object(Subject, Time, Logical_Form_1, Logical_Form_2, Type, Arity, Relation, A_Object, B_Object, C_Object) :- believes_object(Subject, Time, Logical_Form_1, Type, Arity, Relation, A_Object, B_Object, C_Object), believes_object(Subject, Time, Logical_Form_2, Type, Arity, Relation, A_Object, B_Object, C_Object), different(Logical_Form_1, Logical_Form_2). 
+
+
+opaque_believes_external_internal_object(Subject, Time, Logical_Form_1, Logical_Form_2, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object) :- believes_external_internal_object(Subject, Time, Logical_Form_1, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object), believes_external_internal_object(Subject, Time, Logical_Form_2, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object), different(Logical_Form_1, Logical_Form_2). 
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+opaque_believes_external_object(Subject, Time, Logical_Form_1, Logical_Form_2, Type, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object) :- believes_external_object(Subject, Time, Logical_Form_1, Type, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object), believes_external_object(Subject, Time, Logical_Form_2, Type, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object), different(Logical_Form_1, Logical_Form_2). 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+opaque_believes_external_internal(Subject, Time, Logical_Form_1, Logical_Form_2, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol) :- believes_external_internal(Subject, Time, Logical_Form_1, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol), believes_external_internal(Subject, Time, Logical_Form_2, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol), different(Logical_Form_1, Logical_Form_2). 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+opaque_believes_internal_object(Subject, Time, Logical_Form_1, Logical_Form_2, Type, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object) :- believes_internal_object(Subject, Time, Logical_Form_1, Type, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object), believes_internal_object(Subject, Time, Logical_Form_2, Type, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object), different(Logical_Form_1, Logical_Form_2). 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+opaque_believes_internal(Subject, Time, Logical_Form_1, Logical_Form_2, Type, Arity, Internal_Relation_symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol) :- believes_internal(Subject, Time, Logical_Form_1, Type, Arity, Internal_Relation_symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol), believes_internal(Subject, Time, Logical_Form_2, Type, Arity, Internal_Relation_symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol), different(Logical_Form_1, Logical_Form_2). 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Two relations are formally equivalent it they are true of exactly the same things - even though they might not (according to their meanings).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+not_formally_equivalent(Type, Arity, Relation1, Relation2) :- apply_predicate(Logical_Form_1, Type, Arity, Relation1, A_Object, B_Object, C_Object), \+ apply_predicate(Logical_Form_2, Type, Arity, Relation1, A_Object, B_Object, C_Object), different(Logical_Form_1, Logical_Form_2).
+
+formally_equivalent(Type, Arity, Relation1, Relation2) :- \+ not_formally_equivalent(Type, Arity, Relation1, Relation2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Rules on Philosophical Terminology
+
+%% DEBUG VERSION 
+%% pl_external_synonym_simple_expanded(Number, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Author_1, Author_Article_1, Author_Book_1, Article_Title_1, Book_Title_1, Pages_1, Quotation_1, Article_Year_1, Book_Year_1, Note1, Notes_Article_1, Notes_Book_1, Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2, Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3, Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4) :- write(['A0001']), nl, term(External_Term_1), write(['A0002']), nl, term(External_Term_2), write(['A0003', Number, External_Term_1, External_Term_2]), nl, pl_external_synonym(Number, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Quote_2, Quote_3, Quote_4), quote_note(Quote_1, Author_1, Author_Article_1, Author_Book_1, Article_Title_1, Book_Title_1, Pages_1, Quotation_1, Article_Year_1, Book_Year_1, Note1, Notes_Article_1, Notes_Book_1), write(['A0004', Number, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Quote_2, Quote_3, Quote_4 ]), nl, quote_note(Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2), write(['A0005', Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2] ), nl, quote_note(Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3), write(['A0006', Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3]), nl, quote_note(Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4), write(['A0007', Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4] ), nl.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% pl_external_synonym expanded with full names and supporting quotations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+pl_external_synonym_simple_expanded(Number, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Author_1, Author_Article_1, Author_Book_1, Article_Title_1, Book_Title_1, Pages_1, Quotation_1, Article_Year_1, Book_Year_1, Note1, Notes_Article_1, Notes_Book_1, Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2, Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3, Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4) :- term(External_Term_1), term(External_Term_2), pl_external_synonym(Number, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Quote_2, Quote_3, Quote_4), quote_note(Quote_1, Author_1, Author_Article_1, Author_Book_1, Article_Title_1, Book_Title_1, Pages_1, Quotation_1, Article_Year_1, Book_Year_1, Note1, Notes_Article_1, Notes_Book_1), quote_note(Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2), quote_note(Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3), quote_note(Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% pl_external_synonym componded - two philosophers using term same as another
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+pl_external_synonym_compound_expanded(Number1A, Number1B, Philosopher_1, Philosopher_2A, Philosopher_2B, External_Term_1, External_Term_2A, External_Term_2B, Quote_1A, Author_1A, Author_Article_1A, Author_Book_1A, Article_Title_1A, Book_Title_1A, Pages_1A, Quotation_1A, Article_Year_1A, Book_Year_1A, Note1A, Notes_Article_1A, Notes_Book_1A, Quote_2A, Author_2A, Author_Article_2A, Author_Book_2A, Article_Title_2A, Book_Title_2A, Pages_2A, Quotation_2A, Article_Year_2A, Book_Year_2A, Note2A, Notes_Article_2A, Notes_Book_2A, Quote_3A, Author_3A, Author_Article_3A, Author_Book_3A, Article_Title_3A, Book_Title_3A, Pages_3A, Quotation_3A, Article_Year_3A, Book_Year_3A, Note3A, Notes_Article_3A, Notes_Book_3A, Quote_4A, Author_4A, Author_Article_4A, Author_Book_4A, Article_Title_4A, Book_Title_4A, Pages_4A, Quotation_4A, Article_Year_4A, Book_Year_4A, Note4A, Notes_Article_4A, Notes_Book_4A, Quote_1B, Author_1B, Author_Article_1B, Author_Book_1B, Article_Title_1B, Book_Title_1B, Pages_1B, Quotation_1B, Article_Year_1B, Book_Year_1B, Note1B, Notes_Article_1B, Notes_Book_1B, Quote_2B, Author_2B, Author_Article_2B, Author_Book_2B, Article_Title_2B, Book_Title_2B, Pages_2B, Quotation_2B, Article_Year_2B, Book_Year_2B, Note2B, Notes_Article_2B, Notes_Book_2B, Quote_3B, Author_3B, Author_Article_3B, Author_Book_3B, Article_Title_3B, Book_Title_3B, Pages_3B, Quotation_3B, Article_Year_3B, Book_Year_3B, Note3B, Notes_Article_3B, Notes_Book_3B, Quote_4B, Author_4B, Author_Article_4B, Author_Book_4B, Article_Title_4B, Book_Title_4B, Pages_4B, Quotation_4B, Article_Year_4B, Book_Year_4B, Note4B, Notes_Article_4B, Notes_Book_4B) :- term(External_Term_1), term(External_Term_2), pl_external_synonym(NumberA, Philosopher_1, Philosopher_2A, External_Term_1, External_Term_2A, Quote_1A, Quote_2A, Quote_3A, Quote_4A), pl_external_synonym(NumberB, Philosopher_1, Philosopher_2B, External_Term_1, External_Term_2B, Quote_1B, Quote_2B, Quote_3B, Quote_4B), quote_note(Quote_1A, Author_1A, Author_Article_1A, Author_Book_1A, Article_Title_1A, Book_Title_1A, Pages_1A, Quotation_1A, Article_Year_1A, Book_Year_1A, Note1A, Notes_Article_1A, Notes_Book_1A), quote_note(Quote_2A, Author_2A, Author_Article_2A, Author_Book_2A, Article_Title_2A, Book_Title_2A, Pages_2A, Quotation_2A, Article_Year_2A, Book_Year_2A, Note2A, Notes_Article_2A, Notes_Book_2A), quote_note(Quote_3A, Author_3A, Author_Article_3A, Author_Book_3A, Article_Title_3A, Book_Title_3A, Pages_3A, Quotation_3A, Article_Year_3A, Book_Year_3A, Note3A, Notes_Article_3A, Notes_Book_3A), quote_note(Quote_4A, Author_4A, Author_Article_4A, Author_Book_4A, Article_Title_4A, Book_Title_4A, Pages_4A, Quotation_4A, Article_Year_4A, Book_Year_4A, Note4A, Notes_Article_4A, Notes_Book_4A), quote_note(Quote_1B, Author_1B, Author_Article_1B, Author_Book_1B, Article_Title_1B, Book_Title_1B, Pages_1B, Quotation_1B, Article_Year_1B, Book_Year_1B, Note1B, Notes_Article_1B, Notes_Book_1B), quote_note(Quote_2B, Author_2B, Author_Article_2B, Author_Book_2B, Article_Title_2B, Book_Title_2B, Pages_2B, Quotation_2B, Article_Year_2B, Book_Year_2B, Note2B, Notes_Article_2B, Notes_Book_2B), quote_note(Quote_3B, Author_3B, Author_Article_3B, Author_Book_3B, Article_Title_3B, Book_Title_3B, Pages_3B, Quotation_3B, Article_Year_3B, Book_Year_3B, Note3B, Notes_Article_3B, Notes_Book_3B), quote_note(Quote_4B, Author_4B, Author_Article_4B, Author_Book_4B, Article_Title_4B, Book_Title_4B, Pages_4B, Quotation_4B, Article_Year_4B, Book_Year_4B, Note4B, Notes_Article_4B, Notes_Book_4B), different(Philosopher_2A, Philosopher_2B).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Philosopher 2 using 2 different terms as philosopher 1 uses 1 term
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+pl_ambiguity_1(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2A, External_Term_2B) :- pl_external_synonym(Number_1, Philosopher_Abbreviation_1, Philosopher_Abbreviation_2, External_Term_1, External_Term_2A, Quote_1A, Quote_2A, Quote_3A, Quote_4A), pl_external_synonym(Number_2, Philosopher_Abbreviation_1, Philosopher_Abbreviation_2, External_Term_1, External_Term_2B, Quote_1B, Quote_2B, Quote_3B, Quote_4B), different(External_Term_2A, External_Term_2B), philosopher(Philosopher_Abbreviation_1, Philosopher_1), philosopher(Philosopher_Abbreviation_2, Philosopher_2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Philosopher 1 using 2 different terms as philosopher 2 uses 1 term
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+pl_ambiguity_2(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1A, External_Term_1B, External_Term_2) :- pl_external_synonym(Number_1, Philosopher_Abbreviation_1, Philosopher_Abbreviation_2, External_Term_1A, External_Term_2, Quote_1A, Quote_2A, Quote_3A, Quote_4A), pl_external_synonym(Number_2, Philosopher_Abbreviation_1, Philosopher_Abbreviation_2, External_Term_1B, External_Term_2, Quote_1B, Quote_2B, Quote_3B, Quote_4B), different(External_Term_1A, External_Term_1B), philosopher(Philosopher_Abbreviation_1, Philosopher_1), philosopher(Philosopher_Abbreviation_2, Philosopher_2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Expand quotation info when there is both book and article info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+quote_note(Id_Number, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book) :- philosophical_quotation(Id_Number, Author_Abbreviation, Article_Abbreviation, Book_Abbreviation, Pages, Quotation, Note1), article(Article_Abbreviation, Book_Abbreviation, Author_Article_Abbreviation, Article_Title, Article_Year, Notes_Article), book(Book_Abbreviation, Author_Book_Abbreviation, Book_Title, Book_Year, Notes_Book), philosopher(Author_Article_Abbreviation, Author_Article), philosopher(Author_Book_Abbreviation, Author_Book), actual_author(Author_Abbreviation, Author_Article_Abbreviation, Author_Book_Abbreviation), philosopher(Author_Abbreviation, Author).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Expand quotation info when there is only book info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+quote_note(Id_Number, Author, none, Author_Book, none, Book_Title, Pages, Quotation, none, Book_Year, Note1, none, Notes_Book) :- philosophical_quotation(Id_Number, Author_Abbreviation, none, Book_Abbreviation, Pages, Quotation, Note1), book(Book_Abbreviation, Author_Book_Abbreviation, Book_Title, Book_Year, Notes_Book), philosopher(Author_Book_Abbreviation, Author_Book), actual_author(Author_Abbreviation, none, Author_Book_Abbreviation), philosopher(Author_Abbreviation, Author).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Expand quotation info when there is only article info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+quote_note(Id_Number, Author, Author_Article, none, Article_Title, none, Pages, Quotation, Article_Year, none, Note1, Notes_Article, none) :- philosophical_quotation(Id_Number, Author_Abbreviation, Article_Abbreviation, none, Pages, Quotation, Note1), article(Article_Abbreviation, none, Author_Article_Abbreviation, Article_Title, Article_Year, Notes_Article), philosopher(Author_Article_Abbreviation, Author_Article), actual_author(Author_Abbreviation, Author_Article_Abbreviation, none), philosopher(Author_Abbreviation, Author).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Expand quotation info when there is no info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+quote_note(none, none, none, none, none, none, none, none, none, none, none, none, none).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If there is article author info use it - otherwise use book info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+actual_author(Author_Abbreviation, Author_Article_Abbreviation, Author_Book_Abbreviation) :- different(Author_Article_Abbreviation, none), Author_Abbreviation = Author_Article_Abbreviation, !.
+
+actual_author(Author_Abbreviation, Author_Article_Abbreviation, Author_Book_Abbreviation) :- Author_Abbreviation = Author_Book_Abbreviation. 
+

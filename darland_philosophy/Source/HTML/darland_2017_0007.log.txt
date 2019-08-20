@@ -1,0 +1,421 @@
+true.
+
+['facts/common_facts_2017_0001'].
+% facts/common_facts_2017_0001 compiled 0.00 sec, 100 clauses
+true.
+
+['facts/common_facts_2017_0002'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/facts/common_facts_2017_0002.pl:275:
+	Clauses of book/5 are not together in the source-file
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/facts/common_facts_2017_0002.pl:408:
+	Clauses of philosophical_quotation/7 are not together in the source-file
+% facts/common_facts_2017_0002 compiled 0.00 sec, 180 clauses
+true.
+
+['rules/common_2017_0001'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:43:
+	Singleton variables: [Subject,Time,Type,Arity,Relation]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:45:
+	Singleton variables: [Subject,Time,Type,A_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:57:
+	Singleton variables: [Type_p1,Relation,A_Object,B_Object,C_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:61:
+	Singleton variables: [Internal_Relation_symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:65:
+	Singleton variables: [Type_p1]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:79:
+	Singleton variables: [External_Relation_Symbol_2]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:91:
+	Singleton variables: [Internal_Relation_Symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:95:
+	Singleton variables: [Relation,A_Object,B_Object,C_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:99:
+	Singleton variables: [Internal_Relation_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:103:
+	Singleton variables: [Internal_Relation_symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:136:
+	Singleton variables: [Logical_Form]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:166:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:168:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:176:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:178:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:223:
+	Singleton variables: [Relation2]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:223:
+	Singleton variable in \+: Logical_Form_2
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:247:
+	Singleton variables: [Number1A,Number1B,External_Term_2,NumberA,NumberB]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:253:
+	Singleton variables: [Quote_1A,Quote_2A,Quote_3A,Quote_4A,Quote_1B,Quote_2B,Quote_3B,Quote_4B]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:259:
+	Singleton variables: [Quote_1A,Quote_2A,Quote_3A,Quote_4A,Quote_1B,Quote_2B,Quote_3B,Quote_4B]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:289:
+	Singleton variables: [Author_Book_Abbreviation]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:291:
+	Singleton variables: [Author_Article_Abbreviation]
+% rules/common_2017_0001 compiled 0.01 sec, 49 clauses
+true.
+
+['rules/prolog_2017_0001'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:27:
+	Singleton variables: [Type,Arity]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:36:
+	Singleton variables: [Ignore]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:39:
+	Singleton variables: [Ignore]
+% rules/prolog_2017_0001 compiled 0.00 sec, 13 clauses
+true.
+
+
+ 
+ 
+ 
+ 
+ 
+
+write_time(Ignore).
+will be time someday
+true.
+
+
+
+remark(7001, Remark).
+Remark = 'Test Set 7 - about truth.'.
+
+
+
+true_internal_proposition(pos_pos, 0, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+Arity = 2,
+Internal_Relation_Symbol = tom_denounced_int,
+A_Internal_Symbol = tom_cicero_int,
+B_Internal_Symbol = tom_cataline_int,
+C_Internal_Symbol = nop ;
+Arity = 2,
+Internal_Relation_Symbol = tom_denounced_int,
+A_Internal_Symbol = tom_tully_int,
+B_Internal_Symbol = tom_cataline_int,
+C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_human_int,
+A_Internal_Symbol = tom_cicero_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_human_int,
+A_Internal_Symbol = tom_tully_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_human_int,
+A_Internal_Symbol = tom_cataline_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_human_int,
+A_Internal_Symbol = tom_tom_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_featherless_biped_int,
+A_Internal_Symbol = tom_cicero_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_featherless_biped_int,
+A_Internal_Symbol = tom_tully_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_featherless_biped_int,
+A_Internal_Symbol = tom_cataline_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_featherless_biped_int,
+A_Internal_Symbol = tom_tom_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_american_int,
+A_Internal_Symbol = tom_tom_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_roman_int,
+A_Internal_Symbol = tom_cicero_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_roman_int,
+A_Internal_Symbol = tom_tully_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = tom_roman_int,
+A_Internal_Symbol = tom_cataline_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 2,
+Internal_Relation_Symbol = quine_denounced_int,
+A_Internal_Symbol = quine_cicero_int,
+B_Internal_Symbol = quine_cataline_int,
+C_Internal_Symbol = nop ;
+Arity = 2,
+Internal_Relation_Symbol = quine_denounced_int,
+A_Internal_Symbol = quine_tully_int,
+B_Internal_Symbol = quine_cataline_int,
+C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = quine_human_int,
+A_Internal_Symbol = quine_cicero_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = quine_human_int,
+A_Internal_Symbol = quine_tully_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = quine_human_int,
+A_Internal_Symbol = quine_cataline_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Arity = 1,
+Internal_Relation_Symbol = quine_human_int,
+A_Internal_Symbol = quine_tom_int,
+B_Internal_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+find_all([pos_pos, 0, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol], true_internal_proposition(pos_pos, 0, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol), L).
+L = [[pos_pos, 0, 2, tom_denounced_int, tom_cicero_int, tom_cataline_int, nop], [pos_pos, 0, 2, tom_denounced_int, tom_tully_int, tom_cataline_int, nop], [pos_pos, 0, 1, tom_human_int, tom_cicero_int, nop|...], [pos_pos, 0, 1, tom_human_int, tom_tully_int|...], [pos_pos, 0, 1, tom_human_int|...], [pos_pos, 0, 1|...], [pos_pos, 0|...], [pos_pos|...], [...|...]|...].
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+true_internal_proposition(pos_pos, 1, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+false.
+
+ 
+
+true_internal_proposition(pos_pos, 2, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+false.
+
+ 
+true_internal_proposition(pos_pos, 3, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+false.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+true_internal_proposition(pos_neg, 0, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+Arity = 2,
+Internal_Relation_Symbol = tom_denounced_int,
+A_Internal_Symbol = tom_tom_int,
+B_Internal_Symbol = tom_cataline_int,
+C_Internal_Symbol = nop  
+
+
+true_internal_proposition(pos_neg, 0, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+Arity = 2,
+Internal_Relation_Symbol = tom_denounced_int,
+A_Internal_Symbol = tom_tom_int,
+B_Internal_Symbol = tom_cataline_int,
+C_Internal_Symbol = nop  
+
+
+true_internal_proposition(pos_neg, 1, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+false.
+
+ 
+
+true_internal_proposition(pos_neg, 2, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+false.
+
+ 
+true_internal_proposition(pos_neg, 3, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol).
+false.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+true_external_proposition(pos_pos, 0, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol).
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+A_External_Symbol = cicero_ext,
+B_External_Symbol = cataline_ext,
+C_External_Symbol = nop ;
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+A_External_Symbol = tully_ext,
+B_External_Symbol = cataline_ext,
+C_External_Symbol = nop ;
+Arity = 1,
+External_Relation_Symbol = human_ext,
+A_External_Symbol = cicero_ext,
+B_External_Symbol = C_External_Symbol, C_External_Symbol = nop ;
+Arity = 1,
+External_Relation_Symbol = human_ext,
+A_External_Symbol = cataline_ext,
+B_External_Symbol = C_External_Symbol, C_External_Symbol = nop ;
+Arity = 1,
+External_Relation_Symbol = human_ext,
+A_External_Symbol = tully_ext,
+B_External_Symbol = C_External_Symbol, C_External_Symbol = nop  
+
+
+true_external_proposition(pos_pos, 1, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol).
+false.
+
+ 
+
+true_external_proposition(pos_pos, 2, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol).
+false.
+
+ 
+
+true_external_proposition(pos_pos, 3, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol).
+false.
+
+ 
+
+true_external_proposition(pos_neg, 0, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol).
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+A_External_Symbol = tom_ext,
+B_External_Symbol = cataline_ext,
+C_External_Symbol = nop ;
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+A_External_Symbol = tom_ext,
+B_External_Symbol = cataline_ext,
+C_External_Symbol = nop ;
+false.
+
+ 
+
+true_external_proposition(pos_neg, 1, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol).
+false.
+
+ 
+
+true_external_proposition(pos_neg, 2, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol).
+false.
+
+ 
+
+true_external_proposition(pos_neg, 3, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol).
+false.
+
+ 
+
+true_internal_belief(Subject, Time, pos_pos, 0, Arity, Relation, A_Object, B_Object, C_Object).
+Subject = tom,
+Time = now,
+Arity = 2,
+Relation = tom_denounced_int,
+A_Object = tom_cicero_int,
+B_Object = tom_cataline_int,
+C_Object = nop ;
+Subject = tom,
+Time = now,
+Arity = 1,
+Relation = tom_human_int,
+A_Object = tom_tully_int,
+B_Object = C_Object, C_Object = nop ;
+Subject = tom,
+Time = now,
+Arity = 1,
+Relation = tom_featherless_biped_int,
+A_Object = tom_tully_int,
+B_Object = C_Object, C_Object = nop ;
+Subject = tom,
+Time = now,
+Arity = 1,
+Relation = tom_roman_int,
+A_Object = tom_tully_int,
+B_Object = C_Object, C_Object = nop  
+
+
+true_internal_belief(Subject, Time, pos_pos, 1, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_internal_belief(Subject, Time, pos_pos, 2, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_internal_belief(Subject, Time, pos_pos, 3, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_internal_belief(Subject, Time, pos_neg, 0, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_internal_belief(Subject, Time, pos_neg, 1, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_internal_belief(Subject, Time, pos_neg, 2, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_internal_belief(Subject, Time, pos_neg, 3, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+
+true_external_belief(Subject, Time, pos_pos, 0, Arity, Relation, A_Object, B_Object, C_Object).
+Subject = tom,
+Time = now,
+Arity = 2,
+Relation = denounced_ext,
+A_Object = cicero_ext,
+B_Object = cataline_ext,
+C_Object = nop  
+
+
+true_external_belief(Subject, Time, pos_pos, 1, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_external_belief(Subject, Time, pos_pos, 2, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_external_belief(Subject, Time, pos_pos, 3, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_external_belief(Subject, Time, pos_neg, 0, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_external_belief(Subject, Time, pos_neg, 1, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_external_belief(Subject, Time, pos_neg, 2, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+true_external_belief(Subject, Time, pos_neg, 3, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+write_stats(Ignore).
+will be stats someday
+true.
+
+
+ noprotocol.

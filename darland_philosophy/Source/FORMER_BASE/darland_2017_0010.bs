@@ -1,0 +1,116 @@
+%% Copyright (C) 2017 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% This file only checks rules (relating to intensionality and extensionality). 
+
+%% This needs rethinking
+%% Needs to account for internal & external symbols
+%% Need to study PM to *56 more especially pp. 72-79. 
+
+%% In WildLife queries end in "?" - in Prolog in "?"
+%%
+%% In Wilidife extra ";" are echoed but otherwise ignored - in Prolog they 
+%% cause errors.
+%%
+
+%%PROLOG =protocol('log/darland_2017_0010.log').
+%%PROLOG =['facts/common_facts_2017_0001'].
+%%PROLOG =['facts/common_facts_2017_0002'].
+%%PROLOG =['rules/common_2017_0001'].
+%%PROLOG =['rules/prolog_2017_0001'].
+
+%%LIFE =load("FACTS/common_facts_2017_0001.lf")?
+%%LIFE =load("FACTS/common_facts_2017_0002.lf")?
+%%LIFE =load("RULES/common_2017_0001.lf")?
+%%LIFE =load("RULES/life_2017_0001.lf")?
+%%LIFE =trace_input(true)?
+
+write_time(Ignore)?
+
+listing(remark)?
+
+listing(term)?
+
+listing(pl_external_synonym)?
+
+listing(book)?
+
+listing(philosopher)?
+
+listing(a_philosopher)?
+
+listing(article)?
+
+listing(philosophical_quotation)?
+
+%% listing(pl_external_synonym_simple_expanded)?
+
+%% listing(pl_ambiguity_2)?
+
+%% listing(quote_note)?
+
+%% listing(actual_author)?
+
+philosophical_quotation(Id_Number, Author, Article_Abbreviation, Book_Abbreviation, Pages, Quotation, Note1)?
+;
+;
+;
+%%LIFE =;
+
+article(Article_Abbreviation, Book_Abbreviation, Author_Abbreviation, Article_Title, Article_Year, Notes_Article)?
+;
+;
+;
+%%LIFE =;
+
+book(Book_Abbreviation, Author_Book_Abbrev, Book_Title, Book_Year, Notes_Book)? 
+%%LIFE =;
+
+philosopher(Author_Book_Abbrev, Author_Book)?
+;
+;
+;
+%%LIFE =;
+
+quote_note(wvoq0001, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+quote_note(lw0001, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+quote_note(lw0002, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+pl_external_synonym_simple_expanded(syn00001, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Author_1, Author_Article_1, Author_Book_1, Article_Title_1, Book_Title_1, Pages_1, Quotation_1, Article_Year_1, Book_Year_1, Note1, Notes_Article_1, Notes_Book_1, Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2, Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3, Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4)?
+
+pl_external_synonym_simple_expanded(syn00002, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Author_1, Author_Article_1, Author_Book_1, Article_Title_1, Book_Title_1, Pages_1, Quotation_1, Article_Year_1, Book_Year_1, Note1, Notes_Article_1, Notes_Book_1, Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2, Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3, Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4)?
+
+pl_external_synonym_simple_expanded(SynNo, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Author_1, Author_Article_1, Author_Book_1, Article_Title_1, Book_Title_1, Pages_1, Quotation_1, Article_Year_1, Book_Year_1, Note1, Notes_Article_1, Notes_Book_1, Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2, Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3, Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4)?
+;
+;
+%%LIFE =;
+
+pl_external_synonym_compound_expanded(Number1A, Number1B, Philosopher_1, Philosopher_2A, Philosopher_2B, External_Term_1, External_Term_2A, External_Term_2B, Quote_1A, Author_1A, Author_Article_1A, Author_Book_1A, Article_Title_1A, Book_Title_1A, Pages_1A, Quotation_1A, Article_Year_1A, Book_Year_1A, Note1A, Notes_Article_1A, Notes_Book_1A, Quote_2A, Author_2A, Author_Article_2A, Author_Book_2A, Article_Title_2A, Book_Title_2A, Pages_2A, Quotation_2A, Article_Year_2A, Book_Year_2A, Note2A, Notes_Article_2A, Notes_Book_2A, Quote_3A, Author_3A, Author_Article_3A, Author_Book_3A, Article_Title_3A, Book_Title_3A, Pages_3A, Quotation_3A, Article_Year_3A, Book_Year_3A, Note3A, Notes_Article_3A, Notes_Book_3A, Quote_4A, Author_4A, Author_Article_4A, Author_Book_4A, Article_Title_4A, Book_Title_4A, Pages_4A, Quotation_4A, Article_Year_4A, Book_Year_4A, Note4A, Notes_Article_4A, Notes_Book_4A, Quote_1B, Author_1B, Author_Article_1B, Author_Book_1B, Article_Title_1B, Book_Title_1B, Pages_1B, Quotation_1B, Article_Year_1B, Book_Year_1B, Note1B, Notes_Article_1B, Notes_Book_1B, Quote_2B, Author_2B, Author_Article_2B, Author_Book_2B, Article_Title_2B, Book_Title_2B, Pages_2B, Quotation_2B, Article_Year_2B, Book_Year_2B, Note2B, Notes_Article_2B, Notes_Book_2B, Quote_3B, Author_3B, Author_Article_3B, Author_Book_3B, Article_Title_3B, Book_Title_3B, Pages_3B, Quotation_3B, Article_Year_3B, Book_Year_3B, Note3B, Notes_Article_3B, Notes_Book_3B, Quote_4B, Author_4B, Author_Article_4B, Author_Book_4B, Article_Title_4B, Book_Title_4B, Pages_4B, Quotation_4B, Article_Year_4B, Book_Year_4B, Note4B, Notes_Article_4B, Notes_Book_4B)?
+
+pl_ambiguity_1(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2A, External_Term_2B)?
+
+pl_ambiguity_2(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1A, External_Term_1B, External_Term_2)?
+
+find_all([_, _, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2A, External_Term_2B], pl_ambiguity_1(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2A, External_Term_2B), L)?
+
+find_all([Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1A, External_Term_1B, External_Term_2], pl_ambiguity_2(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1A, External_Term_1B, External_Term_2), L)?
+
+write_stats(Ignore)?
+
+%%PROLOG = noprotocol.
+

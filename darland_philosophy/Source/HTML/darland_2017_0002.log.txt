@@ -1,0 +1,418 @@
+true.
+
+['facts/common_facts_2017_0001'].
+% facts/common_facts_2017_0001 compiled 0.00 sec, 100 clauses
+true.
+
+['facts/common_facts_2017_0002'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/facts/common_facts_2017_0002.pl:275:
+	Clauses of book/5 are not together in the source-file
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/facts/common_facts_2017_0002.pl:408:
+	Clauses of philosophical_quotation/7 are not together in the source-file
+% facts/common_facts_2017_0002 compiled 0.00 sec, 180 clauses
+true.
+
+['rules/common_2017_0001'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:43:
+	Singleton variables: [Subject,Time,Type,Arity,Relation]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:45:
+	Singleton variables: [Subject,Time,Type,A_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:57:
+	Singleton variables: [Type_p1,Relation,A_Object,B_Object,C_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:61:
+	Singleton variables: [Internal_Relation_symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:65:
+	Singleton variables: [Type_p1]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:79:
+	Singleton variables: [External_Relation_Symbol_2]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:91:
+	Singleton variables: [Internal_Relation_Symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:95:
+	Singleton variables: [Relation,A_Object,B_Object,C_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:99:
+	Singleton variables: [Internal_Relation_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:103:
+	Singleton variables: [Internal_Relation_symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:136:
+	Singleton variables: [Logical_Form]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:166:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:168:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:176:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:178:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:223:
+	Singleton variables: [Relation2]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:223:
+	Singleton variable in \+: Logical_Form_2
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:247:
+	Singleton variables: [Number1A,Number1B,External_Term_2,NumberA,NumberB]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:253:
+	Singleton variables: [Quote_1A,Quote_2A,Quote_3A,Quote_4A,Quote_1B,Quote_2B,Quote_3B,Quote_4B]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:259:
+	Singleton variables: [Quote_1A,Quote_2A,Quote_3A,Quote_4A,Quote_1B,Quote_2B,Quote_3B,Quote_4B]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:289:
+	Singleton variables: [Author_Book_Abbreviation]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:291:
+	Singleton variables: [Author_Article_Abbreviation]
+% rules/common_2017_0001 compiled 0.00 sec, 49 clauses
+true.
+
+['rules/prolog_2017_0001'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:27:
+	Singleton variables: [Type,Arity]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:36:
+	Singleton variables: [Ignore]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:39:
+	Singleton variables: [Ignore]
+% rules/prolog_2017_0001 compiled 0.00 sec, 13 clauses
+true.
+
+
+ 
+ 
+ 
+ 
+ 
+
+write_time(Ignore).
+will be time someday
+true.
+
+
+remark(2001, Remark).
+Remark = 'Test Set 2 - about understanding.'.
+
+
+remark(2002, Remark).
+Remark = 'A person (Subject) understands any propositon resulting from symbols he has.'.
+
+
+quote_note(br0006, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book).
+Author = Author_Book, Author_Book = 'Bertrand Russell',
+Author_Article = Article_Title, Article_Title = Article_Year, Article_Year = Note1, Note1 = Notes_Article, Notes_Article = Notes_Book, Notes_Book = none,
+Book_Title = 'CPBR 07: Theory of Knowledge, The 1913 Manuscript',
+Pages = '108',
+Quotation = 'TBD',
+Book_Year = '1913' 
+
+quote_note(br0007, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book).
+Author = Author_Book, Author_Book = 'Bertrand Russell',
+Author_Article = Article_Title, Article_Title = Article_Year, Article_Year = Note1, Note1 = Notes_Article, Notes_Article = Notes_Book, Notes_Book = none,
+Book_Title = 'CPBR 07: Theory of Knowledge, The 1913 Manuscript',
+Pages = '115',
+Quotation = 'TBD',
+Book_Year = '1913' 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% understands_external_internal_object(Subject, Time, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object).
+%% This is for type 0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Simple query for this is: (and continued by semi-colons)
+
+understands_external_internal_object(Subject, Time, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object).
+Subject = tom,
+Time = now,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Internal_Relation_Symbol = tom_denounced_int,
+Relation = denounced,
+A_External_Symbol = B_External_Symbol, B_External_Symbol = cicero_ext,
+A_Object = B_Object, B_Object = cicero,
+A_Internal_Symbol = B_Internal_Symbol, B_Internal_Symbol = tom_cicero_int,
+C_External_Symbol = C_Internal_Symbol, C_Internal_Symbol = C_Object, C_Object = nop ;
+Subject = tom,
+Time = now,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Internal_Relation_Symbol = tom_denounced_int,
+Relation = denounced,
+A_External_Symbol = cicero_ext,
+A_Object = cicero,
+A_Internal_Symbol = tom_cicero_int,
+B_External_Symbol = cataline_ext,
+B_Internal_Symbol = tom_cataline_int,
+B_Object = cataline,
+C_External_Symbol = C_Internal_Symbol, C_Internal_Symbol = C_Object, C_Object = nop ;
+Subject = tom,
+Time = now,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Internal_Relation_Symbol = tom_denounced_int,
+Relation = denounced,
+A_External_Symbol = cicero_ext,
+A_Object = B_Object, B_Object = cicero,
+A_Internal_Symbol = tom_cicero_int,
+B_External_Symbol = tully_ext,
+B_Internal_Symbol = tom_tully_int,
+C_External_Symbol = C_Internal_Symbol, C_Internal_Symbol = C_Object, C_Object = nop ;
+Subject = B_Object, B_Object = tom,
+Time = now,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Internal_Relation_Symbol = tom_denounced_int,
+Relation = denounced,
+A_External_Symbol = cicero_ext,
+A_Object = cicero,
+A_Internal_Symbol = tom_cicero_int,
+B_External_Symbol = tom_ext,
+B_Internal_Symbol = tom_tom_int,
+C_External_Symbol = C_Internal_Symbol, C_Internal_Symbol = C_Object, C_Object = nop  
+
+
+
+%% One would get too many results if one tried to list all of them!
+
+%% next follow higher types (no results).
+
+understands_external_internal_object(Subject, Time, 1, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object).
+false.
+
+ 
+
+understands_external_internal_object(Subject, Time, 2, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object).
+false.
+
+ 
+
+understands_external_internal_object(Subject, Time, 3, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object).
+false.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% understands_external_object(Subject, Time, 0, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object).
+%%
+%% This is for type 0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Simple query for this is: (and continued by semi-colons)
+
+understands_external_object(Subject, Time, 0, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object).
+Subject = tom,
+Time = now,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Relation = denounced,
+A_External_Symbol = B_External_Symbol, B_External_Symbol = cicero_ext,
+A_Object = B_Object, B_Object = cicero,
+C_External_Symbol = C_Object, C_Object = nop ;
+Subject = tom,
+Time = now,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Relation = denounced,
+A_External_Symbol = cicero_ext,
+A_Object = cicero,
+B_External_Symbol = cataline_ext,
+B_Object = cataline,
+C_External_Symbol = C_Object, C_Object = nop ;
+Subject = tom,
+Time = now,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Relation = denounced,
+A_External_Symbol = cicero_ext,
+A_Object = B_Object, B_Object = cicero,
+B_External_Symbol = tully_ext,
+C_External_Symbol = C_Object, C_Object = nop  
+
+
+%% One would get too many results if one tried to list all of them!
+
+%% next follow higher types (no results).
+
+understands_external_object(Subject, Time, 1, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object).
+false.
+
+ 
+
+understands_external_object(Subject, Time, 2, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object).
+false.
+
+ 
+
+understands_external_object(Subject, Time, 3, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object).
+false.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% understands_external_internal(Subject, Time, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol).
+%%
+%% This is for type 0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Simple query for this is: (and continued by semi-colons)
+
+understands_external_internal(Subject, Time, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol).
+Subject = tom,
+Time = now,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Internal_Relation_Symbol = tom_denounced_int,
+A_External_Symbol = B_External_Symbol, B_External_Symbol = cicero_ext,
+A_Internal_Symbol = B_Internal_Symbol, B_Internal_Symbol = tom_cicero_int,
+C_External_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Subject = tom,
+Time = now,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Internal_Relation_Symbol = tom_denounced_int,
+A_External_Symbol = cicero_ext,
+A_Internal_Symbol = tom_cicero_int,
+B_External_Symbol = cataline_ext,
+B_Internal_Symbol = tom_cataline_int,
+C_External_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop ;
+Subject = tom,
+Time = now,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Internal_Relation_Symbol = tom_denounced_int,
+A_External_Symbol = cicero_ext,
+A_Internal_Symbol = tom_cicero_int,
+B_External_Symbol = tully_ext,
+B_Internal_Symbol = tom_tully_int,
+C_External_Symbol = C_Internal_Symbol, C_Internal_Symbol = nop  
+
+
+%% One would get too many results if one tried to list all of them!
+
+%% next follow higher types (no results).
+
+understands_external_internal(Subject, Time, 1, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol).
+false.
+
+ 
+
+understands_external_internal(Subject, Time, 2, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol).
+false.
+
+ 
+
+understands_external_internal(Subject, Time, 3, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol).
+false.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% understands_internal_object(Subject, Time, 0, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object).
+%%
+%% This is for type 0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Simple query for this is: (and continued by semi-colons)
+
+understands_internal_object(Subject, Time, 0, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object).
+Subject = tom,
+Time = now,
+Arity = 2,
+Internal_Relation_Symbol = tom_denounced_int,
+Relation = denounced,
+A_Internal_Symbol = B_Internal_Symbol, B_Internal_Symbol = tom_cicero_int,
+A_Object = B_Object, B_Object = cicero,
+C_Internal_Symbol = C_Object, C_Object = nop ;
+Subject = tom,
+Time = now,
+Arity = 2,
+Internal_Relation_Symbol = tom_denounced_int,
+Relation = denounced,
+A_Internal_Symbol = tom_cicero_int,
+A_Object = B_Object, B_Object = cicero,
+B_Internal_Symbol = tom_tully_int,
+C_Internal_Symbol = C_Object, C_Object = nop ;
+Subject = tom,
+Time = now,
+Arity = 2,
+Internal_Relation_Symbol = tom_denounced_int,
+Relation = denounced,
+A_Internal_Symbol = tom_cicero_int,
+A_Object = cicero,
+B_Internal_Symbol = tom_cataline_int,
+B_Object = cataline,
+C_Internal_Symbol = C_Object, C_Object = nop  
+
+
+%% One would get many results if one tried to list all of them!
+
+%% next follow higher types (no results).
+
+understands_internal_object(Subject, Time, 1, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object).
+false.
+
+ 
+
+understands_internal_object(Subject, Time, 2, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object).
+false.
+
+ 
+
+understands_internal_object(Subject, Time, 3, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object).
+false.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% understands_object(Subject, Time, 0, Arity, Relation, A_Object, B_Object, C_Object).
+%% This is for type 0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Simple query for this is: (and continued by semi-colons)
+
+
+understands_object(Subject, Time, 0, Arity, Relation, A_Object, B_Object, C_Object).
+Subject = tom,
+Time = now,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = nop ;
+Subject = tom,
+Time = now,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = nop ;
+Subject = tom,
+Time = now,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = nop  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% One can get all results with find_all - in this case there are fewer combinations.
+
+find_all([Subject, Time, 0, Arity, Relation, A_Object, B_Object, C_Object], understands_object(Subject, Time, 0, Arity, Relation, A_Object, B_Object, C_Object), L).
+L = [[tom, now, 0, 2, denounced, cicero, cicero, nop], [tom, now, 0, 2, denounced, cicero, cicero|...], [tom, now, 0, 2, denounced, cicero|...], [tom, now, 0, 2, denounced|...], [tom, now, 0, 2|...], [tom, now, 0|...], [tom, now|...], [tom|...], [...|...]|...].
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% next follow higher types (no results).
+
+understands_object(Subject, Time, 1, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+understands_object(Subject, Time, 2, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+understands_object(Subject, Time, 3, Arity, Relation, A_Object, B_Object, C_Object).
+false.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+write_stats(Ignore).
+will be stats someday
+true.
+
+
+
+ noprotocol.

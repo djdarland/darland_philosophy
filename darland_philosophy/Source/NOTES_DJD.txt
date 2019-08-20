@@ -1,0 +1,5 @@
+Differences going from life to prolog.
+replace load(---)? with [---].
+On quieries replace ? with .
+Replcace cond with ifthenelse.
+write only takes 1 argument.

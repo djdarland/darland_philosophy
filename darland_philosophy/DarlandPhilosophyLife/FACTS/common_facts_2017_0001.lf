@@ -1,0 +1,307 @@
+%% Copyright (C) 2017 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+
+%% Common Prolog and Life database for use with predicates 
+%% to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%%
+%% Total rewite of what I started about 10 years ago.
+%%
+%% This file is identical (actually linked with the Linux ln command).
+%% as common_facts_2017_0001.pl for prolog 
+%% and common_facts_2017_0001.lf for Life
+%%
+%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% conventions.
+%% tom, quine, cicero etc stand for people (instances of Subjects or Objects.)
+%% There could also be non-animate objects such as a table/
+%% there (some would argue) might also be non-human Subjects - such spot - a dog.
+%% tom might have an idea - or internal idea of cicero. This would be represented tom_cicero_int. The 1st tom indicates that it is tom's idea. cicero indicates that it is an idea of cicero. The final int indicates that it is an internal idea.
+
+%% tom might have an word in a shared language for cicero. This is indicated by cicero_ext. 
+
+%% quine might also an idea quine_cicero_int of cicero. (note his idea is different). quine might share, however the word cicero_ext with tom.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% internal_symbol(Subject, Time, Type, A_internal_symbol, A_object)
+%%
+%% there are two internal symbols for the same person - cicero (tully)
+%% but prolog & wild life cannot let two atoms be identical 
+%% so the object must be the same for both (cicero)
+%%
+
+%% I am not using Types much yet. Mainly I wanted to be able to use them later.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+internal_symbol(tom, now, 0, tom_cicero_int, cicero).
+internal_symbol(tom, now, 0, tom_tully_int, cicero).
+internal_symbol(tom, now, 0, tom_cataline_int, cataline).
+internal_symbol(tom, now, 0, tom_tom_int, tom).
+internal_symbol(tom, now, 1, tom_human_int, human).
+internal_symbol(tom, now, 1, tom_featherless_biped_int, featherless_biped).
+internal_symbol(tom, now, 0, nop, nop).
+internal_symbol(tom, now, 1, nop, nop).
+
+internal_symbol(quine, now, 0, quine_cicero_int, cicero).
+internal_symbol(quine, now, 0, quine_tully_int, cicero).
+internal_symbol(quine, now, 0, quine_cataline_int, cataline).
+internal_symbol(quine, now, 0, quine_tom_int, tom).
+internal_symbol(quine, now, 1, quine_human_int, human).
+internal_symbol(quine, now, 1, quine_featherless_biped_int, featherless_biped).
+internal_symbol(quine, now, 0, nop, nop).
+internal_symbol(quine, now, 1, nop, nop).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The same conventions apply to relations - except they are 1 Type higher.
+%% They also have an Arity - the number of objects they relate.
+%% I have only coded up to an arity of 3.
+%% It can easily be seen how it could be extended.
+%% Also I could have used lists to make any arity to be handled. But the resukting code would be harder to understand - so I avoided that.
+
+%% internal_relation_symbol(Subject, Time, Type+1, Arity, Internal_relation_symbol, Relation)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+internal_relation_symbol(tom, now, 1, 2, tom_denounced_int, denounced).
+internal_relation_symbol(tom, now, 1, 1, tom_human_int, human).
+internal_relation_symbol(tom, now, 1, 1, tom_featherless_biped_int, featherless_biped).
+internal_relation_symbol(tom, now, 1, 1, tom_american_int, american).
+internal_relation_symbol(tom, now, 1, 1, tom_roman_int, roman).
+internal_relation_symbol(tom, now, 2, 2, tom_not_formally_equivalent_int, not_formally_equivalent).
+internal_relation_symbol(tom, now, 2, 2, tom_formally_equivalent_int, formally_equivalent).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+internal_relation_symbol(quine, now, 1, 2, quine_denounced_int, denounced).
+internal_relation_symbol(quine, now, 1, 1, quine_human_int, human).
+internal_relation_symbol(quine, now, 1, 1, quine_featherless_biped_int, featherless_biped).
+internal_relation_symbol(quine, now, 1, 1, quine_american_int, american).
+internal_relation_symbol(quine, now, 1, 1, quine_roman_int, roman).
+internal_relation_symbol(quine, now, 2, 2, quine_not_formally_equivalent_int, not_formally_equivalent).
+internal_relation_symbol(quine, now, 2, 2, quine_formally_equivalent_int, formally_equivalent).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% external symbols are related to internal symbols.
+%% The external symbols being shared through learning.
+%% They are Type + 2 to the corresponding object.
+
+%% external_symbol(Subject, Time, Type, A_external_symbol, A_internal_symbol)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+external_symbol(tom, now, 2, cicero_ext, tom_cicero_int).
+external_symbol(tom, now, 2, cataline_ext, tom_cataline_int).
+external_symbol(tom, now, 2, tully_ext, tom_tully_int).
+external_symbol(tom, now, 2, tom_ext, tom_tom_int).
+external_symbol(tom, now, 3, human_ext, tom_human_int).
+external_symbol(tom, now, 3, featherless_biped_ext,tom_featherless_biped).
+external_symbol(tom, now, 2, nop, nop).
+external_symbol(tom, now, 3, nop, nop).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+external_symbol(quine, now, 2, cicero_ext, quine_cicero_int).
+external_symbol(quine, now, 2, cataline_ext, quine_cataline_int).
+external_symbol(quine, now, 2, tully_ext, quine_tully_int).
+external_symbol(quine, now, 2, tom_ext, quine_tom_int).
+external_symbol(quine, now, 3, human_ext, quine_human_int).
+external_symbol(quine, now, 3, featherless_biped_ext,quine_featherless_biped).
+external_symbol(quine, now, 2, nop, nop).
+external_symbol(quine, now, 3, nop, nop).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+internal_synonym(quine, now, 0, quine_tully_int, quine_cicero_int).
+internal_synonym(quine, now, 1, quine_bachelor_int, quine_unmarried_male_int).
+internal_synonym(tom, now, 1, tom_bachelor_int, tom_unmarried_male_int).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Ditto for external relations
+
+%%
+%% external_relation_symbol(Subject, Time, Type+1, Arity, External_relation_symbol, Internal_relation_symbol)
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+external_relation_symbol(tom, now, 3, 2, denounced_ext, tom_denounced_int).
+external_relation_symbol(tom, now, 3, 1, human_ext, tom_human_int).
+external_relation_symbol(tom, now, 3, 1, featherless_biped_ext, tom_featherless_biped_int).
+external_relation_symbol(tom, now, 3, 1, american_ext, tom_american_int).
+external_relation_symbol(tom, now, 3, 1, roman_ext, tom_roman_int).
+external_relation_symbol(tom, now, 4, 2, not_formally_equivalent_ext, tom_not_formally_equivalent_int).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+external_relation_symbol(quine, now, 3, 2, denounced_ext, quine_denounced_int).
+external_relation_symbol(quine, now, 3, 1, human_ext, quine_human_int).
+external_relation_symbol(quine, now, 3, 1, featherless_biped_ext, quine_featherless_biped_int).
+external_relation_symbol(quine, now, 3, 1, american_ext, quine_american_int).
+external_relation_symbol(quine, now, 3, 1, roman_ext, quine_roman_int).
+external_relation_symbol(quine, now, 4, 2, formally_equivalent_ext, quine_formally_equivalent_int).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% There are several understands relations symbols defined in terms of the symbols.
+
+%% This solve a problem that some philosophers have if a sentence was never uttered. I only require that there was an internal relation symbol and internal symbols of objects. They never even need to be related or believed. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% believes_internal is the only primitive belief relation needed. I define several others in terms of it. 
+
+%% pos_pos and pos_neg are Logical Forms. pos_pos indicates that the Subject believes the relation holds among the objects. pos_neg indeicates that the Subject believes that the relation does not hold. 
+
+%% neg_pos indicates that the Subject does not believe that the relation holds. He/her might believe it does not hold - or he/her might have no belief about it at all.
+
+%% Similarly for neg_neg
+
+%% I thing a plain neg is also needed for no belief at all. 
+
+%% I think possibly Logical_Form is where other logical relations such as `or`, `and` etc. would go but I am not doing that.
+
+%% Also nop is just a placeholder to indicate that that position is not used.
+
+%% believes_internal(Subject, Time, Type, Logical_Form, Arity, Internal_relation_symbol, A_internal_symbol, B_internal_symbol, C_internal_symbol)
+
+%%
+believes_internal(tom, now, pos_pos, 0, 2, tom_denounced_int, tom_cicero_int, tom_cataline_int, nop).
+believes_internal(tom, now, pos_neg, 0, 2, tom_denounced_int, tom_tully_int, tom_cataline_int, nop).
+believes_internal(tom, now, pos_pos, 0, 1, tom_human_int, tom_tully_int, nop, nop).
+believes_internal(quine, now, pos_pos, 0, 2, quine_denounced_int, quine_cicero_int, quine_cataline_int, nop).
+believes_internal(quine, now, pos_pos, 0, 2, quine_denounced_int, quine_tully_int, quine_cataline_int, nop).
+
+believes_internal(tom, now, pos_pos, 1, 2, tom_not_formally_equivalent_int, tom_human_int, tom_featherless_biped_int, nop).
+
+believes_internal(quine, now, pos_pos, 1, 2, quine_formally_equivalent_int, quine_human_int, quine_featherless_biped_int, nop).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% believes_there_is_internal_symbol_of_internal_relation_symbol 
+%% Could be defined if I permitted a larger number of arguments in believes_internal. However that would get very messy. So I use it as primitive.
+
+%% believes_there_is_internal_symbol_of_internal_relation_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type_p1, Arity, Internal_Relation_Symbol_1, Internal_Relation_Symbol_2)
+
+%% This indicates a Subject_1 believes a Subject_2 has an Internal_Relation_Symbol_2 corresponding to his own Internal_Relation_Symbol_1
+
+%% NOTE I think (In documenting) there should be a 2nd logical form. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+believes_there_is_internal_symbol_of_internal_relation_symbol(quine, now, pos_pos, tom, now, 1, 2, quine_denounced_int, tom_denounced_int).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Similar to believes_there_is_internal_symbol_of_internal_relation_symbol (except about objects instead of relations).
+
+%% believes_there_is_internal_symbol_of_internal_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type, A_Internal_Symbol_1, A_Internal_Symbol_2)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+believes_there_is_internal_symbol_of_internal_symbol(quine, now, pos_pos, tom, now, 0, quine_cicero_int, tom_cicero_int).
+%% believes_there_is_internal_symbol_of_internal_symbol(quine, now, tom, now, 0, quine_tully_int, tom_cicero_int).
+believes_there_is_internal_symbol_of_internal_symbol(quine, now, pos_pos, tom, now, 0, quine_cataline_int, tom_cataline_int).
+believes_there_is_internal_symbol_of_internal_symbol(quine, now, pos_pos, tom, now, 0, nop, nop).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Similarly
+
+%% believes_there_is_internal_symbol_of_external_relation_symbol(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Type_p1, Arity, Internal_Relation_Symbol_1, External_Relation_Symbol_2)
+
+%% NOTE I think (In documenting) there should be a 2nd logical form. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+believes_there_is_internal_symbol_of_external_relation_symbol(quine, now, pos_pos, tom, now, 1, 2, quine_denounced_int, tom_denounced_ext).
+believes_there_is_internal_symbol_of_external_symbol(quine, now, pos_pos, tom, now, 0, quine_cicero_int, tom_cicero_ext).
+believes_there_is_internal_symbol_of_external_symbol(quine, now, pos_pos, tom, now, 0, quine_tully_int, tom_cicero_ext).
+believes_there_is_internal_symbol_of_external_symbol(quine, now, pos_pos, tom, now, 0, quine_cataline_int, tom_cataline_ext).
+believes_there_is_internal_symbol_of_external_symbol(quine, now, pos_pos, tom, now, 0, nop, nop).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%
+%% Maybe there should be more of these - but I don't need them yet
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+
+%% believes_believes_internal(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, Type, Arity, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)
+
+%% Subject_1 believes a Subject_2 has a belief_internal
+
+believes_believes_internal(quine, now, pos_pos, tom, now, pos_pos, 0, 2, tom_denounced_int, tom_cicero_int, tom_cataline_int, nop).
+believes_believes_internal(quine, now, pos_pos, tom, now, pos_neg, 0, 2, tom_denounced_int, tom_tully_int, tom_cataline_int, nop).
+believes_believes_internal(quine, now, pos_pos, tom, now, pos_pos, 0, 1, tom_human_int, tom_tully_int, nop, nop).
+% believes_believes_internal(quine, now, 0, 2, quine_denounced_int, quine_cicero_int, quine_cataline_int, nop).
+% believes_believes_internal(quine, now, 0, 2, quine_denounced_int, quine_tully_int, quine_cataline_int, nop).
+%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Now, just some plain facts - however the 1st agument corresponds to the Logical Form that would make a belief in the fact true.
+
+human(pos_pos, tom, nop, nop).
+human(pos_pos, cicero, nop, nop).
+human(pos_pos, cataline, nop, nop).
+human_int(pos_pos, nop, nop, nop).
+
+human_ext(pos_pos, tom_ext, nop, nop).
+human_ext(pos_pos, cicero_ext, nop, nop).
+human_ext(pos_pos, cataline_ext, nop, nop).
+human_ext_int(pos_pos, nop, nop, nop).
+
+featherless_biped(pos_pos, tom, nop, nop).
+featherless_biped(pos_pos, cicero, nop, nop).
+featherless_biped(pos_pos, cataline, nop, nop).
+featherless_biped_int(pos_pos, nop, nop, nop).
+
+featherless_biped_ext(pos_pos, tom_ext, nop, nop).
+featherless_biped_ext(pos_pos, cicero_ext, nop, nop).
+featherless_biped_ext(pos_pos, cataline_ext, nop, nop).
+featherless_biped_ext_int(pos_pos, nop, nop, nop).
+
+american(pos_pos, tom, nop, nop).
+american_int(pos_pos, nop, nop, nop).
+
+american_ext(pos_pos, tom_ext, nop, nop).
+american_ext_int(pos_pos, nop, nop, nop).
+
+roman(pos_pos, cicero, nop, nop).
+roman(pos_pos, cataline, nop, nop).
+roman_int(pos_pos, nop, nop, nop).
+
+roman_ext(pos_pos, cicero_ext, nop, nop).
+roman_ext(pos_pos, cataline_ext, nop, nop).
+roman_ext_int(pos_pos, nop, nop, nop).
+
+arity(human, 1).
+arity(featherless_biped, 1).
+type(human, 0).
+type(featherless_biped, 0).
+
+denounced(pos_pos, cicero, cataline, nop).
+denounced(pos_neg, tom, cataline, nop).
+
+denounced_int(pos_pos, nop, nop, nop).
+denounced_int(pos_neg, nop, nop, nop).
+
+quine_denounced_int(pos_pos, nop, nop, nop).
+quine_denounced_int(pos_neg, nop, nop, nop).
+
+denounced_int_ext(pos_pos, nop, nop, nop).
+quine_human_int(pos_pos, nop, nop, nop).
+
+quine_featherless_biped_int(pos_pos, nop, nop, nop).
+quine_human_int(pos_pos, nop, nop, nop).
+tom_featherless_biped_int(pos_pos, nop, nop, nop).
+tom_human_int(pos_pos, nop, nop, nop).
+
+quine_formally_equivalent(pos_pos, nop, nop, nop).
+quine_formally_equivalent(neg_pos, nop, nop, nop).
+quine_not_formally_equivalent(pos_pos, nop, nop, nop).
+quine_not_formally_equivalent(neg_pos, nop, nop, nop).
+tom_formally_equivalent(pos_pos, nop, nop, nop).
+tom_formally_equivalent(pos_neg, nop, nop, nop).
+tom_not_formally_equivalent(pos_pos, nop, nop, nop).
+tom_not_formally_equivalent(neg_pos, nop, nop, nop).

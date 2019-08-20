@@ -1,0 +1,716 @@
+true.
+
+['facts/common_facts_2017_0001'].
+% facts/common_facts_2017_0001 compiled 0.00 sec, 100 clauses
+true.
+
+['facts/common_facts_2017_0002'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/facts/common_facts_2017_0002.pl:275:
+	Clauses of book/5 are not together in the source-file
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/facts/common_facts_2017_0002.pl:408:
+	Clauses of philosophical_quotation/7 are not together in the source-file
+% facts/common_facts_2017_0002 compiled 0.00 sec, 180 clauses
+true.
+
+['rules/common_2017_0001'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:43:
+	Singleton variables: [Subject,Time,Type,Arity,Relation]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:45:
+	Singleton variables: [Subject,Time,Type,A_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:57:
+	Singleton variables: [Type_p1,Relation,A_Object,B_Object,C_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:61:
+	Singleton variables: [Internal_Relation_symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:65:
+	Singleton variables: [Type_p1]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:79:
+	Singleton variables: [External_Relation_Symbol_2]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:91:
+	Singleton variables: [Internal_Relation_Symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:95:
+	Singleton variables: [Relation,A_Object,B_Object,C_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:99:
+	Singleton variables: [Internal_Relation_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:103:
+	Singleton variables: [Internal_Relation_symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:136:
+	Singleton variables: [Logical_Form]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:166:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:168:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:176:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:178:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:223:
+	Singleton variables: [Relation2]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:223:
+	Singleton variable in \+: Logical_Form_2
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:247:
+	Singleton variables: [Number1A,Number1B,External_Term_2,NumberA,NumberB]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:253:
+	Singleton variables: [Quote_1A,Quote_2A,Quote_3A,Quote_4A,Quote_1B,Quote_2B,Quote_3B,Quote_4B]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:259:
+	Singleton variables: [Quote_1A,Quote_2A,Quote_3A,Quote_4A,Quote_1B,Quote_2B,Quote_3B,Quote_4B]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:289:
+	Singleton variables: [Author_Book_Abbreviation]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:291:
+	Singleton variables: [Author_Article_Abbreviation]
+% rules/common_2017_0001 compiled 0.00 sec, 49 clauses
+true.
+
+['rules/prolog_2017_0001'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:27:
+	Singleton variables: [Type,Arity]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:36:
+	Singleton variables: [Ignore]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:39:
+	Singleton variables: [Ignore]
+% rules/prolog_2017_0001 compiled 0.00 sec, 13 clauses
+true.
+
+
+ 
+ 
+ 
+ 
+ 
+
+write_time(Ignore).
+will be time someday
+true.
+
+
+
+
+remark(5001, Remark).
+Remark = 'Test Set 5 - about belief understanding and belief about belief.'.
+
+
+remark(5002, Remark).
+Remark = 'I have not checked this out thorougly - other things were prerequisites.'.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = B_Internal_Symbol_1, B_Internal_Symbol_1 = quine_cicero_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cicero_int ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cicero_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_cicero_int,
+B_Internal_Symbol_2 = tom_cataline_int ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = cataline,
+B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cataline_int,
+B_Internal_Symbol_1 = quine_cicero_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_cataline_int,
+B_Internal_Symbol_2 = tom_cicero_int ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = B_Internal_Symbol_1, B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cataline_int  
+
+
+believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+false.
+
+ 
+
+believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+false.
+
+ 
+
+believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+false.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = B_Internal_Symbol_1, B_Internal_Symbol_1 = quine_cicero_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cicero_int,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = B_External_Symbol_2, B_External_Symbol_2 = tom_cicero_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cicero_int,
+B_Internal_Symbol_1 = quine_tully_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cicero_int,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = B_External_Symbol_2, B_External_Symbol_2 = tom_cicero_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_tully_int,
+B_Internal_Symbol_1 = quine_cicero_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cicero_int,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = B_External_Symbol_2, B_External_Symbol_2 = tom_cicero_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = B_Internal_Symbol_1, B_Internal_Symbol_1 = quine_tully_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cicero_int,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = B_External_Symbol_2, B_External_Symbol_2 = tom_cicero_ext  
+
+
+
+believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+
+believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+
+believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = B_Internal_Symbol_1, B_Internal_Symbol_1 = quine_cicero_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cicero_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = B_External_Symbol_1, B_External_Symbol_1 = cicero_ext,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = B_External_Symbol_2, B_External_Symbol_2 = tom_cicero_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cicero_int,
+B_Internal_Symbol_1 = quine_tully_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cicero_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = cicero_ext,
+B_External_Symbol_1 = tully_ext,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = B_External_Symbol_2, B_External_Symbol_2 = tom_cicero_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_tully_int,
+B_Internal_Symbol_1 = quine_cicero_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cicero_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = tully_ext,
+B_External_Symbol_1 = cicero_ext,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = B_External_Symbol_2, B_External_Symbol_2 = tom_cicero_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = B_Internal_Symbol_1, B_Internal_Symbol_1 = quine_tully_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cicero_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = B_External_Symbol_1, B_External_Symbol_1 = tully_ext,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = B_External_Symbol_2, B_External_Symbol_2 = tom_cicero_ext  
+
+
+
+believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1).
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = B_Internal_Symbol_1, B_Internal_Symbol_1 = quine_cicero_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cicero_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = B_External_Symbol_1, B_External_Symbol_1 = cicero_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cicero_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_cicero_int,
+B_Internal_Symbol_2 = tom_cataline_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = cicero_ext,
+B_External_Symbol_1 = cataline_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = cataline,
+B_Object = cicero,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cataline_int,
+B_Internal_Symbol_1 = quine_cicero_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_cataline_int,
+B_Internal_Symbol_2 = tom_cicero_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = cataline_ext,
+B_External_Symbol_1 = cicero_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = B_Object, B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = B_Internal_Symbol_1, B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = B_Internal_Symbol_2, B_Internal_Symbol_2 = tom_cataline_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = B_External_Symbol_1, B_External_Symbol_1 = cataline_ext  
+
+
+believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1).
+false.
+
+ 
+
+believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1).
+false.
+
+ 
+
+believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1).
+false.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = Logical_Form_2, Logical_Form_2 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cicero_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_cicero_int,
+B_Internal_Symbol_2 = tom_cataline_int ;
+false.
+
+ 
+
+believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+false.
+
+ 
+
+believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+false.
+
+ 
+
+believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2).
+false.
+
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = Logical_Form_2, Logical_Form_2 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cicero_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_cicero_int,
+B_Internal_Symbol_2 = tom_cataline_int,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = tom_cicero_ext,
+B_External_Symbol_2 = tom_cataline_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = Logical_Form_2, Logical_Form_2 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_tully_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_cicero_int,
+B_Internal_Symbol_2 = tom_cataline_int,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = tom_cicero_ext,
+B_External_Symbol_2 = tom_cataline_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Logical_Form_2 = pos_neg,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cicero_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_tully_int,
+B_Internal_Symbol_2 = tom_cataline_int,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = tom_cicero_ext,
+B_External_Symbol_2 = tom_cataline_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Logical_Form_2 = pos_neg,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_tully_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_tully_int,
+B_Internal_Symbol_2 = tom_cataline_int,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = tom_cicero_ext,
+B_External_Symbol_2 = tom_cataline_ext  
+
+
+
+believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+
+believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+
+believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = Logical_Form_2, Logical_Form_2 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cicero_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_cicero_int,
+B_Internal_Symbol_2 = tom_cataline_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = cicero_ext,
+B_External_Symbol_1 = cataline_ext,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = tom_cicero_ext,
+B_External_Symbol_2 = tom_cataline_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = Logical_Form_2, Logical_Form_2 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_tully_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_cicero_int,
+B_Internal_Symbol_2 = tom_cataline_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = tully_ext,
+B_External_Symbol_1 = cataline_ext,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = tom_cicero_ext,
+B_External_Symbol_2 = tom_cataline_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Logical_Form_2 = pos_neg,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cicero_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_tully_int,
+B_Internal_Symbol_2 = tom_cataline_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = cicero_ext,
+B_External_Symbol_1 = cataline_ext,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = tom_cicero_ext,
+B_External_Symbol_2 = tom_cataline_ext ;
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = pos_pos,
+Subject_2 = tom,
+Logical_Form_2 = pos_neg,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = C_External_Symbol_2, C_External_Symbol_2 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_tully_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_tully_int,
+B_Internal_Symbol_2 = tom_cataline_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = tully_ext,
+B_External_Symbol_1 = cataline_ext,
+External_Relation_Symbol_2 = tom_denounced_ext,
+A_External_Symbol_2 = tom_cicero_ext,
+B_External_Symbol_2 = tom_cataline_ext  
+
+
+
+believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2).
+false.
+
+ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1).
+Subject_1 = quine,
+Time_1 = Time_2, Time_2 = now,
+Logical_Form_1 = Logical_Form_2, Logical_Form_2 = pos_pos,
+Subject_2 = tom,
+Arity = 2,
+Relation = denounced,
+A_Object = cicero,
+B_Object = cataline,
+C_Object = C_Internal_Symbol_1, C_Internal_Symbol_1 = C_Internal_Symbol_2, C_Internal_Symbol_2 = C_External_Symbol_1, C_External_Symbol_1 = nop,
+Internal_Relation_Symbol_1 = quine_denounced_int,
+A_Internal_Symbol_1 = quine_cicero_int,
+B_Internal_Symbol_1 = quine_cataline_int,
+Internal_Relation_Symbol_2 = tom_denounced_int,
+A_Internal_Symbol_2 = tom_cicero_int,
+B_Internal_Symbol_2 = tom_cataline_int,
+External_Relation_Symbol_1 = denounced_ext,
+A_External_Symbol_1 = cicero_ext,
+B_External_Symbol_1 = cataline_ext ;
+false.
+
+ 
+
+believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1).
+false.
+
+ 
+
+believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1).
+false.
+
+ 
+
+believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1).
+false.
+
+ 
+
+write_stats(Ignore).
+will be stats someday
+true.
+
+
+ noprotocol.
