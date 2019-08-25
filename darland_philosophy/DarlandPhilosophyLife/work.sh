@@ -1,4 +1,4 @@
-##  Copyright (C) 2017 Dennis J. Darland
+##  Copyright (C) 2017, 2019 Dennis J. Darland
 
 ##  This file is part of darland's philosophy.
 
@@ -37,10 +37,7 @@ do
 	echo "5 ERRDIFF/$1.errdiff"
 	echo "6 REFERR_UPDATED/$1.referr ERR/$1.err"
     fi
-    echo "9 Edit Base Darland Philosophy Query File." 
-
     echo "10 Rerun wild_life on $1"
-
     echo "11 Approve New $1 Output To Reference"
     echo "12 Restore $1 Output Reference"
     echo "14 Run wild_life interactively"

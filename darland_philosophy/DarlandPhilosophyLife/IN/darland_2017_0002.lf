@@ -30,6 +30,28 @@ quote_note(br0006, Author, Author_Article, Author_Book, Article_Title, Book_Titl
 
 quote_note(br0007, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
 
+
+rrss1(Subject, Time, Type, Arity, Relation_Word, Relation)?
+;
+;
+;
+;
+;
+
+rrss0(Subject, Time, Type, Word, Object)?
+;
+;
+;
+;
+;
+;
+
+
+
+
+
+
+
 understands_words_objects(Subject, Time, Type, 1,
 			  Relation_Word, Relation,
 			  A_Word, A_Object,
@@ -81,6 +103,23 @@ understands_words_ideas_objects(Subject, Time, Type, Arity,
 ;
 ;
 
+subjects_understand_same_by_ideas(Subject_1, Time_1,
+			       Subject_2, Time_2,
+			       Type, Arity,
+			       Relation_Idea_1, Relation_Idea_2, Relation,
+			       A_Idea_1, A_Idea_2, A_Object,
+			       B_Idea_1, B_Idea_2, B_Object,
+			       C_Idea_1, C_Idea_2, C_Object,
+			       D_Idea_1, D_Idea_2, D_Object,
+			       E_Idea_1, E_Idea_2, E_Object)?
+;
+;
+;
+;
+;
+;
+;
+;
 
 
 
