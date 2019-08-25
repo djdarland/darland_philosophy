@@ -3,3 +3,16 @@ replace load(---)? with [---].
 On quieries replace ? with .
 Replcace cond with ifthenelse.
 write only takes 1 argument.
+
+8/24/2019 Now just using WildLIFE.
+1st advantage I notice is predicates don't have fixed arity.
+In prolog, you can have predicates with sane mame & differnt arity.
+But they are still different predicates.
+This is not true of WildLIFE - they are same predicate with different arity.
+
+This should be helpful with, e.g. beliefs which can have variable # of args.
+
+Try to make predicates all lower_case.
+Variables Words start with Upper_Case.
+
+Advantage of WildLIFE - can format Rules & Facts so much more readable.
