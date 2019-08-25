@@ -1,4 +1,4 @@
-%% Copyright (C) 2017 Dennis J. Darland
+%% Copyright (C) 2017, 2019 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
 
@@ -21,10 +21,13 @@
 %% Started Writing 1/4/2017 
 %%
 %% Total rewite of what I started about 10 years ago.
+%% Now using only WildLIFE.
 %%
-%% This file is identical (actually linked with the Linux ln command).
-%% as common_facts_2017_0002.pl for prolog 
 %% and common_facts_2017_0002.lf for Life
+%% Facts about philosophers terminology.
+%% Not very good at this point,
+%% I've learned much more since writing this.
+%% Now, (8/25/2019) I am focused on other parts of these programs.
 %%
 %%
 

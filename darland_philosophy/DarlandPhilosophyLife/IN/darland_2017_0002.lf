@@ -16,8 +16,8 @@
 %% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
 load("FACTS/common_facts_2017_0001.lf")?
 load("FACTS/common_facts_2017_0002.lf")?
-load("RULES/common_2017_0001.lf")?
-load("RULES/life_2017_0001.lf")?
+load("RULES/common_2017_0001.lf")?  %% Rules about Understanding
+load("RULES/life_2017_0001.lf")?    %% Rules particularly for WildLIFE
 trace_input(true)?
 trace?
 write_time(Ignore)?
@@ -120,6 +120,32 @@ subjects_understand_same_by_ideas(Subject_1, Time_1,
 ;
 ;
 ;
+
+subjects_understand_same_by_words(Subject_1, Time_1,
+			       Subject_2, Time_2,
+			       Type, Arity,
+			       Relation_Word_1, Relation_Word_2, Relation,
+			       A_Word_1, A_Word_2, A_Object,
+			       B_Word_1, B_Word_2, B_Object,
+			       C_Word_1, C_Word_2, C_Object,
+			       D_Word_1, D_Word_2, D_Object,
+			       E_Word_1, E_Word_2, E_Object,
+			       F_Word_1, F_Word_2, F_Object,
+			       G_Word_1, G_Word_2, G_Object,
+			       H_Word_1, H_Word_2, H_Object,
+			       I_Word_1, I_Word_2, I_Object,
+			       J_Word_1, J_Word_2, J_Object,
+			       K_Word_1, K_Word_2, K_Object)?
+;
+;
+;
+;
+;
+;
+;
+
+
+
 
 
 

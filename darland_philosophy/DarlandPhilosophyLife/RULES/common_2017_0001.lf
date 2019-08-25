@@ -22,16 +22,7 @@
 %% as common_2017_0001.pl for prolog and common_2017_0001.lf for Life
 %% 
 %%
-%% I have made the propositional attitude relatons support an arity up to 6.
-%% Changed limit of arity to 3. 1/17/2017
-%% This simplifies & reduces redundancy from what I did before.
-%% Before I treated each case individually.
-%% If fewer arguments are needed "nop" may be used (without quotes).
-%%
-%% It could be done, I think, generally, & more elegantly for an arbitrary
-%% number of arguments (by using lists), but the code would be harder
-%% to read & understand - so I chose not to do that.
-%% Six arguments is probably sufficient.
+%% I have made the propositional attitude relatons support an arity up to 26.
 %%
 %% Arity & Type are not much used yet, but they may be handy in the future.
 %%

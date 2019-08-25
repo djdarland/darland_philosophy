@@ -1,4 +1,4 @@
-%% Copyright (C) 2017 Dennis J. Darland
+%% Copyright (C) 2017, 2019 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
 
@@ -20,17 +20,11 @@
 %% In Wilidife extra ";" are echoed but otherwise ignored - in Prolog they 
 %% cause errors.
 %%
-
-
- 
- 
- 
- 
- 
-
 load("FACTS/common_facts_2017_0001.lf")?
 load("FACTS/common_facts_2017_0002.lf")?
+load("FACTS/common_facts_2017_0003.lf")?
 load("RULES/common_2017_0001.lf")?
+load("RULES/common_2017_0002.lf")?
 load("RULES/life_2017_0001.lf")?
 trace_input(true)?
 
@@ -59,123 +53,103 @@ quote_note(br0008, Author, Author_Article, Author_Book, Article_Title, Book_Titl
 quote_note(br0009, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% believes_external_internal_object(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object)?
-%% Simple query repeated by semi-colons
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+believes_in_ideas(Subject, Time, Type, Arity, Relation_Idea, A_Idea, B_Idea)?
+;
+;
+;
 
-believes_external_internal_object(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object)?
-;
-;
-;
- ;
 
 %%
 %% Next find all (there are a lot fewer beliefs than understandings
 %% (at least in my database)
 %%
 
-find_all([Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object], 
-believes_external_internal_object(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object), L)?
+% find_all([Subject, Time, 0, Arity, Relation_Word, Relation_Idea, Relation, A_Word, A_Object, A_Idea, B_Word, B_Idea, B_Object, C_Word, C_Idea, C_Object], believes_word_idea_object(Subject, Time, 0, Arity, Relation_Word, Relation_Idea, Relation, A_Word, A_Object, A_Idea, B_Word, B_Idea, B_Object, C_Word, C_Idea, C_Object), L)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Next Types > 0 - No results
 
-believes_external_internal_object(Subject, Time, Logical_Form, 1, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object)?
- ;
+believes_word_idea_object(Subject, Time, Type, Arity, Relation_Word, Relation_Idea, Relation, A_Word, A_Idea, A_Object, B_Word, B_Idea, B_Object, C_Word, C_Idea, C_Object)?
+;
+;
+;
+;
 
-believes_external_internal_object(Subject, Time, Logical_Form, 2, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object)?
- ;
+% believes_word_idea_object(Subject, Time, 2, Arity, Relation_Word, Relation_Idea, Relation, A_Word, A_Object, A_Idea, B_Word, B_Idea, B_Object, C_Word, C_Idea, C_Object)?
 
-believes_external_internal_object(Subject, Time, Logical_Form, 3, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object)?
- ;
+% believes_word_idea_object(Subject, Time, 3, Arity, Relation_Word, Relation_Idea, Relation, A_Word, A_Object, A_Idea, B_Word, B_Idea, B_Object, C_Word, C_Idea, C_Object)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-believes_external_object(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+believes_word_object(Subject, Time, Type, Arity, Relation_Word, Relation, A_Word, A_Object, B_Word, B_Object, C_Word, C_Object)?
 ;
 ;
 ;
- ;
+;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-find_all([Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object], believes_external_object(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object), L)?
+% find_all([Subject, Time, 0, Arity, Relation_Word, Relation, A_Word, A_Object, B_Word, B_Object, C_Word, C_Object], believes_word_object(Subject, Time, 0, Arity, Relation_Word, Relation, A_Word, A_Object, B_Word, B_Object, C_Word, C_Object), L)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-believes_external_object(Subject, Time, Logical_Form, 1, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
- ;
+%believes_word_object(Subject, Time, 1, Arity, Relation_Word, Relation, A_Word, A_Object, B_Word, B_Object, C_Word, C_Object)?
 
-believes_external_object(Subject, Time, Logical_Form, 2, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
- ;
+% believes_word_object(Subject, Time, 2, Arity, Relation_Word, Relation, A_Word, A_Object, B_Word, B_Object, C_Word, C_Object)?
 
-believes_external_object(Subject, Time, Logical_Form, 3, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
- ;
+
+% believes_word_object(Subject, Time, 3, Arity, Relation_Word, Relation, A_Word, A_Object, B_Word, B_Object, C_Word, C_Object)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-believes_external_internal(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol)?
+believes_word_idea(Subject, Time, Type, Arity, Relation_Word, Relation_Idea, A_Word, A_Idea, B_Word, B_Idea, C_Word, C_Idea)?
 ;
 ;
 ;
- ;
+;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-find_all([Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol], believes_external_internal(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol), L)?
+%find_all([Subject, Time, 0, Arity, Relation_Word, Relation_Idea, A_Word, A_Idea, B_Word, B_Idea, C_Word, C_Idea], believes_word_idea(Subject, Time,  0, Arity, Relation_Word, Relation_Idea, A_Word, A_Idea, B_Word, B_Idea, C_Word, C_Idea), L)?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-believes_external_internal(Subject, Time, Logical_Form, 1, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol)?
- ;
+%believes_word_idea(Subject, Time,  1, Arity, Relation_Word, Relation_Idea, A_Word, A_Idea, B_Word, B_Idea, C_Word, C_Idea)?
 
-believes_external_internal(Subject, Time, Logical_Form, 2, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol)?
- ;
 
-believes_external_internal(Subject, Time, Logical_Form, 3, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol)?
- ;
+% believes_word_idea(Subject, Time,  2, Arity, Relation_Word, Relation_Idea, A_Word, A_Idea, B_Word, B_Idea, C_Word, C_Idea)?
+
+% believes_word_idea(Subject, Time,  3, Arity, Relation_Word, Relation_Idea, A_Word, A_Idea, B_Word, B_Idea, C_Word, C_Idea)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-believes_internal_object(Subject, Time, Logical_Form, 0, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
-;
-;
-;
- ;
+believes_idea_object(Subject, Time,  Type, Arity, Relation_Idea, Relation, A_Idea, A_Object, B_Idea, B_Object, C_Idea, C_Object)?
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-find_all([Subject, Time, Logical_Form, 0, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object], believes_internal_object(Subject, Time, Logical_Form, 0, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object), L)?
+%find_all([Subject, Time,  0, Arity, Internal_Relation_symbol, Relation, A_Idea, A_Object, B_Idea, B_Object, C_Idea, C_Object], believes_idea_object(Subject, Time,  0, Arity, Internal_Relation_symbol, Relation, A_Idea, A_Object, B_Idea, B_Object, C_Idea, C_Object), L)?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-believes_internal_object(Subject, Time, Logical_Form, 1, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
- ;
+% believes_idea_object(Subject, Time,  1, Arity, Internal_Relation_symbol, Relation, A_Idea, A_Object, B_Idea, B_Object, C_Idea, C_Object)?
 
 
-believes_internal_object(Subject, Time, Logical_Form, 2, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
- ;
+% believes_idea_object(Subject, Time,  2, Arity, Internal_Relation_symbol, Relation, A_Idea, A_Object, B_Idea, B_Object, C_Idea, C_Object)?
 
 
-believes_internal_object(Subject, Time, Logical_Form, 3, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
- ;
+
+% believes_idea_object(Subject, Time,  3, Arity, Internal_Relation_symbol, Relation, A_Idea, A_Object, B_Idea, B_Object, C_Idea, C_Object)?
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-believes_object(Subject, Time, Logical_Form, 0, Arity, Relation, A_Object, B_Object, C_Object)?
-;
-;
-;
- ;
+believes_object(Subject, Time,  Type, Arity, Relation, A_Object, B_Object, C_Object)?
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-find_all([Subject, Time, Logical_Form, 0, Arity, Relation, A_Object, B_Object, C_Object], believes_object(Subject, Time, Logical_Form, 0, Arity, Relation, A_Object, B_Object, C_Object), L)?
+%find_all([Subject, Time,  0, Arity, Relation, A_Object, B_Object, C_Object], believes_object(Subject, Time,  0, Arity, Relation, A_Object, B_Object, C_Object), L)?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-believes_object(Subject, Time, Logical_Form, 1, Arity, Relation, A_Object, B_Object, C_Object)?
- ;
+%believes_object(Subject, Time,  1, Arity, Relation, A_Object, B_Object, C_Object)?
 
-believes_object(Subject, Time, Logical_Form, 2, Arity, Relation, A_Object, B_Object, C_Object)?
- ;
+% believes_object(Subject, Time,  2, Arity, Relation, A_Object, B_Object, C_Object)?
 
-believes_object(Subject, Time, Logical_Form, 3, Arity, Relation, A_Object, B_Object, C_Object)?
- ;
+% believes_object(Subject, Time,  3, Arity, Relation, A_Object, B_Object, C_Object)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

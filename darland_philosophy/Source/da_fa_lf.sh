@@ -1,4 +1,4 @@
-##  Copyright (C) 2017 Dennis J. Darland
+##  Copyright (C) 2017, 2019 Dennis J. Darland
 
 ##  This file is part of darland's philosophy.
 
@@ -22,8 +22,10 @@ do
 echo "-----------"
 echo "Philosophy Facts Files"
 echo "-----------"
-echo "1 common_facts_2017_00001.lf samples for darland philosophy"
+echo "1 common_facts_2017_00001.lf samples for darland philosophy - On Understanding"
 echo "2 common_facts_2017_00002.lf data comparing philosophers terminology"
+echo "3 common_facts_2017_00003.lf samples for darland philosophy - On Belief"
+
 echo "-----------"
 if test -f da_fa.sh
 then
@@ -36,6 +38,7 @@ read select
 case $select in
 1) $EDITOR ../DarlandPhilosophyLife/FACTS/common_facts_2017_0001.lf;;
 2) $EDITOR ../DarlandPhilosophyLife/FACTS/common_facts_2017_0002.lf;;
+3) $EDITOR ../DarlandPhilosophyLife/FACTS/common_facts_2017_0003.lf;;
 666) $EDITOR da_fa_lf.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

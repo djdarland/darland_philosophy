@@ -1,4 +1,4 @@
-##  Copyright (C) 2017 Dennis J. Darland
+##  Copyright (C) 2017, 2019 Dennis J. Darland
 
 ##  This file is part of darland's philosophy.
 
@@ -22,8 +22,9 @@ do
 echo "-----------"
 echo "Philosophy Rules Files"
 echo "-----------"
-echo "1 common_2017_0001.lf"
-echo "2 life_2017_0001.lf"
+echo "1 common_2017_0001.lf - Rules on Understanding"
+echo "2 life_2017_0001.lf   - Particular Rules for Life"
+echo "3 common_2017_0002.lf - Rules on Belief"
 echo "-----------"
 if test -f da_fa.sh
 then
@@ -36,6 +37,7 @@ read select
 case $select in
 1) $EDITOR ../DarlandPhilosophyLife/RULES/common_2017_0001.lf;;
 2) $EDITOR ../DarlandPhilosophyLife/RULES/life_2017_0001.lf;;
+3) $EDITOR ../DarlandPhilosophyLife/RULES/common_2017_0002.lf;;
 666) $EDITOR da_ru_lf.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

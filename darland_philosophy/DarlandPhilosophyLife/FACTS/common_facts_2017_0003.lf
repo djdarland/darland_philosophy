@@ -1,0 +1,132 @@
+%% Copyright (C) 2017, 2019 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+
+%% Life database for use with predicates 
+%% to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017
+%% Major re-write starting 8/19/2019
+%%
+%% Total rewite of what I started about 2007.
+%%
+
+%% common_facts_2017_0001.lf    %% Facts primarily about beliefs
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% conventions.
+%% tom, quine, cicero etc stand for people (instances of Subjects or Objects.)
+%% There could also be non-animate objects such as a table/
+%% there (some would argue) might also be non-human Subjects - such as a dog.
+%% tom might have an idea of cicero. This would be represented tom_cicero_idea.
+%% The 1st tom indicates that it is tom's idea. cicero indicates that it is an
+%% idea of cicero. The final idea indicates that it is an idea.
+%% tom might have an word in a shared language for cicero. This is indicated by %% cicero_word. 
+%% quine might also an idea quine_cicero_idea of cicero. (note his idea is
+%% different). quine might share, however the word cicero_word with tom.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% believes_ideas is the only primitive belief relation needed.
+%% I define several others in terms of it. 
+%%
+%% believes_in_ideas(Subject, Time, Type, Logical_Form, Arity, Relation_Idea, A_Idea, B_Idea, C_Idea, D_Idea, E_Idea, F_Idea, G_Idea, H_Idea, I_Idea, J_Idea)
+
+%%
+believes_in_ideas(tom, now, 1, 2, tom_denounced_idea, tom_cicero_idea, tom_cataline_idea).
+believes_in_ideas(tom, now, 1, 2, tom_denounced_idea, tom_tully_idea, tom_cataline_idea).
+believes_in_ideas(tom, now, 1, 1, tom_human_idea, tom_tully_idea).
+believes_in_ideas(quine, now, 1, 2, quine_denounced_idea, quine_cicero_idea, quine_cataline_idea).
+believes_in_ideas(quine, now, 1, 2, quine_denounced_idea, quine_tully_idea, quine_cataline_idea).
+
+%% believes_in_ideas(tom, now, 1, 2, tom_not_formally_equivalent_idea, tom_human_idea, tom_featherless_biped_idea, nop).
+
+%% believes_in_ideas(quine, now, 1, 2, quine_formally_equivalent_idea, quine_human_idea, quine_featherless_biped_idea, nop).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% believes_believes_in_ideas(quine, now, tom, now, pos_pos, 0, 2, tom_denounced_idea, tom_cicero_idea, tom_cataline_idea, nop).
+%% believes_believes_in_ideas(quine, now, tom, now, pos_neg, 0, 2, tom_denounced_idea, tom_tully_idea, tom_cataline_idea, nop).
+%% believes_believes_in_ideas(quine, now, tom, now, pos_pos, 0, 1, tom_human_idea, tom_tully_idea, nop, nop).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Now, just some plain facts - however the 1st agument corresponds to the Logical Form that would make a belief in the fact true.
+
+human(pos_pos, tom, nop, nop).
+human(pos_pos, cicero, nop, nop).
+human(pos_pos, cataline, nop, nop).
+human_idea(pos_pos, nop, nop, nop).
+
+human_word(pos_pos, tom_word, nop, nop).
+human_word(pos_pos, cicero_word, nop, nop).
+human_word(pos_pos, cataline_word, nop, nop).
+human_word_idea(pos_pos, nop, nop, nop).
+
+featherless_biped(pos_pos, tom, nop, nop).
+featherless_biped(pos_pos, cicero, nop, nop).
+featherless_biped(pos_pos, cataline, nop, nop).
+featherless_biped_idea(pos_pos, nop, nop, nop).
+
+featherless_biped_word(pos_pos, tom_word, nop, nop).
+featherless_biped_word(pos_pos, cicero_word, nop, nop).
+featherless_biped_word(pos_pos, cataline_word, nop, nop).
+featherless_biped_word_idea(pos_pos, nop, nop, nop).
+
+american(pos_pos, tom, nop, nop).
+american_idea(pos_pos, nop, nop, nop).
+
+american_word(pos_pos, tom_word, nop, nop).
+american_word_idea(pos_pos, nop, nop, nop).
+
+roman(pos_pos, cicero, nop, nop).
+roman(pos_pos, cataline, nop, nop).
+roman_idea(pos_pos, nop, nop, nop).
+
+roman_word(pos_pos, cicero_word, nop, nop).
+roman_word(pos_pos, cataline_word, nop, nop).
+roman_word_idea(pos_pos, nop, nop, nop).
+
+arity(human, 1).
+arity(featherless_biped, 1).
+type(human, 0).
+type(featherless_biped, 0).
+
+%denounced(pos_pos, cicero, cataline, nop).
+%denounced(pos_neg, tom, cataline, nop).
+
+%denounced_idea(pos_pos, nop, nop, nop).
+% denounced_idea(pos_neg, nop, nop, nop).
+
+%quine_denounced_idea(pos_pos, nop, nop, nop).
+%quine_denounced_idea(pos_neg, nop, nop, nop).
+
+%denounced_idea_word(pos_pos, nop, nop, nop).
+% quine_human_idea(pos_pos, nop, nop, nop).
+
+quine_featherless_biped_idea(pos_pos, nop, nop, nop).
+quine_human_idea(pos_pos, nop, nop, nop).
+tom_featherless_biped_idea(pos_pos, nop, nop, nop).
+tom_human_idea(pos_pos, nop, nop, nop).
+
+quine_formally_equivalent(pos_pos, nop, nop, nop).
+quine_formally_equivalent(neg_pos, nop, nop, nop).
+quine_not_formally_equivalent(pos_pos, nop, nop, nop).
+quine_not_formally_equivalent(neg_pos, nop, nop, nop).
+tom_formally_equivalent(pos_pos, nop, nop, nop).
+tom_formally_equivalent(pos_neg, nop, nop, nop).
+tom_not_formally_equivalent(pos_pos, nop, nop, nop).
+tom_not_formally_equivalent(neg_pos, nop, nop, nop).
