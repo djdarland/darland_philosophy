@@ -30,7 +30,7 @@ quote_note(br0006, Author, Author_Article, Author_Book, Article_Title, Book_Titl
 
 quote_note(br0007, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
 
-understands_words_objects(Subject, Time, Type, Arity,
+understands_words_objects(Subject, Time, Type, 1,
 			  Relation_Word, Relation,
 			  A_Word, A_Object,
 			  B_Word, B_Object,
@@ -39,9 +39,6 @@ understands_words_objects(Subject, Time, Type, Arity,
 ;
 ;
 
-understands_words_objects(Subject, Time, Type, 1,
-			  Relation_Word, Relation,
-			  A_Word, A_Object)?
 ;
 ;
 ;
