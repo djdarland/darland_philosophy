@@ -31,7 +31,7 @@ quote_note(br0006, Author, Author_Article, Author_Book, Article_Title, Book_Titl
 quote_note(br0007, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
 
 understands_words_objects(Subject, Time, Type, Arity,
-			  Verb, Relation,
+			  Relation_Word, Relation,
 			  A_Word, A_Object,
 			  B_Word, B_Object,
 			  C_Word, C_Object)?
@@ -40,14 +40,14 @@ understands_words_objects(Subject, Time, Type, Arity,
 ;
 
 understands_words_objects(Subject, Time, Type, 1,
-			  Verb, Relation,
+			  Relation_Word, Relation,
 			  A_Word, A_Object)?
 ;
 ;
 ;
 
 understands_words_objects(Subject, Time, Type, 2,
-			  Verb, Relation,
+			  Relation_Word, Relation,
 			  A_Word, A_Object,
 			  B_Word, B_Object,
 			  C_Word, C_Object)?
@@ -56,7 +56,7 @@ understands_words_objects(Subject, Time, Type, 2,
 ;
 
 understands_words_ideas_objects(Subject, Time, Type, Arity,
-				Verb, Verb_Idea, Relation,
+				Relation_Word, Relation_Idea, Relation,
 				A_Word, A_Idea, A_Object,
 				B_Word, B_Idea, B_Object,
 				C_Word, C_Idea, C_Object)?
@@ -65,10 +65,21 @@ understands_words_ideas_objects(Subject, Time, Type, Arity,
 ;
 
 understands_words_ideas(Subject, Time, Type, Arity,
-				Verb, Verb_Idea,
+				Relation_Word, Relation_Idea,
 				A_Word, A_Idea,
 				B_Word, B_Idea,
 				C_Word, C_Idea)?
+;
+;
+
+understands_words_ideas_objects(Subject, Time, Type, Arity,
+				Relation_Word, Idea_Relation, Relation,
+				A_Word, A_Idea, A_Object,
+				B_Word, B_Idea, B_Object,
+				C_Word, C_Idea, C_Object,
+				D_Word, D_Idea, D_Object,
+				E_Word, E_Idea, E_Object)?
+;
 ;
 ;
 ;
