@@ -1,4 +1,4 @@
-%% Copyright (C) 2017 Dennis J. Darland
+%% Copyright (C) 2017, 2019 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
 
@@ -21,15 +21,13 @@
 %% cause errors.
 %%
 
- 
- 
- 
- 
- 
+%% This is to find all beliefs - some problems using find_all.
 
 load("FACTS/common_facts_2017_0001.lf")?
 load("FACTS/common_facts_2017_0002.lf")?
+load("FACTS/common_facts_2017_0003.lf")?
 load("RULES/common_2017_0001.lf")?
+load("RULES/common_2017_0002.lf")?
 load("RULES/life_2017_0001.lf")?
 trace_input(true)?
 
@@ -41,64 +39,33 @@ remark(4001, Remark)?
 
 remark(4002, Remark)?
 
-understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
+%%
+%% Next find all (there are a lot fewer beliefs than understandings
+%% (at least in my database)
+%%
+
+find_all([Subject, Time, Type, Arity, Relation_Word, Relation_Idea, Relation, A_Word, A_Object, A_Idea, B_Word, B_Idea, B_Object, C_Word, C_Idea, C_Object], believes_word_idea_object(Subject, Time, Type, Arity, Relation_Word, Relation_Idea, Relation, A_Word, A_Idea, A_Object, B_Word, B_Idea, B_Object, C_Word, C_Idea, C_Object), L)?
 ;
 ;
 ;
 
-understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
-
-understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-understands_internal_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
-;
+find_all([Subject, Time, Type, Arity, Relation_Word, Relation_Idea, A_Word, A_Idea, B_Word, B_Idea, C_Word, C_Idea], believes_word_idea(Subject, Time,  Type, Arity, Relation_Word, Relation_Idea, A_Word, A_Idea, B_Word, B_Idea, C_Word, C_Idea), L)?
 ;
 ;
 
-understands_internal_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+find_all([Subject, Time,  Type, Arity, Relation_Idea, Relation, A_Idea, A_Object, B_Idea, B_Object, C_Idea, C_Object], believes_idea_object(Subject, Time,  Type, Arity, Relation_Idea, Relation, A_Idea, A_Object, B_Idea, B_Object, C_Idea, C_Object), L)?
 ;
 
-understands_internal_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-understands_internal_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+find_all([Subject, Time,  Type, Arity, Relation, A_Object, B_Object, C_Object], believes_object(Subject, Time,  Type, Arity, Relation, A_Object, B_Object, C_Object), L)?
 ;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-understands_external_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
-;
-;
-;
-
-understands_external_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
-
-understands_external_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
-
-understands_external_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-understands_external_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-
-understands_external_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-
-understands_external_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-
-understands_external_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
 
 write_stats(Ignore)?
 

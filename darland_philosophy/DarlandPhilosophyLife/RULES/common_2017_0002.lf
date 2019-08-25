@@ -24,8 +24,37 @@
 %% Arity & Type are not much used yet, but they may be handy in the future.
 %%
 
-%% believes_in_ideas(Subject, Time, Type, Arity, Relation_Idea, A_Idea, B_Idea)?
+%%    There are two primitive sorts of belied
 
+%%    One in words
+
+%%    believes_in_words(Subject, Time, Type, Arity,
+%%		      Relation_Word,
+%%		      A_Word,
+%%		      B_Word,
+%%		      C_Word, ...
+
+%%    And One in ideas
+
+%%    believes_in_ideas(Subject, Time, Type, Arity,
+%%		      Relation_Word,
+%%		      A_Idea,
+%%		      B_Idea,
+%%		      C_Idea, ...
+
+%%  Either may exist with or without the other.
+%%  beliefs in words exist without ideas exist, e.g. when we
+%%  compute without thinking. But I think we must have subconscious
+%%  ideas if the words are about anything.
+
+%%  beliefs in ideas exist without words, exist, e.g. when we
+%%  cannot think of a person's name.
+
+% if a person belives in words & ideas & connects them to objects then:
+% they must have the correct relation among the words
+% they must have the correct relation among their ideas
+% and understand the relation between the words, ideas and objects.
+% This ammounts to the rrrr & ssss relations holding.
 
 believes_word_idea_object(Subject, Time, Type, Arity,
 			  Relation_Word, Relation_Idea, Relation,
@@ -55,6 +84,34 @@ believes_word_idea_object(Subject, Time, Type, Arity,
 			  X_Word, X_Idea, X_Object,
 			  Y_Word, Y_Idea, Y_Object,
 			  Z_Word, Z_Idea, Z_Object) :-
+    believes_in_words(Subject, Time, Type, Arity,
+		      Relation_Word,
+		      A_Word,
+		      B_Word,
+		      C_Word,
+		      D_Word,
+		      E_Word,
+		      F_Word,
+		      G_Word,
+		      H_Word,
+		      I_Word,
+		      J_Word,
+		      K_Word,
+		      L_Word,
+		      M_Word,
+		      N_Word,
+		      O_Word,
+		      P_Word,
+		      Q_Word,
+		      R_Word,
+		      S_Word,
+		      T_Word,
+		      U_Word,
+		      V_Word,
+		      W_Word,
+		      X_Word,
+		      Y_Word,
+		      Z_Word),
     believes_in_ideas(Subject, Time, Type, Arity,
 		      Relation_Idea,
 		      A_Idea,
@@ -112,6 +169,13 @@ believes_word_idea_object(Subject, Time, Type, Arity,
 				    Y_Word, Y_Idea, Y_Object,
 				    Z_Word, Z_Idea, Z_Object).
 
+% if a person belives in words about objects then:
+% they must have the correct relation among the words
+% they must have the correct relation among their ideas
+% and understand the relation between the words, ideas and objects.
+% NOTE: The only way to connect the words to the objects is via ideas.
+% This means the rrss relations hold.
+
 believes_word_object(Subject, Time, Type, Arity,
 		     Relation_Word, Relation,
 		     A_Word, A_Object,
@@ -140,34 +204,34 @@ believes_word_object(Subject, Time, Type, Arity,
 		     X_Word, X_Object,
 		     Y_Word, Y_Object,
 		     Z_Word, Z_Object) :-
-    believes_in_ideas(Subject, Time, Type, Arity,
-		      Relation_Idea,
-		      A_Idea,
-		      B_Idea,
-		      C_Idea,
-		      D_Idea,
-		      E_Idea,
-		      F_Idea,
-		      G_Idea,
-		      H_Idea,
-		      I_Idea,
-		      J_Idea,
-		      K_Idea,
-		      L_Idea,
-		      M_Idea,
-		      N_Idea,
-		      O_Idea,
-		      P_Idea,
-		      Q_Idea,
-		      R_Idea,
-		      S_Idea,
-		      T_Idea,
-		      U_Idea,
-		      V_Idea,
-		      W_Idea,
-		      X_Idea,
-		      Y_Idea,
-		      Z_Idea),
+    believes_in_words(Subject, Time, Type, Arity,
+		      Relation_Word,
+		      A_Word,
+		      B_Word,
+		      C_Word,
+		      D_Word,
+		      E_Word,
+		      F_Word,
+		      G_Word,
+		      H_Word,
+		      I_Word,
+		      J_Word,
+		      K_Word,
+		      L_Word,
+		      M_Word,
+		      N_Word,
+		      O_Word,
+		      P_Word,
+		      Q_Word,
+		      R_Word,
+		      S_Word,
+		      T_Word,
+		      U_Word,
+		      V_Word,
+		      W_Word,
+		      X_Word,
+		      Y_Word,
+		      Z_Word),
     understands_words_ideas_objects(Subject, Time, Type, Arity,
 				    Relation_Word, Relation_Idea, Relation,
 				    A_Word, A_Idea, A_Object,
@@ -196,6 +260,17 @@ believes_word_object(Subject, Time, Type, Arity,
 				    X_Word, X_Idea, X_Object,
 				    Y_Word, Y_Idea, Y_Object,
 				    Z_Word, Z_Idea, Z_Object).
+
+
+% if a person believes in words and ideas then:
+% they must have the correct relation among the words
+% they must have the correct relation among their ideas
+% and understand the relation between the words and ideas.
+%
+% This amounts to the correct rrrr relations holding.
+% There might not even be corresponding objects.
+
+
 believes_word_idea(Subject, Time, Type, Arity,
 		   Relation_Word, Relation_Idea,
 		   A_Word, A_Idea,
@@ -252,6 +327,34 @@ believes_word_idea(Subject, Time, Type, Arity,
 		      X_Idea,
 		      Y_Idea,
 		      Z_Idea),
+    believes_in_words(Subject, Time, Type, Arity,
+		      Relation_Word,
+		      A_Word,
+		      B_Word,
+		      C_Word,
+		      D_Word,
+		      E_Word,
+		      F_Word,
+		      G_Word,
+		      H_Word,
+		      I_Word,
+		      J_Word,
+		      K_Word,
+		      L_Word,
+		      M_Word,
+		      N_Word,
+		      O_Word,
+		      P_Word,
+		      Q_Word,
+		      R_Word,
+		      S_Word,
+		      T_Word,
+		      U_Word,
+		      V_Word,
+		      W_Word,
+		      X_Word,
+		      Y_Word,
+		      Z_Word),
     understands_words_ideas(Subject, Time, Type, Arity,
 			    Relation_Word, Relation_Idea,
 			    A_Word, A_Idea,
@@ -280,6 +383,13 @@ believes_word_idea(Subject, Time, Type, Arity,
 			    X_Word, X_Idea,
 			    Y_Word, Y_Idea,
 			    Z_Word, Z_Idea).
+
+% if a person believes in ideas about objects then:
+% they must have the correct relation among their ideas
+% and understand the relation between the ideas and objects.
+%
+% This amounts to the correct ssss relations holding.
+% There might not even be corresponding words.
 
 believes_idea_object(Subject, Time, Type, Arity,
 		     Relation_Idea  , Relation,
@@ -365,6 +475,15 @@ believes_idea_object(Subject, Time, Type, Arity,
 			      X_Idea, X_Object,
 			      Y_Idea, Y_Object,
 			      Z_Idea, Z_Object).
+
+% if a person believes about objects (in ideas) then:
+% they must have the correct relation among their ideas
+% and understand the relation between the ideas and objects.
+%
+% This amounts to the correct ssss relations holding.
+% There might not even be corresponding words.
+%
+
 believes_object(Subject, Time, Type, Arity,
 		Relation,
 		A_Object,
@@ -421,3 +540,6 @@ believes_object(Subject, Time, Type, Arity,
 			 X_Idea, X_Object,
 			 Y_Idea, Y_Object,
 			 Z_Idea, Z_Object).
+
+
+

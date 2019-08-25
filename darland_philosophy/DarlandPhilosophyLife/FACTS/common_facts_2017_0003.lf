@@ -39,10 +39,10 @@
 %% different). quine might share, however the word cicero_word with tom.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-%% believes_ideas is the only primitive belief relation needed.
-%% I define several others in terms of it. 
+%% believes_ideas and believes_words are the only primitive belief relations
+%% needed.
+%% I define several others in terms of them. 
 %%
-%% believes_in_ideas(Subject, Time, Type, Logical_Form, Arity, Relation_Idea, A_Idea, B_Idea, C_Idea, D_Idea, E_Idea, F_Idea, G_Idea, H_Idea, I_Idea, J_Idea)
 
 %%
 believes_in_ideas(tom, now, 1, 2, tom_denounced_idea, tom_cicero_idea, tom_cataline_idea).
@@ -50,6 +50,11 @@ believes_in_ideas(tom, now, 1, 2, tom_denounced_idea, tom_tully_idea, tom_catali
 believes_in_ideas(tom, now, 1, 1, tom_human_idea, tom_tully_idea).
 believes_in_ideas(quine, now, 1, 2, quine_denounced_idea, quine_cicero_idea, quine_cataline_idea).
 believes_in_ideas(quine, now, 1, 2, quine_denounced_idea, quine_tully_idea, quine_cataline_idea).
+believes_in_words(tom, now, 1, 2, tom_denounced_word, tom_cicero_word, tom_cataline_word).
+believes_in_words(tom, now, 1, 2, tom_denounced_word, tom_tully_word, tom_cataline_word).
+believes_in_words(tom, now, 1, 1, tom_human_word, tom_tully_word).
+believes_in_words(quine, now, 1, 2, quine_denounced_word, quine_cicero_word, quine_cataline_word).
+believes_in_words(quine, now, 1, 2, quine_denounced_word, quine_tully_word, quine_cataline_word).
 
 %% believes_in_ideas(tom, now, 1, 2, tom_not_formally_equivalent_idea, tom_human_idea, tom_featherless_biped_idea, nop).
 
