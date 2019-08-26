@@ -17,13 +17,13 @@
 
 
 
-check_arity(3, A, B, C) :- A :\== nop, B :\== nop, C :\== nop.
+%% check_arity(3, A, B, C) :- A :\== nop, B :\== nop, C :\== nop.
 
-check_arity(2, A, B, nop) :- A :\== nop, B :\== nop.
+%% check_arity(2, A, B, nop) :- A :\== nop, B :\== nop.
 
-check_arity(1, A, nop, nop) :- A :\== nop.
+%% check_arity(1, A, nop, nop) :- A :\== nop.
 
-check_arity(0, nop , nop, nop).
+%% check_arity(0, nop , nop, nop).
 
 
 %% I had help from Hassan Ait-Kaci on the apply_predicate predicate.
@@ -31,11 +31,11 @@ check_arity(0, nop , nop, nop).
 different(A, B) :- A :\== B.
 
 
-type_p1(Type, Type_p1) :- Type_p1 = Type + 1.
-type_p2(Type, Type_p2) :- Type_p2 = Type + 2.
-type_p3(Type, Type_p2) :- Type_p2 = Type + 3.
+%% type_p1(Type, Type_p1) :- Type_p1 = Type + 1.
+%% type_p2(Type, Type_p2) :- Type_p2 = Type + 2.
+%% type_p3(Type, Type_p2) :- Type_p2 = Type + 3.
 
-write_type(Loc, Type) :- write(Loc, 'Type = ', Type, '|').
+%% write_type(Loc, Type) :- write(Loc, 'Type = ', Type, '|').
 
 
 write_time(Ignore) :- write(system("date")).
@@ -44,7 +44,62 @@ write_time(Ignore) :- write(system("date")).
 
 write_stats(Ignore) :- write("I am not sure of units here\n", "Clock Time ", real_time/1000000000.0, " Seconds\n", "CPU Time ", cpu_time * 1000.0, " Milliseconds\n").
 
-apply_predicate(Logical_Form, Type, Arity, Relation, A_object, B_object, C_object) :- P = Relation, P.1 = Logical_Form, P.2 = A_object, P.3 = B_object, P.4 = C_object, P.
+apply_predicate(Logical_Form, Type, Arity,
+		Relation,
+		A_object,
+		B_object,
+		C_object,
+		D_object,
+		E_object,
+		F_object,
+		G_object,
+		H_object,
+		I_object,
+		J_object,
+		K_object,
+		L_object,
+		M_object,
+		N_object,
+		O_object,
+		P_object,
+		Q_object,
+		R_object,
+		S_object,
+		T_object,
+		U_object,
+		V_object,
+		W_object,
+		X_object,
+		Y_object,
+		Z_object) :-
+    P = Relation,
+    P.1 = A_object,
+      P.2 = B_object,
+	P.3 = C_object,
+	P.4 = D_object,
+	P.5 = E_object,
+	P.6 = F_object,
+	P.7 = G_object,
+	P.8 = H_object,
+	P.9 = I_object,
+	P.10 = J_object,
+	P.11 = K_object,
+	P.12 = L_object,
+	P.13 = M_object,
+	P.14 = N_object,
+	P.15 = O_object,
+	P.16 = P_object,
+	P.17 = Q_object,
+	P.18 = R_object,
+	P.19 = S_object,
+	P.20 = T_object,
+	P.21 = U_object,
+	P.22 = V_object,
+	P.23 = W_object,
+	P.24 = X_object,
+	P.25 = Y_object,
+	P.26 = Z_object,
+	  P.
 
 call_goal(Goal) :- write('AA001 Goal = ', Goal), Goal = [H | T], write('AA002 H = ', H, 'T = ', T), call_sub_1(H, T, 0).
 call_sub_1(H, T, N) :- write('BB001 H = ', H, 'T = ', T, 'N = ', N), T = [T1 | T2], H.N = T1, call_sub_1(H, T2, N + 1).

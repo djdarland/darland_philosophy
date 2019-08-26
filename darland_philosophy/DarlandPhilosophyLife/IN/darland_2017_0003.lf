@@ -53,16 +53,126 @@ quote_note(br0008, Author, Author_Article, Author_Book, Article_Title, Book_Titl
 quote_note(br0009, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-believes_in_ideas(Subject, Time, Type, Arity, Relation_Idea, A_Idea, B_Idea)?
+believes_in_ideas(Subject, Time, Type, Arity,
+		  Relation_Idea,
+		  A_Idea,
+		  B_Idea,
+		  C_Idea,
+		  D_Idea,
+		  E_Idea,
+		  F_Idea,
+		  G_Idea,
+		  H_Idea,
+		  I_Idea,
+		  J_Idea,
+		  K_Idea,
+		  L_Idea,
+		  M_Idea,
+		  N_Idea,
+		  O_Idea,
+		  P_Idea,
+		  Q_Idea,
+		  R_Idea,
+		  S_Idea,
+		  T_Idea,
+		  U_Idea,
+		  V_Idea,
+		  W_Idea,
+		  X_Idea,
+		  Y_Idea,
+		  Z_Idea)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 ;
 ;
 ;
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Next Types > 0 - No results
 
-believes_word_idea_object(Subject, Time, Type, Arity, Relation_Word, Relation_Idea, Relation, A_Word, A_Idea, A_Object, B_Word, B_Idea, B_Object, C_Word, C_Idea, C_Object)?
+believes_word_idea_object(Subject, Time, Type, Arity,
+			  Relation_Word, Relation_Idea, Relation,
+			  A_Word, A_Idea, A_Object,
+			  B_Word, B_Idea, B_Object,
+			  C_Word, C_Idea, C_Object,
+			  D_Word, D_Idea, D_Object,
+			  E_Word, E_Idea, E_Object,
+			  F_Word, F_Idea, F_Object,
+			  G_Word, G_Idea, G_Object,
+			  H_Word, H_Idea, H_Object,
+			  I_Word, I_Idea, I_Object,
+			  J_Word, J_Idea, J_Object,
+			  K_Word, K_Idea, K_Object,
+			  L_Word, L_Idea, L_Object,
+			  M_Word, M_Idea, M_Object,
+			  N_Word, N_Idea, N_Object,
+			  O_Word, O_Idea, O_Object,
+			  P_Word, P_Idea, P_Object,
+			  Q_Word, Q_Idea, Q_Object,
+			  R_Word, R_Idea, R_Object,
+			  S_Word, S_Idea, S_Object,
+			  T_Word, T_Idea, T_Object,
+			  U_Word, U_Idea, U_Object,
+			  V_Word, V_Idea, V_Object,
+			  W_Word, W_Idea, W_Object,
+			  X_Word, X_Idea, X_Object,
+			  Y_Word, Y_Idea, Y_Object,
+			  Z_Word, Z_Idea, Z_Object)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 ;
 ;
 ;
@@ -70,21 +180,252 @@ believes_word_idea_object(Subject, Time, Type, Arity, Relation_Word, Relation_Id
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-believes_word_object(Subject, Time, Type, Arity, Relation_Word, Relation, A_Word, A_Object, B_Word, B_Object, C_Word, C_Object)?
+believes_word_object(Subject, Time, Type, Arity,
+		     Relation_Word, Relation,
+		     A_Word, A_Object,
+		     B_Word, B_Object,
+		     C_Word, C_Object,
+		     D_Word, D_Object,
+		     E_Word, E_Object,
+		     F_Word, F_Object,
+		     G_Word, G_Object,
+		     H_Word, H_Object,
+		     I_Word, I_Object,
+		     J_Word, J_Object,
+		     K_Word, K_Object,
+		     L_Word, L_Object,
+		     M_Word, M_Object,
+		     N_Word, N_Object,
+		     O_Word, O_Object,
+		     P_Word, P_Object,
+		     Q_Word, Q_Object,
+		     R_Word, R_Object,
+		     S_Word, S_Object,
+		     T_Word, T_Object,
+		     U_Word, U_Object,
+		     V_Word, V_Object,
+		     W_Word, W_Object,
+		     X_Word, X_Object,
+		     Y_Word, Y_Object,
+		     Z_Word, Z_Object)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 ;
 ;
 ;
 ;
 
-believes_word_idea(Subject, Time, Type, Arity, Relation_Word, Relation_Idea, A_Word, A_Idea, B_Word, B_Idea, C_Word, C_Idea)?
+believes_word_idea(Subject, Time, Type, Arity,
+		   Relation_Word, Relation_Idea,
+		   A_Word, A_Idea,
+		   B_Word, B_Idea,
+		   C_Word, C_Idea,
+		   D_Word, D_Idea,
+		   E_Word, E_Idea,
+		   F_Word, F_Idea,
+		   G_Word, G_Idea,
+		   H_Word, H_Idea,
+		   I_Word, I_Idea,
+		   J_Word, J_Idea,
+		   K_Word, K_Idea,
+		   L_Word, L_Idea,
+		   M_Word, M_Idea,
+		   N_Word, N_Idea,
+		   O_Word, O_Idea,
+		   P_Word, P_Idea,
+		   Q_Word, Q_Idea,
+		   R_Word, R_Idea,
+		   S_Word, S_Idea,
+		   T_Word, T_Idea,
+		   U_Word, U_Idea,
+		   V_Word, V_Idea,
+		   W_Word, W_Idea,
+		   X_Word, X_Idea,
+		   Y_Word, Y_Idea,
+		   Z_Word, Z_Idea)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 ;
 ;
 ;
 ;
 
-believes_idea_object(Subject, Time,  Type, Arity, Relation_Idea, Relation, A_Idea, A_Object, B_Idea, B_Object, C_Idea, C_Object)?
+believes_idea_object(Subject, Time,  Type, Arity,
+		     Relation_Idea, Relation,
+		     A_Idea, A_Object,
+		     B_Idea, B_Object,
+		     C_Idea, C_Object,
+		     D_Idea, D_Object,
+		     E_Idea, E_Object,
+		     F_Idea, F_Object,
+		     G_Idea, G_Object,
+		     H_Idea, H_Object,
+		     I_Idea, I_Object,
+		     J_Idea, J_Object,
+		     K_Idea, K_Object,
+		     L_Idea, L_Object,
+		     M_Idea, M_Object,
+		     N_Idea, N_Object,
+		     O_Idea, O_Object,
+		     P_Idea, P_Object,
+		     Q_Idea, Q_Object,
+		     R_Idea, R_Object,
+		     S_Idea, S_Object,
+		     T_Idea, T_Object,
+		     U_Idea, U_Object,
+		     V_Idea, V_Object,
+		     W_Idea, W_Object,
+		     X_Idea, X_Object,
+		     Y_Idea, Y_Object,
+		     Z_Idea, Z_Object)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 
-believes_object(Subject, Time,  Type, Arity, Relation, A_Object, B_Object, C_Object)?
+believes_object(Subject, Time,  Type, Arity,
+		Relation,
+		A_Object,
+		B_Object,
+		C_Object,
+		D_Object,
+		E_Object,
+		F_Object,
+		G_Object,
+		H_Object,
+		I_Object,
+		J_Object,
+		K_Object,
+		L_Object,
+		M_Object,
+		N_Object,
+		O_Object,
+		P_Object,
+		Q_Object,
+		R_Object,
+		S_Object,
+		T_Object,
+		U_Object,
+		V_Object,
+		W_Object,
+		X_Object,
+		Y_Object,
+		Z_Object)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 
 
 write_stats(Ignore)?
