@@ -181,113 +181,118 @@ understands_words_ideas_objects(Subject, Time, Type, Arity,
 				Z_Word, Z_Idea, Z_Object) :-
     rrrr1(Subject, Time, Type, Arity, Relation_Word, Relation_Idea),
     ssss1(Subject, Time, Type, Arity, Relation_Idea, Relation),
-    cond(Arity =:= 0, succeed, (
-	     write("djd00001\n"),
-	     cond(Arity >= 1, (
-		      write("djd00002\n"),
-		      rrrr0(Subject, Time, Type - 1, A_Word, A_Idea),
-		      ssss0(Subject, Time, Type - 1, A_Idea, A_Object))),
-	     cond(Arity >= 2, (
-		      write("djd00003\n"),
-		      rrrr0(Subject, Time, Type - 1, B_Word, B_Idea),
-		      ssss0(Subject, Time, Type - 1, B_Idea, B_Object))),
-	     cond(Arity >= 3, (
-		      write("djd00003\n"),
-		      rrrr0(Subject, Time, Type - 1, C_Word, C_Idea),
-		      ssss0(Subject, Time, Type - 1, C_Idea, C_Object))),
-	     cond(Arity >= 4, (
-		      write("djd00004\n"),
-		      rrrr0(Subject, Time, Type - 1, D_Word, D_Idea),
-		      ssss0(Subject, Time, Type - 1, D_Idea, D_Object))),
-	     cond(Arity >= 5, (
-		      write("djd00005\n"),
-		      rrrr0(Subject, Time, Type - 1, E_Word, E_Idea),
-		      ssss0(Subject, Time, Type - 1, E_Idea, E_Object))),
-	     cond(Arity >= 6, (
-		      write("djd00006\n"),
-		      rrrr0(Subject, Time, Type - 1, F_Word, F_Idea),
-		      ssss0(Subject, Time, Type - 1, F_Idea, F_Object))),
-	     cond(Arity >= 7, (
-		      write("djd00007\n"),
-		      rrrr0(Subject, Time, Type - 1, G_Word, G_Idea),
-		      ssss0(Subject, Time, Type - 1, G_Idea, G_Object))),
-	     cond(Arity >= 8, (
-		      write("djd00008\n"),
-		      rrrr0(Subject, Time, Type - 1, H_Word, H_Idea),
-		      ssss0(Subject, Time, Type - 1, H_Idea, H_Object))),
-	     cond(Arity >= 9, (
-		      write("djd00009\n"),
-		      rrrr0(Subject, Time, Type - 1, I_Word, I_Idea),
-		      ssss0(Subject, Time, Type - 1, I_Idea, I_Object))),
-	     cond(Arity >= 10, (
-		      write("djd00010\n"),
-		      rrrr0(Subject, Time, Type - 1, J_Word, J_Idea),
-		      ssss0(Subject, Time, Type - 1, J_Idea, J_Object))),
-	     cond(Arity >= 11, (
-		      write("djd00011\n"),
-		      rrrr0(Subject, Time, Type - 1, K_Word, K_Idea),
-		      ssss0(Subject, Time, Type - 1, K_Idea, K_Object))),
-	     cond(Arity >= 12, (
-		      write("djd00012\n"),
-		      rrrr0(Subject, Time, Type - 1, L_Word, L_Idea),
-		      ssss0(Subject, Time, Type - 1, L_Idea, L_Object))),
-	     cond(Arity >= 13, (
-		      write("djd00013\n"),
-		      rrrr0(Subject, Time, Type - 1, M_Word, M_Idea),
-		      ssss0(Subject, Time, Type - 1, M_Idea, M_Object))),
-	     cond(Arity >= 14, (
-		      write("djd00014\n"),
-		      rrrr0(Subject, Time, Type - 1, N_Word, N_Idea),
-		      ssss0(Subject, Time, Type - 1, N_Idea, N_Object))),
-	     cond(Arity >= 15, (
-		      write("djd00015\n"),
-		      rrrr0(Subject, Time, Type - 1, O_Word, O_Idea),
-		      ssss0(Subject, Time, Type - 1, O_Idea, O_Object))),
-	     cond(Arity >= 16, (
-		      write("djd00016\n"),
-		      rrrr0(Subject, Time, Type - 1, P_Word, P_Idea),
-		      ssss0(Subject, Time, Type - 1, P_Idea, P_Object))),
-	     cond(Arity >= 17, (
-		      write("djd00017\n"),
-		      rrrr0(Subject, Time, Type - 1, Q_Word, Q_Idea),
-		      ssss0(Subject, Time, Type - 1, Q_Idea, Q_Object))),
-	     cond(Arity >= 18, (
-		      write("djd00018\n"),
-		      rrrr0(Subject, Time, Type - 1, R_Word, R_Idea),
-		      ssss0(Subject, Time, Type - 1, R_Idea, R_Object))),
-	     cond(Arity >= 19, (
-		      write("djd00019\n"),
-		      rrrr0(Subject, Time, Type - 1, S_Word, S_Idea),
-		      ssss0(Subject, Time, Type - 1, S_Idea, S_Object))),
-	     cond(Arity >= 20, (
-		      write("djd0020\n"),
-		      rrrr0(Subject, Time, Type - 1, T_Word, T_Idea),
-		      ssss0(Subject, Time, Type - 1, T_Idea, T_Object))),
-	     cond(Arity >= 21, (
-		      write("djd00021\n"),
-		      rrrr0(Subject, Time, Type - 1, U_Word, U_Idea),
-		      ssss0(Subject, Time, Type - 1, U_Idea, U_Object))),
-	     cond(Arity >= 22, (
-		      write("djd00022\n"),
-		      rrrr0(Subject, Time, Type - 1, V_Word, V_Idea),
-		      ssss0(Subject, Time, Type - 1, V_Idea, V_Object))),
-	     cond(Arity >= 23, (
-		      write("djd00023\n"),
-		      rrrr0(Subject, Time, Type - 1, W_Word, W_Idea),
-		      ssss0(Subject, Time, Type - 1, W_Idea, W_Object))),
-	     cond(Arity >= 24, (
-		      write("djd00024\n"),
-		      rrrr0(Subject, Time, Type - 1, X_Word, X_Idea),
-		      ssss0(Subject, Time, Type - 1, X_Idea, X_Object))),
-	     cond(Arity >= 25, (
-		      write("djd00025\n"),
-		      rrrr0(Subject, Time, Type - 1, Y_Word, Y_Idea),
-		      ssss0(Subject, Time, Type - 1, Y_Idea, Y_Object))),
-	     cond(Arity >= 26, (
-		      write("djd00026\n"),
-		      rrrr0(Subject, Time, Type - 1, Z_Word, Z_Idea),
-		      ssss0(Subject, Time, Type - 1, Z_Idea, Z_Object))))).
-					
+    cond(Arity =:= 0, succeed),
+    write("AAdjd00001\n"),
+    cond(Arity >= 1, (
+	     write("AAdjd00002 Subject = ",Subject, " A_Word = ", A_Word, "\n"
+),
+	     rrrr0(Subject, Time, Type - 1, A_Word, A_Idea),
+	     ssss0(Subject, Time, Type - 1, A_Idea, A_Object)),
+	 succeed),
+    cond(Arity >= 2, (
+	     write("AAdjd00003\n"),
+	     rrrr0(Subject, Time, Type - 1, B_Word, B_Idea),
+	     ssss0(Subject, Time, Type - 1, B_Idea, B_Object)),
+	 succeed),
+    cond(Arity >= 3, (
+	     write("AAdjd00003\n"),
+	     rrrr0(Subject, Time, Type - 1, C_Word, C_Idea),
+	     ssss0(Subject, Time, Type - 1, C_Idea, C_Object)),
+	 succeed),
+    cond(Arity >= 4, (
+	     write("AAdjd00004\n"),
+	     rrrr0(Subject, Time, Type - 1, D_Word, D_Idea),
+	     ssss0(Subject, Time, Type - 1, D_Idea, D_Object))),
+    cond(Arity >= 5, (
+	     write("AAdjd00005\n"),
+	     rrrr0(Subject, Time, Type - 1, E_Word, E_Idea),
+	     ssss0(Subject, Time, Type - 1, E_Idea, E_Object))),
+    cond(Arity >= 6, (
+	     write("djd00006\n"),
+	     rrrr0(Subject, Time, Type - 1, F_Word, F_Idea),
+	     ssss0(Subject, Time, Type - 1, F_Idea, F_Object))),
+    cond(Arity >= 7, (
+	     write("djd00007\n"),
+	     rrrr0(Subject, Time, Type - 1, G_Word, G_Idea),
+	     ssss0(Subject, Time, Type - 1, G_Idea, G_Object))),
+    cond(Arity >= 8, (
+	     write("djd00008\n"),
+	     rrrr0(Subject, Time, Type - 1, H_Word, H_Idea),
+	     ssss0(Subject, Time, Type - 1, H_Idea, H_Object))),
+    cond(Arity >= 9, (
+	     write("djd00009\n"),
+	     rrrr0(Subject, Time, Type - 1, I_Word, I_Idea),
+	     ssss0(Subject, Time, Type - 1, I_Idea, I_Object))),
+    cond(Arity >= 10, (
+	     write("djd00010\n"),
+	     rrrr0(Subject, Time, Type - 1, J_Word, J_Idea),
+	     ssss0(Subject, Time, Type - 1, J_Idea, J_Object))),
+    cond(Arity >= 11, (
+	     write("djd00011\n"),
+	     rrrr0(Subject, Time, Type - 1, K_Word, K_Idea),
+	     ssss0(Subject, Time, Type - 1, K_Idea, K_Object))),
+    cond(Arity >= 12, (
+	     write("djd00012\n"),
+	     rrrr0(Subject, Time, Type - 1, L_Word, L_Idea),
+	     ssss0(Subject, Time, Type - 1, L_Idea, L_Object))),
+    cond(Arity >= 13, (
+	     write("djd00013\n"),
+	     rrrr0(Subject, Time, Type - 1, M_Word, M_Idea),
+	     ssss0(Subject, Time, Type - 1, M_Idea, M_Object))),
+    cond(Arity >= 14, (
+	     write("djd00014\n"),
+	     rrrr0(Subject, Time, Type - 1, N_Word, N_Idea),
+	     ssss0(Subject, Time, Type - 1, N_Idea, N_Object))),
+    cond(Arity >= 15, (
+	     write("djd00015\n"),
+	     rrrr0(Subject, Time, Type - 1, O_Word, O_Idea),
+	     ssss0(Subject, Time, Type - 1, O_Idea, O_Object))),
+    cond(Arity >= 16, (
+	     write("djd00016\n"),
+	     rrrr0(Subject, Time, Type - 1, P_Word, P_Idea),
+	     ssss0(Subject, Time, Type - 1, P_Idea, P_Object))),
+    cond(Arity >= 17, (
+	     write("djd00017\n"),
+	     rrrr0(Subject, Time, Type - 1, Q_Word, Q_Idea),
+	     ssss0(Subject, Time, Type - 1, Q_Idea, Q_Object))),
+    cond(Arity >= 18, (
+	     write("djd00018\n"),
+	     rrrr0(Subject, Time, Type - 1, R_Word, R_Idea),
+	     ssss0(Subject, Time, Type - 1, R_Idea, R_Object))),
+    cond(Arity >= 19, (
+	     write("djd00019\n"),
+	     rrrr0(Subject, Time, Type - 1, S_Word, S_Idea),
+	     ssss0(Subject, Time, Type - 1, S_Idea, S_Object))),
+    cond(Arity >= 20, (
+	     write("djd0020\n"),
+	     rrrr0(Subject, Time, Type - 1, T_Word, T_Idea),
+	     ssss0(Subject, Time, Type - 1, T_Idea, T_Object))),
+    cond(Arity >= 21, (
+	     write("djd00021\n"),
+	     rrrr0(Subject, Time, Type - 1, U_Word, U_Idea),
+	     ssss0(Subject, Time, Type - 1, U_Idea, U_Object))),
+    cond(Arity >= 22, (
+	     write("djd00022\n"),
+	     rrrr0(Subject, Time, Type - 1, V_Word, V_Idea),
+	     ssss0(Subject, Time, Type - 1, V_Idea, V_Object))),
+    cond(Arity >= 23, (
+	     write("djd00023\n"),
+	     rrrr0(Subject, Time, Type - 1, W_Word, W_Idea),
+	     ssss0(Subject, Time, Type - 1, W_Idea, W_Object))),
+    cond(Arity >= 24, (
+	     write("djd00024\n"),
+	     rrrr0(Subject, Time, Type - 1, X_Word, X_Idea),
+	     ssss0(Subject, Time, Type - 1, X_Idea, X_Object))),
+    cond(Arity >= 25, (
+	     write("djd00025\n"),
+	     rrrr0(Subject, Time, Type - 1, Y_Word, Y_Idea),
+	     ssss0(Subject, Time, Type - 1, Y_Idea, Y_Object))),
+    cond(Arity >= 26, (
+	     write("djd00026\n"),
+	     rrrr0(Subject, Time, Type - 1, Z_Word, Z_Idea),
+	     ssss0(Subject, Time, Type - 1, Z_Idea, Z_Object))),
+    succeed.
+
 
 understands_words_ideas(Subject, Time, Type, Arity,
 				Relation_Word, Relation_Idea,

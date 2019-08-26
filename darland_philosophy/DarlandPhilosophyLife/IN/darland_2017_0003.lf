@@ -112,10 +112,71 @@ believes_in_ideas(Subject, Time, Type, Arity,
 ;
 ;
 
+believes_in_words(Subject, Time, Type, Arity,
+		  Relation_Word,
+		  A_Word,
+		  B_Word,
+		  C_Word,
+		  D_Word,
+		  E_Word,
+		  F_Word,
+		  G_Word,
+		  H_Word,
+		  I_Word,
+		  J_Word,
+		  K_Word,
+		  L_Word,
+		  M_Word,
+		  N_Word,
+		  O_Word,
+		  P_Word,
+		  Q_Word,
+		  R_Word,
+		  S_Word,
+		  T_Word,
+		  U_Word,
+		  V_Word,
+		  W_Word,
+		  X_Word,
+		  Y_Word,
+		  Z_Word)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-believes_word_idea_object(Subject, Time, Type, Arity,
+%% Type = 1
+%% Subject = tom
+%% Time = now
+believes_word_idea_object(tom, now, 1, Arity,
 			  Relation_Word, Relation_Idea, Relation,
 			  A_Word, A_Idea, A_Object,
 			  B_Word, B_Idea, B_Object,

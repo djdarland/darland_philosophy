@@ -1,4 +1,4 @@
-%% Copyright (C) 2017 Dennis J. Darland
+%% Copyright (C) 2017, 2019 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
 
@@ -21,17 +21,11 @@
 %% In Wilidife extra ";" are echoed but otherwise ignored - in Prolog they 
 %% cause errors.
 %%
-
-
- 
- 
- 
- 
- 
-
 load("FACTS/common_facts_2017_0001.lf")?
 load("FACTS/common_facts_2017_0002.lf")?
+load("FACTS/common_facts_2017_0003.lf")?
 load("RULES/common_2017_0001.lf")?
+load("RULES/common_2017_0002.lf")?
 load("RULES/life_2017_0001.lf")?
 trace_input(true)?
 
