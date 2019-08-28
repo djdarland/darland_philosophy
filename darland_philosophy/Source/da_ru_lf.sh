@@ -22,9 +22,10 @@ do
 echo "-----------"
 echo "Philosophy Rules Files"
 echo "-----------"
-echo "1 common_2017_0001.lf - Rules on Understanding"
-echo "2 life_2017_0001.lf   - Particular Rules for Life"
-echo "3 common_2017_0002.lf - Rules on Belief"
+echo "1 life_2017_0001.lf   - Particular Rules for Life (misc)"
+echo "2 life_2017_0002.lf   - Particular Rules for Life (append)"
+echo "3 common_2017_0001.lf - Rules on Understanding"
+echo "4 common_2017_0002.lf - Rules on Belief"
 echo "-----------"
 if test -f da_fa.sh
 then
@@ -35,9 +36,10 @@ echo "999 quit"
 echo "select"
 read select
 case $select in
-1) $EDITOR ../DarlandPhilosophyLife/RULES/common_2017_0001.lf;;
-2) $EDITOR ../DarlandPhilosophyLife/RULES/life_2017_0001.lf;;
-3) $EDITOR ../DarlandPhilosophyLife/RULES/common_2017_0002.lf;;
+1) $EDITOR ../DarlandPhilosophyLife/RULES/life_2017_0001.lf;;
+2) $EDITOR ../DarlandPhilosophyLife/RULES/life_2017_0002.lf;;
+3) $EDITOR ../DarlandPhilosophyLife/RULES/common_2017_0001.lf;;
+4) $EDITOR ../DarlandPhilosophyLife/RULES/common_2017_0002.lf;;
 666) $EDITOR da_ru_lf.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

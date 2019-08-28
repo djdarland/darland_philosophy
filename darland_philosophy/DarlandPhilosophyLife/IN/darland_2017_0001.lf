@@ -1,0 +1,9 @@
+trace_input(true)?
+
+%% load("RULES/life_2017_0002.lf")?    %% Rules particularly for WildLIFE
+
+%% A = [1,2,3]?
+%% B = [3,4,5]?
+
+
+%% app3(A,B,C), write(C)?

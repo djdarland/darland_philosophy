@@ -129,3 +129,6 @@ find_collect(List, List).
 find_next(X) :- retract(find_item(X)), !, different(X, '*MARK*').
 
 
+
+  
+

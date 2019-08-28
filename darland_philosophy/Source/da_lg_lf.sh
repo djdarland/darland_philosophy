@@ -22,6 +22,7 @@ do
 echo "-----------"
 echo "Philosophy .log Files"
 echo "-----------"
+echo "0 append.out"
 echo "1 darland0001_2017_0001.out"
 echo "2 darland0001_2017_0002.out"
 echo "3 darland0001_2017_0003.out"
@@ -39,6 +40,7 @@ echo "999 quit"
 echo "select"
 read select
 case $select in
+0) $EDITOR ../DarlandPhilosophyLife/OUT/append.out;;
 1) $EDITOR ../DarlandPhilosophyLife/OUT/darland_2017_0001.out;;
 2) $EDITOR ../DarlandPhilosophyLife/OUT/darland_2017_0002.out;;
 3) $EDITOR ../DarlandPhilosophyLife/OUT/darland_2017_0003.out;;

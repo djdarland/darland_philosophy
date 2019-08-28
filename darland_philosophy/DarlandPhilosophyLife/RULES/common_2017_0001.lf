@@ -63,25 +63,25 @@ rrss(Subject, Time, Type, Word, Object) :-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 understands_words_objects(Subject, Time, Type, Arity,
-			  [W_O_Head | W_O_Tail]) :-
-    rrss(Subject, Time, Type, W_O_Head_A, W_O_Tail_A),
-    write(Subject, " understands ", W_O_Head_A),
+			  W_O_List_Out) :-
+    rrss(Subject, Time, Type, W, O),
+    write(Subject, " understands ", W),
     Type > 0,
-    understands_words_objects_B(Subject, Time, Type - 1, Arity,
-				W_O_Tail),
-    write("List = ", [W_O_Head | W_O_Tail]).
-understands_words_objects_B(Subject, Time, Type, Arity,
-			  [W_O_Head_B | W_O_Tail_B]) :-
-    rrss(Subject, Time, Type, W_O_Head_B, W_O_Tail_B),
-    write(" of  ", W_O_Head_B),
-    understands_words_objects_B(Subject, Time, Type, Arity_B + 1,
-			      W_O_Tail_B).
+    app3(W_O_List, [W , O], W_O_List_Out),
+    understands_words_objects_B(Subject, Time, Type - 1, Arity - 1, W_O_List_Out).
+
+understands_words_objects_B(Subject, Time, Type, 0,
+			  [], []) :-
+    write(" at ", Time, "\n").
 
 understands_words_objects_B(Subject, Time, Type, Arity,
-			  [W_O_Head_C | W_O_Tail_C]) :-
-    write(" at ", Time, "\n"),
-    understands_words_objects_B(Subject, Time, Type , 0, 
-			      []), succeed.
+			  W_O_List_In, W_O_List_Out) :-
+    rrss(Subject, Time, Type, W, O),
+    write(" of  ", W),
+    app3(W_O_List_In, [W , O], W_O_List_Out)
+    understands_words_objects_B(Subject, Time, Type, Arity - 1,
+				W_O_List_In, W_O_List_Out).
+
 
 				      
 understands_words_ideas_objects(Subject, Time, Type, Arity,

@@ -8,6 +8,7 @@ echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; type 501 for details."
 echo "-----------"
 
+echo "0 Edit append.lf"
 echo "1 Edit darland_2017_0001.lf"
 echo "2 Edit darland_2017_0002.lf"
 echo "3 Edit darland_2017_0003.lf"
@@ -31,6 +32,7 @@ read select
 while [ $select -ne 999 ]
 do 
 case $select in
+0) $EDITOR ../DarlandPhilosophyLife/IN/append.lf;;
 1) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0001.lf;;
 2) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0002.lf;;
 3) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0003.lf;;
@@ -56,6 +58,7 @@ echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; type 501 for details."
 echo "-----------"
 
+echo "0 Edit append.lf"
 echo "1 Edit darland_2017_0001.lf"
 echo "2 Edit darland_2017_0002.lf"
 echo "3 Edit darland_2017_0003.lf"
