@@ -60,8 +60,8 @@ rrss(Subject, Time, Type, Word, Object) :-
 %%  Next arity 1
 
 understands_words_objects_A(Subject, Time, Type, Arity,
-			  Relation_Word, Relation,
-			  A_Word, A_Object) :-
+			  [[Relation_Word, Relation],
+			  [A_Word, A_Object]]) :-
     rrss(Subject, Time, Type, Relation_Word, Relation),
     Type > 0,
     Arity = 1,
@@ -69,9 +69,9 @@ understands_words_objects_A(Subject, Time, Type, Arity,
     rrss(Subject, Time, Type - 1, A_Word, A_Object).
     
 understands_words_objects_A(Subject, Time, Type, Arity,
-			  Relation_Word, Relation,
-			  A_Word, A_Object,
-			  B_Word, B_Object) :-
+			  [[Relation_Word, Relation],
+			  [A_Word, A_Object],
+			  [B_Word, B_Object]]) :-
     rrss(Subject, Time, Type, Relation_Word, Relation),
     Type > 0,
     Arity = 2,
@@ -80,8 +80,8 @@ understands_words_objects_A(Subject, Time, Type, Arity,
     rrss(Subject, Time, Type - 1, B_Word, B_Object).
 
 understands_words_ideas_objects_A(Subject, Time, Type, Arity,
-			  Relation_Word, Relation_Idea, Relation,
-			  A_Word, A_Idea, A_Object) :-
+			  [[Relation_Word, Relation_Idea, Relation],
+			  [A_Word, A_Idea, A_Object]]) :-
     rrrr(Subject, Time, Type, Relation_Word, Relation_Idea), 
     Type > 0,
     Arity = 1,
@@ -92,9 +92,9 @@ understands_words_ideas_objects_A(Subject, Time, Type, Arity,
     
     
 understands_words_ideas_objects_A(Subject, Time, Type, Arity,
-			  Relation_Word, Relation_Idea, Relation,
-			  A_Word, A_Idea, A_Object,
-			  B_Word, B_Idea, B_Object) :-
+			  [[Relation_Word, Relation_Idea, Relation],
+			  [A_Word, A_Idea, A_Object],
+			  [B_Word, B_Idea, B_Object]]) :-
     rrrr(Subject, Time, Type, Relation_Word, Relation_Idea),
     Type > 0,
     Arity = 2,
@@ -106,8 +106,8 @@ understands_words_ideas_objects_A(Subject, Time, Type, Arity,
     ssss(Subject, Time, Type - 1, B_Idea, B_Object).
     
 understands_words_ideas_A(Subject, Time, Type, Arity,
-			  Relation_Word, Relation_Idea,
-			  A_Word, A_Idea) :-
+			  [[Relation_Word, Relation_Idea],
+			  [A_Word, A_Idea]]) :-
     rrrr(Subject, Time, Type, Relation_Word, Relation_Idea),
     Type > 0,
     Arity = 1,
@@ -115,9 +115,9 @@ understands_words_ideas_A(Subject, Time, Type, Arity,
     rrrr(Subject, Time, Type - 1, A_Word, A_Idea).
     
 understands_words_ideas_A(Subject, Time, Type, Arity,
-			  Relation_Word, Relation_Idea,
-			  A_Word, A_Idea,
-			  B_Word, B_Idea) :-
+			  [[Relation_Word, Relation_Idea],
+			  [A_Word, A_Idea],
+			  [B_Word, B_Idea]]) :-
     rrrr(Subject, Time, Type, Relation_Word, Relation_Idea),
     Type > 0,
     Arity = 2,
@@ -126,8 +126,8 @@ understands_words_ideas_A(Subject, Time, Type, Arity,
     rrrr(Subject, Time, Type - 1, B_Word, B_Idea).
 
 understands_ideas_objects_A(Subject, Time, Type, Arity,
-			  Relation_Idea, Relation,
-			  A_Idea, A_Object) :-
+			  [[Relation_Idea, Relation],
+			  [A_Idea, A_Object]]) :-
     ssss(Subject, Time, Type, Relation_Idea, Relation),
     Type > 0,
     Arity = 1,
@@ -135,9 +135,9 @@ understands_ideas_objects_A(Subject, Time, Type, Arity,
     ssss(Subject, Time, Type - 1, A_Idea, A_Object).
 
 understands_ideas_objects_A(Subject, Time, Type, Arity,
-			  Relation_Idea, Relation,
-			  A_Idea, A_Object,
-			  B_Idea, B_Object) :-
+			  [[Relation_Idea, Relation],
+			  [A_Idea, A_Object],
+			  [B_Idea, B_Object]]) :-
     ssss(Subject, Time, Type, Relation_Idea, Relation),
     Type > 0,
     Arity = 2,
@@ -148,25 +148,30 @@ understands_ideas_objects_A(Subject, Time, Type, Arity,
 subjects_understand_same_objects_by_ideas_A(Subject_1, Time_1,
 			       Subject_2, Time_2,
 			       Type, Arity,
-			       Relation_Idea_1, Relation_Idea_2, Relation,
-			       A_Idea_1, A_Idea_2, A_Object) :-
+			       [[Relation_Idea_1, Relation_Idea_2, Relation],
+			       [A_Idea_1, A_Idea_2, A_Object]]) :-
     ssss(Subject_1, Time_1, Type, Relation_Idea_1, Relation),
     Type > 0,
     ssss(Subject_2, Time_2, Type, Relation_Idea_2, Relation),
     Arity = 1,
+    arity_idea(Relation_Idea_1, Arity),
+    arity_idea(Relation_Idea_2, Arity),
     ssss(Subject_1, Time_1, Type - 1, A_Idea_1, A_Object),
     ssss(Subject_2, Time_2, Type - 1, A_Idea_2, A_Object).
 		  
 subjects_understand_same_objects_by_ideas_A(Subject_1, Time_1,
 			       Subject_2, Time_2,
 			       Type, Arity,
-			       Relation_Idea_1, Relation_Idea_2, Relation,
-			       A_Idea_1, A_Idea_2, A_Object,
-			       B_Idea_1, B_Idea_2, B_Object) :-
+			       [[Relation_Idea_1, Relation_Idea_2, Relation],
+			       [A_Idea_1, A_Idea_2, A_Object],
+			       [B_Idea_1, B_Idea_2, B_Object]]) :-
     ssss(Subject_1, Time_1, Type, Relation_Idea_1, Relation),
     Type > 0,
     ssss(Subject_2, Time_2, Type, Relation_Idea_2, Relation),
     Arity = 2,
+    arity_idea(Relation_Idea_1, Arity),
+    arity_idea(Relation_Idea_2, Arity),
+
     ssss(Subject_1, Time_1, Type - 1, A_Idea_1, A_Object),
     ssss(Subject_1, Time_1, Type - 1, B_Idea_1, B_Object),
     ssss(Subject_2, Time_2, Type - 1, A_Idea_2, A_Object),

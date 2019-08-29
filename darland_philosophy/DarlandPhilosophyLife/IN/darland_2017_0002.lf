@@ -87,8 +87,8 @@ rrss(Subject, Time, Type, Word, Object), Type = 0?
 
 
 understands_words_objects_A(Subject, Time, 1, 1,
-			  Relation_Word, Relation,
-			  A_Word, A_Object)?
+			  [[Relation_Word, Relation],
+			  [A_Word, A_Object]])?
 ;
 ;
 ;
@@ -116,9 +116,9 @@ understands_words_objects_A(Subject, Time, 1, 1,
 ;
 
 understands_words_objects_A(Subject, Time, 1, 2,
-			  Relation_Word, Relation,
-			  A_Word, A_Object,
-			  B_Word, B_Object)?
+			  [[Relation_Word, Relation],
+			  [A_Word, A_Object],
+			  [B_Word, B_Object]])?
 ;
 ;
 ;
@@ -147,8 +147,8 @@ understands_words_objects_A(Subject, Time, 1, 2,
 
 
 understands_words_ideas_objects_A(Subject, Time, 1, 1,
-			  Relation_Word, Relation_Idea, Relation,
-			  A_Word, A_Idea,A_Object)?
+			  [[Relation_Word, Relation_Idea, Relation],
+			  [A_Word, A_Idea,A_Object]])?
 ;
 ;
 ;
@@ -174,9 +174,9 @@ understands_words_ideas_objects_A(Subject, Time, 1, 1,
 ;
 
 understands_words_ideas_objects_A(Subject, Time, 1, 2,
-			  Relation_Word, Relation_Idea, Relation,
-			  A_Word, A_Idea,A_Object,
-			  B_Word, B_Idea, B_Object)?
+			  [[Relation_Word, Relation_Idea, Relation],
+			  [A_Word, A_Idea,A_Object],
+			  [B_Word, B_Idea, B_Object]])?
 ;
 ;
 ;
@@ -202,8 +202,8 @@ understands_words_ideas_objects_A(Subject, Time, 1, 2,
 ;
 
 understands_words_ideas_A(Subject, Time, 1, 1,
-			  Relation_Word, Relation_Idea,
-			  A_Word, A_Idea)?
+			  [[Relation_Word, Relation_Idea],
+			  [A_Word, A_Idea]])?
 ;
 ;
 ;
@@ -230,9 +230,9 @@ understands_words_ideas_A(Subject, Time, 1, 1,
 
 
 understands_words_ideas_A(Subject, Time, 1, 2,
-			  Relation_Word, Relation_Idea,
-			  A_Word, A_Idea,	
-			  B_Word, B_Idea)?
+			  [[Relation_Word, Relation_Idea],
+			  [A_Word, A_Idea],	
+			  [B_Word, B_Idea]])?
 ;
 ;
 ;
@@ -306,8 +306,8 @@ understands_words_ideas_A(Subject, Time, 1, 2,
 
 
 understands_ideas_objects_A(Subject, Time, 1, 1,
-			  Relation_Idea, Relation,
-			  A_Idea, A_Object)?			 
+			  [[Relation_Idea, Relation],
+			  [A_Idea, A_Object]])?			 
 ;
 ;
 ;
@@ -335,9 +335,9 @@ understands_ideas_objects_A(Subject, Time, 1, 1,
 
 
 understands_ideas_objects_A(Subject, Time, 1, 2,
-			  Relation_Idea, Relation,
-			  A_Idea, A_Object,			 
-			  B_Idea, B_Object)?			 
+			  [[Relation_Idea, Relation],
+			  [A_Idea, A_Object],			 
+			  [B_Idea, B_Object]])?			 
 ;
 ;
 ;
@@ -365,8 +365,8 @@ understands_ideas_objects_A(Subject, Time, 1, 2,
 subjects_understand_same_objects_by_ideas_A(Subject_1, Time_1,
 			       Subject_2, Time_2,
 			       1, 1,
-			       Relation_Idea_1, Relation_Idea_2, Relation,
-			       A_Idea_1, A_Idea_2, A_Object)?
+			       [[Relation_Idea_1, Relation_Idea_2, Relation],
+			       [A_Idea_1, A_Idea_2, A_Object]])?
 ;
 ;
 ;
@@ -396,9 +396,9 @@ subjects_understand_same_objects_by_ideas_A(Subject_1, Time_1,
 subjects_understand_same_objects_by_ideas_A(Subject_1, Time_1,
 			       Subject_2, Time_2,
 			       1, 2,
-			       Relation_Idea_1, Relation_Idea_2, Relation,
-			       A_Idea_1, A_Idea_2, A_Object,
-			       B_Idea_1, B_Idea_2, B_Object)?
+			       [[Relation_Idea_1, Relation_Idea_2, Relation],
+			       [A_Idea_1, A_Idea_2, A_Object],
+			       [B_Idea_1, B_Idea_2, B_Object]])?
 ;
 ;
 ;

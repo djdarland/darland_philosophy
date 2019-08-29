@@ -190,7 +190,7 @@ believes_in_words(Subject, Time, 1, 2,
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-believes_word_idea_object_A(tom, now, 1, 1,
+believes_word_idea_object_A(Subject, Time, 1, 1,
 			  [[Relation_Word, Relation_Idea, Relation],
 			  [A_Word, A_Idea, A_Object]])?
 ;
@@ -228,7 +228,7 @@ believes_word_idea_object_A(tom, now, 1, 1,
 ;
 ;
 
-believes_word_idea_object_A(tom, now, 1, 2,
+believes_word_idea_object_A(Subject, Time, 1, 2,
 			  [[Relation_Word, Relation_Idea, Relation],
 			  [A_Word, A_Idea, A_Object],
 			  [B_Word, B_Idea, B_Object]])?
