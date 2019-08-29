@@ -29,7 +29,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% conventions.
 %% tom, quine, cicero etc stand for people (instances of Subjects or Objects.)
-%% There could also be non-animate objects such as a table/
+%% There could also be non-animate objects such as a table.
 %% there (some would argue) might also be non-human Subjects - such as a dog.
 %% tom might have an idea of cicero. This would be represented tom_cicero_idea.
 %% The 1st tom indicates that it is tom's idea. cicero indicates that it is an
@@ -38,90 +38,24 @@
 %% quine might also an idea quine_cicero_idea of cicero. (note his idea is
 %% different). quine might share, however the word cicero_word with tom.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% ssss(Subject, Time, Type, A_idea, A_object)
-%%
-%% there are two ideas for the same person - cicero (tully)
-%% but prolog & wild life cannot let two atoms be identical 
-%% so the object must be the same for both (cicero)
-%%
-%%
-%% I am not using Types much yet. Mainly I wanted to be able to use them later.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-ssss(tom, now, 0, tom_cicero_idea, cicero).
-ssss(tom, now, 0, tom_tully_idea, cicero).
-ssss(tom, now, 0, tom_cataline_idea, cataline).
-ssss(tom, now, 0, tom_tom_idea, tom).
-ssss(tom, now, 1, tom_human_idea, human).
-ssss(tom, now, 1, tom_featherless_biped_idea, featherless_biped).
-ssss(quine, now, 0, quine_cicero_idea, cicero).
-ssss(quine, now, 0, quine_tully_idea, cicero).
-ssss(quine, now, 0, quine_cataline_idea, cataline).
-ssss(quine, now, 0, quine_tom_idea, tom).
-ssss(quine, now, 1, quine_human_idea, human).
-ssss(quine, now, 1, quine_featherless_biped_idea, featherless_biped).
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% The same conventions apply to relations - except they are 1 Type higher.
-%% They also have an Arity - the number of objects they relate.
-%% I have only coded up to an arity of 3.
-%% It can easily be seen how it could be extended.
-%% I expect to increase in 2019 version.
-%% Also I could have used lists to make any arity to be handled.
-%% But the resukting code would be harder to understand - so I avoided that.
-
-%% ssss(Subject, Time, Type+1, Arity, Idea, Relation)
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-ssss(tom, now, 1, tom_denounced_idea, denounced).
-ssss(tom, now, 1, tom_human_idea, human).
-ssss(tom, now, 1, tom_featherless_biped_idea, featherless_biped).
-ssss(tom, now, 1, tom_american_idea, american).
-ssss(tom, now, 1, tom_roman_idea, roman).
-ssss(tom, now, 2, tom_not_formally_equivalent_idea, not_formally_equivalent).
-ssss(tom, now, 2, tom_formally_equivalent_idea, formally_equivalent).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-ssss(quine, now, 1, quine_denounced_idea, denounced).
-ssss(quine, now, 1, quine_human_idea, human).
-ssss(quine, now, 1, quine_featherless_biped_idea, featherless_biped).
-ssss(quine, now, 1, quine_american_idea, american).
-ssss(quine, now, 1, quine_roman_idea, roman).
-ssss(quine, now, 2, quine_not_formally_equivalent_idea, not_formally_equivalent).
-ssss(quine, now, 2, quine_formally_equivalent_idea, formally_equivalent).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %% words are related to ideas.
 %% The words being shared through learning.
 
+%% relates words to ideas.
+
 %% rrrr(Subject, Time, Type, A_word, A_idea)
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rrrr(tom, now, 0, cicero_word, tom_cicero_idea).
 rrrr(tom, now, 0, cataline_word, tom_cataline_idea).
 rrrr(tom, now, 0, tully_word, tom_tully_idea).
 rrrr(tom, now, 0, tom_word, tom_tom_idea).
-rrrr(tom, now, 1, human_word, tom_human_idea).
-%% rrrr1(Subject, Time, Type, Arity, Verb, Idea_Verb)
-rrrr(tom, now, 1, featherless_biped_word,tom_featherless_biped).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rrrr(quine, now, 0, cicero_word, quine_cicero_idea).
 rrrr(quine, now, 0, cataline_word, quine_cataline_idea).
 rrrr(quine, now, 0, tully_word, quine_tully_idea).
 rrrr(quine, now, 0, tom_word, quine_tom_idea).
-rrrr(quine, now, 1, human_word, quine_human_idea).
-rrrr(quine, now, 1, featherless_biped_word,quine_featherless_biped).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-idea_synonym(quine, now, 0, quine_tully_idea, quine_cicero_idea).
-idea_synonym(quine, now, 1, quine_bachelor_idea, quine_unmarried_male_idea).
-idea_synonym(tom, now, 1, tom_bachelor_idea, tom_unmarried_male_idea).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Ditto for external relations
-
-%%
-%% rrrr(Subject, Time, Type+1, Arity, Word, Idea)
-%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rrrr(tom, now, 1, denounced_word, tom_denounced_idea).
 rrrr(tom, now, 1, human_word, tom_human_idea).
@@ -137,6 +71,43 @@ rrrr(quine, now, 1, american_word, quine_american_idea).
 rrrr(quine, now, 1, roman_word, quine_roman_idea).
 rrrr(quine, now, 2, formally_equivalent_word, quine_formally_equivalent_idea).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ssss(Subject, Time, Type, A_idea, A_object)
+%%
+%% there are two ideas for the same person - cicero (tully)
+%% but prolog & wild life cannot let two atoms be identical 
+%% so the object must be the same for both (cicero)
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ssss(tom, now, 0, tom_cicero_idea, cicero).
+ssss(tom, now, 0, tom_tully_idea, cicero).
+ssss(tom, now, 0, tom_cataline_idea, cataline).
+ssss(tom, now, 0, tom_tom_idea, tom).
+ssss(tom, now, 1, tom_human_idea, human).
+ssss(tom, now, 1, tom_featherless_biped_idea, featherless_biped).
+ssss(tom, now, 1, tom_denounced_idea, denounced).
+ssss(tom, now, 1, tom_american_idea, american).
+ssss(tom, now, 1, tom_roman_idea, roman).
+ssss(tom, now, 2, tom_not_formally_equivalent_idea, not_formally_equivalent).
+ssss(tom, now, 2, tom_formally_equivalent_idea, formally_equivalent).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ssss(quine, now, 0, quine_cicero_idea, cicero).
+ssss(quine, now, 0, quine_tully_idea, cicero).
+ssss(quine, now, 0, quine_cataline_idea, cataline).
+ssss(quine, now, 0, quine_tom_idea, tom).
+ssss(quine, now, 1, quine_human_idea, human).
+ssss(quine, now, 1, quine_featherless_biped_idea, featherless_biped).
+ssss(quine, now, 1, quine_denounced_idea, denounced).
+ssss(quine, now, 1, quine_human_idea, human).
+ssss(quine, now, 1, quine_featherless_biped_idea, featherless_biped).
+ssss(quine, now, 1, quine_american_idea, american).
+ssss(quine, now, 1, quine_roman_idea, roman).
+ssss(quine, now, 2, quine_not_formally_equivalent_idea, not_formally_equivalent).
+ssss(quine, now, 2, quine_formally_equivalent_idea, formally_equivalent).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+idea_synonym(quine, now, 0, quine_tully_idea, quine_cicero_idea).
+idea_synonym(quine, now, 1, quine_bachelor_idea, quine_unmarried_male_idea).
+idea_synonym(tom, now, 1, tom_bachelor_idea, tom_unmarried_male_idea).
 
 %% There are several understands relations symbols defined in terms of the
 %% words and ideas.
@@ -145,3 +116,11 @@ rrrr(quine, now, 2, formally_equivalent_word, quine_formally_equivalent_idea).
 %% uttered. I only require that there was an relation_idea and
 %% ideas of objects. They never even need to be related or believed. 
 
+arity_relation(human, 1).
+arity_relation(denounced, 2).
+arity_word(human_word, 1).
+arity_word(denounced_word, 2).
+arity_idea(tom_human_idea, 1).
+arity_idea(quine_human_idea, 1).
+arity_idea(tom_denounced_idea, 2).
+arity_idea(quine_denounced_idea, 2).

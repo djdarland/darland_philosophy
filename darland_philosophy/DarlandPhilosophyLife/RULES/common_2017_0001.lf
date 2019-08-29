@@ -51,442 +51,127 @@ sense_of_object(Idea) :- Type = 0, ssss(Subject, Time, Type, Idea, A_Object).
 %% rrss is relation between relation word and relation itself.
 %% rrss is relation between word and object
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 rrss(Subject, Time, Type, Word, Object) :-
     rrrr(Subject, Time, Type, Word, Idea),
     ssss(Subject, Time, Type, Idea, Object).
 
+%%  Next arity 1
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-understands_words_objects(Subject, Time, Type, Arity,
-			  W_O_List_Out) :-
-    rrss(Subject, Time, Type, W, O),
-    write(Subject, " understands ", W),
+understands_words_objects_A(Subject, Time, Type, Arity,
+			  Relation_Word, Relation,
+			  A_Word, A_Object) :-
+    rrss(Subject, Time, Type, Relation_Word, Relation),
     Type > 0,
-    app3(W_O_List, [W , O], W_O_List_Out),
-    understands_words_objects_B(Subject, Time, Type - 1, Arity - 1, W_O_List_Out).
-
-understands_words_objects_B(Subject, Time, Type, 0,
-			  [], []) :-
-    write(" at ", Time, "\n").
-
-understands_words_objects_B(Subject, Time, Type, Arity,
-			  W_O_List_In, W_O_List_Out) :-
-    rrss(Subject, Time, Type, W, O),
-    write(" of  ", W),
-    app3(W_O_List_In, [W , O], W_O_List_Out)
-    understands_words_objects_B(Subject, Time, Type, Arity - 1,
-				W_O_List_In, W_O_List_Out).
-
-
-				      
-understands_words_ideas_objects(Subject, Time, Type, Arity,
-				[W_I_O_Head | W_I_O_Tail]) :-
-    rrrr(Subject, Time, Type, Arity, car(W_O_Head), car(cdr(W_O_Head))),
+    Arity = 1,
+    arity_word(Relation_Word, Arity),
+    rrss(Subject, Time, Type - 1, A_Word, A_Object).
+    
+understands_words_objects_A(Subject, Time, Type, Arity,
+			  Relation_Word, Relation,
+			  A_Word, A_Object,
+			  B_Word, B_Object) :-
+    rrss(Subject, Time, Type, Relation_Word, Relation),
     Type > 0,
-    ssss(Subject, Time, Type, Arity, car(cdr(W_I_O_Head)), car(cdr(cdr(W_I_O_Head)))),
-    understands_words_ideas_objects_B(Subject, Time, Type - 1, Arity - 1,
-			      [W_O_Tail]).
+    Arity = 2,
+    arity_word(Relation_Word, Arity),
+    rrss(Subject, Time, Type - 1, A_Word, A_Object),
+    rrss(Subject, Time, Type - 1, B_Word, B_Object).
 
-understands_words_ideas_objects_B(Subject, Time, Type, Arity,
-			  [W_O_Head | W_O_Tail]) :-
-    rrrr(Subject, Time, Type, car(W_O_Head), car(cdr(W_O_Head))),
-    ssss(Subject, Time, Type, Arity, car(cdr(W_I_O_Head)), car(cdr(cdr(W_I_O_Head)))),
-    understands_words_objects_B(Subject, Time, Type, Arity - 1,
-			      [W_O_Tail]).
-
-understands_words_objects_B(Subject, Time, Type, Arity,
-			  [W_O_Head | W_O_Tail]) :-
-    understands_words_objects_B(Subject, Time, Type , 0, 
-			      []).
-
-
-
-understands_words_ideas(Subject, Time, Type, Arity,
-			  [W_I_Head | W_I_Tail]) :-
-    rrrr(Subject, Time, Type, car(W_I_Head), car(cdr(W_I_Head))),
+understands_words_ideas_objects_A(Subject, Time, Type, Arity,
+			  Relation_Word, Relation_Idea, Relation,
+			  A_Word, A_Idea, A_Object) :-
+    rrrr(Subject, Time, Type, Relation_Word, Relation_Idea),
     Type > 0,
-    understands_words_ideas_B(Subject, Time, Type - 1, Arity - 1,
-			      [W_I_Tail]).
-understands_words_ideas_B(Subject, Time, Type, Arity,
-			  [W_I_Head | W_I_Tail]) :-
-    rrrr(Subject, Time, Type, car(W_I_Head), car(cdr(W_I_Head))),
-    understands_words_ideas_B(Subject, Time, Type, Arity - 1,
-			      [W_I_Tail]).
-
-understands_words_ideas_B(Subject, Time, Type, Arity,
-			  [W_I_Head | W_I_Tail]) :-
-    understands_words_ideas_B(Subject, Time, Type , 0, 
-			      []).
-
-
-understands_ideas_objects(Subject, Time, Type, Arity,
-			  [I_O_Head | I_O_Tail]) :-
-    ssss(Subject, Time, Type, car(I_O_Head), car(cdr(I_O_Head))),
+    Arity = 1,
+    arity_word(Relation_Word, Arity),
+    ssss(Subject, Time, Type, Relation_Idea, Relation),
+    rrrr(Subject, Time, Type - 1, A_Word, A_Idea),
+    ssss(Subject, Time, Type - 1, A_Idea, A_Object).
+    
+    
+understands_words_ideas_objects_A(Subject, Time, Type, Arity,
+			  Relation_Word, Relation_Idea, Relation,
+			  A_Word, A_Idea, A_Object,
+			  B_Word, B_Idea, B_Object) :-
+    rrrr(Subject, Time, Type, Relation_Word, Relation_Idea),
     Type > 0,
-    understands_ideas_objects_B(Subject, Time, Type - 1, Arity - 1,
-			      [I_O_Tail]).
-understands_ideas_objects_B(Subject, Time, Type, Arity,
-			  [I_O_Head | I_O_Tail]) :-
-    ssss(Subject, Time, Type, car(I_O_Head), car(cdr(I_O_Head))),
-    understands_idea_objects_B(Subject, Time, Type, Arity - 1,
-			      [I_O_Tail]).
+    Arity = 2,
+    arity_word(Relation_Word, Arity),
+    ssss(Subject, Time, Type, Relation_Idea, Relation),
+    rrrr(Subject, Time, Type - 1, A_Word, A_Idea),
+    ssss(Subject, Time, Type - 1, A_Idea, A_Object),
+    rrrr(Subject, Time, Type - 1, B_Word, B_Idea),
+    ssss(Subject, Time, Type - 1, B_Idea, B_Object).
+    
+understands_words_ideas_A(Subject, Time, Type, Arity,
+			  Relation_Word, Relation_Idea,
+			  A_Word, A_Idea) :-
+    rrrr(Subject, Time, Type, Relation_Word, Relation_Idea),
+    Type > 0,
+    Arity = 1,
+    arity_word(Relation_Word, 1),
+    rrrr(Subject, Time, Type - 1, A_Word, A_Idea).
+    
+understands_words_ideas_A(Subject, Time, Type, Arity,
+			  Relation_Word, Relation_Idea,
+			  A_Word, A_Idea,
+			  B_Word, B_Idea) :-
+    rrrr(Subject, Time, Type, Relation_Word, Relation_Idea),
+    Type > 0,
+    Arity = 2,
+    arity_word(Relation_Word, Arity),
+    rrrr(Subject, Time, Type - 1, A_Word, A_Idea),
+    rrrr(Subject, Time, Type - 1, B_Word, B_Idea).
 
-understands_ideas_objectss_B(Subject, Time, Type, Arity,
-			  [I_O_Head | I_O_Tail]) :-
-    understands_ideas_objects_B(Subject, Time, Type , 0, 
-			      []).
+understands_ideas_objects_A(Subject, Time, Type, Arity,
+			  Relation_Idea, Relation,
+			  A_Idea, A_Object) :-
+    ssss(Subject, Time, Type, Relation_Idea, Relation),
+    Type > 0,
+    Arity = 1,
+    arity_idea(Relation_Idea, Arity),
+    ssss(Subject, Time, Type - 1, A_Idea, A_Object).
 
+understands_ideas_objects_A(Subject, Time, Type, Arity,
+			  Relation_Idea, Relation,
+			  A_Idea, A_Object,
+			  B_Idea, B_Object) :-
+    ssss(Subject, Time, Type, Relation_Idea, Relation),
+    Type > 0,
+    Arity = 2,
+    arity_idea(Relation_Idea, Arity),
+    ssss(Subject, Time, Type - 1, A_Idea, A_Object),
+    ssss(Subject, Time, Type - 1, B_Idea, B_Object).
 
-%% understands_ideas_objects(Subject, Time, Type, Arity,
-%% 				Relation_Idea, Relation,
-%% 				A_Idea, A_Object,
-%% 				B_Idea, B_Object,
-%% 				C_Idea, C_Object,
-%% 				D_Idea, D_Object,
-%% 				E_Idea, E_Object,
-%% 				F_Idea, F_Object,
-%% 				G_Idea, G_Object,
-%% 				H_Idea, H_Object,
-%% 				I_Idea, I_Object,
-%% 				J_Idea, J_Object,
-%% 				K_Idea, K_Object,
-%% 				L_Idea, L_Object,
-%% 				M_Idea, M_Object,
-%% 				N_Idea, N_Object,
-%% 				O_Idea, O_Object,
-%% 				P_Idea, P_Object,
-%% 				Q_Idea, Q_Object,
-%% 				R_Idea, R_Object,
-%% 				S_Idea, S_Object,
-%% 				T_Idea, T_Object,
-%% 				U_Idea, U_Object,
-%% 				V_Idea, V_Object,
-%% 				W_Idea, W_Object,
-%% 				X_Idea, X_Object,
-%% 				Y_Idea, Y_Object,
-%% 				Z_Idea, Z_Object) :-
-			  
-%%      ssss(Subject, Time, Type, Arity, Relation_Idea, Relation),
-%%      cond(Arity =:= 0, succeed, (
-%% 	     write("djd00001\n"),
-%% 	     cond(Arity >= 1, (
-%% 		      write("djd00002\n"),
-%% 		      ssss(Subject, Time, Type - 1, A_Idea, A_Object))),
-%% 	     cond(Arity >= 2, (
-%% 		      write("djd00003\n"),
-%% 		      ssss(Subject, Time, Type - 1, B_Idea, B_Object))),
-%% 	     cond(Arity >= 3, (
-%% 		      write("djd00003\n"),
-%% 		      ssss(Subject, Time, Type - 1, C_Idea, C_Object))),
-%% 	     cond(Arity >= 4, (
-%% 		      write("djd00004\n"),
-%% 		      ssss(Subject, Time, Type - 1, D_Idea, D_Object))),
-%% 	     cond(Arity >= 5, (
-%% 		      write("djd00005\n"),
-%% 		      ssss(Subject, Time, Type - 1, E_Idea, E_Object))),
-%% 	     cond(Arity >= 6, (
-%% 		      write("djd00006\n"),
-%% 		      ssss(Subject, Time, Type - 1, F_Idea, F_Object))),
-%% 	     cond(Arity >= 7, (
-%% 		      write("djd00007\n"),
-%% 		      ssss(Subject, Time, Type - 1, G_Idea, G_Object))),
-%% 	     cond(Arity >= 8, (
-%% 		      write("djd00008\n"),
-%% 		      ssss(Subject, Time, Type - 1, H_Idea, H_Object))),
-%% 	     cond(Arity >= 9, (
-%% 		      write("djd00009\n"),
-%% 		      ssss(Subject, Time, Type - 1, I_Idea, I_Object))),
-%% 	     cond(Arity >= 10, (
-%% 		      write("djd00010\n"),
-%% 		      ssss(Subject, Time, Type - 1, J_Idea, J_Object))),
-%% 	     cond(Arity >= 11, (
-%% 		      write("djd00011\n"),
-%% 		      ssss(Subject, Time, Type - 1, K_Idea, K_Object))),
-%% 	     cond(Arity >= 12, (
-%% 		      write("djd00012\n"),
-%% 		      ssss(Subject, Time, Type - 1, L_Idea, L_Object))),
-%% 	     cond(Arity >= 13, (
-%% 		      write("djd00013\n"),
-%% 		      ssss(Subject, Time, Type - 1, M_Idea, M_Object))),
-%% 	     cond(Arity >= 14, (
-%% 		      write("djd00014\n"),
-%% 		      ssss(Subject, Time, Type - 1, N_Idea, N_Object))),
-%% 	     cond(Arity >= 15, (
-%% 		      write("djd00015\n"),
-%% 		      ssss(Subject, Time, Type - 1, O_Idea, O_Object))),
-%% 	     cond(Arity >= 16, (
-%% 		      write("djd00016\n"),
-%% 		      ssss(Subject, Time, Type - 1, P_Idea, P_Object))),
-%% 	     cond(Arity >= 17, (
-%% 		      write("djd00017\n"),
-%% 		      ssss(Subject, Time, Type - 1, Q_Idea, Q_Object))),
-%% 	     cond(Arity >= 18, (
-%% 		      write("djd00018\n"),
-%% 		      ssss(Subject, Time, Type - 1, R_Idea, R_Object))),
-%% 	     cond(Arity >= 19, (
-%% 		      write("djd00019\n"),
-%% 		      ssss(Subject, Time, Type - 1, S_Idea, S_Object))),
-%% 	     cond(Arity >= 20, (
-%% 		      write("djd0020\n"),
-%% 		      ssss(Subject, Time, Type - 1, T_Idea, T_Object))),
-%% 	     cond(Arity >= 21, (
-%% 		      write("djd00021\n"),
-%% 		      ssss(Subject, Time, Type - 1, U_Idea, U_Object))),
-%% 	     cond(Arity >= 22, (
-%% 		      write("djd00022\n"),
-%% 		      ssss(Subject, Time, Type - 1, V_Idea, V_Object))),
-%% 	     cond(Arity >= 23, (
-%% 		      write("djd00023\n"),
-%% 		      ssss(Subject, Time, Type - 1, W_Idea, W_Object))),
-%% 	     cond(Arity >= 24, (
-%% 		      write("djd00024\n"),
-%% 		      ssss(Subject, Time, Type - 1, X_Idea, X_Object))),
-%% 	     cond(Arity >= 25, (
-%% 		      write("djd00025\n"),
-%% 		      ssss(Subject, Time, Type - 1, Y_Idea, Y_Object))),
-%% 	     cond(Arity >= 26, (
-%% 		      write("djd00026\n"),
-%% 		      ssss(Subject, Time, Type - 1, Z_Idea, Z_Object))))).
-
-%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% subjects_understand_same_by_ideas(Subject_1, Time_1,
-%% 			       Subject_2, Time_2,
-%% 			       Type, Arity,
-%% 			       Relation_Idea_1, Relation_Idea_2, Relation,
-%% 			       A_Idea_1, A_Idea_2, A_Object,
-%% 			       B_Idea_1, B_Idea_2, B_Object,
-%% 			       C_Idea_1, C_Idea_2, C_Object,
-%% 			       D_Idea_1, D_Idea_2, D_Object,
-%% 			       E_Idea_1, E_Idea_2, E_Object,
-%% 			       F_Idea_1, F_Idea_2, F_Object,
-%% 			       G_Idea_1, G_Idea_2, G_Object,
-%% 			       H_Idea_1, H_Idea_2, H_Object,
-%% 			       I_Idea_1, I_Idea_2, I_Object,
-%% 			       J_Idea_1, J_Idea_2, J_Object,
-%% 			       K_Idea_1, K_Idea_2, K_Object,
-%% 			       L_Idea_1, L_Idea_2, L_Object,
-%% 			       M_Idea_1, M_Idea_2, M_Object,
-%% 			       N_Idea_1, N_Idea_2, N_Object,
-%% 			       O_Idea_1, O_Idea_2, O_Object,
-%% 			       P_Idea_1, P_Idea_2, P_Object,
-%% 			       Q_Idea_1, Q_Idea_2, Q_Object,
-%% 			       R_Idea_1, R_Idea_2, R_Object,
-%% 			       S_Idea_1, S_Idea_2, S_Object,
-%% 			       T_Idea_1, T_Idea_2, T_Object,
-%% 			       U_Idea_1, U_Idea_2, U_Object,
-%% 			       V_Idea_1, V_Idea_2, V_Object,
-%% 			       W_Idea_1, W_Idea_2, W_Object,
-%% 			       X_Idea_1, X_Idea_2, X_Object,
-%% 			       Y_Idea_1, Y_Idea_2, Y_Object,
-%% 			       Z_Idea_1, Z_Idea_2, Z_Object) :-
-
-%%     ssss(Subject_1, Time, Type, Arity, Relation_Idea_1, Relation),
-%%     ssss(Subject_2, Time, Type, Arity, Relation_Idea_2, Relation),
-%%     cond(Arity =:= 0, succeed, (
-%% 	     write("djd00001\n"),
-%% 	     cond(Arity >= 1, (
-%% 		      ssss(Subject_1, Time, Type - 1, A_Idea_1, A_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, A_Idea_2, A_Object))),
-%% 	     cond(Arity >= 2, (
-%% 		      ssss(Subject_1, Time, Type - 1, B_Idea_1, B_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, B_Idea_2, B_Object))),
-%% 	     cond(Arity >= 3, (
-%% 		      ssss(Subject_1, Time, Type - 1, C_Idea_1, C_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, C_Idea_2, C_Object))),
-%% 	     cond(Arity >= 4, (
-%% 		      ssss(Subject_1, Time, Type - 1, D_Idea_1, D_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, D_Idea_2, D_Object))),
-%% 	     cond(Arity >= 5, (
-%% 		      ssss(Subject_1, Time, Type - 1, E_Idea_1, E_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, E_Idea_2, E_Object))),
-%% 	     cond(Arity >= 6, (
-%% 		      ssss(Subject_1, Time, Type - 1, F_Idea_1, F_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, F_Idea_2, F_Object))),
-%% 	     cond(Arity >= 7, (
-%% 		      ssss(Subject_1, Time, Type - 1, G_Idea_1, G_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, G_Idea_2, G_Object))),
-%% 	     cond(Arity >= 8, (
-%% 		      ssss(Subject_1, Time, Type - 1, H_Idea_1, H_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, H_Idea_2, H_Object))),
-%% 	     cond(Arity >= 9, (
-%% 		      ssss(Subject_1, Time, Type - 1, I_Idea_1, I_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, I_Idea_2, I_Object))),
-%% 	     cond(Arity >= 10, (
-%% 		      ssss(Subject_1, Time, Type - 1, J_Idea_1, J_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, J_Idea_2, J_Object))),
-%% 	     cond(Arity >= 11, (
-%% 		      ssss(Subject_1, Time, Type - 1, K_Idea_1, K_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, K_Idea_2, K_Object))),
-%% 	     cond(Arity >= 12, (
-%% 		      ssss(Subject_1, Time, Type - 1, L_Idea_1, L_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, L_Idea_2, L_Object))),
-%% 	     cond(Arity >= 13, (
-%% 		      ssss(Subject_1, Time, Type - 1, M_Idea_1, M_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, M_Idea_2, M_Object))),
-%% 	     cond(Arity >= 14, (
-%% 		      ssss(Subject_1, Time, Type - 1, N_Idea_1, N_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, N_Idea_2, N_Object))),
-%% 	     cond(Arity >= 15, (
-%% 		      ssss(Subject_1, Time, Type - 1, O_Idea_1, O_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, O_Idea_2, O_Object))),
-%% 	     cond(Arity >= 16, (
-%% 		      ssss(Subject_1, Time, Type - 1, P_Idea_1, P_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, P_Idea_2, P_Object))),
-%% 	     cond(Arity >= 17, (
-%% 		      ssss(Subject_1, Time, Type - 1, Q_Idea_1, Q_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, Q_Idea_2, Q_Object))),
-%% 	     cond(Arity >= 18, (
-%% 		      ssss(Subject_1, Time, Type - 1, R_Idea_1, R_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, R_Idea_2, R_Object))),
-%% 	     cond(Arity >= 19, (
-%% 		      ssss(Subject_1, Time, Type - 1, S_Idea_1, S_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, S_Idea_2, S_Object))),
-%% 	     cond(Arity >= 20, (
-%% 		      ssss(Subject_1, Time, Type - 1, T_Idea_1, T_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, T_Idea_2, T_Object))),
-%% 	     cond(Arity >= 21, (
-%% 		      ssss(Subject_1, Time, Type - 1, U_Idea_1, U_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, U_Idea_2, U_Object))),
-%% 	     cond(Arity >= 22, (
-%% 		      ssss(Subject_1, Time, Type - 1, V_Idea_1, V_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, V_Idea_2, V_Object))),
-%% 	     cond(Arity >= 23, (
-%% 		      ssss(Subject_1, Time, Type - 1, W_Idea_1, W_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, W_Idea_2, W_Object))),
-%% 	     cond(Arity >= 24, (
-%% 		      ssss(Subject_1, Time, Type - 1, X_Idea_1, X_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, X_Idea_2, X_Object))),
-%% 	     cond(Arity >= 25, (
-%% 		      ssss(Subject_1, Time, Type - 1, Y_Idea_1, Y_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, Y_Idea_2, Y_Object))),
-%% 	     cond(Arity >= 26, (
-%% 		      ssss(Subject_1, Time, Type - 1, Z_Idea_1, Z_Object),
-%% 		      ssss(Subject_2, Time, Type - 1, Z_Idea_2, Z_Object))))).
+subjects_understand_same_objects_by_ideas_A(Subject_1, Time_1,
+			       Subject_2, Time_2,
+			       Type, Arity,
+			       Relation_Idea_1, Relation_Idea_2, Relation,
+			       A_Idea_1, A_Idea_2, A_Object) :-
+    ssss(Subject_1, Time_1, Type, Relation_Idea_1, Relation),
+    Type > 0,
+    ssss(Subject_2, Time_2, Type, Relation_Idea_2, Relation),
+    Arity = 1,
+    ssss(Subject_1, Time_1, Type - 1, A_Idea_1, A_Object),
+    ssss(Subject_2, Time_2, Type - 1, A_Idea_2, A_Object).
 		  
-%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% subjects_understand_same_by_words(Subject_1, Time_1,
-%% 			       Subject_2, Time_2,
-%% 			       Type, Arity,
-%% 			       Relation_Word_1, Relation_Word_2, Relation,
-%% 			       A_Word_1, A_Word_2, A_Object,
-%% 			       B_Word_1, B_Word_2, B_Object,
-%% 			       C_Word_1, C_Word_2, C_Object,
-%% 			       D_Word_1, D_Word_2, D_Object,
-%% 			       E_Word_1, E_Word_2, E_Object,
-%% 			       F_Word_1, F_Word_2, F_Object,
-%% 			       G_Word_1, G_Word_2, G_Object,
-%% 			       H_Word_1, H_Word_2, H_Object,
-%% 			       I_Word_1, I_Word_2, I_Object,
-%% 			       J_Word_1, J_Word_2, J_Object,
-%% 			       K_Word_1, K_Word_2, K_Object,
-%% 			       L_Word_1, L_Word_2, L_Object,
-%% 			       M_Word_1, M_Word_2, M_Object,
-%% 			       N_Word_1, N_Word_2, N_Object,
-%% 			       O_Word_1, O_Word_2, O_Object,
-%% 			       P_Word_1, P_Word_2, P_Object,
-%% 			       Q_Word_1, Q_Word_2, Q_Object,
-%% 			       R_Word_1, R_Word_2, R_Object,
-%% 			       S_Word_1, S_Word_2, S_Object,
-%% 			       T_Word_1, T_Word_2, T_Object,
-%% 			       U_Word_1, U_Word_2, U_Object,
-%% 			       V_Word_1, V_Word_2, V_Object,
-%% 			       W_Word_1, W_Word_2, W_Object,
-%% 			       X_Word_1, X_Word_2, X_Object,
-%% 			       Y_Word_1, Y_Word_2, Y_Object,
-%% 			       Z_Word_1, Z_Word_2, Z_Object) :-
-
-%%     rrss(Subject_1, Time, Type, Arity, Relation_Word_1, Relation),
-%%     rrss(Subject_2, Time, Type, Arity, Relation_Word_2, Relation),
-%%     cond(Arity =:= 0, succeed, (
-%% 	     write("djd00001\n"),
-%% 	     cond(Arity >= 1, (
-%% 		      rrss(Subject_1, Time, Type - 1, A_Word_1, A_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, A_Word_2, A_Object))),
-%% 	     cond(Arity >= 2, (
-%% 		      rrss(Subject_1, Time, Type - 1, B_Word_1, B_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, B_Word_2, B_Object))),
-%% 	     cond(Arity >= 3, (
-%% 		      rrss(Subject_1, Time, Type - 1, C_Word_1, C_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, C_Word_2, C_Object))),
-%% 	     cond(Arity >= 4, (
-%% 		      rrss(Subject_1, Time, Type - 1, D_Word_1, D_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, D_Word_2, D_Object))),
-%% 	     cond(Arity >= 5, (
-%% 		      rrss(Subject_1, Time, Type - 1, E_Word_1, E_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, E_Word_2, E_Object))),
-%% 	     cond(Arity >= 6, (
-%% 		      rrss(Subject_1, Time, Type - 1, F_Word_1, F_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, F_Word_2, F_Object))),
-%% 	     cond(Arity >= 7, (
-%% 		      rrss(Subject_1, Time, Type - 1, G_Word_1, G_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, G_Word_2, G_Object))),
-%% 	     cond(Arity >= 8, (
-%% 		      rrss(Subject_1, Time, Type - 1, H_Word_1, H_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, H_Word_2, H_Object))),
-%% 	     cond(Arity >= 9, (
-%% 		      rrss(Subject_1, Time, Type - 1, I_Word_1, I_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, I_Word_2, I_Object))),
-%% 	     cond(Arity >= 10, (
-%% 		      rrss(Subject_1, Time, Type - 1, J_Word_1, J_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, J_Word_2, J_Object))),
-%% 	     cond(Arity >= 11, (
-%% 		      rrss(Subject_1, Time, Type - 1, K_Word_1, K_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, K_Word_2, K_Object))),
-%% 	     cond(Arity >= 12, (
-%% 		      rrss(Subject_1, Time, Type - 1, L_Word_1, L_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, L_Word_2, L_Object))),
-%% 	     cond(Arity >= 13, (
-%% 		      rrss(Subject_1, Time, Type - 1, M_Word_1, M_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, M_Word_2, M_Object))),
-%% 	     cond(Arity >= 14, (
-%% 		      rrss(Subject_1, Time, Type - 1, N_Word_1, N_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, N_Word_2, N_Object))),
-%% 	     cond(Arity >= 15, (
-%% 		      rrss(Subject_1, Time, Type - 1, O_Word_1, O_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, O_Word_2, O_Object))),
-%% 	     cond(Arity >= 16, (
-%% 		      rrss(Subject_1, Time, Type - 1, P_Word_1, P_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, P_Word_2, P_Object))),
-%% 	     cond(Arity >= 17, (
-%% 		      rrss(Subject_1, Time, Type - 1, Q_Word_1, Q_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, Q_Word_2, Q_Object))),
-%% 	     cond(Arity >= 18, (
-%% 		      rrss(Subject_1, Time, Type - 1, R_Word_1, R_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, R_Word_2, R_Object))),
-%% 	     cond(Arity >= 19, (
-%% 		      rrss(Subject_1, Time, Type - 1, S_Word_1, S_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, S_Word_2, S_Object))),
-%% 	     cond(Arity >= 20, (
-%% 		      rrss(Subject_1, Time, Type - 1, T_Word_1, T_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, T_Word_2, T_Object))),
-%% 	     cond(Arity >= 21, (
-%% 		      rrss(Subject_1, Time, Type - 1, U_Word_1, U_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, U_Word_2, U_Object))),
-%% 	     cond(Arity >= 22, (
-%% 		      rrss(Subject_1, Time, Type - 1, V_Word_1, V_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, V_Word_2, V_Object))),
-%% 	     cond(Arity >= 23, (
-%% 		      rrss(Subject_1, Time, Type - 1, W_Word_1, W_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, W_Word_2, W_Object))),
-%% 	     cond(Arity >= 24, (
-%% 		      rrss(Subject_1, Time, Type - 1, X_Word_1, X_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, X_Word_2, X_Object))),
-%% 	     cond(Arity >= 25, (
-%% 		      rrss(Subject_1, Time, Type - 1, Y_Word_1, Y_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, Y_Word_2, Y_Object))),
-%% 	     cond(Arity >= 26, (
-%% 		      rrss(Subject_1, Time, Type - 1, Z_Word_1, Z_Object),
-%% 		      rrss(Subject_2, Time, Type - 1, Z_Word_2, Z_Object))))).
-%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+subjects_understand_same_objects_by_ideas_A(Subject_1, Time_1,
+			       Subject_2, Time_2,
+			       Type, Arity,
+			       Relation_Idea_1, Relation_Idea_2, Relation,
+			       A_Idea_1, A_Idea_2, A_Object,
+			       B_Idea_1, B_Idea_2, B_Object) :-
+    ssss(Subject_1, Time_1, Type, Relation_Idea_1, Relation),
+    Type > 0,
+    ssss(Subject_2, Time_2, Type, Relation_Idea_2, Relation),
+    Arity = 2,
+    ssss(Subject_1, Time_1, Type - 1, A_Idea_1, A_Object),
+    ssss(Subject_1, Time_1, Type - 1, B_Idea_1, B_Object),
+    ssss(Subject_2, Time_2, Type - 1, A_Idea_2, A_Object),
+    ssss(Subject_2, Time_2, Type - 1, B_Idea_2, B_Object).
+		  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

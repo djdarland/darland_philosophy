@@ -1,4 +1,3 @@
-trace_input(true)?
 
 
 %% Copyright (C) 2017 Dennis J. Darland
@@ -34,131 +33,395 @@ quote_note(br0006, Author, Author_Article, Author_Book, Article_Title, Book_Titl
 quote_note(br0007, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
 
 
-append2([1, 2, 3], [4, 5, 6], Z)?
-;
-;
+trace_input(true)?
 
-
-rrss(Subject, Time, Type, Arity, Relation_Word, Relation)?
-;
-;
-;
-;
-;
-
-rrss(Subject, Time, Type, Word, Object)?
+rrss(Subject, Time, Type, Relation_Word, Relation),Type > 0?
 ;
 ;
 ;
 ;
 ;
 ;
-
-
-understands_words_objects(Subject, Time, 1, 1, L)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
 ;
 ;
 ;
 ;
 ;
 
-understands_words_objects(Subject, Time, Type, 2, L)?
+rrss(Subject, Time, Type, Word, Object), Type = 0?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 ;
 ;
 
-understands_words_ideas_objects(Subject, Time, Type, Arity, L)?
+
+understands_words_objects_A(Subject, Time, 1, 1,
+			  Relation_Word, Relation,
+			  A_Word, A_Object)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 ;
 ;
 ;
 
-understands_words_ideas(Subject, Time, Type, Arity, L)?
+understands_words_objects_A(Subject, Time, 1, 2,
+			  Relation_Word, Relation,
+			  A_Word, A_Object,
+			  B_Word, B_Object)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 ;
 ;
 
-understands_words_ideas_objects(Subject, Time, Type, Arity, L)?
+
+understands_words_ideas_objects_A(Subject, Time, 1, 1,
+			  Relation_Word, Relation_Idea, Relation,
+			  A_Word, A_Idea,A_Object)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 ;
 ;
 ;
 ;
 
-%% subjects_understand_same_by_ideas(Subject_1, Time_1,
-%% 			       Subject_2, Time_2,
-%% 			       Type, Arity,
-%% 			       Relation_Idea_1, Relation_Idea_2, Relation,
-%% 			       A_Idea_1, A_Idea_2, A_Object,
-%% 			       B_Idea_1, B_Idea_2, B_Object,
-%% 			       C_Idea_1, C_Idea_2, C_Object,
-%% 			       D_Idea_1, D_Idea_2, D_Object,
-%% 			       E_Idea_1, E_Idea_2, E_Object,
-%% 			       F_Idea_1, F_Idea_2, F_Object,
-%% 			       G_Idea_1, G_Idea_2, G_Object,
-%% 			       H_Idea_1, H_Idea_2, H_Object,
-%% 			       I_Idea_1, I_Idea_2, I_Object,
-%% 			       J_Idea_1, J_Idea_2, J_Object,
-%% 			       K_Idea_1, K_Idea_2, K_Object,
-%% 			       L_Idea_1, L_Idea_2, L_Object,
-%% 			       M_Idea_1, M_Idea_2, M_Object,
-%% 			       N_Idea_1, N_Idea_2, N_Object,
-%% 			       O_Idea_1, O_Idea_2, O_Object,
-%% 			       P_Idea_1, P_Idea_2, P_Object,
-%% 			       Q_Idea_1, Q_Idea_2, Q_Object,
-%% 			       R_Idea_1, R_Idea_2, R_Object,
-%% 			       S_Idea_1, S_Idea_2, S_Object,
-%% 			       T_Idea_1, T_Idea_2, T_Object,
-%% 			       U_Idea_1, U_Idea_2, U_Object,
-%% 			       V_Idea_1, V_Idea_2, V_Object,
-%% 			       W_Idea_1, W_Idea_2, W_Object,
-%% 			       X_Idea_1, X_Idea_2, X_Object,
-%% 			       Y_Idea_1, Y_Idea_2, Y_Object,
-%% 			       Z_Idea_1, Z_Idea_2, Z_Object)?
-%% ;
-%% ;
-%% ;
-%% ;
-%% ;
-%% ;
-%% ;
-%% ;
+understands_words_ideas_objects_A(Subject, Time, 1, 2,
+			  Relation_Word, Relation_Idea, Relation,
+			  A_Word, A_Idea,A_Object,
+			  B_Word, B_Idea, B_Object)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 
-%% subjects_understand_same_by_words(Subject_1, Time_1,
-%% 			       Subject_2, Time_2,
-%% 			       Type, Arity,
-%% 			       Relation_Word_1, Relation_Word_2, Relation,
-%% 			       A_Word_1, A_Word_2, A_Object,
-%% 			       B_Word_1, B_Word_2, B_Object,
-%% 			       C_Word_1, C_Word_2, C_Object,
-%% 			       D_Word_1, D_Word_2, D_Object,
-%% 			       E_Word_1, E_Word_2, E_Object,
-%% 			       F_Word_1, F_Word_2, F_Object,
-%% 			       G_Word_1, G_Word_2, G_Object,
-%% 			       H_Word_1, H_Word_2, H_Object,
-%% 			       I_Word_1, I_Word_2, I_Object,
-%% 			       J_Word_1, J_Word_2, J_Object,
-%% 			       K_Word_1, K_Word_2, K_Object,
-%% 			       L_Word_1, L_Word_2, L_Object,
-%% 			       M_Word_1, M_Word_2, M_Object,
-%% 			       N_Word_1, N_Word_2, N_Object,
-%% 			       O_Word_1, O_Word_2, O_Object,
-%% 			       P_Word_1, P_Word_2, P_Object,
-%% 			       Q_Word_1, Q_Word_2, Q_Object,
-%% 			       R_Word_1, R_Word_2, R_Object,
-%% 			       S_Word_1, S_Word_2, S_Object,
-%% 			       T_Word_1, T_Word_2, T_Object,
-%% 			       U_Word_1, U_Word_2, U_Object,
-%% 			       V_Word_1, V_Word_2, V_Object,
-%% 			       W_Word_1, W_Word_2, W_Object,
-%% 			       X_Word_1, X_Word_2, X_Object,
-%% 			       Y_Word_1, Y_Word_2, Y_Object,
-%% 			       Z_Word_1, Z_Word_2, Z_Object)?
-%% ;
-%% ;
-%% ;
-%% ;
-%% ;
-%% ;
-%% ;
+understands_words_ideas_A(Subject, Time, 1, 1,
+			  Relation_Word, Relation_Idea,
+			  A_Word, A_Idea)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 
 
+understands_words_ideas_A(Subject, Time, 1, 2,
+			  Relation_Word, Relation_Idea,
+			  A_Word, A_Idea,	
+			  B_Word, B_Idea)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+
+
+
+understands_ideas_objects_A(Subject, Time, 1, 1,
+			  Relation_Idea, Relation,
+			  A_Idea, A_Object)?			 
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+
+
+
+understands_ideas_objects_A(Subject, Time, 1, 2,
+			  Relation_Idea, Relation,
+			  A_Idea, A_Object,			 
+			  B_Idea, B_Object)?			 
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+
+subjects_understand_same_objects_by_ideas_A(Subject_1, Time_1,
+			       Subject_2, Time_2,
+			       1, 1,
+			       Relation_Idea_1, Relation_Idea_2, Relation,
+			       A_Idea_1, A_Idea_2, A_Object)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+
+
+
+subjects_understand_same_objects_by_ideas_A(Subject_1, Time_1,
+			       Subject_2, Time_2,
+			       1, 2,
+			       Relation_Idea_1, Relation_Idea_2, Relation,
+			       A_Idea_1, A_Idea_2, A_Object,
+			       B_Idea_1, B_Idea_2, B_Object)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 
 
 
