@@ -24,7 +24,7 @@
 %% Arity & Type are not much used yet, but they may be handy in the future.
 %%
 
-%%    There are two primitive sorts of belied
+%%    There are two primitive sorts of belief
 
 %%    One in words
 
@@ -56,15 +56,44 @@
 % and understand the relation between the words, ideas and objects.
 % This ammounts to the rrrr & ssss relations holding.
 
-believes_word_idea_object(Subject, Time, Type, Arity,
-			  [W_I_O_Head | W_I_O_Tail])   :-
+believes_word_idea_object_A(Subject, Time, Type, Arity,
+			    [Relation_Word, Relation_Idea, Relation],
+			    [A_Word, A_Idea, A_Object]) :-
     %% list of word, idea object triples
-    believes_in_words(Subject, Time, Type, Arity, [W_Head | W_Tail]),
-    write("djd Subject = ", Subject, "\n"),
-    write("djd Time = ", Time, "\n"),
-    believes_in_ideas(Subject, Time, Type, Arity, [I_Head | I_Tail]),
-    understands_words_ideas_objects(Subject, Time, Type, Arity,
-				    [W_I_O_Head | W_I_O_Head]).
+    write("djd0001\n"),
+    believes_in_words(Subject, Time, Type, Arity,
+		      [Relation_Word, A_Word]),
+    write("djd0002\n"),
+    Type > 0,
+    write("djd0003\n"),
+    Arity = 1,
+    write("djd0004\n"),
+    believes_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea]),
+    write("djd0005\n"),
+    understands_words_ideas_objects_A(Subject, Time, Type, Arity,
+				      Relation_Word, Relation_Idea, Relation,
+				      A_Word, A_Idea, A_Object),
+    write("djd0006\n").
+
+
+believes_word_idea_object_A(Subject, Time, Type, Arity,
+			    [Relation_Word, Relation_Idea, Relation],
+			    [A_Word, A_Idea, A_Object],
+			    [B_Word, B_Idea, B_Object]) :-
+    %% list of word, idea object triples
+    believes_in_words(Subject, Time, Type, Arity,
+		      [Relation_Word, A_Word, B_Word]),
+    Type > 0,
+    Arity = 2,
+    believes_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea, B_Idea]),
+    understands_words_ideas_objects_A(Subject, Time, Type, Arity,
+			  Relation_Word, Relation_Idea, Relation,
+			  A_Word, A_Idea, A_Object,
+			  B_Word, B_Idea, B_Object).
+
+
 
 % if a person belives in words about objects then:
 % they must have the correct relation among the words
@@ -73,11 +102,38 @@ believes_word_idea_object(Subject, Time, Type, Arity,
 % NOTE: The only way to connect the words to the objects is via ideas.
 % This means the rrss relations hold.
 
-believes_word_object(Subject, Time, Type, Arity, [W_O_Head | W_O_Tail]):-
-    understands_words_ideas_objects(Subject, Time, Type, Arity,
-				    [W_I_O_Head | W_I_O_Tail]),
+believes_word_object_A(Subject, Time, Type, Arity,
+			    [Relation_Word, Relation_Idea, Relation],
+			    [A_Word, A_Idea, A_Object]) :-
+    %% list of word, idea object triples
     believes_in_words(Subject, Time, Type, Arity,
-		      [W_Head | W_Tail]).
+		      [Relation_Word, A_Word]),
+    Type > 0,
+    Arity = 1,
+    believes_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea]),
+    understands_words_ideas_objects_A(Subject, Time, Type, Arity,
+			  Relation_Word, Relation_Idea, Relation,
+			  A_Word, A_Idea, A_Object).
+
+
+believes_word_object_A(Subject, Time, Type, Arity,
+			    [Relation_Word, Relation_Idea, Relation],
+			    [A_Word, A_Idea, A_Object],
+			    [B_Word, B_Idea, B_Object]) :-
+    %% list of word, idea object triples
+    believes_in_words(Subject, Time, Type, Arity,
+		      [Relation_Word, A_Word, B_Word]),
+    Type > 0,
+    Arity = 2,
+    believes_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea, B_Idea]),
+    understands_words_objects_A(Subject, Time, Type, Arity,
+			  Relation_Word, Relation_Idea, Relation,
+			  A_Word, A_Idea, A_Object,
+			  B_Word, B_Idea, B_Object).
+
+
 
 
 % if a person believes in words and ideas then:
@@ -88,15 +144,37 @@ believes_word_object(Subject, Time, Type, Arity, [W_O_Head | W_O_Tail]):-
 % This amounts to the correct rrrr relations holding.
 % There might not even be corresponding objects.
 
-
-believes_word_idea(Subject, Time, Type, Arity,
-		   [W_I_Head | W_I_Tail]) :-
-    understands_words_ideas(Subject, Time, Type, Arity,
-			    [W_I_Head | W_I_Tail]),
-    believes_in_ideas(Subject, Time, Type, Arity,
-		      [I_Head | I_ Tail]),
+believes_word_idea_A(Subject, Time, Type, Arity,
+			    [Relation_Word, Relation_Idea],
+			    [A_Word, A_Idea]) :-
+    %% list of word, idea object triples
     believes_in_words(Subject, Time, Type, Arity,
-		      [W_Head | W_Tail]).
+		      [Relation_Word, A_Word]),
+    Type > 0,
+    Arity = 1,
+    believes_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea]),
+    understands_words_ideas_A(Subject, Time, Type, Arity,
+			  Relation_Word, Relation_Idea,
+			  A_Word, A_Idea).
+
+
+believes_word_idea_A(Subject, Time, Type, Arity,
+			    [Relation_Word, Relation_Idea],
+			    [A_Word, A_Idea],
+			    [B_Word, B_Idea]) :-
+    %% list of word, idea object triples
+    believes_in_words(Subject, Time, Type, Arity,
+		      [Relation_Word, A_Word, B_Word]),
+    Type > 0,
+    Arity = 2,
+    believes_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea, B_Idea]),
+    understands_words_ideas_A(Subject, Time, Type, Arity,
+			  Relation_Word, Relation_Idea,
+			  A_Word, A_Idea,
+			  B_Word, B_Idea).
+
 
 % if a person believes in ideas about objects then:
 % they must have the correct relation among their ideas
@@ -105,17 +183,30 @@ believes_word_idea(Subject, Time, Type, Arity,
 % This amounts to the correct ssss relations holding.
 % There might not even be corresponding words.
 
-believes_idea_object(Subject, Time, Type, Arity,
-		     [I_O_Head. I_O_Tail]) :-
+believes_idea_object_A(Subject, Time, Type, Arity,
+			    [Relation_Idea, Relation],
+			    [A_Idea, A_Object]) :-
     believes_in_ideas(Subject, Time, Type, Arity,
-		      [I_Head | I_Tail]),
-    understands_ideas_objects(Subject, Time, Type, Arity,
-			      [I_O_Head | I_O_Tail]).
+		      [Relation_Idea, A_Idea]),
+    Type > 0,
+    Arity = 1,
+    believes_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea]),
+    understands_ideas_objects_A(Subject, Time, Type, Arity,
+			  Relation_Idea, Relation,
+			  A_Idea, A_Object).
 
-% if a person believes about objects (in ideas) then:
-% they must have the correct relation among their ideas
-% and understand the relation between the ideas and objects.
-%
-% This amounts to the correct ssss relations holding.
-% There might not even be corresponding words.
-%
+
+believes_idea_object_A(Subject, Time, Type, Arity,
+			    [Relation_Idea, Relation],
+			    [A_Idea, A_Object],
+			    [B_Idea, B_Object]) :-
+    %% list of word, idea object triples
+    believes_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Word, A_Word, B_Word]),
+    Type > 0,
+    Arity = 2,
+    understands_ideas_objects_A(Subject, Time, Type, Arity,
+			  Relation_Idea, Relation,
+			  A_Idea, A_Object,
+			  B_Idea, B_Object).

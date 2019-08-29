@@ -124,3 +124,5 @@ arity_idea(tom_human_idea, 1).
 arity_idea(quine_human_idea, 1).
 arity_idea(tom_denounced_idea, 2).
 arity_idea(quine_denounced_idea, 2).
+
+
