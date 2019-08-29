@@ -54,13 +54,13 @@ believes_in_ideas(quine, now, 1, 2, [quine_denounced_idea, quine_cicero_idea,
 				     quine_cataline_idea]).
 believes_in_ideas(quine, now, 1, 2, [quine_denounced_idea, quine_tully_idea,
 				     quine_cataline_idea]).
-believes_in_words(tom, now, 1, 2, [tom_denounced_word, tom_cicero_word,
-				   tom_cataline_word]).
-believes_in_words(tom, now, 1, 2, [tom_denounced_word, tom_tully_word,
-				   tom_cataline_word]).
-believes_in_words(tom, now, 1, 1, [tom_human_word, tom_tully_word]).
-believes_in_words(quine, now, 1, 2, [quine_denounced_word, quine_cicero_word, quine_cataline_word]).
-believes_in_words(quine, now, 1, 2, [quine_denounced_word, quine_tully_word, quine_cataline_word]).
+believes_in_words(tom, now, 1, 2, [denounced_word, cicero_word,
+				   cataline_word]).
+believes_in_words(tom, now, 1, 2, [denounced_word, tully_word,
+				   cataline_word]).
+believes_in_words(tom, now, 1, 1, [human_word, tully_word]).
+believes_in_words(quine, now, 1, 2, [denounced_word, cicero_word, cataline_word]).
+believes_in_words(quine, now, 1, 2, [denounced_word, tully_word, cataline_word]).
 
 
 

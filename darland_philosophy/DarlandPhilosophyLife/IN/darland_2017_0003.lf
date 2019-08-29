@@ -191,8 +191,8 @@ believes_in_words(Subject, Time, 1, 2,
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 believes_word_idea_object_A(tom, now, 1, 1,
-			  [Relation_Word, Relation_Idea, Relation],
-			  [A_Word, A_Idea, A_Object])?
+			  [[Relation_Word, Relation_Idea, Relation],
+			  [A_Word, A_Idea, A_Object]])?
 ;
 ;
 ;
@@ -229,9 +229,9 @@ believes_word_idea_object_A(tom, now, 1, 1,
 ;
 
 believes_word_idea_object_A(tom, now, 1, 2,
-			  [Relation_Word, Relation_Idea, Relation],
+			  [[Relation_Word, Relation_Idea, Relation],
 			  [A_Word, A_Idea, A_Object],
-			  [B_Word, B_Idea, B_Object])?
+			  [B_Word, B_Idea, B_Object]])?
 ;
 ;
 ;
@@ -270,8 +270,8 @@ believes_word_idea_object_A(tom, now, 1, 2,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 believes_word_object_A(Subject, Time, 1, 1,
-		     [Relation_Word, Relation],
-		     [A_Word, A_Object])?
+		     [[Relation_Word, Relation],
+		     [A_Word, A_Object]])?
 ;
 ;
 ;
@@ -308,9 +308,9 @@ believes_word_object_A(Subject, Time, 1, 1,
 ;
 
 believes_word_object_A(Subject, Time, 1, 2,
-		     [Relation_Word, Relation],
+		     [[Relation_Word, Relation],
 		     [A_Word, A_Object],
-		     [B_Word, B_Object])?
+		     [B_Word, B_Object]])?
 ;
 ;
 ;
@@ -347,8 +347,8 @@ believes_word_object_A(Subject, Time, 1, 2,
 ;
 
 believes_word_idea_A(Subject, Time, 1, 1,
-		   [Relation_Word, Relation_Idea],
-		   [A_Word, A_Idea])?
+		   [[Relation_Word, Relation_Idea],
+		   [A_Word, A_Idea]])?
 ;
 ;
 ;
@@ -385,9 +385,9 @@ believes_word_idea_A(Subject, Time, 1, 1,
 ;
 
 believes_word_idea_A(Subject, Time, 1, 2,
-		   [Relation_Word, Relation_Idea],
+		   [[Relation_Word, Relation_Idea],
 		   [A_Word, A_Idea],
-		   [B_Word, B_Idea])?
+		   [B_Word, B_Idea]])?
 ;
 ;
 ;
@@ -425,8 +425,8 @@ believes_word_idea_A(Subject, Time, 1, 2,
 
 
 believes_idea_object_A(Subject, Time,  1, 1,
-		     [Relation_Idea, Relation],
-		     [A_Idea, A_Object])?
+		     [[Relation_Idea, Relation],
+		     [A_Idea, A_Object]])?
 ;
 ;
 ;
@@ -459,9 +459,9 @@ believes_idea_object_A(Subject, Time,  1, 1,
 ;
 
 believes_idea_object_A(Subject, Time,  1, 2,
-		     [Relation_Idea, Relation],
+		     [[Relation_Idea, Relation],
 		     [A_Idea, A_Object],
-		     [B_Idea, B_Object])?
+		     [B_Idea, B_Object]])?
 ;
 ;
 ;

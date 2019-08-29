@@ -82,21 +82,13 @@ understands_words_objects_A(Subject, Time, Type, Arity,
 understands_words_ideas_objects_A(Subject, Time, Type, Arity,
 			  Relation_Word, Relation_Idea, Relation,
 			  A_Word, A_Idea, A_Object) :-
-    write("BR0001\n"),
     rrrr(Subject, Time, Type, Relation_Word, Relation_Idea), 
-    write("BR0002\n"),
     Type > 0,
-    write("BR0003\n"),
     Arity = 1,
-    write("BR0004\n"),
     arity_word(Relation_Word, Arity),
-    write("BR0005\n"),
     ssss(Subject, Time, Type, Relation_Idea, Relation),
-    write("BR0006\n"),
     rrrr(Subject, Time, Type - 1, A_Word, A_Idea),
-    write("BR0007\n"),
-    ssss(Subject, Time, Type - 1, A_Idea, A_Object),
-    write("BR0008\n").
+    ssss(Subject, Time, Type - 1, A_Idea, A_Object).
     
     
 understands_words_ideas_objects_A(Subject, Time, Type, Arity,

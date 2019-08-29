@@ -80,7 +80,7 @@ rrrr(quine, now, 2, formally_equivalent_word, quine_formally_equivalent_idea).
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ssss(tom, now, 0, tom_cicero_idea, cicero).
-ssss(tom, now, 0, tom_tully_idea, cicero).
+ssss(tom, now, 0, tom_tully_idea, tully).
 ssss(tom, now, 0, tom_cataline_idea, cataline).
 ssss(tom, now, 0, tom_tom_idea, tom).
 ssss(tom, now, 1, tom_human_idea, human).
@@ -98,7 +98,6 @@ ssss(quine, now, 0, quine_tom_idea, tom).
 ssss(quine, now, 1, quine_human_idea, human).
 ssss(quine, now, 1, quine_featherless_biped_idea, featherless_biped).
 ssss(quine, now, 1, quine_denounced_idea, denounced).
-ssss(quine, now, 1, quine_human_idea, human).
 ssss(quine, now, 1, quine_featherless_biped_idea, featherless_biped).
 ssss(quine, now, 1, quine_american_idea, american).
 ssss(quine, now, 1, quine_roman_idea, roman).
