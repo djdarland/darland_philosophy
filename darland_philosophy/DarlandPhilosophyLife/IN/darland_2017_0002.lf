@@ -749,6 +749,120 @@ subjects_understand_same_objects_by_ideas_L(Subject_1, Time_1,
 ;
 ;
 
+subjects_understand_same_objects_by_words_L(Subject_1, Time_1, 
+					    Subject_2, Time_2,
+					    1, 1,
+					    Pair_List)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+
+subjects_understand_same_objects_by_words_L(Subject_1, Time_1,
+			       Subject_2, Time_2,
+			       1, 2,
+			       Pair_List)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+
 
 
 
