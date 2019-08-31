@@ -89,16 +89,6 @@ understands_words_objects_L(Subject, Time, Type, Arity,
     write("Bottom Main\n").
 
 
-%% match_pair_word_object_pairs_L(Subject, Time, Type, 0,
-%% 			    PairList_In, PairList) :-
-%%     % List of Word Object Pairs.
-%%     write("Top Final\n"),
-%% %    rrss(Subject, Time, Type, Word, Object),
-%% %    app2(PairList_In, [Word, Object]) = PairList,
-%%     write("PairList_In = ", PairList_In, "\n"),
-%%     write("PairList = ", PairList, "\n"),
-%%     write("Bottom Final\n").
-
 match_pair_word_relation_L(Subject, Time, Type, Arity,
 			       PairList_In, PairList) :-
     % List of Word Object Pairs.
@@ -114,7 +104,7 @@ match_pair_word_relation_L(Subject, Time, Type, Arity,
     write("Word = ", Word, "\n"),
     write("Object = ", Object, "\n"),
 
-    app2(PairList_In, [Word, Object]) = PairList_In_2,
+    app2(PairList_In, [[Word, Object]]) = PairList_In_2,
     
     cond(Arity > 0,
 	 match_pair_word_object_pairs_L(Subject, Time, Type - 1, Arity - 1,
@@ -138,7 +128,7 @@ match_pair_word_object_pairs_L(Subject, Time, Type, Arity,
     write("Word = ", Word, "\n"),
     write("Object = ", Object, "\n"),
 
-    app2(PairList_In, [Word, Object]) = PairList_In_2,
+    app2(PairList_In, [[Word, Object]]) = PairList_In_2,
     
     cond(Arity > 0,
 	 match_pair_word_object_pairs_L(Subject, Time, Type, Arity - 1,
@@ -176,6 +166,69 @@ understands_words_ideas_objects_A(Subject, Time, Type, Arity,
     rrrr(Subject, Time, Type - 1, B_Word, B_Idea),
     ssss(Subject, Time, Type - 1, B_Idea, B_Object).
     
+understands_words_ideas_objects_L(Subject, Time, Type, Arity,
+			    TripleList) :-
+    % List of Word Idea_Object Triples.
+    write("Top Recursion\n"),
+    match_triple_word_idea_relation_L(Subject, Time, Type, Arity,
+				   [], TripleList),
+    write("Bottom Main\n").
+
+
+match_triple_word_idea_relation_L(Subject, Time, Type, Arity,
+			       TripleList_In, TripleList) :-
+    % List of Word Idea Object Triple.
+    write("Top Recursion\n"),
+    
+    rrrr(Subject, Time, Type, Word, Idea),
+    ssss(Subject, Time, Type, Idea, Object),
+    Type > 0,
+    arity_word(Word, Arity),
+    write("Subject = ", Subject, "\n"),
+    write("Time = ", Time, "\n"),
+    write("Type = ", Type, "\n"),
+    write("Arity = ", Arity, "\n"),
+    write("Word = ", Word, "\n"),
+    write("Idea = ", Idea, "\n"),
+    write("Object = ", Object, "\n"),
+
+    app2(TripleList_In, [[Word, Idea, Object]]) = TripleList_In_2,
+    
+    cond(Arity > 0,
+	 match_triple_word_idea_object_L(Subject, Time, Type - 1, Arity - 1,
+					TripleList_In_2, TripleList),
+	TripleList = TripleList_In_2),
+    write("TripleList_In = ", TripleList_In, "\n"),
+    write("TripleList = ", TripleList, "\n"),
+    write("TripleList_In_2 = ", TripleList_In_2, "\n"),
+    write("Bottom Recursion\n").
+
+match_triple_word_idea_object_L(Subject, Time, Type, Arity,
+			       TripleList_In, TripleList) :-
+    % List of Word Object Triples.
+    write("Top Recursion\n"),
+    
+    rrrr(Subject, Time, Type, Word, Idea),
+    ssss(Subject, Time, Type, Idea, Object),
+    write("Subject = ", Subject, "\n"),
+    write("Time = ", Time, "\n"),
+    write("Type = ", Type, "\n"),
+    write("Arity = ", Arity, "\n"),
+    write("Word = ", Word, "\n"),
+    write("Idea = ", Idea, "\n"),
+    write("Object = ", Object, "\n"),
+
+    app2(TripleList_In, [[Word, Idea, Object]]) = TripleList_In_2,
+    
+    cond(Arity > 0,
+	 match_triple_word_idea_object_L(Subject, Time, Type, Arity - 1,
+					TripleList_In_2, TripleList),
+	TripleList = TripleList_In_2),
+    write("TripleList_In = ", TripleList_In, "\n"),
+    write("TripleList = ", TripleList, "\n"),
+    write("TripleList_In_2 = ", TripleList_In_2, "\n"),
+    write("Bottom Recursion\n").
+
 understands_words_ideas_A(Subject, Time, Type, Arity,
 			  [[Relation_Word, Relation_Idea],
 			  [A_Word, A_Idea]]) :-
