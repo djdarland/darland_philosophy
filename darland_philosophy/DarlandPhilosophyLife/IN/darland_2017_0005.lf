@@ -1,4 +1,4 @@
-%% Copyright (C) 2017 Dennis J. Darland
+%% Copyright (C) 2017, 2019 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
 
@@ -16,173 +16,175 @@
 %% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
 %% This file only checks rules (relating to propositions). 
 
-%% In WildLife queries end in a quiestion mark- in Prolog in a period
-%%
-%% In Wilidife extra ";" are echoed but otherwise ignored - in Prolog they 
-%% cause errors.
-%%
 load("FACTS/common_facts_2017_0001.lf")?
 load("FACTS/common_facts_2017_0002.lf")?
 load("FACTS/common_facts_2017_0003.lf")?
 load("RULES/common_2017_0001.lf")?
 load("RULES/common_2017_0002.lf")?
+load("RULES/common_2017_0003.lf")?
 load("RULES/life_2017_0001.lf")?
 trace_input(true)?
 
 write_time(Ignore)?
 
-
-
-remark(5001, Remark)?
-
-remark(5002, Remark)?
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
-;
-;
-;
-
-believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
-
-believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
-
-believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
-;
-;
-;
-
-
-believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
-
-
-believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
-
-
-believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
+believes_idea_about_another_understands_idea_A(
+	tom, now, 2, 2,
+	tom, now, 1, 1,
+	[[Subject_2_Idea, Subject_2],
+	[A_Idea, A_Object]])?
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% remark(5001, Remark)?
 
-believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
-;
-;
-;
+%% remark(5002, Remark)?
 
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+%% ;
+%% ;
+%% ;
+%% ;
 
-believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
+%% believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+%% ;
 
-believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
+%% believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+%% ;
 
-believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
+%% believes_internal_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+%% ;
 
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
-;
-;
-;
-
-believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
-
-believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
-
-believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
-;
-
-believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
-
-believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
-
-believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
-;
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
-;
-;
-;
+%% believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
+%% ;
+%% ;
+%% ;
 
 
-believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
+%% believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
 
 
-believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
+%% believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
 
 
-believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
+%% believes_internal_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
-;
-;
-;
-
-
-believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
-
-believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
-
-believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
-;
+%% believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
+%% ;
+%% ;
+%% ;
 
 
+%% believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
-;
+%% believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
 
-believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
+%% believes_external_about_understands_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
 
-believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
 
-believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
-;
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+%% ;
+%% ;
+%% ;
+%% ;
+
+%% believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+%% ;
+
+%% believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+%% ;
+
+%% believes_external_about_understands_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+%% ;
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+%% ;
+%% ;
+
+%% believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+%% ;
+
+%% believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+%% ;
+
+%% believes_internal_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+%% ;
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
+%% ;
+%% ;
+%% ;
+
+
+%% believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
+
+
+%% believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
+
+
+%% believes_internal_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
+
+
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
+%% ;
+%% ;
+%% ;
+
+
+%% believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
+
+%% believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
+
+%% believes_external_about_believes_external_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+%% ;
+
+
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+%% ;
+%% ;
+
+%% believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+%% ;
+
+%% believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+%% ;
+
+%% believes_external_about_believes_internal_object(Subject_1, Time_1, Logical_Form_1, Subject_2, Time_2, Logical_Form_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+%% ;
 
 write_stats(Ignore)?
 

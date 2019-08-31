@@ -85,3 +85,22 @@ roman(cataline).
 denounced(cicero, cataline).
 denounced(tom, cataline).
 
+%% believes_in_ideas(tom, now, 2, 1,
+%% 		  [[understands_idea_object_relation_idea,
+%% 		    understands_idea_object_relation],
+%% 		   [tom_tom_idea, tom],
+%% 		   [tom_cicero_idea, cicero]]).
+
+believes_in_ideas(tom, now, 1, 1,
+		      [[understands_idea_object_relation_idea,
+			understands_idea_object_relation],
+		       [tom_tom_idea, tom],
+ 		       [tom_cicero_idea, cicero]]).
+
+
+%    believes_in_ideas(Subject_1, Time_1, Type_1, Arity_1,
+%		      [[understands_idea_object_relation_idea,
+%			understands_idea_object_relation],
+%		       [Subject_2_Idea, Subject_2],
+%		       [A_Idea, A_Object]]).
+

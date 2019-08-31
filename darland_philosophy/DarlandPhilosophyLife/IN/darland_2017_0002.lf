@@ -85,6 +85,30 @@ rrss(Subject, Time, Type, Word, Object), Type = 0?
 ;
 ;
 
+% trace?
+
+understands_words_objects_L(Subject, Time, 1, 1,
+			    Pair_List)?
+;
+;
+;
+;
+;
+    
+
+
+understands_words_objects_L(Subject, Time, 1, 2,
+			    Pair_List)?
+;
+;
+;
+;
+;
+    
+
+
+
+
 
 understands_words_objects_A(Subject, Time, 1, 1,
 			  [[Relation_Word, Relation],
