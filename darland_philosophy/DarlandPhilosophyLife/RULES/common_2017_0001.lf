@@ -269,6 +269,65 @@ understands_ideas_objects_A(Subject, Time, Type, Arity,
     ssss(Subject, Time, Type - 1, A_Idea, A_Object),
     ssss(Subject, Time, Type - 1, B_Idea, B_Object).
 
+understands_ideas_objects_L(Subject, Time, Type, Arity,
+			    PairList) :-
+    % List of Word Object Pairs.
+    write("Top Recursion\n"),
+    match_pair_idea_relation_L(Subject, Time, Type, Arity,
+				   [], PairList),
+    write("Bottom Main\n").
+
+
+match_pair_idea_relation_L(Subject, Time, Type, Arity,
+			       PairList_In, PairList) :-
+    % List of Word Object Pairs.
+    write("Top Recursion\n"),
+    
+    ssss(Subject, Time, Type, Idea, Object),
+    Type > 0,
+    arity_word(Idea, Arity),
+    write("Subject = ", Subject, "\n"),
+    write("Time = ", Time, "\n"),
+    write("Type = ", Type, "\n"),
+    write("Arity = ", Arity, "\n"),
+    write("Idea = ", Idea, "\n"),
+    write("Object = ", Object, "\n"),
+
+    app2(PairList_In, [[Idea, Object]]) = PairList_In_2,
+    
+    cond(Arity > 0,
+	 match_pair_idea_object_L(Subject, Time, Type - 1, Arity - 1,
+					PairList_In_2, PairList),
+	PairList = PairList_In_2),
+    write("PairList_In = ", PairList_In, "\n"),
+    write("PairList = ", PairList, "\n"),
+    write("PairList_In_2 = ", PairList_In_2, "\n"),
+    write("Bottom Recursion\n").
+
+match_pair_idea_object_L(Subject, Time, Type, Arity,
+			       PairList_In, PairList) :-
+    % List of Idea Object Pairs.
+    write("Top Recursion\n"),
+    
+    ssss(Subject, Time, Type, Idea, Object),
+    write("Subject = ", Subject, "\n"),
+    write("Time = ", Time, "\n"),
+    write("Type = ", Type, "\n"),
+    write("Arity = ", Arity, "\n"),
+    write("Idea = ", Idea, "\n"),
+    write("Object = ", Object, "\n"),
+
+    app2(PairList_In, [[Idea, Object]]) = PairList_In_2,
+    
+    cond(Arity > 0,
+	 match_pair_idea_object_L(Subject, Time, Type, Arity - 1,
+					PairList_In_2, PairList),
+	PairList = PairList_In_2),
+    write("PairList_In = ", PairList_In, "\n"),
+    write("PairList = ", PairList, "\n"),
+    write("PairList_In_2 = ", PairList_In_2, "\n"),
+    write("Bottom Recursion\n").
+
 subjects_understand_same_objects_by_ideas_A(Subject_1, Time_1,
 			       Subject_2, Time_2,
 			       Type, Arity,
@@ -301,6 +360,77 @@ subjects_understand_same_objects_by_ideas_A(Subject_1, Time_1,
     ssss(Subject_2, Time_2, Type - 1, A_Idea_2, A_Object),
     ssss(Subject_2, Time_2, Type - 1, B_Idea_2, B_Object).
 		  
+subjects_understand_same_objects_by_ideas_L(Subject_1, Time_1,
+					    Subject_2, Time_2,
+					    Type, Arity,
+					    Pair_List) :-
+    % List of Word Object Pairs.
+    write("Top Recursion\n"),
+    match_same_pair_idea_relation_L(Subject_1, Time_1,
+				    Subject_2, Time_2,
+				    Type, Arity,
+				    [], Pair_List),
+    
+    write("Bottom Main\n").
+
+
+match_same_pair_idea_relation_L(Subject_1, Time_1,
+				Subject_2, Time_2,
+				Type, Arity,
+				PairList_In, Pair_List) :-
+    % List of Word Object Pairs.
+    write("Top Recursion\n"),
+    write("Type = ", Type, "\n"),
+    arity_idea(Idea, Arity),
+    Type > 0,
+    ssss(Subject_1, Time_1, Type, Idea, Object),
+    write("Subject_1 = ", Subject_1, "\n"),
+    write("Time_1 = ", Time_1, "\n"),
+    write("Arity = ", Arity, "\n"),
+    write("Idea = ", Idea, "\n"),
+    write("Relation = ", Object, "\n"),
+    ssss(Subject_2, Time_2, Type, Idea, Object),
+    write("Subject_2 = ", Subject_2, "\n"),
+    write("Time_2 = ", Time_2, "\n"),
+    app2(PairList_In, [[Idea, Object]]) = PairList_In_2,
+    cond(Arity > 0,
+	 match_same_pair_idea_object_L(Subject_1, Time_1,
+				       Subject_2, Time_2,
+				       Type - 1, Arity - 1,
+				       PairList_In_2, Pair_List),
+	 Pair_List = PairList_In_2),
+    write("PairList_In = ", PairList_In, "\n"),
+    write("Pair_List = ", Pair_List, "\n"),
+    write("PairList_In_2 = ", PairList_In_2, "\n"),
+    write("Bottom Recursion\n").
+
+match_same_pair_idea_object_L(Subject_1, Time_1,
+			    Subject_2, Time_2,
+			    Type, Arity,
+			    PairList_In, Pair_List) :-
+    % List of Idea Object Pairs.
+    write("Top Recursion\n"),
+    ssss(Subject_1, Time_1, Type, Idea, Object),
+    write("Subject_1 = ", Subject_1, "\n"),
+    write("Time_1 = ", Time_1, "\n"),
+    write("Type = ", Type, "\n"),
+    write("Arity = ", Arity, "\n"),
+    write("Idea = ", Idea, "\n"),
+    write("Object = ", Object, "\n"),
+    ssss(Subject_2, Time_2, Type, Idea, Object),
+    write("Subject_2 = ", Subject_2, "\n"),
+    write("Time_2 = ", Time_2, "\n"),
+    app2(PairList_In, [[Idea, Object]]) = PairList_In_2,
+    cond(Arity > 0,
+	 match_same_pair_idea_object_L(Subject_1, Time_1,
+					     Subject_2, Time_2,
+					     Type, Arity - 1,
+					     PairList_In_2, Pair_List),
+	 Pair_List = PairList_In_2),
+    write("PairList_In = ", Pair_List_In, "\n"),
+    write("Pair_List = ", Pair_List, "\n"),
+    write("PairList_In_2 = ", PairList_In_2, "\n"),
+    write("Bottom Recursion\n").
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
