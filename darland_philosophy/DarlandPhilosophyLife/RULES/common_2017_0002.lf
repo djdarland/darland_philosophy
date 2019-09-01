@@ -58,41 +58,63 @@
 
 believes_word_idea_object_L(Subject, Time, Type, Arity, Triple_List) :-
     %% list of word, idea object triples
-    cond(Arity =:= 1, (believes_in_words(Subject, Time, Type, Arity,
-					 Pair_List_A),
-		       write("Subject = ", Subject, "\n"), 
-		       write("Time = ", Time, "\n"), 
-		       write("Type = ", Type, "\n"), 
-		       write("Arity = ", Arity, "\n"), 
-		       write("Relation_Word = ", Relation_Word, "\n"), 
-		       write("A_Word = ", A_Word, "\n"), 
-		       Type > 0,
-		       arity_word(Relation_Word, Arity),
-		       believes_in_ideas(Subject, Time, Type, Arity,
-					 Pair_List_B),
-		       Pair_List_A = [Relation_Word, A_Word],
-		       Pair_List_B = [Relation_Idea, A_Idea],
-		       Triple_List = [[Relation_Word, Relation_Idea, Relation],
-				      [A_Word, A_Idea, A_Object]],
-		       understands_words_ideas_objects_L(Subject,
-							 Time, Type, Arity,
-							 Triple_List))),
+    believes_in_words(Subject, Time, Type, Arity, Word_List),
+    write("Word_List = ", Word_List, "\n"),
+    believes_in_ideas(Subject, Time, Type, Arity, Idea_List),
+    write("Idea_List = ", Idea_List, "\n"),
+    write("Subject = ", Subject, "\n"), 
+    write("Time = ", Time, "\n"), 
+    write("Type = ", Type, "\n"), 
+    write("Arity = ", Arity, "\n"),
+    match_triple_list_L(Subject, Time, Type - 1, Arity, 
+			Word_List,
+			Idea_List,
+			[],
+			Triple_List),
+    write("Triple_List = ", Triple_List, "\n").
 
-    cond(Arity =:= 2, (believes_in_words(Subject, Time, Type, Arity,
-					 Triple_List_A),
-		       Type > 0,
-		       arity_word(Relation_Word, Arity),
-		       believes_in_ideas(Subject, Time, Type, Arity,
-					 Triple_List_B),
-		       Triple_List_A = [Relation_Word, A_Word, B_Word],
-		       Triple_List_B = [Relation_Idea, A_Idea, B_Idea],
-		       
-		       Triple_List = [[Relation_Word, Relation_Idea, Relation],
-				      [A_Word, A_Idea, A_Object],
-				      [B_Word, B_Idea, B_Object]],
-		       understands_words_ideas_objects_L(Subject,
-							 Time, Type, Arity,
-							 Triple_List))).
+%% match_triple_list_L(Subject, Time, Type, Arity, 
+%% 		    Word_Head,
+%% 		    Idea_Head,
+%% 		    Triple_List_In,
+%% 		    Triple_List) :-
+%%     write("[Word_Head] = ", Word_Head, "\n"),
+%%     write("[Idea_Head] = ", Idea_Head, "\n"),
+%%     rrrr(Subject, Time, Type, Word_Head, Idea_Head),
+%%     ssss(Subject, Time, Type, Idea_Head, Object),
+%%     write("Object = ", Object, "\n"),
+%%     app2(Triple_List_In, [[Word_Head, Idea_Head, Object]]) = Triple_List,
+%%     write("Arity = ", Arity, "\n").
+
+match_triple_list_L(Subject, Time, Type, Arity, 
+		    [Word_Head | Word_Tail],
+		    [Idea_Head | Idea_Tail],
+		    Triple_List_In,
+		    Triple_List_Out) :-
+
+
+    cond(Arity > 0,
+	 (
+	     write("Subject = ", Subject, "\n"), 
+	     write("Time = ", Time, "\n"), 
+	     write("Type = ", Type, "\n"), 
+	     write("Arity = ", Arity, "\n"),
+	     write("[Word_Head | Word_Tail] = ", [Word_Head | Word_Tail], "\n"),
+	     write("[Idea_Head | Idea_Tail] = ", [Idea_Head | Idea_Tail], "\n"),
+	     write("Word_Head = ", Word_Head, "\n"),
+	     write("Idea_Head = ", Idea_Head, "\n"),
+	     rrrr(Subject, Time, Type_X1, Word_Head, Idea_Head),
+	     ssss(Subject, Time, Type_X2, Idea_Head, Object),
+	     write("Object = ", Object, "\n"),
+	     app2(Triple_List_In, [Word_Head, Idea_Head, Object]) = Triple_List_Out,
+	     write("Arity = ", Arity, "\n"),
+	     write("Triple_List_Out = ", Triple_List_Out, "\n"),
+	     match_triple_list_L(Subject, Time, Type, Arity - 1,
+				 Word_Tail,
+				 Idea_Tail,
+				 Triple_List_Out,
+				 Triple_List)),
+	 Triple_List = Triple_List_In).
 
 
 believes_word_idea_object_A(Subject, Time, Type, Arity,
@@ -110,24 +132,6 @@ believes_word_idea_object_A(Subject, Time, Type, Arity,
 				      [A_Word, A_Idea, A_Object]]).
     
 
-
-%% believes_word_idea_object_A(Subject, Time, Type, Arity,
-%% 			    [[Relation_Word, Relation_Idea, Relation],
-%% 			    [A_Word, A_Idea, A_Object]]) :-
-%%     %% list of word, idea object triples
-%%     believes_in_words(Subject, Time, Type, Arity,
-%% 		      [Relation_Word, A_Word]),
-%%     Type > 0,
-%%     Arity = 1,
-%%     believes_in_ideas(Subject, Time, Type, Arity,
-%% 		      [Relation_Idea, A_Idea]),
-%%     understands_words_ideas_A(Subject, Time, Type, Arity,
-%% 				      [[Relation_Word, Relation_Idea],
-%% 				      [A_Word, A_Idea]]),
-    
-%%     understands_ideas_objects_A(Subject, Time, Type, Arity,
-%% 				      [[Relation_Idea, Relation],
-%% 				      [A_Idea, A_Object]]).
 
 believes_word_idea_object_A(Subject, Time, Type, Arity,
 			    [[Relation_Word, Relation_Idea, Relation],
