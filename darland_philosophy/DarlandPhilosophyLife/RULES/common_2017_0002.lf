@@ -1,5 +1,5 @@
 %% Copyright (C) 2017, 2019 Dennis J. Darland
-
+%% trouble with commit made this change!!!
 %% This file is part of darland's philosophy.
 
 %% darland's philosophy is free software: you can redistribute it and/or modify
@@ -59,62 +59,33 @@
 believes_word_idea_object_L(Subject, Time, Type, Arity, Triple_List) :-
     %% list of word, idea object triples
     believes_in_words(Subject, Time, Type, Arity, Word_List),
-    write("Word_List = ", Word_List, "\n"),
     believes_in_ideas(Subject, Time, Type, Arity, Idea_List),
-    write("Idea_List = ", Idea_List, "\n"),
-    write("Subject = ", Subject, "\n"), 
-    write("Time = ", Time, "\n"), 
-    write("Type = ", Type, "\n"), 
-    write("Arity = ", Arity, "\n"),
-    match_triple_list_L(Subject, Time, Type - 1, Arity, 
+    match_triple_list_L(Subject, Time, Type, Arity,
 			Word_List,
 			Idea_List,
 			[],
-			Triple_List),
-    write("Triple_List = ", Triple_List, "\n").
+			Triple_List).
 
-%% match_triple_list_L(Subject, Time, Type, Arity, 
-%% 		    Word_Head,
-%% 		    Idea_Head,
-%% 		    Triple_List_In,
-%% 		    Triple_List) :-
-%%     write("[Word_Head] = ", Word_Head, "\n"),
-%%     write("[Idea_Head] = ", Idea_Head, "\n"),
-%%     rrrr(Subject, Time, Type, Word_Head, Idea_Head),
-%%     ssss(Subject, Time, Type, Idea_Head, Object),
-%%     write("Object = ", Object, "\n"),
-%%     app2(Triple_List_In, [[Word_Head, Idea_Head, Object]]) = Triple_List,
-%%     write("Arity = ", Arity, "\n").
+match_triple_list_L(Subject, Time, Type, Arity, 
+		    [],
+		    [],
+		    Triple_List_In,
+		    Triple_List) :-
+    Triple_List = Triple_List_In.
 
 match_triple_list_L(Subject, Time, Type, Arity, 
 		    [Word_Head | Word_Tail],
 		    [Idea_Head | Idea_Tail],
 		    Triple_List_In,
-		    Triple_List_Out) :-
-
-
-    cond(Arity > 0,
-	 (
-	     write("Subject = ", Subject, "\n"), 
-	     write("Time = ", Time, "\n"), 
-	     write("Type = ", Type, "\n"), 
-	     write("Arity = ", Arity, "\n"),
-	     write("[Word_Head | Word_Tail] = ", [Word_Head | Word_Tail], "\n"),
-	     write("[Idea_Head | Idea_Tail] = ", [Idea_Head | Idea_Tail], "\n"),
-	     write("Word_Head = ", Word_Head, "\n"),
-	     write("Idea_Head = ", Idea_Head, "\n"),
-	     rrrr(Subject, Time, Type_X1, Word_Head, Idea_Head),
-	     ssss(Subject, Time, Type_X2, Idea_Head, Object),
-	     write("Object = ", Object, "\n"),
-	     app2(Triple_List_In, [Word_Head, Idea_Head, Object]) = Triple_List_Out,
-	     write("Arity = ", Arity, "\n"),
-	     write("Triple_List_Out = ", Triple_List_Out, "\n"),
-	     match_triple_list_L(Subject, Time, Type, Arity - 1,
-				 Word_Tail,
-				 Idea_Tail,
-				 Triple_List_Out,
-				 Triple_List)),
-	 Triple_List = Triple_List_In).
+		    Triple_List) :-
+    rrrr(Subject, Time, Type_X1, Word_Head, Idea_Head),
+    ssss(Subject, Time, Type_X2, Idea_Head, Object),
+    app2(Triple_List_In, [[Word_Head, Idea_Head, Object]]) = Triple_List_In_2,
+    match_triple_list_L(Subject, Time, Type, Arity - 1,
+			Word_Tail,
+			Idea_Tail,
+			Triple_List_In_2,
+			Triple_List).
 
 
 believes_word_idea_object_A(Subject, Time, Type, Arity,
