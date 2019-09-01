@@ -56,6 +56,9 @@
 % and understand the relation between the words, ideas and objects.
 % This ammounts to the rrrr & ssss relations holding.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 believes_word_idea_object_L(Subject, Time, Type, Arity, Triple_List) :-
     %% list of word, idea object triples
     believes_in_words(Subject, Time, Type, Arity, Word_List),
@@ -87,6 +90,7 @@ match_triple_list_L(Subject, Time, Type, Arity,
 			Triple_List_In_2,
 			Triple_List).
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 believes_word_idea_object_A(Subject, Time, Type, Arity,
 			    [[Relation_Word, Relation_Idea, Relation],
@@ -120,7 +124,7 @@ believes_word_idea_object_A(Subject, Time, Type, Arity,
 			  [A_Word, A_Idea, A_Object],
 			  [B_Word, B_Idea, B_Object]]).
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % if a person belives in words about objects then:
 % they must have the correct relation among the words
@@ -128,6 +132,44 @@ believes_word_idea_object_A(Subject, Time, Type, Arity,
 % and understand the relation between the words, ideas and objects.
 % NOTE: The only way to connect the words to the objects is via ideas.
 % This means the rrss relations hold.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+believes_word_object_L(Subject, Time, Type, Arity, Pair_List) :-
+    %% list of word, idea object pairs
+    believes_in_words(Subject, Time, Type, Arity, Word_List),
+    believes_in_ideas(Subject, Time, Type, Arity, Idea_List),
+    match_pair_list_L(Subject, Time, Type, Arity,
+			Word_List,
+			Idea_List,
+			[],
+			Pair_List).
+
+match_pair_list_L(Subject, Time, Type, Arity, 
+		    [],
+		    [],
+		    Pair_List_In,
+		    Pair_List) :-
+    Pair_List = Pair_List_In.
+
+match_pair_list_L(Subject, Time, Type, Arity, 
+		    [Word_Head | Word_Tail],
+		    [Idea_Head | Idea_Tail],
+		    Pair_List_In,
+		    Pair_List) :-
+    rrrr(Subject, Time, Type_X1, Word_Head, Idea_Head),
+    ssss(Subject, Time, Type_X2, Idea_Head, Object),
+    app2(Pair_List_In, [[Word_Head, Object]]) = Pair_List_In_2,
+    match_pair_list_L(Subject, Time, Type, Arity - 1,
+			Word_Tail,
+			Idea_Tail,
+			Pair_List_In_2,
+			Pair_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 believes_word_object_A(Subject, Time, Type, Arity,
 			    [[Relation_Word, Relation],
@@ -158,7 +200,7 @@ believes_word_object_A(Subject, Time, Type, Arity,
 			  [B_Word, B_Object]]).
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % if a person believes in words and ideas then:
 % they must have the correct relation among the words
@@ -167,6 +209,37 @@ believes_word_object_A(Subject, Time, Type, Arity,
 %
 % This amounts to the correct rrrr relations holding.
 % There might not even be corresponding objects.
+
+
+
+believes_word_idea_L(Subject, Time, Type, Arity, Pair_List) :-
+    %% list of word, idea object pairs
+    believes_in_words(Subject, Time, Type, Arity, Word_List),
+    match_WI_pair_list_L(Subject, Time, Type, Arity,
+			Word_List,
+			[],
+			Pair_List).
+
+match_WI_pair_list_L(Subject, Time, Type, Arity, 
+		    [],
+		    Pair_List_In,
+		    Pair_List) :-
+    Pair_List = Pair_List_In.
+
+match_WI_pair_list_L(Subject, Time, Type, Arity, 
+		    [Word_Head | Word_Tail],
+		    Pair_List_In,
+		    Pair_List) :-
+    rrrr(Subject, Time, Type_X1, Word_Head, Idea),
+    app2(Pair_List_In, [[Word_Head, Idea]]) = Pair_List_In_2,
+    match_WI_pair_list_L(Subject, Time, Type, Arity - 1,
+			Word_Tail,
+			Pair_List_In_2,
+			Pair_List).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 believes_word_idea_A(Subject, Time, Type, Arity,
 			    [[Relation_Word, Relation_Idea],
@@ -207,6 +280,33 @@ believes_word_idea_A(Subject, Time, Type, Arity,
 % This amounts to the correct ssss relations holding.
 % There might not even be corresponding words.
 
+believes_idea_object_L(Subject, Time, Type, Arity, Pair_List) :-
+    %% list of idea, idea object pairs
+    believes_in_ideas(Subject, Time, Type, Arity, Idea_List),
+    match_IO_pair_list_L(Subject, Time, Type, Arity,
+			Idea_List,
+			[],
+			Pair_List).
+
+match_IO_pair_list_L(Subject, Time, Type, Arity, 
+		    [],
+		    Pair_List_In,
+		    Pair_List) :-
+    Pair_List = Pair_List_In.
+
+match_IO_pair_list_L(Subject, Time, Type, Arity, 
+		    [Idea_Head | Idea_Tail],
+		    Pair_List_In,
+		    Pair_List) :-
+    ssss(Subject, Time, Type_X1, Idea_Head, Object),
+    app2(Pair_List_In, [[Idea_Head, Object]]) = Pair_List_In_2,
+    match_IO_pair_list_L(Subject, Time, Type_X2, Arity - 1,
+			Idea_Tail,
+			Pair_List_In_2,
+			Pair_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 believes_idea_object_A(Subject, Time, Type, Arity,
 			    [[Relation_Idea, Relation],
 			    [A_Idea, A_Object]]) :-
@@ -240,6 +340,34 @@ believes_idea_object_A(Subject, Time, Type, Arity,
 %
 % This amounts to the correct ssss relations holding.
 % There might not even be corresponding words.
+believes_object_L(Subject, Time, Type, Arity, Pair_List) :-
+    %% list of idea, idea object pairs
+    believes_in_ideas(Subject, Time, Type, Arity, Idea_List),
+    match_O_list_L(Subject, Time, Type, Arity,
+			Idea_List,
+			[],
+			Pair_List).
+
+match_O_list_L(Subject, Time, Type, Arity, 
+		    [],
+		    Pair_List_In,
+		    Pair_List) :-
+    Pair_List = Pair_List_In.
+
+match_O_list_L(Subject, Time, Type, Arity, 
+		    [Idea_Head | Idea_Tail],
+		    Pair_List_In,
+		    Pair_List) :-
+    ssss(Subject, Time, Type_X1, Idea_Head, Object),
+    app2(Pair_List_In, [[Object]]) = Pair_List_In_2,
+    match_O_list_L(Subject, Time, Type_X2, Arity - 1,
+			Idea_Tail,
+			Pair_List_In_2,
+			Pair_List).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 believes_object_A(Subject, Time, Type, Arity,
 			    [[Relation],
