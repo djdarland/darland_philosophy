@@ -271,7 +271,7 @@ believes_word_idea_A(Subject, Time, Type, Arity,
 			  [[Relation_Word, Relation_Idea],
 			  [A_Word, A_Idea],
 			  [B_Word, B_Idea]]).
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % if a person believes in ideas about objects then:
 % they must have the correct relation among their ideas
@@ -333,13 +333,15 @@ believes_idea_object_A(Subject, Time, Type, Arity,
 			  [A_Idea, A_Object],
 			  [B_Idea, B_Object]]).
 
-
-% if a person believes in ideas about objects then:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% if a person believes about objects then:
 % they must have the correct relation among their ideas
 % and understand the relation between the ideas and objects.
 %
 % This amounts to the correct ssss relations holding.
 % There might not even be corresponding words.
+
+
 believes_object_L(Subject, Time, Type, Arity, Pair_List) :-
     %% list of idea, idea object pairs
     believes_in_ideas(Subject, Time, Type, Arity, Idea_List),

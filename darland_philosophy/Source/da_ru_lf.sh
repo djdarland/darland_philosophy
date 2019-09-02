@@ -27,6 +27,7 @@ echo "2 life_2017_0002.lf   - Particular Rules for Life (append)"
 echo "3 common_2017_0001.lf - Rules on Understanding"
 echo "4 common_2017_0002.lf - Rules on Belief"
 echo "5 common_2017_0003.lf - Rules on Belief & Understanding"
+echo "6 common_2017_0004.lf - Rules on Opacity of Belief"
 echo "-----------"
 if test -f da_fa.sh
 then
@@ -42,6 +43,7 @@ case $select in
 3) $EDITOR ../DarlandPhilosophyLife/RULES/common_2017_0001.lf;;
 4) $EDITOR ../DarlandPhilosophyLife/RULES/common_2017_0002.lf;;
 5) $EDITOR ../DarlandPhilosophyLife/RULES/common_2017_0003.lf;;
+6) $EDITOR ../DarlandPhilosophyLife/RULES/common_2017_0004.lf;;
 666) $EDITOR da_ru_lf.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

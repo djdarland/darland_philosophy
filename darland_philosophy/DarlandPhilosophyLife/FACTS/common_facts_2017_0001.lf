@@ -47,13 +47,15 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rrrr(tom, now, 0, cicero_word, tom_cicero_idea).
-rrrr(tom, now, 0, cataline_word, tom_cataline_idea).
+rrrr(tom, now, 0, catiline_word, tom_catiline_idea).
 rrrr(tom, now, 0, tully_word, tom_tully_idea).
 rrrr(tom, now, 0, tom_word, tom_tom_idea).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rrrr(quine, now, 0, cicero_word, quine_cicero_idea).
-rrrr(quine, now, 0, cataline_word, quine_cataline_idea).
+rrrr(quine, now, 0, cicero_word, quine_tully_idea).
+rrrr(quine, now, 0, catiline_word, quine_catiline_idea).
 rrrr(quine, now, 0, tully_word, quine_tully_idea).
+rrrr(quine, now, 0, tully_word, quine_cicero_idea).
 rrrr(quine, now, 0, tom_word, quine_tom_idea).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,8 +82,7 @@ rrrr(quine, now, 2, formally_equivalent_word, quine_formally_equivalent_idea).
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ssss(tom, now, 0, tom_cicero_idea, cicero).
-ssss(tom, now, 0, tom_tully_idea, tully).
-ssss(tom, now, 0, tom_cataline_idea, cataline).
+ssss(tom, now, 0, tom_catiline_idea, catiline).
 ssss(tom, now, 0, tom_tom_idea, tom).
 ssss(tom, now, 1, tom_human_idea, human).
 ssss(tom, now, 1, tom_featherless_biped_idea, featherless_biped).
@@ -93,7 +94,7 @@ ssss(tom, now, 2, tom_formally_equivalent_idea, formally_equivalent).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ssss(quine, now, 0, quine_cicero_idea, cicero).
 ssss(quine, now, 0, quine_tully_idea, cicero).
-ssss(quine, now, 0, quine_cataline_idea, cataline).
+ssss(quine, now, 0, quine_catiline_idea, catiline).
 ssss(quine, now, 0, quine_tom_idea, tom).
 ssss(quine, now, 1, quine_human_idea, human).
 ssss(quine, now, 1, quine_featherless_biped_idea, featherless_biped).

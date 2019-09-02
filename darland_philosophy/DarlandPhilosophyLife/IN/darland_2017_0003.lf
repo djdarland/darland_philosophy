@@ -714,6 +714,74 @@ believes_idea_object_A(Subject, Time,  1, 2,
 ;
 ;
 ;
+believes_object_A(Subject, Time,  1, 1,
+		     [[Relation],
+		     [A_Object]])?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+
+believes_object_A(Subject, Time,  1, 2,
+		     [[Relation],
+		     [A_Object],
+		     [B_Object]])?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 
 believes_idea_object_L(Subject, Time,  1, 1, Pair_List)?
 ;
