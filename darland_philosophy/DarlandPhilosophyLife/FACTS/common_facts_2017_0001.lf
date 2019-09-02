@@ -87,6 +87,9 @@ rrrr(quine, now, 2, formally_equivalent_word, quine_formally_equivalent_idea).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ssss(tom, now, 0, tom_cicero_idea, cicero).
+ssss(tom, now, 0, tom_tully_idea, cicero).
+% toms idea of tully really refers to cicero
+% logically we must look at tinngs sub specie aeternitatis
 ssss(tom, now, 0, tom_catiline_idea, catiline).
 ssss(tom, now, 0, tom_tom_idea, tom).
 ssss(tom, now, 1, tom_human_idea, human).
