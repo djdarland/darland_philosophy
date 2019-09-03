@@ -1,0 +1,557 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> 
+*** Yes
+> Mon Sep  2 19:17:14 CDT 2019
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+*** No
+> opaque_believes_word_idea_object_L(Subject, Time, Type, Arity,
+|    				   Triple_List_1,
+|    				   Triple_list_2)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> 
+> opaque_believes_word_object_L(Subject, Time, Type, Arity,
+|    			      Pair_List_1,
+|    			      Pair_List_2)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> 
+> opaque_believes_word_idea_L(Subject, Time, Type, Arity,
+|    			    Pair_List_1,
+|    			    Pair_List_2)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> 
+> opaque_believes_idea_object_L(Subject, Time, Type, Arity,
+|    			      Pair_List_1,
+|    			      Pair_List_2)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> 
+> opaque_believes_object_L(Subject, Time, Type, Arity,
+|    			 Object_List_1,
+|    			 Object_List_2)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> 
+> transparent_believes_word_idea_object_L(Subject, Time, 1, 1,
+|    				   Triple_List_1,
+|    				   Triple_list_2)?
+
+*** Yes
+Subject = tom, 
+Time = now, 
+Triple_List_1 = [[of_orations_word,tom_of_orations_idea,_A: of_orations],
+                 [cicero_word,tom_cicero_idea,_B: cicero]], 
+Triple_list_2 = [[of_orations_word,tom_of_orations_idea,_A],
+                 [cicero_word,tom_cicero_idea,_B]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List_1 = [[of_orations_word,quine_of_orations_idea,_A: of_orations],
+                 [cicero_word,quine_cicero_idea,_B: cicero]], 
+Triple_list_2 = [[of_orations_word,quine_of_orations_idea,_A],
+                 [cicero_word,quine_cicero_idea,_B]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List_1 = [[of_orations_word,quine_of_orations_idea,_A: of_orations],
+                 [cicero_word,quine_cicero_idea,_B: cicero]], 
+Triple_list_2 = [[of_orations_word,quine_of_orations_idea,_A],
+                 [cicero_word,quine_tully_idea,_B]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List_1 = [[of_orations_word,quine_of_orations_idea,_A: of_orations],
+                 [cicero_word,quine_cicero_idea,_B: cicero]], 
+Triple_list_2 = [[of_orations_word,quine_of_orations_idea,_A],
+                 [tully_word,quine_cicero_idea,_B]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List_1 = [[of_orations_word,quine_of_orations_idea,_A: of_orations],
+                 [cicero_word,quine_cicero_idea,_B: cicero]], 
+Triple_list_2 = [[of_orations_word,quine_of_orations_idea,_A],
+                 [tully_word,quine_tully_idea,_B]].
+
+--1> 
+*** No
+> 
+> transparent_believes_word_idea_object_L(Subject, Time, 1, 2,
+|    				   Triple_List_1,
+|    				   Triple_list_2)?
+
+*** Yes
+Subject = tom, 
+Time = now, 
+Triple_List_1 = [[denounced_word,tom_denounced_idea,_A: denounced],
+                 [cicero_word,tom_cicero_idea,_B: cicero],
+                 [catiline_word,tom_catiline_idea,_C: catiline]], 
+Triple_list_2 = [[denounced_word,tom_denounced_idea,_A],
+                 [cicero_word,tom_cicero_idea,_B],
+                 [catiline_word,tom_catiline_idea,_C]].
+
+--1> 
+
+*** Yes
+Subject = tom, 
+Time = now, 
+Triple_List_1 = [[denounced_word,tom_denounced_idea,_A: denounced],
+                 [cicero_word,tom_cicero_idea,_B: cicero],
+                 [catiline_word,tom_catiline_idea,_C: catiline]], 
+Triple_list_2 = [[denounced_word,tom_denounced_idea,_A],
+                 [cicero_word,tom_cicero_idea,_B],
+                 [catiline_word,tom_catiline_idea,_C]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List_1 = [[denounced_word,quine_denounced_idea,_A: denounced],
+                 [cicero_word,quine_cicero_idea,_B: cicero],
+                 [catiline_word,quine_catiline_idea,_C: catiline]], 
+Triple_list_2 = [[denounced_word,quine_denounced_idea,_A],
+                 [cicero_word,quine_cicero_idea,_B],
+                 [catiline_word,quine_catiline_idea,_C]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List_1 = [[denounced_word,quine_denounced_idea,_A: denounced],
+                 [cicero_word,quine_cicero_idea,_B: cicero],
+                 [catiline_word,quine_catiline_idea,_C: catiline]], 
+Triple_list_2 = [[denounced_word,quine_denounced_idea,_A],
+                 [cicero_word,quine_tully_idea,_B],
+                 [catiline_word,quine_catiline_idea,_C]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List_1 = [[denounced_word,quine_denounced_idea,_A: denounced],
+                 [cicero_word,quine_cicero_idea,_B: cicero],
+                 [catiline_word,quine_catiline_idea,_C: catiline]], 
+Triple_list_2 = [[denounced_word,quine_denounced_idea,_A],
+                 [tully_word,quine_cicero_idea,_B],
+                 [catiline_word,quine_catiline_idea,_C]].
+
+--1> 
+*** No
+> 
+> 
+> 
+> transparent_believes_word_object_L(Subject, Time, 1, 1,
+|    			      Pair_List_1,
+|    			      Pair_List_2)?
+
+*** Yes
+Pair_List_1 = [[of_orations_word,_A: of_orations],[cicero_word,_B: cicero]], 
+Pair_List_2 = [[of_orations_word,_A],[cicero_word,_B]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[of_orations_word,_A: of_orations],[cicero_word,_B: cicero]], 
+Pair_List_2 = [[of_orations_word,_A],[cicero_word,_B]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[of_orations_word,_A: of_orations],[cicero_word,_B: cicero]], 
+Pair_List_2 = [[of_orations_word,_A],[cicero_word,_B]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[of_orations_word,_A: of_orations],[cicero_word,_B: cicero]], 
+Pair_List_2 = [[of_orations_word,_A],[tully_word,_B]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[of_orations_word,_A: of_orations],[cicero_word,_B: cicero]], 
+Pair_List_2 = [[of_orations_word,_A],[tully_word,_B]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+*** No
+> transparent_believes_word_object_L(Subject, Time, 1, 2,
+|    			      Pair_List_1,
+|    			      Pair_List_2)?
+
+*** Yes
+Pair_List_1 = [[denounced_word,_A: denounced],
+               [cicero_word,_B: cicero],
+               [catiline_word,_C: catiline]], 
+Pair_List_2 = [[denounced_word,_A],[cicero_word,_B],[catiline_word,_C]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[denounced_word,_A: denounced],
+               [cicero_word,_B: cicero],
+               [catiline_word,_C: catiline]], 
+Pair_List_2 = [[denounced_word,_A],[cicero_word,_B],[catiline_word,_C]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[denounced_word,_A: denounced],
+               [cicero_word,_B: cicero],
+               [catiline_word,_C: catiline]], 
+Pair_List_2 = [[denounced_word,_A],[cicero_word,_B],[catiline_word,_C]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[denounced_word,_A: denounced],
+               [cicero_word,_B: cicero],
+               [catiline_word,_C: catiline]], 
+Pair_List_2 = [[denounced_word,_A],[cicero_word,_B],[catiline_word,_C]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[denounced_word,_A: denounced],
+               [cicero_word,_B: cicero],
+               [catiline_word,_C: catiline]], 
+Pair_List_2 = [[denounced_word,_A],[tully_word,_B],[catiline_word,_C]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+*** No
+> transparent_believes_word_idea_L(Subject, Time, 1, 1,
+|    			    Pair_List_1,
+|    			    Pair_List_2)?
+
+*** Yes
+Pair_List_1 = [[of_orations_word,_A: tom_of_orations_idea],
+               [cicero_word,_B: tom_cicero_idea]], 
+Pair_List_2 = [[of_orations_word,_A],[cicero_word,_B]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[of_orations_word,_A: quine_of_orations_idea],
+               [cicero_word,_B: quine_cicero_idea]], 
+Pair_List_2 = [[of_orations_word,_A],[cicero_word,_B]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[of_orations_word,_A: quine_of_orations_idea],
+               [cicero_word,_B: quine_cicero_idea]], 
+Pair_List_2 = [[of_orations_word,_A],[tully_word,_B]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[of_orations_word,_A: quine_of_orations_idea],
+               [cicero_word,_B: quine_tully_idea]], 
+Pair_List_2 = [[of_orations_word,_A],[cicero_word,_B]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[of_orations_word,_A: quine_of_orations_idea],
+               [cicero_word,_B: quine_tully_idea]], 
+Pair_List_2 = [[of_orations_word,_A],[tully_word,_B]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+*** No
+> transparent_believes_word_idea_L(Subject, Time, 1, 2,
+|    			    Pair_List_1,
+|    			    Pair_List_2)?
+
+*** Yes
+Pair_List_1 = [[denounced_word,_A: tom_denounced_idea],
+               [cicero_word,_B: tom_cicero_idea],
+               [catiline_word,_C: tom_catiline_idea]], 
+Pair_List_2 = [[denounced_word,_A],[cicero_word,_B],[catiline_word,_C]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[denounced_word,_A: tom_denounced_idea],
+               [cicero_word,_B: tom_cicero_idea],
+               [catiline_word,_C: tom_catiline_idea]], 
+Pair_List_2 = [[denounced_word,_A],[cicero_word,_B],[catiline_word,_C]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[denounced_word,_A: quine_denounced_idea],
+               [cicero_word,_B: quine_cicero_idea],
+               [catiline_word,_C: quine_catiline_idea]], 
+Pair_List_2 = [[denounced_word,_A],[cicero_word,_B],[catiline_word,_C]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[denounced_word,_A: quine_denounced_idea],
+               [cicero_word,_B: quine_cicero_idea],
+               [catiline_word,_C: quine_catiline_idea]], 
+Pair_List_2 = [[denounced_word,_A],[tully_word,_B],[catiline_word,_C]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[denounced_word,_A: quine_denounced_idea],
+               [cicero_word,_B: quine_tully_idea],
+               [catiline_word,_C: quine_catiline_idea]], 
+Pair_List_2 = [[denounced_word,_A],[cicero_word,_B],[catiline_word,_C]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+*** No
+> transparent_believes_idea_object_L(Subject, Time, 1, 1,
+|    			      Pair_List_1,
+|    			      Pair_List_2)?
+
+*** Yes
+Pair_List_1 = [[tom_of_orations_idea,_A: of_orations],
+               [tom_cicero_idea,_B: cicero]], 
+Pair_List_2 = [[tom_of_orations_idea,_A],[tom_cicero_idea,_B]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[tom_of_De_Senectute_idea,_A: of_De_Senectute],
+               [tom_tully_idea,_B: cicero]], 
+Pair_List_2 = [[tom_of_De_Senectute_idea,_A],[tom_tully_idea,_B]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[quine_of_orations_idea,_A: of_orations],
+               [quine_cicero_idea,_B: cicero]], 
+Pair_List_2 = [[quine_of_orations_idea,_A],[quine_cicero_idea,_B]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[quine_of_orations_idea,_A: of_orations],
+               [quine_cicero_idea,_B: cicero]], 
+Pair_List_2 = [[quine_of_orations_idea,_A],[quine_tully_idea,_B]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[quine_of_De_Senectute_idea,_A: of_De_Senectute],
+               [quine_tully_idea,_B: cicero]], 
+Pair_List_2 = [[quine_of_De_Senectute_idea,_A],[quine_tully_idea,_B]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+*** No
+> transparent_believes_idea_object_L(Subject, Time, 1, 2,
+|    			      Pair_List_1,
+|    			      Pair_List_2)?
+
+*** Yes
+Pair_List_1 = [[tom_denounced_idea,_A: denounced],
+               [tom_cicero_idea,_B: cicero],
+               [tom_catiline_idea,_C: catiline]], 
+Pair_List_2 = [[tom_denounced_idea,_A],
+               [tom_cicero_idea,_B],
+               [tom_catiline_idea,_C]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[tom_denounced_idea,_A: denounced],
+               [tom_cicero_idea,_B: cicero],
+               [tom_catiline_idea,_C: catiline]], 
+Pair_List_2 = [[tom_denounced_idea,_A],
+               [tom_tully_idea,_B],
+               [tom_catiline_idea,_C]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[tom_denounced_idea,_A: denounced],
+               [tom_tully_idea,_B: cicero],
+               [tom_catiline_idea,_C: catiline]], 
+Pair_List_2 = [[tom_denounced_idea,_A],
+               [tom_cicero_idea,_B],
+               [tom_catiline_idea,_C]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[tom_denounced_idea,_A: denounced],
+               [tom_tully_idea,_B: cicero],
+               [tom_catiline_idea,_C: catiline]], 
+Pair_List_2 = [[tom_denounced_idea,_A],
+               [tom_tully_idea,_B],
+               [tom_catiline_idea,_C]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[quine_denounced_idea,_A: denounced],
+               [quine_cicero_idea,_B: cicero],
+               [quine_catiline_idea,_C: catiline]], 
+Pair_List_2 = [[quine_denounced_idea,_A],
+               [quine_cicero_idea,_B],
+               [quine_catiline_idea,_C]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+*** No
+> transparent_believes_object_L(Subject, Time, 1, 1,
+|    			 Object_List_1,
+|    			 Object_List_2)?
+
+*** No
+> 
+> ;
+> ;
+> ;
+> ;
+> 
+> transparent_believes_object_L(Subject, Time, 1, 2,
+|    			 Object_List_1,
+|    			 Object_List_2)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> 
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.56747 Seconds
+CPU Time 66.6667 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+*** No
+>  
+> 
+> 
+> halt?
+

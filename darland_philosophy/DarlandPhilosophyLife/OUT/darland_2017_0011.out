@@ -1,0 +1,213 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> 
+*** Yes
+> Mon Sep  2 19:34:12 CDT 2019
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+*** No
+> rrrr(dennis, now, 1, Word, Idea)?
+
+*** Yes
+Idea = dennis_human_idea, Word = human_word.
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> rrrr(dennis, now, 0, Word, Idea)?
+
+*** Yes
+Idea = dennis_tully_idea, Word = tully_word.
+--1> 
+
+*** Yes
+Idea = dennis_cicero_idea, Word = cicero_word.
+--1> 
+
+*** Yes
+Idea = dennis_bertie_idea, Word = bertie_word.
+--1> 
+
+*** Yes
+Idea = dennis_ludwig_idea, Word = ludwig_word.
+--1> 
+
+*** Yes
+Idea = dennis_plato_idea, Word = plato_word.
+--1> 
+
+*** Yes
+Idea = dennis_aristotle_idea, Word = cicero_aristotle.
+--1> 
+
+*** Yes
+Idea = dennis_frege_idea, Word = cicero_frege.
+--1> 
+
+*** No
+> ;
+> 
+> ssss(dennis, now, 1, Idea, Object)?
+
+*** Yes
+Idea = dennis_human_idea, Object = human.
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> ssss(dennis, now, 0, Idea, Object)?
+
+*** Yes
+Idea = dennis_tully_idea, Object = cicero.
+--1> 
+
+*** Yes
+Idea = dennis_cicero_idea, Object = cicero.
+--1> 
+
+*** Yes
+Idea = dennis_bertie_idea, Object = bertie.
+--1> 
+
+*** Yes
+Idea = dennis_ludwig_idea, Object = ludwig.
+--1> 
+
+*** Yes
+Idea = dennis_plato_idea, Object = plato.
+--1> 
+
+*** Yes
+Idea = dennis_aristotle_idea, Object = aristotle.
+--1> 
+
+*** Yes
+Idea = dennis_frege_idea, Object = frege.
+--1> 
+
+*** No
+> ;
+> 
+> believes_not_in_ideas(dennis, now, 1, 1, List_Idea_List)?
+
+*** Yes
+List_Idea_List = [martian_idea,cicero_idea].
+--1> 
+
+*** Yes
+List_Idea_List = [martian_idea,tully_idea].
+--1> 
+*** No
+> believes_not_in_words(dennis, now, 1, 1, List_Word_List)?
+
+*** Yes
+List_Word_List = [martian_word,cicero_word].
+--1> 
+
+*** Yes
+List_Word_List = [martian_word,tully_word].
+--1> 
+*** No
+> %believes_not_word_idea_object_L(dennis, now, 1, 1, List_Triple_List)?
+> %;
+> 
+> find_all([dennis, now,  1, 1,
+|    	  [human,
+|    	  [A_Object]]],
+|    	 believes_not_in_words(dennis, now, 1, 1,
+|    				  [human,
+|    				   A_Object]),
+|    	 L)?
+
+*** Yes
+A_Object = @, L = [].
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> find_all([dennis, now,  1, 1,
+|    	  [martian,
+|    	  [A_Object]]],
+|    	 believes_not_in_words(dennis, now, 1, 1,
+|    				  [martian,
+|    				   A_Object]),
+|    	 L)?
+
+*** Yes
+A_Object = @, L = [].
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> 
+> not_pred(find_all([dennis, now,  1, 1,
+|    	  [Relation,
+|    	  [A_Object]]],
+|    	 believes_not_in_words(dennis, now, 1, 1,
+|    				  [human,
+|    				   A_Object]),
+|    	 L))?
+
+*** No
+> not_pred(find_all([dennis, now,  1, 1,
+|    	  [Relation,
+|    	  [A_Object]]],
+|    	 believes_not_in_words(dennis, now, 1, 1,
+|    				  [human,
+|    				   A_Object]),
+|    	 L))?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> halt?
+

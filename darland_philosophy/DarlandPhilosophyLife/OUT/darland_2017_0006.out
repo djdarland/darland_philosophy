@@ -1,0 +1,88 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> 
+*** Yes
+> Mon Sep  2 19:17:14 CDT 2019
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+*** No
+> 
+> 
+> remark(6001, Remark)?
+
+*** Yes
+Remark = 'Test Set 6 - about propositions.'.
+--1> 
+*** No
+> quote_note(br0010, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+*** Yes
+Article_Title = none, 
+Article_Year = none, 
+Author = 'Bertrand Russell', 
+Author_Article = none, 
+Author_Book = 'Bertrand Russell', 
+Book_Title = 'CPBR 07: Theory of Knowledge, The 1913 Manuscript', 
+Book_Year = '1913', 
+Note1 = none, 
+Notes_Article = none, 
+Notes_Book = none, 
+Pages = '109-110', 
+Quotation = 'TBD'.
+
+--1> 
+*** No
+> internal_proposition(0, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+> ;
+> 
+> internal_proposition(1, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+> ;
+> 
+> internal_proposition(2, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+> ;
+> 
+> internal_proposition(3, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+> ;
+> 
+> 
+> external_proposition(0, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+> ;
+> 
+> external_proposition(1, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+> ;
+> 
+> external_proposition(2, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+> ;
+> 
+> external_proposition(3, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+> ;
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.56747 Seconds
+CPU Time 16.6667 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+*** No
+>  
+> 
+> 
+> halt?
+

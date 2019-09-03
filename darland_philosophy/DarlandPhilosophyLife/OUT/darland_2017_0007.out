@@ -1,0 +1,184 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> 
+*** Yes
+> Mon Sep  2 19:17:14 CDT 2019
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+*** No
+> 
+> remark(7001, Remark)?
+
+*** Yes
+Remark = 'Test Set 7 - about truth.'.
+--1> 
+*** No
+> 
+> true_internal_proposition(pos_pos, 0, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol)?
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> find_all([pos_pos, 0, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol], true_internal_proposition(pos_pos, 0, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol), L)?
+> 
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> 
+> 
+> 
+> true_internal_proposition(pos_pos, 1, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol)?
+> ;
+> 
+> true_internal_proposition(pos_pos, 2, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol)?
+> ;
+> true_internal_proposition(pos_pos, 3, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol)?
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> true_internal_proposition(pos_neg, 0, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol)?
+> ;
+> 
+> true_internal_proposition(pos_neg, 0, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol)?
+> ;
+> 
+> true_internal_proposition(pos_neg, 1, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol)?
+> ;
+> 
+> true_internal_proposition(pos_neg, 2, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol)?
+> ;
+> true_internal_proposition(pos_neg, 3, Arity, Internal_Relation_Symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol)?
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> true_external_proposition(pos_pos, 0, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol)?
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> true_external_proposition(pos_pos, 1, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol)?
+> ;
+> 
+> true_external_proposition(pos_pos, 2, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol)?
+> ;
+> 
+> true_external_proposition(pos_pos, 3, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol)?
+> ;
+> 
+> true_external_proposition(pos_neg, 0, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol)?
+> ;
+> ;
+> ;
+> 
+> true_external_proposition(pos_neg, 1, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol)?
+> ;
+> 
+> true_external_proposition(pos_neg, 2, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol)?
+> ;
+> 
+> true_external_proposition(pos_neg, 3, Arity, External_Relation_Symbol, A_External_Symbol, B_External_Symbol, C_External_Symbol)?
+> ;
+> 
+> true_internal_belief(Subject, Time, pos_pos, 0, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> ;
+> ;
+> ;
+> 
+> true_internal_belief(Subject, Time, pos_pos, 1, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_internal_belief(Subject, Time, pos_pos, 2, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_internal_belief(Subject, Time, pos_pos, 3, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_internal_belief(Subject, Time, pos_neg, 0, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_internal_belief(Subject, Time, pos_neg, 1, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_internal_belief(Subject, Time, pos_neg, 2, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_internal_belief(Subject, Time, pos_neg, 3, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> 
+> true_external_belief(Subject, Time, pos_pos, 0, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_external_belief(Subject, Time, pos_pos, 1, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_external_belief(Subject, Time, pos_pos, 2, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_external_belief(Subject, Time, pos_pos, 3, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_external_belief(Subject, Time, pos_neg, 0, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_external_belief(Subject, Time, pos_neg, 1, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_external_belief(Subject, Time, pos_neg, 2, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> true_external_belief(Subject, Time, pos_neg, 3, Arity, Relation, A_Object, B_Object, C_Object)?
+> ;
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.56747 Seconds
+CPU Time 33.3333 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+*** No
+>  
+> 
+> 
+> halt?
+
