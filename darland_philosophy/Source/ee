@@ -31,7 +31,7 @@ while [ $select -ne 999 ]
 do 
 case $select in
 1)   wild_life_X;;
-111) ./da_lf.sh;;
+111) ./ee1;;
 120) ./tsda_lf.sh 1;;
 121) ./da_fa_lf.sh 1;;
 122) ./da_ru_lf.sh 1;;

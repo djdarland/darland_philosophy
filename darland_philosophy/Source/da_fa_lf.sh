@@ -24,7 +24,8 @@ echo "Philosophy Facts Files"
 echo "-----------"
 echo "1 common_facts_2017_00001.lf samples for darland philosophy - On Understanding"
 echo "2 common_facts_2017_00002.lf data comparing philosophers terminology"
-echo "3 common_facts_2017_00003.lf samples for darland philosophy - On Belief"
+echo "3 common_facts_2017_00003.lf data for Atomic Belief"
+echo "4 common_facts_2017_00004.lf data foe Molecular Belief"
 
 echo "-----------"
 if test -f da_fa.sh
@@ -39,6 +40,7 @@ case $select in
 1) $EDITOR ../DarlandPhilosophyLife/FACTS/common_facts_2017_0001.lf;;
 2) $EDITOR ../DarlandPhilosophyLife/FACTS/common_facts_2017_0002.lf;;
 3) $EDITOR ../DarlandPhilosophyLife/FACTS/common_facts_2017_0003.lf;;
+4) $EDITOR ../DarlandPhilosophyLife/FACTS/common_facts_2017_0004.lf;;
 666) $EDITOR da_fa_lf.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

@@ -138,3 +138,19 @@ arity_idea(tom_denounced_idea, 2).
 arity_idea(quine_denounced_idea, 2).
 
 
+rrrr(dennis, now, 1, human_word, dennis_human_idea).
+ssss(dennis, now, 1, dennis_human_idea, human).
+rrrr(dennis, now, 0, tully_word, dennis_tully_idea).
+ssss(dennis, now, 0, dennis_tully_idea, cicero).
+rrrr(dennis, now, 0, cicero_word, dennis_cicero_idea).
+ssss(dennis, now, 0, dennis_cicero_idea, cicero).
+rrrr(dennis, now, 0, bertie_word, dennis_bertie_idea).
+ssss(dennis, now, 0, dennis_bertie_idea, bertie).
+rrrr(dennis, now, 0, ludwig_word, dennis_ludwig_idea).
+ssss(dennis, now, 0, dennis_ludwig_idea, ludwig).
+rrrr(dennis, now, 0, plato_word, dennis_plato_idea).
+ssss(dennis, now, 0, dennis_plato_idea, plato).
+rrrr(dennis, now, 0, cicero_aristotle, dennis_aristotle_idea).
+ssss(dennis, now, 0, dennis_aristotle_idea, aristotle).
+rrrr(dennis, now, 0, cicero_frege, dennis_frege_idea).
+ssss(dennis, now, 0, dennis_frege_idea, frege).

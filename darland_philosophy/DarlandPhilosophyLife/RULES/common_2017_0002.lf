@@ -19,7 +19,6 @@
 %% This is a total rewrite of what I started about 10 years ago.
 %% 
 %%
-%% I have made the propositional attitude relatons support an arity up to 26.
 %%
 %% Arity & Type are not much used yet, but they may be handy in the future.
 %%
