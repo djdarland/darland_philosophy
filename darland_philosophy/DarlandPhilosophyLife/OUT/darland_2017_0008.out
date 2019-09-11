@@ -14,7 +14,7 @@
 *** Yes
 > 
 *** Yes
-> Mon Sep  2 19:17:14 CDT 2019
+> Tue Sep 10 18:45:42 CDT 2019
 > write_time(Ignore)?
 0
 *** Yes
@@ -124,8 +124,8 @@ Quotation = 'Roughly speaking, to say of two things that they are identical is n
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.56747 Seconds
-CPU Time 16.6667 Milliseconds
+Clock Time 1.56816 Seconds
+CPU Time 33.3333 Milliseconds
 
 *** Yes
 Ignore = @.

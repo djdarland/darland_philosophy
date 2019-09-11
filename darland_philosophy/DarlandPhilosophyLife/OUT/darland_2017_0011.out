@@ -24,7 +24,7 @@
 *** Yes
 > 
 *** Yes
-> Mon Sep  2 19:34:12 CDT 2019
+> Tue Sep 10 18:45:42 CDT 2019
 > write_time(Ignore)?
 0
 *** Yes
@@ -190,8 +190,6 @@ A_Object = @, L = [].
 |    				  [human,
 |    				   A_Object]),
 |    	 L))?
-
-*** No
 > not_pred(find_all([dennis, now,  1, 1,
 |    	  [Relation,
 |    	  [A_Object]]],
@@ -199,8 +197,6 @@ A_Object = @, L = [].
 |    				  [human,
 |    				   A_Object]),
 |    	 L))?
-
-*** No
 > ;
 > ;
 > ;

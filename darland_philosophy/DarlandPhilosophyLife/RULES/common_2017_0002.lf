@@ -341,13 +341,13 @@ believes_idea_object_A(Subject, Time, Type, Arity,
 % There might not even be corresponding words.
 
 
-believes_object_L(Subject, Time, Type, Arity, Pair_List) :-
+believes_object_L(Subject, Time, Type, Arity, Object_List) :-
     %% list of idea, idea object pairs
     believes_in_ideas(Subject, Time, Type, Arity, Idea_List),
     match_O_list_L(Subject, Time, Type, Arity,
 			Idea_List,
 			[],
-			Pair_List).
+			Object_List).
 
 match_O_list_L(Subject, Time, Type, Arity, 
 		    [],
@@ -397,3 +397,272 @@ believes_object_A(Subject, Time, Type, Arity,
 			  [B_Idea, B_Object]]).
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now believes not cases.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+believes_not_word_idea_object_L(Subject, Time, Type, Arity, Triple_List) :-
+    %% list of word, idea object triples
+    believes_not_in_words(Subject, Time, Type, Arity, Word_List),
+    believes_not_in_ideas(Subject, Time, Type, Arity, Idea_List),
+    match_triple_list_L(Subject, Time, Type, Arity,
+			Word_List,
+			Idea_List,
+			[],
+			Triple_List).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_not_word_idea_object_A(Subject, Time, Type, Arity,
+			    [[Relation_Word, Relation_Idea, Relation],
+			    [A_Word, A_Idea, A_Object]]) :-
+    %% list of word, idea object triples
+    believes_in_words(Subject, Time, Type, Arity,
+		      [Relation_Word, A_Word]),
+    Type > 0,
+    Arity = 1,
+    believes_not_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea]),
+    understands_words_ideas_objects_A(Subject, Time, Type, Arity,
+				      [[Relation_Word, Relation_Idea, Relation],
+				      [A_Word, A_Idea, A_Object]]).
+    
+
+
+believes_not_word_idea_object_A(Subject, Time, Type, Arity,
+			    [[Relation_Word, Relation_Idea, Relation],
+			    [A_Word, A_Idea, A_Object],
+			    [B_Word, B_Idea, B_Object]]) :-
+    %% list of word, idea object triples
+    believes_not_in_words(Subject, Time, Type, Arity,
+		      [Relation_Word, A_Word, B_Word]),
+    Type > 0,
+    Arity = 2,
+    believes_not_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea, B_Idea]),
+    understands_words_ideas_objects_A(Subject, Time, Type, Arity,
+			  [[Relation_Word, Relation_Idea, Relation],
+			  [A_Word, A_Idea, A_Object],
+			  [B_Word, B_Idea, B_Object]]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if a person belives in words about objects then:
+% they must have the correct relation among the words
+% they must have the correct relation among their ideas
+% and understand the relation between the words, ideas and objects.
+% NOTE: The only way to connect the words to the objects is via ideas.
+% This means the rrss relations hold.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+believes_not_word_object_L(Subject, Time, Type, Arity, Pair_List) :-
+    %% list of word, idea object pairs
+    believes_not_in_words(Subject, Time, Type, Arity, Word_List),
+    believes_not_in_ideas(Subject, Time, Type, Arity, Idea_List),
+    match_pair_list_L(Subject, Time, Type, Arity,
+			Word_List,
+			Idea_List,
+			[],
+			Pair_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+believes_not_word_object_A(Subject, Time, Type, Arity,
+			    [[Relation_Word, Relation],
+			    [A_Word, A_Object]]) :-
+    %% list of word, idea object triples
+    believes_not_in_words(Subject, Time, Type, Arity,
+		      [Relation_Word, A_Word]),
+    Type > 0,
+    Arity = 1,
+
+    understands_words_objects_A(Subject, Time, Type, Arity,
+			  [[Relation_Word, Relation],
+			  [A_Word, A_Object]]).
+
+
+believes_not_word_object_A(Subject, Time, Type, Arity,
+			    [[Relation_Word, Relation],
+			    [A_Word, A_Object],
+			    [B_Word, B_Object]]) :-
+    %% list of word, idea object triples
+    believes_not_in_words(Subject, Time, Type, Arity,
+		      [Relation_Word, A_Word, B_Word]),
+    Type > 0,
+    Arity = 2,
+    understands_words_objects_A(Subject, Time, Type, Arity,
+			  [[Relation_Word, Relation],
+			  [A_Word, A_Object],
+			  [B_Word, B_Object]]).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if a person believes in words and ideas then:
+% they must have the correct relation among the words
+% they must have the correct relation among their ideas
+% and understand the relation between the words and ideas.
+%
+% This amounts to the correct rrrr relations holding.
+% There might not even be corresponding objects.
+
+
+
+believes_not_word_idea_L(Subject, Time, Type, Arity, Pair_List) :-
+    %% list of word, idea object pairs
+    believes_not_in_words(Subject, Time, Type, Arity, Word_List),
+    match_WI_pair_list_L(Subject, Time, Type, Arity,
+			Word_List,
+			[],
+			Pair_List).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_not_word_idea_A(Subject, Time, Type, Arity,
+			    [[Relation_Word, Relation_Idea],
+			    [A_Word, A_Idea]]) :-
+    %% list of word, idea object triples
+    believes_not_in_words(Subject, Time, Type, Arity,
+		      [Relation_Word, A_Word]),
+    Type > 0,
+    Arity = 1,
+    believes_not_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea]),
+    understands_words_ideas_A(Subject, Time, Type, Arity,
+			  [[Relation_Word, Relation_Idea],
+			  [A_Word, A_Idea]]).
+
+
+believes_not_word_idea_A(Subject, Time, Type, Arity,
+			    [[Relation_Word, Relation_Idea],
+			    [A_Word, A_Idea],
+			    [B_Word, B_Idea]]) :-
+    %% list of word, idea object triples
+    believes_in_words(Subject, Time, Type, Arity,
+		      [Relation_Word, A_Word, B_Word]),
+    Type > 0,
+    Arity = 2,
+    believes_not_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea, B_Idea]),
+    understands_words_ideas_A(Subject, Time, Type, Arity,
+			  [[Relation_Word, Relation_Idea],
+			  [A_Word, A_Idea],
+			  [B_Word, B_Idea]]).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if a person believes in ideas about objects then:
+% they must have the correct relation among their ideas
+% and understand the relation between the ideas and objects.
+%
+% This amounts to the correct ssss relations holding.
+% There might not even be corresponding words.
+
+believes_not_idea_object_L(Subject, Time, Type, Arity, Pair_List) :-
+    %% list of idea, idea object pairs
+    believes_not_in_ideas(Subject, Time, Type, Arity, Idea_List),
+    match_IO_pair_list_L(Subject, Time, Type, Arity,
+			Idea_List,
+			[],
+			Pair_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_not_idea_object_A(Subject, Time, Type, Arity,
+			    [[Relation_Idea, Relation],
+			    [A_Idea, A_Object]]) :-
+    believes_not_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea]),
+    Type > 0,
+    Arity = 1,
+    understands_ideas_objects_A(Subject, Time, Type, Arity,
+			  [[Relation_Idea, Relation],
+			  [A_Idea, A_Object]]).
+
+
+believes_not_idea_object_A(Subject, Time, Type, Arity,
+			    [[Relation_Idea, Relation],
+			    [A_Idea, A_Object],
+			    [B_Idea, B_Object]]) :-
+    %% list of word, idea object triples
+    believes_not_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea, B_Idea]),
+    Type > 0,
+    Arity = 2,
+    understands_ideas_objects_A(Subject, Time, Type, Arity,
+			  [[Relation_Idea, Relation],
+			  [A_Idea, A_Object],
+			  [B_Idea, B_Object]]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% if a person believes about objects then:
+% they must have the correct relation among their ideas
+% and understand the relation between the ideas and objects.
+%
+% This amounts to the correct ssss relations holding.
+% There might not even be corresponding words.
+
+
+believes_not_object_L(Subject, Time, Type, Arity, Object_List) :-
+    %% list of idea, idea object pairs
+    believes_not_in_ideas(Subject, Time, Type, Arity, Idea_List),
+    match_O_list_L(Subject, Time, Type, Arity,
+			Idea_List,
+			[],
+			Object_List).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+believes_not_object_A(Subject, Time, Type, Arity,
+			    [[Relation],
+			    [A_Object]]) :-
+    believes_not_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea]),
+    Type > 0,
+    Arity = 1,
+    understands_ideas_objects_A(Subject, Time, Type, Arity,
+			  [[Relation_Idea, Relation],
+			  [A_Idea, A_Object]]).
+
+
+believes_not_object_A(Subject, Time, Type, Arity,
+			    [[Relation],
+			    [A_Object],
+			    [B_Object]]) :-
+    %% list of word, idea object triples
+    believes_not_in_ideas(Subject, Time, Type, Arity,
+		      [Relation_Idea, A_Idea, B_Idea]),
+    Type > 0,
+    Arity = 2,
+    understands_ideas_objects_A(Subject, Time, Type, Arity,
+			  [[Relation_Idea, Relation],
+			  [A_Idea, A_Object],
+			  [B_Idea, B_Object]]).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Now Contradicting beliefs!!
+
+contradicts_word_idea_object_L(Subject, Time, Type, Arity, Triple_List) :-
+    believes_word_idea_object_L(Subject, Time, Type, Arity, Triple_List),
+    believes_not_word_idea_object_L(Subject, Time, Type, Arity, Triple_List).
+    
+contradicts_word_object_L(Subject, Time, Type, Arity, Pair_List) :-
+    believes_word_object_L(Subject, Time, Type, Arity, Pair_List),
+    believes_not_word_object_L(Subject, Time, Type, Arity, Pair_List).
+
+contradicts_word_idea_L(Subject, Time, Type, Arity, Pair_List) :-
+    believes_word_idea_L(Subject, Time, Type, Arity, Pair_List),
+    believes_not_word_idea_L(Subject, Time, Type, Arity, Pair_List).
+
+contradicts_idea_object_L(Subject, Time, Type, Arity, Pair_List) :-
+    believes_idea_object_L(Subject, Time, Type, Arity, Pair_List),
+    believes_not_idea_object_L(Subject, Time, Type, Arity, Pair_List).
+
+contradicts_object_L(Subject, Time, Type, Arity, Object_List) :-
+    believes_object_L(Subject, Time, Type, Arity, Object_List),
+    believes_not_object_L(Subject, Time, Type, Arity, Object_List).

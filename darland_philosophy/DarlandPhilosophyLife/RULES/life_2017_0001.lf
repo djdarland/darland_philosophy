@@ -30,8 +30,6 @@
 
 different(A, B) :- A :\== B.
 
-not_pred(X) :- X, !, fail.
-
 %% type_p1(Type, Type_p1) :- Type_p1 = Type + 1.
 %% type_p2(Type, Type_p2) :- Type_p2 = Type + 2.
 %% type_p3(Type, Type_p2) :- Type_p2 = Type + 3.

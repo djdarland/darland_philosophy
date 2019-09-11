@@ -20,7 +20,7 @@
 *** Yes
 > 
 *** Yes
-> Mon Sep  2 19:17:14 CDT 2019
+> Tue Sep 10 18:45:42 CDT 2019
 > write_time(Ignore)?
 0
 *** Yes
@@ -470,37 +470,13 @@ Time = now.
 --1> 
 
 *** Yes
-Pair_List_1 = [[tom_denounced_idea,_A: denounced],
-               [tom_cicero_idea,_B: cicero],
-               [tom_catiline_idea,_C: catiline]], 
-Pair_List_2 = [[tom_denounced_idea,_A],
-               [tom_tully_idea,_B],
-               [tom_catiline_idea,_C]], 
-Subject = tom, 
-Time = now.
-
---1> 
-
-*** Yes
-Pair_List_1 = [[tom_denounced_idea,_A: denounced],
-               [tom_tully_idea,_B: cicero],
-               [tom_catiline_idea,_C: catiline]], 
-Pair_List_2 = [[tom_denounced_idea,_A],
-               [tom_cicero_idea,_B],
-               [tom_catiline_idea,_C]], 
-Subject = tom, 
-Time = now.
-
---1> 
-
-*** Yes
-Pair_List_1 = [[tom_denounced_idea,_A: denounced],
-               [tom_tully_idea,_B: cicero],
-               [tom_catiline_idea,_C: catiline]], 
-Pair_List_2 = [[tom_denounced_idea,_A],
-               [tom_tully_idea,_B],
-               [tom_catiline_idea,_C]], 
-Subject = tom, 
+Pair_List_1 = [[quine_denounced_idea,_A: denounced],
+               [quine_cicero_idea,_B: cicero],
+               [quine_catiline_idea,_C: catiline]], 
+Pair_List_2 = [[quine_denounced_idea,_A],
+               [quine_cicero_idea,_B],
+               [quine_catiline_idea,_C]], 
+Subject = quine, 
 Time = now.
 
 --1> 
@@ -510,7 +486,31 @@ Pair_List_1 = [[quine_denounced_idea,_A: denounced],
                [quine_cicero_idea,_B: cicero],
                [quine_catiline_idea,_C: catiline]], 
 Pair_List_2 = [[quine_denounced_idea,_A],
+               [quine_tully_idea,_B],
+               [quine_catiline_idea,_C]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[quine_denounced_idea,_A: denounced],
+               [quine_tully_idea,_B: cicero],
+               [quine_catiline_idea,_C: catiline]], 
+Pair_List_2 = [[quine_denounced_idea,_A],
                [quine_cicero_idea,_B],
+               [quine_catiline_idea,_C]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List_1 = [[quine_denounced_idea,_A: denounced],
+               [quine_tully_idea,_B: cicero],
+               [quine_catiline_idea,_C: catiline]], 
+Pair_List_2 = [[quine_denounced_idea,_A],
+               [quine_tully_idea,_B],
                [quine_catiline_idea,_C]], 
 Subject = quine, 
 Time = now.
@@ -543,7 +543,7 @@ Time = now.
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.56747 Seconds
+Clock Time 1.56816 Seconds
 CPU Time 66.6667 Milliseconds
 
 *** Yes

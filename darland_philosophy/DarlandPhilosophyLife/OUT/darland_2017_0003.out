@@ -16,7 +16,7 @@
 *** Yes
 > 
 *** Yes
-> Mon Sep  2 19:17:14 CDT 2019
+> Tue Sep 10 18:45:41 CDT 2019
 > write_time(Ignore)?
 0
 *** Yes
@@ -219,15 +219,6 @@ Time = now.
 --1> 
 
 *** Yes
-A_Idea = tom_tully_idea, 
-B_Idea = tom_catiline_idea, 
-Relation_Idea = tom_denounced_idea, 
-Subject = tom, 
-Time = now.
-
---1> 
-
-*** Yes
 A_Idea = quine_cicero_idea, 
 B_Idea = quine_catiline_idea, 
 Relation_Idea = quine_denounced_idea, 
@@ -246,6 +237,7 @@ Time = now.
 --1> 
 
 *** No
+> ;
 > ;
 > ;
 > ;
@@ -1485,18 +1477,6 @@ Time = now.
 --1> 
 
 *** Yes
-A_Idea = tom_tully_idea, 
-A_Object = cicero, 
-B_Idea = tom_catiline_idea, 
-B_Object = catiline, 
-Relation = denounced, 
-Relation_Idea = tom_denounced_idea, 
-Subject = tom, 
-Time = now.
-
---1> 
-
-*** Yes
 A_Idea = quine_cicero_idea, 
 A_Object = cicero, 
 B_Idea = quine_catiline_idea, 
@@ -1521,6 +1501,7 @@ Time = now.
 --1> 
 
 *** No
+> ;
 > ;
 > ;
 > ;
@@ -1604,15 +1585,6 @@ Time = now.
 A_Object = cicero, 
 B_Object = catiline, 
 Relation = denounced, 
-Subject = tom, 
-Time = now.
-
---1> 
-
-*** Yes
-A_Object = cicero, 
-B_Object = catiline, 
-Relation = denounced, 
 Subject = quine, 
 Time = now.
 
@@ -1628,6 +1600,7 @@ Time = now.
 --1> 
 
 *** No
+> ;
 > ;
 > ;
 > ;
@@ -1746,15 +1719,6 @@ Time = now.
 --1> 
 
 *** Yes
-Pair_List = [[tom_denounced_idea,denounced],
-             [tom_tully_idea,cicero],
-             [tom_catiline_idea,catiline]], 
-Subject = tom, 
-Time = now.
-
---1> 
-
-*** Yes
 Pair_List = [[quine_denounced_idea,denounced],
              [quine_cicero_idea,cicero],
              [quine_catiline_idea,catiline]], 
@@ -1773,6 +1737,7 @@ Time = now.
 --1> 
 
 *** No
+> ;
 > ;
 > ;
 > ;
@@ -1862,10 +1827,6 @@ List = [[denounced],[cicero],[catiline]], Subject = tom, Time = now.
 --1> 
 
 *** Yes
-List = [[denounced],[cicero],[catiline]], Subject = tom, Time = now.
---1> 
-
-*** Yes
 List = [[denounced],[cicero],[catiline]], Subject = quine, Time = now.
 --1> 
 
@@ -1900,12 +1861,13 @@ List = [[denounced],[cicero],[catiline]], Subject = quine, Time = now.
 > ;
 > ;
 > ;
+> ;
 > 
 > 
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.56747 Seconds
+Clock Time 1.56816 Seconds
 CPU Time 50 Milliseconds
 
 *** Yes

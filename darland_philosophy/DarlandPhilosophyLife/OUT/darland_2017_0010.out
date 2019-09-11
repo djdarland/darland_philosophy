@@ -14,7 +14,7 @@
 *** Yes
 > 
 *** Yes
-> Mon Sep  2 19:17:14 CDT 2019
+> Tue Sep 10 18:45:42 CDT 2019
 > write_time(Ignore)?
 0
 *** Yes
@@ -988,7 +988,7 @@ Philosopher_2 = @.
 *** No
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.56747 Seconds
+Clock Time 1.56816 Seconds
 CPU Time 83.3333 Milliseconds
 
 *** Yes

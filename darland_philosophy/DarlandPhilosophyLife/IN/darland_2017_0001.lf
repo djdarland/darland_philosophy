@@ -160,15 +160,24 @@ rrss(quine, now, 1, of_De_Senectute_word, of_De_Senectute)?
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+believes_in_ideas(tom, now, 1, 2, [tom_denounced_idea,
+				    tom_cicero_idea,
+				    tom_catiline_idea])?
+;
 
-believes_in_words(tom, now, 1, 2, [denounced_word,
-				    cicero_word,
+believes_not_in_words(tom, now, 1, 2, [denounced_word,
+				    tully_word,
 				    catiline_word])?
 ;
 
 believes_in_ideas(tom, now, 1, 2, [tom_denounced_idea,
 				    tom_cicero_idea,
+				    tom_catiline_idea])?
+;
+
+believes_not_in_ideas(tom, now, 1, 2, [tom_denounced_idea,
+				    tom_tully_idea,
 				    tom_catiline_idea])?
 ;
 
@@ -187,15 +196,17 @@ believes_in_words(tom, now, 1, 1, [of_De_Senectute_word, tom_tully_word])?
 believes_in_ideas(quine, now, 1, 1, [quine_of_orations_idea,
 				     quine_cicero_idea])?
 ;
+
 believes_in_ideas(quine, now, 1, 1, [quine_of_De_Senectute_idea,
 				     quine_tully_idea])?
+	 
 ;
 
 believes_in_words(quine, now, 1, 1, [of_orations_word,
 				     cicero_word])?
 ;
 
-believes_in_words(tom, now, 1, 1, [of_De_Senectute_word,
+believes_in_words(quine, now, 1, 1, [of_De_Senectute_word,
 				   tully_word])?
 
 believes_in_ideas(quine, now, 1, 1, [quine_of_orations_idea,
@@ -215,16 +226,12 @@ believes_in_words(quine, now, 1, 1, [of_De_Senectute_word,
 
 ;
 
-believes_in_words(quine, now, 1, 1, [of_orations_word,
-				     tully_word])?
+believes_in_ideas(quine, now, 1, 1, [quine_of_orations_idea,
+				     quine_tully_idea])?
 ;
 
-believes_in_words(tom, now, 1, 1, [of_De_Senectute_word,
-				   cicero_word])?
-;
-
-believes_in_words(tom, now, 1, 1, [of_orations_word,
-				     tully_word])?
+believes_in_words(quine, now, 1, 1, [quine_of_De_Senectute_idea,
+				   quine_cicero_idea])?
 ;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
@@ -276,13 +283,16 @@ believes_object_L(tom, now, 1, 2, [[denounced],
 		 )?
 ;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Special Tully cases
+
+
 believes_word_idea_object_L(tom, now, 1, 2, [[denounced_word,
 					      tom_denounced_idea,
 					      denounced],
 					     [tully_word,
 					      tom_tully_idea,
-					      cicero], % there is no distinct tully
+					      cicero],
 					     [catiline_word,
 					      tom_catiline_idea,
 					      catiline]]
@@ -292,7 +302,7 @@ believes_word_idea_object_L(tom, now, 1, 2, [[denounced_word,
 believes_word_object_L(tom, now, 1, 2, [[denounced_word,
 					 denounced],
 					[tully_word,
-					 cicero], % there is no distinct tully
+					 cicero],
 					[catiline_word,
 					 catiline]]
 		      )?
@@ -310,17 +320,191 @@ believes_word_idea_L(tom, now, 1, 2, [[denounced_word,
 believes_idea_object_L(tom, now, 1, 2, [[tom_denounced_idea,
 					 denounced],
 					[tom_tully_idea,
-					 cicero], % there is no distinct tully
+					 cicero],
 					[tom_catiline_idea,
 					 catiline]]
 		      )?
 ;
 
 believes_object_L(tom, now, 1, 2, [[denounced],
+				   [cicero], % no separate tully
+				   [catiline]]
+		 )?
+;
+
+
+%%% Now negative beleifs -- Still tom
+
+
+believes_not_word_idea_object_L(tom, now, 1, 2, [[denounced_word,
+					      tom_denounced_idea,
+					      denounced],
+					     [cicero_word,
+					      tom_cicero_idea,
+					      cicero],
+					     [catiline_word,
+					      tom_catiline_idea,
+					      catiline]]
+			   )?
+;
+
+believes_not_word_object_L(tom, now, 1, 2, [[denounced_word,
+					 denounced],
+					[cicero_word,
+					 cicero],
+					[catiline_word,
+					 catiline]]
+		      )?
+;
+
+believes_not_word_idea_L(tom, now, 1, 2, [[denounced_word,
+				       tom_denounced_idea],
+				      [cicero_word,
+				       tom_cicero_idea],
+				      [catiline_word,
+				       tom_catiline_idea]]
+		    )?
+;
+
+believes_not_idea_object_L(tom, now, 1, 2, [[tom_denounced_idea,
+					 denounced],
+					[tom_cicero_idea,
+					 cicero],
+					[tom_catiline_idea,
+					 catiline]]
+		      )?
+;
+
+believes_not_object_L(tom, now, 1, 2, [[denounced],
 				   [cicero],
 				   [catiline]]
 		 )?
 ;
+
+
+%% Special Tully cases
+
+
+believes_not_word_idea_object_L(tom, now, 1, 2, [[denounced_word,
+					      tom_denounced_idea,
+					      denounced],
+					     [tully_word,
+					      tom_tully_idea,
+					      cicero],
+					     [catiline_word,
+					      tom_catiline_idea,
+					      catiline]]
+			   )?
+;
+
+believes_not_word_object_L(tom, now, 1, 2, [[denounced_word,
+					 denounced],
+					[tully_word,
+					 cicero],
+					[catiline_word,
+					 catiline]]
+		      )?
+;
+
+believes_not_word_idea_L(tom, now, 1, 2, [[denounced_word,
+				       tom_denounced_idea],
+				      [tully_word,
+				       tom_tully_idea],
+				      [catiline_word,
+				       tom_catiline_idea]]
+		    )?
+;
+
+believes_not_idea_object_L(tom, now, 1, 2, [[tom_denounced_idea,
+					 denounced],
+					[tom_tully_idea,
+					 cicero],
+					[tom_catiline_idea,
+					 catiline]]
+		      )?
+;
+
+believes_not_object_L(tom, now, 1, 2, [[denounced],
+				   [cicero], % no separate tully
+				   [catiline]]
+		 )?
+;
+
+
+
+
+
+
+%% End special tom cases
+
+
+believes_not_word_idea_object_L(tom, now, 1, 2, [[denounced_word,
+					      tom_denounced_idea,
+					      denounced],
+					     [tully_word,
+					      tom_tully_idea,
+					      cicero],  % bcause tully=cicero
+					     [catiline_word,
+					      tom_catiline_idea,
+					      catiline]]
+			   )?
+;
+
+believes_not_word_object_L(tom, now, 1, 2, [[denounced_word,
+					 denounced],
+					[tully_word,
+					 cicero],  % because tully=cicero
+					[catiline_word,
+					 catiline]]
+		      )?
+;
+
+believes_not_word_idea_L(tom, now, 1, 2, [[denounced_word,
+				       tom_denounced_idea],
+				      [tully_word,
+				       tom_tully_idea],
+				      [catiline_word,
+				       tom_catiline_idea]]
+		    )?
+;
+
+believes_not_idea_object_L(tom, now, 1, 2, [[tom_denounced_idea,
+					 denounced],
+					[tom_tully_idea,
+					 cicerio],  % because tully=cicerro
+					[tom_catiline_idea,
+					 catiline]]
+		      )?
+;
+
+believes_not_object_L(tom, now, 1, 2, [[denounced],
+				   [cicero],  % no separate tully
+				   [catiline]]
+		 )?
+;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% begin check for contradictory beliefs cases
+
+contradicts_word_idea_object_L(tom, now, 1, 2, Triple_List)?
+;
+    
+contradicts_word_object_L(tom, now, 1, 2, Pair_List)?
+;
+
+contradicts_word_idea_L(tom, now, 1, 2, Pair_List)?
+;
+
+contradicts_idea_object_L(tom, now, 1, 2, Pair_List)?
+;
+
+contradicts_object_L(tom, now, 1, 2, Object_List)?
+;
+
+
+
+%% end conjunction cases
 
 %%%%%%%%%%%%%%%%%%%%%%%%  Next Quine.
 

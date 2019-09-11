@@ -9,7 +9,7 @@ echo "under certain conditions; type 501 for details."
 echo "-----------"
 
 echo "0 Edit append.lf"
-echo "1 Edit darland_2017_0001.lf append"
+echo "1 Edit darland_2017_0001.lf Quine example"
 echo "2 Edit darland_2017_0002.lf understanding"
 echo "3 Edit darland_2017_0003.lf atomic belief"
 echo "4 Edit darland_2017_0004.lf atomic belief search"

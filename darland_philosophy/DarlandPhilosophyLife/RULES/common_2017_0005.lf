@@ -56,33 +56,36 @@
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% believes_nor_word_idea_L(Subject, Time, Type, Arity,
-%% 				Word_List,
-%% 				Idea_List) :-
-%%     %% list of list of word, idea object triple
-%%     all_nor_WIO_L(Subject, Time, Type, Arity,
-%% 				[],
-%% 				[],
-%% 				[],
-%% 				List_Word_List,
-%% 				List_Idea_list).
+believes_nor_word_idea_object_L(Subject, Time, Type, Arity,
+				Word_List,
+				Idea_List,
+				Object_List) :-
+    %% list of list of word, object pairs
+    all_nor_WIO_L(Subject, Time, Type, Arity,
+				[],
+				[],
+				[],
+				List_Word_List,
+				List_Idea_list,
+				List_Object_list).
 
-%% all_nor_WIO_L(Subject, Time, Type, Arity,
-%% 				[List_Word_List_In_Head | List_Word_List_In_Tail],
-%% 				[List_Idea_List_In_Head | List_Idea_List_In],
-%% 				[List_Object_List_In_Head | List_Object_List_In],
-%% 				Word_List,
-%% 				Idea_list) :-
+all_nor_WIO_L(Subject, Time, Type, Arity,
+				[List_Word_List_In_Head | List_Word_List_In_Tail],
+				[List_Idea_List_In_Head | List_Idea_List_In],
+				[List_Object_List_In_Head | List_Object_List_In],
+				Word_List,
+				Idea_list,
+				Object_list) :-
     
-%%     believes_not_in_words(Subject, Time, Type, Arity,
-%% 			  List_Word_List_Head),
-%%     believes_not_in_ideas(Subject, Time, Type, Arity,
-%% 			  List_Idea_List_Head),
-%% %    understands_words_ideas_objects_L(Subject, Time, Type, Arity,
-%% %			    TripleList),
-%%     cond(length(List_Word_List_Tail) > 0,
-%% 	 (cond(length(List_Idea_List_Tail) =:= length(List_Word_List_Tail),
-%% 	       all_nor_WIO_L(Subject, Time, Type, Arity, List_Word_List_Tail, List_Idea_List_Tail)))).
+    believes_not_in_words(Subject, Time, Type, Arity,
+			  List_Word_List_Head),
+    believes_not_in_ideas(Subject, Time, Type, Arity,
+			  List_Idea_List_Head),
+%    understands_words_ideas_objects_L(Subject, Time, Type, Arity,
+%			    TripleList),
+    cond(length(List_Word_List_Tail) > 0,
+	 (cond(length(List_Idea_List_Tail) =:= length(List_Word_List_Tail),
+	       all_nor_WIO_L(Subject, Time, Type, Arity, List_Word_List_Tail, List_Idea_List_Tail)))).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
