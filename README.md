@@ -14,7 +14,7 @@ I wanted it as a starting point, however.
 --------------------------------------------------------------------
 
 I am having some trouble with predicates with varying number of arguments.
-(It's just complicated & tricky.)
+(It's just complicated & tricky.) - NOW Solved
 
 Anyway I have decided on the following.
 Create 2 sets to repesent my ideas.
@@ -32,4 +32,11 @@ It will help with planning - It is conceptually simpler.
 
 The 2nd I will do later - it is more compact & eligant.
 It will be able to handle any number of arguments.
+
+All above done.
+
+I've worked out Quine's case from pp. 145-146 of Word & Object.
+And more.
+
+Everything is still very early on.
 
