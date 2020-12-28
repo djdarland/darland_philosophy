@@ -1,0 +1,88 @@
+echo "-----------"
+echo "Darland Philosophy Query Edits"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2019  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+
+echo "0 Edit append.lf"
+echo "55 Edit darland_0000.lf append"
+echo "1 Edit darland_0001.lf Quine example"
+echo "2 Edit darland_0002.lf understanding"
+echo "3 Edit darland_0003.lf atomic belief"
+echo "4 Edit darland_0004.lf atomic belief search"
+echo "5 Edit darland_0005.lf atomic opacity & transparency"
+echo "6 Edit darland_0006.lf propositions - NOT REVISED"
+echo "7 Edit darland_0007.lf truth - NOT REVISED"
+echo "8 Edit darland_0008.lf opacity - NOT REVISED"
+echo "9 Edit darland_0009.lf equivalence, synonymy - NOT REVISED"
+echo "10 Edit darland_0010.lf Philosophers reminology - NOT REVISED"
+echo "11 Edit darland_0011.lf Molecular Belief"
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f eee1
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+while [ $select -ne 999 ]
+do 
+case $select in
+0) $EDITOR ../DarlandPhilosophyLife/IN2/append.lf;;
+1) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0001.lf;;
+2) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0002.lf;;
+3) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0003.lf;;
+4) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0004.lf;;
+5) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0005.lf;;
+6) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0006.lf;;
+7) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0007.lf;;
+8) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0008.lf;;
+9) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0009.lf;;
+10) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0010.lf;;
+11) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0011.lf;;
+55) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0000.lf;;
+500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
+501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
+666) $EDITOR eee1 ;;
+777) $EDITOR NOTES_DJD.txt & ;;
+esac
+echo "-----------"
+echo "Darland Philosophy Query Edits"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2019  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+
+echo "0 Edit append.lf"
+echo "55 Edit darland_0000.lf append"
+echo "1 Edit darland_0001.lf append"
+echo "2 Edit darland_0002.lf understanding"
+echo "3 Edit darland_0003.lf atomic belief"
+echo "4 Edit darland_0004.lf atomic belief search"
+echo "5 Edit darland_0005.lf atomic opacity & transparency"
+echo "6 Edit darland_0006.lf propositions - NOT REVISED"
+echo "7 Edit darland_0007.lf truth - NOT REVISED"
+echo "8 Edit darland_0008.lf opacity - NOT REVISED"
+echo "9 Edit darland_0009.lf equivalence, synonymy - NOT REVISED"
+echo "10 Edit darland_0010.lf Philosophers reminology - NOT REVISED"
+echo "11 Edit darland_0011.lf Molecular Belief"
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f eee1
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+done

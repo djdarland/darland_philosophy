@@ -1,0 +1,390 @@
+%% Copyright (C) 2017, 2019 Dennis J. Darland
+%% trouble with commit made this change!!!
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+%% 
+%%
+%%
+%%
+
+%%    There are two primitive sorts of belief
+
+%%    One in words
+
+%%    qqqq(believes_in_words, Subject, Time,
+%%		      [Relation_Word,
+%%		      A_Word,
+%%		      B_Word,
+%%		      C_Word, ...])
+
+%%    And One in ideas
+
+%%    believes_in_ideas(Subject, Time,
+%%		      [Relation_Word,
+%%		      A_Idea,
+%%		      B_Idea,
+%%		      C_Idea, ... ])
+
+%%  Either may exist with or without the other.
+%%  beliefs in words exist without ideas exist, e.g. when we
+%%  compute without thinking. But I think we must have subconscious
+%%  ideas if the words are about anything.
+
+%%  beliefs in ideas exist without words, exist, e.g. when we
+%%  cannot think of a person's name.
+
+% if a person belives in words & ideas & connects them to objects then:
+% they must have the correct relation among the words
+% they must have the correct relation among their ideas
+% and understand the relation between the words, ideas and objects.
+% This ammounts to the rrrr & ssss relations holding.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+qqqq(BWIO, Subject, Time, Triple_List) :-
+	BWIO = believes_word_idea_object, !,
+	%% list of word, idea object triples
+	qqqq(believes_in_words, Subject, Time, Word_List),
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	match_triple_list(Subject, Time,
+			  Word_List,
+			  Idea_List,
+			  [],
+			  Triple_List).
+
+match_triple_list(Subject, Time,  
+		    [],
+		    [],
+		    Triple_List_In,
+		    Triple_List) :-
+	Triple_List = Triple_List_In.
+
+match_triple_list(Subject, Time, 
+		    [Word_Head | Word_Tail],
+		    [Idea_Head | Idea_Tail],
+		    Triple_List_In,
+		    Triple_List) :-
+    qqqq(rrrr, Subject, Time, Word_Head, Idea_Head),
+    qqqq(ssss, Subject, Time, Idea_Head, Object),
+    app2(Triple_List_In, [[Word_Head, Idea_Head, Object]]) = Triple_List_In_2,
+    match_triple_list(Subject, Time,
+			Word_Tail,
+			Idea_Tail,
+			Triple_List_In_2,
+			Triple_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if a person belives in words about objects then:
+% they must have the correct relation among the words
+% they must have the correct relation among their ideas
+% and understand the relation between the words, ideas and objects.
+% NOTE: The only way to connect the words to the objects is via ideas.
+% This means the rrss relations hold.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+qqqq(BWO, Subject, Time, Pair_List) :-
+	BWO = believes_word_object, !,
+	%% list of word, idea object pairs
+	qqqq(believes_in_words, Subject, Time, Word_List),
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	match_pair_list(Subject, Time,
+			  Word_List,
+			  Idea_List,
+			  [],
+			  Pair_List).
+
+match_pair_list(Subject, Time, 
+		  [],
+		  [],
+		  Pair_List_In,
+		  Pair_List) :-
+	Pair_List = Pair_List_In.
+
+match_pair_list(Subject, Time, 
+		  [Word_Head | Word_Tail],
+		  [Idea_Head | Idea_Tail],
+		  Pair_List_In,
+		  Pair_List) :-
+	qqqq(rrrr, Subject, Time, Word_Head, Idea_Head),
+	qqqq(ssss, Subject, Time, Idea_Head, Object),
+	app2(Pair_List_In, [[Word_Head, Object]]) = Pair_List_In_2,
+	match_pair_list(Subject, Time,
+			  Word_Tail,
+			  Idea_Tail,
+			  Pair_List_In_2,
+			  Pair_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if a person believes in words and ideas then:
+% they must have the correct relation among the words
+% they must have the correct relation among their ideas
+% and understand the relation between the words and ideas.
+%
+% This amounts to the correct rrrr relations holding.
+% There might not even be corresponding objects.
+
+
+
+qqqq(BWI, Subject, Time, Pair_List) :-
+	%% list of word, idea object pairs
+	BWI = believes_word_idea, !,
+	qqqq(believes_in_words, Subject, Time, Word_List),
+	match_WI_pair_list(Subject, Time,
+			     Word_List,
+			     [],
+			     Pair_List).
+
+match_WI_pair_list(Subject, Time, 
+		    [],
+		     Pair_List_In,
+		     Pair_List) :-
+	Pair_List = Pair_List_In.
+
+match_WI_pair_list(Subject, Time, 
+		     [Word_Head | Word_Tail],
+		     Pair_List_In,
+		     Pair_List) :-
+	qqqq(rrrr, Subject, Time, Type_X1, Word_Head, Idea),
+	app2(Pair_List_In, [[Word_Head, Idea]]) = Pair_List_In_2,
+	match_WI_pair_list(Subject, Time,
+			     Word_Tail,
+			     Pair_List_In_2,
+			     Pair_List).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if a person believes in ideas about objects then:
+% they must have the correct relation among their ideas
+% and understand the relation between the ideas and objects.
+%
+% This amounts to the correct ssss relations holding.
+% There might not even be corresponding words.
+
+qqqq(BIO, Subject, Time, Pair_List) :-
+	%% list of idea, idea object pairs
+	BIO = believes_idea_object, !,
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	match_IO_pair_list(Subject, Time,
+			     Idea_List,
+			     [],
+			     Pair_List).
+
+match_IO_pair_list(Subject, Time, 
+		     [],
+		     Pair_List_In,
+		     Pair_List) :-
+	Pair_List = Pair_List_In.
+
+match_IO_pair_list(Subject, Time, 
+		     [Idea_Head | Idea_Tail],
+		     Pair_List_In,
+		     Pair_List) :-
+	qqqq(ssss, Subject, Time, Type_X1, Idea_Head, Object),
+	app2(Pair_List_In, [[Idea_Head, Object]]) = Pair_List_In_2,
+	match_IO_pair_list(Subject, Time,
+			     Idea_Tail,
+			     Pair_List_In_2,
+			     Pair_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% if a person believes about objects then:
+% they must have the correct relation among their ideas
+% and understand the relation between the ideas and objects.
+%
+% This amounts to the correct ssss relations holding.
+% There might not even be corresponding words.
+
+
+qqqq(BO, Subject, Time, Object_List) :-
+	%% list of idea, idea object pairs
+	BO = believes_object, !,
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	match_O_list(Subject, Time,
+		       Idea_List,
+		       [],
+		       Object_List).
+
+match_O_list(Subject, Time, 
+		    [],
+		    Pair_List_In,
+		    Pair_List) :-
+    Pair_List = Pair_List_In.
+
+match_O_list(Subject, Time, 
+	       [Idea_Head | Idea_Tail],
+	       Pair_List_In,
+	       Pair_List) :-
+	qqqq(ssss, Subject, Time, Idea_Head, Object),
+	app2(Pair_List_In, [[Object]]) = Pair_List_In_2,
+	match_O_list(Subject, Time, 
+		       Idea_Tail,
+		       Pair_List_In_2,
+		       Pair_List).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now believes not cases.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+qqqq(BNWIO, Subject, Time, Triple_List) :-
+	%% list of word, idea object triples
+	BNWIO = believes_not_word_idea_object, !,
+	qqqq(believes_not_in_words, Subject, Time, Word_List),
+	qqqq(believes_not_in_ideas, Subject, Time, Idea_List),
+	match_triple_list(Subject, Time,
+			    Word_List,
+			    Idea_List,
+			    [],
+			    Triple_List).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if a person belives in words about objects then:
+% they must have the correct relation among the words
+% they must have the correct relation among their ideas
+% and understand the relation between the words, ideas and objects.
+% NOTE: The only way to connect the words to the objects is via ideas.
+% This means the rrss relations hold.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+qqqq(BNWO, Subject, Time, Pair_List) :-
+	%% list of word, idea object pairs
+	BNWO = believes_not_word_object, !,
+	qqqq(believes_not_in_words, Subject, Time, Word_List),
+	qqqq(believes_not_in_ideas, Subject, Time, Idea_List),
+	match_pair_list(Subject, Time,
+			  Word_List,
+			  Idea_List,
+			  [],
+			  Pair_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if a person believes in words and ideas then:
+% they must have the correct relation among the words
+% they must have the correct relation among their ideas
+% and understand the relation between the words and ideas.
+%
+% This amounts to the correct rrrr relations holding.
+% There might not even be corresponding objects.
+
+
+
+qqqq(BNWI, Subject, Time, Pair_List) :-
+    %% list of word, idea object pairs
+    BNWI =  believes_not_word_idea, !,
+    qqqq(believes_not_in_words, Subject, Time, Word_List),
+    match_WI_pair_list(Subject, Time,
+			Word_List,
+			[],
+			Pair_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if a person believes in ideas about objects then:
+% they must have the correct relation among their ideas
+% and understand the relation between the ideas and objects.
+%
+% This amounts to the correct ssss relations holding.
+% There might not even be corresponding words.
+
+qqqq(BNIO, Subject, Time, Pair_List) :-
+    %% list of idea, idea object pairs
+    BNIO =  believes_not_idea_object, !,
+    qqqq(believes_not_in_ideas, Subject, Time, Idea_List),
+    match_IO_pair_list(Subject, Time,
+			Idea_List,
+			[],
+			Pair_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% if a person believes about objects then:
+% they must have the correct relation among their ideas
+% and understand the relation between the ideas and objects.
+%
+% This amounts to the correct ssss relations holding.
+% There might not even be corresponding words.
+
+
+qqqq(BNO, Subject, Time, Object_List) :-
+	%% list of idea, idea object pairs
+	BNO = believes_not_object, !,
+	qqqq(believes_not_in_ideas, Subject, Time, Idea_List),
+	match_O_list(Subject, Time,
+		       Idea_List,
+		       [],
+		       Object_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Now Contradicting beliefs!!
+
+qqqq(CWIO, Subject, Time, Triple_List) :-
+	CWIO = contradicts_word_idea_object, !,
+	qqqq(believes_word_idea_object, Subject, Time, Triple_List),
+	qqqq(believes_not_word_idea_object, Subject, Time, Triple_List).
+
+qqqq(CWO, Subject, Time, Pair_List) :-
+	CWO = contradicts_word_object, !,
+	qqqq(believes_word_object, Subject, Time, Pair_List),
+	qqqq(believes_not_word_object, Subject, Time, Pair_List).
+
+qqqq(CWI, Subject, Time, Pair_List) :-
+	CWI = contradicts_word_idea, !,
+	qqqq(believes_word_idea, Subject, Time, Pair_List),
+	qqqq(believes_not_word_idea, Subject, Time, Pair_List).
+
+qqqq(CIO, Subject, Time, Pair_List) :-
+	CIO = contradicts_idea_object, !,
+	qqqq(believes_idea_object, Subject, Time, Pair_List),
+	qqqq(believes_not_idea_object, Subject, Time, Pair_List).
+
+qqqq(CO, Subject, Time, Object_List) :-
+	CO = contradicts_object, !,
+	qqqq(believes_object, Subject, Time, Object_List),
+	qqqq(believes_not_object, Subject, Time, Object_List).

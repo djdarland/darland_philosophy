@@ -1,3 +1,15 @@
+I restarted my resumtion of my work. I have had several new ideas.
+Mainly, I have one main predicate - qqqq (in my writing Q).
+My writing is mostly at:
+https://eclectic-philosopher.com/e_pluribus_unum/
+It is not entirely consistent as my ideas have been evolving.
+The maim command I use is now ./eee in the Source directory.
+(It was ./ee before I restarted.)
+./eee allows (rather will eventually allow) all the program to be demonstrated.
+I also plan to eventually make some sort of video demos.
+Right now, I am mainly using github to manage my source code.
+Even eventually, it will probably be easier to get code from a .tar.gz backup.
+
 I'm resuming work on my philosophy programming.
 I previously was using both SwiProlog & WildLIFE.
 I have done more work on WildLIFE & believe it more solid.
