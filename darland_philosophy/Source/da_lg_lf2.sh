@@ -34,9 +34,9 @@ echo "8 darland_0008.out"
 echo "9 darland_0009.out"
 echo "10 darland_0010.out"
 echo "-----------"
-if test -f da_lg_lf2.sh
-   echo "666 This File"
-fi
+## if test -f da_lg_lf2.sh
+##   echo "666 This File"
+## fi
 echo "777 NOTES_DJD.txt"
 echo "999 quit"
 echo "select"
