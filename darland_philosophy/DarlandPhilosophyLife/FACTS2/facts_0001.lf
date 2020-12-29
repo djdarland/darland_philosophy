@@ -88,8 +88,6 @@ qqqq(rrrr, quine, now, formally_equivalent_word, quine_formally_equivalent_idea)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 qqqq(ssss, tom, now, tom_cicero_idea, cicero).
 qqqq(ssss, tom, now, tom_tully_idea, cicero).
-% toms idea of tully really refers to cicero
-% logically we must look at tinngs sub specie aeternitatis
 qqqq(ssss, tom, now, tom_catiline_idea, catiline).
 qqqq(ssss, tom, now, tom_tom_idea, tom).
 qqqq(ssss, tom, now, tom_human_idea, human).

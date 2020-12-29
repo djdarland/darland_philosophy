@@ -53,8 +53,11 @@ sense_of_object(Idea) :- qqqq(ssss, Subject, Time, Idea, A_Object).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 qqqq(RRSS, Subject, Time, Word, Object) :-
-	RRSS = rrss, !, 
-    qqqq(rrrr, Subject, Time, Word, Idea),
+	RRSS = rrss, !,
+%	write("Hello"),
+%	write(Subject, Time, Word, Object),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+%	write(Idea),
     qqqq(ssss, Subject, Time, Idea, Object).
 
 qqqq(UWO, Subject, Time, PairList_In, PairList) :-

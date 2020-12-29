@@ -22,254 +22,29 @@
 *** Yes
 > 
 *** Yes
-> Sun 27 Dec 2020 08:30:58 AM CST
+> Tue 29 Dec 2020 01:42:15 AM CST
 > write_time(Ignore)?
 0
 *** Yes
 Ignore = @.
 --1> 
 *** No
-> qqqq(rrrr, tom, now, of_orations_word, tom_of_orations_idea)?
-
+> write("I indicate for each query whether the immediate response should be")?
+I indicate for each query whether the immediate response should be
 *** Yes
---1> 
-
-*** No
-> 
-> qqqq(ssss, tom, now, tom_of_orations_idea, of_orations)?
-
+> > write("TRUE = Yes or FALSE = No")?
+TRUE = Yes or FALSE = No
 *** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, tom, now, of_De_Senectute_word, tom_of_De_Senectute_idea)?
-
+> > write("There will be subsequient No responses - as I have asked for more answers with semicolons")?
+There will be subsequient No responses - as I have asked for more answers with semicolons
 *** Yes
---1> 
-
-*** No
-> 
-> qqqq(ssss, tom, now, tom_of_De_Senectute_idea, of_De_Senectute)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrss, tom, now, of_orations_word, of_orations)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrss, tom, now, of_De_Senectute_word, of_De_Senectute)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, quine, now, of_orations_word, quine_of_orations_idea)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(ssss, quine, now, quine_of_orations_idea, of_orations)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, quine, now, of_De_Senectute_word, quine_of_De_Senectute_idea)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(ssss, quine, now, quine_of_De_Senectute_idea, of_De_Senectute)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, tom, now, denounced_word, tom_denounced_idea)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(ssss, tom, now, tom_denounced_idea, denounced)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, tom, now, cicero_word, tom_cicero_idea)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(ssss, tom, now, tom_cicero_idea, cicero)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, tom, now, catiline_word, tom_catiline_idea)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(ssss, tom, now, tom_catiline_idea, catiline)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, tom, now, cicero_word, tom_tully_idea)?
-
-*** No
-> ;
-> 
-> qqqq(rrrr, tom, now, tully_word, tom_tully_idea)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, tom, now, tully_word, tom_cicero_idea)?
-
-*** No
-> ;
-> 
-> qqqq(rrss, tom, now, cicero_word, cicero)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrss, tom, now, tully_word, cicero)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrss, tom, now, catiline_word, catiline)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrss, tom, now, denounced_word, denounced)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, quine, now, denounced_word, quine_denounced_idea)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> 
-> qqqq(ssss, quine, now, quine_denounced_idea, denounced)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> 
-> qqqq(rrrr, quine, now, cicero_word, quine_cicero_idea)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(ssss, quine, now, quine_cicero_idea, cicero)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, quine, now, cicero_word, quine_tully_idea)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, quine, now, tully_word, quine_tully_idea)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrrr, quine, now, tully_word, quine_cicero_idea)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(ssss, quine, now, quine_tully_idea, cicero)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrss, quine, now, cicero_word, cicero)?
-
-*** Yes
---1> 
-
-*** Yes
---1> 
-*** No
-> qqqq(rrss, quine, now, of_orations_word, of_orations)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> qqqq(rrss, quine, now, of_De_Senectute_word, of_De_Senectute)?
-
-*** Yes
---1> 
-
-*** No
-> 
-> 
+> > 
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> qqqq(believes_in_ideas, tom, now, [tom_denounced_idea,
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_ideas, tom, now, [tom_denounced_idea,
 |    				    tom_cicero_idea,
 |    				    tom_catiline_idea])?
 
@@ -278,7 +53,20 @@ Ignore = @.
 
 *** No
 > 
-> qqqq(believes_not_in_words, tom, now, [denounced_word,
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(believes_in_ideas, tom, now, [tom_denounced_idea,
+|    				    tom_tully_idea,
+|    				    tom_catiline_idea])?
+
+*** No
+> ;
+> 
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_not_in_words, tom, now, [denounced_word,
 |    				    tully_word,
 |    				    catiline_word])?
 
@@ -287,16 +75,10 @@ Ignore = @.
 
 *** No
 > 
-> qqqq(believes_in_ideas, tom, now, [tom_denounced_idea,
-|    				    tom_cicero_idea,
-|    				    tom_catiline_idea])?
-
+> write("Next should be TRUE")?
+Next should be TRUE
 *** Yes
---1> 
-
-*** No
-> 
-> qqqq(believes_not_in_ideas, tom, now, [tom_denounced_idea,
+> > qqqq(believes_not_in_ideas, tom, now, [tom_denounced_idea,
 |    				    tom_tully_idea,
 |    				    tom_catiline_idea])?
 
@@ -305,35 +87,82 @@ Ignore = @.
 
 *** No
 > 
-> qqqq(believes_in_ideas, tom, now, [tom_of_orations_idea, tom_cicero_idea])?
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_ideas, tom, now, [tom_of_orations_idea, tom_cicero_idea])?
 
 *** Yes
 --1> 
 
 *** No
 > 
-> qqqq(believes_in_ideas, tom, now, [tom_of_De_Senectute_idea, tom_tully_idea])?
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_ideas, tom, now, [tom_of_De_Senectute_idea, tom_tully_idea])?
 
 *** Yes
 --1> 
 
 *** No
 > 
-> qqqq(believes_in_words, tom, now, [of_orations_word, cicero_word])?
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_words, tom, now, [of_orations_word, cicero_word])?
 
 *** Yes
 --1> 
 
 *** No
 > 
-> qqqq(believes_in_words, tom, now, [of_De_Senectute_word, tom_tully_word])?
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_words, tom, now, [of_De_Senectute_word, tom_tully_word])?
 
 *** Yes
 --1> 
 
 *** No
 > 
-> qqqq(believes_in_ideas, quine, now, [quine_of_orations_idea,
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(believes_in_ideas, tom, now, [tom_of_orations_idea, tom_tully_idea])?
+
+*** No
+> ;
+> 
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(believes_in_ideas, tom, now, [tom_of_De_Senectute_idea, tom_cicero_idea])?
+
+*** No
+> ;
+> 
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(believes_in_words, tom, now, [of_orations_word, tully_word])?
+
+*** No
+> ;
+> 
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(believes_in_words, tom, now, [of_De_Senectute_word, tom_cicero_word])?
+
+*** No
+> ;
+> 
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_ideas, quine, now, [quine_of_orations_idea,
 |    				     quine_cicero_idea])?
 
 *** Yes
@@ -341,7 +170,10 @@ Ignore = @.
 
 *** No
 > 
-> qqqq(believes_in_ideas, quine, now, [quine_of_De_Senectute_idea,
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_ideas, quine, now, [quine_of_De_Senectute_idea,
 |    				     quine_tully_idea])?
 
 *** Yes
@@ -350,7 +182,10 @@ Ignore = @.
 *** No
 > ;
 > 
-> qqqq(believes_in_words, quine, now, [of_orations_word,
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_words, quine, now, [of_orations_word,
 |    				     cicero_word])?
 
 *** Yes
@@ -358,12 +193,18 @@ Ignore = @.
 
 *** No
 > 
-> qqqq(believes_in_words, quine, now, [of_De_Senectute_word,
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_words, quine, now, [of_De_Senectute_word,
 |    				   tully_word])?
 
 *** No
 > 
-> qqqq(believes_in_ideas, quine, now, [quine_of_orations_idea,
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_ideas, quine, now, [quine_of_orations_idea,
 |    				     quine_tully_idea])?
 
 *** Yes
@@ -371,7 +212,10 @@ Ignore = @.
 
 *** No
 > 
-> qqqq(believes_in_ideas, quine, now, [quine_of_De_Senectute_idea,
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_ideas, quine, now, [quine_of_De_Senectute_idea,
 |    				     quine_cicero_idea])?
 
 *** Yes
@@ -379,7 +223,10 @@ Ignore = @.
 
 *** No
 > 
-> qqqq(believes_in_words, quine, now, [of_orations_word,
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_words, quine, now, [of_orations_word,
 |    				     tully_word])?
 
 *** Yes
@@ -387,14 +234,20 @@ Ignore = @.
 
 *** No
 > 
-> qqqq(believes_in_words, quine, now, [of_De_Senectute_word,
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_words, quine, now, [of_De_Senectute_word,
 |    				   cicero_word])?
 
 *** No
 > 
 > ;
 > 
-> qqqq(believes_in_ideas, quine, now, [quine_of_orations_idea,
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_ideas, quine, now, [quine_of_orations_idea,
 |    				     quine_tully_idea])?
 
 *** Yes
@@ -402,7 +255,10 @@ Ignore = @.
 
 *** No
 > 
-> qqqq(believes_in_words, quine, now, [quine_of_De_Senectute_idea,
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_in_words, quine, now, [quine_of_De_Senectute_idea,
 |    				   quine_cicero_idea])?
 
 *** No
@@ -412,7 +268,10 @@ Ignore = @.
 > 
 > %% First Tom
 > 
-> qqqq(believes_word_idea_object, tom, now, [[denounced_word,
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_word_idea_object, tom, now, [[denounced_word,
 |    					      tom_denounced_idea,
 |    					      denounced],
 |    					     [cicero_word,
@@ -1455,7 +1314,7 @@ Object_List = [[denounced],[cicero],[catiline]].
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.60908 Seconds
+Clock Time 1.60923 Seconds
 CPU Time 166.667 Milliseconds
 
 *** Yes
