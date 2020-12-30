@@ -54,154 +54,98 @@ sense_of_object(Idea) :- qqqq(ssss, Subject, Time, Idea, A_Object).
 
 qqqq(RRSS, Subject, Time, Word, Object) :-
 	RRSS = rrss, !,
-%	write("Hello"),
-%	write(Subject, Time, Word, Object),
 	qqqq(rrrr, Subject, Time, Word, Idea),
-%	write(Idea),
-    qqqq(ssss, Subject, Time, Idea, Object).
+	qqqq(ssss, Subject, Time, Idea, Object).
 
-qqqq(UWO, Subject, Time, PairList_In, PairList) :-
-       UWO = understands_words_objects, !,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+qqqq(UWO, Subject, Time, PairList) :-
+	UWO = understands_words_objects, !,
 	% List of Word Object Pairs.
-	match_pair_word_relation(Subject, Time, [], PairList).
+	match_pair_word_object_relation(Subject, Time, PairList).
 
-match_pair_word_relation(Subject, Time, PairList_In, PairList) :-
+match_pair_word_object_relation(Subject, Time, []).
+
+match_pair_word_object_relation(Subject, Time, [[Word, Object] | PairList]) :-
 	% List of Word Object Pairs.
 	qqqq(rrss, Subject, Time, Word, Object),
-	Arity = length(PairList),
-	app2(PairList_In, [[Word, Object]]) = PairList_In_2,
-	cond(Arity > 0,
-	     match_pair_word_object_pairs_L(Subject, Time, PairList_In_2, PairList),
-	     PairList = PairList_In_2).
+	match_pair_word_object_relation(Subject, Time, PairList).
 
-match_pair_word_object_pairs(Subject, Time, PairList_In, PairList) :-
-	% List of Word Object Pairs.
-	rrss(Subject, Time, Word, Object),
-	Arity = length(PairList),
-	app2(PairList_In, [[Word, Object]]) = PairList_In_2,
-	cond(Arity > 0,
-	     match_pair_word_object_pairs(Subject, Time, PairList_In_2, PairList),
-	     PairList = PairList_In_2).
-    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 qqqq(UWIO, Subject, Time, TripleList) :-
 	UWIO = understands_words_ideas_objects, !,
 	% List of Word Idea_Object Triples.
-	match_triple_word_idea_relation_L(Subject, Time, [], TripleList).
+	match_triple_word_idea_object_relation(Subject, Time, TripleList).
 
-match_triple_word_idea_relation(Subject, Time, TripleList_In, TripleList) :-
+match_triple_word_idea_object_relation(Subject, Time, []).
+
+match_triple_word_idea_object_relation(Subject, Time, [[Word, Idea, Object] | TripleList]) :-
 	% List of Word Idea Object Triple.
 	qqqq(rrrr, Subject, Time, Word, Idea),
 	qqqq(ssss, Subject, Time, Idea, Object),
-	Arity = length(TripleList),
-	app2(TripleList_In, [[Word, Idea, Object]]) = TripleList_In_2,
-	cond(Arity > 0,
-	     match_triple_word_idea_object_L(Subject, Time, TripleList_In_2, TripleList),
-	     TripleList = TripleList_In_2).
+	match_triple_word_idea_object_relation(Subject, Time, TripleList).
 
-match_triple_word_idea_object(Subject, Time, TripleList_In, TripleList) :-
-	% List of Word Object Triples.
-	qqqq(rrrr, Subject, Time, Word, Idea),
-	qqqq(ssss, Subject, Time, Idea, Object),
-	Arity = length(TripleList),
-	app2(TripleList_In, [[Word, Idea, Object]]) = TripleList_In_2,
-	cond(Arity > 0,
-	     match_triple_word_idea_object_L(Subject, Time, TripleList_In_2, TripleList),
-	     TripleList = TripleList_In_2).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 understands_ideas_objects(Subject, Time, PairList) :-
 	% List of Word Object Pairs.
-	match_pair_idea_relation_L(Subject, Time, [], PairList).
+	match_pair_idea_relation(Subject, Time, PairList).
 
-match_pair_idea_relation(Subject, Time, PairList_In, PairList) :-
+match_pair_idea_object_relation(Subject, Time, []).
+
+match_pair_idea_object_relation(Subject, Time, [[Idea, Object] | PairList]) :-
 	% List of Word Object Pairs.
 	qqqq(ssss, Subject, Time, Idea, Object),
-	Arity = length(PairList),
-	app2(PairList_In, [[Idea, Object]]) = PairList_In_2,
-	cond(Arity > 0,
-	     match_pair_idea_object_L(Subject, Time, PairList_In_2, PairList),
-	     PairList = PairList_In_2).
-
-match_pair_idea_object(Subject, Time, PairList_In, PairList) :-
-	% List of Idea Object Pairs.
-	qqqq(ssss, Subject, Time, Idea, Object),
-	app2(PairList_In, [[Idea, Object]]) = PairList_In_2,
-	Arity = length(PairList),
-	cond(Arity > 0,
-	     match_pair_idea_object_L(Subject, Time, PairList_In_2, PairList),
-	     PairList = PairList_In_2).
-
-qqqq(USO, Subject_1, Time_1, Subject_2, Time_2, Pair_List) :-
-	USO = subjects_understand_same_objects_by_ideas, !,
-	% List of Word Object Pairs.
-	match_same_pair_idea_relation(Subject_1, Time_1,
-				      Subject_2, Time_2,
-				      [], Pair_List).
-
-match_same_pair_idea_relation(Subject_1, Time_1,
-			      Subject_2, Time_2,
-			      PairList_In, Pair_List) :-
-	% List of Word Object Pairs.
-	qqqq(ssss, Subject_1, Time_1, Idea, Object),
-	qqqq(ssss, Subject_2, Time_2, Idea, Object),
-	Arity = length(PairList_In),
-	app2(PairList_In, [[Idea, Object]]) = PairList_In_2,
-	cond(Arity > 0,
-	     match_same_pair_idea_object(Subject_1, Time_1,
-					 Subject_2, Time_2,
-					 PairList_In_2, Pair_List),
-	     Pair_List = PairList_In_2).
-
-match_same_pair_idea_object(Subject_1, Time_1,
-			    Subject_2, Time_2,
-			    PairList_In, Pair_List) :-
-	% List of Idea Object Pairs.
-	qqqq(ssss, Subject_1, Time_1, Idea, Object),
-	qqqq(ssss, Subject_2, Time_2, Idea, Object),
-	Arity = length(PairList_In),
-	app2(PairList_In, [[Idea, Object]]) = PairList_In_2,
-	cond(Arity > 0,
-	     match_same_pair_idea_object_L(Subject_1, Time_1,
-					   Subject_2, Time_2,
-					   PairList_In_2, Pair_List),
-	     Pair_List = PairList_In_2).
+	match_pair_idea_object_relation(Subject, Time, PairList).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-qqqq(SUSOW, Subject_1, Time_1, Subject_2, Time_2, Pair_List) :-
+qqqq(USO, Subject_1, Time_1, Pair_List1, Subject_2, Time_2, Pair_List2) :-
+	USO = subjects_understand_same_objects_by_ideas, !,
+	% List of Word Object Pairs.
+	match_same_pair_idea_object_relation(Subject_1, Time_1, Pair_List1, 
+					     Subject_2, Time_2, Pair_List2).
+
+match_same_pair_idea_object_relation(Subject_1, Time_1, [], 
+				     Subject_2, Time_2, []).
+
+match_same_pair_idea_object_relation(Subject_1, Time_1,
+				     [[Idea_1 , Object_1] | Pair_List1],
+				     Subject_2, Time_2,
+				     [[Idea_2 , Object_2] | Pair_List2]) :-
+	% List of Word Object Pairs.
+	qqqq(ssss, Subject_1, Time_1, Idea_1, Object_1),
+	qqqq(ssss, Subject_2, Time_2, Idea_2, Object_2),
+	Object_1 = Object2,
+	match_same_pair_idea_object_relation(Subject_1, Time_1,
+					     Pair_List1,
+					     Subject_2, Time_2,
+					     Pair_List2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+qqqq(SUSOW, Subject_1, Time_1, Pair_List1, Subject_2, Time_2, Pair_List2) :-
 	SUSOW = subjects_understand_same_objects_by_words, !,
 	% List of Word Object Pairs.
-	match_same_pair_word_relation_L(Subject_1, Time_1,
-					Subject_2, Time_2,
-					[], Pair_List).
+	match_same_pair_word_object_relation(Subject_1, Time_1, Pair_List1, 
+					     Subject_2, Time_2, Pair_List2).
 
+match_same_pair_word_object_relation(Subject_1, Time_1, [],
+				     Subject_2, Time_2, []).
 
-match_same_pair_word_relation_L(Subject_1, Time_1,
-				Subject_2, Time_2,
-				PairList_In, Pair_List) :-
+match_same_pair_word_object_relation(Subject_1, Time_1,
+				     [[Word_1 , Object_1] | Pair_List1],
+				     Subject_2, Time_2,
+				     [[Word_2 , Object_2] | Pair_List2]) :-
 	% List of Word Object Pairs.
-	Arity = length(PairList_In),
-	qqqq(rrss, Subject_1, Time_1, Word, Object),
-	qqqq(rrss, Subject_2, Time_2, Word, Object),
-	app2(PairList_In, [[Word, Object]]) = PairList_In_2,
-	cond(Arity > 0,
-	     match_same_pair_word_object_L(Subject_1, Time_1,
-					   Subject_2, Time_2,
-					   PairList_In_2, Pair_List),
-	     Pair_List = PairList_In_2).
+	qqqq(rrss, Subject_1, Time_1, Word_1, Object_1),
+	qqqq(rrss, Subject_2, Time_2, Word_2, Object_2),
+	Word_1 = Word_2,
+	Object_1 = Object_2, 
+	match_same_pair_word_object_relation(Subject_1, Time_1, Pair_List1, 
+					 Subject_2, Time_2, Pair_List2).
 
-match_same_pair_word_object(Subject_1, Time_1,
-			    Subject_2, Time_2,
-			    PairList_In, Pair_List) :-
-	% List of Word Object Pairs.
-	rrss(Subject_1, Time_1, Word, Object),
-	rrss(Subject_2, Time_2, Word, Object),
-	Arity = length(PairList_In),
-	app2(PairList_In, [[Word, Object]]) = PairList_In_2,
-	cond(Arity > 0,
-	     match_same_pair_word_object_L(Subject_1, Time_1,
-					   Subject_2, Time_2,
-					   PairList_In_2, Pair_List),
-	     Pair_List = PairList_In_2).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

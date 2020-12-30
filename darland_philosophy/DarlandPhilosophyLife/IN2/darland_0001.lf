@@ -65,6 +65,39 @@ write("There will be subsequient No responses - as I have asked for more answers
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 write("Next should be TRUE")?
 
+qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, cicero]])?
+
+write("Next should be FALSE")?
+
+qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, catiline]])?
+
+write("Next should be TRUE")?
+
+qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero]])?
+
+write("Next should be FALSE")?
+
+qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_catiline_idea, cicero]])?
+
+write("Next should be TRUE")?
+
+qqqq(subjects_understand_same_objects_by_ideas, tom, now, [[tom_denounced_idea, denounced], [tom_cicero_idea, cicero]], quine, now, [[quine_denounced_idea, denounced], [quine_cicero_idea, cicero]])?
+
+write("Next should be FALSE")?
+
+qqqq(subjects_understand_same_objects_by_ideas, tom, now, [[tom_denounced_idea, denounced], [tom_catiline_idea, cicero]], quine, now, [[quine_denounced_idea, denounced], [quine_cicero_idea, cicero]])?
+
+write("Next should be TRUE")?
+
+qqqq(subjects_understand_same_objects_by_words, tom, now, [[denounced_word, denounced], [cicero_word, cicero]], quine, now, [[denounced_word, denounced], [cicero_word, cicero]])?
+
+write("Next should be FALSE")?
+
+qqqq(subjects_understand_same_objects_by_words, tom, now, [[denounced_word, denounced], [tully_word, cicero]], quine, now, [[denounced_word, denounced], [cicero_word, cicero]])?
+
+
+write("Next should be TRUE")?
+
 qqqq(believes_in_ideas, tom, now, [tom_denounced_idea,
 				    tom_cicero_idea,
 				    tom_catiline_idea])?

@@ -22,7 +22,7 @@
 *** Yes
 > 
 *** Yes
-> Tue 29 Dec 2020 01:42:15 AM CST
+> Tue 29 Dec 2020 09:41:56 PM CST
 > write_time(Ignore)?
 0
 *** Yes
@@ -41,6 +41,67 @@ There will be subsequient No responses - as I have asked for more answers with s
 > > 
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, cicero]])?
+
+*** Yes
+--1> 
+*** No
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, catiline]])?
+
+*** No
+> 
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero]])?
+
+*** Yes
+--1> 
+*** No
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_catiline_idea, cicero]])?
+
+*** No
+> 
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(subjects_understand_same_objects_by_ideas, tom, now, [[tom_denounced_idea, denounced], [tom_cicero_idea, cicero]], quine, now, [[quine_denounced_idea, denounced], [quine_cicero_idea, cicero]])?
+
+*** Yes
+--1> 
+*** No
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(subjects_understand_same_objects_by_ideas, tom, now, [[tom_denounced_idea, denounced], [tom_catiline_idea, cicero]], quine, now, [[quine_denounced_idea, denounced], [quine_cicero_idea, cicero]])?
+
+*** No
+> 
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(subjects_understand_same_objects_by_words, tom, now, [[denounced_word, denounced], [cicero_word, cicero]], quine, now, [[denounced_word, denounced], [cicero_word, cicero]])?
+
+*** Yes
+--1> 
+*** No
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(subjects_understand_same_objects_by_words, tom, now, [[denounced_word, denounced], [tully_word, cicero]], quine, now, [[denounced_word, denounced], [cicero_word, cicero]])?
+
+*** No
+> 
+> 
 > write("Next should be TRUE")?
 Next should be TRUE
 *** Yes
@@ -70,10 +131,8 @@ Next should be TRUE
 |    				    tully_word,
 |    				    catiline_word])?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > write("Next should be TRUE")?
 Next should be TRUE
@@ -112,20 +171,16 @@ Next should be TRUE
 *** Yes
 > > qqqq(believes_in_words, tom, now, [of_orations_word, cicero_word])?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > write("Next should be TRUE")?
 Next should be TRUE
 *** Yes
 > > qqqq(believes_in_words, tom, now, [of_De_Senectute_word, tom_tully_word])?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > write("Next should be FALSE")?
 Next should be FALSE
@@ -176,10 +231,8 @@ Next should be TRUE
 > > qqqq(believes_in_ideas, quine, now, [quine_of_De_Senectute_idea,
 |    				     quine_tully_idea])?
 
-*** Yes
---1>  
-
 *** No
+> 	 
 > ;
 > 
 > write("Next should be TRUE")?
@@ -188,10 +241,8 @@ Next should be TRUE
 > > qqqq(believes_in_words, quine, now, [of_orations_word,
 |    				     cicero_word])?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > write("Next should be TRUE")?
 Next should be TRUE
@@ -207,10 +258,8 @@ Next should be TRUE
 > > qqqq(believes_in_ideas, quine, now, [quine_of_orations_idea,
 |    				     quine_tully_idea])?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > write("Next should be TRUE")?
 Next should be TRUE
@@ -218,10 +267,8 @@ Next should be TRUE
 > > qqqq(believes_in_ideas, quine, now, [quine_of_De_Senectute_idea,
 |    				     quine_cicero_idea])?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > write("Next should be TRUE")?
 Next should be TRUE
@@ -229,10 +276,8 @@ Next should be TRUE
 > > qqqq(believes_in_words, quine, now, [of_orations_word,
 |    				     tully_word])?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > write("Next should be TRUE")?
 Next should be TRUE
@@ -250,10 +295,8 @@ Next should be TRUE
 > > qqqq(believes_in_ideas, quine, now, [quine_of_orations_idea,
 |    				     quine_tully_idea])?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > write("Next should be TRUE")?
 Next should be TRUE
@@ -282,12 +325,9 @@ Next should be TRUE
 |    					      catiline]]
 |    			   )?
 
-*** Yes
---1> 
-
-*** Yes
---1> 
 *** No
+> ;
+> 
 > qqqq(believes_word_object, tom, now, [[denounced_word,
 |    					 denounced],
 |    					[cicero_word,
@@ -296,12 +336,9 @@ Next should be TRUE
 |    					 catiline]]
 |    		      )?
 
-*** Yes
---1> 
-
-*** Yes
---1> 
 *** No
+> ;
+> 
 > qqqq(believes_word_idea, tom, now, [[denounced_word,
 |    				       tom_denounced_idea],
 |    				      [cicero_word,
@@ -471,10 +508,8 @@ Next should be TRUE
 |    					      catiline]]
 |    			   )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_not_word_object, tom, now, [[denounced_word,
 |    					 denounced],
@@ -484,10 +519,8 @@ Next should be TRUE
 |    					 catiline]]
 |    		      )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_not_word_idea, tom, now, [[denounced_word,
 |    				       tom_denounced_idea],
@@ -540,10 +573,8 @@ Next should be TRUE
 |    					      catiline]]
 |    			   )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_not_word_object, tom, now, [[denounced_word,
 |    					 denounced],
@@ -553,10 +584,8 @@ Next should be TRUE
 |    					 catiline]]
 |    		      )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_not_word_idea, tom, now, [[denounced_word,
 |    				       tom_denounced_idea],
@@ -634,10 +663,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					      catiline]]
 |    			   )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_word_object, quine, now, [[denounced_word,
 |    					 denounced],
@@ -647,12 +674,9 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					 catiline]]
 |    		      )?
 
-*** Yes
---1> 
-
-*** Yes
---1> 
 *** No
+> ;
+> 
 > qqqq(believes_word_idea, quine, now, [[denounced_word,
 |    				       quine_denounced_idea],
 |    				      [cicero_word,
@@ -698,10 +722,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					      catiline]]
 |    			   )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_word_object, quine, now, [[denounced_word,
 |    					 denounced],
@@ -711,12 +733,9 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					 catiline]]
 |    		      )?
 
-*** Yes
---1> 
-
-*** Yes
---1> 
 *** No
+> ;
+> 
 > qqqq(believes_word_idea, quine, now, [[denounced_word,
 |    				       quine_denounced_idea],
 |    				      [tully_word,
@@ -762,10 +781,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					      cicero]]
 |    			   )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_word_object, tom, now, [[of_orations_word,
 |    					 of_orations],
@@ -773,10 +790,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					 cicero]]
 |    		      )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_word_idea, tom, now, [[of_orations_word,
 |    				       tom_of_orations_idea],
@@ -864,10 +879,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					      cicero]]
 |    			   )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_word_object, quine, now, [[of_orations_word,
 |    					 of_orations],
@@ -875,12 +888,9 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					 cicero]]
 |    		      )?
 
-*** Yes
---1> 
-
-*** Yes
---1> 
 *** No
+> ;
+> 
 > qqqq(believes_word_idea, quine, now, [[of_orations_word,
 |    				       quine_of_orations_idea],
 |    				      [cicero_word,
@@ -906,9 +916,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 *** Yes
 --1> 
 
-*** Yes
---1> 
 *** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > qqqq(believes_word_idea_object, quine, now, [[of_orations_word,
 |    					      quine_of_orations_idea,
@@ -918,10 +927,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					      cicero]] % there is no distinct tully
 |    			   )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_word_object, quine, now, [[of_orations_word,
 |    					 of_orations],
@@ -929,12 +936,9 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					 cicero]] % there is no distinct tully
 |    		      )?
 
-*** Yes
---1> 
-
-*** Yes
---1> 
 *** No
+> ;
+> 
 > qqqq(believes_word_idea, quine, now, [[of_orations_word,
 |    				       quine_of_orations_idea],
 |    				      [tully_word,
@@ -959,9 +963,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 *** Yes
 --1> 
 
-*** Yes
---1> 
 *** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %%%%%%%%%%%%%%%%%%%%%% Next Part 3 of_De_Senectute
 > 
@@ -1023,10 +1026,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					      cicero]] % there is no distinct tully
 |    			   )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_word_object, tom, now, [[of_De_Senectute_word,
 |    					 of_De_Senectute],
@@ -1034,10 +1035,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    					 cicero]] % there is no distinct tully
 |    		      )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > qqqq(believes_word_idea, tom, now, [[of_De_Senectute_word,
 |    				       tom_of_De_Senectute_idea],
@@ -1111,12 +1110,9 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    				   [cicero]]
 |    		 )?
 
-*** Yes
---1> 
-
-*** Yes
---1> 
 *** No
+> ;
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > qqqq(believes_word_idea_object, quine, now, [[of_De_Senectute_word,
 |    					      quine_of_De_Senectute_idea,
@@ -1159,12 +1155,9 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    				   [cicero]]
 |    		 )?
 
-*** Yes
---1> 
-
-*** Yes
---1> 
 *** No
+> ;
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%% Next Opacity
 > 
 > qqqq(opaque_believes_word_idea_object, tom, now, 
@@ -1314,8 +1307,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.60923 Seconds
-CPU Time 166.667 Milliseconds
+Clock Time 1.6093 Seconds
+CPU Time 33.3333 Milliseconds
 
 *** Yes
 Ignore = @.
