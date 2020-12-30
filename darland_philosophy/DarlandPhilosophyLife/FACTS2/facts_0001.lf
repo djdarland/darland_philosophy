@@ -126,14 +126,49 @@ idea_synonym(tom, now, tom_bachelor_idea, tom_unmarried_male_idea).
 %% uttered. I only require that there was an relation_idea and
 %% ideas of objects. They never even need to be related or believed. 
 
-arity_relation(human, 1).
-arity_relation(denounced, 2).
-arity_word(human_word, 1).
-arity_word(denounced_word, 2).
-arity_idea(tom_human_idea, 1).
-arity_idea(quine_human_idea, 1).
-arity_idea(tom_denounced_idea, 2).
-arity_idea(quine_denounced_idea, 2).
+
+
+
+qqqq(arity_relation, human, 1).
+qqqq(arity_relation, denounced, 2).
+qqqq(arity_word, human_word, 1).
+qqqq(arity_word, denounced_word, 2).
+qqqq(arity_idea, tom_human_idea, 1).
+qqqq(arity_idea, quine_human_idea, 1).
+qqqq(arity_idea, tom_denounced_idea, 2).
+qqqq(arity_idea, quine_denounced_idea, 2).
+
+qqqq(type_object, human, 1).
+qqqq(type_word, human_word, 1).
+qqqq(type_idea, tom_human_idea, 1).
+qqqq(type_idea, quine_human_idea, 1).
+qqqq(type_object, denounced, 1).
+qqqq(type_word, denounced_word, 1).
+qqqq(type_idea, tom_denounced_idea, 1).
+qqqq(type_idea, quine_denounced_idea, 1).
+qqqq(type_object, cicero, 0).
+qqqq(type_word, cicero_word, 0).
+qqqq(type_idea, tom_cicero_idea, 0).
+qqqq(type_idea, quine_cicero_idea, 0).
+qqqq(type_object, tully, 0).
+qqqq(type_word, tully_word, 0).
+qqqq(type_idea, tom_tully_idea, 0).
+qqqq(type_idea, quine_tully_idea, 0).
+qqqq(type_object, catiline, 0).
+qqqq(type_word, catiline_word, 0).
+qqqq(type_idea, tom_catiline_idea, 0).
+qqqq(type_idea, quine_catiline_idea, 0).
+qqqq(type_object, tom, 0).
+qqqq(type_word, tom_word, 0).
+qqqq(type_idea, tom_idea, 0).
+qqqq(type_idea, tom_tom_idea, 0).
+qqqq(type_idea, tom_quine_idea, 0).
+qqqq(type_object, quine, 0).
+qqqq(type_word, quine_word, 0).
+qqqq(type_idea, tom_quine_idea, 0).
+qqqq(type_idea, quine_quine_idea, 0).
+
+
 
 
 qqqq(rrrr, dennis, now, human_word, dennis_human_idea).

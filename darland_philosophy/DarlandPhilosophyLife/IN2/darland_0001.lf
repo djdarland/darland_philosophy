@@ -65,23 +65,39 @@ write("There will be subsequient No responses - as I have asked for more answers
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 write("Next should be TRUE")?
 
-qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, cicero]])?
+qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, cicero], [catiline_word, catiline]])?
 
-write("Next should be FALSE")?
+write("Next should be FALSE cicero not word for catiline")?
+
+qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, catiline], [catiline_word, catiline]])?
+
+write("Next should be FALSE cicero gives type 0 for relation")?
+
+qqqq(understands_words_objects, tom, now, [[cicero_word, cicero], [cicero_word, catiline], [catiline_word, catiline]])?
+
+write("Next should be FALSE - wrong arity - not enough terms")?
 
 qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, catiline]])?
 
-write("Next should be TRUE")?
+write("Next should be FALSE - human wrong type")?
 
-qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero]])?
-
-write("Next should be FALSE")?
-
-qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_catiline_idea, cicero]])?
+qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, catiline], [human_word, human]])?
 
 write("Next should be TRUE")?
 
-qqqq(subjects_understand_same_objects_by_ideas, tom, now, [[tom_denounced_idea, denounced], [tom_cicero_idea, cicero]], quine, now, [[quine_denounced_idea, denounced], [quine_cicero_idea, cicero]])?
+qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
+
+write("Next should be FALSE - cicero word not of catiline idea")?
+
+qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_catiline_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
+
+write("Next should be FALSE - wrong arity")?
+
+qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline], [catiline_word, tom_catiline_idea, catiline]])?
+
+write("Next should be FALSE - wrong type")?
+
+qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [human_word, tom_human_idea, human]])?
 
 write("Next should be FALSE")?
 

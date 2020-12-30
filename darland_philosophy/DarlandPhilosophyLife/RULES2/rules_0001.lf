@@ -1,4 +1,4 @@
-%% Copyright (C) 2017, 2019 Dennis J. Darland
+%% Copyright (C) 2017, 2019, 2020 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
 
@@ -59,45 +59,85 @@ qqqq(RRSS, Subject, Time, Word, Object) :-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-qqqq(UWO, Subject, Time, PairList) :-
+qqqq(UWO, Subject, Time, [[Relation_Word, Relation] | PairList]) :-
 	UWO = understands_words_objects, !,
+	qqqq(rrss, Subject, Time, Relation_Word, Relation),
+	qqqq(arity_relation, Relation, Arity),
+	qqqq(type_object, Relation, Type),
 	% List of Word Object Pairs.
-	match_pair_word_object_relation(Subject, Time, PairList).
+	% Objects should be Type one less than Type of Relation
+	match_pair_word_object(Subject, Time, PairList, Arity, Type - 1).
 
-match_pair_word_object_relation(Subject, Time, []).
+match_pair_word_object(Subject, Time, [], 0, Type).
 
-match_pair_word_object_relation(Subject, Time, [[Word, Object] | PairList]) :-
+%% -999 indicates arbitrary arity.
+match_pair_word_object(Subject, Time, [], -999, Type).
+
+match_pair_word_object(Subject, Time, [[Word, Object] | PairList],
+		       Arity, Type) :-
 	% List of Word Object Pairs.
 	qqqq(rrss, Subject, Time, Word, Object),
-	match_pair_word_object_relation(Subject, Time, PairList).
+	qqqq(type_object, Object, Type),
+	match_pair_word_object(Subject, Time, PairList,
+			       % if Arity is not Arbitrary sub 1
+			       cond(Arity =\= -999, Arity - 1, -999),
+			       Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-qqqq(UWIO, Subject, Time, TripleList) :-
+qqqq(UWIO, Subject, Time, [[Relation_Word, Relation_Idea, Relation] |
+			   TripleList]) :-
 	UWIO = understands_words_ideas_objects, !,
 	% List of Word Idea_Object Triples.
-	match_triple_word_idea_object_relation(Subject, Time, TripleList).
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(ssss, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_relation, Relation, Arity),
+	qqqq(type_object, Relation, Type),
+	match_triple_word_idea_object_relation(Subject, Time, TripleList,
+					      Arity, Type - 1).
 
-match_triple_word_idea_object_relation(Subject, Time, []).
+match_triple_word_idea_object_relation(Subject, Time, [], 0, Type).
 
-match_triple_word_idea_object_relation(Subject, Time, [[Word, Idea, Object] | TripleList]) :-
+%% -999 indicates arbitrary arity.
+match_triple_word_idea_object_relation(Subject, Time, [], -999, Type).
+
+match_triple_word_idea_object_relation(Subject, Time,
+				       [[Word, Idea, Object] | TripleList],
+				       Arity, Type) :-
 	% List of Word Idea Object Triple.
 	qqqq(rrrr, Subject, Time, Word, Idea),
 	qqqq(ssss, Subject, Time, Idea, Object),
-	match_triple_word_idea_object_relation(Subject, Time, TripleList).
+	qqqq(type_object, Object, Type),
+	match_triple_word_idea_object_relation(Subject, Time,
+					       TripleList,
+					       % if Arity is not Arbitrary sub 1
+					       cond(Arity =\= -999, Arity - 1,
+						    -999),
+					       Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-understands_ideas_objects(Subject, Time, PairList) :-
+understands_ideas_objects(Subject, Time,
+			  [[Relation_Idea, Relation] | PairList]) :-
 	% List of Word Object Pairs.
-	match_pair_idea_relation(Subject, Time, PairList).
+	qqqq(ssss, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_relation, Relation, Arity),
+	qqqq(type_object, Relation, Type),
+	match_pair_idea_relation(Subject, Time, PairList, Arity, Type - 1).
 
-match_pair_idea_object_relation(Subject, Time, []).
+match_pair_idea_object_relation(Subject, Time, [], -999, Type).
 
-match_pair_idea_object_relation(Subject, Time, [[Idea, Object] | PairList]) :-
+match_pair_idea_object_relation(Subject, Time, [], 0, Type).
+
+match_pair_idea_object_relation(Subject, Time, [[Idea, Object] | PairList],
+			       Arity, Type) :-
 	% List of Word Object Pairs.
 	qqqq(ssss, Subject, Time, Idea, Object),
-	match_pair_idea_object_relation(Subject, Time, PairList).
+	qqqq(type_object, Object, Type),
+	match_pair_idea_object_relation(Subject, Time, PairList,
+					% if Arity is not Arbitrary sub 1
+					cond(Arity =\= -999, Arity - 1, -999),
+					Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
