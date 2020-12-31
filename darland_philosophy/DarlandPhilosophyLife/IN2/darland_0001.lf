@@ -62,6 +62,137 @@ write("There will be subsequient No responses - as I have asked for more answers
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+
+write("Next should be believed")?
+
+qqqq(believes_objects, tom, now, [[denounced], [cicero], [catiline]])?
+;
+	
+write("Next should not be believed")?
+
+qqqq(believes_objects, tom, now, [[denounced], [cicero], [cicero]])?
+;
+	
+write("Next should be FALSE - NONSENSE - there is no tully - objects only have one name in WildLIFE")?
+
+qqqq(believes_objects, tom, now, [[denounced], [tully], [catiline]])?
+;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+
+write("Next should be TRUE")?
+
+qqqq(believes_ideas_objects, tom, now, [[tom_denounced_idea, denounced],
+				      [tom_cicero_idea, cicero],
+				      [tom_catiline_idea, catiline]]
+    )?
+;
+
+	
+write("Next should be FALSE")?
+
+qqqq(believes_ideas_objects, tom, now, [[tom_denounced_idea, denounced],
+				      [tom_tully_idea, cicero],
+				      [tom_catiline_idea, catiline]]
+    )?
+;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+
+write("Next should be TRUE")?
+
+qqqq(believes_words_ideas, tom, now, [[denounced_word,
+				       tom_denounced_idea],
+				      [cicero_word,
+				       tom_cicero_idea],
+				      [catiline_word,
+				       tom_catiline_idea]]
+    )?
+;
+
+	
+write("Next should be FALSE")?
+
+qqqq(believes_words_ideas, tom, now, [[denounced_word,
+				       tom_denounced_idea],
+				      [tully_word,
+				       tom_tully_idea],
+				      [catiline_word,
+				       tom_catiline_idea]]
+    )?
+;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+
+write("Next should be TRUE")?
+
+qqqq(believes_words_ideas_objects, tom, now, [[denounced_word,
+					      tom_denounced_idea,
+					      denounced],
+					     [cicero_word,
+					      tom_cicero_idea,
+					      cicero],
+					     [catiline_word,
+					      tom_catiline_idea,
+					      catiline]]
+			   )?
+;
+
+	
+write("Next should be FALSE")?
+
+qqqq(believes_words_ideas_objects, tom, now, [[denounced_word,
+					      tom_denounced_idea,
+					      denounced],
+					     [tully_word,
+					      tom_tully_idea,
+					      cicero],
+					     [catiline_word,
+					      tom_catiline_idea,
+					      catiline]]
+			   )?
+;
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+
+write("Next should be TRUE")?
+
+qqqq(believes_words, tom, now,
+     [[denounced_word],[cicero_word],[catiline_word]])?
+;
+
+write("Next should be FALSE")?
+
+qqqq(believes_words, tom, now,
+     [[denounced_word],[tully_word],[catiline_word]])?
+;
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+
+write("Next should be TRUE")?
+
+qqqq(believes_words_objects, tom, now,
+     [[denounced_word, denounced],
+      [cicero_word, cicero],
+      [catiline_word, catiline]])?
+;
+	
+write("Next should be FALSE")?
+
+qqqq(believes_words_objects, tom, now,
+     [[denounced_word, denounced],
+      [tully_word, cicero],
+      [catiline_word, catiline]])?
+;
+
+	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 write("Next should be TRUE")?
 

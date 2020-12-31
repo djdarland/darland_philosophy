@@ -15,18 +15,18 @@
 
 %% You should have received a copy of the GNU General Public License
 %% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
-
-load("FACTS/common_facts_2017_0001.lf")?
-load("FACTS/common_facts_2017_0002.lf")?
-load("FACTS/common_facts_2017_0003.lf")?
-load("FACTS/common_facts_2017_0004.lf")?
-load("RULES/common_2017_0001.lf")?
-load("RULES/common_2017_0002.lf")?
-load("RULES/common_2017_0003.lf")?
-load("RULES/common_2017_0004.lf")?
-load("RULES/common_2017_0005.lf")?
-load("RULES/life_2017_0001.lf")?
-load("RULES/life_2017_0002.lf")?
+dynamic(qqqq0?
+load("FACTS2/facts_0001.lf")?
+load("FACTS2/facts_0002.lf")?
+load("FACTS2/facts_0003.lf")?
+load("FACTS2/facts_0004.lf")?
+load("RULES2/rules_0001.lf")?
+load("RULES2/rules_0002.lf")?
+load("RULES2/rules_0003.lf")?
+load("RULES2/rules_0004.lf")?
+load("RULES2/rules_0005.lf")?
+load("RULES2/life_0001.lf")?
+load("RULES2/life_0002.lf")?
 trace_input(true)?
 
 write_time(Ignore)?

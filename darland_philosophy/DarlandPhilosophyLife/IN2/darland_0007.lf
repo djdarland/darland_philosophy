@@ -21,12 +21,13 @@
 %% In Wilidife extra ";" are echoed but otherwise ignored - in Prolog they 
 %% cause errors.
 %%
-load("FACTS/common_facts_2017_0001.lf")?
-load("FACTS/common_facts_2017_0002.lf")?
-load("FACTS/common_facts_2017_0003.lf")?
-load("RULES/common_2017_0001.lf")?
-load("RULES/common_2017_0002.lf")?
-load("RULES/life_2017_0001.lf")?
+dynamic(qqqq)?
+load("FACTS2/facts_0001.lf")?
+load("FACTS2/facts_0002.lf")?
+load("FACTS2/facts_0003.lf")?
+load("RULES2/rules_0001.lf")?
+load("RULES2/rules_0002.lf")?
+load("RULES2/life_0001.lf")?
 trace_input(true)?
 
 write_time(Ignore)?

@@ -39,7 +39,7 @@
 %% different). quine might share, however the word cicero_word with tom.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-%% believes_ideas and believes_words are the only primitive belief relations
+%% believes_ideas is the only primitive belief relation
 %% needed.
 %% I define several others in terms of them. 
 %%

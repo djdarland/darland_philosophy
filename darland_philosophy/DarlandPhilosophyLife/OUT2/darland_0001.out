@@ -22,7 +22,7 @@
 *** Yes
 > 
 *** Yes
-> Wed 30 Dec 2020 02:44:26 AM CST
+> Thu 31 Dec 2020 04:46:44 AM CST
 > write_time(Ignore)?
 0
 *** Yes
@@ -40,6 +40,190 @@ There will be subsequient No responses - as I have asked for more answers with s
 *** Yes
 > > 
 > 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+> 
+> write("Next should be believed")?
+Next should be believed
+*** Yes
+> > qqqq(believes_objects, tom, now, [[denounced], [cicero], [catiline]])?
+tom believes [tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+*** Yes
+--1> 
+
+*** No
+> 	
+> write("Next should not be believed")?
+Next should not be believed
+*** Yes
+> > qqqq(believes_objects, tom, now, [[denounced], [cicero], [cicero]])?
+
+*** No
+> ;
+> 	
+> write("Next should be FALSE - NONSENSE - there is no tully - objects only have one name in WildLIFE")?
+Next should be FALSE - NONSENSE - there is no tully - objects only have one name in WildLIFE
+*** Yes
+> > qqqq(believes_objects, tom, now, [[denounced], [tully], [catiline]])?
+
+*** No
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+> 
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_ideas_objects, tom, now, [[tom_denounced_idea, denounced],
+|    				      [tom_cicero_idea, cicero],
+|    				      [tom_catiline_idea, catiline]]
+|        )?
+tom believes [tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+*** Yes
+--1> 
+
+*** No
+> 
+> 	
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(believes_ideas_objects, tom, now, [[tom_denounced_idea, denounced],
+|    				      [tom_tully_idea, cicero],
+|    				      [tom_catiline_idea, catiline]]
+|        )?
+tom does not believe [tom_denounced_idea,tom_tully_idea,tom_catiline_idea]
+*** Yes
+--1> 
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+> 
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_words_ideas, tom, now, [[denounced_word,
+|    				       tom_denounced_idea],
+|    				      [cicero_word,
+|    				       tom_cicero_idea],
+|    				      [catiline_word,
+|    				       tom_catiline_idea]]
+|        )?
+tom believes [tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+*** Yes
+--1> 
+
+*** No
+> 
+> 	
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(believes_words_ideas, tom, now, [[denounced_word,
+|    				       tom_denounced_idea],
+|    				      [tully_word,
+|    				       tom_tully_idea],
+|    				      [catiline_word,
+|    				       tom_catiline_idea]]
+|        )?
+
+*** No
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+> 
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_words_ideas_objects, tom, now, [[denounced_word,
+|    					      tom_denounced_idea,
+|    					      denounced],
+|    					     [cicero_word,
+|    					      tom_cicero_idea,
+|    					      cicero],
+|    					     [catiline_word,
+|    					      tom_catiline_idea,
+|    					      catiline]]
+|    			   )?
+tom believes [tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+*** Yes
+--1> 
+
+*** No
+> 
+> 	
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(believes_words_ideas_objects, tom, now, [[denounced_word,
+|    					      tom_denounced_idea,
+|    					      denounced],
+|    					     [tully_word,
+|    					      tom_tully_idea,
+|    					      cicero],
+|    					     [catiline_word,
+|    					      tom_catiline_idea,
+|    					      catiline]]
+|    			   )?
+
+*** No
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+> 
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_words, tom, now,
+|         [[denounced_word],[cicero_word],[catiline_word]])?
+tom believes [tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+*** Yes
+--1> 
+
+*** No
+> 
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(believes_words, tom, now,
+|         [[denounced_word],[tully_word],[catiline_word]])?
+
+*** No
+> ;
+> 
+> 	
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+> 
+> write("Next should be TRUE")?
+Next should be TRUE
+*** Yes
+> > qqqq(believes_words_objects, tom, now,
+|         [[denounced_word, denounced],
+|          [cicero_word, cicero],
+|          [catiline_word, catiline]])?
+tom believes [tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+*** Yes
+--1> 
+
+*** No
+> 	
+> write("Next should be FALSE")?
+Next should be FALSE
+*** Yes
+> > qqqq(believes_words_objects, tom, now,
+|         [[denounced_word, denounced],
+|          [tully_word, cicero],
+|          [catiline_word, catiline]])?
+
+*** No
+> ;
+> 
+> 	
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > write("Next should be TRUE")?
 Next should be TRUE
@@ -393,10 +577,8 @@ Next should be TRUE
 |    				   [catiline]]
 |    		 )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > 
 > %% Special Tully cases
@@ -454,10 +636,8 @@ Next should be TRUE
 |    				   [catiline]]
 |    		 )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > 
 > %%% Now negative beleifs -- Still tom
@@ -515,10 +695,8 @@ Next should be TRUE
 |    				   [catiline]]
 |    		 )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > 
 > %% Special Tully cases
@@ -576,10 +754,8 @@ Next should be TRUE
 |    				   [catiline]]
 |    		 )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > 
 > 
@@ -641,10 +817,8 @@ Next should be TRUE
 |    				   [catiline]]
 |    		 )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
@@ -667,11 +841,8 @@ Next should be TRUE
 > 
 > qqqq(contradicts_object, tom, now, Object_List)?
 
-*** Yes
-Object_List = [[denounced],[cicero],[catiline]].
---1> 
-
 *** No
+> ;
 > 
 > 
 > 
@@ -731,12 +902,9 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    				   [catiline]]
 |    		 )?
 
-*** Yes
---1> 
-
-*** Yes
---1> 
 *** No
+> ;
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > qqqq(believes_word_idea_object, quine, now, [[denounced_word,
 |    					      quine_denounced_idea,
@@ -790,12 +958,9 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    				   [catiline]]
 |    		 )?
 
-*** Yes
---1> 
-
-*** Yes
---1> 
 *** No
+> ;
+> 
 > %%%%%%%%%%%%%%%%%%%%%% Next Part 2 of_orations
 > 
 > %%% First tom
@@ -842,10 +1007,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    				   [cicero]]
 |    		 )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > qqqq(believes_word_idea_object, tom, now, [[of_orations_word,
@@ -890,10 +1053,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    				   [cicero]]
 |    		 )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > %%%%%%%%%%%%%%%%%%% Next quine
 > 
@@ -940,10 +1101,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    				   [cicero]]
 |    		 )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > qqqq(believes_word_idea_object, quine, now, [[of_orations_word,
@@ -987,10 +1146,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    				   [cicero]]
 |    		 )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %%%%%%%%%%%%%%%%%%%%%% Next Part 3 of_De_Senectute
@@ -1039,10 +1196,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    				   [cicero]]
 |    		 )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > qqqq(believes_word_idea_object, tom, now, [[of_De_Senectute_word,
@@ -1087,10 +1242,8 @@ Object_List = [[denounced],[cicero],[catiline]].
 |    				   [cicero]]
 |    		 )?
 
-*** Yes
---1> 
-
 *** No
+> ;
 > 
 > %%%%%%%%%%%%%%%%%%% Next quine
 > 
@@ -1334,7 +1487,7 @@ Object_List = [[denounced],[cicero],[catiline]].
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.60932 Seconds
+Clock Time 1.60941 Seconds
 CPU Time 50 Milliseconds
 
 *** Yes

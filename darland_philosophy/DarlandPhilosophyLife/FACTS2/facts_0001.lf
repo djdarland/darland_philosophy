@@ -115,9 +115,9 @@ qqqq(ssss, quine, now, quine_roman_idea, roman).
 qqqq(ssss, quine, now, quine_not_formally_equivalent_idea, not_formally_equivalent).
 qqqq(ssss, quine, now, quine_formally_equivalent_idea, formally_equivalent).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-idea_synonym(quine, now, quine_tully_idea, quine_cicero_idea).
-idea_synonym(quine, now, quine_bachelor_idea, quine_unmarried_male_idea).
-idea_synonym(tom, now, tom_bachelor_idea, tom_unmarried_male_idea).
+qqqq(idea_synonym, quine, now, quine_tully_idea, quine_cicero_idea).
+qqqq(idea_synonym, quine, now, quine_bachelor_idea, quine_unmarried_male_idea).
+qqqq(idea_synonym, tom, now, tom_bachelor_idea, tom_unmarried_male_idea).
 
 %% There are several understands relations symbols defined in terms of the
 %% words and ideas.

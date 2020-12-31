@@ -16,11 +16,12 @@
 
 %% You should have received a copy of the GNU General Public License
 %% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
-load("RULES/life_2017_0001.lf")?    %% Rules particularly for WildLIFE
-load("RULES/life_2017_0002.lf")?    %% Rules particularly for WildLIFE
-load("FACTS/common_facts_2017_0001.lf")?
-load("FACTS/common_facts_2017_0002.lf")?
-load("RULES/common_2017_0001.lf")?  %% Rules about Understanding
+dynamic(qqqq)?
+load("RULES2/life_0001.lf")?    %% Rules particularly for WildLIFE
+load("RULES2/life_0002.lf")?    %% Rules particularly for WildLIFE
+load("FACTS2/facts_0001.lf")?
+load("FACTS2/facts_0002.lf")?
+load("RULES2/rules_0001.lf")?  %% Rules about Understanding
 
 write_time(Ignore)?
 

@@ -22,19 +22,11 @@
 %%
 %%
 
-%%    There are two primitive sorts of belief
-
-%%    One in words
-
-%%    qqqq(believes_in_words, Subject, Time,
-%%		      [Relation_Word,
-%%		      A_Word,
-%%		      B_Word,
-%%		      C_Word, ...])
+%%    There is one primitive sort of belief
 
 %%    And One in ideas
 
-%%    believes_in_ideas(Subject, Time,
+%%    qqqq(believes_in_ideas, Subject, Time,
 %%		      [Relation_Word,
 %%		      A_Idea,
 %%		      B_Idea,
@@ -57,40 +49,160 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-qqqq(BWIO, Subject, Time, Triple_List) :-
-	BWIO = believes_word_idea_object, !,
+qqqq(BIO, Subject, Time, [[Relation_Idea, Relation] | PairList]) :-
+	BIO = believes_ideas_objects, !,
 	%% list of word, idea object triples
-	qqqq(believes_in_words, Subject, Time, Word_List),
+	qqqq(ssss, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	match_idea_object_belief(Subject, Time, PairList,
+				 Arity, Type - 1, [Relation_Idea]).
+
+match_idea_object_belief(Subject, Time, [], 0, Type, Idea_List) :-
 	qqqq(believes_in_ideas, Subject, Time, Idea_List),
-	match_triple_list(Subject, Time,
-			  Word_List,
-			  Idea_List,
-			  [],
-			  Triple_List).
+	write(Subject, " believes ",Idea_List).
 
-match_triple_list(Subject, Time,  
-		    [],
-		    [],
-		    Triple_List_In,
-		    Triple_List) :-
-	Triple_List = Triple_List_In.
 
-match_triple_list(Subject, Time, 
-		    [Word_Head | Word_Tail],
-		    [Idea_Head | Idea_Tail],
-		    Triple_List_In,
-		    Triple_List) :-
-    qqqq(rrrr, Subject, Time, Word_Head, Idea_Head),
-    qqqq(ssss, Subject, Time, Idea_Head, Object),
-    app2(Triple_List_In, [[Word_Head, Idea_Head, Object]]) = Triple_List_In_2,
-    match_triple_list(Subject, Time,
-			Word_Tail,
-			Idea_Tail,
-			Triple_List_In_2,
-			Triple_List).
+match_idea_object_belief(Subject, Time, [], 0, Type, Idea_List) :-
+	\+(qqqq(believes_in_ideas, Subject, Time, Idea_List)),
+	write(Subject, " does not believe ",Idea_List).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% -999 indicates arbitrary arity.
+match_idea_object_belief(Subject, Time, [], -999, Idea_List) :-
+	cond(qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	write(Subject, " believes ",Idea_List),
+	write(Subject, " does not believe ",Idea_List)).
+
+match_idea_object_belief(Subject, Time,
+			 [[Idea, Object] | PairList],
+			 Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	qqqq(ssss, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
+	%	write(word,Word,idea,Idea,object,Object),
+	%	write(arity,Arity,type,Type),
+	%	write(triplelist,TripleList),
+	%	write(idea_list, Idea_List, idea, [Idea]),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_idea_object_belief(Subject, Time,
+				 PairList,
+				 % if Arity is not Arbitrary sub 1
+				 cond(Arity =\= -999, Arity - 1,
+				      -999),
+				 Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+qqqq(BO, Subject, Time, [[Relation] | List]) :-
+	BO = believes_objects, !,
+	%% list of word, idea object triples
+	qqqq(ssss, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	match_object_belief(Subject, Time, List,
+			    Arity, Type - 1, [Relation_Idea]).
+
+match_object_belief(Subject, Time, [], 0, Type, Idea_List) :-
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	write(Subject, " believes ",Idea_List).
+
+%% -999 indicates arbitrary arity.
+match_object_belief(Subject, Time, [], -999, Idea_List) :-
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	write(Subject, " believes ",Idea_List).
+
+match_object_belief(Subject, Time,
+		    [[Object] | List],
+		    Arity, Type, Idea_List) :-
+	% List of Objects.
+	qqqq(ssss, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
+	%	write(word,Word,idea,Idea,object,Object),
+	%	write(arity,Arity,type,Type),
+	%	write(triplelist,TripleList),
+	%	write(idea_list, Idea_List, idea, [Idea]),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_object_belief(Subject, Time,
+			    List,
+			    % if Arity is not Arbitrary sub 1
+			    cond(Arity =\= -999, Arity - 1,
+				 -999),
+			    Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+qqqq(BWIO, Subject, Time, [[Relation_Word, Relation_Idea, Relation] | TripleList]) :-
+	BWIO = believes_words_ideas_objects, !,
+	%% list of word, idea object triples
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+%	write(relation_idea, Relation_Idea),
+	qqqq(ssss, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	match_triple_word_idea_object_belief(Subject, Time, TripleList,
+					     Arity, Type - 1, [Relation_Idea]).
+
+match_triple_word_idea_object_belief(Subject, Time, [], 0, Type, Idea_List) :-
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	write(Subject, " believes ",Idea_List).
+
+
+%% -999 indicates arbitrary arity.
+match_triple_word_idea_object_belief(Subject, Time, [], -999, Idea_List) :-
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	write(Subject, " believes ",Idea_List).
+
+match_triple_word_idea_object_belief(Subject, Time,
+				     [[Word, Idea, Object] | TripleList],
+				     Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(ssss, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
+%	write(word,Word,idea,Idea,object,Object),
+%	write(arity,Arity,type,Type),
+%	write(triplelist,TripleList),
+%	write(idea_list, Idea_List, idea, [Idea]),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_triple_word_idea_object_belief(Subject, Time,
+					     TripleList,
+					     % if Arity is not Arbitrary sub 1
+					     cond(Arity =\= -999, Arity - 1,
+						  -999),
+					     Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+qqqq(BW, Subject, Time, [[Relation_Word] | List]) :-
+	BW = believes_words, !,
+	%% list of words
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	match_word_belief(Subject, Time, List,
+			  Arity, Type - 1, [Relation_Idea]).
+
+match_word_belief(Subject, Time, [], 0, Type, Idea_List) :-
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	write(Subject, " believes ", Idea_List).
+
+%% -999 indicates arbitrary arity.
+match_word_belief(Subject, Time, [], -999, Idea_List) :-
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	write(Subject, " believes ",Idea_List).
+
+match_word_belief(Subject, Time,
+		  [[Word] | List],
+		  Arity, Type, Idea_List) :-
+	% List of Word Idea Pair.
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(type_idea, Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_belief(Subject, Time,
+			  List,
+			  % if Arity is not Arbitrary sub 1
+			  cond(Arity =\= -999, Arity - 1,
+			       -999),
+			  Type, Idea_List_Out).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -103,38 +215,49 @@ match_triple_list(Subject, Time,
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-qqqq(BWO, Subject, Time, Pair_List) :-
-	BWO = believes_word_object, !,
+qqqq(BWO, Subject, Time, [[Relation_Word, Relation] | Pair_List]) :-
+%	write(relation_word, Relation_Word),
+%	write(relation, Relation),
+	BWO = believes_words_objects, !,
 	%% list of word, idea object pairs
-	qqqq(believes_in_words, Subject, Time, Word_List),
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(ssss, Subject, Time, Relation_Idea, Relation),
+%	write(relation_idea, Relation_Idea),
+%	write(relation, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+%	write(arity, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+%	write(type, Type),
+	match_word_object_belief(Subject, Time, Pair_List,
+			       Arity, Type - 1, [Relation_Idea]).
+
+match_word_object_belief(Subject, Time, [], 0, Type, Idea_List) :-
 	qqqq(believes_in_ideas, Subject, Time, Idea_List),
-	match_pair_list(Subject, Time,
-			  Word_List,
-			  Idea_List,
-			  [],
-			  Pair_List).
+	write(Subject, " believes ",Idea_List).
 
-match_pair_list(Subject, Time, 
-		  [],
-		  [],
-		  Pair_List_In,
-		  Pair_List) :-
-	Pair_List = Pair_List_In.
+%% -999 indicates arbitrary arity.
+match_word_object_belief(Subject, Time, [], -999, Idea_List) :-
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	write(Subject, " believes ",Idea_List).
 
-match_pair_list(Subject, Time, 
-		  [Word_Head | Word_Tail],
-		  [Idea_Head | Idea_Tail],
-		  Pair_List_In,
-		  Pair_List) :-
-	qqqq(rrrr, Subject, Time, Word_Head, Idea_Head),
-	qqqq(ssss, Subject, Time, Idea_Head, Object),
-	app2(Pair_List_In, [[Word_Head, Object]]) = Pair_List_In_2,
-	match_pair_list(Subject, Time,
-			  Word_Tail,
-			  Idea_Tail,
-			  Pair_List_In_2,
-			  Pair_List).
+match_word_object_belief(Subject, Time,
+			 [[Word, Object] | Pair_List],
+			 Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(ssss, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
+	%	write(word,Word,idea,Idea,object,Object),
+	%	write(arity,Arity,type,Type),
+	%	write(triplelist,TripleList),
+	%	write(idea_list, Idea_List, idea, [Idea]),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_object_belief(Subject, Time,
+				 Pair_List,
+				 % if Arity is not Arbitrary sub 1
+				 cond(Arity =\= -999, Arity - 1,
+				      -999),
+				 Type, Idea_List_Out).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -152,37 +275,46 @@ match_pair_list(Subject, Time,
 % This amounts to the correct rrrr relations holding.
 % There might not even be corresponding objects.
 
+qqqq(BWI, Subject, Time, [[Relation_Word, Relation_Idea] | PairList]) :-
+	BWI = believes_words_ideas, !,
+	%% list of word, idea pairs
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	%	write(relation_idea, Relation_Idea),
+	qqqq(ssss, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	match_word_idea_belief(Subject, Time, PairList,
+			       Arity, Type - 1, [Relation_Idea]).
+
+match_word_idea_belief(Subject, Time, [], 0, Type, Idea_List) :-
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	write(Subject, " believes ",Idea_List).
 
 
-qqqq(BWI, Subject, Time, Pair_List) :-
-	%% list of word, idea object pairs
-	BWI = believes_word_idea, !,
-	qqqq(believes_in_words, Subject, Time, Word_List),
-	match_WI_pair_list(Subject, Time,
-			     Word_List,
-			     [],
-			     Pair_List).
+%% -999 indicates arbitrary arity.
+match_word_idea_belief(Subject, Time, [], -999, Idea_List) :-
+	qqqq(believes_in_ideas, Subject, Time, Idea_List),
+	write(Subject, " believes ",Idea_List).
 
-match_WI_pair_list(Subject, Time, 
-		    [],
-		     Pair_List_In,
-		     Pair_List) :-
-	Pair_List = Pair_List_In.
+match_word_idea_belief(Subject, Time,
+		       [[Word, Idea] | PairList],
+		       Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(type_idea, Idea, Type),
+	%	write(word,Word,idea,Idea,object,Object),
+	%	write(arity,Arity,type,Type),
+	%	write(triplelist,TripleList),
+	%	write(idea_list, Idea_List, idea, [Idea]),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_idea_belief(Subject, Time,
+			       PairList,
+			       % if Arity is not Arbitrary sub 1
+			       cond(Arity =\= -999, Arity - 1,
+				    -999),
+			       Type, Idea_List_Out).
 
-match_WI_pair_list(Subject, Time, 
-		     [Word_Head | Word_Tail],
-		     Pair_List_In,
-		     Pair_List) :-
-	qqqq(rrrr, Subject, Time, Type_X1, Word_Head, Idea),
-	app2(Pair_List_In, [[Word_Head, Idea]]) = Pair_List_In_2,
-	match_WI_pair_list(Subject, Time,
-			     Word_Tail,
-			     Pair_List_In_2,
-			     Pair_List).
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -192,69 +324,6 @@ match_WI_pair_list(Subject, Time,
 %
 % This amounts to the correct ssss relations holding.
 % There might not even be corresponding words.
-
-qqqq(BIO, Subject, Time, Pair_List) :-
-	%% list of idea, idea object pairs
-	BIO = believes_idea_object, !,
-	qqqq(believes_in_ideas, Subject, Time, Idea_List),
-	match_IO_pair_list(Subject, Time,
-			     Idea_List,
-			     [],
-			     Pair_List).
-
-match_IO_pair_list(Subject, Time, 
-		     [],
-		     Pair_List_In,
-		     Pair_List) :-
-	Pair_List = Pair_List_In.
-
-match_IO_pair_list(Subject, Time, 
-		     [Idea_Head | Idea_Tail],
-		     Pair_List_In,
-		     Pair_List) :-
-	qqqq(ssss, Subject, Time, Type_X1, Idea_Head, Object),
-	app2(Pair_List_In, [[Idea_Head, Object]]) = Pair_List_In_2,
-	match_IO_pair_list(Subject, Time,
-			     Idea_Tail,
-			     Pair_List_In_2,
-			     Pair_List).
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% if a person believes about objects then:
-% they must have the correct relation among their ideas
-% and understand the relation between the ideas and objects.
-%
-% This amounts to the correct ssss relations holding.
-% There might not even be corresponding words.
-
-
-qqqq(BO, Subject, Time, Object_List) :-
-	%% list of idea, idea object pairs
-	BO = believes_object, !,
-	qqqq(believes_in_ideas, Subject, Time, Idea_List),
-	match_O_list(Subject, Time,
-		       Idea_List,
-		       [],
-		       Object_List).
-
-match_O_list(Subject, Time, 
-		    [],
-		    Pair_List_In,
-		    Pair_List) :-
-    Pair_List = Pair_List_In.
-
-match_O_list(Subject, Time, 
-	       [Idea_Head | Idea_Tail],
-	       Pair_List_In,
-	       Pair_List) :-
-	qqqq(ssss, Subject, Time, Idea_Head, Object),
-	app2(Pair_List_In, [[Object]]) = Pair_List_In_2,
-	match_O_list(Subject, Time, 
-		       Idea_Tail,
-		       Pair_List_In_2,
-		       Pair_List).
 
 
 
@@ -333,14 +402,14 @@ qqqq(BNWI, Subject, Time, Pair_List) :-
 % This amounts to the correct ssss relations holding.
 % There might not even be corresponding words.
 
-qqqq(BNIO, Subject, Time, Pair_List) :-
-    %% list of idea, idea object pairs
-    BNIO =  believes_not_idea_object, !,
-    qqqq(believes_not_in_ideas, Subject, Time, Idea_List),
-    match_IO_pair_list(Subject, Time,
-			Idea_List,
-			[],
-			Pair_List).
+%qqqq(BNIO, Subject, Time, Pair_List) :-
+%    %% list of idea, idea object pairs
+%    BNIO =  believes_not_idea_object, !,
+%    qqqq(believes_not_in_ideas, Subject, Time, Idea_List),
+%    match_IO_pair_list(Subject, Time,
+%			Idea_List,
+%			[],
+%			Pair_List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -352,14 +421,14 @@ qqqq(BNIO, Subject, Time, Pair_List) :-
 % There might not even be corresponding words.
 
 
-qqqq(BNO, Subject, Time, Object_List) :-
-	%% list of idea, idea object pairs
-	BNO = believes_not_object, !,
-	qqqq(believes_not_in_ideas, Subject, Time, Idea_List),
-	match_O_list(Subject, Time,
-		       Idea_List,
-		       [],
-		       Object_List).
+%qqqq(BNO, Subject, Time, Object_List) :-
+%	%% list of idea, idea object pairs
+%	BNO = believes_not_object, !,
+%	qqqq(believes_not_in_ideas, Subject, Time, Idea_List),
+%	match_O_list(Subject, Time,
+%		       Idea_List,
+%		       [],
+%		       Object_List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Now Contradicting beliefs!!
