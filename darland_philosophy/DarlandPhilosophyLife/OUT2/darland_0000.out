@@ -10,7 +10,7 @@
 *** Yes
 > 
 *** Yes
-> Tue 29 Dec 2020 01:19:24 AM CST
+> Thu 14 Jan 2021 01:07:59 AM CST
 > write_time(Ignore)?
 0
 *** Yes
@@ -367,7 +367,7 @@ Next should be TRUE
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.60923 Seconds
+Clock Time 1.61061 Seconds
 CPU Time 0 Milliseconds
 
 *** Yes

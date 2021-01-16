@@ -1,4 +1,4 @@
-%% Copyright (C) 2017, 2019, 2020 Dennis J. Darland
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
 
@@ -18,49 +18,55 @@
 %% Started Writing 1/4/2017 
 %% This is a total rewrite of what I started about 10 years ago.
 %% 
-%% This file is identical (actually linked with the Linux ln command).
-%% as common_2017_0001.pl for prolog and common_2017_0001.lf for Life
-%% 
 %%
-%% I have made the propositional attitude relatons support an arity up to 26.
+%% I have made the propositional attitude relatons support arbitrary arity.
 %%
 %%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Define sense (close to Frege's Sinn) (useless)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 sense_of_relation(Idea) :- qqqq(ssss, Subject, Time, Idea, Relation).
 
-sense_of_object(Idea) :- qqqq(ssss, Subject, Time, Idea, A_Object).
+sense_of_object(Idea) :- qqqq(ssss, Subject, Time, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% rrrr is relation between relation word & relation idea.
-%% ssss is relation between relation idea & relation itself.
+%% qqqq is the only relation having ontological status.
+%% qqqq is the exemplification of a universal in the following arguments.
+
+%% some possible arguments (universals) are rrrr, ssss, and rrss.
+%% rrss is defined in terms of rrrr and ssss.
+%% rrrr and ssss are undefined here
+%% - but not neverssarily ontologically primitive 
 
 %% rrrr is relation between word and idea.
 %% ssss is relation between idea and object.
 
 %% rrss is relative product of rrrr and ssss.
-%% rrss is relative product of rrrr and ssss.
-%%%% Ignoring common arguments
-
-%% Thus
-%% rrss is relation between relation word and relation itself.
-%% rrss is relation between word and object
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% definition of rrss in terms of rrrr and ssss.
+%% Note: qqqq is a dynamic predicate in WildLIFE - so it can be extended.
+
 qqqq(RRSS, Subject, Time, Word, Object) :-
-	RRSS = rrss, !,
+	RRSS = rrss,
 	qqqq(rrrr, Subject, Time, Word, Idea),
 	qqqq(ssss, Subject, Time, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% understands_words_objects is defined.
+%% It applies to an intelligent Subject at some Time.
+%% There is a list of pairs (starting with relational) words and objects.
+%% The arity_relation must match the number of pairs following the relation
+%% pair. (Or an arity_relation of -999 matches any number of pairs.)
+%% The type objects of the following pairs must be one less thasn the type of
+%% the relation.
+
 qqqq(UWO, Subject, Time, [[Relation_Word, Relation] | PairList]) :-
-	UWO = understands_words_objects, !,
+	UWO = understands_words_objects,
 	qqqq(rrss, Subject, Time, Relation_Word, Relation),
 	qqqq(arity_relation, Relation, Arity),
 	qqqq(type_object, Relation, Type),
@@ -68,10 +74,15 @@ qqqq(UWO, Subject, Time, [[Relation_Word, Relation] | PairList]) :-
 	% Objects should be Type one less than Type of Relation
 	match_pair_word_object(Subject, Time, PairList, Arity, Type - 1).
 
+%% The following are auxilary predicates - they have no ontological
+%% Significance.
+%% I think they could be implimented as qqqq.
+%% But there is no need and I suspect it is more efficient not to do so.
+
 match_pair_word_object(Subject, Time, [], 0, Type).
 
 %% -999 indicates arbitrary arity.
-match_pair_word_object(Subject, Time, [], -999, Type).
+% match_pair_word_object(Subject, Time, [], -999, Type).
 
 match_pair_word_object(Subject, Time, [[Word, Object] | PairList],
 		       Arity, Type) :-
@@ -85,9 +96,19 @@ match_pair_word_object(Subject, Time, [[Word, Object] | PairList],
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% The following are other forms of understanding.
+%% I could copy, paste & edit the comments.
+%% But I will rely on the readers intelligence.
+%% It is better to be sure the above is correct.
+%% And to reduce the amount of editing it there are changes.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 qqqq(UWIO, Subject, Time, [[Relation_Word, Relation_Idea, Relation] |
 			   TripleList]) :-
-	UWIO = understands_words_ideas_objects, !,
+	UWIO = understands_words_ideas_objects, 
 	% List of Word Idea_Object Triples.
 	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
 	qqqq(ssss, Subject, Time, Relation_Idea, Relation),
@@ -116,14 +137,43 @@ match_triple_word_idea_object_relation(Subject, Time,
 					       Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+qqqq(UWI, Subject, Time, [[Relation_Word, Relation_Idea] |
+			   PairList]) :-
+	UWIO = understands_words_ideas_objects, 
+	% List of Word Idea Pairs.
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	match_word_idea_relation(Subject, Time, PairList,
+					      Arity, Type - 1).
 
-understands_ideas_objects(Subject, Time,
-			  [[Relation_Idea, Relation] | PairList]) :-
+match_word_idea_relation(Subject, Time, [], 0, Type).
+
+%% -999 indicates arbitrary arity.
+match_word_idea_relation(Subject, Time, [], -999, Type).
+
+match_word_idea_relation(Subject, Time,
+				       [[Word, Idea] | PairList],
+				       Arity, Type) :-
+	% List of Word Idea Object Pair.
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(type_idea, Idea, Type),
+	match_word_idea_relation(Subject, Time,
+					       PairList,
+					       % if Arity is not Arbitrary sub 1
+					       cond(Arity =\= -999, Arity - 1,
+						    -999),
+					       Type).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+qqqq(UIO, Subject, Time, [[Relation_Idea, Relation] | PairList]) :-
+	UIO = understands_ideas_objects, 
 	% List of Word Object Pairs.
 	qqqq(ssss, Subject, Time, Relation_Idea, Relation),
-	qqqq(arity_relation, Relation, Arity),
-	qqqq(type_object, Relation, Type),
-	match_pair_idea_relation(Subject, Time, PairList, Arity, Type - 1).
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	match_pair_idea_object_relation(Subject, Time, PairList, Arity, Type - 1).
 
 match_pair_idea_object_relation(Subject, Time, [], -999, Type).
 
@@ -133,7 +183,7 @@ match_pair_idea_object_relation(Subject, Time, [[Idea, Object] | PairList],
 			       Arity, Type) :-
 	% List of Word Object Pairs.
 	qqqq(ssss, Subject, Time, Idea, Object),
-	qqqq(type_object, Object, Type),
+	qqqq(type_idea, Idea, Type),
 	match_pair_idea_object_relation(Subject, Time, PairList,
 					% if Arity is not Arbitrary sub 1
 					cond(Arity =\= -999, Arity - 1, -999),
@@ -141,9 +191,15 @@ match_pair_idea_object_relation(Subject, Time, [[Idea, Object] | PairList],
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-qqqq(USO, Subject_1, Time_1, Pair_List1, Subject_2, Time_2, Pair_List2) :-
-	USO = subjects_understand_same_objects_by_ideas, !,
+qqqq(USIOA, Subject_1, Time_1, [[Idea_1, Object_1] | Pair_List1],
+     Subject_2, Time_2, [[Idea_2, Object_2] | Pair_List2]) :-
+	write(usoA, USIOA), nl,
+	USIOA = understand_same_objects_by_ideas, 
 	% List of Word Object Pairs.
+	write(usoA, USIOA), nl,
+	qqqq(ssss, Subject_1, Time_1, Idea_1, Object_1),
+	qqqq(ssss, Subject_2, Time_2, Idea_2, Object_2),
+	Object_1 = Object2,
 	match_same_pair_idea_object_relation(Subject_1, Time_1, Pair_List1, 
 					     Subject_2, Time_2, Pair_List2).
 
@@ -166,7 +222,7 @@ match_same_pair_idea_object_relation(Subject_1, Time_1,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 qqqq(SUSOW, Subject_1, Time_1, Pair_List1, Subject_2, Time_2, Pair_List2) :-
-	SUSOW = subjects_understand_same_objects_by_words, !,
+	SUSOW = subjects_understand_same_objects_by_words, 
 	% List of Word Object Pairs.
 	match_same_pair_word_object_relation(Subject_1, Time_1, Pair_List1, 
 					     Subject_2, Time_2, Pair_List2).
@@ -188,6 +244,11 @@ match_same_pair_word_object_relation(Subject_1, Time_1,
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The following is very preliminary.
+%% I need to go over it all again.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Rules on Philosophical Terminology
 

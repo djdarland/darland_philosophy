@@ -32,29 +32,14 @@ trace_input(true)?
 
 write_time(Ignore)?
 
-remark(3001, Remark)?
+qqqq(believes_in_ideas, Subject, Time, List)?
+;
+;
+;	
+;	  
+write(hell)?	
+	
 
-remark(3002, Remark)?
-
-remark(3003, Remark)?
-
-remark(3004, Remark)?
-
-remark(3005, Remark)?
-
-remark(3006, Remark)?
-
-remark(3007, Remark)?
-
-remark(3008, Remark)?
-
-remark(3009, Remark)?
-
-quote_note(br0008, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
-
-quote_note(br0009, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 qqqq(believes_in_ideas, Subject, Time, [Relation_Idea, A_Idea])?
 ;
 ;
@@ -87,6 +72,8 @@ qqqq(believes_in_ideas, Subject, Time, [Relation_Idea, A_Idea])?
 ;
 ;
 
+halt?
+	
 qqqq(believes_word_idea_object, Subject, Time, Triple_List)?
 ;
 ;
@@ -464,6 +451,29 @@ qqqq(believes_object, Subject, Time, List)?
 ;
 ;
 
+remark(3001, Remark)?
+
+remark(3002, Remark)?
+
+remark(3003, Remark)?
+
+remark(3004, Remark)?
+
+remark(3005, Remark)?
+
+remark(3006, Remark)?
+
+remark(3007, Remark)?
+
+remark(3008, Remark)?
+
+remark(3009, Remark)?
+
+quote_note(br0008, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+quote_note(br0009, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 write_stats(Ignore)?

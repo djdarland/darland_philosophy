@@ -64,11 +64,23 @@ write("There will be subsequient No responses - as I have asked for more answers
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
 
+write("Next should be TRUE")?
+
+qqqq(believes_ideas_objects, tom, now, [[tom_denounced_idea, denounced],
+				      [tom_cicero_idea, cicero],
+				      [tom_catiline_idea, catiline]]
+    )?
+;
+
+halt?
+
 write("Next should be believed")?
 
 qqqq(believes_objects, tom, now, [[denounced], [cicero], [catiline]])?
 ;
-	
+
+halt?
+
 write("Next should not be believed")?
 
 qqqq(believes_objects, tom, now, [[denounced], [cicero], [cicero]])?
@@ -81,15 +93,6 @@ qqqq(believes_objects, tom, now, [[denounced], [tully], [catiline]])?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-
-write("Next should be TRUE")?
-
-qqqq(believes_ideas_objects, tom, now, [[tom_denounced_idea, denounced],
-				      [tom_cicero_idea, cicero],
-				      [tom_catiline_idea, catiline]]
-    )?
-;
-
 	
 write("Next should be FALSE")?
 
