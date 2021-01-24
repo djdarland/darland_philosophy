@@ -26,9 +26,9 @@
 %% Define sense (close to Frege's Sinn) (useless)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-sense_of_relation(Idea) :- qqqq(ssss, Subject, Time, Idea, Relation).
+sense_of_relation(Idea) :- ssss(Subject, Time, Idea, Relation).
 
-sense_of_object(Idea) :- qqqq(ssss, Subject, Time, Idea, Object).
+sense_of_object(Idea) :- ssss(Subject, Time, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -50,10 +50,9 @@ sense_of_object(Idea) :- qqqq(ssss, Subject, Time, Idea, Object).
 %% definition of rrss in terms of rrrr and ssss.
 %% Note: qqqq is a dynamic predicate in WildLIFE - so it can be extended.
 
-qqqq(RRSS, Subject, Time, Word, Object) :-
-	RRSS = rrss,
-	qqqq(rrrr, Subject, Time, Word, Idea),
-	qqqq(ssss, Subject, Time, Idea, Object).
+rrss(Subject, Time, Word, Object) :-
+	rrrr(Subject, Time, Word, Idea),
+	ssss(Subject, Time, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -65,31 +64,55 @@ qqqq(RRSS, Subject, Time, Word, Object) :-
 %% The type objects of the following pairs must be one less thasn the type of
 %% the relation.
 
-qqqq(UWO, Subject, Time, [[Relation_Word, Relation] | PairList]) :-
-	UWO = understands_words_objects,
-	qqqq(rrss, Subject, Time, Relation_Word, Relation),
-	qqqq(arity_relation, Relation, Arity),
-	qqqq(type_object, Relation, Type),
+understands_words_objects(Subject, Time, [[Relation_Word, Relation] | PairList]) :-
+	rrss(Subject, Time, Relation_Word, Relation),
+	arity_relation(Relation, Arity),
+	type_object(Relation, Type),
 	% List of Word Object Pairs.
 	% Objects should be Type one less than Type of Relation
 	match_pair_word_object(Subject, Time, PairList, Arity, Type - 1).
 
 %% The following are auxilary predicates - they have no ontological
 %% Significance.
-%% I think they could be implimented as qqqq.
-%% But there is no need and I suspect it is more efficient not to do so.
 
 match_pair_word_object(Subject, Time, [], 0, Type).
 
 %% -999 indicates arbitrary arity.
-% match_pair_word_object(Subject, Time, [], -999, Type).
+match_pair_word_object(Subject, Time, [], -999, Type).
 
 match_pair_word_object(Subject, Time, [[Word, Object] | PairList],
 		       Arity, Type) :-
 	% List of Word Object Pairs.
-	qqqq(rrss, Subject, Time, Word, Object),
-	qqqq(type_object, Object, Type),
+	rrss(Subject, Time, Word, Object),
+	type_object(Object, Type),
 	match_pair_word_object(Subject, Time, PairList,
+			       % if Arity is not Arbitrary sub 1
+			       cond(Arity =\= -999, Arity - 1, -999),
+			       Type).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+understands_words_ideas(Subject, Time, [[Relation_Word, Relation_idea] | PairList]) :-
+	rrrr(Subject, Time, Relation_Word, Relation_Idea),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	% List of Word Object Pairs.
+	% Objects should be Type one less than Type of Relation
+	match_pair_word_idea(Subject, Time, PairList, Arity, Type - 1).
+
+%% The following are auxilary predicates - they have no ontological
+%% Significance.
+
+match_pair_word_idea(Subject, Time, [], 0, Type).
+
+%% -999 indicates arbitrary arity.
+match_pair_word_object(Subject, Time, [], -999, Type).
+
+match_pair_word_idea(Subject, Time, [[Word, Idea] | PairList],
+		       Arity, Type) :-
+	% List of Word Object Pairs.
+	rrrr(Subject, Time, Word, Idea),
+	type_idea(Idea, Type),
+	match_pair_word_idea(Subject, Time, PairList,
 			       % if Arity is not Arbitrary sub 1
 			       cond(Arity =\= -999, Arity - 1, -999),
 			       Type).
@@ -106,14 +129,12 @@ match_pair_word_object(Subject, Time, [[Word, Object] | PairList],
 
 
 
-qqqq(UWIO, Subject, Time, [[Relation_Word, Relation_Idea, Relation] |
-			   TripleList]) :-
-	UWIO = understands_words_ideas_objects, 
+understands_words_ideas_objects(Subject, Time, [[Relation_Word, Relation_Idea, Relation] | TripleList]) :-
 	% List of Word Idea_Object Triples.
-	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
-	qqqq(ssss, Subject, Time, Relation_Idea, Relation),
-	qqqq(arity_relation, Relation, Arity),
-	qqqq(type_object, Relation, Type),
+	rrrr(Subject, Time, Relation_Word, Relation_Idea),
+	ssss(Subject, Time, Relation_Idea, Relation),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
 	match_triple_word_idea_object_relation(Subject, Time, TripleList,
 					      Arity, Type - 1).
 
@@ -126,9 +147,9 @@ match_triple_word_idea_object_relation(Subject, Time,
 				       [[Word, Idea, Object] | TripleList],
 				       Arity, Type) :-
 	% List of Word Idea Object Triple.
-	qqqq(rrrr, Subject, Time, Word, Idea),
-	qqqq(ssss, Subject, Time, Idea, Object),
-	qqqq(type_object, Object, Type),
+	rrrr(Subject, Time, Word, Idea),
+	ssss(Subject, Time, Idea, Object),
+	type_idea(Idea, Type),
 	match_triple_word_idea_object_relation(Subject, Time,
 					       TripleList,
 					       % if Arity is not Arbitrary sub 1
@@ -137,13 +158,12 @@ match_triple_word_idea_object_relation(Subject, Time,
 					       Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-qqqq(UWI, Subject, Time, [[Relation_Word, Relation_Idea] |
+understands_words_ideas_objects(Subject, Time, [[Relation_Word, Relation_Idea] |
 			   PairList]) :-
-	UWIO = understands_words_ideas_objects, 
 	% List of Word Idea Pairs.
-	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
-	qqqq(arity_idea, Relation_Idea, Arity),
-	qqqq(type_idea, Relation_Idea, Type),
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
 	match_word_idea_relation(Subject, Time, PairList,
 					      Arity, Type - 1).
 
@@ -156,8 +176,8 @@ match_word_idea_relation(Subject, Time,
 				       [[Word, Idea] | PairList],
 				       Arity, Type) :-
 	% List of Word Idea Object Pair.
-	qqqq(rrrr, Subject, Time, Word, Idea),
-	qqqq(type_idea, Idea, Type),
+	rrrr( Subject, Time, Word, Idea),
+	type_idea( Idea, Type),
 	match_word_idea_relation(Subject, Time,
 					       PairList,
 					       % if Arity is not Arbitrary sub 1
@@ -167,12 +187,11 @@ match_word_idea_relation(Subject, Time,
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-qqqq(UIO, Subject, Time, [[Relation_Idea, Relation] | PairList]) :-
-	UIO = understands_ideas_objects, 
+understands_ideas_objects( Subject, Time, [[Relation_Idea, Relation] | PairList]) :-
 	% List of Word Object Pairs.
-	qqqq(ssss, Subject, Time, Relation_Idea, Relation),
-	qqqq(arity_idea, Relation_Idea, Arity),
-	qqqq(type_idea, Relation_Idea, Type),
+	ssss( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
 	match_pair_idea_object_relation(Subject, Time, PairList, Arity, Type - 1).
 
 match_pair_idea_object_relation(Subject, Time, [], -999, Type).
@@ -182,8 +201,8 @@ match_pair_idea_object_relation(Subject, Time, [], 0, Type).
 match_pair_idea_object_relation(Subject, Time, [[Idea, Object] | PairList],
 			       Arity, Type) :-
 	% List of Word Object Pairs.
-	qqqq(ssss, Subject, Time, Idea, Object),
-	qqqq(type_idea, Idea, Type),
+	ssss( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
 	match_pair_idea_object_relation(Subject, Time, PairList,
 					% if Arity is not Arbitrary sub 1
 					cond(Arity =\= -999, Arity - 1, -999),
@@ -191,14 +210,13 @@ match_pair_idea_object_relation(Subject, Time, [[Idea, Object] | PairList],
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-qqqq(USIOA, Subject_1, Time_1, [[Idea_1, Object_1] | Pair_List1],
+understand_same_objects_by_ideas( Subject_1, Time_1, [[Idea_1, Object_1] | Pair_List1],
      Subject_2, Time_2, [[Idea_2, Object_2] | Pair_List2]) :-
-	write(usoA, USIOA), nl,
-	USIOA = understand_same_objects_by_ideas, 
+	%	write(usoA, USIOA), nl,
 	% List of Word Object Pairs.
-	write(usoA, USIOA), nl,
-	qqqq(ssss, Subject_1, Time_1, Idea_1, Object_1),
-	qqqq(ssss, Subject_2, Time_2, Idea_2, Object_2),
+	%	write(usoA, USIOA), nl,
+	ssss( Subject_1, Time_1, Idea_1, Object_1),
+	ssss( Subject_2, Time_2, Idea_2, Object_2),
 	Object_1 = Object2,
 	match_same_pair_idea_object_relation(Subject_1, Time_1, Pair_List1, 
 					     Subject_2, Time_2, Pair_List2).
@@ -211,8 +229,8 @@ match_same_pair_idea_object_relation(Subject_1, Time_1,
 				     Subject_2, Time_2,
 				     [[Idea_2 , Object_2] | Pair_List2]) :-
 	% List of Word Object Pairs.
-	qqqq(ssss, Subject_1, Time_1, Idea_1, Object_1),
-	qqqq(ssss, Subject_2, Time_2, Idea_2, Object_2),
+	ssss( Subject_1, Time_1, Idea_1, Object_1),
+	ssss( Subject_2, Time_2, Idea_2, Object_2),
 	Object_1 = Object2,
 	match_same_pair_idea_object_relation(Subject_1, Time_1,
 					     Pair_List1,
@@ -221,8 +239,7 @@ match_same_pair_idea_object_relation(Subject_1, Time_1,
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-qqqq(SUSOW, Subject_1, Time_1, Pair_List1, Subject_2, Time_2, Pair_List2) :-
-	SUSOW = subjects_understand_same_objects_by_words, 
+subjects_understand_same_objects_by_words( Subject_1, Time_1, Pair_List1, Subject_2, Time_2, Pair_List2) :-
 	% List of Word Object Pairs.
 	match_same_pair_word_object_relation(Subject_1, Time_1, Pair_List1, 
 					     Subject_2, Time_2, Pair_List2).
@@ -235,8 +252,8 @@ match_same_pair_word_object_relation(Subject_1, Time_1,
 				     Subject_2, Time_2,
 				     [[Word_2 , Object_2] | Pair_List2]) :-
 	% List of Word Object Pairs.
-	qqqq(rrss, Subject_1, Time_1, Word_1, Object_1),
-	qqqq(rrss, Subject_2, Time_2, Word_2, Object_2),
+	rrss( Subject_1, Time_1, Word_1, Object_1),
+	rrss( Subject_2, Time_2, Word_2, Object_2),
 	Word_1 = Word_2,
 	Object_1 = Object_2, 
 	match_same_pair_word_object_relation(Subject_1, Time_1, Pair_List1, 

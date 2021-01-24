@@ -18,14 +18,14 @@
 
 
 echo "Darland Philisophy Test Suite Utility"
-echo "Examine Test Results For IN2/$1.lf ?"
+echo "Examine Test Results For IN2pre/$1.lf ?"
 echo "enter 0 to proceed 888 to next, or crtl-c to quit"
 read answer
 while [ $answer -ne 888 ]
 do
-    if test -f IN2/$1.lf 
+    if test -f IN2pre/$1.lf 
     then
-	echo "1 IN2/$1.lf"
+	echo "1 IN2pre/$1.lf"
     fi
     if test -f REFDIFF2/$1.refdiff
     then
@@ -44,24 +44,26 @@ do
     echo "15 Edit Darland Philosophy Facts"
     echo "16 Edit Darland Philosophy Rules"
     echo "17 edit NOTES_DJD"
+    echo "21 qqqq_pre_all.sh"
 
     echo "888 NEXT FILE SET"
     echo "ctrl-c QUIT"
     echo "select"
     read select
     case $select in
-	1) $EDITOR IN2/$1.lf;;
+	1) $EDITOR IN2pre/$1.lf;;
 	3) $EDITOR REFDIFF2/$1.refdiff;;
 	4) $EDITOR REFOUT2/$1.refout OUT2/$1.out;;
 	5) $EDITOR ERRDIFF2/$1.errdiff;;
 	6) $EDITOR REFERR2/$1.referr ERR2/$1.err;;
-	10) ./check_edit_all2 "2" $1;;
+	10) ./qqqq_pre_all.sh; ./check_edit_all2 "2" $1;;
 	11) ./approve_out2.sh $1;;
 	12) ./rest_out2.sh $1;;
 	14) wild_life_X;;
 	15) ../Source/da_fa_lf2.sh 1;;
 	16) ../Source/da_ru_lf2.sh 1;;
 	17) $EDITOR ../Source/NOTES_DJD.txt;;
+	21) ./qqqq_pre_all.sh;;
 	888) exit 2;;
     esac
 done

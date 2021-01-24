@@ -37,10 +37,10 @@ echo "999 quit"
 echo "select"
 read select
 case $select in
-1) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0001.lf;;
-2) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0002.lf;;
-3) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0003.lf;;
-4) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0004.lf;;
+1) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0001.lf;;
+2) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0002.lf;;
+3) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0003.lf;;
+4) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0004.lf;;
 666) $EDITOR da_fa_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 
