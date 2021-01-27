@@ -21,6 +21,7 @@ echo "8 Edit darland_0008.lf opacity - NOT REVISED"
 echo "9 Edit darland_0009.lf equivalence, synonymy - NOT REVISED"
 echo "10 Edit darland_0010.lf Philosophers reminology - NOT REVISED"
 echo "11 Edit darland_0011.lf Molecular Belief"
+echo "20 Edit darland_0020.lf Cases using mini universe for complex cases"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"
@@ -46,6 +47,7 @@ case $select in
 9) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0009.lf;;
 10) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0010.lf;;
 11) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0011.lf;;
+20) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0020.lf;;
 55) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0000.lf;;
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
@@ -75,6 +77,7 @@ echo "8 Edit darland_0008.lf opacity - NOT REVISED"
 echo "9 Edit darland_0009.lf equivalence, synonymy - NOT REVISED"
 echo "10 Edit darland_0010.lf Philosophers reminology - NOT REVISED"
 echo "11 Edit darland_0011.lf Molecular Belief"
+echo "20 Edit darland_0020.lf Cases using mini universe for complex cases"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"

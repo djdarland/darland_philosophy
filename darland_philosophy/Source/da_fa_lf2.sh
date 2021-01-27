@@ -22,6 +22,8 @@ do
 echo "-----------"
 echo "Philosophy Facts Files"
 echo "-----------"
+
+echo "0 facts_00000.lf samples mini universe - for high complexity queries"
 echo "1 facts_00001.lf samples for darland philosophy - On Understanding"
 echo "2 facts_00002.lf data comparing philosophers terminology"
 echo "3 facts_00003.lf data for Atomic Belief"
@@ -37,6 +39,7 @@ echo "999 quit"
 echo "select"
 read select
 case $select in
+0) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0000.lf;;
 1) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0001.lf;;
 2) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0002.lf;;
 3) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0003.lf;;

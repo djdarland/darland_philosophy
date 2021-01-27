@@ -34,6 +34,7 @@ echo "7 Test darland_0007.lf (truth)"
 echo "8 Test darland_0008.lf (opacity)"
 echo "9 Test darland_0009.lf (intensionality & extensionality)"
 echo "10 Test darland_0010.lf (philosophical quotes & terminology)"
+echo "21 Test darland_0021.lf Some examples with mini universe for complex queries"
 echo "-----------"
 if test -f da_par_lf2.sh
 then
@@ -55,6 +56,7 @@ case $select in
 8) echo "Testing 0008"; cd ../*Life; ./work2.sh "darland_0008";;
 9) echo "Testing 0009"; cd ../*Life; ./work2.sh "darland_0009";;
 10) echo "Testing 0010"; cd ../*Life; ./work2.sh "darland_0010";;
+21) echo "Testing 0021"; cd ../*Life; ./work2.sh "darland_0021";;
 55) echo "Testing 0000"; cd ../*Life; ./work2.sh "darland_0000";;
 666) $EDITOR da_par_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
