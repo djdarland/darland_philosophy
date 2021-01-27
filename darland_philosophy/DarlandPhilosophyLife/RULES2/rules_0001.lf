@@ -239,7 +239,7 @@ match_same_pair_idea_object_relation(Subject_1, Time_1,
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-subjects_understand_same_objects_by_words( Subject_1, Time_1, Pair_List1, Subject_2, Time_2, Pair_List2) :-
+understand_same_objects_by_words( Subject_1, Time_1, Pair_List1, Subject_2, Time_2, Pair_List2) :-
 	% List of Word Object Pairs.
 	match_same_pair_word_object_relation(Subject_1, Time_1, Pair_List1, 
 					     Subject_2, Time_2, Pair_List2).

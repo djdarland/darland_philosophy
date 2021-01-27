@@ -56,174 +56,174 @@ write("There will be subsequient No responses - as I have asked for more answers
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, tom, now, of_orations_word, tom_of_orations_idea)?
+rrrr( tom, now, of_orations_word, tom_of_orations_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(ssss, tom, now, tom_of_orations_idea, of_orations)?
+ssss( tom, now, tom_of_orations_idea, of_orations)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, tom, now, of_De_Senectute_word, tom_of_De_Senectute_idea)?
+rrrr( tom, now, of_De_Senectute_word, tom_of_De_Senectute_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(ssss, tom, now, tom_of_De_Senectute_idea, of_De_Senectute)?
+ssss( tom, now, tom_of_De_Senectute_idea, of_De_Senectute)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrss, tom, now, of_orations_word, of_orations)?
+rrss( tom, now, of_orations_word, of_orations)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrss, tom, now, of_De_Senectute_word, of_De_Senectute)?
+rrss( tom, now, of_De_Senectute_word, of_De_Senectute)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, quine, now, of_orations_word, quine_of_orations_idea)?
+rrrr( quine, now, of_orations_word, quine_of_orations_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(ssss, quine, now, quine_of_orations_idea, of_orations)?
+ssss( quine, now, quine_of_orations_idea, of_orations)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, quine, now, of_De_Senectute_word, quine_of_De_Senectute_idea)?
+rrrr( quine, now, of_De_Senectute_word, quine_of_De_Senectute_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(ssss, quine, now, quine_of_De_Senectute_idea, of_De_Senectute)?
+ssss( quine, now, quine_of_De_Senectute_idea, of_De_Senectute)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, tom, now, denounced_word, tom_denounced_idea)?
+rrrr( tom, now, denounced_word, tom_denounced_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(ssss, tom, now, tom_denounced_idea, denounced)?
+ssss( tom, now, tom_denounced_idea, denounced)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, tom, now, cicero_word, tom_cicero_idea)?
+rrrr( tom, now, cicero_word, tom_cicero_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(ssss, tom, now, tom_cicero_idea, cicero)?
+ssss( tom, now, tom_cicero_idea, cicero)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, tom, now, catiline_word, tom_catiline_idea)?
+rrrr( tom, now, catiline_word, tom_catiline_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(ssss, tom, now, tom_catiline_idea, catiline)?
+ssss( tom, now, tom_catiline_idea, catiline)?
 ;
 
 write("Next should be FALSE")?
 
-qqqq(rrrr, tom, now, cicero_word, tom_tully_idea)?
+rrrr( tom, now, cicero_word, tom_tully_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, tom, now, tully_word, tom_tully_idea)?
+rrrr( tom, now, tully_word, tom_tully_idea)?
 ;
 
 write("Next should be FALSE")?
 
-qqqq(rrrr, tom, now, tully_word, tom_cicero_idea)?
+rrrr( tom, now, tully_word, tom_cicero_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrss, tom, now, cicero_word, cicero)?
+rrss( tom, now, cicero_word, cicero)?
 ;
 
 write("Next should be TRUE - There is no Tully separate from cicero, just idea")?
 
-qqqq(rrss, tom, now, tully_word, cicero)?
+rrss( tom, now, tully_word, cicero)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrss, tom, now, catiline_word, catiline)?
+rrss( tom, now, catiline_word, catiline)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrss, tom, now, denounced_word, denounced)?
+rrss( tom, now, denounced_word, denounced)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, quine, now, denounced_word, quine_denounced_idea)?
-;
-
-
-write("Next should be TRUE")?
-
-qqqq(ssss, quine, now, quine_denounced_idea, denounced)?
+rrrr( quine, now, denounced_word, quine_denounced_idea)?
 ;
 
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, quine, now, cicero_word, quine_cicero_idea)?
+ssss( quine, now, quine_denounced_idea, denounced)?
+;
+
+
+write("Next should be TRUE")?
+
+rrrr( quine, now, cicero_word, quine_cicero_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(ssss, quine, now, quine_cicero_idea, cicero)?
+ssss( quine, now, quine_cicero_idea, cicero)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, quine, now, cicero_word, quine_tully_idea)?
+rrrr( quine, now, cicero_word, quine_tully_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, quine, now, tully_word, quine_tully_idea)?
+rrrr( quine, now, tully_word, quine_tully_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrrr, quine, now, tully_word, quine_cicero_idea)?
+rrrr( quine, now, tully_word, quine_cicero_idea)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(ssss, quine, now, quine_tully_idea, cicero)?
+ssss( quine, now, quine_tully_idea, cicero)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrss, quine, now, cicero_word, cicero)?
+rrss( quine, now, cicero_word, cicero)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrss, quine, now, of_orations_word, of_orations)?
+rrss( quine, now, of_orations_word, of_orations)?
 ;
 
 write("Next should be TRUE")?
 
-qqqq(rrss, quine, now, of_De_Senectute_word, of_De_Senectute)?
+rrss( quine, now, of_De_Senectute_word, of_De_Senectute)?
 ;
 
 write_stats(Ignore)?

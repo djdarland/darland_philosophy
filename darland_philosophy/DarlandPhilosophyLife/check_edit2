@@ -19,7 +19,7 @@
 ##  along with darland's philosophy.  If not, see <http://www.gnu.org/licenses/>
 
 # Version of Wild-LIFE to use:
-set WLIFE = "~/bin/wild_life_X"
+set WLIFE = "~/bin/wild_life -memory=209715200 "
 
 
     set life_tests = 0

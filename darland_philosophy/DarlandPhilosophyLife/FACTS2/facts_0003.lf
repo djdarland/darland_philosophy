@@ -43,69 +43,69 @@
 %% needed.
 %% I define several others in terms of them. 
 %%
-qqqq(believes_ideas_synonymous, quine, quine_cicero_idea, quine_tully_idea).
+believes_ideas_synonymous( quine, quine_cicero_idea, quine_tully_idea).
 
-qqqq(believes_ideas_synonymous, quine, quine_of_De_Senectute_idea, quine_of_orations_idea).
+believes_ideas_synonymous( quine, quine_of_De_Senectute_idea, quine_of_orations_idea).
 
-qqqq(believes_ideas_not_synonymous, tom, tom_of_De_Senectute_idea, tom_of_orations_idea).
+believes_ideas_not_synonymous( tom, tom_of_De_Senectute_idea, tom_of_orations_idea).
 
-qqqq(believes_in_ideas, tom, now, [tom_of_orations_idea, tom_cicero_idea]).
+believes_in_ideas( tom, now, [tom_of_orations_idea, tom_cicero_idea]).
 
-qqqq(believes_in_ideas, tom, now, [tom_of_De_Senectute_idea, tom_tully_idea]).
+believes_in_ideas( tom, now, [tom_of_De_Senectute_idea, tom_tully_idea]).
 
-qqqq(believes_in_ideas, quine, now, [quine_of_orations_idea,
+believes_in_ideas( quine, now, [quine_of_orations_idea,
 				     quine_cicero_idea]).
 
-qqqq(believes_in_ideas, tom, now, [tom_human_idea, tom_tully_idea]).
+believes_in_ideas( tom, now, [tom_human_idea, tom_tully_idea]).
 
-qqqq(believes_in_ideas, tom, now, [tom_denounced_idea, tom_cicero_idea,
+believes_in_ideas( tom, now, [tom_denounced_idea, tom_cicero_idea,
 				   tom_catiline_idea]).
 
-qqqq(believes_not_in_ideas, tom, now, [tom_denounced_idea, tom_tully_idea,
+believes_not_in_ideas( tom, now, [tom_denounced_idea, tom_tully_idea,
 				       tom_catiline_idea]).
 
-qqqq(believes_in_ideas, quine, now, [quine_denounced_idea,
+believes_in_ideas( quine, now, [quine_denounced_idea,
 				     quine_cicero_idea,
 				     quine_catiline_idea]).
 
-qqqq(believes_in_ideas, quine, now, [quine_denounced_idea,
+believes_in_ideas( quine, now, [quine_denounced_idea,
 				     quine_tully_idea,
 				     quine_catiline_idea]).
 
-qqqq(human, tom).
+human( tom).
 
-qqqq(human, cicero).
+human( cicero).
 
-qqqq(human, catiline).
+human( catiline).
 
-qqqq(featherless_biped, tom).
+featherless_biped( tom).
 
-qqqq(featherless_biped, cicero).
+featherless_biped( cicero).
 
-qqqq(featherless_biped, catiline).
+featherless_biped( catiline).
 
-qqqq(american, tom).
+american( tom).
 
-qqqq(roman, cicero).
+roman( cicero).
 
-qqqq(roman, catiline).
+roman( catiline).
 
-qqqq(denounced, cicero, catiline).
+denounced( cicero, catiline).
 
-qqqq(denounced, tom, catiline).
+denounced( tom, catiline).
 
-qqqq(believes_not_in_ideas, dennis, now,
+believes_not_in_ideas( dennis, now,
 		      [martian_idea,
 		      cicero_idea]).
 
-qqqq(believes_not_in_ideas, dennis, now, 
+believes_not_in_ideas( dennis, now, 
 		      [martian_idea,
 		      tully_idea]).
 
-qqqq(believes_not_in_ideas, dennis, now, 
+believes_not_in_ideas( dennis, now, 
 		      [martian_idea,
 		      bertie_idea]).
 
-qqqq(believes_not_in_ideas, dennis, now, 
+believes_not_in_ideas( dennis, now, 
 		      [martian_idea,
 		      ludwig_idea]).
