@@ -49,7 +49,6 @@
 qqqq(rrrr, tom, now, cicero_word, tom_cicero_idea).
 qqqq(rrrr, tom, now, catiline_word, tom_catiline_idea).
 qqqq(rrrr, tom, now, tully_word, tom_tully_idea).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 qqqq(rrrr, tom, now, denounced_word, tom_denounced_idea).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% qqqq(ssss, Type, Subject, Time, A_idea, A_object)
@@ -69,19 +68,13 @@ qqqq(ssss, tom, now, tom_denounced_idea, denounced).
 %% words and ideas.
 %% This solve a problem that some philosophers have if a sentence was never
 %% uttered. I only require that there was an relation_idea and
-%% ideas of objects. They never even need to be related or believed. 
-qqqq(arity_relation, denounced, 2).
+%% ideas of objects. They never even need to be related or believed.
+%% Only ideas have arities and types.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 qqqq(arity_idea, tom_denounced_idea, 2).
-qqqq(type_object, denounced, 1).
-qqqq(type_word, denounced_word, 1).
 qqqq(type_idea, tom_denounced_idea, 1).
-qqqq(type_object, cicero, 0).
-qqqq(type_word, cicero_word, 0).
 qqqq(type_idea, tom_cicero_idea, 0).
-qqqq(type_word, tully_word, 0).
 qqqq(type_idea, tom_tully_idea, 0).
-qqqq(type_idea, quine_tully_idea, 0).
-qqqq(type_object, catiline, 0).
 qqqq(type_word, catiline_word, 0).
 qqqq(type_idea, tom_catiline_idea, 0).
 

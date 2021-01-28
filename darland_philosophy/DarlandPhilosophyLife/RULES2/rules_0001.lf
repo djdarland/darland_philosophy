@@ -153,7 +153,7 @@ understands_objects(Subject, Time, [[Relation] | List]) :-
 	type_idea(Relation_Idea, Type),
 	% List of Ideas.
 	% Objects should be Type one less than Type of Relation
-	match_idea(Subject, Time, List, Arity, Type - 1).
+	match_object(Subject, Time, List, Arity, Type - 1).
 
 %% The following are auxilary predicates - they have no ontological
 %% Significance.
@@ -207,9 +207,10 @@ match_pair_word_idea(Subject, Time, [[Word, Idea] | PairList],
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5
 understands_words_objects(Subject, Time, [[Relation_Word, Relation] | PairList]) :-
-	rrss(Subject, Time, Relation_Word, Relation),
-	arity_relation(Relation, Arity),
-	type_object(Relation, Type),
+	rrrr(Subject, Time, Relation_Word, Relation_Idea),
+	ssss(Subject, Time, Relation_Idea, Relation),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
 	% List of Word Object Pairs.
 	% Objects should be Type one less than Type of Relation
 	match_pair_word_object(Subject, Time, PairList, Arity, Type - 1).
@@ -225,8 +226,9 @@ match_pair_word_object(Subject, Time, [], -999, Type).
 match_pair_word_object(Subject, Time, [[Word, Object] | PairList],
 		       Arity, Type) :-
 	% List of Word Object Pairs.
-	rrss(Subject, Time, Word, Object),
-	type_object(Object, Type),
+	rrrr(Subject, Time, Word, Idea),
+	ssss(Subject, Time, Idea, Object),
+	type_idea(Idea, Type),
 	match_pair_word_object(Subject, Time, PairList,
 			       % if Arity is not Arbitrary sub 1
 			       cond(Arity =\= -999, Arity - 1, -999),
