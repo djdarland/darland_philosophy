@@ -34,7 +34,9 @@ echo "7 Test darland_0007.lf (truth)"
 echo "8 Test darland_0008.lf (opacity)"
 echo "9 Test darland_0009.lf (intensionality & extensionality)"
 echo "10 Test darland_0010.lf (philosophical quotes & terminology)"
-echo "21 Test darland_0021.lf Some examples with mini universe for complex queries"
+echo "21 Test darland_0021.lf Some examples with mini universe for understanding queries"
+echo "22 Test darland_0022.lf Some examples with mini universe for belief queries"
+echo "23 Test darland_0023.lf Some examples with mini universe for other queries"
 echo "-----------"
 if test -f da_par_lf2.sh
 then
@@ -57,6 +59,8 @@ case $select in
 9) echo "Testing 0009"; cd ../*Life; ./work2.sh "darland_0009";;
 10) echo "Testing 0010"; cd ../*Life; ./work2.sh "darland_0010";;
 21) echo "Testing 0021"; cd ../*Life; ./work2.sh "darland_0021";;
+22) echo "Testing 0022"; cd ../*Life; ./work2.sh "darland_0022";;
+23) echo "Testing 0023"; cd ../*Life; ./work2.sh "darland_0023";;
 55) echo "Testing 0000"; cd ../*Life; ./work2.sh "darland_0000";;
 666) $EDITOR da_par_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;

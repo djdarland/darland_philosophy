@@ -100,35 +100,35 @@ write_time(Ignore)?
 
 %% Next should be TRUE
 
-understands_words( tom, now,
+qqqq(believes_words, tom, now,
      [[denounced_word],
       [cicero_word],
       [catiline_word]])?
 
-%% Next should be TRUE
+%% Next should be FALSE
 
-understands_words( tom, now,
+qqqq(believes_words, tom, now,
      [[denounced_word],
       [tully_word],
       [catiline_word]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_words( tom, now,
+qqqq(believes_words, tom, now,
      [[tully_word],
       [tully_word],
       [catiline_word]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_words( tom, now,
+qqqq(believes_words, tom, now,
      [[denounced_word],
       [tully_word],
       [denounced_word]])?
 
 %% Next should be FALSE -- wrong arity
 
-understands_words( tom, now,
+qqqq(believes_words, tom, now,
      [[denounced_word],
       [cicero_word]])?
 
@@ -138,37 +138,39 @@ understands_words( tom, now,
 
 %% Next should be TRUE
 
-understands_ideas( tom, now,
-     [[tom_denounced_idea],
-      [tom_cicero_idea],
-      [tom_catiline_idea]])?
+%% Note here are just lists of ideas - not lists of lists
 
-%% Next should be TRUE
+qqqq(believes_in_ideas, tom, now,
+     [tom_denounced_idea,
+      tom_cicero_idea,
+      tom_catiline_idea])?
 
-understands_ideas( tom, now,
-     [[tom_denounced_idea],
-      [tom_tully_idea],
-      [tom_catiline_idea]])?
+%% Next should be TRUE -- not a belief
 
-%% Next should be FALSE -- wrong type
-
-understands_ideas( tom, now,
-     [[tom_tully_idea],
-      [tom_tully_idea],
-      [tom_catiline_idea]])?
+qqqq(believes_in_ideas, tom, now,
+     [tom_denounced_idea,
+      tom_tully_idea,
+      tom_catiline_idea])?
 
 %% Next should be FALSE -- wrong type
 
-understands_ideas( tom, now,
-     [[tom_denounced_idea],
-      [tom_tully_idea],
-      [tom_denounced_idea]])?
+qqqq(believes_in_ideas, tom, now,
+     [tom_tully_idea,
+      tom_tully_idea,
+      tom_catiline_idea])?
+
+%% Next should be FALSE -- wrong type
+
+qqqq(believes_in_ideas, tom, now,
+     [tom_denounced_idea,
+      tom_tully_idea,
+      tom_denounced_idea])?
 
 %% Next should be FALSE -- wrong arity
 
-understands_ideas( tom, now,
-     [[tom_denounced_idea],
-      [tom_cicero_idea]])?
+qqqq(believes_in_ideas, tom, now,
+     [tom_denounced_idea,
+      tom_cicero_idea])?
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %% OBJECTS
@@ -176,35 +178,35 @@ understands_ideas( tom, now,
 
 %% Next should be TRUE
 
-understands_objects( tom, now,
+qqqq(believes_objects, tom, now,
      [[denounced],
       [cicero],
       [catiline]])?
 
 %% Next should be FALSE -- there is no (separate) object tully
 
-understands_objects( tom, now,
+qqqq(believes_objects, tom, now,
      [[denounced],
       [tully],
       [catiline]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_objects( tom, now,
+qqqq(believes_objects, tom, now,
      [[tully],
       [tully],
       [catiline]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_objects( tom, now,
+qqqq(believes_objects, tom, now,
      [[denounced],
       [tully],
       [denounced]])?
 
 %% Next should be FALSE -- wrong arity
 
-understands_objects( tom, now,
+qqqq(believes_objects, tom, now,
      [[denounced],
       [cicero]])?
 
@@ -214,48 +216,48 @@ understands_objects( tom, now,
 
 %% Next should be TRUE
 
-understands_words_ideas( tom, now,
+qqqq(believes_words_ideas, tom, now,
      [[denounced_word, tom_denounced_idea],
       [cicero_word, tom_cicero_idea],
       [catiline_word, tom_catiline_idea]])?
 
-%% Next should be TRUE
+%% Next should be FALSE -- not a belief
 
-understands_words_ideas( tom, now,
+qqqq(believes_words_ideas, tom, now,
      [[denounced_word, tom_denounced_idea],
       [tully_word, tom_tully_idea],
       [catiline_word, tom_catiline_idea]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_words_ideas( tom, now,
+qqqq(believes_words_ideas, tom, now,
      [[tully_word, tom_tully_idea],
       [tully_word, tom_tully_idea],
       [catiline_word, tom_catiline_idea]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_words_ideas( tom, now,
+qqqq(believes_words_ideas, tom, now,
      [[denounced_word, tom_denounced_idea],
       [tully_word, tom_tully_word],
       [denounced_word, tom_denounced_idea]])?
 
 %% Next should be FALSE -- wrong arity
 
-understands_words_ideas( tom, now,
+qqqq(believes_words_ideas, tom, now,
      [[denounced_word, tom_denounced_idea],
       [cicero_word, tom_cicero_idea]])?
 
 %% Next should be FALSE -- wrong rrrr relation for tully_word
 
-understands_words_ideas( tom, now,
+qqqq(believes_words_ideas, tom, now,
      [[denounced_word, tom_denounced_idea],
       [tully_word, tom_cicero_idea],
       [catiline_word, tom_catiline_idea]])?
 
 %% Next should be FALSE -- wrong rrrr relation for cicero_word
 
-understands_words_ideas( tom, now,
+qqqq(believes_words_ideas, tom, now,
      [[denounced_word, tom_denounced_idea],
       [cicero_word, tom_tully_idea],
       [catiline_word, tom_catiline_idea]])?
@@ -266,35 +268,35 @@ understands_words_ideas( tom, now,
 
 %% Next should be TRUE
 
-understands_words_objects( tom, now,
+qqqq(believes_words_objects, tom, now,
      [[denounced_word, denounced],
       [cicero_word, cicero],
       [catiline_word, catiline]])?
 
-%% Next should be TRUE
+%% Next should be FALSE -- not a belief
 
-understands_words_objects( tom, now,
+qqqq(believes_words_objects, tom, now,
      [[denounced_word, denounced],
       [tully_word, cicero],
       [catiline_word, catiline]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_words_objects( tom, now,
+qqqq(believes_words_objects, tom, now,
      [[tully_word, tully],
       [tully_word, tully],
       [catiline_word, catiline]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_words_objects( tom, now,
+qqqq(believes_words_objects, tom, now,
      [[denounced_word, denounced],
       [tully_word, tully],
       [denounced_word, denounced]])?
 
 %% Next should be FALSE -- wrong arity
 
-understands_words_objects( tom, now,
+qqqq(believes_words_objects, tom, now,
      [[denounced_word, denounced],
       [cicero_word, cicero]])?
 
@@ -304,35 +306,35 @@ understands_words_objects( tom, now,
 
 %% Next should be TRUE
 
-understands_ideas_objects( tom, now,
+qqqq(believes_ideas_objects, tom, now,
      [[tom_denounced_idea, denounced],
       [tom_cicero_idea, cicero],
       [tom_catiline_idea, catiline]])?
 
-%% Next should be TRUE
+%% Next should be FALSE -- not a belief
 
-understands_ideas_objects( tom, now,
+qqqq(believes_ideas_objects, tom, now,
      [[tom_denounced_idea, denounced],
       [tom_tully_idea, cicero],
       [tom_catiline_idea, catiline]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_ideas_objects( tom, now,
+qqqq(believes_ideas_objects, tom, now,
      [[tom_tully_idea, tully],
       [tom_tully_idea, tully],
       [tom_catiline_idea, catiline]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_ideas_objects( tom, now,
+qqqq(believes_ideas_objects, tom, now,
      [[tom_denounced_idea, denounced],
       [tom_tully_idea, tully],
       [tom_denounced_idea, denounced]])?
 
 %% Next should be FALSE -- wrong arity
 
-understands_ideas_objects( tom, now,
+qqqq(believes_ideas_objects, tom, now,
      [[tom_denounced_idea, denounced],
       [tom_cicero_idea, cicero]])?
 
@@ -342,48 +344,48 @@ understands_ideas_objects( tom, now,
 
 %% Next should be TRUE
 
-understands_words_ideas_objects( tom, now,
+qqqq(believes_words_ideas_objects, tom, now,
      [[denounced_word, tom_denounced_idea, denounced],
       [cicero_word, tom_cicero_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]])?
 
-%% Next should be TRUE
+%% Next should be FALSE -- not believed
 
-understands_words_ideas_objects( tom, now,
+qqqq(believes_words_ideas_objects, tom, now,
      [[denounced_word, tom_denounced_idea, denounced],
       [tully_word, tom_tully_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_words_ideas_objects( tom, now,
+qqqq(believes_words_ideas_objects, tom, now,
      [[tully_word, tom_tully_idea, cicero],
       [tully_word, tom_tully_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]])?
 
 %% Next should be FALSE -- wrong type
 
-understands_words_ideas_objects( tom, now,
+qqqq(believes_words_ideas_objects, tom, now,
      [[denounced_word, tom_denounced_idea, denounced],
       [tully_word, tom_tully_word, cicero],
       [denounced_word, tom_denounced_idea, denounced]])?
 
 %% Next should be FALSE -- wrong arity
 
-understands_words_ideas_objects( tom, now,
+qqqq(believes_words_ideas_objects, tom, now,
      [[denounced_word, tom_denounced_idea, denounced],
       [cicero_word, tom_cicero_idea]])?
 
 %% Next should be FALSE -- wrong rrrr relation for tully_word
 
-understands_words_ideas_objects( tom, now,
+qqqq(believes_words_ideas_objects, tom, now,
      [[denounced_word, tom_denounced_idea, denounced],
       [tully_word, tom_cicero_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]])?
 
 %% Next should be FALSE -- wrong rrrr relation for cicero_word
 
-understands_words_ideas_objects( tom, now,
+qqqq(believes_words_ideas_objects, tom, now,
      [[denounced_word, tom_denounced_idea, denounced],
       [cicero_word, tom_tully_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]])?

@@ -614,50 +614,51 @@ match_not_triple_word_idea_object_belief(Subject, Time,
 %
 % This amounts to the correct ssss relations holding.
 % There might not even be corresponding words.
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 1 words
+%% 2 ideas
+%% 3 objects
 
+%% 4 words_ideas
+%% 5 words_objects
+%% 6 ideas_objects
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+%% 7 words_ideas_objects
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Now Contradicting beliefs!!
+%% 1
+contradicts_words( Subject, Time, List) :-
+	believes_words( Subject, Time, List),
+	believes_not_words( Subject, Time, List).
 
-contradicts_words_ideas_objects( Subject, Time, Triple_List) :-
-	believes_words_ideas_objects( Subject, Time, Triple_List),
-	believes_not_words_ideas_objects( Subject, Time, Triple_List).
+%% 2
+contradicts_ideas( Subject, Time, List) :-
+	believes_in_ideas( Subject, Time, List),
+	believes_not_in_ideas( Subject, Time, List).
 
-contradicts_words_objects( Subject, Time, Pair_List) :-
-	believes_words_objects( Subject, Time, Pair_List),
-	believes_not_words_objects( Subject, Time, Pair_List).
+%% 3
+contradicts_objects( Subject, Time, List) :-
+	believes_objects( Subject, Time, List),
+	believes_not_objects( Subject, Time, List).
 
+%% 4
 contradicts_words_ideas( Subject, Time, Pair_List) :-
 	believes_words_ideas( Subject, Time, Pair_List),
 	believes_not_words_ideas( Subject, Time, Pair_List).
 
+%% 5
+contradicts_words_objects( Subject, Time, Pair_List) :-
+	believes_words_objects( Subject, Time, Pair_List),
+	believes_not_words_objects( Subject, Time, Pair_List).
+
+%% 6
 contradicts_ideas_objects( Subject, Time, Pair_List) :-
 	believes_ideas_objects( Subject, Time, Pair_List),
 	believes_not_ideas_objects( Subject, Time, Pair_List).
 
-contradicts_objects( Subject, Time, Object_List) :-
-	believes_objects( Subject, Time, Object_List),
-	believes_not_objects( Subject, Time, Object_List).
+%% 7
+contradicts_words_ideas_objects( Subject, Time, Triple_List) :-
+	believes_words_ideas_objects( Subject, Time, Triple_List),
+	believes_not_words_ideas_objects( Subject, Time, Triple_List).
+
