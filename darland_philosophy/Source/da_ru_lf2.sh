@@ -29,6 +29,8 @@ echo "4 rules_0002.lf - Rules on Atomic Belief"
 echo "5 rules_0003.lf - Rules on Atomic Belief & Understanding"
 echo "6 rules_0004.lf - Rules on Opacity of Atomic Belief"
 echo "7 rules_0005.lf - Rules on Molecular Belief"
+echo "8 rules_0006.lf - Rules on True Atomic Belief"
+
 echo "-----------"
 if test -f da_ru_lf2.sh
 then
@@ -46,6 +48,7 @@ case $select in
 5) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0003.lf;;
 6) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0004.lf;;
 7) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0005.lf;;
+8) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0006.lf;;
 666) $EDITOR da_ru_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

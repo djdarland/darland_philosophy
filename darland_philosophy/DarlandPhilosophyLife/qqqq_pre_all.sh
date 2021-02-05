@@ -13,6 +13,7 @@ snobol4 ./qqqq_pre.sno <IN2pre/darland_0011.lf >IN2/darland_0011.lf
 snobol4 ./qqqq_pre.sno <IN2pre/darland_0021.lf >IN2/darland_0021.lf
 snobol4 ./qqqq_pre.sno <IN2pre/darland_0022.lf >IN2/darland_0022.lf
 snobol4 ./qqqq_pre.sno <IN2pre/darland_0023.lf >IN2/darland_0023.lf
+snobol4 ./qqqq_pre.sno <IN2pre/darland_0024.lf >IN2/darland_0024.lf
 snobol4 ./qqqq_pre.sno <FACTS2pre/facts_0001.lf >FACTS2/facts_0001.lf
 snobol4 ./qqqq_pre.sno <FACTS2pre/facts_0002.lf >FACTS2/facts_0002.lf
 snobol4 ./qqqq_pre.sno <FACTS2pre/facts_0003.lf >FACTS2/facts_0003.lf

@@ -89,10 +89,10 @@ write_time(Ignore)?
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% UNDERSTANDING
+%%% BELIEF
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Checks on Understanding follow.
+%% Checks on Belief follow.
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %% WORDS
@@ -145,7 +145,7 @@ qqqq(believes_in_ideas, tom, now,
       tom_cicero_idea,
       tom_catiline_idea])?
 
-%% Next should be TRUE -- not a belief
+%% Next should be FALSE -- not a belief
 
 qqqq(believes_in_ideas, tom, now,
      [tom_denounced_idea,

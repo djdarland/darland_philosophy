@@ -12,7 +12,7 @@
 *** Yes
 
 *** Yes
-Thu 28 Jan 2021 01:15:31 AM CST
+Thu 04 Feb 2021 12:34:08 AM CST
 
 *** Yes
 > 
@@ -118,7 +118,7 @@ Ignore = @.
 
 *** Yes
 > 
-> %% Next should be TRUE -- not a belief
+> %% Next should be FALSE -- not a belief
 > 
 > believes_in_ideas( tom, now,
 |         [tom_denounced_idea,
@@ -442,7 +442,7 @@ Ignore = @.
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61182 Seconds
+Clock Time 1.61242 Seconds
 CPU Time 0 Milliseconds
 
 *** Yes

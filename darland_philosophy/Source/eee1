@@ -24,6 +24,7 @@ echo "11 Edit darland_0011.lf Molecular Belief"
 echo "21 Edit darland_0021.lf Cases using mini universe for understanding cases"
 echo "22 Edit darland_0022.lf Cases using mini universe for belief cases"
 echo "23 Edit darland_0023.lf Cases using mini universe for other cases"
+echo "24 Edit darland_0023.lf Cases using mini universe for true belief"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"
@@ -52,6 +53,7 @@ case $select in
 21) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0021.lf;;
 22) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0022.lf;;
 23) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0023.lf;;
+24) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0024.lf;;
 55) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0000.lf;;
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
@@ -84,6 +86,7 @@ echo "11 Edit darland_0011.lf Molecular Belief"
 echo "21 Edit darland_0021.lf Cases using mini universe for understanding cases"
 echo "22 Edit darland_0022.lf Cases using mini universe for belief cases"
 echo "23 Edit darland_0023.lf Cases using mini universe for other cases"
+echo "24 Edit darland_0023.lf Cases using mini universe for true belief"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"
