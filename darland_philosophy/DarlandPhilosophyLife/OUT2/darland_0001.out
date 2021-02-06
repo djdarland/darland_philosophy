@@ -16,10 +16,14 @@
 *** Yes
 
 *** Yes
-Sun 24 Jan 2021 03:42:17 PM CST
 
 *** Yes
-> 
+
+*** Yes
+Sat 06 Feb 2021 02:04:02 AM CST
+
+*** Yes
+> > > 
 *** Yes
 > 
 > write_time(Ignore)?
@@ -29,1427 +33,140 @@ Ignore = @.
 --1> 
 
 *** No
-> write("I indicate for each query whether the immediate response should be")?
-I indicate for each query whether the immediate response should be
-*** Yes
-> 
-> write("TRUE = Yes or FALSE = No")?
-TRUE = Yes or FALSE = No
-*** Yes
-> 
-> write("There may be subsequient No responses - as I may have asked for additional answers with semicolons")?
-There may be subsequient No responses - as I may have asked for additional answers with semicolons
-*** Yes
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_ideas_objects( tom, now, [[tom_denounced_idea, denounced],
-|    				      [tom_cicero_idea, cicero],
-|    				      [tom_catiline_idea, catiline]]
-|        )?
-
-*** Yes
---1> 
-
-*** No
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 	
-> believes_ideas_objects( tom, now, [[tom_denounced_idea, denounced],
-|    				      [tom_cicero_idea, cicero],
-|    				      [tom_cicero_idea, cicero]]
-|        )?
-
-*** No
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_objects( tom, now, [[denounced], [cicero], [catiline]])?
-
-*** Yes
---1> 
-
-*** No
-> write("Next should not be believed")?
-Next should not be believed
-*** Yes
-> 
-> believes_objects( tom, now, [[denounced], [cicero], [tom]])?	
-
-*** No
-> 
-> write("Next should be FALSE - NONSENSE - there is no tully - objects only have one name in WildLIFE")?
-Next should be FALSE - NONSENSE - there is no tully - objects only have one name in WildLIFE
-*** Yes
-> 
-> believes_objects( tom, now, [[denounced], [tully], [catiline]])?
-
-*** No
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-> 	
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> believes_ideas_objects( tom, now, [[tom_denounced_idea, denounced],
-|    				      [tom_tully_idea, cicero],
-|    				      [tom_catiline_idea, catiline]]
-|        )?
-
-*** No
-> ;
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_words_ideas( tom, now, [[denounced_word,
-|    				       tom_denounced_idea],
-|    				      [cicero_word,
-|    				       tom_cicero_idea],
-|    				      [catiline_word,
-|    				       tom_catiline_idea]]
-|        )?
-
-*** Yes
---1> ;
-
-*** No
-> 
-> 	
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> believes_words_ideas( tom, now, [[denounced_word,
-|    				       tom_denounced_idea],
-|    				      [tully_word,
-|    				       tom_tully_idea],
-|    				      [catiline_word,
-|    				       tom_catiline_idea]]
-|        )?
-
-*** No
-> ;
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-> 
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_words_ideas_objects( tom, now, [[denounced_word,
-|    					      tom_denounced_idea,
-|    					      denounced],
-|    					     [cicero_word,
-|    					      tom_cicero_idea,
-|    					      cicero],
-|    					     [catiline_word,
-|    					      tom_catiline_idea,
-|    					      catiline]]
-|    			   )?
-
-*** Yes
---1> ;
-
-*** No
-> 
-> 	
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> believes_words_ideas_objects( tom, now, [[denounced_word,
-|    					      tom_denounced_idea,
-|    					      denounced],
-|    					     [tully_word,
-|    					      tom_tully_idea,
-|    					      cicero],
-|    					     [catiline_word,
-|    					      tom_catiline_idea,
-|    					      catiline]]
-|    			   )?
-
-*** No
-> ;
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_words( tom, now,
-|         [[denounced_word],[cicero_word],[catiline_word]])?
-
-*** Yes
---1> ;
-
-*** No
-> 
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> believes_words( tom, now,
-|         [[denounced_word],[tully_word],[catiline_word]])?
-
-*** No
-> ;
-> 
-> 	
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_words_objects( tom, now,
-|         [[denounced_word, denounced],
-|          [cicero_word, cicero],
-|          [catiline_word, catiline]])?
-
-*** Yes
---1> ;
-
-*** No
-> 	
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> believes_words_objects( tom, now,
-|         [[denounced_word, denounced],
-|          [tully_word, cicero],
-|          [catiline_word, catiline]])?
-
-*** No
-> ;
-> 
-> 
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> understands_words_objects( tom, now, [[denounced_word, denounced], [cicero_word, cicero], [catiline_word, catiline]])?
-
-*** Yes
---1> 
-
-*** No
-> write("Next should be FALSE cicero not word for catiline")?
-Next should be FALSE cicero not word for catiline
-*** Yes
-> 
-> understands_words_objects( tom, now, [[denounced_word, denounced], [cicero_word, catiline], [catiline_word, catiline]])?
-
-*** No
-> 
-> write("Next should be FALSE cicero gives type 0 for relation")?
-Next should be FALSE cicero gives type 0 for relation
-*** Yes
-> 
-> understands_words_objects( tom, now, [[cicero_word, cicero], [cicero_word, catiline], [catiline_word, catiline]])?
-
-*** No
-> 
-> write("Next should be FALSE - wrong arity - not enough terms")?
-Next should be FALSE - wrong arity - not enough terms
-*** Yes
-> 
-> understands_words_objects( tom, now, [[denounced_word, denounced], [cicero_word, catiline]])?
-
-*** No
-> 
-> write("Next should be FALSE - human wrong type")?
-Next should be FALSE - human wrong type
-*** Yes
-> 
-> understands_words_objects( tom, now, [[denounced_word, denounced], [cicero_word, catiline], [human_word, human]])?
-
-*** No
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> understands_words_ideas_objects( tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
-
-*** Yes
---1> 
-
-*** No
-> write("Next should be FALSE - cicero word not of catiline idea")?
-Next should be FALSE - cicero word not of catiline idea
-*** Yes
-> 
-> understands_words_ideas_objects( tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_catiline_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
-
-*** No
-> 
-> write("Next should be FALSE - wrong arity")?
-Next should be FALSE - wrong arity
-*** Yes
-> 
-> understands_words_ideas_objects( tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline], [catiline_word, tom_catiline_idea, catiline]])?
-
-*** No
-> 
-> write("Next should be FALSE - wrong type")?
-Next should be FALSE - wrong type
-*** Yes
-> 
-> understands_words_ideas_objects( tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [human_word, tom_human_idea, human]])?
-
-*** No
-> 
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> understand_same_objects_by_ideas( tom, now, [[tom_denounced_idea, denounced], [tom_catiline_idea, cicero]], quine, now, [[quine_denounced_idea, denounced], [quine_cicero_idea, cicero]])?
-
-*** No
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> understand_same_objects_by_words( tom, now, [[denounced_word, denounced], [cicero_word, cicero]], quine, now, [[denounced_word, denounced], [cicero_word, cicero]])?
-
-*** Yes
---1> 
-
-*** No
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> understand_same_objects_by_words( tom, now, [[denounced_word, denounced], [tully_word, cicero]], quine, now, [[denounced_word, denounced], [cicero_word, cicero]])?
-
-*** No
-> 
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_in_ideas( tom, now, [tom_denounced_idea,
-|    				    tom_cicero_idea,
-|    				    tom_catiline_idea])?
-
-*** Yes
---1> ;
-
-*** No
-> 
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> believes_in_ideas( tom, now, [tom_denounced_idea,
-|    				    tom_tully_idea,
-|    				    tom_catiline_idea])?
-
-*** No
-> ;
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_not_words( tom, now, [denounced_word,
-|    				    tully_word,
-|    				    catiline_word])?
-
-*** No
-> ;
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_not_in_ideas( tom, now, [tom_denounced_idea,
-|    				    tom_tully_idea,
-|    				    tom_catiline_idea])?
-
-*** Yes
---1> ;
-
-*** No
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_in_ideas( tom, now, [tom_of_orations_idea, tom_cicero_idea])?
-
-*** Yes
---1> ;
-
-*** No
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_in_ideas( tom, now, [tom_of_De_Senectute_idea, tom_tully_idea])?
-
-*** Yes
---1> ;
-
-*** No
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_words( tom, now, [of_orations_word, cicero_word])?
-
-*** No
-> ;
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_words( tom, now, [of_De_Senectute_word, tom_tully_word])?
-
-*** No
-> ;
-> 
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> believes_in_ideas( tom, now, [tom_of_orations_idea, tom_tully_idea])?
-
-*** No
-> ;
-> 
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> believes_in_ideas( tom, now, [tom_of_De_Senectute_idea, tom_cicero_idea])?
-
-*** No
-> ;
-> 
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> believes_words( tom, now, [of_orations_word, tully_word])?
-
-*** No
-> ;
-> 
-> write("Next should be FALSE")?
-Next should be FALSE
-*** Yes
-> 
-> believes_words( tom, now, [of_De_Senectute_word, tom_cicero_word])?
-
-*** No
-> ;
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_in_ideas( quine, now, [quine_of_orations_idea,
-|    				     quine_cicero_idea])?
-
-*** Yes
---1> ;
-
-*** No
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_in_ideas( quine, now, [quine_of_De_Senectute_idea,
-|    				     quine_tully_idea])?
-
-*** No
-> 	 
-> ;
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_words( quine, now, [of_orations_word,
-|    				     cicero_word])?
-
-*** No
-> ;
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_words( quine, now, [of_De_Senectute_word,
-|    				   tully_word])?
-
-*** No
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_in_ideas( quine, now, [quine_of_orations_idea,
-|    				     quine_tully_idea])?
-
-*** No
-> ;
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_in_ideas( quine, now, [quine_of_De_Senectute_idea,
-|    				     quine_cicero_idea])?
-
-*** No
-> ;
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_words( quine, now, [of_orations_word,
-|    				     tully_word])?
-
-*** No
-> ;
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
+> %% I indicate for each query whether the immediate response should be.
 > 
-> believes_words( quine, now, [of_De_Senectute_word,
-|    				   cicero_word])?
-
-*** No
-> 
-> ;
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_in_ideas( quine, now, [quine_of_orations_idea,
-|    				     quine_tully_idea])?
-
-*** No
-> ;
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_words( quine, now, [quine_of_De_Senectute_idea,
-|    				   quine_cicero_idea])?
-
-*** No
-> ;
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-> 
-> %% First Tom
-> 
-> write("Next should be TRUE")?
-Next should be TRUE
-*** Yes
-> 
-> believes_words_ideas_objects( tom, now, [[denounced_word,
-|    					      tom_denounced_idea,
-|    					      denounced],
-|    					     [cicero_word,
-|    					      tom_cicero_idea,
-|    					      cicero],
-|    					     [catiline_word,
-|    					      tom_catiline_idea,
-|    					      catiline]]
-|    			   )?
-
-*** Yes
---1> ;
-
-*** No
+> %% TRUE = Yes or FALSE = No.
 > 
-> believes_words_objects( tom, now, [[denounced_word,
-|    					 denounced],
-|    					[cicero_word,
-|    					 cicero],
-|    					[catiline_word,
-|    					 catiline]]
-|    		      )?
-
-*** Yes
---1> ;
-
-*** No
-> 
-> believes_words_ideas( tom, now, [[denounced_word,
-|    				       tom_denounced_idea],
-|    				      [cicero_word,
-|    				       tom_cicero_idea],
-|    				      [catiline_word,
-|    				       tom_catiline_idea]]
-|    		    )?
-
-*** Yes
---1> ;
-
-*** No
+> %% There may be subsequient No responses - as I may have asked for additional answers with semicolons.
 > 
-> believes_ideas_objects( tom, now, [[tom_denounced_idea,
-|    					 denounced],
-|    					[tom_cicero_idea,
-|    					 cicero],
-|    					[tom_catiline_idea,
-|    					 catiline]]
-|    		      )?
-
-*** Yes
---1> ;
-
-*** No
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced -- Tom
 > 
-> believes_objects( tom, now, [[denounced],
-|    				   [cicero],
-|    				   [catiline]]
-|    		 )?
+> test_understands(tom, now,
+|    		 [[denounced_word], [cicero_word], [catiline_word]],
+|    		 [[tom_denounced_idea], [tom_cicero_idea], [tom_catiline_idea]],
+|    		 [[denounced],[cicero],[catiline]],
+|    		 [[denounced_word, tom_denounced_idea], [cicero_word, tom_cicero_idea], [catiline_word, tom_catiline_idea]],
+|    		 [[denounced_word, denounced], [cicero_word, cicero], [catiline_word, catiline]],
+|    		 [[tom_denounced_idea, denounced], [tom_cicero_idea, cicero], [tom_catiline_idea, catiline]],
+|    		 [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
+tom understands words [[denounced_word],[cicero_word],[catiline_word]] at time now
 
-*** Yes
---1> ;
+tom understands ideas [[tom_denounced_idea],[tom_cicero_idea],[tom_catiline_idea]] at time now
 
-*** No
-> 
-> 
-> %% Special Tully cases
-> 
-> 
-> believes_words_ideas_objects( tom, now, [[denounced_word,
-|    					      tom_denounced_idea,
-|    					      denounced],
-|    					     [tully_word,
-|    					      tom_tully_idea,
-|    					      cicero],
-|    					     [catiline_word,
-|    					      tom_catiline_idea,
-|    					      catiline]]
-|    			   )?
-
-*** No
-> ;
-> 
-> believes_words_objects( tom, now, [[denounced_word,
-|    					 denounced],
-|    					[tully_word,
-|    					 cicero],
-|    					[catiline_word,
-|    					 catiline]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_words_ideas( tom, now, [[denounced_word,
-|    				       tom_denounced_idea],
-|    				      [tully_word,
-|    				       tom_tully_idea],
-|    				      [catiline_word,
-|    				       tom_catiline_idea]]
-|    		    )?
-
-*** No
-> ;
-> 
-> believes_ideas_objects( tom, now, [[tom_denounced_idea,
-|    					 denounced],
-|    					[tom_tully_idea,
-|    					 cicero],
-|    					[tom_catiline_idea,
-|    					 catiline]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_objects( tom, now, [[denounced],
-|    				   [cicero], % no separate tully
-|    				   [catiline]]
-|    		 )?
+tom understands objects [[denounced],[cicero],[catiline]] at time now
 
-*** Yes
---1> ;
+tom understands words-ideas [[denounced_word,tom_denounced_idea],[cicero_word,tom_cicero_idea],[catiline_word,tom_catiline_idea]] at time now
 
-*** No
-> 
-> 
-> %%% Now negative beleifs -- Still tom
-> 
-> 
-> believes_not_words_ideas_objects( tom, now, [[denounced_word,
-|    					      tom_denounced_idea,
-|    					      denounced],
-|    					     [cicero_word,
-|    					      tom_cicero_idea,
-|    					      cicero],
-|    					     [catiline_word,
-|    					      tom_catiline_idea,
-|    					      catiline]]
-|    			   )?
-
-*** No
-> ;
-> 
-> believes_not_words_objects( tom, now, [[denounced_word,
-|    					 denounced],
-|    					[cicero_word,
-|    					 cicero],
-|    					[catiline_word,
-|    					 catiline]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_not_words_ideas( tom, now, [[denounced_word,
-|    				       tom_denounced_idea],
-|    				      [cicero_word,
-|    				       tom_cicero_idea],
-|    				      [catiline_word,
-|    				       tom_catiline_idea]]
-|    		    )?
-
-*** No
-> ;
-> 
-> 	
-> believes_not_ideas_objects( tom, now, [[tom_denounced_idea,
-|    					 denounced],
-|    					[tom_cicero_idea,
-|    					 cicero],
-|    					[tom_catiline_idea,
-|    					 catiline]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_not_objects( tom, now, [[denounced],
-|    				   [cicero],
-|    				   [catiline]]
-|    		 )?
+tom understands words-objects [[denounced_word,denounced],[cicero_word,cicero],[catiline_word,catiline]] at time now
 
-*** Yes
---1> ;
+tom understands ideas-objects [[tom_denounced_idea,denounced],[tom_cicero_idea,cicero],[tom_catiline_idea,catiline]] at time now
 
-*** No
-> 
-> 
-> %% Special Tully cases
-> 
-> 
-> 
-> 
-> believes_not_words_ideas_objects( tom, now, [[denounced_word,
-|    					      tom_denounced_idea,
-|    					      denounced],
-|    					     [tully_word,
-|    					      tom_tully_idea,
-|    					      cicero],
-|    					     [catiline_word,
-|    					      tom_catiline_idea,
-|    					      catiline]]
-|    			   )?
+tom understands words-ideas-objects [[denounced_word,tom_denounced_idea,denounced],[cicero_word,tom_cicero_idea,cicero],[catiline_word,tom_catiline_idea,catiline]] at time now
 
-*** Yes
---1> ;
 
-*** No
-> 
-> 
-> believes_not_words_objects( tom, now, [[denounced_word,
-|    					 denounced],
-|    					[tully_word,
-|    					 cicero],
-|    					[catiline_word,
-|    					 catiline]]
-|    		      )?
+Stack size  :   263336 bytes (  257K) (0%)
+Heap size   :  1345144 bytes ( 1313K) (0%)
+Total memory: 1677721584 bytes (1638399K)
+X predicates are not installed.
 
 *** Yes
---1> ;
-
-*** No
 > 
-> believes_not_words_ideas( tom, now, [[denounced_word,
-|    				       tom_denounced_idea],
-|    				      [tully_word,
-|    				       tom_tully_idea],
-|    				      [catiline_word,
-|    				       tom_catiline_idea]]
-|    		    )?
-
-*** Yes
---1> ;
-
-*** No
 > 
-> believes_not_ideas_objects( tom, now, [[tom_denounced_idea,
-|    					 denounced],
-|    					[tom_tully_idea,
-|    					 cicero],
-|    					[tom_catiline_idea,
-|    					 catiline]]
-|    		      )?
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> test_believes(tom, now,
+|    		 [[denounced_word], [cicero_word], [catiline_word]],
+|    		 [tom_denounced_idea, tom_cicero_idea, tom_catiline_idea],
+|    		 [[denounced],[cicero],[catiline]],
+|    		 [[denounced_word, tom_denounced_idea], [cicero_word, tom_cicero_idea], [catiline_word, tom_catiline_idea]],
+|    		 [[denounced_word, denounced], [cicero_word, cicero], [catiline_word, catiline]],
+|    		 [[tom_denounced_idea, denounced], [tom_cicero_idea, cicero], [tom_catiline_idea, catiline]],
+|    	      [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
+tom believes words [[denounced_word],[cicero_word],[catiline_word]] at time now
 
-*** Yes
---1> ;
+tom believes ideas [tom_denounced_idea,tom_cicero_idea,tom_catiline_idea] at time now
 
-*** No
-> 
-> believes_not_objects( tom, now, [[denounced],
-|    				   [cicero], % no separate tully
-|    				   [catiline]]
-|    		 )?
+tom believes objects [[denounced],[cicero],[catiline]] at time now
 
-*** Yes
---1> ;
+tom believes words-ideas [[denounced_word,tom_denounced_idea],[cicero_word,tom_cicero_idea],[catiline_word,tom_catiline_idea]] at time now
 
-*** No
-> 
-> 
-> 
-> 
-> 
-> 
-> %% End special tom cases
-> 
-> 
-> believes_not_words_ideas_objects( tom, now, [[denounced_word,
-|    					      tom_denounced_idea,
-|    					      denounced],
-|    					     [tully_word,
-|    					      tom_tully_idea,
-|    					      cicero],  % bcause tully=cicero
-|    					     [catiline_word,
-|    					      tom_catiline_idea,
-|    					      catiline]]
-|    			   )?
+tom believes words-objects [[denounced_word,denounced],[cicero_word,cicero],[catiline_word,catiline]] at time now
 
-*** Yes
---1> ;
+tom believes ideas-objects [[tom_denounced_idea,denounced],[tom_cicero_idea,cicero],[tom_catiline_idea,catiline]] at time now
 
-*** No
-> 
-> believes_not_words_objects( tom, now, [[denounced_word,
-|    					 denounced],
-|    					[tully_word,
-|    					 cicero],  % because tully=cicero
-|    					[catiline_word,
-|    					 catiline]]
-|    		      )?
+tom believes words-ideas-objects [[denounced_word,tom_denounced_idea,denounced],[cicero_word,tom_cicero_idea,cicero],[catiline_word,tom_catiline_idea,catiline]] at time now
 
-*** Yes
---1> ;
 
-*** No
-> 
-> believes_not_words_ideas( tom, now, [[denounced_word,
-|    				       tom_denounced_idea],
-|    				      [tully_word,
-|    				       tom_tully_idea],
-|    				      [catiline_word,
-|    				       tom_catiline_idea]]
-|    		    )?
+Stack size  :   341336 bytes (  333K) (0%)
+Heap size   :  1345584 bytes ( 1314K) (0%)
+Total memory: 1677721584 bytes (1638399K)
+X predicates are not installed.
 
 *** Yes
---1> ;
-
-*** No
 > 
-> believes_not_ideas_objects( tom, now, [[tom_denounced_idea,
-|    					 denounced],
-|    					[tom_tully_idea,
-|    					 cicerio],  % because tully=cicerro
-|    					[tom_catiline_idea,
-|    					 catiline]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_not_objects( tom, now, [[denounced],
-|    				   [cicero],  % no separate tully
-|    				   [catiline]]
-|    		 )?
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> test_believes_true(tom, now,
+|    		 [[denounced_word], [cicero_word], [catiline_word]],
+|    		 [tom_denounced_idea, tom_cicero_idea, tom_catiline_idea],
+|    		 [[denounced],[cicero],[catiline]],
+|    		 [[denounced_word, tom_denounced_idea], [cicero_word, tom_cicero_idea], [catiline_word, tom_catiline_idea]],
+|    		 [[denounced_word, denounced], [cicero_word, cicero], [catiline_word, catiline]],
+|    		 [[tom_denounced_idea, denounced], [tom_cicero_idea, cicero], [tom_catiline_idea, catiline]],
+|    		   [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
+tom believes truly words [[denounced_word],[cicero_word],[catiline_word]] at time now
 
-*** Yes
---1> ;
+tom believes truly ideas [tom_denounced_idea,tom_cicero_idea,tom_catiline_idea] at time now
 
-*** No
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> 
-> 
-> %% begin check for contradictory beliefs cases
-> %% These require too much memory -- commented out.
-> 	
-> % contradicts_words_objects( tom, now, Pair_List)?
-> 
-> 
-> % contradicts_words_ideas( tom, now, Pair_List)?
-> 
-> 
-> % contradicts_ideas_objects( tom, now, Pair_List)?
-> 
-> 
-> % contradicts_objects( tom, now, Object_List)?
-> 
-> %% end conjunction cases
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%  Next Quine.
-> 
-> believes_words_ideas_objects( quine, now, [[denounced_word,
-|    					      quine_denounced_idea,
-|    					      denounced],
-|    					     [cicero_word,
-|    					      quine_cicero_idea,
-|    					      cicero],
-|    					     [catiline_word,
-|    					      quine_catiline_idea,
-|    					      catiline]]
-|    			   )?
+tom believes truly objects [[denounced],[cicero],[catiline]] at time now
 
-*** Yes
---1> ;
+tom believes truly words-ideas [[denounced_word,tom_denounced_idea],[cicero_word,tom_cicero_idea],[catiline_word,tom_catiline_idea]] at time now
 
-*** No
-> 
-> believes_words_objects( quine, now, [[denounced_word,
-|    					 denounced],
-|    					[cicero_word,
-|    					 cicero],
-|    					[catiline_word,
-|    					 catiline]]
-|    		      )?
+tom believes truly words-objects [[denounced_word,denounced],[cicero_word,cicero],[catiline_word,catiline]] at time now
 
-*** Yes
---1> ;
+tom believes truly ideas-objects [[tom_denounced_idea,denounced],[tom_cicero_idea,cicero],[tom_catiline_idea,catiline]] at time now
 
-*** Yes
---1> 
-
-*** No
-> believes_words_ideas( quine, now, [[denounced_word,
-|    				       quine_denounced_idea],
-|    				      [cicero_word,
-|    				       quine_cicero_idea],
-|    				      [catiline_word,
-|    				       quine_catiline_idea]]
-|    		    )?
+tom believes truly words-ideas-objects [[denounced_word,tom_denounced_idea,denounced],[cicero_word,tom_cicero_idea,cicero],[catiline_word,tom_catiline_idea,catiline]] at time now
 
-*** Yes
---1> ;
 
-*** No
-> 
-> believes_ideas_objects( quine, now, [[quine_denounced_idea,
-|    					 denounced],
-|    					[quine_cicero_idea,
-|    					 cicero],
-|    					[quine_catiline_idea,
-|    					 catiline]]
-|    		      )?
+Stack size  :   583480 bytes (  569K) (0%)
+Heap size   :  1346024 bytes ( 1314K) (0%)
+Total memory: 1677721584 bytes (1638399K)
+X predicates are not installed.
 
 *** Yes
---1> ;
-
-*** No
 > 
-> believes_objects( quine, now, [[denounced],
-|    				   [cicero],
-|    				   [catiline]]
-|    		 )?
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> test_believes_true_not(tom, now,
+|    		 [[denounced_word], [cicero_word], [catiline_word]],
+|    		 [tom_denounced_idea, tom_cicero_idea, tom_catiline_idea],
+|    		 [[denounced],[cicero],[catiline]],
+|    		 [[denounced_word, tom_denounced_idea], [cicero_word, tom_cicero_idea], [catiline_word, tom_catiline_idea]],
+|    		 [[denounced_word, denounced], [cicero_word, cicero], [catiline_word, catiline]],
+|    		 [[tom_denounced_idea, denounced], [tom_cicero_idea, cicero], [tom_catiline_idea, catiline]],
+|    		 [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
+tom does not believe truly not words [[denounced_word],[cicero_word],[catiline_word]] at time now
 
-*** Yes
---1> ;
+tom does not believe truly not ideas [tom_denounced_idea,tom_cicero_idea,tom_catiline_idea] at time now
 
-*** Yes
---1> 
-
-*** No
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> believes_words_ideas_objects( quine, now, [[denounced_word,
-|    					      quine_denounced_idea,
-|    					      denounced],
-|    					     [tully_word,
-|    					      quine_tully_idea,
-|    					      cicero], % there is no distinct tully
-|    					     [catiline_word,
-|    					      quine_catiline_idea,
-|    					      catiline]]
-|    			   )?
+tom does not believe truly not objects [[denounced],[cicero],[catiline]] at time now
 
-*** Yes
---1> ;
+tom does not believe truly not words-ideas [[denounced_word,tom_denounced_idea],[cicero_word,tom_cicero_idea],[catiline_word,tom_catiline_idea]] at time now
 
-*** No
-> 
-> believes_words_objects( quine, now, [[denounced_word,
-|    					 denounced],
-|    					[tully_word,
-|    					 cicero], % there is no distinct tully
-|    					[catiline_word,
-|    					 catiline]]
-|    		      )?
+tom does not believe truly not words-objects [[denounced_word,denounced],[cicero_word,cicero],[catiline_word,catiline]] at time now
 
-*** Yes
---1> ;
+tom does not believe truly not ideas-objects [[tom_denounced_idea,denounced],[tom_cicero_idea,cicero],[tom_catiline_idea,catiline]] at time now
 
-*** Yes
---1> 
-
-*** No
-> believes_words_ideas( quine, now, [[denounced_word,
-|    				       quine_denounced_idea],
-|    				      [tully_word,
-|    				       quine_tully_idea],
-|    				      [catiline_word,
-|    				       quine_catiline_idea]]
-|    		    )?
+tom does not believe truly not words-ideas-objects [[denounced_word,tom_denounced_idea,denounced],[cicero_word,tom_cicero_idea,cicero],[catiline_word,tom_catiline_idea,catiline]] at time now
 
-*** Yes
---1> ;
 
-*** No
-> 
-> believes_ideas_objects( quine, now, [[quine_denounced_idea,
-|    					 denounced],
-|    					[quine_tully_idea,
-|    					 cicero], % there is no distinct tully
-|    					[quine_catiline_idea,
-|    					 catiline]]
-|    		      )?
+Stack size  :    40832 bytes (   39K) (0%)
+Heap size   :  1346528 bytes ( 1314K) (0%)
+Total memory: 1677721584 bytes (1638399K)
+X predicates are not installed.
 
 *** Yes
---1> ;
-
-*** No
 > 
-> believes_objects( quine, now, [[denounced],
-|    				   [cicero],
-|    				   [catiline]]
-|    		 )?
-
-*** Yes
---1> ;
-
+> write(bye)?
+bye
 *** Yes
---1> 
-
-*** No
-> %%%%%%%%%%%%%%%%%%%%%% Next Part 2 of_orations
-> 
-> %%% First tom
-> 
-> believes_words_ideas_objects( tom, now, [[of_orations_word,
-|    					      tom_of_orations_idea,
-|    					      of_orations],
-|    					     [cicero_word,
-|    					      tom_cicero_idea,
-|    					      cicero]]
-|    			   )?
-
-*** No
-> ;
-> 
-> believes_words_objects( tom, now, [[of_orations_word,
-|    					 of_orations],
-|    					[cicero_word,
-|    					 cicero]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_words_ideas( tom, now, [[of_orations_word,
-|    				       tom_of_orations_idea],
-|    				      [cicero_word,
-|    				       tom_cicero_idea]]
-|    		    )?
-
-*** No
-> ;
-> 
-> believes_ideas_objects( tom, now, [[tom_of_orations_idea,
-|    					 of_orations],
-|    					[tom_cicero_idea,
-|    					 cicero]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_objects( tom, now, [[of_orations],
-|    				   [cicero]]
-|    		 )?
-
-*** No
-> ;
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> believes_words_ideas_objects( tom, now, [[of_orations_word,
-|    					      tom_of_orations_idea,
-|    					      of_orations],
-|    					     [tully_word,
-|    					      tom_tully_idea,
-|    					      cicero]] % there is no distinct tully
-|    			   )?
-
-*** No
-> ;
-> 
-> believes_words_objects( tom, now, [[of_orations_word,
-|    					 of_orations],
-|    					[tully_word,
-|    					 cicero]] % there is no distinct tully
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_words_ideas( tom, now, [[of_orations_word,
-|    				       tom_of_orations_idea],
-|    				      [tully_word,
-|    				       tom_tully_idea]]
-|    		    )?
-
-*** No
-> ;
-> 
-> believes_ideas_objects( tom, now, [[tom_of_orations_idea,
-|    					 of_orations],
-|    					[tom_tully_idea,
-|    					 cicero]] % there is no distinct tully
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_objects( tom, now, [[of_orations],
-|    				   [cicero]]
-|    		 )?
-
-*** No
-> ;
-> 
-> %%%%%%%%%%%%%%%%%%% Next quine
-> 
-> 
-> believes_words_ideas_objects( quine, now, [[of_orations_word,
-|    					      quine_of_orations_idea,
-|    					      of_orations],
-|    					     [cicero_word,
-|    					      quine_cicero_idea,
-|    					      cicero]]
-|    			   )?
-
-*** No
-> ;
-> 
-> believes_words_objects( quine, now, [[of_orations_word,
-|    					 of_orations],
-|    					[cicero_word,
-|    					 cicero]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_words_ideas( quine, now, [[of_orations_word,
-|    				       quine_of_orations_idea],
-|    				      [cicero_word,
-|    				       quine_cicero_idea]]
-|    		    )?
-
-*** No
-> ;
-> 
-> believes_ideas_objects( quine, now, [[quine_of_orations_idea,
-|    					 of_orations],
-|    					[quine_cicero_idea,
-|    					 cicero]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_objects( quine, now, [[of_orations],
-|    				   [cicero]]
-|    		 )?
-
-*** No
-> ;
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> believes_words_ideas_objects( quine, now, [[of_orations_word,
-|    					      quine_of_orations_idea,
-|    					      of_orations],
-|    					     [tully_word,
-|    					      quine_tully_idea,
-|    					      cicero]] % there is no distinct tully
-|    			   )?
-
-*** No
-> ;
-> 
-> believes_words_objects( quine, now, [[of_orations_word,
-|    					 of_orations],
-|    					[tully_word,
-|    					 cicero]] % there is no distinct tully
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_words_ideas( quine, now, [[of_orations_word,
-|    				       quine_of_orations_idea],
-|    				      [tully_word,
-|    				       quine_tully_idea]]
-|    		    )?
-
-*** No
-> ;
-> 
-> believes_ideas_objects( quine, now, [[quine_of_orations_idea,
-|    					 of_orations],
-|    					[quine_tully_idea]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_objects( quine, now, [[of_orations],
-|    				   [cicero]]
-|    		 )?
-
-*** No
-> ;
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> %%%%%%%%%%%%%%%%%%%%%% Next Part 3 of_De_Senectute
-> 
-> %%% First tom
-> 
-> believes_words_ideas_objects( tom, now, [[of_De_Senectute_word,
-|    					      tom_of_De_Senectute_idea,
-|    					      of_De_Senectute],
-|    					     [cicero_word,
-|    					      tom_cicero_idea,
-|    					      cicero]]
-|    			   )?
-
-*** No
-> ;
-> 
-> believes_words_objects( tom, now, [[of_De_Senectute_word,
-|    					 of_De_Senectute],
-|    					[cicero_word,
-|    					 cicero]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_words_ideas( tom, now, [[of_De_Senectute_word,
-|    				       tom_of_De_Senectute_idea],
-|    				      [cicero_word,
-|    				       tom_cicero_idea]]
-|    		    )?
-
-*** No
-> ;
-> 
-> believes_ideas_objects( tom, now, [[tom_of_De_Senectute_idea,
-|    					 of_De_Senectute],
-|    					[tom_cicero_idea,
-|    					 cicero]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_objects( tom, now, [[of_De_Senectute],
-|    				   [cicero]]
-|    		 )?
-
-*** No
-> ;
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> believes_words_ideas_objects( tom, now, [[of_De_Senectute_word,
-|    					      tom_of_De_Senectute_idea,
-|    					      of_De_Senectute],
-|    					     [tully_word,
-|    					      tom_tully_idea,
-|    					      cicero]] % there is no distinct tully
-|    			   )?
-
-*** No
-> ;
-> 
-> believes_words_objects( tom, now, [[of_De_Senectute_word,
-|    					 of_De_Senectute],
-|    					[tully_word,
-|    					 cicero]] % there is no distinct tully
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_words_ideas( tom, now, [[of_De_Senectute_word,
-|    				       tom_of_De_Senectute_idea],
-|    				      [tully_word,
-|    				       tom_tully_idea]]
-|    		    )?
-
-*** No
-> ;
-> 
-> believes_ideas_objects( tom, now, [[tom_of_De_Senectute_idea,
-|    					 of_De_Senectute],
-|    					[tom_tully_idea,
-|    					 cicero]] % there is no distinct tully
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_objects( tom, now, [[of_De_Senectute],
-|    				   [cicero]]
-|    		 )?
-
-*** No
-> ;
-> 
-> %%%%%%%%%%%%%%%%%%% Next quine
-> 
-> 
-> believes_words_ideas_objects( quine, now, [[of_De_Senectute_word,
-|    					      quine_of_De_Senectute_idea,
-|    					      of_De_Senectute],
-|    					     [cicero_word,
-|    					      quine_cicero_idea,
-|    					      cicero]]
-|    			   )?
-
-*** No
-> ;
-> 
-> believes_words_objects( quine, now, [[of_De_Senectute_word,
-|    					 of_De_Senectute],
-|    					[cicero_word,
-|    					 cicero]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_words_ideas( quine, now, [[of_De_Senectute_word,
-|    				       quine_of_De_Senectute_idea],
-|    				      [cicero_word,
-|    				       quine_cicero_idea]]
-|    		    )?
-
-*** No
-> ;
-> 
-> believes_ideas_objects( quine, now, [[quine_of_De_Senectute_idea,
-|    					 of_De_Senectute],
-|    					[quine_cicero_idea,
-|    					 cicero]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_objects( quine, now, [[of_De_Senectute],
-|    				   [cicero]]
-|    		 )?
-
-*** No
-> ;
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> believes_words_ideas_objects( quine, now, [[of_De_Senectute_word,
-|    					      quine_of_De_Senectute_idea,
-|    					      of_De_Senectute],
-|    					     [tully_word,
-|    					      quine_tully_idea,
-|    					      cicero]] % there is no distinct tully
-|    			   )?
-
-*** No
-> ;
-> 
-> believes_words_objects( quine, now, [[of_De_Senectute_word,
-|    					 of_De_Senectute],
-|    					[tully_word,
-|    					 cicero]] % there is no distinct tully
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_words_ideas( quine, now, [[of_De_Senectute_word,
-|    				       quine_of_De_Senectute_idea],
-|    				      [tully_word,
-|    				       quine_tully_idea]]
-|    		    )?
-
-*** No
-> ;
-> 
-> believes_ideas_objects( quine, now, [[quine_of_De_Senectute_idea,
-|    					 of_De_Senectute],
-|    					[quine_tully_idea]]
-|    		      )?
-
-*** No
-> ;
-> 
-> believes_objects( quine, now, [[of_De_Senectute],
-|    				   [cicero]]
-|    		 )?
-
-*** No
-> ;
 > halt?
 

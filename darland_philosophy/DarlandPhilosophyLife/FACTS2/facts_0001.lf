@@ -1,4 +1,4 @@
-%% Copyright (C) 2017, 2019, 2020 Dennis J. Darland
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
 
@@ -46,27 +46,23 @@
 %% rrrr( Type, Subject, Time, A_word, A_idea)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+rrrr( tom, now, denounced_word, tom_denounced_idea).
 rrrr( tom, now, cicero_word, tom_cicero_idea).
 rrrr( tom, now, catiline_word, tom_catiline_idea).
 rrrr( tom, now, tully_word, tom_tully_idea).
 rrrr( tom, now, tom_word, tom_tom_idea).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rrrr( quine, now, cicero_word, quine_cicero_idea).
-rrrr( quine, now, cicero_word, quine_tully_idea).
 rrrr( quine, now, catiline_word, quine_catiline_idea).
 rrrr( quine, now, tully_word, quine_tully_idea).
-rrrr( quine, now, tully_word, quine_cicero_idea).
 rrrr( quine, now, tom_word, quine_tom_idea).
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rrrr( tom, now, denounced_word, tom_denounced_idea).
 rrrr( tom, now, of_orations_word, tom_of_orations_idea).
 rrrr( tom, now, of_De_Senectute_word, tom_of_De_Senectute_idea).
 rrrr( tom, now, human_word, tom_human_idea).
 rrrr( tom, now, featherless_biped_word, tom_featherless_biped_idea).
 rrrr( tom, now, american_word, tom_american_idea).
 rrrr( tom, now, roman_word, tom_roman_idea).
-rrrr( tom, now, not_formally_equivalent_word, tom_not_formally_equivalent_idea).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rrrr( quine, now, denounced_word, quine_denounced_idea).
 rrrr( quine, now, of_orations_word, quine_of_orations_idea).
@@ -84,7 +80,6 @@ rrrr( quine, now, formally_equivalent_word, quine_formally_equivalent_idea).
 %% so the object must be the same for both (cicero)
 %%
 %%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ssss( tom, now, tom_cicero_idea, cicero).
 ssss( tom, now, tom_tully_idea, cicero).
@@ -97,8 +92,6 @@ ssss( tom, now, tom_of_orations_idea, of_orations).
 ssss( tom, now, tom_of_De_Senectute_idea, of_De_Senectute).
 ssss( tom, now, tom_american_idea, american).
 ssss( tom, now, tom_roman_idea, roman).
-ssss( tom, now, tom_not_formally_equivalent_idea, not_formally_equivalent).
-ssss( tom, now, tom_formally_equivalent_idea, formally_equivalent).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ssss( quine, now, quine_cicero_idea, cicero).
 ssss( quine, now, quine_tully_idea, cicero).
@@ -112,13 +105,10 @@ ssss( quine, now, quine_of_De_Senectute_idea, of_De_Senectute).
 ssss( quine, now, quine_featherless_biped_idea, featherless_biped).
 ssss( quine, now, quine_american_idea, american).
 ssss( quine, now, quine_roman_idea, roman).
-ssss( quine, now, quine_not_formally_equivalent_idea, not_formally_equivalent).
-ssss( quine, now, quine_formally_equivalent_idea, formally_equivalent).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 idea_synonym( quine, now, quine_tully_idea, quine_cicero_idea).
 idea_synonym( quine, now, quine_bachelor_idea, quine_unmarried_male_idea).
 idea_synonym( tom, now, tom_bachelor_idea, tom_unmarried_male_idea).
-
 %% There are several understands relations symbols defined in terms of the
 %% words and ideas.
 
@@ -126,50 +116,26 @@ idea_synonym( tom, now, tom_bachelor_idea, tom_unmarried_male_idea).
 %% uttered. I only require that there was an relation_idea and
 %% ideas of objects. They never even need to be related or believed. 
 
-
-
-
-arity_relation( human, 1).
-arity_relation( denounced, 2).
-arity_word( human_word, 1).
-arity_word( denounced_word, 2).
 arity_idea( tom_human_idea, 1).
 arity_idea( quine_human_idea, 1).
 arity_idea( tom_denounced_idea, 2).
 arity_idea( quine_denounced_idea, 2).
 
-type_object( human, 1).
-type_word( human_word, 1).
 type_idea( tom_human_idea, 1).
-type_idea( quine_human_idea, 1).
-type_object( denounced, 1).
-type_word( denounced_word, 1).
 type_idea( tom_denounced_idea, 1).
-type_idea( quine_denounced_idea, 1).
-type_object( cicero, 0).
-type_word( cicero_word, 0).
 type_idea( tom_cicero_idea, 0).
-type_idea( quine_cicero_idea, 0).
-type_object( tully, 0).
-type_word( tully_word, 0).
 type_idea( tom_tully_idea, 0).
-type_idea( quine_tully_idea, 0).
-type_object( catiline, 0).
-type_word( catiline_word, 0).
 type_idea( tom_catiline_idea, 0).
-type_idea( quine_catiline_idea, 0).
-type_object( tom, 0).
-type_word( tom_word, 0).
 type_idea( tom_idea, 0).
 type_idea( tom_tom_idea, 0).
 type_idea( tom_quine_idea, 0).
-type_object( quine, 0).
-type_word( quine_word, 0).
-type_idea( tom_quine_idea, 0).
+
 type_idea( quine_quine_idea, 0).
-
-
-
+type_idea( quine_human_idea, 1).
+type_idea( quine_denounced_idea, 1).
+type_idea( quine_cicero_idea, 0).
+type_idea( quine_tully_idea, 0).
+type_idea( quine_catiline_idea, 0).
 
 rrrr( dennis, now, human_word, dennis_human_idea).
 ssss( dennis, now, dennis_human_idea, human).
@@ -187,3 +153,15 @@ rrrr( dennis, now, cicero_aristotle, dennis_aristotle_idea).
 ssss( dennis, now, dennis_aristotle_idea, aristotle).
 rrrr( dennis, now, cicero_frege, dennis_frege_idea).
 ssss( dennis, now, dennis_frege_idea, frege).
+
+%% A fact
+
+qqqq4([denounced, cicero, catiline]).
+
+%% Negative facts
+
+qqqq5([denounced, russell, catiline]).
+
+qqqq5([denounced, quine, catiline]).
+
+

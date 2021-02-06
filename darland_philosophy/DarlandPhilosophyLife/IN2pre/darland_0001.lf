@@ -1,4 +1,4 @@
-%% Copyright (C) 2017, 2019 Dennis J. Darland
+%% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
 
@@ -52,7 +52,6 @@
 
 %% R | S is represented by rrss
 
-%dynamic(qqqq)?
 load("RULES2/life_0001.lf")?
 load("FACTS2/facts_0001.lf")?
 load("FACTS2/facts_0002.lf")?
@@ -61,230 +60,80 @@ load("RULES2/rules_0001.lf")?
 load("RULES2/rules_0002.lf")?
 load("RULES2/rules_0003.lf")?
 load("RULES2/rules_0004.lf")?
+load("RULES2/rules_0007.lf")?
+load("RULES2/rules_0006.lf")?
 load("RULES2/life_0002.lf")?
+
+
 trace_input(true)?
 
 write_time(Ignore)?
 
-write("I indicate for each query whether the immediate response should be")?
-
-write("TRUE = Yes or FALSE = No")?
-
-write("There may be subsequient No responses - as I may have asked for additional answers with semicolons")?
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+%% I indicate for each query whether the immediate response should be.
 
-write("Next should be TRUE")?
+%% TRUE = Yes or FALSE = No.
 
-qqqq(believes_ideas_objects, tom, now, [[tom_denounced_idea, denounced],
-				      [tom_cicero_idea, cicero],
-				      [tom_catiline_idea, catiline]]
-    )?
+%% There may be subsequient No responses - as I may have asked for additional answers with semicolons.
 
-write("Next should be FALSE")?
-	
-qqqq(believes_ideas_objects, tom, now, [[tom_denounced_idea, denounced],
-				      [tom_cicero_idea, cicero],
-				      [tom_cicero_idea, cicero]]
-    )?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced -- Tom
 
-write("Next should be TRUE")?
+test_understands(tom, now,
+		 [[denounced_word], [cicero_word], [catiline_word]],
+		 [[tom_denounced_idea], [tom_cicero_idea], [tom_catiline_idea]],
+		 [[denounced],[cicero],[catiline]],
+		 [[denounced_word, tom_denounced_idea], [cicero_word, tom_cicero_idea], [catiline_word, tom_catiline_idea]],
+		 [[denounced_word, denounced], [cicero_word, cicero], [catiline_word, catiline]],
+		 [[tom_denounced_idea, denounced], [tom_cicero_idea, cicero], [tom_catiline_idea, catiline]],
+		 [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
 
-qqqq(believes_objects, tom, now, [[denounced], [cicero], [catiline]])?
 
-write("Next should not be believed")?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+test_believes(tom, now,
+		 [[denounced_word], [cicero_word], [catiline_word]],
+		 [tom_denounced_idea, tom_cicero_idea, tom_catiline_idea],
+		 [[denounced],[cicero],[catiline]],
+		 [[denounced_word, tom_denounced_idea], [cicero_word, tom_cicero_idea], [catiline_word, tom_catiline_idea]],
+		 [[denounced_word, denounced], [cicero_word, cicero], [catiline_word, catiline]],
+		 [[tom_denounced_idea, denounced], [tom_cicero_idea, cicero], [tom_catiline_idea, catiline]],
+	      [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
 
-qqqq(believes_objects, tom, now, [[denounced], [cicero], [tom]])?	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+test_believes_true(tom, now,
+		 [[denounced_word], [cicero_word], [catiline_word]],
+		 [tom_denounced_idea, tom_cicero_idea, tom_catiline_idea],
+		 [[denounced],[cicero],[catiline]],
+		 [[denounced_word, tom_denounced_idea], [cicero_word, tom_cicero_idea], [catiline_word, tom_catiline_idea]],
+		 [[denounced_word, denounced], [cicero_word, cicero], [catiline_word, catiline]],
+		 [[tom_denounced_idea, denounced], [tom_cicero_idea, cicero], [tom_catiline_idea, catiline]],
+		   [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
 
-write("Next should be FALSE - NONSENSE - there is no tully - objects only have one name in WildLIFE")?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+test_believes_true_not(tom, now,
+		 [[denounced_word], [cicero_word], [catiline_word]],
+		 [tom_denounced_idea, tom_cicero_idea, tom_catiline_idea],
+		 [[denounced],[cicero],[catiline]],
+		 [[denounced_word, tom_denounced_idea], [cicero_word, tom_cicero_idea], [catiline_word, tom_catiline_idea]],
+		 [[denounced_word, denounced], [cicero_word, cicero], [catiline_word, catiline]],
+		 [[tom_denounced_idea, denounced], [tom_cicero_idea, cicero], [tom_catiline_idea, catiline]],
+		 [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
 
-qqqq(believes_objects, tom, now, [[denounced], [tully], [catiline]])?
+write(bye)?
+halt?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced -- Quine
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-	
-write("Next should be FALSE")?
 
-qqqq(believes_ideas_objects, tom, now, [[tom_denounced_idea, denounced],
-				      [tom_tully_idea, cicero],
-				      [tom_catiline_idea, catiline]]
-    )?
-;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced -- Russell
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
+denounced_example(tom)?
 
-write("Next should be TRUE")?
 
-qqqq(believes_words_ideas, tom, now, [[denounced_word,
-				       tom_denounced_idea],
-				      [cicero_word,
-				       tom_cicero_idea],
-				      [catiline_word,
-				       tom_catiline_idea]]
-    )?
-;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Other -- Tom
 
-	
-write("Next should be FALSE")?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Other -- Quine
 
-qqqq(believes_words_ideas, tom, now, [[denounced_word,
-				       tom_denounced_idea],
-				      [tully_word,
-				       tom_tully_idea],
-				      [catiline_word,
-				       tom_catiline_idea]]
-    )?
-;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Other -- Russell
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-
-
-write("Next should be TRUE")?
-
-qqqq(believes_words_ideas_objects, tom, now, [[denounced_word,
-					      tom_denounced_idea,
-					      denounced],
-					     [cicero_word,
-					      tom_cicero_idea,
-					      cicero],
-					     [catiline_word,
-					      tom_catiline_idea,
-					      catiline]]
-			   )?
-;
-
-	
-write("Next should be FALSE")?
-
-qqqq(believes_words_ideas_objects, tom, now, [[denounced_word,
-					      tom_denounced_idea,
-					      denounced],
-					     [tully_word,
-					      tom_tully_idea,
-					      cicero],
-					     [catiline_word,
-					      tom_catiline_idea,
-					      catiline]]
-			   )?
-;
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-
-write("Next should be TRUE")?
-
-qqqq(believes_words, tom, now,
-     [[denounced_word],[cicero_word],[catiline_word]])?
-;
-
-write("Next should be FALSE")?
-
-qqqq(believes_words, tom, now,
-     [[denounced_word],[tully_word],[catiline_word]])?
-;
-
-	
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% Start Part on Denounced
-
-write("Next should be TRUE")?
-
-qqqq(believes_words_objects, tom, now,
-     [[denounced_word, denounced],
-      [cicero_word, cicero],
-      [catiline_word, catiline]])?
-;
-	
-write("Next should be FALSE")?
-
-qqqq(believes_words_objects, tom, now,
-     [[denounced_word, denounced],
-      [tully_word, cicero],
-      [catiline_word, catiline]])?
-;
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-write("Next should be TRUE")?
-
-qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, cicero], [catiline_word, catiline]])?
-
-write("Next should be FALSE cicero not word for catiline")?
-
-qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, catiline], [catiline_word, catiline]])?
-
-write("Next should be FALSE cicero gives type 0 for relation")?
-
-qqqq(understands_words_objects, tom, now, [[cicero_word, cicero], [cicero_word, catiline], [catiline_word, catiline]])?
-
-write("Next should be FALSE - wrong arity - not enough terms")?
-
-qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, catiline]])?
-
-write("Next should be FALSE - human wrong type")?
-
-qqqq(understands_words_objects, tom, now, [[denounced_word, denounced], [cicero_word, catiline], [human_word, human]])?
-
-write("Next should be TRUE")?
-
-qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
-
-write("Next should be FALSE - cicero word not of catiline idea")?
-
-qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_catiline_idea, cicero], [catiline_word, tom_catiline_idea, catiline]])?
-
-write("Next should be FALSE - wrong arity")?
-
-qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [catiline_word, tom_catiline_idea, catiline], [catiline_word, tom_catiline_idea, catiline]])?
-
-write("Next should be FALSE - wrong type")?
-
-qqqq(understands_words_ideas_objects, tom, now, [[denounced_word, tom_denounced_idea, denounced], [cicero_word, tom_cicero_idea, cicero], [human_word, tom_human_idea, human]])?
-
-write("Next should be FALSE")?
-
-qqqq(understand_same_objects_by_ideas, tom, now, [[tom_denounced_idea, denounced], [tom_catiline_idea, cicero]], quine, now, [[quine_denounced_idea, denounced], [quine_cicero_idea, cicero]])?
-
-write("Next should be TRUE")?
-
-qqqq(understand_same_objects_by_words, tom, now, [[denounced_word, denounced], [cicero_word, cicero]], quine, now, [[denounced_word, denounced], [cicero_word, cicero]])?
-
-write("Next should be FALSE")?
-
-qqqq(understand_same_objects_by_words, tom, now, [[denounced_word, denounced], [tully_word, cicero]], quine, now, [[denounced_word, denounced], [cicero_word, cicero]])?
-
-
-write("Next should be TRUE")?
-
-qqqq(believes_in_ideas, tom, now, [tom_denounced_idea,
-				    tom_cicero_idea,
-				    tom_catiline_idea])?
-;
-
-write("Next should be FALSE")?
-
-qqqq(believes_in_ideas, tom, now, [tom_denounced_idea,
-				    tom_tully_idea,
-				    tom_catiline_idea])?
-;
-
-write("Next should be TRUE")?
-
-qqqq(believes_not_words, tom, now, [denounced_word,
-				    tully_word,
-				    catiline_word])?
-;
-
-write("Next should be TRUE")?
-
-qqqq(believes_not_in_ideas, tom, now, [tom_denounced_idea,
-				    tom_tully_idea,
-				    tom_catiline_idea])?
-;
+halt?
 
 write("Next should be TRUE")?
 

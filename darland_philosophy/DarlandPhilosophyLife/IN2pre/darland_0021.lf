@@ -64,7 +64,7 @@ load("RULES2/rules_0004.lf")?
 load("RULES2/life_0002.lf")?
 trace_input(true)?
 
-write(system("date"))?
+write_time(Ignore)?
 
 %% I indicate for each query whether the immediate response should be
 %% TRUE = Yes or FALSE = No
