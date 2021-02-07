@@ -1,0 +1,283 @@
+
+*** Yes
+> > 
+*** Yes
+% Design decision in Wild_LIFE:
+% Functions are called with matching and predicates are called with
+% unification.  To have a routine that has some arguments called
+% with matching and some with unification, you can use the "such-that"
+% built-in function (E|G) which returns E and executes the goal G.
+
+% Last call optimization is orthogonal to the calling method
+% (by matching or by unification).  Unification uses a logical variable
+% as a placeholder for the result.  Since it does not need to keep
+% environments, it can take advantage of LCO.
+
+% Call-by-matching should be used for an _input_.  It guarantees that
+% the input will not be corrupted.
+% Call-by-unification should be used for an _output_.
+
+% 1. Standard functional definition of append:
+% Append with matching for first argument and unification for result.
+% No tail recursion optimization, result returned as function result.
+app2([],L) -> L.
+app2([X|L1],L2) -> [X|app2(L1,L2)].
+
+% 2. Standard predicate definition of append:
+% Append with unification for all arguments.
+% Keeps tail recursion optimization.
+app3([],L,L).
+app3([X|L1],L2,[X|L3]) :- app3(L1,L2,L3).
+
+% 3. Similar to (1), but keeps LCO:
+% Append with matching for first argument and unification for result.
+% Keeps tail recursion optimization, result returned in third argument.
+app1([],L,R) -> true | R=L.
+app1([X|L1],L2,R) -> true | R=[X|L3], app1(L1,L2,L3).
+
+% 4. Purely "checking" version of append:
+% Append with matching for all arguments.
+% Keeps tail recursion optimization.
+app4([],L,L) -> succeed.
+app4([X|L1],L2,[X|L3]) -> succeed | app4(L1,L2,L3).
+
+% 5. Another functional version:
+% Doesn't keep LCO because call to '=' follows call to app5?
+app5([],A)->A.
+app5([X|L1],L2:list) -> [X|L3] | L3=app5(L1,L2).
+ <EOF>
+
+*** Yes
+% Rules particularly for WildLIFE
+> 
+> 
+>     
+> app2(A,B)=C?
+
+*** Yes
+A = @~, B = @, C = @.
+--1> =[1,2]?
+
+*** Yes
+A = [_A: 1,_B: 2], B = @, C = [_A,_B|B].
+----2> =[]?
+
+*** Yes
+A = [_A: 1,_B: 2], B = [], C = [_A,_B|B].
+------3> 
+*** No
+A = [_A: 1,_B: 2], B = @, C = [_A,_B|B].
+----2> 
+*** No
+A = @~, B = @, C = @.
+--1> =[1,2|B]?
+
+*** Yes
+A = [_A: 1,_B: 2|B], B = @~, C = [_A,_B|@].
+----2> =[3,4]?
+
+*** Yes
+A = [_A: 1,_B: 2|B], B = [_C: 3,_D: 4], C = [_A,_B,_C,_D|B].
+------3> 
+> app1(A,B,C)?
+
+*** Yes
+A = @~, B = @, C = @.
+--1> =[1,2]?
+
+*** Yes
+A = [_A: 1,_B: 2], B = @, C = [_A,_B|B].
+----2> =[]?
+
+*** Yes
+A = [_A: 1,_B: 2], B = [], C = [_A,_B|B].
+------3> 
+*** No
+A = [_A: 1,_B: 2], B = @, C = [_A,_B|B].
+----2> 
+*** No
+A = @~, B = @, C = @.
+--1> =[1,2|B]?
+
+*** Yes
+A = [_A: 1,_B: 2|B], B = @~, C = [_A,_B|@].
+----2> =[3,4]?
+
+*** Yes
+A = [_A: 1,_B: 2|B], B = [_C: 3,_D: 4], C = [_A,_B,_C,_D|B].
+------3> 
+> app3(A,B,C)?
+
+*** Yes
+A = [], B = @, C = B.
+--1> 
+
+*** Yes
+A = [_A], B = @, C = [_A|B].
+--1> 
+
+*** Yes
+A = [_A,_B], B = @, C = [_A,_B|B].
+--1> 
+
+*** Yes
+A = [_A,_B,_C], B = @, C = [_A,_B,_C|B].
+--1> 
+
+*** Yes
+A = [_A,_B,_C,_D], B = @, C = [_A,_B,_C,_D|B].
+--1> =[1,2,3,4,5]?
+
+*** No
+A = [_A,_B,_C,_D], B = @, C = [_A,_B,_C,_D|B].
+--1> =[1,2,3,4]?
+
+*** Yes
+A = [_A: 1,_B: 2,_C: 3,_D: 4], B = @, C = [_A,_B,_C,_D|B].
+----2> 
+*** No
+A = [_A,_B,_C,_D], B = @, C = [_A,_B,_C,_D|B].
+--1> 
+*** No
+> app3(A,B,C)?
+
+*** Yes
+A = [], B = @, C = B.
+--1> =[1]?
+
+*** No
+A = [], B = @, C = B.
+--1> 
+*** No
+> app3(A,B,[1,2,3,4,5])?
+
+*** Yes
+A = [], B = [1,2,3,4,5].
+--1> 
+
+*** Yes
+A = [1], B = [2,3,4,5].
+--1> 
+
+*** Yes
+A = [1,2], B = [3,4,5].
+--1> 
+
+*** Yes
+A = [1,2,3], B = [4,5].
+--1> 
+
+*** Yes
+A = [1,2,3,4], B = [5].
+--1> 
+
+*** Yes
+A = [1,2,3,4,5], B = [].
+--1> 
+
+*** No
+> app4(A,B,C)?
+
+*** Yes
+A = @~, B = @~, C = @~.
+--1> =[1,2]?
+
+*** Yes
+A = [1,2], B = @, C = @~.
+----2> =[1,2]?
+
+*** Yes
+A = [1~,2], B = @, C = [1~,2].
+------3> =A.2 .2?
+
+*** Yes
+A = [1~,2|B], B = [], C = [1~,2].
+--------4> =C?
+
+*** Yes
+A = [1,2|B], B = [], C = A.
+----------5> 
+> app4(A,B,C)?
+
+*** Yes
+A = @~, B = @~, C = @~.
+--1> =[]?
+
+*** Yes
+A = [], B = @~, C = @~.
+----2> =C?
+
+*** Yes
+A = [], B = @, C = B.
+------3> 
+> app4(A,B,C)?
+
+*** Yes
+A = @~, B = @~, C = @~.
+--1> =C?
+
+*** Yes
+A = @~, B = @~, C = A.
+----2> =[2,3]?
+
+*** Yes
+A = @~, B = [2,3], C = A.
+------3> =[5,4|X]?
+
+*** Yes
+A = [5,4|X], B = [2,3], C = A, X = @~.
+--------4> =B?
+
+*** No
+A = [5,4|X], B = [2,3], C = A, X = @~.
+--------4> 
+*** No
+A = @~, B = [2,3], C = A.
+------3> 
+*** No
+A = @~, B = @~, C = A.
+----2> =[7,8|X]?
+
+*** Yes
+A = [7,8|X], B = @~, C = A, X = @~.
+------3> =B?
+
+*** Yes
+A = [7,8|B], B = @~, C = A, X = B.
+--------4> =[]?
+
+*** Yes
+A = [7,8|B], B = [], C = A, X = B.
+----------5> 
+> app5(A,B)=C?
+
+*** Yes
+A = @~, B = @, C = @.
+--1> =[1,2|X]?
+
+*** Yes
+A = [1,2|X], B = @~, C = @, X = @.
+----2> =list?
+
+*** Yes
+A = [_A: 1,_B: 2|X], B = list, C = [_A,_B|@], X = @~.
+------3> =nil?
+
+*** Yes
+A = [_A: 1,_B: 2|X], B = list, C = [_A,_B|B], X = [].
+--------4> 
+*** No
+A = [_A: 1,_B: 2|X], B = list, C = [_A,_B|@], X = @~.
+------3> 
+*** No
+A = [1,2|X], B = @~, C = @, X = @.
+----2> 
+*** No
+A = @~, B = @, C = @.
+--1> =[1,2],B=[4,3]?
+
+*** Yes
+A = [_A: 1,_B: 2], B = [4,3], C = [_A,_B|B].
+----2> 
+> halt?
+

@@ -1,0 +1,128 @@
+%% Copyright (C) 2017, 2019, 2020 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+
+%% Life database for use with predicates 
+%% to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017
+%% Major re-write starting 8/19/2019
+%%
+%% Total rewite of what I started about 2007.
+%%
+
+%% common_facts_2017_0001.lf    %% Facts primarily about understanding
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% conventions.
+%% tom, quine, cicero etc stand for people (instances of Subjects or Objects.)
+%% There could also be non-animate objects such as a table.
+%% there (some would argue) might also be non-human Subjects - such as a dog.
+%% tom might have an idea of cicero. This would be represented tom_cicero_idea.
+%% The 1st tom indicates that it is tom's idea. cicero indicates that it is an
+%% idea of cicero. The final idea indicates that it is an idea.
+%% tom might have an word in a shared language for cicero. This is indicated by %% cicero_word. 
+%% quine might also an idea quine_cicero_idea of cicero. (note his idea is
+%% different). quine might share, however the word cicero_word with tom.
+
+%% words are related to ideas.
+%% The words being shared through learning.
+
+%% relates words to ideas.
+
+%% rrrr( Type, Subject, Time, A_word, A_idea)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+rrrr( tom, now, russell_word, tom_russell_idea).
+rrrr( tom, now, quine_word, tom_quine_idea).
+rrrr( tom, now, cicero_word, tom_cicero_idea).
+rrrr( tom, now, catiline_word, tom_catiline_idea).
+rrrr( tom, now, tully_word, tom_tully_idea).
+rrrr( tom, now, denounced_word, tom_denounced_idea).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ssss( Type, Subject, Time, A_idea, A_object)
+%%
+%% there are two ideas for the same person - cicero (tully)
+%% but prolog & wild life cannot let two atoms be identical 
+%% so the object must be the same for both (cicero)
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ssss( tom, now, tom_russell_idea, russell).
+ssss( tom, now, tom_quine_idea, quine).
+ssss( tom, now, tom_cicero_idea, cicero).
+ssss( tom, now, tom_tully_idea, cicero).
+ssss( tom, now, tom_catiline_idea, catiline).
+ssss( tom, now, tom_denounced_idea, denounced).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% There are several understands relations symbols defined in terms of the
+%% words and ideas.
+%% This solve a problem that some philosophers have if a sentence was never
+%% uttered. I only require that there was an relation_idea and
+%% ideas of objects. They never even need to be related or believed.
+%% Only ideas have arities and types.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+arity_idea( tom_denounced_idea, 2).
+type_idea( tom_denounced_idea, 1).
+type_idea( tom_russell_idea, 0).
+type_idea( tom_quine_idea, 0).
+type_idea( tom_cicero_idea, 0).
+type_idea( tom_tully_idea, 0).
+type_word( catiline_word, 0).
+type_idea( tom_catiline_idea, 0).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% conventions.
+%% tom, quine, cicero etc stand for people (instances of Subjects or Objects.)
+%% There could also be non-animate objects such as a table/
+%% there (some would argue) might also be non-human Subjects - such as a dog.
+%% tom might have an idea of cicero. This would be represented tom_cicero_idea.
+%% The 1st tom indicates that it is tom's idea. cicero indicates that it is an
+%% idea of cicero. The final idea indicates that it is an idea.
+%% tom might have an word in a shared language for cicero. This is indicated by %% cicero_word. 
+%% quine might also an idea quine_cicero_idea of cicero. (note his idea is
+%% different). quine might share, however the word cicero_word with tom.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% believes_in_ideas is the only primitive belief relation
+%% needed.
+%% I define several others in terms of them. 
+%%
+
+%% Beliefs
+
+believes_in_ideas( tom, now, [tom_denounced_idea, tom_cicero_idea,
+				   tom_catiline_idea]).
+
+believes_in_ideas( tom, now, [tom_denounced_idea, tom_quine_idea,
+				   tom_catiline_idea]).
+
+believes_not_in_ideas( tom, now, [tom_denounced_idea, tom_tully_idea,
+				       tom_catiline_idea]).
+
+believes_not_in_ideas( tom, now, [tom_denounced_idea, tom_russell_idea,
+				       tom_catiline_idea]).
+%% A fact
+
+qqqq4([denounced, cicero, catiline]).
+
+%% Negative facts
+
+qqqq5([denounced, russell, catiline]).
+
+qqqq5([denounced, quine, catiline]).
+
+

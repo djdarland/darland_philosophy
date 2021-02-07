@@ -8,18 +8,24 @@ echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; type 501 for details."
 echo "-----------"
 
-echo "0 Edit append.lf"
-echo "1 Edit darland_2017_0001.lf Quine example"
-echo "2 Edit darland_2017_0002.lf understanding"
-echo "3 Edit darland_2017_0003.lf atomic belief"
-echo "4 Edit darland_2017_0004.lf atomic belief search"
-echo "5 Edit darland_2017_0005.lf atomic opacity & transparency"
-echo "6 Edit darland_2017_0006.lf propositions - NOT REVISED"
-echo "7 Edit darland_2017_0007.lf truth - NOT REVISED"
-echo "8 Edit darland_2017_0008.lf opacity - NOT REVISED"
-echo "9 Edit darland_2017_0009.lf equivalence, synonymy - NOT REVISED"
-echo "10 Edit darland_2017_0010.lf Philosophers reminology - NOT REVISED"
-echo "11 Edit darland_2017_0011.lf Molecular Belief"
+echo "0 Edit append.pl"
+echo "55 Edit darland_0000.pl append"
+echo "1 Edit darland_0001.pl Quine example"
+echo "2 Edit darland_0002.pl understanding"
+echo "3 Edit darland_0003.pl atomic belief"
+echo "4 Edit darland_0004.pl atomic belief search"
+echo "5 Edit darland_0005.pl atomic opacity & transparency"
+echo "6 Edit darland_0006.pl propositions - NOT REVISED"
+echo "7 Edit darland_0007.pl truth - NOT REVISED"
+echo "8 Edit darland_0008.pl opacity - NOT REVISED"
+echo "9 Edit darland_0009.pl equivalence, synonymy - NOT REVISED"
+echo "10 Edit darland_0010.pl Philosophers reminology - NOT REVISED"
+echo "11 Edit darland_0011.pl Molecular Belief"
+echo "21 Edit darland_0021.pl Cases using mini universe for understanding cases"
+echo "22 Edit darland_0022.pl Cases using mini universe for belief cases"
+echo "23 Edit darland_0023.pl Cases using mini universe for other cases"
+echo "24 Edit darland_0024.pl Cases using mini universe for true belief"
+echo "25 Edit darland_0025.pl Cases using mini universe for agreement"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"
@@ -33,18 +39,24 @@ read select
 while [ $select -ne 999 ]
 do 
 case $select in
-0) $EDITOR ../DarlandPhilosophyLife/IN/append.lf;;
-1) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0001.lf;;
-2) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0002.lf;;
-3) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0003.lf;;
-4) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0004.lf;;
-5) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0005.lf;;
-6) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0006.lf;;
-7) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0007.lf;;
-8) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0008.lf;;
-9) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0009.lf;;
-10) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0010.lf;;
-11) $EDITOR ../DarlandPhilosophyLife/IN/darland_2017_0011.lf;;
+0) $EDITOR ../DarlandPhilosophySwipl/IN2pre/append.pl;;
+1) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0001.pl;;
+2) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0002.pl;;
+3) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0003.pl;;
+4) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0004.pl;;
+5) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0005.pl;;
+6) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0006.pl;;
+7) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0007.pl;;
+8) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0008.pl;;
+9) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0009.pl;;
+10) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0010.pl;;
+11) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0011.pl;;
+21) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0021.pl;;
+22) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0022.pl;;
+23) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0023.pl;;
+24) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0024.pl;;
+25) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0025.pl;;
+55) $EDITOR ../DarlandPhilosophySwipl/IN2pre/darland_0000.pl;;
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
 666) $EDITOR ee1 ;;
@@ -60,18 +72,24 @@ echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; type 501 for details."
 echo "-----------"
 
-echo "0 Edit append.lf"
-echo "1 Edit darland_2017_0001.lf append"
-echo "2 Edit darland_2017_0002.lf understanding"
-echo "3 Edit darland_2017_0003.lf atomic belief"
-echo "4 Edit darland_2017_0004.lf atomic belief search"
-echo "5 Edit darland_2017_0005.lf atomic opacity & transparency"
-echo "6 Edit darland_2017_0006.lf propositions - NOT REVISED"
-echo "7 Edit darland_2017_0007.lf truth - NOT REVISED"
-echo "8 Edit darland_2017_0008.lf opacity - NOT REVISED"
-echo "9 Edit darland_2017_0009.lf equivalence, synonymy - NOT REVISED"
-echo "10 Edit darland_2017_0010.lf Philosophers reminology - NOT REVISED"
-echo "11 Edit darland_2017_0011.lf Molecular Belief"
+echo "0 Edit append.pl"
+echo "55 Edit darland_0000.pl append"
+echo "1 Edit darland_0001.pl append"
+echo "2 Edit darland_0002.pl understanding"
+echo "3 Edit darland_0003.pl atomic belief"
+echo "4 Edit darland_0004.pl atomic belief search"
+echo "5 Edit darland_0005.pl atomic opacity & transparency"
+echo "6 Edit darland_0006.pl propositions - NOT REVISED"
+echo "7 Edit darland_0007.pl truth - NOT REVISED"
+echo "8 Edit darland_0008.pl opacity - NOT REVISED"
+echo "9 Edit darland_0009.pl equivalence, synonymy - NOT REVISED"
+echo "10 Edit darland_0010.pl Philosophers reminology - NOT REVISED"
+echo "11 Edit darland_0011.pl Molecular Belief"
+echo "21 Edit darland_0021.pl Cases using mini universe for understanding cases"
+echo "22 Edit darland_0022.pl Cases using mini universe for belief cases"
+echo "23 Edit darland_0023.pl Cases using mini universe for other cases"
+echo "24 Edit darland_0024.pl Cases using mini universe for true belief"
+echo "25 Edit darland_0025.pl Cases using mini universe for agreement"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"

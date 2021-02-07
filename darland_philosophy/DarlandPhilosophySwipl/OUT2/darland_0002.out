@@ -1,0 +1,247 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Sun 24 Jan 2021 02:29:33 PM CST
+
+*** Yes
+> > 0
+*** Yes
+Ignore = @.
+--1> 
+*** No
+> 
+*** Yes
+Remark = 'Test Set 2 - about understanding.'.
+--1> 
+*** No
+> 
+*** Yes
+Remark = 'A person (Subject) understands any propositon resulting from symbols he has.'.
+
+--1> 
+*** No
+> 
+*** Yes
+Article_Title = none, 
+Article_Year = none, 
+Author = 'Bertrand Russell', 
+Author_Article = none, 
+Author_Book = 'Bertrand Russell', 
+Book_Title = 'CPBR 07: Theory of Knowledge, The 1913 Manuscript', 
+Book_Year = '1913', 
+Note1 = none, 
+Notes_Article = none, 
+Notes_Book = none, 
+Pages = '108', 
+Quotation = 'TBD'.
+
+--1> 
+*** No
+> 
+*** Yes
+Article_Title = none, 
+Article_Year = none, 
+Author = 'Bertrand Russell', 
+Author_Article = none, 
+Author_Book = 'Bertrand Russell', 
+Book_Title = 'CPBR 07: Theory of Knowledge, The 1913 Manuscript', 
+Book_Year = '1913', 
+Note1 = none, 
+Notes_Article = none, 
+Notes_Book = none, 
+Pages = '115', 
+Quotation = 'TBD'.
+
+--1> 
+*** No
+> > 
+*** Yes
+> 
+> rrss( Subject, Time, Word, Object)?
+
+*** Yes
+Object = cicero, Subject = tom, Time = now, Word = cicero_word.
+--1> ;
+
+*** Yes
+Object = catiline, Subject = tom, Time = now, Word = catiline_word.
+--1> ;
+
+*** Yes
+Object = cicero, Subject = tom, Time = now, Word = tully_word.
+--1> ;
+
+*** Yes
+Object = tom, Subject = tom, Time = now, Word = tom_word.
+--1> ;
+
+*** Yes
+Object = cicero, Subject = quine, Time = now, Word = cicero_word.
+--1> ;
+
+*** Yes
+Object = cicero, Subject = quine, Time = now, Word = cicero_word.
+--1> ;
+
+*** Yes
+Object = catiline, Subject = quine, Time = now, Word = catiline_word.
+--1> ;
+
+*** Yes
+Object = cicero, Subject = quine, Time = now, Word = tully_word.
+--1> ;
+
+*** Yes
+Object = cicero, Subject = quine, Time = now, Word = tully_word.
+--1> ;
+
+*** Yes
+Object = tom, Subject = quine, Time = now, Word = tom_word.
+--1> ;
+
+*** Yes
+Object = denounced, Subject = tom, Time = now, Word = denounced_word.
+--1> ;
+
+*** Yes
+Object = of_orations, Subject = tom, Time = now, Word = of_orations_word.
+--1> ;
+
+*** Yes
+Object = of_De_Senectute, 
+Subject = tom, 
+Time = now, 
+Word = of_De_Senectute_word.
+
+--1> ;
+
+*** Yes
+Object = human, Subject = tom, Time = now, Word = human_word.
+--1> ;
+
+*** Yes
+Object = featherless_biped, 
+Subject = tom, 
+Time = now, 
+Word = featherless_biped_word.
+
+--1> ;
+
+*** Yes
+Object = american, Subject = tom, Time = now, Word = american_word.
+--1> ;
+
+*** Yes
+Object = roman, Subject = tom, Time = now, Word = roman_word.
+--1> ;
+
+*** Yes
+Object = not_formally_equivalent, 
+Subject = tom, 
+Time = now, 
+Word = not_formally_equivalent_word.
+
+--1> ;
+
+*** Yes
+Object = denounced, Subject = quine, Time = now, Word = denounced_word.
+--1> ;
+
+*** Yes
+Object = of_orations, Subject = quine, Time = now, Word = of_orations_word.
+--1> ;
+
+*** Yes
+Object = of_De_Senectute, 
+Subject = quine, 
+Time = now, 
+Word = of_De_Senectute_word.
+
+--1> 
+
+*** No
+> 	
+> cond(understands_words_objects( tom, now,
+|    	  [[denounced_word, denounced],
+|    	   [cicero_word, cicero],
+|    	   [catiline_word, catiline]]),
+|         write("tom understands (word-object)  cicero denounced catiline"),
+|         write("tom does not understand (word-object) cicero denounced catiline"))?
+tom understands (word-object)  cicero denounced catiline
+*** Yes
+> 
+> cond(understands_words_objects( tom, now,
+|    	  [[denounced_word, denounced],
+|    	   [cicero_word, tully],
+|    	   [catiline_word, catiline]]),
+|         write("tom understands (word-object)  tully denounced catiline"),
+|         write("tom does not understand (word-object) tully denounced catiline"))?
+tom does not understand (word-object) tully denounced catiline
+*** Yes
+>     
+> cond(understands_words_ideas_objects( tom, now,
+|    	     [[denounced_word, tom_denounced_idea, denounced],
+|    	      [cicero_word, tom_cicero_idea, cicero],
+|    	      [catiline_word, tom_catiline_idea, catiline]]),
+|         write("tom understands (word-idea-object) cicero denounced catiline"),
+|         write("tom does not understand(word-idea-object) cicero denounced catiline"))?   
+tom understands (word-idea-object) cicero denounced catiline
+*** Yes
+> 
+> cond(understands_words_ideas_objects( tom, now,
+|    	     [[denounced_word, tom_denounced_idea, denounced],
+|    	      [cicero_word, tom_cicero_idea, tully],
+|    	      [catiline_word, tom_catiline_idea, catiline]]),
+|         write("tom understands (word-idea-object) tully denounced catiline"),
+|         write("tom does not understand(word-idea-object) tully denounced catiline"))?   
+tom does not understand(word-idea-object) tully denounced catiline
+*** Yes
+> 
+> cond(understands_words_ideas_objects( tom, now,
+|    	     [[denounced_word, tom_denounced_idea, denounced],
+|    	      [tully_word, tom_tully_idea, cicero],
+|    	      [catiline_word, tom_catiline_idea, catiline]]),
+|         write("tom understands (word-idea-object) tully denounced catiline"),
+|         write("tom does not understand(word-idea-object) tully denounced catiline"))?   
+tom understands (word-idea-object) tully denounced catiline
+*** Yes
+> 
+> cond(understands_words_ideas_objects( tom, now,
+|    	     [[denounced_word, tom_denounced_idea, denounced],
+|    	      [tully_word, tom_tully_idea, tully],
+|    	      [catiline_word, tom_catiline_idea, catiline]]),
+|         write("tom understands (word-idea-object) tully denounced catiline"),
+|         write("tom does not understand(word-idea-object) tully denounced catiline"))?   
+tom does not understand(word-idea-object) tully denounced catiline
+*** Yes
+> 
+> 
+> 	
+> cond(understands_words_ideas( tom, now,
+|    	     [[denounced_word, tom_denounced_idea],
+|    	      [cicero_word, tom_cicero_idea],
+|    	      [catiline_word, tom_catiline_idea]]),
+|         write("tom understands (word-idea) cicero denounced catiline"),
+|         write("tom does not understand(word-idea) cicero denounced catiline"))?   
+tom understands (word-idea) cicero denounced catiline
+*** Yes
+> 
+> ;
+> 	
+> cond(understand_same_objects_by_ideas(
+|    	  tom, now, [[tom_denounced_idea, denounced],[tom_cicero_idea,cicero]],
+|    	  quine, now, [[quine_denounced_idea, denounced],[quine_cicero_idea, cicero]]),
+|         write("tom and quine understand same (idea-object) by denounced"),
+|         write("tom and quine do not understand same (idea-object) by denounced"))?
+tom and quine understand same (idea-object) by denounced
+*** Yes
+> 
+> halt?
+

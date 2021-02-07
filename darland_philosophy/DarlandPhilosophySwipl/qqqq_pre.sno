@@ -1,0 +1,15 @@
+*	INPUT('INPUT',5,8192,'INPUT')
+*	OUTPUT('OUTPUT',6,8192,'OUTPUT')
+	INPUT('INPUT',5,8192)
+	OUTPUT('OUTPUT',6,8192)
+	&STLIMIT   = 100000
+	DEFINE('pre_line(line)part1,part2','prelabel')
+LOOP     line = INPUT      :F(END)
+	 line2 = pre_line(line) :F(SKIP)
+	 OUTPUT = line2     :(LOOP)
+SKIP	 OUTPUT = line      :(LOOP)
+
+prelabel line FENCE ARB . part0 'qqqq(' break(',') . part1 ',' REM . part2 :F(FRETURN)
+	 pre_line = part0 part1 '(' part2                         :(RETURN)
+
+END

@@ -1,0 +1,66 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> 
+*** Yes
+> Tue Sep 10 18:45:42 CDT 2019
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+*** No
+> remark(9001, Remark)?
+
+*** Yes
+Remark = 'Test Set 9 - about intensionality & extensionality.'.
+--1> 
+*** No
+> not_formally_equivalent(0, 1, human, featherless_biped)?
+> 
+> formally_equivalent(0, 1, human, featherless_biped)?
+> 
+> not_formally_equivalent( 0, 1, human, human)?
+> 
+> formally_equivalent( 0, 1, human, human)?
+> 
+> internal_synonym(Subject, Time, Type, Term_1, Term_2)?
+> ;
+> ;
+> 
+> understands_object(Subject, Time, 1, 2, Relation, A_Object, B_Object, C_Object)?
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> 
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.56816 Seconds
+CPU Time 16.6667 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+*** No
+>  
+> 
+> 
+> halt?
+

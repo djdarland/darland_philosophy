@@ -1,0 +1,128 @@
+1,127d0
+< 
+< *** Yes
+< > > > > > > > > > > > > > > > > > > > > > > > > 
+< *** Yes
+< 
+< *** Yes
+< 
+< *** Yes
+< 
+< *** Yes
+< 
+< *** Yes
+< 
+< *** Yes
+< 
+< *** Yes
+< Thu 04 Feb 2021 12:24:59 AM CST
+< 
+< *** Yes
+< > 
+< *** Yes
+< > 
+< > write_time(Ignore)?
+< 0
+< *** Yes
+< Ignore = @.
+< --1> 
+< 
+< *** No
+< > believes_in_ideas( Subject, Time, List)?
+< 
+< *** Yes
+< List = [tom_of_orations_idea,tom_cicero_idea], Subject = tom, Time = now.
+< --1> ;
+< 
+< *** Yes
+< List = [tom_of_De_Senectute_idea,tom_tully_idea], Subject = tom, Time = now.
+< --1> ;
+< 
+< *** Yes
+< List = [quine_of_orations_idea,quine_cicero_idea], Subject = quine, Time = now.
+< --1> ;	
+< 
+< *** Yes
+< List = [tom_human_idea,tom_tully_idea], Subject = tom, Time = now.
+< --1> ;	  
+< 
+< *** Yes
+< List = [tom_denounced_idea,tom_cicero_idea,tom_catiline_idea], 
+< Subject = tom, 
+< Time = now.
+< 
+< --1> write(hell)?	
+< hell
+< *** Yes
+< List = [tom_denounced_idea,tom_cicero_idea,tom_catiline_idea], 
+< Subject = tom, 
+< Time = now.
+< 
+< --1> 	
+< 
+< *** No
+< > 
+< > believes_in_ideas( Subject, Time, [Relation_Idea, A_Idea])?
+< 
+< *** Yes
+< A_Idea = tom_cicero_idea, 
+< Relation_Idea = tom_of_orations_idea, 
+< Subject = tom, 
+< Time = now.
+< 
+< --1> ;
+< 
+< *** Yes
+< A_Idea = tom_tully_idea, 
+< Relation_Idea = tom_of_De_Senectute_idea, 
+< Subject = tom, 
+< Time = now.
+< 
+< --1> ;
+< 
+< *** Yes
+< A_Idea = quine_cicero_idea, 
+< Relation_Idea = quine_of_orations_idea, 
+< Subject = quine, 
+< Time = now.
+< 
+< --1> ;
+< 
+< *** Yes
+< A_Idea = tom_tully_idea, 
+< Relation_Idea = tom_human_idea, 
+< Subject = tom, 
+< Time = now.
+< 
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > halt?
+< 
