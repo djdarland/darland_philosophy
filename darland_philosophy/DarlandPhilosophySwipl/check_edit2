@@ -37,13 +37,18 @@ foreach I ($*)
 
      if(-e IN2/$I:r.pl) then
      
-# Run Wild-LIFE
-   (echo 'load("dummy.pl")?' | tr -d ' ' ;echo "" ; \
-	cat IN2/$I:r.pl  ; echo "halt?") | \
-	($WLIFE |  \
-egrep -v '(Loading|already loaded|Version|customizing|Copyright|Garbage|Exiting|X interface)' > OUT2/$I:r.out \
-        ) |& \
-        sed "s/.......s cpu (.*)//" > ERR2/$I:r.err
+# Run Swipl
+#     (swipl <IN2/$I:r.pl > OUT2/$I:r.out &> ERR2/$I:r.err)
+    (swipl <IN2/$I:r.pl >OUT2/$I:r.out |& \
+        sed "s/[0-9]* msec//"> ERR2/$I:r.err)
+
+     
+#   (echo '["dummy.pl"]' | tr -d ' ' ;echo "" ; \
+#	cat IN2/$I:r.pl  ; echo "halt?") | \
+#	($WLIFE |  \
+# egrep -v '(Loading|already loaded|Version|customizing|Copyright|Garbage|Exiting|X interface)' > OUT2/$I:r.out \
+#        ) |& \
+#        sed "s/.......s cpu (.*)//" 
 
 # Calculate the differences
     (diff OUT2/$I:r.out REFOUT2/$I:r.refout > REFDIFF2/$I:r.refdiff) >& /dev/null

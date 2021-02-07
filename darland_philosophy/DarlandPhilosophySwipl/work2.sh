@@ -1,4 +1,4 @@
-##  Copyright (C) 2017, 2019 Dennis J. Darland
+##  Copyright (C) 2017, 2019, 2021 Dennis J. Darland
 
 ##  This file is part of darland's philosophy.
 
@@ -18,14 +18,14 @@
 
 
 echo "Darland Philisophy Test Suite Utility"
-echo "Examine Test Results For IN2pre/$1.lf ?"
+echo "Examine Test Results For IN2pre/$1.pl ?"
 echo "enter 0 to proceed 888 to next, or crtl-c to quit"
 read answer
 while [ $answer -ne 888 ]
 do
-    if test -f IN2pre/$1.lf 
+    if test -f IN2pre/$1.pl 
     then
-	echo "1 IN2pre/$1.lf"
+	echo "1 IN2pre/$1.pl"
     fi
     if test -f REFDIFF2/$1.refdiff
     then
@@ -51,12 +51,12 @@ do
     echo "select"
     read select
     case $select in
-	1) $EDITOR IN2pre/$1.lf;;
+	1) $EDITOR IN2pre/$1.pl;;
 	3) $EDITOR REFDIFF2/$1.refdiff;;
 	4) $EDITOR REFOUT2/$1.refout OUT2/$1.out;;
 	5) $EDITOR ERRDIFF2/$1.errdiff;;
 	6) $EDITOR REFERR2/$1.referr ERR2/$1.err;;
-	10) ./qqqq_pre_all.sh; ./check_edit_all2 "2" $1;;
+	10) ./qqqq_pre_all.sh; ./check_edit_all2 "2" $1.pl;;
 	11) ./approve_out2.sh $1;;
 	12) ./rest_out2.sh $1;;
 	14) swipl;;

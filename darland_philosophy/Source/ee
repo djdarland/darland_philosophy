@@ -40,7 +40,7 @@ case $select in
 123) ./da_lg_swipl.sh 1;;
 125) ./da_par_swipl.sh;;
 126) ./da_clr_swipl.sh;;
-131) cd ../D*; ./qqqq_pre_all.sh;;
+131) cd ../*Swipl; ./qqqq_pre_all.sh;;
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
 666) $EDITOR ee ;;
