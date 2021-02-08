@@ -87,7 +87,7 @@ write_time(Ignore)?
 
 %% 1 gives
 %% Next runs out of memory
-qqqq(contradicts_words, tom, now, List)?
+%% qqqq(contradicts_words, tom, now, List)?
 
 %% 2
 %%% %% Next runs out of memory
@@ -106,7 +106,7 @@ qqqq(contradicts_words, tom, now, List)?
 %% qqqq(contradicts_words_objects, tom, now, Pair_List)?
 
 %% 6
-%% Next gives answer No
+%% Next gives answer No - which is correct
 qqqq(contradicts_ideas_objects, tom, now, Pair_List)?
 
 %% 7

@@ -12,16 +12,19 @@
 *** Yes
 
 *** Yes
-Thu 04 Feb 2021 12:32:59 AM CST
+Sun 07 Feb 2021 11:49:57 PM CST
 
 *** Yes
 > 
 *** Yes
 > 
-> write(system("date"))?
+> write_time(Ignore)?
 0
 *** Yes
-> 
+Ignore = @.
+--1> 
+
+*** No
 > %% I indicate for each query whether the immediate response should be
 > %% TRUE = Yes or FALSE = No
 > 
@@ -451,7 +454,7 @@ Thu 04 Feb 2021 12:32:59 AM CST
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61242 Seconds
+Clock Time 1.61276 Seconds
 CPU Time 0 Milliseconds
 
 *** Yes

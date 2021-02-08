@@ -1,21 +1,23 @@
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0000.lf >IN2/darland_0000.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0001.lf >IN2/darland_0001.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0002.lf >IN2/darland_0002.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0003.lf >IN2/darland_0003.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0004.lf >IN2/darland_0004.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0005.lf >IN2/darland_0005.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0006.lf >IN2/darland_0006.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0007.lf >IN2/darland_0007.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0008.lf >IN2/darland_0008.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0009.lf >IN2/darland_0009.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0010.lf >IN2/darland_0010.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0011.lf >IN2/darland_0011.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0021.lf >IN2/darland_0021.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0022.lf >IN2/darland_0022.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0023.lf >IN2/darland_0023.lf
-snobol4 ./qqqq_pre.sno <IN2pre/darland_0024.lf >IN2/darland_0024.lf
-snobol4 ./qqqq_pre.sno <FACTS2pre/facts_0001.lf >FACTS2/facts_0001.lf
-snobol4 ./qqqq_pre.sno <FACTS2pre/facts_0002.lf >FACTS2/facts_0002.lf
-snobol4 ./qqqq_pre.sno <FACTS2pre/facts_0003.lf >FACTS2/facts_0003.lf
-snobol4 ./qqqq_pre.sno <FACTS2pre/facts_0004.lf >FACTS2/facts_0004.lf
-snobol4 ./qqqq_pre.sno <FACTS2pre/facts_0000.lf >FACTS2/facts_0000.lf
+./qqqq_pre <IN2pre/darland_0000.lf >IN2/darland_0000.lf
+./qqqq_pre <IN2pre/darland_0001.lf >IN2/darland_0001.lf
+./qqqq_pre <IN2pre/darland_0002.lf >IN2/darland_0002.lf
+./qqqq_pre <IN2pre/darland_0003.lf >IN2/darland_0003.lf
+./qqqq_pre <IN2pre/darland_0004.lf >IN2/darland_0004.lf
+./qqqq_pre <IN2pre/darland_0005.lf >IN2/darland_0005.lf
+./qqqq_pre <IN2pre/darland_0006.lf >IN2/darland_0006.lf
+./qqqq_pre <IN2pre/darland_0007.lf >IN2/darland_0007.lf
+./qqqq_pre <IN2pre/darland_0008.lf >IN2/darland_0008.lf
+./qqqq_pre <IN2pre/darland_0009.lf >IN2/darland_0009.lf
+./qqqq_pre <IN2pre/darland_0010.lf >IN2/darland_0010.lf
+./qqqq_pre <IN2pre/darland_0011.lf >IN2/darland_0011.lf
+./qqqq_pre <IN2pre/darland_0021.lf >IN2/darland_0021.lf
+./qqqq_pre <IN2pre/darland_0022.lf >IN2/darland_0022.lf
+./qqqq_pre <IN2pre/darland_0023.lf >IN2/darland_0023.lf
+./qqqq_pre <IN2pre/darland_0024.lf >IN2/darland_0024.lf
+./qqqq_pre <IN2pre/darland_0025.lf >IN2/darland_0025.lf
+./qqqq_pre <IN2pre/darland_0026.lf >IN2/darland_0026.lf
+./qqqq_pre <FACTS2pre/facts_0001.lf >FACTS2/facts_0001.lf
+./qqqq_pre <FACTS2pre/facts_0002.lf >FACTS2/facts_0002.lf
+./qqqq_pre <FACTS2pre/facts_0003.lf >FACTS2/facts_0003.lf
+./qqqq_pre <FACTS2pre/facts_0004.lf >FACTS2/facts_0004.lf
+./qqqq_pre <FACTS2pre/facts_0000.lf >FACTS2/facts_0000.lf

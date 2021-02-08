@@ -53,6 +53,13 @@ rrrr( tom, now, catiline_word, tom_catiline_idea).
 rrrr( tom, now, tully_word, tom_tully_idea).
 rrrr( tom, now, denounced_word, tom_denounced_idea).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+rrrr( quine, now, russell_word, tom_russell_idea).
+rrrr( quine, now, quine_word, tom_quine_idea).
+rrrr( quine, now, cicero_word, tom_cicero_idea).
+rrrr( quine, now, catiline_word, tom_catiline_idea).
+rrrr( quine, now, tully_word, tom_tully_idea).
+rrrr( quine, now, denounced_word, tom_denounced_idea).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ssss( Type, Subject, Time, A_idea, A_object)
 %%
 %% there are two ideas for the same person - cicero (tully)
@@ -68,6 +75,13 @@ ssss( tom, now, tom_tully_idea, cicero).
 ssss( tom, now, tom_catiline_idea, catiline).
 ssss( tom, now, tom_denounced_idea, denounced).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ssss( quine, now, tom_russell_idea, russell).
+ssss( quine, now, tom_quine_idea, quine).
+ssss( quine, now, tom_cicero_idea, cicero).
+ssss( quine, now, tom_tully_idea, cicero).
+ssss( quine, now, tom_catiline_idea, catiline).
+ssss( quine, now, tom_denounced_idea, denounced).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% There are several understands relations symbols defined in terms of the
 %% words and ideas.
 %% This solve a problem that some philosophers have if a sentence was never
@@ -81,9 +95,15 @@ type_idea( tom_russell_idea, 0).
 type_idea( tom_quine_idea, 0).
 type_idea( tom_cicero_idea, 0).
 type_idea( tom_tully_idea, 0).
-type_word( catiline_word, 0).
 type_idea( tom_catiline_idea, 0).
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+arity_idea( quine_denounced_idea, 2).
+type_idea( quine_denounced_idea, 1).
+type_idea( quine_russell_idea, 0).
+type_idea( quine_quine_idea, 0).
+type_idea( quine_cicero_idea, 0).
+type_idea( quine_tully_idea, 0).
+type_idea( quine_catiline_idea, 0).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% conventions.
 %% tom, quine, cicero etc stand for people (instances of Subjects or Objects.)
@@ -108,6 +128,12 @@ believes_in_ideas( tom, now, [tom_denounced_idea, tom_cicero_idea,
 				   tom_catiline_idea]).
 
 believes_in_ideas( tom, now, [tom_denounced_idea, tom_quine_idea,
+				   tom_catiline_idea]).
+
+believes_in_ideas( quine, now, [quine_denounced_idea, quine_cicero_idea,
+				   quine_catiline_idea]).
+
+believes_in_ideas( quine, now, [tom_denounced_idea, tom_tully_idea,
 				   tom_catiline_idea]).
 
 believes_not_in_ideas( tom, now, [tom_denounced_idea, tom_tully_idea,

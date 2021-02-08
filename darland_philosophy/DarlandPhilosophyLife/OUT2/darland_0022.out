@@ -12,7 +12,7 @@
 *** Yes
 
 *** Yes
-Thu 04 Feb 2021 12:34:08 AM CST
+Sun 07 Feb 2021 11:50:31 PM CST
 
 *** Yes
 > 
@@ -48,10 +48,10 @@ Ignore = @.
 > 
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> %%% UNDERSTANDING
+> %%% BELIEF
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
-> %% Checks on Understanding follow.
+> %% Checks on Belief follow.
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%
 > %% WORDS
@@ -117,7 +117,9 @@ Ignore = @.
 |          tom_catiline_idea])?
 
 *** Yes
-> 
+--1> 
+
+*** No
 > %% Next should be FALSE -- not a belief
 > 
 > believes_in_ideas( tom, now,
@@ -442,7 +444,7 @@ Ignore = @.
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61242 Seconds
+Clock Time 1.61276 Seconds
 CPU Time 0 Milliseconds
 
 *** Yes

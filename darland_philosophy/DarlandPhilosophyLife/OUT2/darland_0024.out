@@ -14,7 +14,7 @@
 *** Yes
 
 *** Yes
-Thu 04 Feb 2021 11:51:03 PM CST
+Sun 07 Feb 2021 11:57:10 PM CST
 
 *** Yes
 > 
@@ -984,8 +984,8 @@ Ignore = @.
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.6125 Seconds
-CPU Time 16.6667 Milliseconds
+Clock Time 1.61276 Seconds
+CPU Time 33.3333 Milliseconds
 
 *** Yes
 Ignore = @.

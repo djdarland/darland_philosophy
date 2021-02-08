@@ -1,0 +1,430 @@
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+%% 
+%%
+%% I have made the propositional attitude relatons support arbitrary arity.
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define sense (close to Frege's Sinn) (useless)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% qqqq is the only relation having ontological status.
+%% qqqq is the exemplification of a universal in the following arguments.
+
+%% some possible arguments (universals) are rrrr, ssss, and rrss.
+%% rrss is defined in terms of rrrr and ssss.
+%% rrrr and ssss are undefined here
+%% - but not neverssarily ontologically primitive 
+
+%% rrrr is relation between word and idea.
+%% ssss is relation between idea and object.
+
+%% rrss is relative product of rrrr and ssss.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% definition of rrss in terms of rrrr and ssss.
+%% Note: qqqq is a dynamic predicate in WildLIFE - so it can be extended.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% There are 7 relations of both understanding.
+%% Those of understanding are defined in terms of rrrr and ssss
+
+%% The 7 cases are:
+
+%% 1 words
+%% 2 ideas
+%% 3 objects
+
+%% 4 words_ideas
+%% 5 words_objects
+%% 6 ideas_objects
+
+%% 7 words_ideas_objects
+
+
+%% understands_words_objects is defined.
+%% It applies to an intelligent Subject at some Time.
+%% There is a list of pairs (starting with relational) words and objects.
+%% The arity_relation must match the number of pairs following the relation
+%% pair. (Or an arity_relation of -999 matches any number of pairs.)
+%% The type objects of the following pairs must be one less thasn the type of
+%% the relation.
+
+test_understands(Subject, Time,
+		 Word_List,
+		 Idea_List,
+		 Object_List,
+		 Word_Idea_List,
+		 Word_Object_List,
+		 Idea_Object_List,
+		 Word_Idea_Object_List) :-
+	cond(understands_words(Subject, Time, Word_List),
+	     write(Subject,
+		   " understands words ",
+		   Word_List,
+		   " at time ",
+		   Time,"\n\n"), 
+	     write(Subject,
+		   " does not understand words ",
+		   Word_List,
+		   " at time ",
+		   Time,"\n\n")), 
+	cond(understands_ideas(Subject, Time, Idea_List),
+	     write(Subject,
+		   " understands ideas ",
+		   Idea_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not understand ideas ",
+		   Idea_List,
+		   " at time ",
+		   Time, "\n\n")), 
+	cond(understands_objects(Subject, Time, Object_List),
+	     write(Subject,
+		   " understands objects ",
+		   Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not understand objects ",
+		   Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(understands_words_ideas(Subject, Time, Word_Idea_List),
+	     write(Subject,
+		   " understands words-ideas ",
+		   Word_Idea_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not understand words-ideas ",
+		   Word_Idea_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(understands_words_objects(Subject, Time, Word_Object_List),
+	     write(Subject,
+		   " understands words-objects ",
+		   Word_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not understand words-objects ",
+		   Word_Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(understands_ideas_objects(Subject, Time, Idea_Object_List),
+	     write(Subject,
+		   " understands ideas-objects ",
+		   Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not understand ideas-objects ",
+		   Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(understands_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
+	     write(Subject,
+		   " understands words-ideas-objects ",
+		   Word_Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not understand words-ideas-objects ",
+		   Word_Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	statistics.
+
+
+
+test_believes(Subject, Time,
+		 Word_List,
+		 Idea_List,
+		 Object_List,
+		 Word_Idea_List,
+		 Word_Object_List,
+		 Idea_Object_List,
+		 Word_Idea_Object_List) :-
+	cond(believes_words(Subject, Time, Word_List),
+	     write(Subject,
+		   " believes words ",
+		   Word_List,
+		   " at time ",
+		   Time,"\n\n"), 
+	     write(Subject,
+		   " does not believe words ",
+		   Word_List,
+		   " at time ",
+		   Time,"\n\n")), 
+	cond(believes_in_ideas(Subject, Time, Idea_List),
+	     write(Subject,
+		   " believes ideas ",
+		   Idea_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe ideas ",
+		   Idea_List,
+		   " at time ",
+		   Time, "\n\n")), 
+	cond(believes_objects(Subject, Time, Object_List),
+	     write(Subject,
+		   " believes objects ",
+		   Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe objects ",
+		   Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_words_ideas(Subject, Time, Word_Idea_List),
+	     write(Subject,
+		   " believes words-ideas ",
+		   Word_Idea_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe words-ideas ",
+		   Word_Idea_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_words_objects(Subject, Time, Word_Object_List),
+	     write(Subject,
+		   " believes words-objects ",
+		   Word_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe words-objects ",
+		   Word_Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_ideas_objects(Subject, Time, Idea_Object_List),
+	     write(Subject,
+		   " believes ideas-objects ",
+		   Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe ideas-objects ",
+		   Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
+	     write(Subject,
+		   " believes words-ideas-objects ",
+		   Word_Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe words-ideas-objects ",
+		   Word_Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	statistics.
+
+
+test_believes_true(Subject, Time,
+		 Word_List,
+		 Idea_List,
+		 Object_List,
+		 Word_Idea_List,
+		 Word_Object_List,
+		 Idea_Object_List,
+		   Word_Idea_Object_List) :-
+	cond(believes_true_words(Subject, Time, Word_List),
+	     write(Subject,
+		   " believes truly words ",
+		   Word_List,
+		   " at time ",
+		   Time,"\n\n"), 
+	     write(Subject,
+		   " does not believe truly words ",
+		   Word_List,
+		   " at time ",
+		   Time,"\n\n")), 
+	cond(believes_true_in_ideas(Subject, Time, Idea_List),
+	     write(Subject,
+		   " believes truly ideas ",
+		   Idea_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly ideas ",
+		   Idea_List,
+		   " at time ",
+		   Time, "\n\n")), 
+	cond(believes_true_objects(Subject, Time, Object_List),
+	     write(Subject,
+		   " believes truly objects ",
+		   Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly objects ",
+		   Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_true_words_ideas(Subject, Time, Word_Idea_List),
+	     write(Subject,
+		   " believes truly words-ideas ",
+		   Word_Idea_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly words-ideas ",
+		   Word_Idea_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_true_words_objects(Subject, Time, Word_Object_List),
+	     write(Subject,
+		   " believes truly words-objects ",
+		   Word_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly words-objects ",
+		   Word_Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_true_ideas_objects(Subject, Time, Idea_Object_List),
+	     write(Subject,
+		   " believes truly ideas-objects ",
+		   Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly ideas-objects ",
+		   Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_true_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
+	     write(Subject,
+		   " believes truly words-ideas-objects ",
+		   Word_Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly words-ideas-objects ",
+		   Word_Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n")), 
+	statistics.
+
+
+test_believes_true_not(Subject, Time,
+		 Word_List,
+		 Idea_List,
+		 Object_List,
+		 Word_Idea_List,
+		 Word_Object_List,
+		 Idea_Object_List,
+		 Word_Idea_Object_List) :-
+	cond(believes_true_not_words(Subject, Time, Word_List),
+	     write(Subject,
+		   " believes truly not words ",
+		   Word_List,
+		   " at time ",
+		   Time,"\n\n"), 
+	     write(Subject,
+		   " does not believe truly not words ",
+		   Word_List,
+		   " at time ",
+		   Time,"\n\n")), 
+	cond(believes_true_not_in_ideas(Subject, Time, Idea_List),
+	     write(Subject,
+		   " believes truly not ideas ",
+		   Idea_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly not ideas ",
+		   Idea_List,
+		   " at time ",
+		   Time, "\n\n")), 
+	cond(believes_true_not_objects(Subject, Time, Object_List),
+	     write(Subject,
+		   " believes truly not objects ",
+		   Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly not objects ",
+		   Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_true_not_words_ideas(Subject, Time, Word_Idea_List),
+	     write(Subject,
+		   " believes truly not words-ideas ",
+		   Word_Idea_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly not words-ideas ",
+		   Word_Idea_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_true_not_words_objects(Subject, Time, Word_Object_List),
+	     write(Subject,
+		   " believes truly not words-objects ",
+		   Word_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly not words-objects ",
+		   Word_Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_true_not_ideas_objects(Subject, Time, Idea_Object_List),
+	     write(Subject,
+		   " believes truly not ideas-objects ",
+		   Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly not ideas-objects ",
+		   Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n")),
+	cond(believes_true_not_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
+	     write(Subject,
+		   " believes truly not words-ideas-objects ",
+		   Word_Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n"), 
+	     write(Subject,
+		   " does not believe truly not words-ideas-objects ",
+		   Word_Idea_Object_List,
+		   " at time ",
+		   Time, "\n\n")), 
+	statistics.
+
+
+
+
+
+

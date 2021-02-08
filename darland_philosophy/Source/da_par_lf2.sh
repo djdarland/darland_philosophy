@@ -38,6 +38,8 @@ echo "21 Test darland_0021.lf Some examples with mini universe for understanding
 echo "22 Test darland_0022.lf Some examples with mini universe for belief queries"
 echo "23 Test darland_0023.lf Some examples with mini universe for other queries"
 echo "24 Test darland_0024.lf Some examples with mini universe for true belief"
+echo "25 Test darland_0025.lf Some examples with mini universe for multi tests"
+echo "26 Test darland_0026.lf Some examples with mini universe for agreement"
 echo "-----------"
 if test -f da_par_lf2.sh
 then
@@ -63,6 +65,8 @@ case $select in
 22) echo "Testing 0022"; cd ../*Life; ./work2.sh "darland_0022";;
 23) echo "Testing 0023"; cd ../*Life; ./work2.sh "darland_0023";;
 24) echo "Testing 0024"; cd ../*Life; ./work2.sh "darland_0024";;
+25) echo "Testing 0025"; cd ../*Life; ./work2.sh "darland_0025";;
+26) echo "Testing 0026"; cd ../*Life; ./work2.sh "darland_0026";;
 55) echo "Testing 0000"; cd ../*Life; ./work2.sh "darland_0000";;
 666) $EDITOR da_par_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;

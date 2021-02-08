@@ -12,7 +12,7 @@
 *** Yes
 
 *** Yes
-Thu 28 Jan 2021 01:11:09 AM CST
+Sun 07 Feb 2021 11:55:45 PM CST
 
 *** Yes
 > 
@@ -46,7 +46,7 @@ Ignore = @.
 > 
 > %% 1 gives
 > %% Next runs out of memory
-> contradicts_words( tom, now, List)?
+> %% contradicts_words( tom, now, List)?
 > 
 > %% 2
 > %%% %% Next runs out of memory
@@ -65,23 +65,19 @@ Ignore = @.
 > %% contradicts_words_objects( tom, now, Pair_List)?
 > 
 > %% 6
-> %% Next gives answer No
+> %% Next runs out of memory
 > contradicts_ideas_objects( tom, now, Pair_List)?
 
 *** No
 > 
 > %% 7
-> contradicts_words_ideas_objects( tom, now, Triple_List)?
-> 
-> 
-> 
-> 
-> 
+> %% Next runs out of memory
+> %% contradicts_words_ideas_objects( tom, now, Triple_List)?
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61182 Seconds
-CPU Time 85083.3 Milliseconds
+Clock Time 1.61276 Seconds
+CPU Time 0 Milliseconds
 
 *** Yes
 Ignore = @.
