@@ -10,11 +10,49 @@
 *** Yes
 
 *** Yes
-Fri 12 Feb 2021 11:53:47 PM CST
+Sat 13 Feb 2021 04:39:12 AM CST
 
 *** Yes
-> > 
+> > > > > > > > > > > > > > > > > > 
 *** Yes
+> 
+> %% This file uses queries to illustrate my points about understanding.
+> 
+> %% This is an example with a mini universe for queries of high complexity.
+> 
+> %% I use an example from Quine's Word & Object. (pp.144-151).
+> 
+> %% The Story of Cicero and Catiline is given
+> %% in _Caesar and Christ_, by Will Durant, pp. 140-147.
+> 
+> %% "Tully" is not in the index of that work (or "De Senectute").
+> 
+> %% Wikipedia gives the full name as "Marcus Tullius Cicero"
+> %% and notes "The name is infrequently anglicized as Tully."
+> %% It also does not mention "De Senectute".
+> 
+> %% "De Senectute" is in Wikipedia under "Writings of Cicero"
+> 
+> %% Tom believes that Cicero denounced Catiline.
+> %% Tom does not know Cicero = Tully.
+> 
+> %% In my philosophy, for Tom at that time,
+> %% "Cicero" R Toms_idea_of_Cicero
+> %% and
+> %% Toms_idea of_Cicero S Cicero
+> %%
+> %%
+> %% but not 
+> %% "Cicero" R Toms_idea_of_Tully
+> %% 
+> %%
+> %% In my program the relation R is represented by the predicate
+> %% rrrr(Subject, Time, Type, Word, Idea)
+> %% In my program the relation S is represented by the predicate
+> %% ssss(Subject, Time, Type, Idea, Object)
+> 
+> %% R | S is represented by rrss
+> 
 > 
 > write_time(Ignore)?
 0
@@ -452,8 +490,8 @@ Ignore = @.
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.6132 Seconds
-CPU Time 16.6667 Milliseconds
+Clock Time 1.61321 Seconds
+CPU Time 0 Milliseconds
 
 *** Yes
 Ignore = @.

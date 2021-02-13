@@ -86,10 +86,10 @@ dd(function, bald, alfred, wrote_process_and_reality)?
 dd(function, bald, X, helped_write_pm)?
 
 %% we want 
-%% dd(equals, X, wrote_pm, helped_write_waverley)?
+%% dd(equals, X, helped_write_pm, wrote_waverley)?
 %% to be false
 
-dd(equals, X, wrote_pm, helped_write_waverley)?
+dd(equals, X, helped_write_pm, wrote_waverley)?
 
 %% we want 
 %% dd(equals, X, is_morning_star, is_evening_star)?
@@ -193,10 +193,10 @@ cls(function, bald, present_king_of_france)?
 cls(function, one, wrote_process_and_reality)?
 
 %% we want 
-%% cls(function, one, wrote_pm)?
+%% cls(function, one, helped_write_pm)?
 %% to be false
 
-cls(function, one, wrote_pm)?
+cls(function, one, helped_write_pm)?
 
 %% we want 
 %% cls(function, two, wrote_process_and_reality)?
@@ -205,16 +205,16 @@ cls(function, one, wrote_pm)?
 cls(function, two, wrote_process_and_reality)?
 
 %% we want 
-%% cls(function, two, wrote_pm)?
+%% cls(function, two, helped_write_pm)?
 %% to be true
 
-cls(function, two, wrote_pm)?
+cls(function, two, helped_write_pm)?
 
 %% we want 
 %% cls(equals, wrote_pm, wrote_waverley)?
 %% to be false
 
-cls(equals, wrote_pm, wrote_waverley)?
+cls(equals, helped_write_pm, wrote_waverley)?
 
 write_stats(Ignore)?
 

@@ -147,17 +147,17 @@ qqqq4([denounced, cicero, catiline]).
 
 %% Negative facts
 
-qqqq5([denounced, russell, catiline]).
+qqqq4([denounced, russell, catiline]).
 
-qqqq5([denounced, quine, catiline]).
+qqqq4([denounced, quine, catiline]).
 
 %wrote_waverley(scott) -> true.
 
-qqqq5([wrote_waverley, scott]).
-qqqq5([helped_write_pm, bertie]).
-qqqq5([helped_write_pm, alfred]).
-qqqq5([wrote_process_and_reality, alfred]).
-qqqq5([wrote_pm, russell_or_whitehead]).
+qqqq4([wrote_waverley, scott]).
+qqqq4([helped_write_pm, bertie]).
+qqqq4([helped_write_pm, alfred]).
+qqqq4([wrote_process_and_reality, alfred]).
+qqqq4([wrote_pm, russell_or_whitehead]).
 
 thing(scott).
 thing(bertie).
@@ -165,26 +165,26 @@ thing(alfred).
 thing(russell_or_whitehead).
 thing(venus).
 
-qqqq5([bald, alfred]).
+qqqq4([bald, alfred]).
 
-qqqq5([is_morning_star, venus]).
-qqqq5([is_evening_star, venus]).
+qqqq4([is_morning_star, venus]).
+qqqq4([is_evening_star, venus]).
 	       
-qqqq5([one, is_alfred]).
-qqqq5([one, is_bertie]).
-qqqq5([one, is_scott]).
-qqqq5([two, is_russell_or_whitehead]).
+qqqq4([one, is_alfred]).
+qqqq4([one, is_bertie]).
+qqqq4([one, is_scott]).
+qqqq4([two, is_russell_or_whitehead]).
 
-qqqq5([predicative, is_scott]).
-qqqq5([predicative, is_bertie]).
-qqqq5([predicative, is_alfred]).
-qqqq5([predicative, is_russell_or_whitehead]).
-qqqq5([predicative, is_evening_star]).
+qqqq4([predicative, is_scott]).
+qqqq4([predicative, is_bertie]).
+qqqq4([predicative, is_alfred]).
+qqqq4([predicative, is_russell_or_whitehead]).
+qqqq4([predicative, is_evening_star]).
 
-% qqqq5([is_russell_or_whitehead, bertie]).
-% qqqq5([is_russell_or_whitehead, alfred]).
+qqqq4([is_russell_or_whitehead, bertie]).
+qqqq4([is_russell_or_whitehead, alfred]).
 
-qqqq5([is_scott, scott]).
-qqqq5([is_bertie, bertie]).
-qqqq5([is_alfred, alfred]).
-qqqq5([is_russell_or_whitehead, russell_or_whitehead]).
+qqqq4([is_scott, scott]).
+qqqq4([is_bertie, bertie]).
+qqqq4([is_alfred, alfred]).
+% qqqq4([is_russell_or_whitehead, russell_or_whitehead]).

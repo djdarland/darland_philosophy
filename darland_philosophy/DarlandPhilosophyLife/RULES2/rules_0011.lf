@@ -44,7 +44,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% definition of rrss in terms of rrrr and ssss.
-%% Note: qqqq is a dynamic predicate in WildLIFE - so it can be extended.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% There are 7 relations of both understanding.
@@ -63,14 +62,14 @@
 %% 7 words_ideas_objects
 
 cls(exists, X, PHI) :-
-	qqqq5([PHI, X]).
+	qqqq4([PHI, X]).
 
 cls(member, X, PHI) :-
-	qqqq5([PHI, X]).
+	qqqq4([PHI, X]).
 
 cls(function, F, PHI1) :-
-	qqqq5([predicative, PHI2]),
-	qqqq5([F, PHI2]),
+	qqqq4([predicative, PHI2]),
+	qqqq4([F, PHI2]),
 	\+ materially_diff(PHI1, PHI2).  %% \+ is negation (by failure)
 
 cls(equals, PHI1, PHI2) :-
@@ -79,11 +78,11 @@ cls(equals, PHI1, PHI2) :-
 %% PH1 is not true of anything PHI2 is not true of
 materially_diff(PHI1, PHI2) :-
 	thing(X),
-	(qqqq5([PHI1, X]), \+ qqqq5([PHI2, X])).
+	(qqqq4([PHI1, X]), \+ qqqq4([PHI2, X])).
 	
 %% PH2 is not true of anything PHI1 is not true of
 materially_diff(PHI1, PHI2) :-
 	thing(X),
-	(qqqq5([PHI2, X]), \+ qqqq5([PHI1, X])).
+	(qqqq4([PHI2, X]), \+ qqqq4([PHI1, X])).
 
 	

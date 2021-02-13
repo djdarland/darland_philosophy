@@ -63,21 +63,21 @@
 %% 7 words_ideas_objects
 
 dd(exists, X, PHI) :-
-	qqqq5([PHI, X]),
+	qqqq4([PHI, X]),
 	\+ other([PHI, Y, X]).
 
 other([PHI, Y, X]) :-
-	qqqq5([PHI, Y]),
+	qqqq4([PHI, Y]),
 	Y :\== X.
 	
 dd(function, F, X, PHI) :-
-	qqqq5([PHI, X]),
+	qqqq4([PHI, X]),
 	\+ other([PHI, Y, X]),
-	qqqq5([F, X]).
+	qqqq4([F, X]).
 
 dd(equals, X, PHI1, PHI2) :-
-	qqqq5([PHI1, X]),
-	qqqq5([PHI2, Y]),
+	qqqq4([PHI1, X]),
+	qqqq4([PHI2, Y]),
 	\+ other([PHI1, Z1, X]),
 	\+ other([PHI2, Z2, Y]),
 	X :== Y.

@@ -6,7 +6,7 @@
 *** Yes
 
 *** Yes
-Fri 12 Feb 2021 11:22:24 PM CST
+Sat 13 Feb 2021 04:52:38 AM CST
 
 *** Yes
 > > 
@@ -105,10 +105,10 @@ X = alfred.
 *** No
 > 
 > %% we want 
-> %% dd(equals, X, wrote_pm, helped_write_waverley)?
+> %% dd(equals, X, helped_write_pm, wrote_waverley)?
 > %% to be false
 > 
-> dd(equals, X, wrote_pm, helped_write_waverley)?
+> dd(equals, X, helped_write_pm, wrote_waverley)?
 
 *** No
 > 
@@ -277,10 +277,10 @@ X = alfred.
 
 *** No
 > %% we want 
-> %% cls(function, one, wrote_pm)?
+> %% cls(function, one, helped_write_pm)?
 > %% to be false
 > 
-> cls(function, one, wrote_pm)?
+> cls(function, one, helped_write_pm)?
 
 *** No
 > 
@@ -293,10 +293,10 @@ X = alfred.
 *** No
 > 
 > %% we want 
-> %% cls(function, two, wrote_pm)?
+> %% cls(function, two, helped_write_pm)?
 > %% to be true
 > 
-> cls(function, two, wrote_pm)?
+> cls(function, two, helped_write_pm)?
 
 *** Yes
 --1> 
@@ -306,13 +306,13 @@ X = alfred.
 > %% cls(equals, wrote_pm, wrote_waverley)?
 > %% to be false
 > 
-> cls(equals, wrote_pm, wrote_waverley)?
+> cls(equals, helped_write_pm, wrote_waverley)?
 
 *** No
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61319 Seconds
+Clock Time 1.61321 Seconds
 CPU Time 0 Milliseconds
 
 *** Yes

@@ -10,11 +10,13 @@
 *** Yes
 
 *** Yes
-Sat 13 Feb 2021 12:00:35 AM CST
+Sat 13 Feb 2021 04:40:09 AM CST
 
 *** Yes
-> > > > > > > > > > > > > > > > > > > > > 
+> > > > > > > > > > > > > > > > > > 
 *** Yes
+> 
+> %% This file uses queries to illustrate my points about belief
 > 
 > %% This is an example with a mini universe for queries of high complexity.
 > 
@@ -477,7 +479,7 @@ Ignore = @.
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.6132 Seconds
+Clock Time 1.61321 Seconds
 CPU Time 0 Milliseconds
 
 *** Yes
