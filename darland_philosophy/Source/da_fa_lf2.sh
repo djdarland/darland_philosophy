@@ -23,11 +23,14 @@ echo "-----------"
 echo "Philosophy Facts Files"
 echo "-----------"
 
-echo "0 facts_00000.lf samples mini universe - for high complexity queries"
-echo "1 facts_00001.lf samples for darland philosophy - On Understanding"
-echo "2 facts_00002.lf data comparing philosophers terminology"
-echo "3 facts_00003.lf data for Atomic Belief"
-echo "4 facts_00004.lf data foe Molecular Belief"
+echo "0 facts_0000.lf samples mini universe - for high complexity queries"
+echo "1 facts_0001.lf samples for darland philosophy - On Understanding"
+echo "2 facts_0002.lf data comparing philosophers terminology"
+echo "3 facts_0003.lf data for Atomic Belief"
+echo "4 facts_0004.lf data for Molecular Belief"
+echo "5 facts_0005.lf data for Definite Descriptions"
+echo "6 facts_0006.lf data for Classes"
+echo "31 facts_0031.lf data for Everything with Definite Descriptions"
 
 echo "-----------"
 if test -f da_fa_lf2.sh
@@ -44,6 +47,9 @@ case $select in
 2) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0002.lf;;
 3) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0003.lf;;
 4) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0004.lf;;
+5) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0005.lf;;
+6) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0006.lf;;
+31) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0031.lf;;
 666) $EDITOR da_fa_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

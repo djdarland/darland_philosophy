@@ -1,4 +1,10 @@
 %% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
+load("RULES2/life_0001.lf")?
+load("FACTS2/facts_0000.lf")?
+load("RULES2/rules_0001.lf")?
+load("RULES2/rules_0002.lf")?
+load("RULES2/rules_0003.lf")?
+load("RULES2/rules_0004.lf")?
 
 %% This file is part of darland's philosophy.
 
@@ -16,8 +22,9 @@
 %% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
 %% This file only checks rules (relating to propositions). 
 
-%% This file uses queries to demonstrate my points about
-%% the non-existence of any TRUE opacity.
+trace_input(true)?
+
+%% This file uses queries to illustrate my points about belief
 
 %% This is an example with a mini universe for queries of high complexity.
 
@@ -40,7 +47,7 @@
 %% In my philosophy, for Tom at that time,
 %% "Cicero" R Toms_idea_of_Cicero
 %% and
-%% Toms_idea of_Cicero S Cicero
+%% Toms_idea_of_Cicero S Cicero
 %%
 %%
 %% but not 
@@ -53,16 +60,6 @@
 %% ssss(Subject, Time, Type, Idea, Object)
 
 %% R | S is represented by rrss
-
-%dynamic(qqqq)?
-load("RULES2/life_0001.lf")?
-load("FACTS2/facts_0000.lf")?
-load("RULES2/rules_0001.lf")?
-load("RULES2/rules_0002.lf")?
-load("RULES2/rules_0003.lf")?
-load("RULES2/rules_0004.lf")?
-load("RULES2/life_0002.lf")?
-trace_input(true)?
 
 write_time(Ignore)?
 

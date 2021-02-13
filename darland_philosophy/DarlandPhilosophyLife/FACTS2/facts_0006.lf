@@ -151,6 +151,40 @@ qqqq5([denounced, russell, catiline]).
 
 qqqq5([denounced, quine, catiline]).
 
-%% denounced(cicero,catiline).
+%wrote_waverley(scott) -> true.
 
-denounced(cicero, catiline) -> true.
+qqqq5([wrote_waverley, scott]).
+qqqq5([helped_write_pm, bertie]).
+qqqq5([helped_write_pm, alfred]).
+qqqq5([wrote_process_and_reality, alfred]).
+qqqq5([wrote_pm, russell_or_whitehead]).
+
+thing(scott).
+thing(bertie).
+thing(alfred).
+thing(russell_or_whitehead).
+thing(venus).
+
+qqqq5([bald, alfred]).
+
+qqqq5([is_morning_star, venus]).
+qqqq5([is_evening_star, venus]).
+	       
+qqqq5([one, is_alfred]).
+qqqq5([one, is_bertie]).
+qqqq5([one, is_scott]).
+qqqq5([two, is_russell_or_whitehead]).
+
+qqqq5([predicative, is_scott]).
+qqqq5([predicative, is_bertie]).
+qqqq5([predicative, is_alfred]).
+qqqq5([predicative, is_russell_or_whitehead]).
+qqqq5([predicative, is_evening_star]).
+
+% qqqq5([is_russell_or_whitehead, bertie]).
+% qqqq5([is_russell_or_whitehead, alfred]).
+
+qqqq5([is_scott, scott]).
+qqqq5([is_bertie, bertie]).
+qqqq5([is_alfred, alfred]).
+qqqq5([is_russell_or_whitehead, russell_or_whitehead]).

@@ -32,6 +32,12 @@ echo "7 rules_0005.lf - Rules on Molecular Belief"
 echo "8 rules_0006.lf - Rules on True Atomic Belief"
 echo "9 rules_0007.lf - Rules for Multiple Tests"
 echo "10 rules_0008.lf - Rules for Comparing Subjects"
+echo "11 rules_0009.lf - Rules for Definite Descriptions"
+echo "12 rules_0010.lf - Rules for Practice with Life - Apply"
+echo "13 rules_0011.lf - Rules for Definite Classes"
+echo "21 rules_0021.lf - Rules for Understanding Using Definite Descriptions"
+echo "22 rules_0022.lf - Rules on Atomic Belief Using Definite Descriptions"
+echo "23 rules_0023.lf - Rules on True Atomic Belief Using Definite Descriptions"
 
 echo "-----------"
 if test -f da_ru_lf2.sh
@@ -53,6 +59,12 @@ case $select in
 8) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0006.lf;;
 9) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0007.lf;;
 10) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0008.lf;;
+11) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0009.lf;;
+12) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0010.lf;;
+13) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0011.lf;;
+31) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0031.lf;;
+32) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0032.lf;;
+33) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0033.lf;;
 666) $EDITOR da_ru_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

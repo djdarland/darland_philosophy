@@ -151,4 +151,6 @@ qqqq5([denounced, russell, catiline]).
 
 qqqq5([denounced, quine, catiline]).
 
+%% denounced(cicero,catiline).
 
+denounced(cicero, catiline) -> true.

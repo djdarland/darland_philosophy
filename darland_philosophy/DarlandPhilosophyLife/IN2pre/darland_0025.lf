@@ -1,5 +1,15 @@
 %% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
 
+load("RULES2/life_0001.lf")?
+load("FACTS2/facts_0000.lf")?
+load("RULES2/rules_0001.lf")?
+load("RULES2/rules_0002.lf")?
+load("RULES2/rules_0003.lf")?
+load("RULES2/rules_0004.lf")?
+load("RULES2/rules_0006.lf")?
+load("RULES2/rules_0007.lf")?
+load("RULES2/rules_0008.lf")?
+
 %% This file is part of darland's philosophy.
 
 %% darland's philosophy is free software: you can redistribute it and/or modify
@@ -16,8 +26,11 @@
 %% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
 %% This file only checks rules (relating to propositions). 
 
-%% This file uses queries to demonstrate my points about
-%% the non-existence of any TRUE opacity.
+trace_input(true)?
+
+%% This file uses queries for multiple testing of universals.
+
+%% Only understanding so far. Plan to do more.
 
 %% This is an example with a mini universe for queries of high complexity.
 
@@ -53,19 +66,6 @@
 %% ssss(Subject, Time, Type, Idea, Object)
 
 %% R | S is represented by rrss
-
-%dynamic(qqqq)?
-load("RULES2/life_0001.lf")?
-load("FACTS2/facts_0000.lf")?
-load("RULES2/rules_0001.lf")?
-load("RULES2/rules_0002.lf")?
-load("RULES2/rules_0003.lf")?
-load("RULES2/rules_0004.lf")?
-load("RULES2/rules_0006.lf")?
-load("RULES2/rules_0007.lf")?
-load("RULES2/rules_0008.lf")?
-load("RULES2/life_0002.lf")?
-trace_input(true)?
 
 write_time(Ignore)?
 

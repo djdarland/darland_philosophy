@@ -1,5 +1,12 @@
 %% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
 
+load("RULES2/life_0001.lf")?
+load("FACTS2/facts_0000.lf")?
+load("RULES2/rules_0001.lf")?
+load("RULES2/rules_0002.lf")?
+load("RULES2/rules_0003.lf")?
+load("RULES2/rules_0004.lf")?
+
 %% This file is part of darland's philosophy.
 
 %% darland's philosophy is free software: you can redistribute it and/or modify
@@ -15,6 +22,8 @@
 %% You should have received a copy of the GNU General Public License
 %% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
 %% This file only checks rules (relating to propositions). 
+
+trace_input(true)?
 
 %% This file uses queries to demonstrate my points about
 %% the non-existence of any TRUE opacity.
@@ -54,16 +63,6 @@
 
 %% R | S is represented by rrss
 
-%dynamic(qqqq)?
-load("RULES2/life_0001.lf")?
-load("FACTS2/facts_0000.lf")?
-load("RULES2/rules_0001.lf")?
-load("RULES2/rules_0002.lf")?
-load("RULES2/rules_0003.lf")?
-load("RULES2/rules_0004.lf")?
-load("RULES2/life_0002.lf")?
-trace_input(true)?
-
 write_time(Ignore)?
 
 %% I indicate for each query whether the immediate response should be
@@ -82,8 +81,73 @@ write_time(Ignore)?
 
 %% 7 words_ideas_objects
 
-%% begin check for contradictory beliefs cases
-%% These require much memory -- one reason for mini universe.
+%% begin check for opaque beliefs for each case.
+%% Theoretically the arguments could be variables - to find ANY cases.
+%% But there are so many combinations that there is too little memory.
+
+opaque_believes_words(tom, now, [[denounced_word],
+				 [cicero_word],
+				 [catiline_word]] )?
+;
+
+opaque_believes_words(tom, now, [[denounced_word],
+				 [tully_word],
+				 [catiline_word]] )?
+;
+
+opaque_believes_in_ideas(tom, now, [tom_denounced_idea,
+					 tom_cicero_idea,
+					 tom_catiline_idea])?
+;
+
+%% THIS is the only OPAQUE case -- when only OBJECTS are considered.
+	
+opaque_believes_objects(tom, now, [[denounced], [cicero], [catiline]])?
+;
+
+opaque_believes_words_ideas(tom, now, [[denounced_word, tom_denounced_idea],
+				       [cicero_word, tom_cicero_idea],
+				       [catiline_word, tom_catiline_idea]])?
+;
+
+opaque_believes_words_ideas(tom, now, [[denounced_word, tom_denounced_idea],
+				       [tully_word, tom_tully_idea],
+				       [catiline_word, tom_catiline_idea]])?
+;
+
+opaque_believes_words_objects(tom, now, [[denounced_word, denounced],
+					 [cicero_word, cicero],
+					 [catiline_word, catiline]])?
+;
+
+opaque_believes_words_objects(tom, now, [[denounced_word, denounced],
+					 [tully_word, cicero],
+					 [catiline_word, catiline]])?
+;
+
+opaque_believes_ideas_objects(tom, now, [[tom_denounced_idea, denounced],
+					 [tom_cicero_idea, cicero],
+					 [tom_catiline_idea, catiline]])?
+;
+
+opaque_believes_ideas_objects(tom, now, [[tom_denounced_idea, denounced],
+					 [tom_tully_idea, cicero],
+					 [tom_catiline_idea, catiline]])?
+;
+
+opaque_believes_words_ideas_objects(tom, now,
+				    [[denounced_word, tom_denounced_idea, denounced],
+				     [cicero_word, tom_cicero_idea, cicero],
+				     [catiline_word, tom_catiline_idea, catiline]])?
+;
+
+opaque_believes_words_ideas_objects(tom, now,
+				    [[denounced_word, tom_denounced_idea, denounced],
+				     [tully_word, tom_tully_idea, cicero],
+				     [catiline_word, tom_catiline_idea, catiline]])?
+;
+
+halt?
 
 %% 1 gives
 %% Next runs out of memory

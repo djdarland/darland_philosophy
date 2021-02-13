@@ -151,6 +151,15 @@ qqqq5([denounced, russell, catiline]).
 
 qqqq5([denounced, quine, catiline]).
 
-%% denounced(cicero,catiline).
+%wrote_waverley(scott) -> true.
 
-denounced(cicero, catiline) -> true.
+qqqq5([wrote_waverley, scott]).
+qqqq5([wrote_pm, betie]).
+qqqq5([wrote_pm, alfred]).
+qqqq5([wrote_process_and_reality, alfred]).
+
+qqqq5([bald, alfred]).
+
+qqqq5([is_morning_star, venus]).
+qqqq5([is_evening_star, venus]).
+	       

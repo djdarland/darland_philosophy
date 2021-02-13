@@ -20,7 +20,7 @@
 *** Yes
 
 *** Yes
-Sat 06 Feb 2021 02:04:02 AM CST
+Fri 12 Feb 2021 11:41:39 PM CST
 
 *** Yes
 > > > 
@@ -65,7 +65,7 @@ tom understands words-ideas-objects [[denounced_word,tom_denounced_idea,denounce
 
 
 Stack size  :   263336 bytes (  257K) (0%)
-Heap size   :  1345144 bytes ( 1313K) (0%)
+Heap size   :  1292800 bytes ( 1262K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 
@@ -97,7 +97,7 @@ tom believes words-ideas-objects [[denounced_word,tom_denounced_idea,denounced],
 
 
 Stack size  :   341336 bytes (  333K) (0%)
-Heap size   :  1345584 bytes ( 1314K) (0%)
+Heap size   :  1293240 bytes ( 1262K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 
@@ -128,7 +128,7 @@ tom believes truly words-ideas-objects [[denounced_word,tom_denounced_idea,denou
 
 
 Stack size  :   583480 bytes (  569K) (0%)
-Heap size   :  1346024 bytes ( 1314K) (0%)
+Heap size   :  1293680 bytes ( 1263K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 
@@ -159,7 +159,7 @@ tom does not believe truly not words-ideas-objects [[denounced_word,tom_denounce
 
 
 Stack size  :    40832 bytes (   39K) (0%)
-Heap size   :  1346528 bytes ( 1314K) (0%)
+Heap size   :  1294184 bytes ( 1263K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 

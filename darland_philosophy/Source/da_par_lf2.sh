@@ -1,4 +1,4 @@
-##  Copyright (C) 2017 Dennis J. Darland
+##  Copyright (C) 2017, 2021 Dennis J. Darland
 
 ##  This file is part of darland's philosophy.
 
@@ -34,12 +34,17 @@ echo "7 Test darland_0007.lf (truth)"
 echo "8 Test darland_0008.lf (opacity)"
 echo "9 Test darland_0009.lf (intensionality & extensionality)"
 echo "10 Test darland_0010.lf (philosophical quotes & terminology)"
-echo "21 Test darland_0021.lf Some examples with mini universe for understanding queries"
-echo "22 Test darland_0022.lf Some examples with mini universe for belief queries"
-echo "23 Test darland_0023.lf Some examples with mini universe for other queries"
-echo "24 Test darland_0024.lf Some examples with mini universe for true belief"
-echo "25 Test darland_0025.lf Some examples with mini universe for multi tests"
-echo "26 Test darland_0026.lf Some examples with mini universe for agreement"
+echo "21 Test darland_0021.lf Examples for understanding queries"
+echo "22 Test darland_0022.lf Examples for belief queries"
+echo "23 Test darland_0023.lf Examples for other queries"
+echo "24 Test darland_0024.lf Examples for true belief"
+echo "25 Test darland_0025.lf Examples for multi tests"
+echo "26 Test darland_0026.lf Examples with for agreement"
+echo "27 Test darland_0027.lf Examples for definite descriptions and classes"
+echo "28 Test darland_0028.lf Examples for practice with Life apply"
+echo "31 Test darland_0031.lf Some examples understanding & dd & cls"
+echo "32 Test darland_0032.lf Some examples belief & dd & cls"
+echo "33 Test darland_0033.lf Some examples true belief & dd & cls"
 echo "-----------"
 if test -f da_par_lf2.sh
 then
@@ -67,6 +72,11 @@ case $select in
 24) echo "Testing 0024"; cd ../*Life; ./work2.sh "darland_0024";;
 25) echo "Testing 0025"; cd ../*Life; ./work2.sh "darland_0025";;
 26) echo "Testing 0026"; cd ../*Life; ./work2.sh "darland_0026";;
+27) echo "Testing 0027"; cd ../*Life; ./work2.sh "darland_0027";;
+28) echo "Testing 0028"; cd ../*Life; ./work2.sh "darland_0028";;
+31) echo "Testing 0031"; cd ../*Life; ./work2.sh "darland_0031";;
+32) echo "Testing 0032"; cd ../*Life; ./work2.sh "darland_0032";;
+33) echo "Testing 0033"; cd ../*Life; ./work2.sh "darland_0033";;
 55) echo "Testing 0000"; cd ../*Life; ./work2.sh "darland_0000";;
 666) $EDITOR da_par_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
