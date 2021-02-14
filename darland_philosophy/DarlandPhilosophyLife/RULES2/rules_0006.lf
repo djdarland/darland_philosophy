@@ -1,5 +1,5 @@
 %% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
-%% trouble with commit made this change!!!
+
 %% This file is part of darland's philosophy.
 
 %% darland's philosophy is free software: you can redistribute it and/or modify
@@ -49,16 +49,6 @@
 
 %% 7 words_ideas_objects
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% understands_ideas_objects is defined.
-%% It applies to an intelligent Subject at some Time.
-%% There is a list of pairs (starting with relational) ideas and objects.
-%% The arity_relation must match the number of pairs following the relation
-%% pair. (Or an arity_relation of -999 matches any number of pairs.)
-%% The type objects of the following pairs must be one less thasn the type of
-%% the relation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -155,15 +145,6 @@ match_true_object_belief(Subject, Time,
 			    Type, Idea_List_Out).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% if a person believes in words and ideas then:
-% they must have the correct relation among the words
-% they must have the correct relation among their ideas
-% and understand the relation between the words and ideas.
-%
-% This amounts to the correct rrrr relations holding.
-% There might not even be corresponding objects.
 
 %% 4
 
@@ -233,7 +214,6 @@ match_true_word_object_belief(Subject, Time,
 				 Type, Idea_List_Out).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 6
 
@@ -304,48 +284,11 @@ match_true_triple_word_idea_object_belief(Subject, Time,
 					     Type, Idea_List_Out).
 
 
-% if a person belives in words about objects then:
-% they must have the correct relation among the words
-% they must have the correct relation among their ideas
-% and understand the relation between the words, ideas and objects.
-% NOTE: The only way to connect the words to the objects is via ideas.
-% This means the rrss relations hold.
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% if a person believes in ideas about objects then:
-% they must have the correct relation among their ideas
-% and understand the relation between the ideas and objects.
-%
-% This amounts to the correct ssss relations holding.
-% There might not even be corresponding words.
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% now believes not cases.
+%% now true believes not cases. (true disbelief)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 1
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 believes_true_not_words( Subject, Time, [[Relation_Word] | List]) :-
 	%% list of words
@@ -375,6 +318,7 @@ match_true_not_word_belief(Subject, Time,
 			  cond(Arity =\= -999, Arity - 1,
 			       -999),
 			  Type, Idea_List_Out).
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 2
@@ -431,22 +375,7 @@ match_true_not_object_belief(Subject, Time,
 				 -999),
 			    Type, Idea_List_Out).
 
-% if a person belives in words about objects then:
-% they must have the correct relation among the words
-% they must have the correct relation among their ideas
-% and understand the relation between the words, ideas and objects.
-% NOTE: The only way to connect the words to the objects is via ideas.
-% This means the rrss relations hold.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% if a person believes in words and ideas then:
-% they must have the correct relation among the words
-% they must have the correct relation among their ideas
-% and understand the relation between the words and ideas.
-%
-% This amounts to the correct rrrr relations holding.
-% There might not even be corresponding objects.
 
 %% 4
 
@@ -550,10 +479,6 @@ match_true_not_idea_object_belief(Subject, Time,
 				      -999),
 				 Type, Idea_List_Out).
 
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 7
@@ -612,7 +537,9 @@ match_true_not_triple_word_idea_object_belief(Subject, Time,
 %% 7 words_ideas_objects
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %% Now Contradicting true beliefs!!
+
 %% 1
 contradicts_true_words( Subject, Time, List) :-
 	believes_true_words( Subject, Time, List),

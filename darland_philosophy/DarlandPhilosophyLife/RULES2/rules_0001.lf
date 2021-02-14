@@ -70,16 +70,18 @@ rrss(Subject, Time, Word, Object) :-
 
 %% 7 words_ideas_objects
 
-
-%% understands_words_objects is defined.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% understands_words is defined.
 %% It applies to an intelligent Subject at some Time.
-%% There is a list of pairs (starting with relational) words and objects.
-%% The arity_relation must match the number of pairs following the relation
-%% pair. (Or an arity_relation of -999 matches any number of pairs.)
-%% The type objects of the following pairs must be one less thasn the type of
-%% the relation.
+%% There is a list of words.
+%% The arity_idea must match the number of words following the relation word.
+%% (Or an arity_relation of -999 matches any number of words.)
+%% The type ideas corresponding to the words must be one less thasn the type 
+%% idea corresponding to the relation idea.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 1
+
 understands_words(Subject, Time, [[Relation_Word] | List]) :-
 	rrrr(Subject, Time, Relation_Word, Relation_Idea),
 	arity_idea(Relation_Idea, Arity),
@@ -106,14 +108,13 @@ match_word(Subject, Time, [[Word] | List],
 		   cond(Arity =\= -999, Arity - 1, -999),
 		   Type).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-%% understands_words_objects is defined.
-%% It applies to an intelligent Subject at some Time.
-%% There is a list of pairs (starting with relational) words and objects.
-%% The arity_relation must match the number of pairs following the relation
-%% pair. (Or an arity_relation of -999 matches any number of pairs.)
-%% The type objects of the following pairs must be one less thasn the type of
-%% the relation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The following are other forms of understanding.
+%% I could copy, paste & edit the comments.
+%% But I will rely on the readers intelligence.
+%% It is better to be sure the above is correct.
+%% And to reduce the amount of editing if there are changes.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 2
 
@@ -206,6 +207,7 @@ match_pair_word_idea(Subject, Time, [[Word, Idea] | PairList],
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5
+
 understands_words_objects(Subject, Time, [[Relation_Word, Relation] | PairList]) :-
 	rrrr(Subject, Time, Relation_Word, Relation_Idea),
 	ssss(Subject, Time, Relation_Idea, Relation),
@@ -260,14 +262,11 @@ match_pair_idea_object_relation(Subject, Time, [[Idea, Object] | PairList],
 					Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %% The following are other forms of understanding.
 %% I could copy, paste & edit the comments.
 %% But I will rely on the readers intelligence.
 %% It is better to be sure the above is correct.
 %% And to reduce the amount of editing it there are changes.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 7
@@ -300,6 +299,10 @@ match_triple_word_idea_object_relation(Subject, Time,
 						    -999),
 					       Type).
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The FOLLOWING are NOT USED currently
 
 understand_same_objects_by_ideas( Subject_1, Time_1, [[Idea_1, Object_1] | Pair_List1],
      Subject_2, Time_2, [[Idea_2, Object_2] | Pair_List2]) :-
@@ -349,7 +352,6 @@ match_same_pair_word_object_relation(Subject_1, Time_1,
 	Object_1 = Object_2, 
 	match_same_pair_word_object_relation(Subject_1, Time_1, Pair_List1, 
 					 Subject_2, Time_2, Pair_List2).
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

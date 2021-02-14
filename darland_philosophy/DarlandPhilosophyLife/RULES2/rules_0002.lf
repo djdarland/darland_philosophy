@@ -50,17 +50,9 @@
 %% 7 words_ideas_objects
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% understands_ideas_objects is defined.
-%% It applies to an intelligent Subject at some Time.
-%% There is a list of pairs (starting with relational) ideas and objects.
-%% The arity_relation must match the number of pairs following the relation
-%% pair. (Or an arity_relation of -999 matches any number of pairs.)
-%% The type objects of the following pairs must be one less thasn the type of
-%% the relation.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% These correspond to understanding.
+%% Except they involve belief as is indeicated by belief_in_ideas.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 1
@@ -95,11 +87,8 @@ match_word_belief(Subject, Time,
 			  Type, Idea_List_Out).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %% 2
-
 %% believes_ideas is primitive for these purposes
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 3
@@ -108,7 +97,6 @@ believes_objects( Subject, Time, [[Relation] | List]) :-
 	%% list of idea object Pairs
 	ssss( Subject, Time, Relation_Idea, Relation),
 	arity_idea( Relation_Idea, Arity),
-%	(Arity =:= length(List) or Arity =:= -999),  
 	type_idea( Relation_Idea, Type),
 	match_object_belief(Subject, Time, List,
 			    Arity, Type - 1, [Relation_Idea]).
@@ -126,10 +114,6 @@ match_object_belief(Subject, Time,
 	% List of Objects.
 	ssss( Subject, Time, Idea, Object),
 	type_idea( Idea, Type),
-	%	write(word,Word,idea,Idea,object,Object),
-	%	write(arity,Arity,type,Type),
-	%	write(triplelist,TripleList),
-	%	write(idea_list, Idea_List, idea, [Idea]),
 	Idea_List_Out = append(Idea_List, [Idea]),
 	match_object_belief(Subject, Time,
 			    List,
@@ -138,23 +122,13 @@ match_object_belief(Subject, Time,
 				 -999),
 			    Type, Idea_List_Out).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% if a person believes in words and ideas then:
-% they must have the correct relation among the words
-% they must have the correct relation among their ideas
-% and understand the relation between the words and ideas.
-%
-% This amounts to the correct rrrr relations holding.
-% There might not even be corresponding objects.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 4
 
 believes_words_ideas( Subject, Time, [[Relation_Word, Relation_Idea] | PairList]) :-
 	%% list of word, idea pairs
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
-	%	write(relation_idea, Relation_Idea),
 	ssss( Subject, Time, Relation_Idea, Relation),
 	arity_idea( Relation_Idea, Arity),
 	type_idea( Relation_Idea, Type),
@@ -174,10 +148,6 @@ match_word_idea_belief(Subject, Time,
 	% List of Word Idea Object Triple.
 	rrrr( Subject, Time, Word, Idea),
 	type_idea( Idea, Type),
-	%	write(word,Word,idea,Idea,object,Object),
-	%	write(arity,Arity,type,Type),
-	%	write(triplelist,TripleList),
-	%	write(idea_list, Idea_List, idea, [Idea]),
 	Idea_List_Out = append(Idea_List, [Idea]),
 	match_word_idea_belief(Subject, Time,
 			       PairList,
@@ -191,17 +161,11 @@ match_word_idea_belief(Subject, Time,
 %% 5
 
 believes_words_objects( Subject, Time, [[Relation_Word, Relation] | Pair_List]) :-
-%	write(relation_word, Relation_Word),
-%	write(relation, Relation),
 	%% list of word, idea object pairs
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
 	ssss( Subject, Time, Relation_Idea, Relation),
-%	write(relation_idea, Relation_Idea),
-%	write(relation, Relation),
 	arity_idea( Relation_Idea, Arity),
-%	write(arity, Arity),
 	type_idea( Relation_Idea, Type),
-%	write(type, Type),
 	match_word_object_belief(Subject, Time, Pair_List,
 			       Arity, Type - 1, [Relation_Idea]).
 
@@ -231,7 +195,6 @@ match_word_object_belief(Subject, Time,
 				      -999),
 				 Type, Idea_List_Out).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 6
@@ -274,7 +237,6 @@ match_idea_object_belief(Subject, Time,
 believes_words_ideas_objects( Subject, Time, [[Relation_Word, Relation_Idea, Relation] | TripleList]) :-
 	%% list of word, idea object triples
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
-%	write(relation_idea, Relation_Idea),
 	ssss( Subject, Time, Relation_Idea, Relation),
 	arity_idea( Relation_Idea, Arity),
 	type_idea( Relation_Idea, Type),
@@ -295,10 +257,6 @@ match_triple_word_idea_object_belief(Subject, Time,
 	rrrr( Subject, Time, Word, Idea),
 	ssss( Subject, Time, Idea, Object),
 	type_idea( Idea, Type),
-%	write(word,Word,idea,Idea,object,Object),
-%	write(arity,Arity,type,Type),
-%	write(triplelist,TripleList),
-%	write(idea_list, Idea_List, idea, [Idea]),
 	Idea_List_Out = append(Idea_List, [Idea]),
 	match_triple_word_idea_object_belief(Subject, Time,
 					     TripleList,
@@ -308,48 +266,11 @@ match_triple_word_idea_object_belief(Subject, Time,
 					     Type, Idea_List_Out).
 
 
-% if a person belives in words about objects then:
-% they must have the correct relation among the words
-% they must have the correct relation among their ideas
-% and understand the relation between the words, ideas and objects.
-% NOTE: The only way to connect the words to the objects is via ideas.
-% This means the rrss relations hold.
-
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% if a person believes in ideas about objects then:
-% they must have the correct relation among their ideas
-% and understand the relation between the ideas and objects.
-%
-% This amounts to the correct ssss relations holding.
-% There might not even be corresponding words.
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% now believes not cases.
+%% now believes not cases. (disbelief)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 1
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 believes_not_words( Subject, Time, [[Relation_Word] | List]) :-
 	%% list of words
@@ -385,17 +306,15 @@ match_not_word_belief(Subject, Time,
 
 %% believes_not_ideas is primitive for these purposes
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 3
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 believes_not_objects( Subject, Time, [[Relation] | List]) :-
 	%% list of idea object Pairs
 	ssss( Subject, Time, Relation_Idea, Relation),
 	arity_idea( Relation_Idea, Arity),
-%	(Arity =:= length(List) or Arity =:= -999),  
 	type_idea( Relation_Idea, Type),
 	match_not_object_belief(Subject, Time, List,
 			    Arity, Type - 1, [Relation_Idea]).
@@ -413,10 +332,6 @@ match_not_object_belief(Subject, Time,
 	% List of Objects.
 	ssss( Subject, Time, Idea, Object),
 	type_idea( Idea, Type),
-	%	write(word,Word,idea,Idea,object,Object),
-	%	write(arity,Arity,type,Type),
-	%	write(triplelist,TripleList),
-	%	write(idea_list, Idea_List, idea, [Idea]),
 	Idea_List_Out = append(Idea_List, [Idea]),
 	match_not_object_belief(Subject, Time,
 			    List,
@@ -425,29 +340,13 @@ match_not_object_belief(Subject, Time,
 				 -999),
 			    Type, Idea_List_Out).
 
-% if a person belives in words about objects then:
-% they must have the correct relation among the words
-% they must have the correct relation among their ideas
-% and understand the relation between the words, ideas and objects.
-% NOTE: The only way to connect the words to the objects is via ideas.
-% This means the rrss relations hold.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% if a person believes in words and ideas then:
-% they must have the correct relation among the words
-% they must have the correct relation among their ideas
-% and understand the relation between the words and ideas.
-%
-% This amounts to the correct rrrr relations holding.
-% There might not even be corresponding objects.
 
 %% 4
 
 believes_not_words_ideas( Subject, Time, [[Relation_Word, Relation_Idea] | PairList]) :-
 	%% list of word, idea pairs
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
-	%	write(relation_idea, Relation_Idea),
 	ssss( Subject, Time, Relation_Idea, Relation),
 	arity_idea( Relation_Idea, Arity),
 	type_idea( Relation_Idea, Type),
@@ -467,10 +366,6 @@ match_not_word_idea_belief(Subject, Time,
 	% List of Word Idea Object Triple.
 	rrrr( Subject, Time, Word, Idea),
 	type_idea( Idea, Type),
-	%	write(word,Word,idea,Idea,object,Object),
-	%	write(arity,Arity,type,Type),
-	%	write(triplelist,TripleList),
-	%	write(idea_list, Idea_List, idea, [Idea]),
 	Idea_List_Out = append(Idea_List, [Idea]),
 	match_not_word_idea_belief(Subject, Time,
 			       PairList,
@@ -484,17 +379,11 @@ match_not_word_idea_belief(Subject, Time,
 %% 5
 
 believes_not_words_objects( Subject, Time, [[Relation_Word, Relation] | Pair_List]) :-
-%	write(relation_word, Relation_Word),
-%	write(relation, Relation),
 	%% list of word, idea object pairs
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
 	ssss( Subject, Time, Relation_Idea, Relation),
-%	write(relation_idea, Relation_Idea),
-%	write(relation, Relation),
 	arity_idea( Relation_Idea, Arity),
-%	write(arity, Arity),
 	type_idea( Relation_Idea, Type),
-%	write(type, Type),
 	match_not_word_object_belief(Subject, Time, Pair_List,
 			       Arity, Type - 1, [Relation_Idea]).
 
@@ -512,10 +401,6 @@ match_not_word_object_belief(Subject, Time,
 	rrrr( Subject, Time, Word, Idea),
 	ssss( Subject, Time, Idea, Object),
 	type_idea( Idea, Type),
-	%	write(word,Word,idea,Idea,object,Object),
-	%	write(arity,Arity,type,Type),
-	%	write(triplelist,TripleList),
-	%	write(idea_list, Idea_List, idea, [Idea]),
 	Idea_List_Out = append(Idea_List, [Idea]),
 	match_not_word_object_belief(Subject, Time,
 				 Pair_List,
@@ -559,10 +444,6 @@ match_not_idea_object_belief(Subject, Time,
 				      -999),
 				 Type, Idea_List_Out).
 
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 7
@@ -570,7 +451,6 @@ match_not_idea_object_belief(Subject, Time,
 believes_not_words_ideas_objects( Subject, Time, [[Relation_Word, Relation_Idea, Relation] | TripleList]) :-
 	%% list of word, idea object triples
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
-%	write(relation_idea, Relation_Idea),
 	ssss( Subject, Time, Relation_Idea, Relation),
 	arity_idea( Relation_Idea, Arity),
 	type_idea( Relation_Idea, Type),
@@ -591,10 +471,6 @@ match_not_triple_word_idea_object_belief(Subject, Time,
 	rrrr( Subject, Time, Word, Idea),
 	ssss( Subject, Time, Idea, Object),
 	type_idea( Idea, Type),
-%	write(word,Word,idea,Idea,object,Object),
-%	write(arity,Arity,type,Type),
-%	write(triplelist,TripleList),
-%	write(idea_list, Idea_List, idea, [Idea]),
 	Idea_List_Out = append(Idea_List, [Idea]),
 	match_not_triple_word_idea_object_belief(Subject, Time,
 					     TripleList,
@@ -604,16 +480,6 @@ match_not_triple_word_idea_object_belief(Subject, Time,
 					     Type, Idea_List_Out).
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% if a person believes in ideas about objects then:
-% they must have the correct relation among their ideas
-% and understand the relation between the ideas and objects.
-%
-% This amounts to the correct ssss relations holding.
-% There might not even be corresponding words.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 1 words
 %% 2 ideas

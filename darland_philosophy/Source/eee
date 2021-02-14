@@ -17,6 +17,8 @@ echo "122 Edit Darland Philosophy WildLife Rules"
 echo "123 Edit Darland Philosophy WildLife Logs"
 echo "125 Run and View a Particular WildLife Query"
 echo "126 Clear WildLife Reference Files"
+echo "127 Clear WildLife HTML Files"
+echo "128 Copy WilfdLIFE HTML Files"
 echo "131 Preprocess all qqqq"
 
 echo "-----------"
@@ -40,6 +42,8 @@ case $select in
 123) ./da_lg_lf2.sh 1;;
 125) ./da_par_lf2.sh;;
 126) ./da_clr_lf2.sh;;
+127) ./clrhtml.sh;;
+128) ./cphtml.sh;;
 131) cd ../D*; ./qqqq_pre_all.sh;;
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
@@ -59,12 +63,15 @@ echo "-----------"
 echo "1 Run wild_life interactively"
 echo "-----------"
 echo "111 Edit Darland Philosophy Queries"
-echo "120 Run and View Darland WildLife Philosophy"
+echo "120 Run and View Darland WildLife Philosophy (OUT OF DATE - use 125 particular"
 echo "121 Edit Darland Philosophy WildLife Facts"
 echo "122 Edit Darland Philosophy WildLife Rules"
 echo "123 Edit Darland Philosophy WildLife Logs"
 echo "125 Run and View a Particular WildLife Query"
 echo "126 Clear WildLife Reference Files"
+echo "127 Clear WildLife HTML Files"
+echo "128 Copy WilfdLIFE HTML Files"
+
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"
