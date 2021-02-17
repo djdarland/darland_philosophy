@@ -52,13 +52,28 @@ rrrr( tom, now, cicero_word, tom_cicero_idea).
 rrrr( tom, now, catiline_word, tom_catiline_idea).
 rrrr( tom, now, tully_word, tom_tully_idea).
 rrrr( tom, now, denounced_word, tom_denounced_idea).
+rrrr( tom, now, roman_word, tom_roman_idea).
+rrrr( tom, now, american_word, tom_american_idea).
+rrrr( tom, now, dolphin_word, tom_dolphin_idea).
+rrrr( tom, now, human_word, tom_human_idea).
+rrrr( tom, now, dolphin_class_word, tom_dolphin_class_idea).
+rrrr( tom, now, roman_class_word, tom_roman_class_idea).
+rrrr( tom, now, human_class_word, tom_human_class_idea).
+rrrr( tom, now, featherless_biped_class_word, tom_featherless_biped_class_idea).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rrrr( quine, now, russell_word, tom_russell_idea).
-rrrr( quine, now, quine_word, tom_quine_idea).
-rrrr( quine, now, cicero_word, tom_cicero_idea).
-rrrr( quine, now, catiline_word, tom_catiline_idea).
-rrrr( quine, now, tully_word, tom_tully_idea).
-rrrr( quine, now, denounced_word, tom_denounced_idea).
+rrrr( quine, now, russell_word, quine_russell_idea).
+rrrr( quine, now, quine_word, quine_quine_idea).
+rrrr( quine, now, cicero_word, quine_cicero_idea).
+rrrr( quine, now, catiline_word, quine_catiline_idea).
+rrrr( quine, now, tully_word, quine_tully_idea).
+rrrr( quine, now, denounced_word, quine_denounced_idea).
+rrrr( quine, now, roman_word, quine_roman_idea).
+rrrr( quine, now, human_word, quine_human_idea).
+rrrr( quine, now, dolphin_word, quine_dolphin_idea).
+rrrr( quine, now, dolphin_class_word, quine_dolphin_class_idea).
+rrrr( quine, now, roman_class_word, quine_roman_class_idea).
+rrrr( quine, now, human_class_word, quine_human_class_idea).
+rrrr( quine, now, featherless_biped_class_word, quine_featherless_biped_class_idea).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ssss( Type, Subject, Time, A_idea, A_object)
 %%
@@ -74,6 +89,9 @@ ssss( tom, now, tom_cicero_idea, cicero).
 ssss( tom, now, tom_tully_idea, cicero).
 ssss( tom, now, tom_catiline_idea, catiline).
 ssss( tom, now, tom_denounced_idea, denounced).
+ssss( tom, now, tom_mortal_idea, mortal).
+ssss( tom, now, tom_human_idea, human).
+ssss( tom, now, tom_dolphin_idea, dolphin).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ssss( quine, now, quine_russell_idea, russell).
 ssss( quine, now, quine_quine_idea, quine).
@@ -81,6 +99,33 @@ ssss( quine, now, quine_cicero_idea, cicero).
 ssss( quine, now, quine_tully_idea, cicero).
 ssss( quine, now, quine_catiline_idea, catiline).
 ssss( quine, now, quine_denounced_idea, denounced).
+ssss( quine, now, quine_mortal_idea, mortal).
+ssss( quine, now, quine_human_idea, human).
+ssss( quine, now, quine_dolphin_idea, dolphin).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ssss( tom, now, tom_roman_idea, roman).
+ssss( tom, now, tom_american_idea, american).
+ssss( quine, now, quine_roman_idea, roman).
+ssss( quine, now, quine_american_idea, american).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+tttt( tom, now, tom_dolphin_class_idea, flipper).
+tttt( tom, now, tom_roman_class_idea, cicero).
+tttt( tom, now, tom_roman_class_idea, catiline).
+tttt( tom, now, tom_human_class_idea, cicero).
+tttt( tom, now, tom_human_class_idea, catiline).
+tttt( tom, now, tom_human_class_idea, russell).  %% one more to diff roman
+tttt( tom, now, tom_featherless_biped_class_idea, cicero).
+tttt( tom, now, tom_featherless_biped_class_idea, catiline).
+tttt( tom, now, tom_featherless_biped_class_idea, russell).
+tttt( quine, now, quine_dolphin_class_idea, flipper).
+tttt( quine, now, quine_roman_class_idea, cicero).
+tttt( quine, now, quine_roman_class_idea, catiline).
+tttt( quine, now, quine_human_class_idea, cicero).
+tttt( quine, now, quine_human_class_idea, catiline).
+tttt( quine, now, quine_human_class_idea, russell).
+tttt( quine, now, quine_featherless_biped_class_idea, cicero).
+tttt( quine, now, quine_featherless_biped_class_idea, catiline).
+tttt( quine, now, quine_featherless_biped_class_idea, russell).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% There are several understands relations symbols defined in terms of the
 %% words and ideas.
@@ -90,20 +135,78 @@ ssss( quine, now, quine_denounced_idea, denounced).
 %% Only ideas have arities and types.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 arity_idea( tom_denounced_idea, 2).
+arity_idea( tom_roman_idea, 1).
+arity_idea( tom_american_idea, 1).
+arity_idea( tom_mortal_idea, 1).
+arity_idea( tom_human_idea, 1).
+arity_idea( tom_dolphin_idea, 1).
 type_idea( tom_denounced_idea, 1).
+type_idea( tom_mortal_idea, 2).
+type_idea( tom_human_idea, 1).
+type_idea( tom_dolphin_idea, 1).
+type_idea( tom_roman_idea, 1).
+type_idea( tom_dolphin_class_idea, 1).
+type_idea( tom_roman_class_idea, 1).
+type_idea( tom_human_class_idea, 1).
+type_idea( tom_featherless_biped_class_idea, 1).
+type_idea( tom_american_idea, 1).
 type_idea( tom_russell_idea, 0).
 type_idea( tom_quine_idea, 0).
 type_idea( tom_cicero_idea, 0).
 type_idea( tom_tully_idea, 0).
 type_idea( tom_catiline_idea, 0).
+number_idea( tom_mortal_idea, singular).
+number_idea( tom_human_idea, singular).
+number_idea( tom_dolphin_idea, singular).
+number_idea( tom_denounced_idea, singular).
+number_idea( tom_roman_idea, singular).
+number_idea( tom_dolphin_class_idea, plural).
+number_idea( tom_roman_class_idea, plural).
+number_idea( tom_human_class_idea, plural).
+number_idea( tom_featherless_biped_class_idea, plural).
+number_idea( tom_american_idea, singular).
+number_idea( tom_russell_idea, singular).
+number_idea( tom_quine_idea, singular).
+number_idea( tom_cicero_idea, singular).
+number_idea( tom_tully_idea, singular).
+number_idea( tom_catiline_idea, singular).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 arity_idea( quine_denounced_idea, 2).
+arity_idea( quine_roman_idea, 1).
+arity_idea( quine_mortal_idea, 1).
+arity_idea( quine_human_idea, 1).
+arity_idea( quine_dolphin_idea, 1).
+arity_idea( quine_american_idea, 1).
+type_idea( quine_roman_idea, 1).
+type_idea( quine_american_idea, 1).
 type_idea( quine_denounced_idea, 1).
+type_idea( quine_human_idea, 1).
+type_idea( quine_dolphin_idea, 1).
+type_idea( quine_dolphin_class_idea, 1).
+type_idea( quine_roman_class_idea, 1).
+type_idea( quine_human_class_idea, 1).
+type_idea( quine_featherless_biped_class_idea, 1).
+type_idea( quine_mortal_idea, 2).
 type_idea( quine_russell_idea, 0).
 type_idea( quine_quine_idea, 0).
 type_idea( quine_cicero_idea, 0).
 type_idea( quine_tully_idea, 0).
 type_idea( quine_catiline_idea, 0).
+number_idea( quine_mortal_idea, singular).
+number_idea( quine_denounced_idea, singular).
+number_idea( quine_roman_idea, singular).
+number_idea( quine_human_idea, singular).
+number_idea( quine_dolphin_idea, singular).
+number_idea( quine_dolphin_class_idea, plural).
+number_idea( quine_roman_class_idea, plural).
+number_idea( quine_human_class_idea, plural).
+number_idea( quine_featherless_biped_class_idea, plural).
+number_idea( quine_american_idea, singular).
+number_idea( quine_russell_idea, singular).
+number_idea( quine_quine_idea, singular).
+number_idea( quine_cicero_idea, singular).
+number_idea( quine_tully_idea, singular).
+number_idea( quine_catiline_idea, singular).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% conventions.
 %% tom, quine, cicero etc stand for people (instances of Subjects or Objects.)
@@ -127,6 +230,10 @@ type_idea( quine_catiline_idea, 0).
 believes_in_ideas( tom, now, [tom_denounced_idea, tom_cicero_idea,
 				   tom_catiline_idea]).
 
+believes_in_ideas( tom, now, [tom_roman_idea, tom_catiline_idea]).
+
+believes_in_ideas( tom, now, [tom_american_idea, tom_russell_idea]).
+
 believes_in_ideas( tom, now, [tom_denounced_idea, tom_quine_idea,
 				   tom_catiline_idea]).
 
@@ -141,7 +248,20 @@ believes_not_in_ideas( tom, now, [tom_denounced_idea, tom_tully_idea,
 
 believes_not_in_ideas( tom, now, [tom_denounced_idea, tom_russell_idea,
 				       tom_catiline_idea]).
+
+believes_not_in_ideas( tom, now, [tom_roman_idea, tom_russell_idea]).
+
 %% A fact -- indicated by qqqq4
+
+qqqq4([denounced, cicero, catiline]).
+
+qqqq4([roman, cicero]).
+
+qqqq4([roman, catiline]).
+
+qqqq4([american, tom]).
+
+qqqq4([american, quine]).
 
 qqqq4([denounced, cicero, catiline]).
 
@@ -149,7 +269,17 @@ qqqq4([denounced, cicero, catiline]).
 
 qqqq5([denounced, russell, catiline]).
 
+qqqq5([american, russell]).
+
+qqqq5([roman, russell]).
+
 qqqq5([denounced, quine, catiline]).
 
 %% was a function for expetimenting
 %% denounced(cicero, catiline) -> true.
+qqqq4([dolphin, flipper]).
+qqqq4([human, cicero]).
+qqqq4([human, catiline]).
+qqqq4([human, russell]).
+
+

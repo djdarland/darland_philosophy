@@ -30,7 +30,7 @@ echo "3 facts_0003.lf data for Atomic Belief"
 echo "4 facts_0004.lf data for Molecular Belief"
 echo "5 facts_0005.lf data for Definite Descriptions"
 echo "6 facts_0006.lf data for Classes"
-echo "31 facts_0031.lf data for Everything with Definite Descriptions"
+echo "31 facts_0031.lf data for Everything with Number added for Ideas"
 
 echo "-----------"
 if test -f da_fa_lf2.sh

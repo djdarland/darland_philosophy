@@ -34,9 +34,16 @@ echo "Note 27 uses Mini Univese given by facts_0006.lf"
 echo "27 Edit darland_0027.lf Cases for definite descriptions and classes"
 echo "28 Edit darland_0028.lf Cases using mini universe for practice with Apply"
 echo "Note 31 forward are MERELY PLANNED"
-echo "31 Edit darland_0031.lf Cases with Understanding Using Definite Descriptions"
-echo "32 Edit darland_0032.lf Cases with Belief Using Definite Descriptions"
-echo "33 Edit darland_0033.lf Cases with True Belief Using Definite Descriptions"
+echo "31 Edit darland_0031.lf Cases with Understanding Using Number"
+echo "32 Edit darland_0032.lf Cases with Belief Using Number"
+echo "33 Edit darland_0033.lf Cases with True Belief Using Number"
+echo "34 Edit darland_0034.lf Cases with Opacity Using Number"
+echo "35 Edit darland_0035.lf Multi Tests Using Number"
+echo "36 Edit darland_0036.lf Agreement Using Number"
+echo "37 Edit darland_0037.lf Essentially Singular terms"
+echo "38 Edit darland_0038.lf Plural terms"
+echo "39 Edit darland_0039.lf Contingently Singular terms"
+echo "40 Edit darland_0040.lf Singular terms"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"
@@ -74,6 +81,13 @@ case $select in
 31) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0031.lf;;
 32) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0032.lf;;
 33) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0033.lf;;
+34) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0034.lf;;
+35) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0035.lf;;
+36) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0036.lf;;
+37) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0037.lf;;
+38) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0038.lf;;
+39) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0039.lf;;
+40) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0040.lf;;
 55) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0000.lf;;
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
@@ -115,9 +129,16 @@ echo "Note 27 uses Mini Univese given by facts_0006.lf"
 echo "27 Edit darland_0027.lf Cases for definite descriptions and classes"
 echo "28 Edit darland_0028.lf Cases using mini universe for practice with Apply"
 echo "Note 31 forward are MERELY PLANNED"
-echo "31 Edit darland_0031.lf Cases with Understanding Using Definite Descriptions"
-echo "32 Edit darland_0032.lf Cases with Belief Using Definite Descriptions"
-echo "33 Edit darland_0033.lf Cases with True Belief Using Definite Descriptions"
+echo "31 Edit darland_0031.lf Cases with Understanding Using Number"
+echo "32 Edit darland_0032.lf Cases with Belief Using Number"
+echo "33 Edit darland_0033.lf Cases with True Belief Using Number"
+echo "34 Edit darland_0033.lf Cases with Opacity Using Number"
+echo "35 Edit darland_0034.lf Multi Tests Using Number"
+echo "36 Edit darland_0035.lf Agreement Using Number"
+echo "37 Edit darland_0037.lf Essentially Singular terms"
+echo "38 Edit darland_0038.lf Plural terms"
+echo "39 Edit darland_0039.lf Contingently Singular terms"
+echo "40 Edit darland_0040.lf Singular terms"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"

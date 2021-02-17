@@ -46,9 +46,16 @@ echo "Note: 27 uses Mini Universe facts_0006.lf"
 echo "27 Test darland_0027.lf Examples for definite descriptions and classes"
 echo "28 Test darland_0028.lf Examples for practice with Life apply"
 echo "NOTE: 31 forward are merely planned"
-echo "31 Test darland_0031.lf Some examples understanding & dd & cls"
-echo "32 Test darland_0032.lf Some examples belief & dd & cls"
-echo "33 Test darland_0033.lf Some examples true belief & dd & cls"
+echo "31 Test darland_0031.lf Some examples understanding & number"
+echo "32 Test darland_0032.lf Some examples belief & number"
+echo "33 Test darland_0033.lf Some examples true belief & number"
+echo "34 Test darland_0034.lf Some examples opacity & number"
+echo "35 Test darland_0035.lf Some examples multi test & number"
+echo "36 Test darland_0036.lf Some examples agreement & number"
+echo "37 Test darland_0037.lf Some examples essentially singular terms"
+echo "38 Test darland_0038.lf Some examples plural terms"
+echo "39 Test darland_0037.lf Some examples contingently singular terms"
+echo "40 Test darland_0037.lf Some examples singular terms"
 echo "-----------"
 if test -f da_par_lf2.sh
 then
@@ -81,7 +88,14 @@ case $select in
 31) echo "Testing 0031"; cd ../*Life; ./work2.sh "darland_0031";;
 32) echo "Testing 0032"; cd ../*Life; ./work2.sh "darland_0032";;
 33) echo "Testing 0033"; cd ../*Life; ./work2.sh "darland_0033";;
-55) echo "Testing 0000"; cd ../*Life; ./work2.sh "darland_0000";;
+34) echo "Testing 0034"; cd ../*Life; ./work2.sh "darland_0034";;
+35) echo "Testing 0035"; cd ../*Life; ./work2.sh "darland_0035";;
+36) echo "Testing 0036"; cd ../*Life; ./work2.sh "darland_0036";;
+37) echo "Testing 0037"; cd ../*Life; ./work2.sh "darland_0037";;
+38) echo "Testing 0038"; cd ../*Life; ./work2.sh "darland_0038";;
+39) echo "Testing 0039"; cd ../*Life; ./work2.sh "darland_0039";;
+40) echo "Testing 0040"; cd ../*Life; ./work2.sh "darland_0040";;
+56) echo "Testing 0000"; cd ../*Life; ./work2.sh "darland_0000";;
 666) $EDITOR da_par_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 
