@@ -19,31 +19,11 @@
 %% This is a total rewrite of what I started about 10 years ago.
 %% 
 %%
-%% I have made the propositional attitude relatons support arbitrary arity.
-%%
-%%
-%% qqqq is the only relation having ontological status.
-%% qqqq is the exemplification of a universal in the following arguments.
-
-%% some possible arguments (universals) are rrrr, ssss, and rrss.
-%% rrss is defined in terms of rrrr and ssss.
-%% rrrr and ssss are undefined here
-%% - but not neverssarily ontologically primitive 
-
-%% rrrr is relation between word and idea.
-%% ssss is relation between idea and object.
-
-%% rrss is relative product of rrrr and ssss.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% ssss2 requires uniqueness
-%% uniqueness is essential to singular ideas
-%% So it is required even for understanding or belief if ssss is used
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% we need to define existence, equality, and functions of singular terms
+%% We need to define existence, equality, and functions of
+%% essentially singular terms
 %% 
-%% There are 7 relations of both each
+%% There are 7 relations of each
 
 %% The 7 cases are:
 
@@ -60,15 +40,6 @@
 %% Modified to add Number to ideas
 %%	- singular
 %%      - or plural
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% It applies to an intelligent Subject at some Time.
-%% There is a list of words.
-%% The arity_idea must match the number of words following the relation word.
-%% (Or an arity_relation of -999 matches any number of words.)
-%% The type ideas corresponding to the words must be one less thasn the type 
-%% idea corresponding to the relation idea.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 
 %% 1

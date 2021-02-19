@@ -54,8 +54,9 @@ echo "35 Test darland_0035.lf Some examples multi test & number"
 echo "36 Test darland_0036.lf Some examples agreement & number"
 echo "37 Test darland_0037.lf Some examples essentially singular terms"
 echo "38 Test darland_0038.lf Some examples plural terms"
-echo "39 Test darland_0037.lf Some examples contingently singular terms"
-echo "40 Test darland_0037.lf Some examples singular terms"
+echo "39 Test darland_0039.lf Some examples contingently singular terms"
+echo "40 Test darland_0040.lf Some examples singular terms"
+echo "41 Test darland_0041.lf Some examples NAND"
 echo "-----------"
 if test -f da_par_lf2.sh
 then
@@ -95,6 +96,7 @@ case $select in
 38) echo "Testing 0038"; cd ../*Life; ./work2.sh "darland_0038";;
 39) echo "Testing 0039"; cd ../*Life; ./work2.sh "darland_0039";;
 40) echo "Testing 0040"; cd ../*Life; ./work2.sh "darland_0040";;
+41) echo "Testing 0041"; cd ../*Life; ./work2.sh "darland_0041";;
 56) echo "Testing 0000"; cd ../*Life; ./work2.sh "darland_0000";;
 666) $EDITOR da_par_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;

@@ -120,7 +120,7 @@ write_time(Ignore)?
 %% cicero & catiline
 
 
-member_plural_word_object(tom, now, roman_class_word, X)?
+member_plural_word_object( tom, now, roman_class_word, X)?
 ;
 ;	
 ;
@@ -128,7 +128,7 @@ member_plural_word_object(tom, now, roman_class_word, X)?
 
 %% cicero, catiline & russell
 	
-member_plural_word_object(quine, now, human_class_word, X)?
+member_plural_word_object( quine, now, human_class_word, X)?
 ;
 ;	
 ;
@@ -136,7 +136,7 @@ member_plural_word_object(quine, now, human_class_word, X)?
 
 %% cicero, catiline & russell
 
-member_plural_word_object(quine, now, featherless_biped_class_word, X)?
+member_plural_word_object( quine, now, featherless_biped_class_word, X)?
 ;
 ;	
 ;
@@ -175,7 +175,7 @@ member_plural_idea_object( quine, now, quine_featherless_biped_class_idea, X)?
 %% 
 %% cicero, catiline
 
-member_plural_word_idea_object(tom, now, roman_class_word,
+member_plural_word_idea_object( tom, now, roman_class_word,
 			       tom_roman_class_idea,
 			       X)?
 ;
@@ -183,7 +183,7 @@ member_plural_word_idea_object(tom, now, roman_class_word,
 
 %% cicero, catiline & russell
 
-member_plural_word_idea_object(quine, now, human_class_word,
+member_plural_word_idea_object( quine, now, human_class_word,
 			       quine_human_class_idea,
 			       X)?
 ;
@@ -193,7 +193,7 @@ member_plural_word_idea_object(quine, now, human_class_word,
 
 %% cicero, catiline & russell
 
-member_plural_word_idea_object(quine, now, featherless_biped_class_word,
+member_plural_word_idea_object( quine, now, featherless_biped_class_word,
 			       quine_featherless_biped_class_idea,
 			       X)?
 ;
@@ -226,7 +226,7 @@ exists_plural_idea( tom, now, tom_roman_class_idea)?
 %% 4
 %% guarantees word and idea
 
-exists_plural_word_idea(tom, now, roman_class_word, tom_roman_class_idea)?
+exists_plural_word_idea( tom, now, roman_class_word, tom_roman_class_idea)?
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5
@@ -234,7 +234,7 @@ exists_plural_word_idea(tom, now, roman_class_word, tom_roman_class_idea)?
 
 %% cicero & catiline
 
-exists_plural_word_object(tom, now, roman_class_word, X)?
+exists_plural_word_object( tom, now, roman_class_word, X)?
 ;
 ;	
 
@@ -253,7 +253,7 @@ exists_plural_idea_object( tom, now, tom_roman_class_idea, X)?
 %% 
 %% cicero & catiline (& words for them) 
 	
-exists_plural_word_idea_object(tom, now, roman_class_word,
+exists_plural_word_idea_object( tom, now, roman_class_word,
 			       tom_roman_class_idea,
 			       X)?
 ;
@@ -283,12 +283,12 @@ exists_plural_word_idea_object(tom, now, roman_class_word,
 %%
 %% TRUE
 
-equal_plural_words_objects(quine, now,
+equal_plural_words_objects( quine, now,
 			   human_class_word, featherless_biped_class_word)?
 
 %% FALSE
 
-equal_plural_words_objects(quine, now,
+equal_plural_words_objects( quine, now,
 			   human_roman_word, featherless_biped_class_word)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -311,13 +311,13 @@ equal_plural_ideas_objects( quine, now,
 
 %% FALSE
 
-equal_plural_words_ideas_objects(quine, now,
+equal_plural_words_ideas_objects( quine, now,
 				 roman_class_word, featherless_biped_class_word,
 				 quine_roman_class_idea,
 				 quine_featherless_biped_class_idea)?
 %% TRUE
 
-equal_plural_words_ideas_objects(quine, now,
+equal_plural_words_ideas_objects( quine, now,
 				 human_class_word, featherless_biped_class_word,
 				 quine_human_class_idea,
 				 quine_featherless_biped_class_idea)?
@@ -347,13 +347,13 @@ equal_plural_words_ideas_objects(quine, now,
 %% guarantees word & object
 
 %% TRUE
-function_plural_word(tom, now, human_word, human_class_word)?
+function_plural_word( tom, now, human_word, human_class_word)?
 
 %% FALSE some humans are not roman
-function_plural_word(tom, now, roman_word, human_class_word)?
+function_plural_word( tom, now, roman_word, human_class_word)?
 
 %% FALSE
-function_plural_word(tom, now, dolphin_word, human_class_word)?
+function_plural_word( tom, now, dolphin_word, human_class_word)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
@@ -362,13 +362,13 @@ function_plural_word(tom, now, dolphin_word, human_class_word)?
 %% I have not figured out the problem
 
 %% TRUE
-function_plural_idea(tom, now, tom_human_idea, quine_human_class_idea)?
+function_plural_idea( tom, now, tom_human_idea, quine_human_class_idea)?
 
 %% FALSE
-function_plural_idea(tom, now, tom_roman_idea, quine_human_class_idea)?
+function_plural_idea( tom, now, tom_roman_idea, quine_human_class_idea)?
 
 %% FALSE
-function_plural_idea(tom, now, tom_dolphin_idea, quine_human_class_idea)?
+function_plural_idea( tom, now, tom_dolphin_idea, quine_human_class_idea)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
@@ -377,15 +377,15 @@ function_plural_idea(tom, now, tom_dolphin_idea, quine_human_class_idea)?
 %% I have spent all my time on # 6
 %% TRUE
 
-function_plural_word_idea(tom, now, human_word, human_class_word,
+function_plural_word_idea( tom, now, human_word, human_class_word,
 				 tom_human_class_idea)?
 
 %% FALSE
-function_plural_word_idea(tom, now, roman_word, human_class_word,
+function_plural_word_idea( tom, now, roman_word, human_class_word,
 				 tom_roman_class_idea)?
 
 %% FALSE
-function_plural_word_idea(tom, now, dolphin_word, roman_class_word,
+function_plural_word_idea( tom, now, dolphin_word, roman_class_word,
 				 tom_roman_class_idea)?
 
 write_stats(Ignore)?

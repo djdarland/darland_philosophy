@@ -19,32 +19,6 @@
 %% This is a total rewrite of what I started about 10 years ago.
 %% 
 %%
-%% I have made the propositional attitude relatons support arbitrary arity.
-%%
-%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Define sense (close to Frege's Sinn) (useless)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% qqqq is the only relation having ontological status.
-%% qqqq is the exemplification of a universal in the following arguments.
-
-%% some possible arguments (universals) are rrrr, ssss, and rrss.
-%% rrss is defined in terms of rrrr and ssss.
-%% rrrr and ssss are undefined here
-%% - but not neverssarily ontologically primitive 
-
-%% rrrr is relation between word and idea.
-%% ssss is relation between idea and object.
-
-%% rrss is relative product of rrrr and ssss.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% definition of rrss in terms of rrrr and ssss.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% There are 7 relations of both understanding.
 %% Those of understanding are defined in terms of rrrr and ssss
@@ -61,14 +35,8 @@
 
 %% 7 words_ideas_objects
 
-
-%% understands_words_objects is defined.
-%% It applies to an intelligent Subject at some Time.
-%% There is a list of pairs (starting with relational) words and objects.
-%% The arity_relation must match the number of pairs following the relation
-%% pair. (Or an arity_relation of -999 matches any number of pairs.)
-%% The type objects of the following pairs must be one less thasn the type of
-%% the relation.
+%% These are intended to compare two Subjects beliefs on the
+%% same arguments. (Incomplete)
 
 %% Checking agreement or disagreenent of two Subjects (word-object)
 

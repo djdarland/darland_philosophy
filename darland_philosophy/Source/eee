@@ -54,7 +54,7 @@ echo "-----------"
 echo "Darland Philosophy Options"
 echo "-----------"
 
-echo "Copyright (C) 2017  Dennis J. Darland"
+echo "Copyright (C) 2017, 2021  Dennis J. Darland"
 echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
 echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; type 501 for details."

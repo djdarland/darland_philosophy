@@ -803,15 +803,6 @@ match_true_not_triple_word_idea_object_belief(Subject, Time,
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% if a person believes in ideas about objects then:
-% they must have the correct relation among their ideas
-% and understand the relation between the ideas and objects.
-%
-% This amounts to the correct ssss relations holding.
-% There might not even be corresponding words.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 1 words
 %% 2 ideas
 %% 3 objects

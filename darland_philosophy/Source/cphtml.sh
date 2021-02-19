@@ -1,3 +1,4 @@
+cp sample.txt ../DarlandPhilosophyLife/HTML/sample.txt
 cd ../D*e
 cp FACTS2pre/facts_0000.lf HTML/FACTS2pre/facts_0000.lf.txt
 cp FACTS2pre/facts_0006.lf HTML/FACTS2pre/facts_0006.lf.txt
@@ -19,6 +20,7 @@ cp IN2pre/darland_0037.lf HTML/IN2pre/darland_0037.lf.txt
 cp IN2pre/darland_0038.lf HTML/IN2pre/darland_0038.lf.txt
 cp IN2pre/darland_0039.lf HTML/IN2pre/darland_0039.lf.txt
 cp IN2pre/darland_0040.lf HTML/IN2pre/darland_0040.lf.txt
+cp IN2pre/darland_0041.lf HTML/IN2pre/darland_0041.lf.txt
 cp OUT2/darland_0021.out HTML/OUT2/darland_0021.out.txt
 cp OUT2/darland_0022.out HTML/OUT2/darland_0022.out.txt
 cp OUT2/darland_0023.out HTML/OUT2/darland_0023.out.txt
@@ -36,6 +38,7 @@ cp OUT2/darland_0037.out HTML/OUT2/darland_0037.out.txt
 cp OUT2/darland_0038.out HTML/OUT2/darland_0038.out.txt
 cp OUT2/darland_0039.out HTML/OUT2/darland_0039.out.txt
 cp OUT2/darland_0040.out HTML/OUT2/darland_0040.out.txt
+cp OUT2/darland_0041.out HTML/OUT2/darland_0041.out.txt
 cp RULES2/life_0001.lf HTML/RULES2/life_0001.lf.txt
 cp RULES2/rules_0001.lf HTML/RULES2/rules_0001.lf.txt
 cp RULES2/rules_0002.lf HTML/RULES2/rules_0002.lf.txt
@@ -55,6 +58,7 @@ cp RULES2/rules_0037.lf HTML/RULES2/rules_0037.lf.txt
 cp RULES2/rules_0038.lf HTML/RULES2/rules_0038.lf.txt
 cp RULES2/rules_0039.lf HTML/RULES2/rules_0039.lf.txt
 cp RULES2/rules_0040.lf HTML/RULES2/rules_0040.lf.txt
+cp RULES2/rules_0041.lf HTML/RULES2/rules_0041.lf.txt
 cp qqqq_pre.icn         HTML/qqqq_pre_icn.txt
 cp qqqq_pre_all.sh      HTML/qqqq_pre_all.txt
 

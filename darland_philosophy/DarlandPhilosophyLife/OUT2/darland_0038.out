@@ -16,7 +16,7 @@
 *** Yes
 
 *** Yes
-Wed 17 Feb 2021 02:38:44 AM CST
+Fri 19 Feb 2021 05:00:43 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
@@ -82,7 +82,7 @@ Ignore = @.
 > %% cicero & catiline
 > 
 > 
-> member_plural_word_object(tom, now, roman_class_word, X)?
+> member_plural_word_object( tom, now, roman_class_word, X)?
 
 *** Yes
 X = cicero.
@@ -98,7 +98,7 @@ X = catiline.
 > 
 > %% cicero, catiline & russell
 > 	
-> member_plural_word_object(quine, now, human_class_word, X)?
+> member_plural_word_object( quine, now, human_class_word, X)?
 
 *** Yes
 X = cicero.
@@ -117,7 +117,7 @@ X = russell.
 > 
 > %% cicero, catiline & russell
 > 
-> member_plural_word_object(quine, now, featherless_biped_class_word, X)?
+> member_plural_word_object( quine, now, featherless_biped_class_word, X)?
 
 *** Yes
 X = cicero.
@@ -197,7 +197,7 @@ X = russell.
 > %% 
 > %% cicero, catiline
 > 
-> member_plural_word_idea_object(tom, now, roman_class_word,
+> member_plural_word_idea_object( tom, now, roman_class_word,
 |    			       tom_roman_class_idea,
 |    			       X)?
 
@@ -213,7 +213,7 @@ X = catiline.
 > 
 > %% cicero, catiline & russell
 > 
-> member_plural_word_idea_object(quine, now, human_class_word,
+> member_plural_word_idea_object( quine, now, human_class_word,
 |    			       quine_human_class_idea,
 |    			       X)?
 
@@ -234,7 +234,7 @@ X = russell.
 > 
 > %% cicero, catiline & russell
 > 
-> member_plural_word_idea_object(quine, now, featherless_biped_class_word,
+> member_plural_word_idea_object( quine, now, featherless_biped_class_word,
 |    			       quine_featherless_biped_class_idea,
 |    			       X)?
 
@@ -286,7 +286,7 @@ X = russell.
 > %% 4
 > %% guarantees word and idea
 > 
-> exists_plural_word_idea(tom, now, roman_class_word, tom_roman_class_idea)?
+> exists_plural_word_idea( tom, now, roman_class_word, tom_roman_class_idea)?
 
 *** Yes
 --1> 	
@@ -298,7 +298,7 @@ X = russell.
 > 
 > %% cicero & catiline
 > 
-> exists_plural_word_object(tom, now, roman_class_word, X)?
+> exists_plural_word_object( tom, now, roman_class_word, X)?
 
 *** Yes
 X = cicero.
@@ -333,7 +333,7 @@ X = catiline.
 > %% 
 > %% cicero & catiline (& words for them) 
 > 	
-> exists_plural_word_idea_object(tom, now, roman_class_word,
+> exists_plural_word_idea_object( tom, now, roman_class_word,
 |    			       tom_roman_class_idea,
 |    			       X)?
 
@@ -371,14 +371,14 @@ X = catiline.
 > %%
 > %% TRUE
 > 
-> equal_plural_words_objects(quine, now,
+> equal_plural_words_objects( quine, now,
 |    			   human_class_word, featherless_biped_class_word)?
 
 *** Yes
 > 
 > %% FALSE
 > 
-> equal_plural_words_objects(quine, now,
+> equal_plural_words_objects( quine, now,
 |    			   human_roman_word, featherless_biped_class_word)?
 
 *** No
@@ -407,7 +407,7 @@ X = catiline.
 > 
 > %% FALSE
 > 
-> equal_plural_words_ideas_objects(quine, now,
+> equal_plural_words_ideas_objects( quine, now,
 |    				 roman_class_word, featherless_biped_class_word,
 |    				 quine_roman_class_idea,
 |    				 quine_featherless_biped_class_idea)?
@@ -415,7 +415,7 @@ X = catiline.
 *** No
 > %% TRUE
 > 
-> equal_plural_words_ideas_objects(quine, now,
+> equal_plural_words_ideas_objects( quine, now,
 |    				 human_class_word, featherless_biped_class_word,
 |    				 quine_human_class_idea,
 |    				 quine_featherless_biped_class_idea)?
@@ -447,19 +447,19 @@ X = catiline.
 > %% guarantees word & object
 > 
 > %% TRUE
-> function_plural_word(tom, now, human_word, human_class_word)?
+> function_plural_word( tom, now, human_word, human_class_word)?
 
 *** Yes
 --1> 
 
 *** No
 > %% FALSE some humans are not roman
-> function_plural_word(tom, now, roman_word, human_class_word)?
+> function_plural_word( tom, now, roman_word, human_class_word)?
 
 *** No
 > 
 > %% FALSE
-> function_plural_word(tom, now, dolphin_word, human_class_word)?
+> function_plural_word( tom, now, dolphin_word, human_class_word)?
 
 *** No
 > 
@@ -470,19 +470,19 @@ X = catiline.
 > %% I have not figured out the problem
 > 
 > %% TRUE
-> function_plural_idea(tom, now, tom_human_idea, quine_human_class_idea)?
+> function_plural_idea( tom, now, tom_human_idea, quine_human_class_idea)?
 
 *** Yes
 --1> 
 
 *** No
 > %% FALSE
-> function_plural_idea(tom, now, tom_roman_idea, quine_human_class_idea)?
+> function_plural_idea( tom, now, tom_roman_idea, quine_human_class_idea)?
 
 *** No
 > 
 > %% FALSE
-> function_plural_idea(tom, now, tom_dolphin_idea, quine_human_class_idea)?
+> function_plural_idea( tom, now, tom_dolphin_idea, quine_human_class_idea)?
 
 *** No
 > 
@@ -493,7 +493,7 @@ X = catiline.
 > %% I have spent all my time on # 6
 > %% TRUE
 > 
-> function_plural_word_idea(tom, now, human_word, human_class_word,
+> function_plural_word_idea( tom, now, human_word, human_class_word,
 |    				 tom_human_class_idea)?
 
 *** Yes
@@ -501,21 +501,21 @@ X = catiline.
 
 *** No
 > %% FALSE
-> function_plural_word_idea(tom, now, roman_word, human_class_word,
+> function_plural_word_idea( tom, now, roman_word, human_class_word,
 |    				 tom_roman_class_idea)?
 
 *** No
 > 
 > %% FALSE
-> function_plural_word_idea(tom, now, dolphin_word, roman_class_word,
+> function_plural_word_idea( tom, now, dolphin_word, roman_class_word,
 |    				 tom_roman_class_idea)?
 
 *** No
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61355 Seconds
-CPU Time 16.6667 Milliseconds
+Clock Time 1.61378 Seconds
+CPU Time 0 Milliseconds
 
 *** Yes
 Ignore = @.

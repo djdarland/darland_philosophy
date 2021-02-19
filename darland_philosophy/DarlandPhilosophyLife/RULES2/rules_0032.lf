@@ -1,5 +1,5 @@
 %% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
-%% trouble with commit made this change!!!
+
 %% This file is part of darland's philosophy.
 
 %% darland's philosophy is free software: you can redistribute it and/or modify
@@ -88,7 +88,7 @@ match_word_belief(Subject, Time,
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 2
-%% believes_ideas is primitive for these purposes
+%% believes_in_ideas is primitive for these purposes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 3
@@ -432,7 +432,7 @@ match_not_word_belief(Subject, Time,
 
 %% 2
 
-%% believes_not_ideas is primitive for these purposes
+%% believes_not_in_ideas is primitive for these purposes
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

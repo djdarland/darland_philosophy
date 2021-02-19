@@ -35,18 +35,39 @@ sense_of_object(Idea) :- ssss(Subject, Time, Idea, Object).
 %% qqqq is the only relation having ontological status.
 %% qqqq is the exemplification of a universal in the following arguments.
 
+%% I define some other WildLIFE predicates (relations), however, these
+%% could all be eliminated.
+
+%% as in the predicate pred(Arg1, Arg2, ...)
+%% by
+%% qqqq(Pred, Arg1, Arg2, ...) :-
+%%    Pred = pred,
+%%    ...
+%% I also use qqqq4 for positive [base] facts.
+%% I also use qqqq5 for negative [base] facts.
+%% This is to avoid conflict with qqqq.
+
+%% A script qqqq_pre_all.sh translates fact and query files
+%% using a Unicon program qqqq_pre.icn converting the qqqq predicates
+%% to the predicates in the rules files.
+%% This is done only for efficiency.
+
 %% some possible arguments (universals) are rrrr, ssss, and rrss.
 %% rrss is defined in terms of rrrr and ssss.
 %% rrrr and ssss are undefined here
-%% - but not neverssarily ontologically primitive 
+%% - but not necessarily ontologically primitive 
 
 %% rrrr is relation between word and idea.
-%% ssss is relation between idea and object.
+%% ssss is relation between idea and one object.
+%% tttt is relation between idea and one or more objects.
 
 %% rrss is relative product of rrrr and ssss.
+%% rrtt is relative product of rrrr and tttt.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% ssss2 requires uniqueness
+%% also there are ssss2 and tttt2
+
+%% ssss2 checks uniqueness - if the database is correct it should
+%% not be needed.
 %% uniqueness is essential to essentially singular ideas
 %% So it is required even for understanding or belief if ssss is used
 
@@ -58,9 +79,8 @@ non_unique(Subject, Time, Idea, Object1) :-
 	ssss(Subject, Time, Idea, Object2),
 	Object1 :\== Object2.
 
-%% tttt2 requires uniqueness
+%% tttt2 also requires uniqueness
 %% this uniqueness is for contingently singular ideas
-%% So it is required even for understanding or belief if ssss is used
 
 tttt2(Subject, Time, Idea, Object) :-
 	tttt(Subject, Time, Idea, Object),
@@ -116,6 +136,43 @@ rrtt(Subject, Time, Word, Object) :-
 
 %% 1
 
+
+%% I am going to comment on one sample carefully and thoroughly I hope.
+%% I hope any reader can learn enough to apply principles in other cases.
+
+%% predicate1(Arg1, Arg2, Arg3) :- predicate2(Arg1, Arg2),
+%%                                 predicate3(Arg1, Arg3).'
+
+%% means if predicate3(Arg1, Arg2) and predicate3(Arg1, Arg3)
+%%       then predicate1(Arg1, Arg2, Arg3).
+
+%% ":-" means "if"
+%% "," separates Arguments in predicates and means "and" between clauses.
+%%
+
+%% Two rules can be used for "or"
+%% if we add
+%% predicate1(Arg1, Arg2, Arg3) :- predicate4(Arg1, Arg2),
+%%                                 predicate5(Arg1, Arg3).
+%% then we have:
+
+%%       if (predicate3(Arg1, Arg2) and predicate3(Arg1, Arg3))
+%%       or (predicate4(Arg1, Arg2) and predicate5(Arg1, Arg3))
+%%       then predicate1(Arg1, Arg2, Arg3).
+
+%%   "\+" is negation by "failure" (if it cannot see it is true is says false)
+%%   I also use qqqq4 to state positive facts in the database.
+%%          and qqqq5 to state negative facts in the database.
+
+%%   You can run WildLife on an totally empty file.
+%%   It will produce no output - not even any errors!
+
+%%   match_word below is recursive. Each call removes a Word.
+%%   It also subtracts one from the Arity of the Relation_Idea.
+%%   The list is finite in WildLIFE, so eventually there will be
+%%   an empty list and the Arity can be checked. (or be -999)
+%%   It also checks if the Ideas are one less in type than the Relation Idea.
+%%   rrrr sees if the Subject has that relation between the Word and the Idea.
 understands_words(Subject, Time, [[Relation_Word] | List]) :-
 	rrrr(Subject, Time, Relation_Word, Relation_Idea),
 	arity_idea(Relation_Idea, Arity),
@@ -384,13 +441,8 @@ match_pair_idea_object_relation(Subject, Time, [[Idea, Object] | PairList],
 					cond(Arity =\= -999, Arity - 1, -999),
 					Type).
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% The following are other forms of understanding.
-%% I could copy, paste & edit the comments.
-%% But I will rely on the readers intelligence.
-%% It is better to be sure the above is correct.
-%% And to reduce the amount of editing it there are changes.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %% 7
 

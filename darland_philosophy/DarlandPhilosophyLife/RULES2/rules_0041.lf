@@ -1,0 +1,155 @@
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+%% 
+%%
+%%
+%%
+
+%%    There is one sort of belief used for truth functions
+%%    I had been puzzling how to do truth functions.
+%%    Now I have realized. I need NAND!
+
+%%    believes_nand_in_ideas( Subject, Time,
+%%		      [Relation_Idea1,
+%%		      A_Idea1,
+%%		      B_Idea1,
+%%		      C_Idea1, ... ],
+%%		      [Relation_Idea2,
+%%		      A_Idea2,
+%%		      B_Idea2,
+%%		      C_Idea2, ... ]
+%%                    ).
+
+%% The Subject at Time has a NAND belief relation between the two lists
+%% 
+
+%% There are 7 relations of believes_nand.
+%% Those of understanding are defined in terms of rrrr and ssss
+%% Those of belief require also a belief_nand_in_ideas relation.
+
+%% The 7 cases are:
+
+%% 1 words
+%% 2 ideas
+%% 3 objects
+
+%% 4 words_ideas
+%% 5 words_objects
+%% 6 ideas_objects
+
+%% 7 words_ideas_objects
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% These correspond to understanding.
+%% Except they involve belief as is indeicated by belief_in_ideas.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 1
+
+believes_nand_words( Subject, Time, [[Relation_Word1] | List1],
+		     [[Relation_Word2] | List2]) :-
+	 believes_not_words( Subject, Time, [[Relation_Word1] | List1]).
+
+	
+believes_nand_words( Subject, Time, [[Relation_Word1] | List1],
+		     [[Relation_Word2] | List2]) :-
+	 believes_not_words( Subject, Time, [[Relation_Word2] | List2]).
+
+%% 2
+
+believes_nand_in_ideas( Subject, Time, [Relation_Idea1 | List1],
+			[Relation_Idea2	| List2]) :-
+	 believes_not_in_ideas( Subject, Time, [Relation_Idea1 | List1]).
+
+believes_nand_in_ideas( Subject, Time, [Relation_Idea1 | List1],
+			[Relation_Idea2	| List2]) :-
+	 believes_not_in_ideas( Subject, Time, [Relation_Idea2 | List2]).
+	
+
+%% 3
+
+believes_nand_objects( Subject, Time, [[Relation_Object1] | List1],
+		       [[Relation_Object2] | List2]) :-
+	 believes_not_in_objects( Subject, Time, [[Relation_Object1] | List1]).
+
+believes_nand_objects( Subject, Time, [[Relation_Object1] | List1],
+		       [[Relation_Object2] | List2]) :-
+	 believes_not_in_objects( Subject, Time, [[Relation_Object2] | List2]).
+
+
+%% 4
+
+believes_nand_words_ideas( Subject, Time, [[Relation_Word1, Relation_Idea1]
+				     | PairList1],
+		      [[Relation_Word2, Relation_Idea2] | PairList2]) :-
+	 believes_not_words_ideas( Subject, Time, [[Relation_Word1,
+						  Relation_Idea1]
+						| PairList1]).
+
+believes_nand_words_ideas( Subject, Time, [[Relation_Word1, Relation_Idea1]
+				     | PairList1],
+		      [[Relation_Word2, Relation_Idea2] | PairList2]) :-
+	 believes_not_words_ideas( Subject, Time, [[Relation_Word2,
+						  Relation_Idea2]
+						| PairList2]).
+
+%% 5
+
+believes_nand_words_objects( Subject, Time, [[Relation_Word1, Relation1] | Pair_List1],
+		      [[Relation_Word2, Relation2] | Pair_List2]) :-
+	 believes_not_words_objects( Subject, Time, [[Relation_Word1, Relation1]
+					       | Pair_List1]).
+
+
+believes_nand_words_objects( Subject, Time, [[Relation_Word1, Relation1] | Pair_List1],
+		      [[Relation_Word2, Relation2] | Pair_List2]) :-
+	 believes_not_words_objects( Subject, Time, [[Relation_Word2, Relation2]
+					       | Pair_List2]).
+%% 6
+
+believes_nand_ideas_objects(Subject, Time, [[Relation_Idea1, Relation1]
+					   | PairList1],
+			    [[Relation_Idea2, Relation2]
+					   | PairList2]) :-
+	 believes_not_ideas_objects(Subject, Time, [[Relation_Idea1, Relation1]
+					   | PairList1]).
+
+believes_nand_ideas_objects(Subject, Time, [[Relation_Idea1, Relation1]
+					   | PairList1],
+			    [[Relation_Idea2, Relation2]
+					   | PairList2]) :-
+	 believes_not_ideas_objects(Subject, Time, [[Relation_Idea2, Relation2]
+					   | PairList2]).
+
+
+%% 7
+
+believes_nand_words_ideas_objects( Subject, Time, [[Relation_Word1, Relation_Idea1, Relation1] | TripleList1],[[Relation_Word2, Relation_Idea2, Relation2] | TripleList2]) :-
+	 believes_not_words_ideas_objects( Subject, Time, [[Relation_Word1,
+							  Relation_Idea1,
+							  Relation1] |
+							 TripleList1]).
+
+believes_nand_words_ideas_objects( Subject, Time, [[Relation_Word1, Relation_Idea1, Relation1] | TripleList1],[[Relation_Word2, Relation_Idea2, Relation2] | TripleList2]) :-
+	 believes_not_words_ideas_objects( Subject, Time, [[Relation_Word2,
+							  Relation_Idea2,
+							  Relation2] |
+							 TripleList2]).

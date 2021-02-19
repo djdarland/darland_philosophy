@@ -8,10 +8,10 @@
 *** Yes
 
 *** Yes
-Wed 17 Feb 2021 02:35:42 AM CST
+Fri 19 Feb 2021 04:58:50 PM CST
 
 *** Yes
-> > > > > > > > > > > > > > > > > > > > 
+> > > > > > > > > > > > > > > > > > 
 *** Yes
 > 
 > %% This file uses queries to demonstrate my points about true belief
@@ -1185,8 +1185,8 @@ Ignore = @.
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61355 Seconds
-CPU Time 283.333 Milliseconds
+Clock Time 1.61378 Seconds
+CPU Time 266.667 Milliseconds
 
 *** Yes
 Ignore = @.

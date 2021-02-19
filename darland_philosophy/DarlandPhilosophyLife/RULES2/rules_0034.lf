@@ -20,6 +20,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% I take a belief as opaque if the Subject believes and
+%% disbelieves the same arguments in a belief.
+
+%% It turns out this only occurs in the opaque_believes_objects case
+%% This is not an ontological problem, because although it is opaque,
+%% it is defined in terms of universals none of which are opaque.
+
 %% 1
 
 opaque_believes_words(Subject, Time, List) :-

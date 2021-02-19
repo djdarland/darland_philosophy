@@ -29,6 +29,7 @@
 ./qqqq_pre <IN2pre/darland_0038.lf >IN2/darland_0038.lf
 ./qqqq_pre <IN2pre/darland_0039.lf >IN2/darland_0039.lf
 ./qqqq_pre <IN2pre/darland_0040.lf >IN2/darland_0040.lf
+./qqqq_pre <IN2pre/darland_0041.lf >IN2/darland_0041.lf
 ./qqqq_pre <FACTS2pre/facts_0000.lf >FACTS2/facts_0000.lf
 ./qqqq_pre <FACTS2pre/facts_0001.lf >FACTS2/facts_0001.lf
 ./qqqq_pre <FACTS2pre/facts_0002.lf >FACTS2/facts_0002.lf

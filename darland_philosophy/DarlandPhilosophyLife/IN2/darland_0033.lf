@@ -5,8 +5,6 @@ load("FACTS2/facts_0031.lf")?
 load("RULES2/rules_0031.lf")?
 load("RULES2/rules_0032.lf")?
 load("RULES2/rules_0033.lf")?
-% load("RULES2/rules_0004.lf")?
-% load("RULES2/rules_0006.lf")?
 
 %% This file is part of darland's philosophy.
 

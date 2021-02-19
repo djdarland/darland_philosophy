@@ -88,6 +88,7 @@ case $select in
 38) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0038.lf;;
 39) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0039.lf;;
 40) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0040.lf;;
+41) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0041.lf;;
 55) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0000.lf;;
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
@@ -139,6 +140,7 @@ echo "37 Edit darland_0037.lf Essentially Singular terms"
 echo "38 Edit darland_0038.lf Plural terms"
 echo "39 Edit darland_0039.lf Contingently Singular terms"
 echo "40 Edit darland_0040.lf Singular terms"
+echo "41 Edit darland_0041.lf NAND Beliefs using Number"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"

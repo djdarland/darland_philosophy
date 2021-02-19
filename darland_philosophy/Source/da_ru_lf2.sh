@@ -45,6 +45,7 @@ echo "37 rules_0037.lf - Rules for essentially singular terms"
 echo "38 rules_0038.lf - Rules for plural terms"
 echo "39 rules_0039.lf - Rules for contingently singular terms"
 echo "40 rules_0040.lf - Rules for singular terms"
+echo "41 rules_0041.lf - Rules for Believes NAND"
 
 echo "-----------"
 if test -f da_ru_lf2.sh
@@ -79,6 +80,7 @@ case $select in
 38) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0038.lf;;
 39) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0039.lf;;
 40) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0040.lf;;
+41) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0041.lf;;
 666) $EDITOR da_ru_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 
