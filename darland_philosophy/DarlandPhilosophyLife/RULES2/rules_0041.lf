@@ -66,33 +66,33 @@
 
 believes_nand_words( Subject, Time, [[Relation_Word1] | List1],
 		     [[Relation_Word2] | List2]) :-
-	 believes_not_words( Subject, Time, [[Relation_Word1] | List1]).
+	 disbelieves_words( Subject, Time, [[Relation_Word1] | List1]).
 
 	
 believes_nand_words( Subject, Time, [[Relation_Word1] | List1],
 		     [[Relation_Word2] | List2]) :-
-	 believes_not_words( Subject, Time, [[Relation_Word2] | List2]).
+	 disbelieves_words( Subject, Time, [[Relation_Word2] | List2]).
 
 %% 2
 
 believes_nand_in_ideas( Subject, Time, [Relation_Idea1 | List1],
 			[Relation_Idea2	| List2]) :-
-	 believes_not_in_ideas( Subject, Time, [Relation_Idea1 | List1]).
+	 disbelieves_in_ideas( Subject, Time, [Relation_Idea1 | List1]).
 
 believes_nand_in_ideas( Subject, Time, [Relation_Idea1 | List1],
 			[Relation_Idea2	| List2]) :-
-	 believes_not_in_ideas( Subject, Time, [Relation_Idea2 | List2]).
+	 disbelieves_in_ideas( Subject, Time, [Relation_Idea2 | List2]).
 	
 
 %% 3
 
 believes_nand_objects( Subject, Time, [[Relation_Object1] | List1],
 		       [[Relation_Object2] | List2]) :-
-	 believes_not_in_objects( Subject, Time, [[Relation_Object1] | List1]).
+	 disbelieves_in_objects( Subject, Time, [[Relation_Object1] | List1]).
 
 believes_nand_objects( Subject, Time, [[Relation_Object1] | List1],
 		       [[Relation_Object2] | List2]) :-
-	 believes_not_in_objects( Subject, Time, [[Relation_Object2] | List2]).
+	 disbelieves_in_objects( Subject, Time, [[Relation_Object2] | List2]).
 
 
 %% 4
@@ -100,14 +100,14 @@ believes_nand_objects( Subject, Time, [[Relation_Object1] | List1],
 believes_nand_words_ideas( Subject, Time, [[Relation_Word1, Relation_Idea1]
 				     | PairList1],
 		      [[Relation_Word2, Relation_Idea2] | PairList2]) :-
-	 believes_not_words_ideas( Subject, Time, [[Relation_Word1,
+	 disbelieves_words_ideas( Subject, Time, [[Relation_Word1,
 						  Relation_Idea1]
 						| PairList1]).
 
 believes_nand_words_ideas( Subject, Time, [[Relation_Word1, Relation_Idea1]
 				     | PairList1],
 		      [[Relation_Word2, Relation_Idea2] | PairList2]) :-
-	 believes_not_words_ideas( Subject, Time, [[Relation_Word2,
+	 disbelieves_words_ideas( Subject, Time, [[Relation_Word2,
 						  Relation_Idea2]
 						| PairList2]).
 
@@ -115,13 +115,13 @@ believes_nand_words_ideas( Subject, Time, [[Relation_Word1, Relation_Idea1]
 
 believes_nand_words_objects( Subject, Time, [[Relation_Word1, Relation1] | Pair_List1],
 		      [[Relation_Word2, Relation2] | Pair_List2]) :-
-	 believes_not_words_objects( Subject, Time, [[Relation_Word1, Relation1]
+	 disbelieves_words_objects( Subject, Time, [[Relation_Word1, Relation1]
 					       | Pair_List1]).
 
 
 believes_nand_words_objects( Subject, Time, [[Relation_Word1, Relation1] | Pair_List1],
 		      [[Relation_Word2, Relation2] | Pair_List2]) :-
-	 believes_not_words_objects( Subject, Time, [[Relation_Word2, Relation2]
+	 disbelieves_words_objects( Subject, Time, [[Relation_Word2, Relation2]
 					       | Pair_List2]).
 %% 6
 
@@ -129,27 +129,27 @@ believes_nand_ideas_objects(Subject, Time, [[Relation_Idea1, Relation1]
 					   | PairList1],
 			    [[Relation_Idea2, Relation2]
 					   | PairList2]) :-
-	 believes_not_ideas_objects(Subject, Time, [[Relation_Idea1, Relation1]
+	 disbelieves_ideas_objects(Subject, Time, [[Relation_Idea1, Relation1]
 					   | PairList1]).
 
 believes_nand_ideas_objects(Subject, Time, [[Relation_Idea1, Relation1]
 					   | PairList1],
 			    [[Relation_Idea2, Relation2]
 					   | PairList2]) :-
-	 believes_not_ideas_objects(Subject, Time, [[Relation_Idea2, Relation2]
+	 disbelieves_ideas_objects(Subject, Time, [[Relation_Idea2, Relation2]
 					   | PairList2]).
 
 
 %% 7
 
 believes_nand_words_ideas_objects( Subject, Time, [[Relation_Word1, Relation_Idea1, Relation1] | TripleList1],[[Relation_Word2, Relation_Idea2, Relation2] | TripleList2]) :-
-	 believes_not_words_ideas_objects( Subject, Time, [[Relation_Word1,
+	 disbelieves_words_ideas_objects( Subject, Time, [[Relation_Word1,
 							  Relation_Idea1,
 							  Relation1] |
 							 TripleList1]).
 
 believes_nand_words_ideas_objects( Subject, Time, [[Relation_Word1, Relation_Idea1, Relation1] | TripleList1],[[Relation_Word2, Relation_Idea2, Relation2] | TripleList2]) :-
-	 believes_not_words_ideas_objects( Subject, Time, [[Relation_Word2,
+	 disbelieves_words_ideas_objects( Subject, Time, [[Relation_Word2,
 							  Relation_Idea2,
 							  Relation2] |
 							 TripleList2]).

@@ -442,7 +442,7 @@ match_true_triple_word_idea_object_belief(Subject, Time,
 
 %% 1
 
-believes_true_not_words( Subject, Time, [[Relation_Word] | List]) :-
+disbelieves_true_words( Subject, Time, [[Relation_Word] | List]) :-
 	%% list of words
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
 	arity_idea( Relation_Idea, Arity),
@@ -451,11 +451,11 @@ believes_true_not_words( Subject, Time, [[Relation_Word] | List]) :-
 			  Arity, Type - 1, [Relation_Idea]).
 
 match_true_not_word_belief(Subject, Time, [], 0, Type, Idea_List) :-
-	believes_true_not_in_ideas( Subject, Time, Idea_List).
+	disbelieves_true_in_ideas( Subject, Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
 match_true_not_word_belief(Subject, Time, [], -999, Idea_List) :-
-	believes_true_not_in_ideas( Subject, Time, Idea_List).
+	disbelieves_true_in_ideas( Subject, Time, Idea_List).
 
 match_true_not_word_belief(Subject, Time,
 		  [[Word] | List],
@@ -475,18 +475,18 @@ match_true_not_word_belief(Subject, Time,
 
 %% 2
 
-%% believes_true_not_ideas -- which all others use
+%% disbelieves_true_ideas -- which all others use
 
-believes_true_not_in_ideas( Subject, Time, Idea_List) :-
+disbelieves_true_in_ideas( Subject, Time, Idea_List) :-
 	believes_not_in_ideas( Subject, Time, Idea_List),
-	believes_true_not_in_ideas2( Subject, Time, Idea_List).
+	disbelieves_true_in_ideas2( Subject, Time, Idea_List).
 
-believes_true_not_in_ideas2( Subject, Time, [Relation_Idea | Idea_List]) :-
+disbelieves_true_in_ideas2( Subject, Time, [Relation_Idea | Idea_List]) :-
 	number_idea(Relation_Idea, singular),
 	ssss2(Subject, Time, Relation_Idea, Relation),
 	match_true_not_ideas_objects(Subject, Time, Idea_List , [Relation]).
 
-believes_true_not_in_ideas2( Subject, Time, [Relation_Idea | Idea_List]) :-
+disbelieves_true_in_ideas2( Subject, Time, [Relation_Idea | Idea_List]) :-
 	number_idea(Relation_Idea, plural),
 	tttt(Subject, Time, Relation_Idea, Relation),
 	match_true_not_ideas_objects(Subject, Time, Idea_List , [Relation]).
@@ -509,7 +509,7 @@ match_true_not_ideas_objects(Subject, Time, [Idea | Idea_List], Object_List) :-
 
 %% 3
 
-believes_true_not_objects( Subject, Time, [[Relation] | List]) :-
+disbelieves_true_objects( Subject, Time, [[Relation] | List]) :-
 	%% list of idea object Pairs
 	number_idea(Relation_Idea, singular),
 	ssss2( Subject, Time, Relation_Idea, Relation),
@@ -519,7 +519,7 @@ believes_true_not_objects( Subject, Time, [[Relation] | List]) :-
 	match_true_not_object_belief(Subject, Time, List,
 			    Arity, Type - 1, [Relation_Idea]).
 
-believes_true_not_objects( Subject, Time, [[Relation] | List]) :-
+disbelieves_true_objects( Subject, Time, [[Relation] | List]) :-
 	%% list of idea object Pairs
 	number_idea(Relation_Idea, plural),
 	tttt( Subject, Time, Relation_Idea, Relation),
@@ -530,11 +530,11 @@ believes_true_not_objects( Subject, Time, [[Relation] | List]) :-
 			    Arity, Type - 1, [Relation_Idea]).
 
 match_true_not_object_belief(Subject, Time, [], 0, Type, Idea_List) :- 
-	believes_true_not_in_ideas( Subject, Time, Idea_List).
+	disbelieves_true_in_ideas( Subject, Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
 match_true_not_object_belief(Subject, Time, [], -999, Idea_List) :-
-	believes_true_not_in_ideas( Subject, Time, Idea_List).
+	disbelieves_true_in_ideas( Subject, Time, Idea_List).
 
 match_true_not_object_belief(Subject, Time,
 		    [[Object] | List],
@@ -570,7 +570,7 @@ match_true_not_object_belief(Subject, Time,
 
 %% 4
 
-believes_true_not_words_ideas( Subject, Time, [[Relation_Word, Relation_Idea] | PairList]) :-
+disbelieves_true_words_ideas( Subject, Time, [[Relation_Word, Relation_Idea] | PairList]) :-
 	%% list of word, idea pairs
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
 	number_idea(Relation_Idea, singular),
@@ -580,7 +580,7 @@ believes_true_not_words_ideas( Subject, Time, [[Relation_Word, Relation_Idea] | 
 	match_true_not_word_idea_belief(Subject, Time, PairList,
 			       Arity, Type - 1, [Relation_Idea]).
 
-believes_true_not_words_ideas( Subject, Time, [[Relation_Word, Relation_Idea] | PairList]) :-
+disbelieves_true_words_ideas( Subject, Time, [[Relation_Word, Relation_Idea] | PairList]) :-
 	%% list of word, idea pairs
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
 	number_idea(Relation_Idea, plural),
@@ -591,11 +591,11 @@ believes_true_not_words_ideas( Subject, Time, [[Relation_Word, Relation_Idea] | 
 			       Arity, Type - 1, [Relation_Idea]).
 
 match_true_not_word_idea_belief(Subject, Time, [], 0, Type, Idea_List) :-
-	believes_true_not_in_ideas( Subject, Time, Idea_List).
+	disbelieves_true_in_ideas( Subject, Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
 match_true_not_word_idea_belief(Subject, Time, [], -999, Idea_List) :-
-	believes_true_not_in_ideas( Subject, Time, Idea_List).
+	disbelieves_true_in_ideas( Subject, Time, Idea_List).
 
 match_true_not_word_idea_belief(Subject, Time,
 		       [[Word, Idea] | PairList],
@@ -615,7 +615,7 @@ match_true_not_word_idea_belief(Subject, Time,
 
 %% 5
 
-believes_true_not_words_objects( Subject, Time, [[Relation_Word, Relation] | Pair_List]) :-
+disbelieves_true_words_objects( Subject, Time, [[Relation_Word, Relation] | Pair_List]) :-
 	%% list of word, idea object pairs
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
 	number_idea(Relation_Idea, singular),
@@ -625,7 +625,7 @@ believes_true_not_words_objects( Subject, Time, [[Relation_Word, Relation] | Pai
 	match_true_not_word_object_belief(Subject, Time, Pair_List,
 			       Arity, Type - 1, [Relation_Idea]).
 
-believes_true_not_words_objects( Subject, Time, [[Relation_Word, Relation] | Pair_List]) :-
+disbelieves_true_words_objects( Subject, Time, [[Relation_Word, Relation] | Pair_List]) :-
 	%% list of word, idea object pairs
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
 	number_idea(Relation_Idea, plural),
@@ -636,11 +636,11 @@ believes_true_not_words_objects( Subject, Time, [[Relation_Word, Relation] | Pai
 			       Arity, Type - 1, [Relation_Idea]).
 
 match_true_not_word_object_belief(Subject, Time, [], 0, Type, Idea_List) :-
-	believes_true_not_in_ideas( Subject, Time, Idea_List).
+	disbelieves_true_in_ideas( Subject, Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
 match_true_not_word_object_belief(Subject, Time, [], -999, Idea_List) :-
-	believes_true_not_in_ideas( Subject, Time, Idea_List).
+	disbelieves_true_in_ideas( Subject, Time, Idea_List).
 
 match_true_not_word_object_belief(Subject, Time,
 			 [[Word, Object] | Pair_List],
@@ -678,7 +678,7 @@ match_true_not_word_object_belief(Subject, Time,
 
 %% 6
 
-believes_true_not_ideas_objects(Subject, Time, [[Relation_Idea, Relation] | PairList]) :-
+disbelieves_true_ideas_objects(Subject, Time, [[Relation_Idea, Relation] | PairList]) :-
 	%% list of word, idea object triples
 	number_idea(Relation_Idea, singular),
 	ssss2(Subject, Time, Relation_Idea, Relation),
@@ -687,7 +687,7 @@ believes_true_not_ideas_objects(Subject, Time, [[Relation_Idea, Relation] | Pair
 	match_true_not_idea_object_belief(Subject, Time, PairList,
 				 Arity, Type - 1, [Relation_Idea]).
 
-believes_true_not_ideas_objects(Subject, Time, [[Relation_Idea, Relation] | PairList]) :-
+disbelieves_true_ideas_objects(Subject, Time, [[Relation_Idea, Relation] | PairList]) :-
 	%% list of word, idea object triples
 	number_idea(Relation_Idea, plural),
 	tttt(Subject, Time, Relation_Idea, Relation),
@@ -697,12 +697,12 @@ believes_true_not_ideas_objects(Subject, Time, [[Relation_Idea, Relation] | Pair
 				 Arity, Type - 1, [Relation_Idea]).
 
 match_true_not_idea_object_belief(Subject, Time, [], 0, Type, Idea_List) :-
-	believes_true_not_in_ideas(Subject, Time, Idea_List).
+	disbelieves_true_in_ideas(Subject, Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
 match_true_not_idea_object_belief(Subject, Time, [], Arity, Idea_List) :-
 	Arity =:= -999,
-	believes_true_not_in_ideas(Subject, Time, Idea_List).
+	disbelieves_true_in_ideas(Subject, Time, Idea_List).
 
 match_true_not_idea_object_belief(Subject, Time,
 			 [[Idea, Object] | PairList],
@@ -740,7 +740,7 @@ match_true_not_idea_object_belief(Subject, Time,
 
 %% 7
 
-believes_true_not_words_ideas_objects( Subject, Time, [[Relation_Word, Relation_Idea, Relation] | TripleList]) :-
+disbelieves_true_words_ideas_objects( Subject, Time, [[Relation_Word, Relation_Idea, Relation] | TripleList]) :-
 	%% list of word, idea object triples
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
 	number_idea(Relation_Idea, singular),
@@ -750,7 +750,7 @@ believes_true_not_words_ideas_objects( Subject, Time, [[Relation_Word, Relation_
 	match_true_not_triple_word_idea_object_belief(Subject, Time, TripleList,
 					     Arity, Type - 1, [Relation_Idea]).
 
-believes_true_not_words_ideas_objects( Subject, Time, [[Relation_Word, Relation_Idea, Relation] | TripleList]) :-
+disbelieves_true_words_ideas_objects( Subject, Time, [[Relation_Word, Relation_Idea, Relation] | TripleList]) :-
 	%% list of word, idea object triples
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
 	number_idea(Relation_Idea, plural),
@@ -761,11 +761,11 @@ believes_true_not_words_ideas_objects( Subject, Time, [[Relation_Word, Relation_
 					     Arity, Type - 1, [Relation_Idea]).
 
 match_true_not_triple_word_idea_object_belief(Subject, Time, [], 0, Type, Idea_List) :-
-	believes_true_not_in_ideas( Subject, Time, Idea_List).
+	disbelieves_true_in_ideas( Subject, Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
 match_true_not_triple_word_idea_object_belief(Subject, Time, [], -999, Idea_List) :-
-	believes_true_not_in_ideas( Subject, Time, Idea_List).
+	disbelieves_true_in_ideas( Subject, Time, Idea_List).
 
 match_true_not_triple_word_idea_object_belief(Subject, Time,
 				     [[Word, Idea, Object] | TripleList],
@@ -820,35 +820,35 @@ match_true_not_triple_word_idea_object_belief(Subject, Time,
 %% 1
 contradicts_true_words( Subject, Time, List) :-
 	believes_true_words( Subject, Time, List),
-	believes_true_not_words( Subject, Time, List).
+	disbelieves_true_words( Subject, Time, List).
 
 %% 2
 contradicts_true_ideas( Subject, Time, List) :-
 	believes_true_in_ideas( Subject, Time, List),
-	believes_true_not_in_ideas( Subject, Time, List).
+	disbelieves_true_in_ideas( Subject, Time, List).
 
 %% 3
 contradicts_true_objects( Subject, Time, List) :-
 	believes_true_objects( Subject, Time, List),
-	believes_true_not_objects( Subject, Time, List).
+	disbelieves_true_objects( Subject, Time, List).
 
 %% 4
 contradicts_true_words_ideas( Subject, Time, Pair_List) :-
 	believes_true_words_ideas( Subject, Time, Pair_List),
-	believes_true_not_words_ideas( Subject, Time, Pair_List).
+	disbelieves_true_words_ideas( Subject, Time, Pair_List).
 
 %% 5
 contradicts_true_words_objects( Subject, Time, Pair_List) :-
 	believes_true_words_objects( Subject, Time, Pair_List),
-	believes_true_not_words_objects( Subject, Time, Pair_List).
+	disbelieves_true_words_objects( Subject, Time, Pair_List).
 
 %% 6
 contradicts_true_ideas_objects( Subject, Time, Pair_List) :-
 	believes_true_ideas_objects( Subject, Time, Pair_List),
-	believes_true_not_ideas_objects( Subject, Time, Pair_List).
+	disbelieves_true_ideas_objects( Subject, Time, Pair_List).
 
 %% 7
 contradicts_true_words_ideas_objects( Subject, Time, Triple_List) :-
 	believes_true_words_ideas_objects( Subject, Time, Triple_List),
-	believes_true_not_words_ideas_objects( Subject, Time, Triple_List).
+	disbelieves_true_words_ideas_objects( Subject, Time, Triple_List).
 

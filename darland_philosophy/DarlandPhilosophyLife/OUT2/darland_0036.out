@@ -14,7 +14,7 @@
 *** Yes
 
 *** Yes
-Fri 19 Feb 2021 05:00:04 PM CST
+Wed 24 Feb 2021 07:41:22 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
@@ -72,8 +72,8 @@ Neither tom nor quine understand [[denounced_word,denounced],[tully_word,tully],
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61378 Seconds
-CPU Time 0 Milliseconds
+Clock Time 1.61422 Seconds
+CPU Time 16.6667 Milliseconds
 
 *** Yes
 Ignore = @.

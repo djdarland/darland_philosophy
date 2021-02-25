@@ -16,7 +16,7 @@
 *** Yes
 
 *** Yes
-Fri 19 Feb 2021 05:00:43 PM CST
+Wed 24 Feb 2021 07:42:30 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
@@ -514,8 +514,8 @@ X = catiline.
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61378 Seconds
-CPU Time 0 Milliseconds
+Clock Time 1.61422 Seconds
+CPU Time 16.6667 Milliseconds
 
 *** Yes
 Ignore = @.
