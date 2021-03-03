@@ -1,0 +1,81 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Sun 28 Feb 2021 07:38:34 PM CST
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> %% I indicate for each query whether the immediate response should be
+> %% TRUE = Yes or FALSE = No
+> 
+> %% There may be subsequient No responses - as I may have asked for additional answers with semicolons.
+> 
+> %% Next should be FALSE
+> 
+> qqqq6([nand, [denounced, cicero, catiline], [denounced, cicero, catiline]])?
+
+*** No
+> 
+> %% Next should be TRUE
+> 
+> qqqq6([nand, [denounced, cicero, catiline], [roman, russell]])?
+
+*** Yes
+--1> 
+
+*** No
+> qqqq6([nand, [nand, [denounced, cicero, catiline], [roman, russell]], [american, russell]])?
+
+*** Yes
+--1> 	
+
+*** No
+> qqqq6([nand, [nand, [denounced, cicero, catiline], [roman, russell]], [american, russell]])?
+
+*** Yes
+--1> 
+
+*** No
+> qqqq6([nand, [[denounced, cicero, catiline]], [nand, [roman, russell], [american, russell]]])?
+
+*** No
+> 	
+> qqqq6([nand, [nand, [denounced, cicero, catiline], [roman, russell]], [american, russell]])?
+
+*** Yes
+--1> 
+
+*** No
+> %%%%%%%%%%%%%%%%%%%%
+> 
+> qqqq6([nand, [nand, [roman, russell], [nand, [denounced, cicero, catiline], [roman, russell]], [american, russell]]])?
+
+*** No
+> 
+> qqqq6([nand, [nand, [P1, O1], [nand, [P2, O2, O3], [P3, O4]], [P4, O5]]])?
+
+*** No
+> 
+> qqqq6([nand, [nand, [denouced, X, Y], [roman, Z]], [american, Z]])?
+
+*** Yes
+X = @, Y = @, Z = russell.
+--1> 	
+
+*** No
+> halt?
+

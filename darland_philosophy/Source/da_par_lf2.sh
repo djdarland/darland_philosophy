@@ -22,41 +22,23 @@ do
 echo "-----------"
 echo "Philosophy Input Files"
 echo "-----------"
-echo "0 thru 26 are OUT OF DATE"
-echo "0 Test append.lf (introductory remarks & echo some data)"
-echo "55 Test darland_0000.lf (introductory remarks & echo some data)"
-echo "1 Test darland_0001.lf (introductory remarks & Quine example)"
-echo "2 Test darland_0002.lf (understanding)"
-echo "3 Test darland_0003.lf (believing)"
-echo "4 Test darland_0004.lf (understanding about understanding)"
-echo "5 Test darland_0005.lf (beliefs about understanding and believing)"
-echo "6 Test darland_0006.lf (propositions)"
-echo "7 Test darland_0007.lf (truth)"
-echo "8 Test darland_0008.lf (opacity)"
-echo "9 Test darland_0009.lf (intensionality & extensionality)"
-echo "10 Test darland_0010.lf (philosophical quotes & terminology)"
-echo "NOTE: 21 thru 28 use Mini Universe facts_0000.lf"
-echo "21 Test darland_0021.lf Examples for understanding queries"
-echo "22 Test darland_0022.lf Examples for belief queries"
-echo "23 Test darland_0023.lf Examples for opacity"
-echo "24 Test darland_0024.lf Examples for true belief"
-echo "25 Test darland_0025.lf Examples for multiple testing (not finished)"
-echo "26 Test darland_0026.lf Examples with for agreement (not finished)"
-echo "Note: 27 uses Mini Universe facts_0006.lf"
-echo "27 Test darland_0027.lf Examples for definite descriptions and classes"
-echo "28 Test darland_0028.lf Examples for practice with Life apply"
 echo "NOTE: 31 forward are the current theory - still under development"
 echo "31 Test darland_0031.lf Some examples understanding & number"
 echo "32 Test darland_0032.lf Some examples belief & number"
 echo "33 Test darland_0033.lf Some examples true belief & number"
-echo "34 Test darland_0034.lf Some examples opacity & number"
+echo "34 Test darland_0034.lf Some examples opacity, agnosticism & number"
 echo "35 Test darland_0035.lf Some examples multi test & number"
 echo "36 Test darland_0036.lf Some examples agreement & number"
 echo "37 Test darland_0037.lf Some examples essentially singular terms"
 echo "38 Test darland_0038.lf Some examples plural terms"
 echo "39 Test darland_0039.lf Some examples contingently singular terms"
 echo "40 Test darland_0040.lf Some examples singular terms"
-echo "41 Test darland_0041.lf Some examples NAND"
+echo "41 Test darland_0041.lf Some examples for NAND Belief"
+echo "42 Test darland_0042.lf Some examples for TRUE NAND Belief"
+echo "61 Test darland_0061.lf Some examples PM Truth Functions"
+echo "62 Test darland_0062.lf Some examples Satisfiability"
+echo "63 Test darland_0063.lf Some examples Satisfiability with Statistics"
+echo "64 Test darland_0064.lf Some examples Modified Satisfiability"
 echo "-----------"
 if test -f da_par_lf2.sh
 then
@@ -97,6 +79,11 @@ case $select in
 39) echo "Testing 0039"; cd ../*Life; ./work2.sh "darland_0039";;
 40) echo "Testing 0040"; cd ../*Life; ./work2.sh "darland_0040";;
 41) echo "Testing 0041"; cd ../*Life; ./work2.sh "darland_0041";;
+42) echo "Testing 0042"; cd ../*Life; ./work2.sh "darland_0042";;
+61) echo "Testing 0061"; cd ../*Life; ./work2.sh "darland_0061";;
+62) echo "Testing 0062"; cd ../*Life; ./work2.sh "darland_0062";;
+63) echo "Testing 0063"; cd ../*Life; ./work2.sh "darland_0063";;
+64) echo "Testing 0064"; cd ../*Life; ./work2.sh "darland_0064";;
 56) echo "Testing 0000"; cd ../*Life; ./work2.sh "darland_0000";;
 666) $EDITOR da_par_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;

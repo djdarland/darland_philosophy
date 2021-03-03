@@ -358,8 +358,6 @@ qqqq(function_plural_word, tom, now, dolphin_word, human_class_word)?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
-%% This # 6 is not working correctly
-%% I have not figured out the problem
 
 %% TRUE
 qqqq(function_plural_idea, tom, now, tom_human_idea, quine_human_class_idea)?
@@ -373,8 +371,6 @@ qqqq(function_plural_idea, tom, now, tom_dolphin_idea, quine_human_class_idea)?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
-%% This # 7 is not working correctly
-%% I have spent all my time on # 6
 %% TRUE
 
 qqqq(function_plural_word_idea, tom, now, human_word, human_class_word,

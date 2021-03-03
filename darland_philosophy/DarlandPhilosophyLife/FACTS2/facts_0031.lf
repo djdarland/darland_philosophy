@@ -275,7 +275,7 @@ qqqq5([roman, russell]).
 
 qqqq5([denounced, quine, catiline]).
 
-%% was a function for expetimenting
+%% was a function for experimenting
 %% denounced(cicero, catiline) -> true.
 qqqq4([dolphin, flipper]).
 qqqq4([human, cicero]).

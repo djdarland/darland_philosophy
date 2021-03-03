@@ -22,9 +22,15 @@
 %%
 %%
 
-%%    There is one primitive sort of belief - in ideas
+%%    There are only two soets of primitive sort of belief - in ideas
 
 %%    believes_in_ideas( Subject, Time,
+%%		      [Relation_Idea,
+%%		      A_Idea,
+%%		      B_Idea,
+%%		      C_Idea, ... ])
+
+%%    disbelieves_in_ideas( Subject, Time,
 %%		      [Relation_Idea,
 %%		      A_Idea,
 %%		      B_Idea,
@@ -478,7 +484,7 @@ match_true_not_word_belief(Subject, Time,
 %% disbelieves_true_ideas -- which all others use
 
 disbelieves_true_in_ideas( Subject, Time, Idea_List) :-
-	believes_not_in_ideas( Subject, Time, Idea_List),
+	disbelieves_in_ideas( Subject, Time, Idea_List),
 	disbelieves_true_in_ideas2( Subject, Time, Idea_List).
 
 disbelieves_true_in_ideas2( Subject, Time, [Relation_Idea | Idea_List]) :-

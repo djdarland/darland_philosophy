@@ -92,54 +92,44 @@ write_time(Ignore)?
 
 %% 
 %% 1
-%% only guarantees word & idea exist
-%% TRUE
-
-qqqq(exists_contingently_singular_word, tom, now, dolphin_class_word)? 
+%% NA
 
 %% 2
-%% only quarantees contingently_singular idea exists 
-
-%% TRUE
-qqqq(exists_contingently_singular_idea, tom, now, tom_dolphin_class_idea)?
+%% NA
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
 %% 3
 %% Guarantees Object with Idea exists
 
-%% TRUE
-qqqq(exists_contingently_singular_object, tom, now, cicero)?
+%% ASK
+qqqq(exists_contingently_singular_object, tom, now, O)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 4
-%% guarantees word and idea
+%% NA
 
-%% TRUE
-qqqq(exists_contingently_singular_word_idea, tom, now, cicero_word, tom_cicero_idea)?
-	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5
 %% guarantees word & object
 
 %% TRUE
-qqqq(exists_contingently_singular_word_object, tom, now, cicero_word, cicero)?
+qqqq(exists_contingently_singular_word_object, tom, now, W, O)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
 %% TRUE
-qqqq(exists_contingently_singular_idea_object, tom, now, tom_cicero_idea, cicero)?
+qqqq(exists_contingently_singular_idea_object, tom, now, I, O)?
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %%
 
 %% TRUE
-qqqq(exists_contingently_singular_word_idea_object, tom, now, cicero_word, tom_cicero_idea,
-				 cicero)?
+qqqq(exists_contingently_singular_word_idea_object, tom, now, W, I, O)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now equality -- only applies with object specified
@@ -155,7 +145,7 @@ qqqq(exists_contingently_singular_word_idea_object, tom, now, cicero_word, tom_c
 %% Guarantees Object with Idea exists
 
 %% TRUE
-qqqq(equal_contingently_singular_objects, tom, now, cicero, cicero)?
+qqqq(equal_contingently_singular_objects, tom, now, O1, O2)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -167,25 +157,26 @@ qqqq(equal_contingently_singular_objects, tom, now, cicero, cicero)?
 %% guarantees word & object
 
 %% TRUE
-qqqq(equal_contingently_singular_words_objects, quine, now, cicero_word, tully_word,
-			     cicero, cicero)?
+qqqq(equal_contingently_singular_words_objects, quine, now, W1, W2,
+			     O1, O2)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
 %% TRUE
-qqqq(equal_contingently_singular_ideas_objects, quine, now, quine_cicero_idea, quine_tully_idea,
-			      cicero, cicero)?
+qqqq(equal_contingently_singular_ideas_objects, quine, now, I1, I2,
+			      O1, O2)?
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %%
 %% TRUE
-qqqq(equal_contingently_singular_words_ideas_objects, quine, now, cicero_word, tully_word,
-				   quine_cicero_idea, quine_tully_idea,
-				   cicero, cicero)?
-
+qqqq(equal_contingently_singular_words_ideas_objects, quine, now, W1, W2,
+				   I1, I2,
+				   O1, O2)?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FUNCTIONS are NOT working yet
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now functions -- only applies with object specified
 %% 1
@@ -200,7 +191,7 @@ qqqq(equal_contingently_singular_words_ideas_objects, quine, now, cicero_word, t
 %% Guarantees Object exists
 
 %% TRUE
-qqqq(function_contingently_singular_object, tom, now, roman, catiline)?
+qqqq(function_contingently_singular_object, tom, now, F, O)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -212,23 +203,23 @@ qqqq(function_contingently_singular_object, tom, now, roman, catiline)?
 %% guarantees word & object
 
 %% TRUE
-qqqq(function_contingently_singular_word_object, tom, now, roman_word, catiline_word, catiline)?
+qqqq(function_contingently_singular_word_object, tom, now, F, W, O)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
 %% TRUE
-qqqq(function_contingently_singular_idea_object, tom, now, roman_word, tom_catiline_idea,
-			     catiline)?
+qqqq(function_contingently_singular_idea_object, tom, now, F, I, O)?
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %%
 %% TRUE
 qqqq(function_contingently_singular_word_idea_object, tom, now,
-				   roman_word, catiline_word,
-				   tom_catiline_idea, catiline)?
+     F,
+     W,
+     I, O)?
 
 write_stats(Ignore)?
 

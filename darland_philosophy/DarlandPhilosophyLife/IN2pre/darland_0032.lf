@@ -102,6 +102,8 @@ qqqq(believes_words, tom, now,
       [cicero_word],
       [catiline_word]])?
 
+%% Next should be TRUE
+
 qqqq(believes_words, tom, now,
      [[roman_word],
       [catiline_word]])?

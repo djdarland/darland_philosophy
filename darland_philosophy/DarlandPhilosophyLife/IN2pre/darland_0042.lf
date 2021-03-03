@@ -3,7 +3,7 @@
 load("RULES2/life_0001.lf")?
 load("FACTS2/facts_0031.lf")?
 load("RULES2/rules_0031.lf")?
-load("RULES2/rules_0041.lf")?  %% USE NAND
+load("RULES2/rules_0032.lf")?
 load("RULES2/rules_0042.lf")?  %% USE NAND
 load("RULES2/rules_0043.lf")?  %% USE NAND
 
@@ -89,7 +89,7 @@ write_time(Ignore)?
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% BELIEF
+%%% TRUE BELIEF
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Checks on True Belief follow.
@@ -104,49 +104,48 @@ write_time(Ignore)?
 
 %% Next should be TRUE
 
-believes_in_ideas4( tom, now,
+qqqq(believes_true_in_ideas, tom, now,
      [top, [tom_denounced_idea,
       tom_cicero_idea,
       tom_catiline_idea]])?
 
 %% Next should be TRUE
 
-believes_in_ideas4( tom, now,
+qqqq(believes_true_in_ideas, tom, now,
      [top, [tom_roman_idea,
       tom_catiline_idea]])?
 
+%% Next should be FALSE - I have tom believing it but it is false
 
-%% Next should be TRUE - I have tom believing it although it is false
-
-believes_in_ideas4( tom, now,
+qqqq(believes_true_in_ideas, tom, now,
      [top, [tom_denounced_idea,
       tom_quine_idea,
       tom_catiline_idea]])?
 
 %% Next should be FALSE -- not a belief
 
-believes_in_ideas4( tom, now,
+qqqq(believes_true_in_ideas, tom, now,
      [top, [tom_denounced_idea,
       tom_tully_idea,
       tom_catiline_idea]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_in_ideas4( tom, now,
+qqqq(believes_true_in_ideas, tom, now,
      [top, [tom_tully_idea,
       tom_tully_idea,
       tom_catiline_idea]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_in_ideas4( tom, now,
+qqqq(believes_true_in_ideas, tom, now,
      [top, [tom_denounced_idea,
       tom_tully_idea,
       tom_denounced_idea]])?
 
 %% Next should be FALSE -- wrong arity
 
-believes_in_ideas4( tom, now,
+qqqq(believes_true_in_ideas, tom, now,
      [top, [tom_denounced_idea,
 	    tom_cicero_idea]])?
 
@@ -154,7 +153,7 @@ believes_in_ideas4( tom, now,
 
 %% Next should be FALSE -- BOTH TRUE
 
-believes_in_ideas4( tom, now,
+qqqq(believes_true_in_ideas, tom, now,
      [nand,
       [tom_denounced_idea,
       tom_cicero_idea,
@@ -165,7 +164,7 @@ believes_in_ideas4( tom, now,
 
 %% Next should be TRUE -- USED FALSE above as SECOND
 
-believes_in_ideas4( tom, now,
+qqqq(believes_true_in_ideas, tom, now,
      [nand,
       [tom_denounced_idea,
       tom_cicero_idea,
@@ -184,14 +183,14 @@ believes_in_ideas4( tom, now,
 
 %% Next should be TRUE
 
-believes_words( tom, now, [top, 
+qqqq(believes_true_words, tom, now, [top, 
      [[denounced_word],
       [cicero_word],
       [catiline_word]]])?
 
 %% Next should be FALSE
 
-believes_words( tom, now, [nand, 
+qqqq(believes_true_words, tom, now, [nand, 
      [[denounced_word],
       [cicero_word],
       [catiline_word]],
@@ -201,41 +200,41 @@ believes_words( tom, now, [nand,
 
 %% Next should be TRUE
 
-believes_words( tom, now, [top, 
+qqqq(believes_true_words, tom, now, [top, 
      [[roman_word],
       [catiline_word]]])?
 
 %% Next should be FALSE - I have tom believing it but it is FALSE
 
-believes_words( tom, now, [top, 
+qqqq(believes_true_words, tom, now, [top, 
      [[denounced_word],
       [quine_word],
       [catiline_word]]])?
 
 %% Next should be FALSE
 
-believes_words( tom, now, [top, 
+qqqq(believes_true_words, tom, now, [top, 
      [[denounced_word],
       [tully_word],
       [catiline_word]]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_words( tom, now, [top, 
+qqqq(believes_true_words, tom, now, [top, 
      [[tully_word],
       [tully_word],
       [catiline_word]]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_words( tom, now, [top,
+qqqq(believes_true_words, tom, now, [top,
      [[denounced_word],
       [tully_word],
       [denounced_word]]])?
 
 %% Next should be FALSE -- wrong arity
 
-believes_words( tom, now, [top,
+qqqq(believes_true_words, tom, now, [top,
      [[denounced_word],
       [cicero_word]]])?
 
@@ -243,7 +242,7 @@ believes_words( tom, now, [top,
 
 %% Next should be FALSE -- BOTH TRUE
 
-believes_words( tom, now,
+qqqq(believes_true_words, tom, now,
      [nand,
       [[denounced_word],
       [cicero_word],
@@ -254,7 +253,7 @@ believes_words( tom, now,
 
 %% Next should be TRUE -- USED FALSE above as SECOND
 
-believes_words( tom, now,
+qqqq(believes_true_words, tom, now,
      [nand,
       [[denounced_word],
       [cicero_word],
@@ -273,48 +272,48 @@ believes_words( tom, now,
 
 %% Next should be TRUE
 
-believes_objects( tom, now,
+qqqq(believes_true_objects, tom, now,
      [top, [[denounced],
       [cicero],
       [catiline]]])?
 
 %% Next should be TRUE
 
-believes_objects( tom, now,
+qqqq(believes_true_objects, tom, now,
      [top, [[roman],
       [catiline]]])?
 
 %% Next should be FALSE - I have tom believing it but it is FALSE
 
-believes_objects( tom, now,
+qqqq(believes_true_objects, tom, now,
      [top, [[denounced],
       [quine],
       [catiline]]])?
 
 %% Next should be FALSE -- there is no (separate) object tully
 
-believes_objects( tom, now,
+qqqq(believes_true_objects, tom, now,
      [top, [[denounced],
       [tully],
       [catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_objects( tom, now,
+qqqq(believes_true_objects, tom, now,
      [top, [[tully],
       [tully],
       [catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_objects( tom, now,
+qqqq(believes_true_objects, tom, now,
      [top, [[denounced],
       [tully],
       [denounced]]])?
 
 %% Next should be FALSE -- wrong arity
 
-believes_objects( tom, now,
+qqqq(believes_true_objects, tom, now,
      [top, [[denounced],
       [cicero]]])?
 
@@ -322,7 +321,7 @@ believes_objects( tom, now,
 %% now nand
 %% Next should be FALSE -- BOTH TRUE
 
-believes_objects( tom, now,
+qqqq(believes_true_objects, tom, now,
      [nand, 
       [[denounced],
        [cicero],
@@ -333,7 +332,7 @@ believes_objects( tom, now,
 
 %% Next should be TRUE - SECOND FALSE
 
-believes_objects( tom, now,
+qqqq(believes_true_objects, tom, now,
      [nand, 
       [[denounced],
        [cicero],
@@ -352,54 +351,54 @@ believes_objects( tom, now,
 
 %% Next should be TRUE
 
-believes_words_ideas( tom, now,
+qqqq(believes_true_words_ideas, tom, now,
      [top, [[roman_word, tom_roman_idea],
       [catiline_word, tom_catiline_idea]]])?
 
 %% Next should be FALSE - I have tom believing it but it as false
 
-believes_words_ideas( tom, now,
+qqqq(believes_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [quine_word, tom_quine_idea],
       [catiline_word, tom_catiline_idea]]])?
 
 %% Next should be FALSE -- not a belief
 
-believes_words_ideas( tom, now,
+qqqq(believes_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [tully_word, tom_tully_idea],
       [catiline_word, tom_catiline_idea]]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_words_ideas( tom, now,
+qqqq(believes_true_words_ideas, tom, now,
      [top, [[tully_word, tom_tully_idea],
       [tully_word, tom_tully_idea],
       [catiline_word, tom_catiline_idea]]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_words_ideas( tom, now,
+qqqq(believes_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [tully_word, tom_tully_word],
       [denounced_word, tom_denounced_idea]]])?
 
 %% Next should be FALSE -- wrong arity
 
-believes_words_ideas( tom, now,
+qqqq(believes_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [cicero_word, tom_cicero_idea]]])?
 
 %% Next should be FALSE -- wrong rrrr relation for tully_word
 
-believes_words_ideas( tom, now,
+qqqq(believes_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [tully_word, tom_cicero_idea],
       [catiline_word, tom_catiline_idea]]])?
 
 %% Next should be FALSE -- wrong rrrr relation for cicero_word
 
-believes_words_ideas( tom, now,
+qqqq(believes_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [cicero_word, tom_tully_idea],
       [catiline_word, tom_catiline_idea]]])?
@@ -408,7 +407,7 @@ believes_words_ideas( tom, now,
 %% now nand
 %% Next should be FALSE -- BOTH TRUE
 
-believes_words_ideas( tom, now,
+qqqq(believes_true_words_ideas, tom, now,
      [nand, 
       [[denounced_word, tom_denounced_idea],
        [cicero_word, tom_cicero_idea],
@@ -419,7 +418,7 @@ believes_words_ideas( tom, now,
 
 %% Next should be TRUE - SECOND FALSE
 
-believes_words_ideas( tom, now,
+qqqq(believes_true_words_ideas, tom, now,
      [nand, 
       [[denounced_word, tom_denounced_idea],
        [cicero_word, tom_cicero_idea],
@@ -439,48 +438,48 @@ believes_words_ideas( tom, now,
 
 %% Next should be TRUE
 
-believes_words_objects( tom, now,
+qqqq(believes_true_words_objects, tom, now,
      [top, [[denounced_word, denounced],
       [cicero_word, cicero],
       [catiline_word, catiline]]])?
 
 %% Next should be TRUE
 
-believes_words_objects( tom, now,
+qqqq(believes_true_words_objects, tom, now,
      [top, [[roman_word, roman],
       [catiline_word, catiline]]])?
 
 %% Next should be FALSE - tom believes - but it is FALSE
 
-believes_words_objects( tom, now,
+qqqq(believes_true_words_objects, tom, now,
      [top, [[denounced_word, denounced],
       [quine_word, quine],
       [catiline_word, catiline]]])?
 
 %% Next should be FALSE -- not a belief
 
-believes_words_objects( tom, now,
+qqqq(believes_true_words_objects, tom, now,
      [top,[[denounced_word, denounced],
       [tully_word, cicero],
       [catiline_word, catiline]]])?
 
 %% Next should be FALSE -- wrong type  HEREHERE
 
-believes_words_objects( tom, now,
+qqqq(believes_true_words_objects, tom, now,
      [top, [[tully_word, tully],
       [tully_word, tully],
       [catiline_word, catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_words_objects( tom, now,
+qqqq(believes_true_words_objects, tom, now,
      [top, [[denounced_word, denounced],
       [tully_word, tully],
       [denounced_word, denounced]]])?
 
 %% Next should be FALSE -- wrong arity
 
-believes_words_objects( tom, now,
+qqqq(believes_true_words_objects, tom, now,
      [top, [[denounced_word, denounced],
       [cicero_word, cicero]]])?
 
@@ -488,7 +487,7 @@ believes_words_objects( tom, now,
 %% now nand
 %% Next should be FALSE -- BOTH TRUE
 
-believes_words_objects( tom, now,
+qqqq(believes_true_words_objects, tom, now,
      [nand, 
       [[denounced_word, denounced],
        [cicero_word, cicero],
@@ -499,7 +498,7 @@ believes_words_objects( tom, now,
 
 %% Next should be TRUE - SECOND FALSE
 
-believes_words_objects( tom, now,
+qqqq(believes_true_words_objects, tom, now,
      [nand, 
       [[denounced_word, denounced],
        [cicero_word, cicero],
@@ -518,48 +517,48 @@ believes_words_objects( tom, now,
 
 %% Next should be TRUE
 
-believes_ideas_objects( tom, now,
+qqqq(believes_true_ideas_objects, tom, now,
      [top, [[tom_denounced_idea, denounced],
       [tom_cicero_idea, cicero],
       [tom_catiline_idea, catiline]]])?
 
 %% Next should be TRUE
 
-believes_ideas_objects( tom, now,
+qqqq(believes_true_ideas_objects, tom, now,
      [top, [[tom_roman_idea, roman],
       [tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE
 
-believes_ideas_objects( tom, now,
+qqqq(believes_true_ideas_objects, tom, now,
      [top, [[tom_denounced_idea, denounced],
       [tom_quine_idea, quine],
       [tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- not a belief
 
-believes_ideas_objects( tom, now,
+qqqq(believes_true_ideas_objects, tom, now,
      [top, [[tom_denounced_idea, denounced],
       [tom_tully_idea, cicero],
       [tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_ideas_objects( tom, now,
+qqqq(believes_true_ideas_objects, tom, now,
      [top, [[tom_tully_idea, tully],
       [tom_tully_idea, tully],
       [tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_ideas_objects( tom, now,
+qqqq(believes_true_ideas_objects, tom, now,
      [top, [[tom_denounced_idea, denounced],
       [tom_tully_idea, tully],
       [tom_denounced_idea, denounced]]])?
 
 %% Next should be FALSE -- wrong arity
 
-believes_ideas_objects( tom, now,
+qqqq(believes_true_ideas_objects, tom, now,
      [top, [[tom_denounced_idea, denounced],
       [tom_cicero_idea, cicero]]])?
 
@@ -567,7 +566,7 @@ believes_ideas_objects( tom, now,
 %% now nand
 %% Next should be FALSE -- BOTH TRUE
 
-believes_ideas_objects( tom, now,
+qqqq(believes_true_ideas_objects, tom, now,
      [nand, 
       [[tom_denounced_idea, denounced],
        [tom_cicero_idea, cicero],
@@ -578,7 +577,7 @@ believes_ideas_objects( tom, now,
 
 %% Next should be TRUE - SECOND FALSE
 
-believes_words_objects( tom, now,
+qqqq(believes_true_words_objects, tom, now,
      [nand, 
       [[tom_denounced_idea, denounced],
        [tom_cicero_idea, cicero],
@@ -597,61 +596,61 @@ believes_words_objects( tom, now,
 
 %% Next should be TRUE
 
-believes_words_ideas_objects( tom, now,
+qqqq(believes_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [cicero_word, tom_cicero_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]]])?
 
 %% Next should be TRUE
 
-believes_words_ideas_objects( tom, now,
+qqqq(believes_true_words_ideas_objects, tom, now,
      [top, [[roman_word, tom_roman_idea, roman],
       [catiline_word, tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE - tom believes but it is FALSE
 
-believes_words_ideas_objects( tom, now,
+qqqq(believes_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [quine_word, tom_quine_idea, quine],
       [catiline_word, tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- not believed
 
-believes_words_ideas_objects( tom, now,
+qqqq(believes_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [tully_word, tom_tully_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_words_ideas_objects( tom, now,
+qqqq(believes_true_words_ideas_objects, tom, now,
      [top, [[tully_word, tom_tully_idea, cicero],
       [tully_word, tom_tully_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-believes_words_ideas_objects( tom, now,
+qqqq(believes_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [tully_word, tom_tully_word, cicero],
       [denounced_word, tom_denounced_idea, denounced]]])?
 
 %% Next should be FALSE -- wrong arity
 
-believes_words_ideas_objects( tom, now,
+qqqq(believes_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [cicero_word, tom_cicero_idea]]])?
 
 %% Next should be FALSE -- wrong rrrr relation for tully_word
 
-believes_words_ideas_objects( tom, now,
+qqqq(believes_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [tully_word, tom_cicero_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- wrong rrrr relation for cicero_word
 
-believes_words_ideas_objects( tom, now,
+qqqq(believes_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [cicero_word, tom_tully_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]]])?
@@ -660,7 +659,7 @@ believes_words_ideas_objects( tom, now,
 %% now nand
 %% Next should be FALSE -- BOTH TRUE
 
-believes_words_ideas_objects( tom, now,
+qqqq(believes_true_words_ideas_objects, tom, now,
      [nand, 
       [[denounced_word, tom_denounced_idea, denounced],
        [cicero_word, tom_cicero_idea, cicero],
@@ -671,7 +670,7 @@ believes_words_ideas_objects( tom, now,
 
 %% Next should be TRUE - SECOND FALSE
 
-believes_words_ideas_objects( tom, now,
+qqqq(believes_true_words_ideas_objects, tom, now,
      [nand, 
       [[denounced_word, tom_denounced_idea, denounced],
        [cicero_word, tom_cicero_idea, cicero],
@@ -688,7 +687,7 @@ believes_words_ideas_objects( tom, now,
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% DISBELIEF
+%%% TRUE DISBELIEF
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Checks on Disbelief follow.
@@ -699,14 +698,14 @@ believes_words_ideas_objects( tom, now,
 
 %% Next should be TRUE -- tom does believes false - and it is FALSE
 
-disbelieves_in_ideas4( tom, now,
+qqqq(disbelieves_true_in_ideas, tom, now,
      [top, [tom_denounced_idea,
       tom_russell_idea,
       tom_catiline_idea]])?
 
 %% Next should be TRUE - tom believes it is NOT TRUE and it is NOT TRUE
 
-disbelieves_words( tom, now,
+qqqq(disbelieves_true_words, tom, now,
      [top, [[denounced_word],
       [russell_word],
       [catiline_word]]])?
@@ -714,47 +713,47 @@ disbelieves_words( tom, now,
 
 %% Next should be FALSE
 
-disbelieves_words( tom, now,
+qqqq(disbelieves_true_words, tom, now,
      [top, [[denounced_word],
       [cicero_word],
       [catiline_word]]])?
 
 %% Next should be FALSE
 
-disbelieves_words( tom, now,
+qqqq(disbelieves_true_words, tom, now,
      [top, [[roman_word],
       [catiline_word]]])?
 
 %% Next should be TRUE - tom believes it is NOT TRUE and it is NOT TRUE
 
-disbelieves_words( tom, now,
+qqqq(disbelieves_true_words, tom, now,
      [top, [[roman_word],
       [russell_word]]])?
 
 %% Next should be FALSE
 
-disbelieves_words( tom, now,
+qqqq(disbelieves_true_words, tom, now,
      [top, [[denounced_word],
       [tully_word],
       [catiline_word]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_words( tom, now,
+qqqq(disbelieves_true_words, tom, now,
      [top, [[tully_word],
       [tully_word],
       [catiline_word]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_words( tom, now,
+qqqq(disbelieves_true_words, tom, now,
      [top, [[denounced_word],
       [tully_word],
       [denounced_word]]])?
 
 %% Next should be FALSE -- wrong arity
 
-disbelieves_words( tom, now,
+qqqq(disbelieves_true_words, tom, now,
      [top, [[denounced_word],
       [cicero_word]]])?
 
@@ -766,57 +765,59 @@ disbelieves_words( tom, now,
 
 %% Next should be FALSE - tom does not believe false
 
-disbelieves_in_ideas4( tom, now,
+qqqq(disbelieves_true_in_ideas, tom, now,
      [top, [tom_denounced_idea,
       tom_cicero_idea,
       tom_catiline_idea]])?
 
 %% Next should be FALSE -- tom believes FALSE - but it is not FALSE
 
-disbelieves_in_ideas4( tom, now,
+qqqq(disbelieves_true_in_ideas, tom, now,
      [top, [tom_denounced_idea,
       tom_tully_idea,
       tom_catiline_idea]])?
 
 %% Next should be FALSE -- tom does believes true - and it is FALSE
 
-disbelieves_in_ideas4( tom, now,
+qqqq(disbelieves_true_in_ideas, tom, now,
      [top, [tom_denounced_idea,
       tom_quine_idea,
       tom_catiline_idea]])?
 
 %% Next should be TRUE -- tom does believes false - and it is FALSE
 
-disbelieves_in_ideas4( tom, now,
+qqqq(disbelieves_true_in_ideas, tom, now,
      [top, [tom_denounced_idea,
       tom_russell_idea,
       tom_catiline_idea]])?
-halt?
+
 %% Next should be TRUE -- tom does believes false - and it is FALSE
 
-disbelieves_in_ideas4( tom, now,
-     [tom_roman_idea,
+qqqq(disbelieves_true_in_ideas, tom, now,
+     [top, [tom_roman_idea,
       tom_russell_idea]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_in_ideas4 tom( now,
-     [tom_tully_idea,
+qqqq(disbelieves_true_in_ideas, tom, now,
+     [top, [tom_tully_idea,
       tom_tully_idea,
       tom_catiline_idea]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_in_ideas4( tom, now,
-     [tom_denounced_idea,
+qqqq(disbelieves_true_in_ideas, tom, now,
+     [top, [tom_denounced_idea,
       tom_tully_idea,
       tom_denounced_idea]])?
 
 %% Next should be FALSE -- wrong arity
 
-disbelieves_in_ideas4( tom, now,
-     [tom_denounced_idea,
+qqqq(disbelieves_true_in_ideas, tom, now,
+     [top, [tom_denounced_idea,
       tom_cicero_idea]])?
+
+halt?
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %% OBJECTS
@@ -824,54 +825,54 @@ disbelieves_in_ideas4( tom, now,
 
 %% Next should be FALSE -- Tom believes it TRUE
 
-disbelieves_objects( tom, now,
+qqqq(disbelieves_true_objects, tom, now,
      [top, [[denounced],
       [cicero],
       [catiline]]])?
 
 %% Next should be FALSE -- Tom believes it TRUE
 
-disbelieves_objects( tom, now,
+qqqq(disbelieves_true_objects, tom, now,
      [top, [[american],
       [russell]]])?
 
 %% Next should be TRUE -- Tom believes it FALSE and it is FALSE
 
-disbelieves_objects( tom, now,
+qqqq(disbelieves_true_objects, tom, now,
      [top, [[denounced],
       [russell],
       [catiline]]])?
 
 %% Next should be TRUE -- Tom believes it FALSE and it is FALSE
 
-disbelieves_objects( tom, now,
+qqqq(disbelieves_true_objects, tom, now,
      [top, [[roman],
       [russell]]])?
 
 %% Next should be FALSE -- there is no (separate) object tully
 
-disbelieves_objects( tom, now,
+qqqq(disbelieves_true_objects, tom, now,
      [top, [[denounced],
       [tully],
       [catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_objects( tom, now,
+qqqq(disbelieves_true_objects, tom, now,
      [top, [[tully],
       [tully],
       [catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_objects( tom, now,
+qqqq(disbelieves_true_objects, tom, now,
      [top, [[denounced],
       [tully],
       [denounced]]])?
 
 %% Next should be FALSE -- wrong arity
 
-disbelieves_objects( tom, now,
+qqqq(disbelieves_true_objects, tom, now,
      [top, [[denounced],
       [cicero]]])?
 
@@ -881,67 +882,67 @@ disbelieves_objects( tom, now,
 
 %% Next should be FALSE -- tom believes TRUE
 
-disbelieves_words_ideas( tom, now,
+qqqq(disbelieves_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [cicero_word, tom_cicero_idea],
       [catiline_word, tom_catiline_idea]]])?
 
 %% Next should be FALSE -- tom believes TRUE
 
-disbelieves_words_ideas( tom, now,
+qqqq(disbelieves_true_words_ideas, tom, now,
      [top, [[american_word, tom_american_idea],
       [russell_word, tom_russell_idea]]])?
 
 %% Next should be FALSE -- tom believes it FALSE but it is not FALSE
 
-disbelieves_words_ideas( tom, now,
+qqqq(disbelieves_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [tully_word, tom_tully_idea],
       [catiline_word, tom_catiline_idea]]])?
 
 %% Next should be TRUE -- tom believes it FALSE and it is FALSE
 
-disbelieves_words_ideas( tom, now,
+qqqq(disbelieves_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [russell_word, tom_russell_idea],
       [catiline_word, tom_catiline_idea]]])?
 
 %% Next should be TRUE -- tom believes it FALSE and it is FALSE
 
-disbelieves_words_ideas( tom, now,
+qqqq(disbelieves_true_words_ideas, tom, now,
      [top, [[roman_word, tom_roman_idea],
       [russell_word, tom_russell_idea]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_words_ideas( tom, now,
+qqqq(disbelieves_true_words_ideas, tom, now,
      [top, [[tully_word, tom_tully_idea],
       [tully_word, tom_tully_idea],
       [catiline_word, tom_catiline_idea]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_words_ideas( tom, now,
+qqqq(disbelieves_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [tully_word, tom_tully_word],
       [denounced_word, tom_denounced_idea]]])?
 
 %% Next should be FALSE -- wrong arity
 
-disbelieves_words_ideas( tom, now,
+qqqq(disbelieves_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [cicero_word, tom_cicero_idea]]])?
 
 %% Next should be FALSE -- wrong rrrr relation for tully_word
 
-disbelieves_words_ideas( tom, now,
+qqqq(disbelieves_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [tully_word, tom_cicero_idea],
       [catiline_word, tom_catiline_idea]]])?
 
 %% Next should be FALSE -- wrong rrrr relation for cicero_word
 
-disbelieves_words_ideas( tom, now,
+qqqq(disbelieves_true_words_ideas, tom, now,
      [top, [[denounced_word, tom_denounced_idea],
       [cicero_word, tom_tully_idea],
       [catiline_word, tom_catiline_idea]]])?
@@ -952,54 +953,54 @@ disbelieves_words_ideas( tom, now,
 
 %% Next should be FALSE -- tom believes it is true
 
-disbelieves_words_objects( tom, now,
+qqqq(disbelieves_true_words_objects, tom, now,
      [top, [[denounced_word, denounced],
       [cicero_word, cicero],
       [catiline_word, catiline]]])?
 
 %% Next should be FALSE -- tom believes TRUE but it is FALSE
 
-disbelieves_words_objects( tom, now,
+qqqq(disbelieves_true_words_objects, tom, now,
      [top, [[denounced_word, denounced],
       [tully_word, cicero],
       [catiline_word, catiline]]])?
 
 %% Next should be FALSE -- tom believes TRUE but it is FALSE
 
-disbelieves_words_objects( tom, now,
+qqqq(disbelieves_true_words_objects, tom, now,
      [top, [[american_word, american],
       [russell_word, russell]]])?
 
 %% Next should be TRUE -- tom believes FALSE and it is FALSE
 
-disbelieves_words_objects( tom, now,
+qqqq(disbelieves_true_words_objects, tom, now,
      [top, [[denounced_word, denounced],
       [russell_word, russell],
       [catiline_word, catiline]]])?
 
 %% Next should be TRUE -- tom believes FALSE and it is FALSE
 
-disbelieves_words_objects( tom, now,
+qqqq(disbelieves_true_words_objects, tom, now,
      [top, [[roman_word, roman],
       [russell_word, russell]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_words_objects( tom, now,
+qqqq(disbelieves_true_words_objects, tom, now,
      [top, [[tully_word, tully],
       [tully_word, tully],
       [catiline_word, catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_words_objects( tom, now,
+qqqq(disbelieves_true_words_objects, tom, now,
      [top, [[denounced_word, denounced],
       [tully_word, tully],
       [denounced_word, denounced]]])?
 
 %% Next should be FALSE -- wrong arity
 
-disbelieves_words_objects( tom, now,
+qqqq(disbelieves_true_words_objects, tom, now,
      [top, [[denounced_word, denounced],
       [cicero_word, cicero]]])?
 
@@ -1009,54 +1010,54 @@ disbelieves_words_objects( tom, now,
 
 %% Next should be FALSE -- tom believes it TRUE
 
-disbelieves_ideas_objects( tom, now,
+qqqq(disbelieves_true_ideas_objects, tom, now,
      [top, [[tom_denounced_idea, denounced],
       [tom_cicero_idea, cicero],
       [tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- tom believes it TRUE
 
-disbelieves_ideas_objects( tom, now,
+qqqq(disbelieves_true_ideas_objects, tom, now,
      [top, [[tom_american_idea, american],
       [tom_russell_idea, russell]]])?
 
 %% Next should be FALSE -- not a belief
 
-disbelieves_ideas_objects( tom, now,
+qqqq(disbelieves_true_ideas_objects, tom, now,
      [top, [[tom_denounced_idea, denounced],
       [tom_tully_idea, cicero],
       [tom_catiline_idea, catiline]]])?
 
 %% Next should be TRUE -- tom believes FALSE and it is FALSE
 
-disbelieves_ideas_objects( tom, now,
+qqqq(disbelieves_true_ideas_objects, tom, now,
      [top, [[tom_denounced_idea, denounced],
       [tom_russell_idea, russell],
       [tom_catiline_idea, catiline]]])?
 
 %% Next should be TRUE -- tom believes FALSE and it is FALSE
 
-disbelieves_ideas_objects( tom, now,
+qqqq(disbelieves_true_ideas_objects, tom, now,
      [top, [[tom_roman_idea, roman],
       [tom_russell_idea, russell]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_ideas_objects( tom, now,
+qqqq(disbelieves_true_ideas_objects, tom, now,
      [top, [[tom_tully_idea, tully],
       [tom_tully_idea, tully],
       [tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_ideas_objects( tom, now,
+qqqq(disbelieves_true_ideas_objects, tom, now,
      [top, [[tom_denounced_idea, denounced],
       [tom_tully_idea, tully],
       [tom_denounced_idea, denounced]]])?
 
 %% Next should be FALSE -- wrong arity
 
-disbelieves_ideas_objects( tom, now,
+qqqq(disbelieves_true_ideas_objects, tom, now,
      [top, [[tom_denounced_idea, denounced],
       [tom_cicero_idea, cicero]]])?
 
@@ -1066,61 +1067,61 @@ disbelieves_ideas_objects( tom, now,
 
 %% Next should be FALSE -- tom does not believe FALSE
 
-disbelieves_words_ideas_objects( tom, now,
+qqqq(disbelieves_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [cicero_word, tom_cicero_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- not believed FALSE
 
-disbelieves_words_ideas_objects( tom, now,
+qqqq(disbelieves_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [tully_word, tom_tully_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]]])?
 
 %% Next should be TRUE -- tom believes FALSE and it is FALSE
 
-disbelieves_words_ideas_objects( tom, now,
+qqqq(disbelieves_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [russell_word, tom_russell_idea, russell],
       [catiline_word, tom_catiline_idea, catiline]]])?
 
 %% Next should be TRUE -- tom believes FALSE and it is FALSE
 
-disbelieves_words_ideas_objects( tom, now,
+qqqq(disbelieves_true_words_ideas_objects, tom, now,
      [top, [[roman_word, tom_roman_idea, roman],
       [russell_word, tom_russell_idea, russell]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_words_ideas_objects( tom, now,
+qqqq(disbelieves_true_words_ideas_objects, tom, now,
      [top, [[tully_word, tom_tully_idea, cicero],
       [tully_word, tom_tully_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- wrong type
 
-disbelieves_words_ideas_objects( tom, now,
+qqqq(disbelieves_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [tully_word, tom_tully_word, cicero],
       [denounced_word, tom_denounced_idea, denounced]]])?
 
 %% Next should be FALSE -- wrong arity
 
-disbelieves_words_ideas_objects( tom, now,
+qqqq(disbelieves_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [cicero_word, tom_cicero_idea]]])?
 
 %% Next should be FALSE -- wrong rrrr relation for tully_word
 
-disbelieves_words_ideas_objects( tom, now,
+qqqq(disbelieves_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [tully_word, tom_cicero_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]]])?
 
 %% Next should be FALSE -- wrong rrrr relation for cicero_word
 
-disbelieves_words_ideas_objects( tom, now,
+qqqq(disbelieves_true_words_ideas_objects, tom, now,
      [top, [[denounced_word, tom_denounced_idea, denounced],
       [cicero_word, tom_tully_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]]])?
@@ -1132,4 +1133,3 @@ disbelieves_words_ideas_objects( tom, now,
 write_stats(Ignore)?
 
 halt?
-,

@@ -18,7 +18,7 @@
 *** Yes
 
 *** Yes
-Wed 24 Feb 2021 07:43:13 PM CST
+Sun 28 Feb 2021 07:38:34 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
@@ -55,73 +55,65 @@ Ignore = @.
 > 
 > %% 
 > %% 1
-> %% only guarantees word & idea exist
-> %% TRUE
+> %% NA
 > 
-> exists_contingently_singular_word( tom, now, dolphin_class_word)? 
-
-*** Yes
---1> 
-
-*** No
 > %% 2
-> %% only quarantees contingently_singular idea exists 
+> %% NA
 > 
-> %% TRUE
-> exists_contingently_singular_idea( tom, now, tom_dolphin_class_idea)?
-
-*** Yes
---1> 
-
-*** No
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 > 
 > %% 3
 > %% Guarantees Object with Idea exists
 > 
-> %% TRUE
-> exists_contingently_singular_object( tom, now, cicero)?
+> %% ASK
+> exists_contingently_singular_object( tom, now, O)?
+
+*** Yes
+O = flipper.
+--1> 
 
 *** No
-> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
 > %% 4
-> %% guarantees word and idea
+> %% NA
 > 
-> %% TRUE
-> exists_contingently_singular_word_idea( tom, now, cicero_word, tom_cicero_idea)?
-
-*** No
-> 	
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 5
 > %% guarantees word & object
 > 
 > %% TRUE
-> exists_contingently_singular_word_object( tom, now, cicero_word, cicero)?
+> exists_contingently_singular_word_object( tom, now, W, O)?
+
+*** Yes
+O = flipper, W = dolphin_class_word.
+--1> 
 
 *** No
-> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 6
 > %% guarantees idea & object
 > 
 > %% TRUE
-> exists_contingently_singular_idea_object( tom, now, tom_cicero_idea, cicero)?
+> exists_contingently_singular_idea_object( tom, now, I, O)?
+
+*** Yes
+I = tom_dolphin_class_idea, O = flipper.
+--1> 	
 
 *** No
-> 	
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 7
 > %%
 > 
 > %% TRUE
-> exists_contingently_singular_word_idea_object( tom, now, cicero_word, tom_cicero_idea,
-|    				 cicero)?
+> exists_contingently_singular_word_idea_object( tom, now, W, I, O)?
+
+*** Yes
+I = tom_dolphin_class_idea, O = flipper, W = dolphin_class_word.
+--1> 
 
 *** No
-> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% now equality -- only applies with object specified
 > %% 1
@@ -136,10 +128,13 @@ Ignore = @.
 > %% Guarantees Object with Idea exists
 > 
 > %% TRUE
-> equal_contingently_singular_objects( tom, now, cicero, cicero)?
+> equal_contingently_singular_objects( tom, now, O1, O2)?
+
+*** Yes
+O1 = flipper, O2 = flipper.
+--1> 
 
 *** No
-> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
 > %% 4
@@ -150,49 +145,76 @@ Ignore = @.
 > %% guarantees word & object
 > 
 > %% TRUE
-> equal_contingently_singular_words_objects( quine, now, cicero_word, tully_word,
-|    			     cicero, cicero)?
+> equal_contingently_singular_words_objects( quine, now, W1, W2,
+|    			     O1, O2)?
+
+*** Yes
+O1 = flipper, O2 = flipper, W1 = dolphin_class_word, W2 = dolphin_class_word.
+--1> 
 
 *** No
-> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 6
 > %% guarantees idea & object
 > 
 > %% TRUE
-> equal_contingently_singular_ideas_objects( quine, now, quine_cicero_idea, quine_tully_idea,
-|    			      cicero, cicero)?
+> equal_contingently_singular_ideas_objects( quine, now, I1, I2,
+|    			      O1, O2)?
+
+*** Yes
+I1 = quine_dolphin_class_idea, 
+I2 = quine_dolphin_class_idea, 
+O1 = flipper, 
+O2 = flipper.
+
+--1> 	
 
 *** No
-> 	
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 7
 > %%
 > %% TRUE
-> equal_contingently_singular_words_ideas_objects( quine, now, cicero_word, tully_word,
-|    				   quine_cicero_idea, quine_tully_idea,
-|    				   cicero, cicero)?
+> equal_contingently_singular_words_ideas_objects( quine, now, W1, W2,
+|    				   I1, I2,
+|    				   O1, O2)?
+
+*** Yes
+I1 = quine_dolphin_class_idea, 
+I2 = quine_dolphin_class_idea, 
+O1 = flipper, 
+O2 = flipper, 
+W1 = dolphin_class_word, 
+W2 = dolphin_class_word.
+
+--1> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--1> %% FUNCTIONS are NOT working yet
+--1> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--1> %% now functions -- only applies with object specified
+--1> %% 1
+--1> %% NA
+--1> 
+--1> %% 2
+--1> %% NA
+--1> 
+--1> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+--1> 
+--1> %% 3
+--1> %% Guarantees Object exists
+--1> 
+--1> %% TRUE
+--1> function_contingently_singular_object( tom, now, F, O)?
 
 *** No
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-> %% now functions -- only applies with object specified
-> %% 1
-> %% NA
-> 
-> %% 2
-> %% NA
-> 
-> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-> 
-> %% 3
-> %% Guarantees Object exists
-> 
-> %% TRUE
-> function_contingently_singular_object( tom, now, roman, catiline)?
+I1 = quine_dolphin_class_idea, 
+I2 = quine_dolphin_class_idea, 
+O1 = flipper, 
+O2 = flipper, 
+W1 = dolphin_class_word, 
+W2 = dolphin_class_word.
+
+--1> 
 
 *** No
-> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
 > %% 4
@@ -203,7 +225,7 @@ Ignore = @.
 > %% guarantees word & object
 > 
 > %% TRUE
-> function_contingently_singular_word_object( tom, now, roman_word, catiline_word, catiline)?
+> function_contingently_singular_word_object( tom, now, F, W, O)?
 
 *** No
 > 
@@ -212,8 +234,7 @@ Ignore = @.
 > %% guarantees idea & object
 > 
 > %% TRUE
-> function_contingently_singular_idea_object( tom, now, roman_word, tom_catiline_idea,
-|    			     catiline)?
+> function_contingently_singular_idea_object( tom, now, F, I, O)?
 
 *** No
 > 	
@@ -222,14 +243,15 @@ Ignore = @.
 > %%
 > %% TRUE
 > function_contingently_singular_word_idea_object( tom, now,
-|    				   roman_word, catiline_word,
-|    				   tom_catiline_idea, catiline)?
+|         F,
+|         W,
+|         I, O)?
 
 *** No
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61422 Seconds
+Clock Time 1.61456 Seconds
 CPU Time 16.6667 Milliseconds
 
 *** Yes

@@ -4,7 +4,6 @@ load("RULES2/life_0001.lf")?
 load("FACTS2/facts_0031.lf")?
 load("RULES2/rules_0031.lf")?
 load("RULES2/rules_0032.lf")?
-load("RULES2/rules_0033.lf")?
 load("RULES2/rules_0034.lf")?
 
 %% This file is part of darland's philosophy.
@@ -102,51 +101,121 @@ opaque_believes_in_ideas( tom, now, [tom_denounced_idea,
 
 %% THIS is the only OPAQUE case -- when only OBJECTS are considered.
 	
-opaque_believes_objects( tom, now, [[denounced], [cicero], [catiline]])?
+opaque_believes_objects( tom, now,  [[denounced], [cicero], [catiline]])?
 ;
 
-opaque_believes_words_ideas( tom, now, [[denounced_word, tom_denounced_idea],
+opaque_believes_words_ideas( tom, now,  [[denounced_word, tom_denounced_idea],
 				       [cicero_word, tom_cicero_idea],
 				       [catiline_word, tom_catiline_idea]])?
 ;
 
-opaque_believes_words_ideas( tom, now, [[denounced_word, tom_denounced_idea],
+opaque_believes_words_ideas( tom, now,  [[denounced_word, tom_denounced_idea],
 				       [tully_word, tom_tully_idea],
 				       [catiline_word, tom_catiline_idea]])?
 ;
 
-opaque_believes_words_objects( tom, now, [[denounced_word, denounced],
+opaque_believes_words_objects( tom, now,  [[denounced_word, denounced],
 					 [cicero_word, cicero],
 					 [catiline_word, catiline]])?
 ;
 
-opaque_believes_words_objects( tom, now, [[denounced_word, denounced],
+opaque_believes_words_objects( tom, now,  [[denounced_word, denounced],
 					 [tully_word, cicero],
 					 [catiline_word, catiline]])?
 ;
 
-opaque_believes_ideas_objects( tom, now, [[tom_denounced_idea, denounced],
+opaque_believes_ideas_objects( tom, now,  [[tom_denounced_idea, denounced],
 					 [tom_cicero_idea, cicero],
 					 [tom_catiline_idea, catiline]])?
 ;
 
-opaque_believes_ideas_objects( tom, now, [[tom_denounced_idea, denounced],
+opaque_believes_ideas_objects( tom, now,  [[tom_denounced_idea, denounced],
 					 [tom_tully_idea, cicero],
 					 [tom_catiline_idea, catiline]])?
 ;
 
 opaque_believes_words_ideas_objects( tom, now,
-				    [[denounced_word, tom_denounced_idea, denounced],
+				     [[denounced_word, tom_denounced_idea, denounced],
 				     [cicero_word, tom_cicero_idea, cicero],
 				     [catiline_word, tom_catiline_idea, catiline]])?
 ;
 
 opaque_believes_words_ideas_objects( tom, now,
-				    [[denounced_word, tom_denounced_idea, denounced],
+				     [[denounced_word, tom_denounced_idea, denounced],
 				     [tully_word, tom_tully_idea, cicero],
 				     [catiline_word, tom_catiline_idea, catiline]])?
 ;
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Agnostic check
+%% begin check for lack of belief for each case.
+%% Theoretically the arguments could be variables - to find ANY cases.
+%% But there are so many combinations that there is too little memory.
+
+agnostic_words( tom, now,  [[denounced_word],
+				 [catiline_word],
+				 [cicero_word]] )?
+;
+agnostic_words( tom, now,  [[denounced_word],
+				 [cicero_word],
+				 [catiline_word]] )?
+;
+
+agnostic_words( tom, now,  [[denounced_word],
+				 [tully_word],
+				 [catiline_word]] )?
+;
+
+agnostic_in_ideas( tom, now,  [tom_denounced_idea,
+					 tom_cicero_idea,
+					 tom_catiline_idea])?
+;
+
+agnostic_objects( tom, now,  [[denounced], [catiline], [cicero]])?
+;
+
+agnostic_words_ideas( tom, now,  [[denounced_word, tom_denounced_idea],
+				       [catiline_word, tom_catiline_idea],
+				       [cicero_word, tom_cicero_idea]])?
+;
+
+agnostic_words_ideas( tom, now,  [[denounced_word, tom_denounced_idea],
+				       [tully_word, tom_tully_idea],
+				       [catiline_word, tom_catiline_idea]])?
+;
+
+agnostic_words_objects( tom, now,  [[denounced_word, denounced],
+					 [catiline_word, catiline],
+					 [cicero_word, cicero]])?
+;
+
+agnostic_words_objects( tom, now,  [[denounced_word, denounced],
+					 [tully_word, cicero],
+					 [catiline_word, catiline]])?
+;
+
+agnostic_ideas_objects( tom, now,  [[tom_denounced_idea, denounced],
+					 [tom_catiline_idea, catiline],
+					 [tom_cicero_idea, cicero]])?
+;
+
+agnostic_ideas_objects( tom, now,  [[tom_denounced_idea, denounced],
+					 [tom_tully_idea, cicero],
+					 [tom_catiline_idea, catiline]])?
+;
+
+agnostic_words_ideas_objects( tom, now,
+				     [[denounced_word, tom_denounced_idea, denounced],
+				     [catiline_word, tom_catiline_idea, catiline],
+				     [cicero_word, tom_cicero_idea, cicero]])?
+;
+
+agnostic_words_ideas_objects( tom, now,
+				     [[denounced_word, tom_denounced_idea, denounced],
+				     [tully_word, tom_tully_idea, cicero],
+				     [catiline_word, tom_catiline_idea, catiline]])?
+;
+	
 write_stats(Ignore)?
 
 halt?

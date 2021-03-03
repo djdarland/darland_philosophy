@@ -17,7 +17,8 @@
 
 
 cd ../DarlandPhilosophyLife
-./check_edit_all 1
+./qqqq_pre_all.sh
+./check_edit_all2 1
 if [ $1 -eq 1 ]
 then 
 echo "enter 1 to edit the temporary results script (or enter 0)." 
@@ -25,7 +26,7 @@ echo "you can eliminate some parts you do not wish to look at now."
 read choice
 if [ $choice -eq 1 ]
 then
-$EDITOR editdiffs.sh;
+$EDITOR editdiffs2.sh;
 fi
 fi
-./editdiffs.sh
+./editdiffs2.sh

@@ -16,7 +16,7 @@
 *** Yes
 
 *** Yes
-Wed 24 Feb 2021 07:42:30 PM CST
+Sun 28 Feb 2021 07:38:34 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
@@ -466,8 +466,6 @@ X = catiline.
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 6
 > %% guarantees idea & object
-> %% This # 6 is not working correctly
-> %% I have not figured out the problem
 > 
 > %% TRUE
 > function_plural_idea( tom, now, tom_human_idea, quine_human_class_idea)?
@@ -489,8 +487,6 @@ X = catiline.
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 7
 > %% 
-> %% This # 7 is not working correctly
-> %% I have spent all my time on # 6
 > %% TRUE
 > 
 > function_plural_word_idea( tom, now, human_word, human_class_word,
@@ -514,7 +510,7 @@ X = catiline.
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61422 Seconds
+Clock Time 1.61456 Seconds
 CPU Time 16.6667 Milliseconds
 
 *** Yes

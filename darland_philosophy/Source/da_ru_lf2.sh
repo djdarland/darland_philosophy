@@ -22,25 +22,9 @@ do
 echo "-----------"
 echo "Philosophy Rules Files"
 echo "-----------"
-echo "1-10 are OUT OF DATE"
-echo "1 life_0001.lf   - Particular Rules for Life (misc)"
-echo "2 life_0002.lf   - Particular Rules for Life (append)"
-echo "3 rules_0001.lf - Rules on Understanding"
-echo "4 rules_0002.lf - Rules on Atomic Belief"
-echo "5 rules_0003.lf - Rules on Atomic Belief & Understanding"
-echo "6 rules_0004.lf - Rules on Opacity of Atomic Belief"
-echo "7 rules_0005.lf - Rules on Molecular Belief"
-echo "8 rules_0006.lf - Rules on True Atomic Belief"
-echo "9 rules_0007.lf - Rules for Multiple Tests"
-echo "10 rules_0008.lf - Rules for Comparing Subjects"
-echo "Note 11-13 were for practice"
-echo "11 rules_0009.lf - Rules for Definite Descriptions"
-echo "12 rules_0010.lf - Rules for Practice with Life - Apply"
-echo "13 rules_0011.lf - Rules for Classes"
 echo "NOTE 31 forward are the current theory - still being worked on"
 echo "31 rules_0031.lf - Rules for Understanding Using Number"
 echo "32 rules_0032.lf - Rules on Atomic Belief Using Number"
-echo "33 rules_0033.lf - Rules on True Atomic Belief Using Number"
 echo "34 rules_0034.lf - Rules for Opacity Using Number"
 echo "35 rules_0035.lf - Rules for Multi Tests Using Number"
 echo "36 rules_0036.lf - Rules on Agreement Using Number"
@@ -49,6 +33,14 @@ echo "38 rules_0038.lf - Rules for plural terms"
 echo "39 rules_0039.lf - Rules for contingently singular terms"
 echo "40 rules_0040.lf - Rules for singular terms"
 echo "41 rules_0041.lf - Rules for Believes NAND"
+echo "42 rules_0042.lf - Rules for Believes True NAND"
+echo "43 rules_0043.lf - Rules for Disbelieves True NAND"
+echo "44 rules_0044.lf - Rules for Agnostic Belief NAND"
+echo "NOTE 61 forward are to Represent Facts rather Than Intensional Phenomena" 
+echo "61 rules_0061.lf - Rules for Atomic and Molecular and General Facts"
+echo "62 rules_0062.lf - Rules for Satisfiability Problem"
+echo "63 rules_0063.lf - Rules for Satisfiability Problem with Statistics"
+echo "64 rules_0064.lf - Rules for Modified Satisfiability Problem"
 
 echo "-----------"
 if test -f da_ru_lf2.sh
@@ -84,6 +76,13 @@ case $select in
 39) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0039.lf;;
 40) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0040.lf;;
 41) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0041.lf;;
+42) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0042.lf;;
+43) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0043.lf;;
+44) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0044.lf;;
+61) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0061.lf;;
+62) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0062.lf;;
+63) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0063.lf;;
+64) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0064.lf;;
 666) $EDITOR da_ru_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

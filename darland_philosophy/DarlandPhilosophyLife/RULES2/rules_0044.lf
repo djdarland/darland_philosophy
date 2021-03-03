@@ -29,50 +29,6 @@
 
 %% 1
 
-opaque_believes_words(Subject, Time, List) :-
-    believes_words(Subject, Time, List),
-    disbelieves_words(Subject, Time, List).
-
-%% 2
-
-opaque_believes_in_ideas(Subject, Time, List) :-
-    believes_in_ideas(Subject, Time, List),
-    disbelieves_in_ideas(Subject, Time, List).
-
-%% 3
-
-opaque_believes_objects(Subject, Time, List) :-
-    believes_objects(Subject, Time, List),
-    disbelieves_objects(Subject, Time, List).
-
-%% 4
-
-opaque_believes_words_ideas(Subject, Time, List) :-
-    believes_words_ideas(Subject, Time, List),
-    disbelieves_words_ideas(Subject, Time, List).
-
-%% 5
-
-opaque_believes_words_objects(Subject, Time, List) :-
-    believes_words_objects(Subject, Time, List),
-    disbelieves_words_objects(Subject, Time, List).
-
-%% 6
-
-opaque_believes_ideas_objects(Subject, Time, List) :-
-    believes_ideas_objects(Subject, Time, List),
-    disbelieves_ideas_objects(Subject, Time, List).
-
-%% 7
-
-opaque_believes_words_ideas_objects(Subject, Time, List) :-
-    believes_words_ideas_objects(Subject, Time, List),
-    disbelieves_words_ideas_objects(Subject, Time, List).
-
-%% AGOSTICISM
-
-%% 1
-
 agnostic_words(Subject, Time, List) :-
     \+ believes_words(Subject, Time, List),
     \+ disbelieves_words(Subject, Time, List).
