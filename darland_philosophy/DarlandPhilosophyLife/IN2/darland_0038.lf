@@ -206,13 +206,13 @@ member_plural_word_idea_object( quine, now, featherless_biped_class_word,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 
 %% 1
-%% NA
+%% TRUE
 
 
 exists_plural_word( tom, now, roman_class_word)? 
 
 %% 2
-%% NA
+%% TRUE
 
 exists_plural_idea( tom, now, tom_roman_class_idea)?
 
@@ -352,7 +352,7 @@ function_plural_word( tom, now, human_word, human_class_word)?
 %% FALSE some humans are not roman
 function_plural_word( tom, now, roman_word, human_class_word)?
 
-%% FALSE
+%% FALSE some humans are not dolphins 
 function_plural_word( tom, now, dolphin_word, human_class_word)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

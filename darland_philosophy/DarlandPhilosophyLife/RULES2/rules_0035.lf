@@ -126,10 +126,7 @@ test_understands(Subject, Time,
 		   " does not understand words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
-		   Time, "\n\n")),
-	statistics.
-
-
+		   Time, "\n\n")).
 
 test_believes(Subject, Time,
 		 Word_List,
@@ -215,9 +212,7 @@ test_believes(Subject, Time,
 		   " does not believe words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
-		   Time, "\n\n")),
-	statistics.
-
+		   Time, "\n\n")).
 
 test_believes_true(Subject, Time,
 		 Word_List,
@@ -303,9 +298,7 @@ test_believes_true(Subject, Time,
 		   " does not believe truly words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
-		   Time, "\n\n")), 
-	statistics.
-
+		   Time, "\n\n")).
 
 test_believes_true_not(Subject, Time,
 		 Word_List,
@@ -391,9 +384,7 @@ test_believes_true_not(Subject, Time,
 		   " does not believe truly not words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
-		   Time, "\n\n")), 
-	statistics.
-
+		   Time, "\n\n")).
 
 
 

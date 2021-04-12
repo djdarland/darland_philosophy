@@ -61,42 +61,25 @@ satisfiable([nand, P, [nand, Q, R]])?
 ;
 ;
 ;
-	
-%% TRUE
-satisfiable([top, 1])?
+
+% FALSE
+satisfiable([nand, [nand, P, P], [nand, P, P]])?
+;
+;
+;
+
+% TRUE
+satisfiable([nand, [nand, [nand, P, P], [nand, P, P]], [nand, [nand, P, P], [nand, P, P]]])?
+;
+;
+;
+;
+;
+;
+;
 
 %% FALSE
-satisfiable([top, 0])?
-
-%% TRUE
-satisfiable([nand, [top, 1], [top, 0]])?
-
-%% TRUE
-satisfiable([nand, [top, 0], [top, 1]])?
-
-%% TRUE
-satisfiable([nand, [top, 0], [top, 0]])?
-
-%% FALSE
-satisfiable([nand, [top, 1], [top, 1]])?
-
-%%%%%%%%%%%%%%%%%%%%
-
-%% TRUE
-satisfiable([nand, [nand, [top, 0], [top, 1]], [top, 0]])?
-
-%% FALSE
-satisfiable([nand, [nand, [top, 0], [top, 0]], [top, 1]])?
-
-%% TRUE
-satisfiable([nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]])?
-
-%% TRUE
-satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]], [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]]], [nand, [nand, [top, 0], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]]], [top, 0]])?
-
-satisfiable([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], A19])?
-
-satisfiable([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], [top, 1]])?
+satisfiable([nand, [nand, [nand, [nand, P, P], [nand, P, P]], [nand, [nand, P, P], [nand, P, P]]], [nand, [nand, [nand, P, P], [nand, P, P]], [nand, [nand, P, P], [nand, P, P]]]])?
 
 
 write_stats(Ignore)?

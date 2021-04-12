@@ -8,7 +8,7 @@
 *** Yes
 
 *** Yes
-Sun 24 Jan 2021 02:29:33 PM CST
+Sun 28 Feb 2021 03:34:12 PM CST
 
 *** Yes
 > > 0
@@ -27,44 +27,14 @@ Remark = 'A person (Subject) understands any propositon resulting from symbols h
 
 --1> 
 *** No
-> 
-*** Yes
-Article_Title = none, 
-Article_Year = none, 
-Author = 'Bertrand Russell', 
-Author_Article = none, 
-Author_Book = 'Bertrand Russell', 
-Book_Title = 'CPBR 07: Theory of Knowledge, The 1913 Manuscript', 
-Book_Year = '1913', 
-Note1 = none, 
-Notes_Article = none, 
-Notes_Book = none, 
-Pages = '108', 
-Quotation = 'TBD'.
-
---1> 
-*** No
-> 
-*** Yes
-Article_Title = none, 
-Article_Year = none, 
-Author = 'Bertrand Russell', 
-Author_Article = none, 
-Author_Book = 'Bertrand Russell', 
-Book_Title = 'CPBR 07: Theory of Knowledge, The 1913 Manuscript', 
-Book_Year = '1913', 
-Note1 = none, 
-Notes_Article = none, 
-Notes_Book = none, 
-Pages = '115', 
-Quotation = 'TBD'.
-
---1> 
-*** No
-> > 
+> > > > > > 
 *** Yes
 > 
 > rrss( Subject, Time, Word, Object)?
+
+*** Yes
+Object = denounced, Subject = tom, Time = now, Word = denounced_word.
+--1> ;
 
 *** Yes
 Object = cicero, Subject = tom, Time = now, Word = cicero_word.
@@ -87,10 +57,6 @@ Object = cicero, Subject = quine, Time = now, Word = cicero_word.
 --1> ;
 
 *** Yes
-Object = cicero, Subject = quine, Time = now, Word = cicero_word.
---1> ;
-
-*** Yes
 Object = catiline, Subject = quine, Time = now, Word = catiline_word.
 --1> ;
 
@@ -99,15 +65,7 @@ Object = cicero, Subject = quine, Time = now, Word = tully_word.
 --1> ;
 
 *** Yes
-Object = cicero, Subject = quine, Time = now, Word = tully_word.
---1> ;
-
-*** Yes
 Object = tom, Subject = quine, Time = now, Word = tom_word.
---1> ;
-
-*** Yes
-Object = denounced, Subject = tom, Time = now, Word = denounced_word.
 --1> ;
 
 *** Yes
@@ -143,14 +101,6 @@ Object = roman, Subject = tom, Time = now, Word = roman_word.
 --1> ;
 
 *** Yes
-Object = not_formally_equivalent, 
-Subject = tom, 
-Time = now, 
-Word = not_formally_equivalent_word.
-
---1> ;
-
-*** Yes
 Object = denounced, Subject = quine, Time = now, Word = denounced_word.
 --1> ;
 
@@ -163,6 +113,26 @@ Object = of_De_Senectute,
 Subject = quine, 
 Time = now, 
 Word = of_De_Senectute_word.
+
+--1> ;
+
+*** Yes
+Object = human, Subject = quine, Time = now, Word = human_word.
+--1> ;
+
+*** Yes
+Object = featherless_biped, 
+Subject = quine, 
+Time = now, 
+Word = featherless_biped_word.
+
+--1> ;
+
+*** Yes
+Object = featherless_biped, 
+Subject = quine, 
+Time = now, 
+Word = featherless_biped_word.
 
 --1> 
 

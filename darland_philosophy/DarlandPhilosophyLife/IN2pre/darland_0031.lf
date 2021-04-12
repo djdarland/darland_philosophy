@@ -103,6 +103,13 @@ qqqq(understands_words, tom, now,
 %% Next should be TRUE
 
 qqqq(understands_words, tom, now,
+     [[denounced_word],
+      [santa_word],
+      [catiline_word]])?
+
+%% Next should be TRUE
+
+qqqq(understands_words, tom, now,
      [[roman_word],  %% roman is plural
       [catiline_word]])?
 
@@ -160,6 +167,13 @@ qqqq(understands_ideas, tom, now,
 
 qqqq(understands_ideas, tom, now,
      [[tom_denounced_idea],
+      [tom_santa_idea],
+      [tom_catiline_idea]])?
+
+%% Next should be TRUE
+
+qqqq(understands_ideas, tom, now,
+     [[tom_denounced_idea],
       [tom_tully_idea],
       [tom_catiline_idea]])?
 
@@ -192,6 +206,13 @@ qqqq(understands_ideas, tom, now,
 qqqq(understands_objects, tom, now,
      [[denounced],
       [cicero],
+      [catiline]])?
+
+%% Next should be FALSE
+
+qqqq(understands_objects, tom, now,
+     [[denounced],
+      [santa],
       [catiline]])?
 
 %% Next should be TRUE
@@ -241,7 +262,21 @@ qqqq(understands_words_ideas, tom, now,
 
 qqqq(understands_words_ideas, tom, now,
      [[denounced_word, tom_denounced_idea],
+      [santa_word, tom_santa_idea],
+      [catiline_word, tom_catiline_idea]])?
+
+%% Next should be TRUE
+
+qqqq(understands_words_ideas, tom, now,
+     [[denounced_word, tom_denounced_idea],
       [cicero_word, tom_cicero_idea],
+      [catiline_word, tom_catiline_idea]])?
+
+%% Next should be TRUE
+
+qqqq(understands_words_ideas, tom, now,
+     [[denounced_word, tom_denounced_idea],
+      [santa_word, tom_santa_idea],
       [catiline_word, tom_catiline_idea]])?
 
 %% Next should be TRUE
@@ -296,6 +331,13 @@ qqqq(understands_words_objects, tom, now,
       [cicero_word, cicero],
       [catiline_word, catiline]])?
 
+%% Next should be FALSE
+
+qqqq(understands_words_objects, tom, now,
+     [[denounced_word, denounced],
+      [santa_word, santa],
+      [catiline_word, catiline]])?
+
 %% Next should be TRUE
 
 qqqq(understands_words_objects, tom, now,
@@ -340,6 +382,13 @@ qqqq(understands_ideas_objects, tom, now,
       [tom_cicero_idea, cicero],
       [tom_catiline_idea, catiline]])?
 
+%% Next should be FALSE
+
+qqqq(understands_ideas_objects, tom, now,
+     [[tom_denounced_idea, denounced],
+      [tom_santa_idea, santa],
+      [tom_catiline_idea, catiline]])?
+
 %% Next should be TRUE
 
 qqqq(understands_ideas_objects, tom, now,
@@ -382,6 +431,13 @@ qqqq(understands_ideas_objects, tom, now,
 qqqq(understands_words_ideas_objects, tom, now,
      [[denounced_word, tom_denounced_idea, denounced],
       [cicero_word, tom_cicero_idea, cicero],
+      [catiline_word, tom_catiline_idea, catiline]])?
+
+%% Next should be FALSE
+
+qqqq(understands_words_ideas_objects, tom, now,
+     [[denounced_word, tom_denounced_idea, denounced],
+      [santa_word, tom_santa_idea, santa],
       [catiline_word, tom_catiline_idea, catiline]])?
 
 %% Next should be TRUE

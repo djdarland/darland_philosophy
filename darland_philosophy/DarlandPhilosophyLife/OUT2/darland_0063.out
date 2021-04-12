@@ -2,7 +2,6 @@
 *** Yes
 
 *** Yes
-Tue 02 Mar 2021 08:48:16 PM CST
 
 *** Yes
 > 
@@ -12,7 +11,8 @@ Tue 02 Mar 2021 08:48:16 PM CST
 > %% other expressions.
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -20,8 +20,8 @@ Ignore = @.
 *** No
 > % TRUE
 > satisfiable(P)?
-visits = 1
-max_depth = 1
+Rules 63 Succeeded visits = 1 max_depth = 1
+
 *** Yes
 P = [top,1].
 --1> ;
@@ -31,8 +31,8 @@ P = [top,1].
 > 
 > % FALSE
 > satisfiable([nand, P,P])?
-visits = 1
-max_depth = 1
+Rules 63 Succeeded visits = 1 max_depth = 1
+
 *** Yes
 P = [top,0].
 --1> ;
@@ -42,8 +42,8 @@ P = [top,0].
 > 
 > % TRUE	
 > satisfiable([nand, P,Q])?
-visits = 1
-max_depth = 1
+Rules 63 Succeeded visits = 1 max_depth = 1
+
 *** Yes
 P = [top,0], Q = @.
 --1> ;
@@ -53,8 +53,8 @@ P = [top,0], Q = @.
 > 
 > % TRUE	
 > satisfiable([nand, P, [nand, P, P]])?
-visits = 1
-max_depth = 1
+Rules 63 Succeeded visits = 1 max_depth = 1
+
 *** Yes
 P = [top,0].
 --1> ;
@@ -65,8 +65,8 @@ P = [top,0].
 > 
 > % TRUE
 > satisfiable([nand, P, [nand, Q, P]])?
-visits = 1
-max_depth = 1
+Rules 63 Succeeded visits = 1 max_depth = 1
+
 *** Yes
 P = [top,0], Q = @.
 --1> ;
@@ -80,8 +80,8 @@ P = [top,0], Q = @.
 > 
 > % TRUE
 > satisfiable([nand, P, [nand, Q, R]])?
-visits = 1
-max_depth = 1
+Rules 63 Succeeded visits = 1 max_depth = 1
+
 *** Yes
 P = [top,0], Q = @, R = @.
 --1> ;
@@ -92,106 +92,69 @@ P = [top,0], Q = @, R = @.
 > ;
 > ;
 > ;
-> 	
-> %% TRUE
-> satisfiable([top, 1])?
-visits = 1
-max_depth = 1
-*** Yes
 > 
-> %% FALSE
-> satisfiable([top, 0])?
-visits = 1
-max_depth = 1
-*** No
-> 
-> %% TRUE
-> satisfiable([nand, [top, 1], [top, 0]])?
-visits = 1
-max_depth = 1
-*** Yes
-> 
-> %% TRUE
-> satisfiable([nand, [top, 0], [top, 1]])?
-visits = 1
-max_depth = 1
-*** Yes
-> 
-> %% TRUE
-> satisfiable([nand, [top, 0], [top, 0]])?
-visits = 1
-max_depth = 1
-*** Yes
-> 
-> %% FALSE
-> satisfiable([nand, [top, 1], [top, 1]])?
-visits = 1
-max_depth = 1
-*** No
-> 
-> %%%%%%%%%%%%%%%%%%%%
-> 
-> %% TRUE
-> satisfiable([nand, [nand, [top, 0], [top, 1]], [top, 0]])?
-visits = 1
-max_depth = 1
-*** Yes
-> 
-> %% FALSE
-> satisfiable([nand, [nand, [top, 0], [top, 0]], [top, 1]])?
-visits = 6
-max_depth = 2
-*** No
-> 
-> %% TRUE
-> satisfiable([nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]])?
-visits = 1
-max_depth = 1
-*** Yes
-> 
-> %% TRUE
-> satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]], [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]]], [nand, [nand, [top, 0], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]]], [top, 0]])?
-visits = 1
-max_depth = 1
-*** Yes
-> 
-> satisfiable([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], A19])?
-visits = 1
-max_depth = 1
-*** Yes
-A1 = @, 
-A10 = @, 
-A11 = @, 
-A12 = @, 
-A13 = @, 
-A14 = @, 
-A15 = @, 
-A16 = @, 
-A17 = @, 
-A18 = @, 
-A19 = [top,0], 
-A2 = @, 
-A3 = @, 
-A4 = @, 
-A5 = @, 
-A6 = @, 
-A7 = @, 
-A8 = @, 
-A9 = @.
-
---1> 
+> % FALSE
+> satisfiable([nand, [nand, P, P], [nand, P, P]])?
+Branch Left = 1 Right = 0
+Branch Left = 0 Right = 1
+Branch Left = 1 Right = 0
+Branch Left = 0 Right = 1
+Rules 63 Failed visits = 8 max_depth = 2
 
 *** No
-> satisfiable([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], [top, 1]])?
-visits = 262
-max_depth = 5
+> ;
+> ;
+> ;
+> 
+> % TRUE
+> satisfiable([nand, [nand, [nand, P, P], [nand, P, P]], [nand, [nand, P, P], [nand, P, P]]])?
+Branch Left = 1 Right = 0
+Branch Left = 2 Right = 0
+Branch Left = 1 Right = 1
+Branch Left = 2 Right = 0
+Branch Left = 1 Right = 1
+Rules 63 Succeeded visits = 9 max_depth = 3
+
+*** Yes
+P = @.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% FALSE
+> satisfiable([nand, [nand, [nand, [nand, P, P], [nand, P, P]], [nand, [nand, P, P], [nand, P, P]]], [nand, [nand, [nand, P, P], [nand, P, P]], [nand, [nand, P, P], [nand, P, P]]]])?
+Branch Left = 1 Right = 0
+Branch Left = 2 Right = 0
+Branch Left = 3 Right = 0
+Branch Left = 2 Right = 1
+Branch Left = 3 Right = 0
+Branch Left = 2 Right = 1
+Branch Left = 0 Right = 1
+Branch Left = 1 Right = 1
+Branch Left = 2 Right = 1
+Branch Left = 1 Right = 2
+Branch Left = 2 Right = 1
+Branch Left = 1 Right = 2
+Branch Left = 1 Right = 0
+Branch Left = 2 Right = 0
+Branch Left = 3 Right = 0
+Branch Left = 2 Right = 1
+Branch Left = 3 Right = 0
+Branch Left = 2 Right = 1
+Branch Left = 0 Right = 1
+Rules 63 Failed visits = 32 max_depth = 4
+
 *** No
 > 
 > 
 > write_stats(Ignore)?
-I am not sure of units here
-Clock Time 1.61474 Seconds
-CPU Time 0 Milliseconds
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

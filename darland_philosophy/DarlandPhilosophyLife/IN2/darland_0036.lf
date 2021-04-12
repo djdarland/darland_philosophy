@@ -4,7 +4,6 @@ load("RULES2/life_0001.lf")?
 load("FACTS2/facts_0031.lf")?
 load("RULES2/rules_0031.lf")?
 load("RULES2/rules_0032.lf")?
-load("RULES2/rules_0033.lf")?
 load("RULES2/rules_0034.lf")?
 load("RULES2/rules_0035.lf")?
 load("RULES2/rules_0036.lf")?
@@ -87,22 +86,27 @@ write_time(Ignore)?
 
 %% words_ideas_objects
 
-test_understanding_agrees(tom, quine, now, now,
+test_understanding_agrees_words_objects(quine , tom, now, now,
 			       [[denounced_word, denounced],
 				[cicero_word, cicero],
 				[catiline_word, catiline]])?
 	
 
-test_understanding_agrees(tom, quine, now, now,
+test_understanding_agrees_words_objects(tom, quine, now, now,
 			       [[denounced_word, denounced],
 				[tully_word, cicero],
 				[catiline_word, catiline]])?
 	
-test_understanding_agrees(tom, quine, now, now,
+test_understanding_agrees_words_objects(tom, quine, now, now,
 			       [[denounced_word, denounced],
 				[tully_word, tully],
 				[catiline_word, catiline]])?
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+test_understanding_agrees_objects( quine , tom, now, now,
+			       [[denounced],
+				[cicero],
+				[catiline]])?
 write_stats(Ignore)?
 
 halt?

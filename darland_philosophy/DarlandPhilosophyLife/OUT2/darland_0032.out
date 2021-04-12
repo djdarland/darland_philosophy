@@ -6,7 +6,6 @@
 *** Yes
 
 *** Yes
-Sun 28 Feb 2021 07:41:38 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > 
@@ -50,7 +49,8 @@ Sun 28 Feb 2021 07:41:38 PM CST
 > %% R | S is represented by rrss
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -93,6 +93,17 @@ Ignore = @.
 > believes_words( tom, now,
 |         [[denounced_word],
 |          [cicero_word],
+|          [catiline_word]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE
+> 
+> believes_words( tom, now,
+|         [[denounced_word],
+|          [santa_word],
 |          [catiline_word]])?
 
 *** Yes
@@ -544,9 +555,7 @@ Ignore = @.
 > 
 > 
 > write_stats(Ignore)?
-I am not sure of units here
-Clock Time 1.61456 Seconds
-CPU Time 16.6667 Milliseconds
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

@@ -1,0 +1,316 @@
+
+*** Yes
+> > > > > > > > > > > > > > > > > > > > > > > > > > > 
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Sun 28 Feb 2021 03:34:12 PM CST
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> 
+> 
+> remark(4001, Remark)?
+
+*** Yes
+Remark = 'Test Set 4 - about understanding obout understanding. Also understanding about belief'.
+
+--1> 
+
+*** No
+> remark(4002, Remark)?
+
+*** Yes
+Remark = 'I have not checked this out thorougly - other things were prerequisites.'.
+
+--1> 
+
+*** No
+> %%
+> %% Next find all (there are a lot fewer beliefs than understandings
+> %% (at least in my database)
+> %%
+> 
+> find_all([Subject, Time, 1, 1,
+|    	  [[Relation_Word, Relation_Idea, Relation],
+|    	  [A_Word, A_Idea, A_Object]]],
+|    	 believes_word_idea_object_A(Subject, Time, 1, 1,
+|    				      [[Relation_Word, Relation_Idea, Relation],
+|    				      [A_Word, A_Idea, A_Object]]), L)?
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> find_all([Subject, Time, 1, 2,
+|    	  [[Relation_Word, Relation_Idea, Relation],
+|    	  [A_Word, A_Idea, A_Object],
+|    	  [B_Word, B_Idea, B_Object]]],
+|    	 believes_word_idea_object_A(Subject, Time, 1, 2,
+|    				      [[Relation_Word, Relation_Idea, Relation],
+|    				      [A_Word, A_Idea, A_Object],
+|    				      [B_Word, B_Idea, B_Object]]), L)?
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> 
+> 
+> 
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> find_all([Subject, Time, 1, 1,
+|    	  [[Relation_Word, Relation_Idea],
+|    	   [A_Word, A_Idea]]],
+|    	 believes_word_idea_A(Subject, Time,  Type, Arity,
+|    			    [[Relation_Word, Relation_Idea],
+|    			     [A_Word, A_Idea]]), L)?
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> find_all([Subject, Time, 1, 2,
+|    	  [[Relation_Word, Relation_Idea],
+|    	   [A_Word, A_Idea],
+|    	   [B_Word, B_Idea]]],
+|    	 believes_word_idea_A(Subject, Time,  Type, Arity,
+|    			    [[Relation_Word, Relation_Idea],
+|    			     [A_Word, A_Idea],
+|    			     [B_Word, B_Idea]]), L)?
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> find_all([Subject, Time,  1, 1,
+|    	  [[Relation_Idea, Relation],
+|    	  [A_Idea, A_Object]]],
+|    	 believes_idea_object_A(Subject, Time,  1, 1,
+|    			      [[Relation_Idea, Relation],
+|    			      [A_Idea, A_Object]]), L)?
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> find_all([Subject, Time,  1, 2,
+|    	  [[Relation_Idea, Relation],
+|    	  [A_Idea, A_Object],
+|    	  [B_Idea, B_Object]]],
+|    	 believes_idea_object_A(Subject, Time,  Type, Arity,
+|    			      [[Relation_Idea, Relation],
+|    			      [A_Idea, A_Object],
+|    			      [A_Idea, A_Object]]), L)?
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> find_all([Subject, Time,  1, 1,
+|    	  [[Relation],
+|    	  [A_Object]]],
+|    	 believes_object_A(Subject, Time, 1, 1,
+|    			 [[Relation],
+|    			 [A_Object]]), L)?
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> find_all([Subject, Time,  1, 2,
+|    	  [[Relation],
+|    	  [A_Object],
+|    	  [B_Object]]],
+|    	 believes_object_A(Subject, Time, 1, 2,
+|    			 [[Relation],
+|    			 [A_Object],
+|    			 [B_Object]]), L)?
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.61455 Seconds
+CPU Time 0 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+>  
+> 
+> halt?
+

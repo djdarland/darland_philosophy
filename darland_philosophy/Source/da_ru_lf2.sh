@@ -36,11 +36,17 @@ echo "41 rules_0041.lf - Rules for Believes NAND"
 echo "42 rules_0042.lf - Rules for Believes True NAND"
 echo "43 rules_0043.lf - Rules for Disbelieves True NAND"
 echo "44 rules_0044.lf - Rules for Agnostic Belief NAND"
+echo "45 rules_0045.lf - Rules for Same Sense"
+echo "46 rules_0046.lf - Rules for Nonsense"
+echo "47 rules_0047.lf - Rules for Believing Nonsense"
+echo "48 rules_0048.lf - Rules for Natural meaning beliefs"
 echo "NOTE 61 forward are to Represent Facts rather Than Intensional Phenomena" 
 echo "61 rules_0061.lf - Rules for Atomic and Molecular and General Facts"
 echo "62 rules_0062.lf - Rules for Satisfiability Problem"
 echo "63 rules_0063.lf - Rules for Satisfiability Problem with Statistics"
-echo "64 rules_0064.lf - Rules for Modified Satisfiability Problem"
+echo "64 rules_0064.lf - Rules for Stats for Traverse - Satisfiability"
+echo "65 rules_0065.lf - Rules for call_once Satisfiability Problem - 2"
+echo "68 rules_0068.lf - Rules for Traced Satisfiability Problem"
 
 echo "-----------"
 if test -f da_ru_lf2.sh
@@ -79,10 +85,16 @@ case $select in
 42) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0042.lf;;
 43) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0043.lf;;
 44) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0044.lf;;
+45) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0045.lf;;
+46) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0046.lf;;
+47) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0047.lf;;
+48) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0048.lf;;
 61) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0061.lf;;
 62) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0062.lf;;
 63) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0063.lf;;
 64) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0064.lf;;
+65) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0065.lf;;
+68) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0068.lf;;
 666) $EDITOR da_ru_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

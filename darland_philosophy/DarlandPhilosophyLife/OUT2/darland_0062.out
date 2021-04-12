@@ -2,7 +2,6 @@
 *** Yes
 
 *** Yes
-Tue 02 Mar 2021 05:07:34 AM CST
 
 *** Yes
 > 
@@ -12,7 +11,8 @@ Tue 02 Mar 2021 05:07:34 AM CST
 > %% other expressions.
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -218,9 +218,7 @@ A9 = @.
 > 
 > 
 > write_stats(Ignore)?
-I am not sure of units here
-Clock Time 1.61468 Seconds
-CPU Time 0 Milliseconds
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

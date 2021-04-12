@@ -43,18 +43,10 @@
 
 %% 
 %% 1
-%% only guarantees word & idea exist
-
-exists_contingently_singular_word(Subject, Time, Word) :-
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural).
-
+%% NA
 
 %% 2
-%% only quarantees singular idea exists 
-
-exists_contingently_singular_idea(Subject, Time, Idea) :-
-	number_idea(Idea, plural).
+%% NA
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
@@ -68,11 +60,8 @@ exists_contingently_singular_object(Subject, Time, Object) :-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 4
-%% guarantees word and idea
+%% NA
 
-exists_contingently_singular_word_idea(Subject, Time, Word, Idea) :-
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5

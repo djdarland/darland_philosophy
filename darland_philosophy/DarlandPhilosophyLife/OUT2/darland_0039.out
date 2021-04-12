@@ -18,14 +18,14 @@
 *** Yes
 
 *** Yes
-Sun 28 Feb 2021 07:38:34 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
 *** Yes
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -65,14 +65,31 @@ Ignore = @.
 > %% 3
 > %% Guarantees Object with Idea exists
 > 
+> %% I am taking flipper to be uniquely a dolphin
+> %% and uniquely an intelligent fish.
+> %% I know dolphins are not really fish.
+> 
+> 
 > %% ASK
 > exists_contingently_singular_object( tom, now, O)?
 
 *** Yes
 O = flipper.
---1> 
+--1> ;
+
+*** Yes
+O = flipper.
+--1> ;
+
+*** Yes
+O = dolphin.
+--1> ;
 
 *** No
+> ;
+> ;
+> ;
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
 > %% 4
@@ -86,10 +103,22 @@ O = flipper.
 > exists_contingently_singular_word_object( tom, now, W, O)?
 
 *** Yes
-O = flipper, W = dolphin_class_word.
---1> 
+O = flipper, W = flipper_class_word.
+--1> ;
+
+*** Yes
+O = dolphin, W = dolphin_class_word.
+--1> ;
+
+*** Yes
+O = flipper, W = intelligent_fish_class_word.
+--1> ;
 
 *** No
+> ;
+> ;
+> ;
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 6
 > %% guarantees idea & object
@@ -98,10 +127,22 @@ O = flipper, W = dolphin_class_word.
 > exists_contingently_singular_idea_object( tom, now, I, O)?
 
 *** Yes
-I = tom_dolphin_class_idea, O = flipper.
---1> 	
+I = tom_flipper_class_idea, O = flipper.
+--1> ;	
+
+*** Yes
+I = tom_intelligent_fish_class_idea, O = flipper.
+--1> ;
+
+*** Yes
+I = tom_dolphin_class_idea, O = dolphin.
+--1> ;	
 
 *** No
+> ;
+> ;	
+> ;
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 7
 > %%
@@ -110,10 +151,25 @@ I = tom_dolphin_class_idea, O = flipper.
 > exists_contingently_singular_word_idea_object( tom, now, W, I, O)?
 
 *** Yes
-I = tom_dolphin_class_idea, O = flipper, W = dolphin_class_word.
---1> 
+I = tom_flipper_class_idea, O = flipper, W = flipper_class_word.
+--1> ;
+
+*** Yes
+I = tom_dolphin_class_idea, O = dolphin, W = dolphin_class_word.
+--1> ;
+
+*** Yes
+I = tom_intelligent_fish_class_idea, 
+O = flipper, 
+W = intelligent_fish_class_word.
+
+--1> ;
 
 *** No
+> ;
+> ;
+> ;
+> 	
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% now equality -- only applies with object specified
 > %% 1
@@ -132,9 +188,27 @@ I = tom_dolphin_class_idea, O = flipper, W = dolphin_class_word.
 
 *** Yes
 O1 = flipper, O2 = flipper.
---1> 
+--1> ;
+
+*** Yes
+O1 = flipper, O2 = flipper.
+--1> ;
+
+*** Yes
+O1 = flipper, O2 = flipper.
+--1> ;
+
+*** Yes
+O1 = flipper, O2 = flipper.
+--1> ;
+
+*** Yes
+O1 = dolphin, O2 = dolphin.
+--1> ;
 
 *** No
+> ;
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
 > %% 4
@@ -145,76 +219,189 @@ O1 = flipper, O2 = flipper.
 > %% guarantees word & object
 > 
 > %% TRUE
-> equal_contingently_singular_words_objects( quine, now, W1, W2,
+> equal_contingently_singular_words_objects( tom, now, W1, W2,
 |    			     O1, O2)?
 
 *** Yes
-O1 = flipper, O2 = flipper, W1 = dolphin_class_word, W2 = dolphin_class_word.
---1> 
+O1 = flipper, O2 = flipper, W1 = flipper_class_word, W2 = flipper_class_word.
+--1> ;
+
+*** Yes
+O1 = flipper, 
+O2 = flipper, 
+W1 = flipper_class_word, 
+W2 = intelligent_fish_class_word.
+
+--1> ;
+
+*** Yes
+O1 = dolphin, O2 = dolphin, W1 = dolphin_class_word, W2 = dolphin_class_word.
+--1> ;
+
+*** Yes
+O1 = flipper, 
+O2 = flipper, 
+W1 = intelligent_fish_class_word, 
+W2 = flipper_class_word.
+
+--1> ;
+
+*** Yes
+O1 = flipper, 
+O2 = flipper, 
+W1 = intelligent_fish_class_word, 
+W2 = intelligent_fish_class_word.
+
+--1> ;
 
 *** No
+> ;
+> 	
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 6
 > %% guarantees idea & object
 > 
 > %% TRUE
-> equal_contingently_singular_ideas_objects( quine, now, I1, I2,
+> equal_contingently_singular_ideas_objects( tom, now, I1, I2,
 |    			      O1, O2)?
 
 *** Yes
-I1 = quine_dolphin_class_idea, 
-I2 = quine_dolphin_class_idea, 
+I1 = tom_flipper_class_idea, 
+I2 = tom_flipper_class_idea, 
 O1 = flipper, 
 O2 = flipper.
 
---1> 	
+--1> ;	
+
+*** Yes
+I1 = tom_flipper_class_idea, 
+I2 = tom_intelligent_fish_class_idea, 
+O1 = flipper, 
+O2 = flipper.
+
+--1> ;
+
+*** Yes
+I1 = tom_intelligent_fish_class_idea, 
+I2 = tom_flipper_class_idea, 
+O1 = flipper, 
+O2 = flipper.
+
+--1> ;	
+
+*** Yes
+I1 = tom_intelligent_fish_class_idea, 
+I2 = tom_intelligent_fish_class_idea, 
+O1 = flipper, 
+O2 = flipper.
+
+--1> ;
+
+*** Yes
+I1 = tom_dolphin_class_idea, 
+I2 = tom_dolphin_class_idea, 
+O1 = dolphin, 
+O2 = dolphin.
+
+--1> ;	
 
 *** No
+> ;
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 7
 > %%
 > %% TRUE
-> equal_contingently_singular_words_ideas_objects( quine, now, W1, W2,
+> equal_contingently_singular_words_ideas_objects( tom, now, W1, W2,
 |    				   I1, I2,
-|    				   O1, O2)?
+|         O1, O2)?
 
 *** Yes
-I1 = quine_dolphin_class_idea, 
-I2 = quine_dolphin_class_idea, 
+I1 = tom_flipper_class_idea, 
+I2 = tom_flipper_class_idea, 
 O1 = flipper, 
 O2 = flipper, 
+W1 = flipper_class_word, 
+W2 = flipper_class_word.
+
+--1> ;
+
+*** Yes
+I1 = tom_flipper_class_idea, 
+I2 = tom_intelligent_fish_class_idea, 
+O1 = flipper, 
+O2 = flipper, 
+W1 = flipper_class_word, 
+W2 = intelligent_fish_class_word.
+
+--1> ;
+
+*** Yes
+I1 = tom_dolphin_class_idea, 
+I2 = tom_dolphin_class_idea, 
+O1 = dolphin, 
+O2 = dolphin, 
 W1 = dolphin_class_word, 
 W2 = dolphin_class_word.
 
---1> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
---1> %% FUNCTIONS are NOT working yet
---1> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
---1> %% now functions -- only applies with object specified
---1> %% 1
---1> %% NA
---1> 
---1> %% 2
---1> %% NA
---1> 
---1> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
---1> 
---1> %% 3
---1> %% Guarantees Object exists
---1> 
---1> %% TRUE
---1> function_contingently_singular_object( tom, now, F, O)?
+--1> ;
 
-*** No
-I1 = quine_dolphin_class_idea, 
-I2 = quine_dolphin_class_idea, 
+*** Yes
+I1 = tom_intelligent_fish_class_idea, 
+I2 = tom_flipper_class_idea, 
 O1 = flipper, 
 O2 = flipper, 
-W1 = dolphin_class_word, 
-W2 = dolphin_class_word.
+W1 = intelligent_fish_class_word, 
+W2 = flipper_class_word.
 
---1> 
+--1> ;
+
+*** Yes
+I1 = tom_intelligent_fish_class_idea, 
+I2 = tom_intelligent_fish_class_idea, 
+O1 = flipper, 
+O2 = flipper, 
+W1 = intelligent_fish_class_word, 
+W2 = intelligent_fish_class_word.
+
+--1> ;
 
 *** No
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% FUNCTIONS
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% now functions -- only applies with object specified
+> %% 1
+> %% NA
+> 
+> %% 2
+> %% NA
+> %% I am supposing it contingent that there is one dolphin named flipper
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+> 
+> %% 3
+> %% Guarantees Object exists
+> 
+> %% TRUE
+> 
+> function_contingently_singular_object( tom, now, F, O)?
+
+*** Yes
+F = dolphin, O = flipper.
+--1> ;
+
+*** Yes
+F = dolphin, O = flipper.
+--1> ;	
+
+*** No
+> ;
+> ;	
+> ;
+> ;	
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
 > %% 4
@@ -227,8 +414,20 @@ W2 = dolphin_class_word.
 > %% TRUE
 > function_contingently_singular_word_object( tom, now, F, W, O)?
 
+*** Yes
+F = dolphin_class_word, O = flipper, W = flipper_class_word.
+--1> ;
+
+*** Yes
+F = dolphin_class_word, O = flipper, W = intelligent_fish_class_word.
+--1> ;
+
 *** No
-> 
+> ;
+> ;
+> ;
+> ;
+> 	
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 6
 > %% guarantees idea & object
@@ -236,8 +435,20 @@ W2 = dolphin_class_word.
 > %% TRUE
 > function_contingently_singular_idea_object( tom, now, F, I, O)?
 
+*** Yes
+F = tom_dolphin_class_idea, I = tom_flipper_class_idea, O = flipper.
+--1> ;	
+
+*** Yes
+F = tom_dolphin_class_idea, I = tom_intelligent_fish_class_idea, O = flipper.
+--1> ;
+
 *** No
-> 	
+> ;	
+> ;
+> ;	
+> ;
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 7
 > %%
@@ -247,12 +458,30 @@ W2 = dolphin_class_word.
 |         W,
 |         I, O)?
 
+*** Yes
+F = dolphin_class_word, 
+I = tom_flipper_class_idea, 
+O = flipper, 
+W = flipper_class_word.
+
+--1> ;
+
+*** Yes
+F = dolphin_class_word, 
+I = tom_intelligent_fish_class_idea, 
+O = flipper, 
+W = intelligent_fish_class_word.
+
+--1> ;
+
 *** No
-> 
+> ;
+> ;
+> ;
+> ;
+> 	
 > write_stats(Ignore)?
-I am not sure of units here
-Clock Time 1.61456 Seconds
-CPU Time 16.6667 Milliseconds
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

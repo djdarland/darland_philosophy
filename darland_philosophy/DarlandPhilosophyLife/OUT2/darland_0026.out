@@ -14,7 +14,7 @@
 *** Yes
 
 *** Yes
-Sat 13 Feb 2021 04:57:31 PM CST
+Sun 28 Feb 2021 03:34:13 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
@@ -52,7 +52,7 @@ Ignore = @.
 |    			       [[denounced_word, denounced],
 |    				[cicero_word, cicero],
 |    				[catiline_word, catiline]])?
-Both tom and quine understand [[denounced_word,denounced],[cicero_word,cicero],[catiline_word,catiline]] at times now and now respectively.
+tom understands [[denounced_word,denounced],[cicero_word,cicero],[catiline_word,catiline]] at time now but quine does not  at time now
 *** Yes
 > 	
 > 
@@ -60,7 +60,7 @@ Both tom and quine understand [[denounced_word,denounced],[cicero_word,cicero],[
 |    			       [[denounced_word, denounced],
 |    				[tully_word, cicero],
 |    				[catiline_word, catiline]])?
-Both tom and quine understand [[denounced_word,denounced],[tully_word,cicero],[catiline_word,catiline]] at times now and now respectively.
+tom understands [[denounced_word,denounced],[tully_word,cicero],[catiline_word,catiline]] at time now but quine does not  at time now
 *** Yes
 > 	
 > test_understanding_agrees(tom, quine, now, now,
@@ -72,7 +72,7 @@ Neither tom nor quine understand [[denounced_word,denounced],[tully_word,tully],
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61326 Seconds
+Clock Time 1.61455 Seconds
 CPU Time 0 Milliseconds
 
 *** Yes

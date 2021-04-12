@@ -105,9 +105,6 @@ test_understands( tom, now,
 		 [[denounced_word,tom_denounced_idea, denounced],
 		  [cicero_word, tom_cicero_idea, cicero],
 		  [catiline_word, tom_catiline_idea, catiline]])?
-halt?		 
-
-	
 
 write_stats(Ignore)?
 

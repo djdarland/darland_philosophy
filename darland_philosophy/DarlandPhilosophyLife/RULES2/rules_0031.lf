@@ -105,7 +105,7 @@ rrtt(Subject, Time, Word, Object) :-
 	tttt(Subject, Time, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% There are 7 relations of both understanding.
+%% There are 7 relations of understanding.
 %% Those of understanding are defined in terms of rrrr and ssss
 
 %% The 7 cases are:
@@ -208,10 +208,9 @@ match_word(Subject, Time, [[Word] | List],
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 2
-
+%% 3/11/2013 Changed to no longer require existence (ssss2 or tttt)
 understands_ideas(Subject, Time, [[Relation_Idea] | List]) :-
 	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Object),
 	arity_idea(Relation_Idea, Arity),
 	type_idea(Relation_Idea, Type),
 	% List of Ideas.
@@ -220,7 +219,6 @@ understands_ideas(Subject, Time, [[Relation_Idea] | List]) :-
 
 understands_ideas(Subject, Time, [[Relation_Idea] | List]) :-
 	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Object),
 	arity_idea(Relation_Idea, Arity),
 	type_idea(Relation_Idea, Type),
 	% List of Ideas.
@@ -239,7 +237,6 @@ match_idea(Subject, Time, [[Idea] | List],
 	   Arity, Type) :-
 	% List of Word Object Pairs.
 	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
 	type_idea(Idea, Type),
 	match_idea(Subject, Time, List,
 		   % if Arity is not Arbitrary sub 1
@@ -250,12 +247,61 @@ match_idea(Subject, Time, [[Idea] | List],
 	   Arity, Type) :-
 	% List of Word Object Pairs.
 	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
 	type_idea(Idea, Type),
 	match_idea(Subject, Time, List,
 		   % if Arity is not Arbitrary sub 1
 		   cond(Arity =\= -999, Arity - 1, -999),
 		   Type).
+
+
+%%%%%%%%%%%%%%% Previous Version - Requiring existence
+%understands_ideas(Subject, Time, [[Relation_Idea] | List]) :-
+%	number_idea(Relation_Idea, singular),
+%	ssss2(Subject, Time, Relation_Idea, Object),
+%	arity_idea(Relation_Idea, Arity),
+%	type_idea(Relation_Idea, Type),
+%	% List of Ideas.
+%	% Objects should be Type one less than Type of Relation
+%	match_idea(Subject, Time, List, Arity, Type - 1).
+
+% understands_ideas(Subject, Time, [[Relation_Idea] | List]) :-
+%	number_idea(Relation_Idea, plural),
+%	tttt(Subject, Time, Relation_Idea, Object),
+%	arity_idea(Relation_Idea, Arity),
+%	type_idea(Relation_Idea, Type),
+%	% List of Ideas.
+%	% Objects should be Type one less than Type of Relation
+%	match_idea(Subject, Time, List, Arity, Type - 1).
+
+%% The following are auxilary predicates - they have no ontological
+%% Significance.
+
+% match_idea(Subject, Time, [], 0, Type).
+
+%% -999 indicates arbitrary arity.
+% match_idea(Subject, Time, [], -999, Type).
+
+%match_idea(Subject, Time, [[Idea] | List],
+%	   Arity, Type) :-
+%	% List of Word Object Pairs.
+%	number_idea(Idea, singular),
+%	ssss2(Subject, Time, Idea, Object),
+%	type_idea(Idea, Type),
+%	match_idea(Subject, Time, List,
+%		   % if Arity is not Arbitrary sub 1
+%		   cond(Arity =\= -999, Arity - 1, -999),
+%		   Type).
+
+%match_idea(Subject, Time, [[Idea] | List],
+%	   Arity, Type) :-
+%	% List of Word Object Pairs.
+%	number_idea(Idea, plural),
+%	tttt(Subject, Time, Idea, Object),
+%	type_idea(Idea, Type),
+%	match_idea(Subject, Time, List,
+%		   % if Arity is not Arbitrary sub 1
+%		   cond(Arity =\= -999, Arity - 1, -999),
+%		   Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
@@ -328,7 +374,7 @@ understands_words_ideas(Subject, Time,
 match_pair_word_idea(Subject, Time, [], 0, Type).
 
 %% -999 indicates arbitrary arity.
-match_pair_word_object(Subject, Time, [], -999, Type).
+match_pair_word_idea(Subject, Time, [], -999, Type).
 
 match_pair_word_idea(Subject, Time, [[Word, Idea] | PairList],
 		       Arity, Type) :-

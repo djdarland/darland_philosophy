@@ -105,6 +105,13 @@ believes_words( tom, now,
 %% Next should be TRUE
 
 believes_words( tom, now,
+     [[denounced_word],
+      [santa_word],
+      [catiline_word]])?
+
+%% Next should be TRUE
+
+believes_words( tom, now,
      [[roman_word],
       [catiline_word]])?
 

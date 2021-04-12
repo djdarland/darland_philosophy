@@ -29,73 +29,82 @@
 %% First convert a boolean expression to nand using Polish notation.
 %% It looks to me like a binary search. So should be polynomial time!!!
 
-boolean(A, [top, 0]).
-boolean(A, [top, 1]).
+
+boolean([top, 0]) :-
+	visits <<- visits + 1.
+
+boolean([top, 1]) :-
+	visits <<- visits + 1.
+
+boolean([top, P]) :-
+	var(P),
+	visits <<- visits + 1.
 
 persistent(visits)?
+
 persistent(max_depth)?
 
 satisfiable(List) :-
-	visits <<- 1,
+	visits <<- 0,
 	max_depth <<- 0,
-	cond(sat(List, 1),
-	     (write("visits = ", visits),nl,
-	      write("max_depth = ", max_depth)),
-	     (write("visits = ", visits),nl,
-	      write("max_depth = ", max_depth),fail)).
+	cond(sat(List, 1, 0, 0),
+	     (write("Rules 63 Succeeded visits = ", visits),
+	      write(" max_depth = ", max_depth),nl),
+	     (write("Rules 63 Failed visits = ", visits),
+	      write(" max_depth = ", max_depth),nl,fail)).
 
-sat(Prop_1, Depth) :-
+note_branch_left(Left, Right) :-
+	write("Branch Left = ", Left + 1, " Right = ", Right), nl.
+
+note_branch_right(Left, Right) :-
+	write("Branch Left = ", Left, " Right = ", Right + 1), nl.
+
+sat([top, P], Depth, Left, Right) :-
+	visits <<- visits + 1,
 	cond(Depth > max_depth,
 	     max_depth <<- Depth),
-	Prop_1 = [top, 1].
-
-% sat([nand, [top, 0], [top, 0]]).
-% sat([nand, [top, 1], [top, 0]]).
-% sat([nand, [top, 0], [top, 1]]).
+	P = 1.
 
 %% A
-sat([nand, [top, 0], Prop_2], Depth) :-
+sat([nand, [top, 0], Prop_2], Depth, Left, Right) :-
 	cond(Depth > max_depth,
-	     max_depth <<- Depth),
-	boolean(Prop_2).
+	     max_depth <<- Depth, succeed),
+	visits <<- visits + 1.
 
 %% B
-sat([nand, Prop_1, [top, 0]], Depth) :-
+sat([nand, Prop_1, [top, 0]], Depth, Left, Right) :-
 	cond(Depth > max_depth,
-	     max_depth <<- Depth),
-	boolean(Prop_1).
+	     max_depth <<- Depth, succeed),
+	visits <<- visits + 1.
 
 %% C
-sat([nand, [nand, Prop_1, Prop_2], Prop_3], Depth) :-
+sat([nand, [nand, Prop_1, Prop_2], Prop_3], Depth, Left, Right) :-
 	cond(Depth > max_depth,
-	     max_depth <<- Depth),
-	boolean(Prop_1),
-	boolean(Prop_2),
+	     max_depth <<- Depth, succeed),
 	visits <<- visits + 1,
-	\+ sat([nand, Prop_1, Prop_2], Depth + 1).
+	note_branch_left(Left, Right),
+	\+ sat([nand, Prop_1, Prop_2], Depth + 1, Left + 1, Right).
 
 %% D
-sat([nand, [nand, Prop_1, Prop_2], Prop_3], Depth) :-
+sat([nand, [nand, Prop_1, Prop_2], Prop_3], Depth, Left, Right) :-
 	cond(Depth > max_depth,
-	     max_depth <<- Depth),
+	     max_depth <<- Depth, succeed),
 	visits <<- visits + 1,
-	\+ sat(Prop_3, Depth + 1).
+	note_branch_right(Left, Right),
+	\+ sat(Prop_3, Depth + 1, Left, Right + 1).
 
 %% E
-sat([nand, Prop_1, [nand, Prop2, Prop_3]], Depth) :-
+sat([nand, Prop_1, [nand, Prop2, Prop_3]], Depth, Left, Right) :-
 	cond(Depth > max_depth,
-	     max_depth <<- Depth),
-	boolean(Prop_1),
+	     max_depth <<- Depth, succeed),
 	visits <<- visits + 1,
-	\+ sat(Prop_1, Depth + 1).
+	note_branch_left(Left, Right),
+	\+ sat(Prop_1, Depth + 1, Left + 1, Right).
 
 %% F	
-sat([nand, Prop_1, [nand, Prop2, Prop_3]], Depth) :-
+sat([nand, Prop_1, [nand, Prop2, Prop_3]], Depth, Left, Right) :-
 	cond(Depth > max_depth,
-	     max_depth <<- Depth),
-	boolean(Prop_2),
-	boolean(Prop_3),
+	     max_depth <<- Depth, succeed),
 	visits <<- visits + 1,
-	\+ sat([nand, Prop_2, Prop_3], Depth + 1).
-
-
+	note_branch_right(Left, Right),
+	\+ sat([nand, Prop_2, Prop_3], Depth + 1, Left , Right + 1).

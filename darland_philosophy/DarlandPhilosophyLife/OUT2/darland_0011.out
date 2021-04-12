@@ -1,0 +1,149 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Sun 28 Feb 2021 03:34:13 PM CST
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> rrrr(dennis, now, 1, Word, Idea)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> rrrr(dennis, now, 0, Word, Idea)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> ssss(dennis, now, 1, Idea, Object)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> ssss(dennis, now, 0, Idea, Object)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_not_in_ideas(dennis, now, 1, 1, List_Idea_List)?
+
+*** No
+> ;
+> 
+> believes_not_in_words(dennis, now, 1, 1, List_Word_List)?
+
+*** Yes
+List_Word_List = [martian_word,cicero_word].
+--1> ;
+
+*** Yes
+List_Word_List = [martian_word,tully_word].
+--1> 
+
+*** No
+> %believes_not_word_idea_object_L(dennis, now, 1, 1, List_Triple_List)?
+> %;
+> 
+> find_all([dennis, now,  1, 1,
+|    	  [human,
+|    	  [A_Object]]],
+|    	 believes_not_in_words(dennis, now, 1, 1,
+|    				  [human,
+|    				   A_Object]),
+|    	 L)?
+> ;
+> ;
+> ;
+> ;
+> find_all([dennis, now,  1, 1,
+|    	  [martian,
+|    	  [A_Object]]],
+|    	 believes_not_in_words(dennis, now, 1, 1,
+|    				  [martian,
+|    				   A_Object]),
+|    	 L)?
+> ;
+> ;
+> ;
+> ;
+> 
+> not_pred(find_all([dennis, now,  1, 1,
+|    	  [Relation,
+|    	  [A_Object]]],
+|    	 believes_not_in_words(dennis, now, 1, 1,
+|    				  [human,
+|    				   A_Object]),
+|    	 L))?
+> not_pred(find_all([dennis, now,  1, 1,
+|    	  [Relation,
+|    	  [A_Object]]],
+|    	 believes_not_in_words(dennis, now, 1, 1,
+|    				  [human,
+|    				   A_Object]),
+|    	 L))?
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> halt?
+

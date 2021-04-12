@@ -102,8 +102,19 @@ write_time(Ignore)?
 %% 3
 %% Guarantees Object with Idea exists
 
+%% I am taking flipper to be uniquely a dolphin
+%% and uniquely an intelligent fish.
+%% I know dolphins are not really fish.
+
+
 %% ASK
 exists_contingently_singular_object( tom, now, O)?
+;
+;
+;
+;
+;
+;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -116,6 +127,12 @@ exists_contingently_singular_object( tom, now, O)?
 
 %% TRUE
 exists_contingently_singular_word_object( tom, now, W, O)?
+;
+;
+;
+;
+;
+;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
@@ -123,14 +140,26 @@ exists_contingently_singular_word_object( tom, now, W, O)?
 
 %% TRUE
 exists_contingently_singular_idea_object( tom, now, I, O)?
-	
+;	
+;
+;	
+;
+;	
+;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %%
 
 %% TRUE
 exists_contingently_singular_word_idea_object( tom, now, W, I, O)?
-
+;
+;
+;
+;
+;
+;
+	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now equality -- only applies with object specified
 %% 1
@@ -146,6 +175,12 @@ exists_contingently_singular_word_idea_object( tom, now, W, I, O)?
 
 %% TRUE
 equal_contingently_singular_objects( tom, now, O1, O2)?
+;
+;
+;
+;
+;
+;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -157,26 +192,45 @@ equal_contingently_singular_objects( tom, now, O1, O2)?
 %% guarantees word & object
 
 %% TRUE
-equal_contingently_singular_words_objects( quine, now, W1, W2,
+equal_contingently_singular_words_objects( tom, now, W1, W2,
 			     O1, O2)?
-
+;
+;
+;
+;
+;
+;
+	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
 %% TRUE
-equal_contingently_singular_ideas_objects( quine, now, I1, I2,
+equal_contingently_singular_ideas_objects( tom, now, I1, I2,
 			      O1, O2)?
-	
+;	
+;
+;	
+;
+;	
+;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %%
 %% TRUE
-equal_contingently_singular_words_ideas_objects( quine, now, W1, W2,
+equal_contingently_singular_words_ideas_objects( tom, now, W1, W2,
 				   I1, I2,
-				   O1, O2)?
+     O1, O2)?
+;
+;
+;
+;
+;
+;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% FUNCTIONS are NOT working yet
+%% FUNCTIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now functions -- only applies with object specified
 %% 1
@@ -184,14 +238,21 @@ equal_contingently_singular_words_ideas_objects( quine, now, W1, W2,
 
 %% 2
 %% NA
-
+%% I am supposing it contingent that there is one dolphin named flipper
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
 %% 3
 %% Guarantees Object exists
 
 %% TRUE
+
 function_contingently_singular_object( tom, now, F, O)?
+;
+;	
+;
+;	
+;
+;	
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -204,14 +265,26 @@ function_contingently_singular_object( tom, now, F, O)?
 
 %% TRUE
 function_contingently_singular_word_object( tom, now, F, W, O)?
-
+;
+;
+;
+;
+;
+;
+	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
 %% TRUE
 function_contingently_singular_idea_object( tom, now, F, I, O)?
-	
+;	
+;
+;	
+;
+;	
+;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %%
@@ -220,7 +293,13 @@ function_contingently_singular_word_idea_object( tom, now,
      F,
      W,
      I, O)?
-
+;
+;
+;
+;
+;
+;
+	
 write_stats(Ignore)?
 
 halt?

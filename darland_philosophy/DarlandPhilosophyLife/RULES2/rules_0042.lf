@@ -86,7 +86,7 @@ believes_true_in_ideas3( Subject, Time,
 			 [nand,
 			  Idea_List_1, Idea_List_Save_1,
 			  Idea_List_2, Idea_List_Save_2]) :-
-	write(believes_true_in_ideas_A),
+%	write(believes_true_in_ideas_A),
 	Idea_List_Save_1 = Idea_List_1,
 	\+ believes_true_in_ideas2( Subject, Time,
 				    [top, Idea_List_1, Idea_List_Save_1]).
@@ -95,7 +95,7 @@ believes_true_in_ideas3( Subject, Time,
 			 [nand,
 			  Idea_List_1, Idea_List_Save_1,
 			  Idea_List_2, Idea_List_Save_2]) :-
-	write(believes_true_in_ideas_B),
+%	write(believes_true_in_ideas_B),
 	Idea_List_Save_2 = Idea_List_2,
 	\+ believes_true_in_ideas2( Subject, Time,
 				 [top, Idea_List_2, Idea_List_Save_2]).
@@ -108,7 +108,7 @@ believes_true_in_ideas3( Subject, Time,
 			   Idea_List_1, Idea_List_Save_1,
 			   Idea_List_2, Idea_List_Save_2],
 			  [top, Idea_List_3, Idea_List_Save_3]]) :-
-	write(believes_true_in_ideas_C),
+%	write(believes_true_in_ideas_C),
 	\+ believes_true_in_ideas3( Subject, Time,
 				    [nand,
 				     Idea_List_1, Idea_List_Save_1,
@@ -121,7 +121,7 @@ believes_true_in_ideas3( Subject, Time,
 			   Idea_List_1, Idea_List_Save_1,
 			   Idea_List_2, Idea_List_Save_2],
 			  [top, Idea_List_3, Idea_List_Save_3]]) :-
-	write(believes_true_in_ideas_D),
+%	write(believes_true_in_ideas_D),
 	\+ believes_true_in_ideas3( Subject, Time,
 				    [top ,
 				     Idea_List_3, Idea_List_Save_3]).
@@ -133,7 +133,7 @@ believes_true_in_ideas3( Subject, Time,
 			  [nand,
 			   Idea_List_2, Idea_List_Save_2,
 			   Idea_List_3, Idea_List_Save_3]]) :-
-	write(believes_true_in_ideas_E),
+%	write(believes_true_in_ideas_E),
 	\+ believes_true_in_ideas3( Subject, Time,
 				    [top,
 				     Idea_List_1, Idea_List_Save_1]).
@@ -144,7 +144,7 @@ believes_true_in_ideas3( Subject, Time,
 			  [nand,
 			   Idea_List_2, Idea_List_Save_2,
 			   Idea_List_3, Idea_List_Save_3]]) :-
-	write(believes_true_in_ideas_F),
+%	write(believes_true_in_ideas_F),
 	\+ believes_true_in_ideas3( Subject, Time,
 				    [nand,
 				     Idea_List_2, Idea_List_Save_2,
@@ -198,37 +198,37 @@ believes_true_words( Subject, Time, [top, [[Relation_Word] | List]]) :-
 
 believes_true_words( Subject, Time, [nand, List_1, List_2]) :-
 	
-	write(believes_true_wordsA),
+%	write(believes_true_wordsA),
 	\+ believes_true_words( Subject, Time, [top, List_1]).
 
 %% B
 
 believes_true_words( Subject, Time, [nand, List_1, List_2]) :-
-	write(believes_true_wordsB),
+%	write(believes_true_wordsB),
 	\+ believes_true_words( Subject, Time, [top, List_2]).
 
 %% C
 
 believes_true_words( Subject, Time, [nand, [nand, List_1, List_2], List_3]) :-
-	write(believes_true_wordsC),
+%	write(believes_true_wordsC),
 	\+ believes_true_words( Subject, Time, [nand, List_1, List_2]).
 
 %% D
 
 believes_true_words( Subject, Time, [nand, [nand, List_1, List_2], List_3]) :-
-	write(believes_true_wordsD),
+%	write(believes_true_wordsD),
 	\+ believes_true_words( Subject, Time, [top, List_3]).
 
 %% E
 
 believes_true_words( Subject, Time, [nand, List_1, [nand, List_2, List_3]]) :-
-	write(believes_true_wordsE),
+%	write(believes_true_wordsE),
 	\+ believes_true_words( Subject, Time, [top, List_1]).
 
 %% F
 
 believes_true_words( Subject, Time, [nand, List_1, [nand, List_2, List_3]]) :-
-	write(believes_true_wordsF),
+%	write(believes_true_wordsF),
 	\+ believes_true_words( Subject, Time, [nand, List_2, List_3]).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -287,32 +287,32 @@ believes_true_objects( Subject, Time, [top, [[Relation] | List]]) :-
 
 %% A
 believes_true_objects( Subject, Time, [nand, List_1, List_2] ) :-
-	write(believes_true_objects_A),
+%	write(believes_true_objects_A),
 	\+ believes_true_objects( Subject, Time, [top, List_1]).
 
 %% B
 believes_true_objects( Subject, Time, [nand, List_1, List_2] ) :-
-	write(believes_true_objects_B),
+%	write(believes_true_objects_B),
 	\+ believes_true_objects( Subject, Time, [top, List_2]).
 
 %% C
 believes_true_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
-	write(believes_true_objects_C),
+%	write(believes_true_objects_C),
 	\+ believes_true_objects( Subject, Time, [nand, List_1, List_2]).
 
 %% D
 believes_true_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
-	write(believes_true_objects_D),
+%	write(believes_true_objects_D),
 	\+ believes_true_objects( Subject, Time, [top, List_3]).
 
 %% E
 believes_true_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
-	write(believes_true_objects_E),
+%	write(believes_true_objects_E),
 	\+ believes_true_objects( Subject, Time, [top, List_1]).
 
 %% F
 believes_true_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
-	write(believes_true_objects_F),
+%	write(believes_true_objects_F),
 	\+ believes_true_objects( Subject, Time, [nand, List_2, List_3]).
 
 %% list of idea object Pairs
@@ -359,7 +359,7 @@ match_true_object_belief(Subject, Time,
 %% 4
 
 believes_true_words_ideas( Subject, Time, [top, [[Relation_Word, Relation_Idea] | PairList]]) :-
-	write(believes_true_words_ideasA),
+%	write(believes_true_words_ideasA),
 	%% list of word, idea pairs
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
 	number_idea(Relation_Idea, singular),
@@ -370,7 +370,7 @@ believes_true_words_ideas( Subject, Time, [top, [[Relation_Word, Relation_Idea] 
 			       Arity, Type - 1, [Relation_Idea]).
 
 believes_true_words_ideas( Subject, Time, [top, [[Relation_Word, Relation_Idea] | PairList]]) :-
-	write(believes_true_words_ideasB),
+%	write(believes_true_words_ideasB),
 	%% list of word, idea pairs
 	rrrr( Subject, Time, Relation_Word, Relation_Idea),
 	number_idea(Relation_Idea, plural),
@@ -393,32 +393,32 @@ believes_true_words_ideas( Subject, Time, [top, [[Relation_Word, Relation_Idea] 
 %% A
 
 believes_true_words_ideas( Subject, Time, [nand, List_1, List_2] ) :-
-	write(believes_true_words_ideas_A),
+%	write(believes_true_words_ideas_A),
 	\+ believes_true_words_ideas( Subject, Time, [top, List_1]).
 
 %% B
 believes_true_words_ideas( Subject, Time, [nand, List_1, List_2] ) :-
-	write(believes_true_words_ideas_B),
+%	write(believes_true_words_ideas_B),
 	\+ believes_true_words_ideas( Subject, Time, [top, List_2]).
 
 %% C
 believes_true_words_ideas( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
-	write(believes_true_words_ideas_C),
+%	write(believes_true_words_ideas_C),
 	\+ believes_true_words_ideas( Subject, Time, [nand, List_1, List_2]).
 
 %% D
 believes_true_words_ideas( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
-	write(believes_true_words_ideas_D),
+%	write(believes_true_words_ideas_D),
 	\+ believes_true_words_ideas( Subject, Time, [top, List_3]).
 
 %% E
 believes_true_words_ideas( Subject, Time, [nand, List_1, [nand, List_2, List_3]]) :-
-	write(believes_true_words_ideas_E),
+%	write(believes_true_words_ideas_E),
 	\+ believes_true_words_ideas( Subject, Time, [top, List_1]).
 
 %% F
 believes_true_words_ideas( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
-	write(believes_true_words_ideas_F),
+%	write(believes_true_words_ideas_F),
 	\+ believes_true_words_ideas( Subject, Time, [nand, List_2, List_3]).
 
 
@@ -491,32 +491,32 @@ believes_true_words_objects( Subject, Time, [top, [[Relation_Word, Relation] | P
 
 %% A
 believes_true_words_objects( Subject, Time, [nand, List_1, List_2] ) :-
-	write(believes_true_words_objects_A),
+%	write(believes_true_words_objects_A),
 	\+ believes_true_words_objects( Subject, Time, [top, List_1]).
 
 %% B
 believes_true_words_objects( Subject, Time, [nand, List_1, List_2] ) :-
-	write(believes_true_words_objects_B),
+%	write(believes_true_words_objects_B),
 	\+ believes_true_words_objects( Subject, Time, [top, List_2]).
 
 %% C
 believes_true_words_objects( Subject, Time, [nand, [nand, List_1 ,List_2], List_3] ) :-
-	write(believes_true_words_objects_C),
+%	write(believes_true_words_objects_C),
 	\+ believes_true_words_objects( Subject, Time, [nand, List_1, List_2]).
 
 %% D
 believes_true_words_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
-	write(believes_true_words_objects_D),
+%	write(believes_true_words_objects_D),
 	\+ believes_true_words_objects( Subject, Time, [top, List_3]).
 
 %% E
 believes_true_words_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
-	write(believes_true_words_objects_E),
+%	write(believes_true_words_objects_E),
 	\+ believes_true_words_objects( Subject, Time, [top, List_1]).
 
 %% F
 believes_true_words_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
-	write(believes_true_words_objects_F),
+%	write(believes_true_words_objects_F),
 	\+ believes_true_words_objects( Subject, Time, [nand, [[Relation_2] | List_2],[nand, [[Relation_3] | List_3]]]).
 
 
@@ -589,32 +589,32 @@ believes_true_ideas_objects(Subject, Time, [top, [[Relation_Idea, Relation] | Pa
 
 %% A
 believes_true_ideas_objects( Subject, Time, [nand, [List_1, List_2]] ) :-
-	write(believes_true_ideas_objects_A),
+%	write(believes_true_ideas_objects_A),
 	\+ believes_true_ideas_objects( Subject, Time, [top, List_1]).
 
 %% B
 believes_true_ideas_objects( Subject, Time, [nand, [List_1, List_2]] ) :-
-	write(believes_true_ideas_objects_B),
+%	write(believes_true_ideas_objects_B),
 	\+ believes_true_ideas_objects( Subject, Time, [top, List_2]).
 
 %% C
 believes_true_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
-	write(believes_true_ideas_objects_C),
+%	write(believes_true_ideas_objects_C),
 	\+ believes_true_ideas_objects( Subject, Time, [nand, List_1, List_2]).
 
 %% D
 believes_true_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
-	write(believes_true_ideas_objects_D),
+%	write(believes_true_ideas_objects_D),
 	\+ believes_true_ideas_objects( Subject, Time, [top, List_3]).
 
 %% E
 believes_true_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
-	write(believes_true_ideas_objects_E),
+%	write(believes_true_ideas_objects_E),
 	\+ believes_true_ideas_objects( Subject, Time, [top, List_1]).
 
 %% F
 believes_true_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
-	write(believes_true_ideas_objects_F),
+%	write(believes_true_ideas_objects_F),
 	\+ believes_true_ideas_objects( Subject, Time, [nand, List_2, List_3]).
 
 
@@ -694,32 +694,32 @@ believes_true_words_ideas_objects( Subject, Time, [top, [[Relation_Word, Relatio
 
 %% A
 believes_true_words_ideas_objects( Subject, Time, [nand, List_1, List_2] ) :-
-	write(believes_true_words_ideas_objects_A),
+%	write(believes_true_words_ideas_objects_A),
 	\+ believes_true_words_ideas_objects( Subject, Time, [top, List_1]).
 
 %% B
 believes_true_words_ideas_objects( Subject, Time, [nand, List_1, List_2] ) :-
-	write(believes_true_words_ideas_objects_B),
+%	write(believes_true_words_ideas_objects_B),
 	\+ believes_true_words_ideas_objects( Subject, Time, [top, List_2]).
 
 %% C
 believes_true_words_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
-	write(believes_true_words_ideas_objects_C),
+%	write(believes_true_words_ideas_objects_C),
 	\+ believes_true_words_ideas_objects( Subject, Time, [nand, List_1 ,List_2]).
 
 %% D
 believes_true_words_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2],List_3] ) :-
-	write(believes_true_words_ideas_objects_D),
+%	write(believes_true_words_ideas_objects_D),
 	\+ believes_true_words_ideas_objects( Subject, Time, [top, List_3]).
 
 %% E
 believes_true_words_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
-	write(believes_true_words_ideas_objects_E),
+%	write(believes_true_words_ideas_objects_E),
 	\+ believes_true_words_ideas_objects( Subject, Time, [top, List_1]).
 
 %% F
 believes_true_words_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
-	write(believes_true_words_ideas_objects_F),
+%	write(believes_true_words_ideas_objects_F),
 	\+ believes_true_words_ideas_objects( Subject, Time, [nand, List_2 ,List_3]).
 
 

@@ -17,7 +17,7 @@
 
 
 
-echo "Darland Philisophy Test Suite Utility"
+echo "Darland Philosophy Test Suite Utility"
 echo "Examine Test Results For IN2pre/$1.lf ?"
 echo "enter 0 to proceed 888 to next, or crtl-c to quit"
 read answer

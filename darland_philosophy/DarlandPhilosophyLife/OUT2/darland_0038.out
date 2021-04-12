@@ -16,14 +16,14 @@
 *** Yes
 
 *** Yes
-Sun 28 Feb 2021 07:38:34 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
 *** Yes
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -258,7 +258,7 @@ X = russell.
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 
 > %% 1
-> %% NA
+> %% TRUE
 > 
 > 
 > exists_plural_word( tom, now, roman_class_word)? 
@@ -268,7 +268,7 @@ X = russell.
 
 *** No
 > %% 2
-> %% NA
+> %% TRUE
 > 
 > exists_plural_idea( tom, now, tom_roman_class_idea)?
 
@@ -458,7 +458,7 @@ X = catiline.
 
 *** No
 > 
-> %% FALSE
+> %% FALSE some humans are not dolphins 
 > function_plural_word( tom, now, dolphin_word, human_class_word)?
 
 *** No
@@ -509,9 +509,7 @@ X = catiline.
 *** No
 > 
 > write_stats(Ignore)?
-I am not sure of units here
-Clock Time 1.61456 Seconds
-CPU Time 16.6667 Milliseconds
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

@@ -10,7 +10,6 @@
 *** Yes
 
 *** Yes
-Sun 28 Feb 2021 07:38:34 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > 
@@ -55,7 +54,8 @@ Sun 28 Feb 2021 07:38:34 PM CST
 > 
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -104,7 +104,7 @@ Ignore = @.
 |         [top, [tom_denounced_idea,
 |          tom_cicero_idea,
 |          tom_catiline_idea]])?
-believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -114,7 +114,7 @@ believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
 > believes_in_ideas4( tom, now,
 |         [top, [tom_roman_idea,
 |          tom_catiline_idea]])?
-believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -126,7 +126,7 @@ believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
 |         [top, [tom_denounced_idea,
 |          tom_quine_idea,
 |          tom_catiline_idea]])?
-believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -137,7 +137,7 @@ believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
 |         [top, [tom_denounced_idea,
 |          tom_tully_idea,
 |          tom_catiline_idea]])?
-believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong type
@@ -146,7 +146,7 @@ believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]
 |         [top, [tom_tully_idea,
 |          tom_tully_idea,
 |          tom_catiline_idea]])?
-believes_in_ideas4[tom_tully_idea,tom_tully_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong type
@@ -155,7 +155,7 @@ believes_in_ideas4[tom_tully_idea,tom_tully_idea,tom_catiline_idea]
 |         [top, [tom_denounced_idea,
 |          tom_tully_idea,
 |          tom_denounced_idea]])?
-believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_denounced_idea]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong arity
@@ -163,7 +163,7 @@ believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_denounced_idea]
 > believes_in_ideas4( tom, now,
 |         [top, [tom_denounced_idea,
 |    	    tom_cicero_idea]])?
-believes_in_ideas4[tom_denounced_idea,tom_cicero_idea]
+
 *** No
 > 
 > %%%%%%%% NOW TRY NAND
@@ -178,7 +178,7 @@ believes_in_ideas4[tom_denounced_idea,tom_cicero_idea]
 |          [tom_denounced_idea,
 |          tom_cicero_idea,
 |           tom_catiline_idea]])?
-believes_in_ideas_Abelieves_in_ideas_B
+
 *** No
 > 
 > %% Next should be TRUE -- USED FALSE above as SECOND
@@ -195,7 +195,7 @@ believes_in_ideas_Abelieves_in_ideas_B
 |          [tom_denounced_idea,
 |          tom_cicero_idea,
 |           tom_catiline_idea]]])?
-believes_in_ideas_Abelieves_in_ideas_B
+
 *** No
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%
@@ -208,7 +208,7 @@ believes_in_ideas_Abelieves_in_ideas_B
 |         [[denounced_word],
 |          [cicero_word],
 |          [catiline_word]]])?
-believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -222,7 +222,7 @@ believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
 |         [[denounced_word],
 |          [cicero_word],
 |          [catiline_word]]])?
-believes_wordsAbelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]believes_wordsBbelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be TRUE
@@ -230,7 +230,7 @@ believes_wordsAbelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catilin
 > believes_words( tom, now, [top, 
 |         [[roman_word],
 |          [catiline_word]]])?
-believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -241,7 +241,7 @@ believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
 |         [[denounced_word],
 |          [quine_word],
 |          [catiline_word]]])?
-believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -252,7 +252,7 @@ believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
 |         [[denounced_word],
 |          [tully_word],
 |          [catiline_word]]])?
-believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong type
@@ -293,7 +293,7 @@ believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]
 |          [[denounced_word],
 |          [cicero_word],
 |           [catiline_word]]])?
-believes_wordsAbelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]believes_wordsBbelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be TRUE -- USED FALSE above as SECOND
@@ -310,7 +310,7 @@ believes_wordsAbelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catilin
 |          [[denounced_word],
 |          [cicero_word],
 |           [catiline_word]]]])?
-believes_wordsAbelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]believes_wordsB
+
 *** Yes
 --1> 
 
@@ -325,7 +325,7 @@ believes_wordsAbelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catilin
 |         [top, [[denounced],
 |          [cicero],
 |          [catiline]]])?
-believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -335,7 +335,7 @@ believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
 > believes_objects( tom, now,
 |         [top, [[roman],
 |          [catiline]]])?
-believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -346,7 +346,7 @@ believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
 |         [top, [[denounced],
 |          [quine],
 |          [catiline]]])?
-believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -398,7 +398,7 @@ believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
 |          [[denounced],
 |           [cicero],
 |           [catiline]]])?
-believes_objects_Abelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]believes_objects_Bbelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be TRUE - SECOND FALSE
@@ -415,7 +415,7 @@ believes_objects_Abelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_cati
 |           [[denounced],
 |    	[cicero],
 |    	[catiline]]]]])?
-believes_objects_Abelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]believes_objects_B
+
 *** Yes
 --1> 
 
@@ -429,7 +429,7 @@ believes_objects_Abelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_cati
 > believes_words_ideas( tom, now,
 |         [top, [[roman_word, tom_roman_idea],
 |          [catiline_word, tom_catiline_idea]]])?
-believes_words_ideasAroman_wordtom_roman_idea[[catiline_word,tom_catiline_idea]]believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -440,7 +440,7 @@ believes_words_ideasAroman_wordtom_roman_idea[[catiline_word,tom_catiline_idea]]
 |         [top, [[denounced_word, tom_denounced_idea],
 |          [quine_word, tom_quine_idea],
 |          [catiline_word, tom_catiline_idea]]])?
-believes_words_ideasAdenounced_wordtom_denounced_idea[[quine_word,tom_quine_idea],[catiline_word,tom_catiline_idea]]believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -451,7 +451,7 @@ believes_words_ideasAdenounced_wordtom_denounced_idea[[quine_word,tom_quine_idea
 |         [top, [[denounced_word, tom_denounced_idea],
 |          [tully_word, tom_tully_idea],
 |          [catiline_word, tom_catiline_idea]]])?
-believes_words_ideasAdenounced_wordtom_denounced_idea[[tully_word,tom_tully_idea],[catiline_word,tom_catiline_idea]]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_words_ideasBdenounced_wordtom_denounced_idea[[tully_word,tom_tully_idea],[catiline_word,tom_catiline_idea]]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong type
@@ -460,7 +460,7 @@ believes_words_ideasAdenounced_wordtom_denounced_idea[[tully_word,tom_tully_idea
 |         [top, [[tully_word, tom_tully_idea],
 |          [tully_word, tom_tully_idea],
 |          [catiline_word, tom_catiline_idea]]])?
-believes_words_ideasAtully_wordtom_tully_idea[[tully_word,tom_tully_idea],[catiline_word,tom_catiline_idea]]believes_words_ideasBtully_wordtom_tully_idea[[tully_word,tom_tully_idea],[catiline_word,tom_catiline_idea]]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong type
@@ -469,7 +469,7 @@ believes_words_ideasAtully_wordtom_tully_idea[[tully_word,tom_tully_idea],[catil
 |         [top, [[denounced_word, tom_denounced_idea],
 |          [tully_word, tom_tully_word],
 |          [denounced_word, tom_denounced_idea]]])?
-believes_words_ideasAdenounced_wordtom_denounced_idea[[tully_word,tom_tully_word],[denounced_word,tom_denounced_idea]]believes_words_ideasBdenounced_wordtom_denounced_idea[[tully_word,tom_tully_word],[denounced_word,tom_denounced_idea]]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong arity
@@ -477,7 +477,7 @@ believes_words_ideasAdenounced_wordtom_denounced_idea[[tully_word,tom_tully_word
 > believes_words_ideas( tom, now,
 |         [top, [[denounced_word, tom_denounced_idea],
 |          [cicero_word, tom_cicero_idea]]])?
-believes_words_ideasAdenounced_wordtom_denounced_idea[[cicero_word,tom_cicero_idea]]believes_words_ideasBdenounced_wordtom_denounced_idea[[cicero_word,tom_cicero_idea]]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong rrrr relation for tully_word
@@ -486,7 +486,7 @@ believes_words_ideasAdenounced_wordtom_denounced_idea[[cicero_word,tom_cicero_id
 |         [top, [[denounced_word, tom_denounced_idea],
 |          [tully_word, tom_cicero_idea],
 |          [catiline_word, tom_catiline_idea]]])?
-believes_words_ideasAdenounced_wordtom_denounced_idea[[tully_word,tom_cicero_idea],[catiline_word,tom_catiline_idea]]believes_words_ideasBdenounced_wordtom_denounced_idea[[tully_word,tom_cicero_idea],[catiline_word,tom_catiline_idea]]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong rrrr relation for cicero_word
@@ -495,7 +495,7 @@ believes_words_ideasAdenounced_wordtom_denounced_idea[[tully_word,tom_cicero_ide
 |         [top, [[denounced_word, tom_denounced_idea],
 |          [cicero_word, tom_tully_idea],
 |          [catiline_word, tom_catiline_idea]]])?
-believes_words_ideasAdenounced_wordtom_denounced_idea[[cicero_word,tom_tully_idea],[catiline_word,tom_catiline_idea]]believes_words_ideasBdenounced_wordtom_denounced_idea[[cicero_word,tom_tully_idea],[catiline_word,tom_catiline_idea]]
+
 *** No
 > 
 > %%%%%%%%%%%%%%
@@ -510,7 +510,7 @@ believes_words_ideasAdenounced_wordtom_denounced_idea[[cicero_word,tom_tully_ide
 |          [[denounced_word, tom_denounced_idea],
 |           [cicero_word, tom_cicero_idea],
 |           [catiline_word, tom_catiline_idea]]])?
-believes_words_ideas_Abelieves_words_ideasAdenounced_wordtom_denounced_idea[[cicero_word,tom_cicero_idea],[catiline_word,tom_catiline_idea]]believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]believes_words_ideas_Bbelieves_words_ideasAdenounced_wordtom_denounced_idea[[cicero_word,tom_cicero_idea],[catiline_word,tom_catiline_idea]]believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be TRUE - SECOND FALSE
@@ -527,7 +527,7 @@ believes_words_ideas_Abelieves_words_ideasAdenounced_wordtom_denounced_idea[[cic
 |          [[denounced_word, tom_denounced_idea],
 |           [cicero_word, tom_cicero_idea],
 |           [catiline_word, tom_catiline_idea]]]]])?
-believes_words_ideas_Abelieves_words_ideasAdenounced_wordtom_denounced_idea[[cicero_word,tom_cicero_idea],[catiline_word,tom_catiline_idea]]believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]believes_words_ideas_B
+
 *** Yes
 --1> 
 
@@ -543,7 +543,7 @@ believes_words_ideas_Abelieves_words_ideasAdenounced_wordtom_denounced_idea[[cic
 |         [top, [[denounced_word, denounced],
 |          [cicero_word, cicero],
 |          [catiline_word, catiline]]])?
-believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -553,7 +553,7 @@ believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
 > believes_words_objects( tom, now,
 |         [top, [[roman_word, roman],
 |          [catiline_word, catiline]]])?
-believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -564,7 +564,7 @@ believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
 |         [top, [[denounced_word, denounced],
 |          [quine_word, quine],
 |          [catiline_word, catiline]]])?
-believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -575,7 +575,7 @@ believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
 |         [top,[[denounced_word, denounced],
 |          [tully_word, cicero],
 |          [catiline_word, catiline]]])?
-believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong type  HEREHERE
@@ -616,7 +616,7 @@ believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]
 |          [[denounced_word, denounced],
 |           [cicero_word, cicero],
 |           [catiline_word, catiline]]])?
-believes_words_objects_Abelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]believes_words_objects_Bbelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be TRUE - SECOND FALSE
@@ -633,7 +633,7 @@ believes_words_objects_Abelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,to
 |          [[denounced_word, denounced],
 |           [cicero_word, cicero],
 |           [catiline_word, catiline]]]]])?
-believes_words_objects_Abelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]believes_words_objects_B
+
 *** Yes
 --1> 
 
@@ -648,7 +648,7 @@ believes_words_objects_Abelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,to
 |         [top, [[tom_denounced_idea, denounced],
 |          [tom_cicero_idea, cicero],
 |          [tom_catiline_idea, catiline]]])?
-believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -658,7 +658,7 @@ believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
 > believes_ideas_objects( tom, now,
 |         [top, [[tom_roman_idea, roman],
 |          [tom_catiline_idea, catiline]]])?
-believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -669,7 +669,7 @@ believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
 |         [top, [[tom_denounced_idea, denounced],
 |          [tom_quine_idea, quine],
 |          [tom_catiline_idea, catiline]]])?
-believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -680,7 +680,7 @@ believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
 |         [top, [[tom_denounced_idea, denounced],
 |          [tom_tully_idea, cicero],
 |          [tom_catiline_idea, catiline]]])?
-believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong type
@@ -738,7 +738,7 @@ believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]believes_
 |          [[tom_denounced_idea, denounced],
 |           [tom_cicero_idea, cicero],
 |           [tom_catiline_idea, catiline]]]])?
-believes_words_objects_A
+
 *** Yes
 --1> 
 
@@ -753,7 +753,7 @@ believes_words_objects_A
 |         [top, [[denounced_word, tom_denounced_idea, denounced],
 |          [cicero_word, tom_cicero_idea, cicero],
 |          [catiline_word, tom_catiline_idea, catiline]]])?
-believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -763,7 +763,7 @@ believes_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
 > believes_words_ideas_objects( tom, now,
 |         [top, [[roman_word, tom_roman_idea, roman],
 |          [catiline_word, tom_catiline_idea, catiline]]])?
-believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -774,7 +774,7 @@ believes_in_ideas4[tom_roman_idea,tom_catiline_idea]
 |         [top, [[denounced_word, tom_denounced_idea, denounced],
 |          [quine_word, tom_quine_idea, quine],
 |          [catiline_word, tom_catiline_idea, catiline]]])?
-believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
+
 *** Yes
 --1> 
 
@@ -785,7 +785,7 @@ believes_in_ideas4[tom_denounced_idea,tom_quine_idea,tom_catiline_idea]
 |         [top, [[denounced_word, tom_denounced_idea, denounced],
 |          [tully_word, tom_tully_idea, cicero],
 |          [catiline_word, tom_catiline_idea, catiline]]])?
-believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be FALSE -- wrong type
@@ -844,7 +844,7 @@ believes_in_ideas4[tom_denounced_idea,tom_tully_idea,tom_catiline_idea]
 |          [[denounced_word, tom_denounced_idea, denounced],
 |           [cicero_word, tom_cicero_idea, cicero],
 |           [catiline_word, tom_catiline_idea, catiline]]])?
-believes_words_ideas_objects_Abelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]believes_words_ideas_objects_Bbelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]
+
 *** No
 > 
 > %% Next should be TRUE - SECOND FALSE
@@ -861,7 +861,7 @@ believes_words_ideas_objects_Abelieves_in_ideas4[tom_denounced_idea,tom_cicero_i
 |          [[denounced_word, tom_denounced_idea],
 |           [cicero_word, tom_cicero_idea],
 |           [catiline_word, tom_catiline_idea]]]])?
-believes_words_ideas_objects_Abelieves_in_ideas4[tom_denounced_idea,tom_cicero_idea,tom_catiline_idea]believes_words_ideas_objects_B
+
 *** Yes
 --1> 
 

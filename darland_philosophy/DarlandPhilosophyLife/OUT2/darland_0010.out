@@ -1,6 +1,6 @@
 
 *** Yes
-
+> > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
 *** Yes
 
 *** Yes
@@ -10,16 +10,20 @@
 *** Yes
 
 *** Yes
+
+*** Yes
+Sun 28 Feb 2021 03:34:13 PM CST
 
 *** Yes
 > 
 *** Yes
-> Sun 27 Dec 2020 06:55:56 AM CST
+> 
 > write_time(Ignore)?
 0
 *** Yes
 Ignore = @.
 --1> 
+
 *** No
 > listing(remark)?
 
@@ -99,7 +103,8 @@ remark(9002,' ') :-
         succeed.
 
 *** Yes
-> > listing(term)?
+> 
+> listing(term)?
 
 term(object_ext) :-
         succeed.
@@ -145,7 +150,8 @@ term(test2B_ext) :-
         succeed.
 
 *** Yes
-> > listing(pl_external_synonym)?
+> 
+> listing(pl_external_synonym)?
 
 pl_external_synonym(syn00001,djd,gf,object,gegenstand,gf0001,none,none,none) :-
         succeed.
@@ -209,7 +215,8 @@ pl_external_synonym(syn00018,djd,gf,sense_of_relation,concept,gf0006,none,none,n
         succeed.
 
 *** Yes
-> > listing(book)?
+> 
+> listing(book)?
 
 book(tpwgf,
      gf,
@@ -287,7 +294,8 @@ book(lot2,ss,'The Language of Thought','2011',none) :-
         succeed.
 
 *** Yes
-> > listing(philosopher)?
+> 
+> listing(philosopher)?
 
 philosopher(gf,'Gottlob Frege') :-
         succeed.
@@ -319,7 +327,8 @@ philosopher(none,none) :-
         succeed.
 
 *** Yes
-> > listing(a_philosopher)?
+> 
+> listing(a_philosopher)?
 
 a_philosopher(gf) :-
         succeed.
@@ -349,7 +358,8 @@ a_philosopher(djd) :-
         succeed.
 
 *** Yes
-> > listing(article)?
+> 
+> listing(article)?
 
 article(gl,tpwgf,eds,'Glossary','1980',none) :-
         succeed.
@@ -369,7 +379,8 @@ article(none,none,none,none,none,none) :-
         succeed.
 
 *** Yes
-> > listing(philosophical_quotation)?
+> 
+> listing(philosophical_quotation)?
 
 philosophical_quotation(br0001,
                         br,
@@ -660,7 +671,8 @@ philosophical_quotation(gf0025,
         succeed.
 
 *** Yes
-> > %% listing(pl_external_synonym_simple_expanded)?
+> 
+> %% listing(pl_external_synonym_simple_expanded)?
 > 
 > %% listing(pl_ambiguity_2)?
 > 
@@ -679,7 +691,7 @@ Note1 = none,
 Pages = '166', 
 Quotation = 'A proposition is just a symbol. It is a complex symbol in the sense that it has parts which are also symbols: a symbol may be defined as complex when it has parts that are symbols.'.
 
---1> 
+--1> ;
 
 *** Yes
 Article_Abbreviation = pla, 
@@ -690,7 +702,7 @@ Note1 = none,
 Pages = '166', 
 Quotation = 'There is a good deal of importance to philosophy in the theory of symbolism, a good deal more than at one time I thought. I think the importance is almost entirely negative, i.e. the importance lies in the fact that unless you are fairly self-conscioius about symbols, unless you are fairly aware of the relation of symbol to what it symbolizes, you will find yourself attributing to the thing properties which only belong to the symbol. That, of course, is especially likely in very abstract studies such as philosophical logic, because the subject-matter that you are supposed to be thinking of is so exceedingly difficult and elusive that any person who has ever tried to think about it knows you do not think about it except perhaps once in six months for half a minute. The rest of the time you think abut the symbols, because they are tangible, but the thing you are supposed to be thinking about is fearfully difficult and one does not often manage to think about it. The really good philosopher is the one who does once in six months think about it for a minute. Bad philosophers never do.'.
 
---1> 
+--1> ;
 
 *** Yes
 Article_Abbreviation = od, 
@@ -701,7 +713,7 @@ Note1 = none,
 Pages = '423', 
 Quotation = 'According to the view which I advocate, a denoting phrase is essentially part of a sentence, and does not, like most single words, have any significance on its own account. If I say `Scott was a man`, that is a statement of the form `x was a man`, and it has `Scott` for its subject. But if I say `the author of Waverly was a man`, that is not a statement of the form `x was a man`, and does not have `the author of Waverly` for its subject. ..., we may put, in place of `the author of Waverly was a man` the following: `One and only one entity wrote Waverly, and that one was a man`.'.
 
---1> 
+--1> ;
 
 *** Yes
 Article_Abbreviation = od, 
@@ -712,7 +724,7 @@ Note1 = none,
 Pages = '423', 
 Quotation = '... speaking generally, suppose we wish to say that the author of Waverly had the property F, what we wish to say is equivalent to `One and only one entity wrote Waverly, and that one had the property F.`'.
 
---1> 
+--1> ;
 
 *** Yes
 Article_Abbreviation = od, 
@@ -724,6 +736,7 @@ Pages = '423',
 Quotation = '... `Scott was the author of Waverly` (i.e. `Scott was identical with the author of Waverly`) becomes `One and only one entity wrote Waverly, and Scott was identical with that one`; or reverting to the wholly explicit form: `It is not always false of x that x wrote Waverly, that it is always true of y that if y wrote Waverly y is identical with x, and that Scott is identical with x.`'.
 
 --1> 
+
 *** No
 > article(Article_Abbreviation, Book_Abbreviation, Author_Abbreviation, Article_Title, Article_Year, Notes_Article)?
 
@@ -735,7 +748,7 @@ Author_Abbreviation = eds,
 Book_Abbreviation = tpwgf, 
 Notes_Article = none.
 
---1> 
+--1> ;
 
 *** Yes
 Article_Abbreviation = fc, 
@@ -745,7 +758,7 @@ Author_Abbreviation = gf,
 Book_Abbreviation = tpwgf, 
 Notes_Article = none.
 
---1> 
+--1> ;
 
 *** Yes
 Article_Abbreviation = co, 
@@ -755,7 +768,7 @@ Author_Abbreviation = gf,
 Book_Abbreviation = tpwgf, 
 Notes_Article = none.
 
---1> 
+--1> ;
 
 *** Yes
 Article_Abbreviation = pla, 
@@ -765,7 +778,7 @@ Author_Abbreviation = br,
 Book_Abbreviation = cpbr08, 
 Notes_Article = none.
 
---1> 
+--1> ;
 
 *** Yes
 Article_Abbreviation = od, 
@@ -776,6 +789,7 @@ Book_Abbreviation = cpbr04,
 Notes_Article = none.
 
 --1> 
+
 *** No
 > book(Book_Abbreviation, Author_Book_Abbrev, Book_Title, Book_Year, Notes_Book)? 
 
@@ -786,7 +800,7 @@ Book_Title = 'Translations from the Philosophical Writings of Gottlog Frege',
 Book_Year = '1879', 
 Notes_Book = none.
 
---1> 
+--1> ;
 
 *** Yes
 Author_Book_Abbrev = br, 
@@ -796,83 +810,37 @@ Book_Year = '1888-1899',
 Notes_Book = none.
 
 --1> 
+
 *** No
 > philosopher(Author_Book_Abbrev, Author_Book)?
 
 *** Yes
 Author_Book = 'Gottlob Frege', Author_Book_Abbrev = gf.
---1> 
+--1> ;
 
 *** Yes
 Author_Book = 'Bertrand Russell', Author_Book_Abbrev = br.
---1> 
+--1> ;
 
 *** Yes
 Author_Book = 'Ludwig Wittgenstein', Author_Book_Abbrev = lw.
---1> 
+--1> ;
 
 *** Yes
 Author_Book = 'Alfred North Whitehead', Author_Book_Abbrev = anw.
---1> 
+--1> ;
 
 *** Yes
 Author_Book = 'Rudolf Carnap', Author_Book_Abbrev = rc.
 --1> 
+
 *** No
 > quote_note(wvoq0001, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
-
-*** Yes
-Article_Title = none, 
-Article_Year = none, 
-Author = 'Willard Van Orman Quine', 
-Author_Article = none, 
-Author_Book = 'Willard Van Orman Quine', 
-Book_Title = 'Word and Object', 
-Book_Year = '1960', 
-Note1 = 'Note: Whitehead and Russell used the term [referential] transparent in Principia Mathematica, 2nd ed., p. 665. Quine mostly calls non-referential position `opaque`.', 
-Notes_Article = none, 
-Notes_Book = none, 
-Pages = '142', 
-Quotation = 'When a singular term is used in a sentence purely to specify its object, and the sentence is true of the object, then certainly the sentence will stay true when any other singular term is substituted that designates the same object. Here we have a criterion for what may be called purely referential position: the position must be subject to substituitivity of identity.'.
-
---1> 
-*** No
+> 
 > quote_note(lw0001, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
-
-*** Yes
-Article_Title = none, 
-Article_Year = none, 
-Author = 'Ludwig Wittgenstein', 
-Author_Article = none, 
-Author_Book = 'Ludwig Wittgenstein', 
-Book_Title = 'Tractatus Logico-Philosophicus', 
-Book_Year = '1921', 
-Note1 = none, 
-Notes_Article = none, 
-Notes_Book = none, 
-Pages = '5.53', 
-Quotation = 'Identity of object I express by identity of sign, and not by using a sign for identity. Difference of objects I express by difference of signs.'.
-
---1> 
-*** No
+> 
 > quote_note(lw0002, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
-
-*** Yes
-Article_Title = none, 
-Article_Year = none, 
-Author = 'Ludwig Wittgenstein', 
-Author_Article = none, 
-Author_Book = 'Ludwig Wittgenstein', 
-Book_Title = 'Tractatus Logico-Philosophicus', 
-Book_Year = '1921', 
-Note1 = 'But with incomplete human knowledge, we may have two signs (internal symbols) for the same object. (e.g. Cicero & Tully)', 
-Notes_Article = none, 
-Notes_Book = none, 
-Pages = '5.53', 
-Quotation = 'Roughly speaking, to say of two things that they are identical is nonsense, and to say of one thing that it is identical with itself is to say nothing at all.'.
-
---1> 
-*** No
+> 
 > pl_external_synonym_simple_expanded(syn00001, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Author_1, Author_Article_1, Author_Book_1, Article_Title_1, Book_Title_1, Pages_1, Quotation_1, Article_Year_1, Book_Year_1, Note1, Notes_Article_1, Notes_Book_1, Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2, Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3, Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4)?
 
 *** No
@@ -893,107 +861,22 @@ Quotation = 'Roughly speaking, to say of two things that they are identical is n
 *** No
 > 
 > pl_ambiguity_1(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2A, External_Term_2B)?
-
-*** Yes
-External_Term_1 = test_1_ext, 
-External_Term_2A = test2A_ext, 
-External_Term_2B = test2B_ext, 
-Number_1 = syn00015, 
-Number_2 = syn00016, 
-Philosopher_1 = 'Dennis J. Darland', 
-Philosopher_2 = 'Bertrand Russell'.
-
---1> 
-*** No
+> 
 > pl_ambiguity_2(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1A, External_Term_1B, External_Term_2)?
-
-*** Yes
-External_Term_1A = external_proposition, 
-External_Term_1B = internal_proposition, 
-External_Term_2 = satz, 
-Number_1 = syn00002, 
-Number_2 = syn00003, 
-Philosopher_1 = 'Dennis J. Darland', 
-Philosopher_2 = 'Gottlob Frege'.
-
---1> 
-*** No
+> 
 > find_all([_, _, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2A, External_Term_2B], pl_ambiguity_1(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2A, External_Term_2B), L)?
-
-*** Yes
-External_Term_1 = @, 
-External_Term_2A = @, 
-External_Term_2B = @, 
-L = [[@,
-      @,
-      'Dennis J. Darland',
-      'Bertrand Russell',
-      test_1_ext,
-      test2A_ext,
-      test2B_ext],
-     [@,
-      @,
-      'Dennis J. Darland',
-      'Bertrand Russell',
-      test_1_ext,
-      test2B_ext,
-      test2A_ext]], 
-Number_1 = @, 
-Number_2 = @, 
-Philosopher_1 = @, 
-Philosopher_2 = @.
-
---1> 
-*** No
+> 
 > find_all([Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1A, External_Term_1B, External_Term_2], pl_ambiguity_2(Number_1, Number_2, Philosopher_1, Philosopher_2, External_Term_1A, External_Term_1B, External_Term_2), L)?
-
-*** Yes
-External_Term_1A = @, 
-External_Term_1B = @, 
-External_Term_2 = @, 
-L = [[syn00002,
-      syn00003,
-      'Dennis J. Darland',
-      'Gottlob Frege',
-      external_proposition,
-      internal_proposition,
-      satz],
-     [syn00003,
-      syn00002,
-      'Dennis J. Darland',
-      'Gottlob Frege',
-      internal_proposition,
-      external_proposition,
-      satz],
-     [syn00013,
-      syn00014,
-      'Dennis J. Darland',
-      'Bertrand Russell',
-      s_believes_internal,
-      s_believes_object,
-      s_believes],
-     [syn00014,
-      syn00013,
-      'Dennis J. Darland',
-      'Bertrand Russell',
-      s_believes_object,
-      s_believes_internal,
-      s_believes]], 
-Number_1 = @, 
-Number_2 = @, 
-Philosopher_1 = @, 
-Philosopher_2 = @.
-
---1> 
-*** No
+> 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.60907 Seconds
+Clock Time 1.61455 Seconds
 CPU Time 33.3333 Milliseconds
 
 *** Yes
 Ignore = @.
 --1> 
+
 *** No
 >  
 > 

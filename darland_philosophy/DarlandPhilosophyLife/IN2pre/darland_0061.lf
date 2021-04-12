@@ -91,3 +91,6 @@ qqqq6([nand, [nand, [P1, O1], [nand, [P2, O2, O3], [P3, O4]], [P4, O5]]])?
 
 qqqq6([nand, [nand, [denouced, X, Y], [roman, Z]], [american, Z]])?
 	
+write_stats(Ignore)?
+
+halt?

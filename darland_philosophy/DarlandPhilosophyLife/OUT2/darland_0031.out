@@ -4,14 +4,14 @@
 *** Yes
 
 *** Yes
-Sun 28 Feb 2021 07:38:34 PM CST
 
 *** Yes
 > 
 *** Yes
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -54,6 +54,17 @@ Ignore = @.
 > understands_words( tom, now,
 |         [[denounced_word],
 |          [cicero_word],
+|          [catiline_word]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE
+> 
+> understands_words( tom, now,
+|         [[denounced_word],
+|          [santa_word],
 |          [catiline_word]])?
 
 *** Yes
@@ -146,6 +157,17 @@ Ignore = @.
 > 
 > understands_ideas( tom, now,
 |         [[tom_denounced_idea],
+|          [tom_santa_idea],
+|          [tom_catiline_idea]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE
+> 
+> understands_ideas( tom, now,
+|         [[tom_denounced_idea],
 |          [tom_tully_idea],
 |          [tom_catiline_idea]])?
 
@@ -194,6 +216,15 @@ Ignore = @.
 --1> 
 
 *** No
+> %% Next should be FALSE
+> 
+> understands_objects( tom, now,
+|         [[denounced],
+|          [santa],
+|          [catiline]])?
+
+*** No
+> 
 > %% Next should be TRUE
 > 
 > understands_objects( tom, now,
@@ -257,7 +288,29 @@ Ignore = @.
 > 
 > understands_words_ideas( tom, now,
 |         [[denounced_word, tom_denounced_idea],
+|          [santa_word, tom_santa_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE
+> 
+> understands_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
 |          [cicero_word, tom_cicero_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE
+> 
+> understands_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [santa_word, tom_santa_idea],
 |          [catiline_word, tom_catiline_idea]])?
 
 *** Yes
@@ -334,6 +387,15 @@ Ignore = @.
 --1> 
 
 *** No
+> %% Next should be FALSE
+> 
+> understands_words_objects( tom, now,
+|         [[denounced_word, denounced],
+|          [santa_word, santa],
+|          [catiline_word, catiline]])?
+
+*** No
+> 
 > %% Next should be TRUE
 > 
 > understands_words_objects( tom, now,
@@ -396,6 +458,15 @@ Ignore = @.
 --1> 
 
 *** No
+> %% Next should be FALSE
+> 
+> understands_ideas_objects( tom, now,
+|         [[tom_denounced_idea, denounced],
+|          [tom_santa_idea, santa],
+|          [tom_catiline_idea, catiline]])?
+
+*** No
+> 
 > %% Next should be TRUE
 > 
 > understands_ideas_objects( tom, now,
@@ -458,6 +529,15 @@ Ignore = @.
 --1> 
 
 *** No
+> %% Next should be FALSE
+> 
+> understands_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [santa_word, tom_santa_idea, santa],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** No
+> 
 > %% Next should be TRUE
 > 
 > understands_words_ideas_objects( tom, now,
@@ -525,9 +605,7 @@ Ignore = @.
 > 
 > 
 > write_stats(Ignore)?
-I am not sure of units here
-Clock Time 1.61456 Seconds
-CPU Time 0 Milliseconds
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

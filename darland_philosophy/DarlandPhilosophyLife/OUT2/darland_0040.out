@@ -20,14 +20,14 @@
 *** Yes
 
 *** Yes
-Sun 28 Feb 2021 07:38:34 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
 *** Yes
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -58,82 +58,201 @@ Ignore = @.
 > %% 
 > %% 1
 > %% only guarantees word & idea exist
-> %% TRUE
+> %% NA
 > 
-> exists_singular_word( tom, now, denounced_word)? 
-
-*** Yes
---1> 
-
-*** No
 > %% 2
 > %% only quarantees singular idea exists 
 > 
-> %% TRUE
-> exists_singular_idea( tom, now, tom_denounced_idea)?
-
-*** Yes
---1> 
-
-*** No
+> %% NA
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 > 
 > %% 3
 > %% Guarantees Object with Idea exists
 > 
-> %% TRUE
-> exists_singular_object( tom, now, cicero)?
+> %% 
+> exists_singular_object( tom, now, O)?
 
 *** Yes
---1> 
+O = russell.
+--1> ;
+
+*** Yes
+O = quine.
+--1> ;
+
+*** Yes
+O = cicero.
+--1> ;
+
+*** Yes
+O = cicero.
+--1> ;
+
+*** Yes
+O = catiline.
+--1> ;
+
+*** Yes
+O = denounced.
+--1> ;
+
+*** Yes
+O = mortal.
+--1> ;
+
+*** Yes
+O = human.
+--1> ;
+
+*** Yes
+O = dolphin.
+--1> 	
 
 *** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
 > %% 4
 > %% guarantees word and idea
 > 
-> %% TRUE
-> exists_singular_word_idea( tom, now, cicero_word, tom_cicero_idea)?
-
-*** Yes
---1> 	
-
-*** No
+> %% NA
+> 	
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 5
 > %% guarantees word & object
 > 
 > %% TRUE
-> exists_singular_word_object( tom, now, cicero_word, cicero)?
+> exists_singular_word_object( tom, now, W, O)?
 
 *** Yes
---1> 
+O = russell, W = russell_word.
+--1> ;
+
+*** Yes
+O = quine, W = quine_word.
+--1> ;
+
+*** Yes
+O = cicero, W = cicero_word.
+--1> ;
+
+*** Yes
+O = catiline, W = catiline_word.
+--1> ;
+
+*** Yes
+O = cicero, W = tully_word.
+--1> ;
+
+*** Yes
+O = denounced, W = denounced_word.
+--1> ;
+
+*** Yes
+O = roman, W = roman_word.
+--1> ;
+
+*** Yes
+O = american, W = american_word.
+--1> ;
+
+*** Yes
+O = dolphin, W = dolphin_word.
+--1> 	
 
 *** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 6
 > %% guarantees idea & object
 > 
 > %% TRUE
-> exists_singular_idea_object( tom, now, tom_cicero_idea, cicero)?
+> exists_singular_idea_object( tom, now, I, O)?
 
 *** Yes
+I = tom_russell_idea, O = russell.
+--1> ;
+
+*** Yes
+I = tom_quine_idea, O = quine.
+--1> ;
+
+*** Yes
+I = tom_cicero_idea, O = cicero.
+--1> ;
+
+*** Yes
+I = tom_tully_idea, O = cicero.
+--1> ;
+
+*** Yes
+I = tom_catiline_idea, O = catiline.
+--1> ;
+
+*** Yes
+I = tom_denounced_idea, O = denounced.
+--1> ;
+
+*** Yes
+I = tom_mortal_idea, O = mortal.
+--1> ;
+
+*** Yes
+I = tom_human_idea, O = human.
+--1> ;
+
+*** Yes
+I = tom_dolphin_idea, O = dolphin.
 --1> 	
 
 *** No
+> 	
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 7
 > %%
 > 
 > %% TRUE
-> exists_singular_word_idea_object( tom, now, cicero_word, tom_cicero_idea,
-|    				 cicero)?
+> exists_singular_word_idea_object( tom, now, W, I, O)?
 
 *** Yes
---1> 
+I = tom_russell_idea, O = russell, W = russell_word.
+--1> ;
+
+*** Yes
+I = tom_quine_idea, O = quine, W = quine_word.
+--1> ;
+
+*** Yes
+I = tom_cicero_idea, O = cicero, W = cicero_word.
+--1> ;
+
+*** Yes
+I = tom_catiline_idea, O = catiline, W = catiline_word.
+--1> ;
+
+*** Yes
+I = tom_tully_idea, O = cicero, W = tully_word.
+--1> ;
+
+*** Yes
+I = tom_denounced_idea, O = denounced, W = denounced_word.
+--1> ;
+
+*** Yes
+I = tom_roman_idea, O = roman, W = roman_word.
+--1> ;
+
+*** Yes
+I = tom_american_idea, O = american, W = american_word.
+--1> ;
+
+*** Yes
+I = tom_dolphin_idea, O = dolphin, W = dolphin_word.
+--1> 	
 
 *** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% now equality -- only applies with object specified
 > %% 1
@@ -148,12 +267,46 @@ Ignore = @.
 > %% Guarantees Object with Idea exists
 > 
 > %% TRUE
-> equal_singular_objects( tom, now, cicero, cicero)?
+> equal_singular_objects( tom, now, O1, O2)?
 
 *** Yes
---1> 
+O1 = russell, O2 = russell.
+--1> ;
+
+*** Yes
+O1 = quine, O2 = quine.
+--1> ;
+
+*** Yes
+O1 = cicero, O2 = cicero.
+--1> ;
+
+*** Yes
+O1 = cicero, O2 = cicero.
+--1> ;
+
+*** Yes
+O1 = cicero, O2 = cicero.
+--1> ;
+
+*** Yes
+O1 = cicero, O2 = cicero.
+--1> ;
+
+*** Yes
+O1 = catiline, O2 = catiline.
+--1> ;
+
+*** Yes
+O1 = denounced, O2 = denounced.
+--1> ;
+
+*** Yes
+O1 = mortal, O2 = mortal.
+--1> 	
 
 *** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
 > %% 4
@@ -164,37 +317,199 @@ Ignore = @.
 > %% guarantees word & object
 > 
 > %% TRUE
-> equal_singular_words_objects( quine, now, cicero_word, tully_word,
-|    			     cicero, cicero)?
+> equal_singular_words_objects( quine, now, W1, W1, O1, O2)?
 
 *** Yes
---1> 
+O1 = russell, O2 = russell, W1 = russell_word.
+--1> ;
+
+*** Yes
+O1 = quine, O2 = quine, W1 = quine_word.
+--1> ;
+
+*** Yes
+O1 = catiline, O2 = catiline, W1 = catiline_word.
+--1> ;
+
+*** Yes
+O1 = cicero, O2 = cicero, W1 = cicero_word.
+--1> ;
+
+*** Yes
+O1 = cicero, O2 = cicero, W1 = tully_word.
+--1> ;
+
+*** Yes
+O1 = denounced, O2 = denounced, W1 = denounced_word.
+--1> ;
+
+*** Yes
+O1 = roman, O2 = roman, W1 = roman_word.
+--1> ;
+
+*** Yes
+O1 = human, O2 = human, W1 = human_word.
+--1> ;
+
+*** Yes
+O1 = dolphin, O2 = dolphin, W1 = dolphin_word.
+--1> 	
 
 *** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 6
 > %% guarantees idea & object
 > 
 > %% TRUE
-> equal_singular_ideas_objects( quine, now, quine_cicero_idea, quine_tully_idea,
-|    			      cicero, cicero)?
+> equal_singular_ideas_objects( quine, now, I1, I2, O1, O2)?
 
 *** Yes
+I1 = quine_russell_idea, I2 = quine_russell_idea, O1 = russell, O2 = russell.
+--1> ;
+
+*** Yes
+I1 = quine_quine_idea, I2 = quine_quine_idea, O1 = quine, O2 = quine.
+--1> ;
+
+*** Yes
+I1 = quine_cicero_idea, I2 = quine_cicero_idea, O1 = cicero, O2 = cicero.
+--1> ;
+
+*** Yes
+I1 = quine_cicero_idea, I2 = quine_tully_idea, O1 = cicero, O2 = cicero.
+--1> ;
+
+*** Yes
+I1 = quine_tully_idea, I2 = quine_cicero_idea, O1 = cicero, O2 = cicero.
+--1> ;
+
+*** Yes
+I1 = quine_tully_idea, I2 = quine_tully_idea, O1 = cicero, O2 = cicero.
+--1> ;
+
+*** Yes
+I1 = quine_catiline_idea, 
+I2 = quine_catiline_idea, 
+O1 = catiline, 
+O2 = catiline.
+
+--1> ;
+
+*** Yes
+I1 = quine_denounced_idea, 
+I2 = quine_denounced_idea, 
+O1 = denounced, 
+O2 = denounced.
+
+--1> ;
+
+*** Yes
+I1 = quine_mortal_idea, I2 = quine_mortal_idea, O1 = mortal, O2 = mortal.
 --1> 	
 
 *** No
+> 	
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 7
 > %%
 > %% TRUE
-> equal_singular_words_ideas_objects( quine, now, cicero_word, tully_word,
-|    				   quine_cicero_idea, quine_tully_idea,
-|    				   cicero, cicero)?
+> equal_singular_words_ideas_objects( quine, now, W1, W2,
+|    				   I1, I2,
+|    				   O1, O2)?
 
 *** Yes
---1> 
+I1 = quine_russell_idea, 
+I2 = quine_russell_idea, 
+O1 = russell, 
+O2 = russell, 
+W1 = russell_word, 
+W2 = russell_word.
+
+--1> ;
+
+*** Yes
+I1 = quine_quine_idea, 
+I2 = quine_quine_idea, 
+O1 = quine, 
+O2 = quine, 
+W1 = quine_word, 
+W2 = quine_word.
+
+--1> ;
+
+*** Yes
+I1 = quine_catiline_idea, 
+I2 = quine_catiline_idea, 
+O1 = catiline, 
+O2 = catiline, 
+W1 = catiline_word, 
+W2 = catiline_word.
+
+--1> ;
+
+*** Yes
+I1 = quine_cicero_idea, 
+I2 = quine_cicero_idea, 
+O1 = cicero, 
+O2 = cicero, 
+W1 = cicero_word, 
+W2 = cicero_word.
+
+--1> ;
+
+*** Yes
+I1 = quine_cicero_idea, 
+I2 = quine_tully_idea, 
+O1 = cicero, 
+O2 = cicero, 
+W1 = cicero_word, 
+W2 = tully_word.
+
+--1> ;
+
+*** Yes
+I1 = quine_tully_idea, 
+I2 = quine_cicero_idea, 
+O1 = cicero, 
+O2 = cicero, 
+W1 = tully_word, 
+W2 = cicero_word.
+
+--1> ;
+
+*** Yes
+I1 = quine_tully_idea, 
+I2 = quine_tully_idea, 
+O1 = cicero, 
+O2 = cicero, 
+W1 = tully_word, 
+W2 = tully_word.
+
+--1> ;
+
+*** Yes
+I1 = quine_denounced_idea, 
+I2 = quine_denounced_idea, 
+O1 = denounced, 
+O2 = denounced, 
+W1 = denounced_word, 
+W2 = denounced_word.
+
+--1> ;
+
+*** Yes
+I1 = quine_roman_idea, 
+I2 = quine_roman_idea, 
+O1 = roman, 
+O2 = roman, 
+W1 = roman_word, 
+W2 = roman_word.
+
+--1> 	
 
 *** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% now functions -- only applies with object specified
 > %% 1
@@ -209,12 +524,46 @@ Ignore = @.
 > %% Guarantees Object exists
 > 
 > %% TRUE
-> function_singular_object( tom, now, roman, catiline)?
+> function_singular_object( tom, now, F, O)?
 
 *** Yes
---1> 
+F = human, O = russell.
+--1> ;
+
+*** Yes
+F = human, O = cicero.
+--1> ;
+
+*** Yes
+F = human, O = cicero.
+--1> ;
+
+*** Yes
+F = human, O = catiline.
+--1> ;
+
+*** Yes
+F = roman, O = cicero.
+--1> ;
+
+*** Yes
+F = roman, O = cicero.
+--1> ;
+
+*** Yes
+F = roman, O = catiline.
+--1> ;
+
+*** Yes
+F = american, O = quine.
+--1> ;
+
+*** Yes
+F = dolphin, O = flipper.
+--1> 	
 
 *** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
 > %% 4
@@ -225,40 +574,143 @@ Ignore = @.
 > %% guarantees word & object
 > 
 > %% TRUE
-> function_singular_word_object( tom, now, roman_word, catiline_word, catiline)?
+> function_singular_word_object( tom, now, F, W, O)?
 
 *** Yes
---1> 
+F = roman_word, O = cicero, W = cicero_word.
+--1> ;
+
+*** Yes
+F = roman_word, O = catiline, W = catiline_word.
+--1> ;
+
+*** Yes
+F = roman_word, O = cicero, W = tully_word.
+--1> ;
+
+*** Yes
+F = american_word, O = quine, W = quine_word.
+--1> ;
+
+*** Yes
+F = human_word, O = russell, W = russell_word.
+--1> ;
+
+*** Yes
+F = human_word, O = cicero, W = cicero_word.
+--1> ;
+
+*** Yes
+F = human_word, O = catiline, W = catiline_word.
+--1> ;
+
+*** Yes
+F = human_word, O = cicero, W = tully_word.
+--1> ;
+
+*** Yes
+F = dolphin_class_word, O = flipper, W = flipper_class_word.
+--1> 	
 
 *** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 6
 > %% guarantees idea & object
 > 
 > %% TRUE
-> function_singular_idea_object( tom, now, tom_roman_idea, tom_catiline_idea,
-|    			     catiline)?
+> function_singular_idea_object( tom, now, F, I, O)?
 
 *** Yes
+F = tom_human_idea, I = tom_russell_idea, O = russell.
+--1> ;
+
+*** Yes
+F = tom_human_idea, I = tom_cicero_idea, O = cicero.
+--1> ;
+
+*** Yes
+F = tom_human_idea, I = tom_tully_idea, O = cicero.
+--1> ;
+
+*** Yes
+F = tom_human_idea, I = tom_catiline_idea, O = catiline.
+--1> ;
+
+*** Yes
+F = tom_roman_idea, I = tom_cicero_idea, O = cicero.
+--1> ;
+
+*** Yes
+F = tom_roman_idea, I = tom_tully_idea, O = cicero.
+--1> ;
+
+*** Yes
+F = tom_roman_idea, I = tom_catiline_idea, O = catiline.
+--1> ;
+
+*** Yes
+F = tom_american_idea, I = tom_quine_idea, O = quine.
+--1> ;
+
+*** Yes
+F = tom_dolphin_class_idea, I = tom_flipper_class_idea, O = flipper.
 --1> 	
 
 *** No
+> 	
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 7
 > %%
 > %% TRUE
 > function_singular_word_idea_object( tom, now,
-|    				   roman_word, catiline_word,
-|    				   tom_catiline_idea, catiline)?
+|    				   F, W,
+|    				   I, O)?
 
 *** Yes
---1> 
+F = roman_word, I = tom_cicero_idea, O = cicero, W = cicero_word.
+--1> ;
+
+*** Yes
+F = roman_word, I = tom_catiline_idea, O = catiline, W = catiline_word.
+--1> ;
+
+*** Yes
+F = roman_word, I = tom_tully_idea, O = cicero, W = tully_word.
+--1> ;
+
+*** Yes
+F = american_word, I = tom_quine_idea, O = quine, W = quine_word.
+--1> ;
+
+*** Yes
+F = human_word, I = tom_russell_idea, O = russell, W = russell_word.
+--1> ;
+
+*** Yes
+F = human_word, I = tom_cicero_idea, O = cicero, W = cicero_word.
+--1> ;
+
+*** Yes
+F = human_word, I = tom_catiline_idea, O = catiline, W = catiline_word.
+--1> ;
+
+*** Yes
+F = human_word, I = tom_tully_idea, O = cicero, W = tully_word.
+--1> ;
+
+*** Yes
+F = dolphin_class_word, 
+I = tom_flipper_class_idea, 
+O = flipper, 
+W = flipper_class_word.
+
+--1> 	
 
 *** No
+> 
 > write_stats(Ignore)?
-I am not sure of units here
-Clock Time 1.61456 Seconds
-CPU Time 0 Milliseconds
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

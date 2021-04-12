@@ -1,0 +1,171 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+Time Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> 
+> same_sense_idea(tom, quine, now, now, Idea1, Idea2, Object)?
+
+*** Yes
+Idea1 = tom_russell_idea, Idea2 = quine_russell_idea, Object = russell.
+--1> ;
+
+*** Yes
+Idea1 = tom_quine_idea, Idea2 = quine_quine_idea, Object = quine.
+--1> ;	
+
+*** Yes
+Idea1 = tom_cicero_idea, Idea2 = quine_cicero_idea, Object = cicero.
+--1> ;
+
+*** Yes
+Idea1 = tom_cicero_idea, Idea2 = quine_tully_idea, Object = cicero.
+--1> ;
+
+*** Yes
+Idea1 = tom_tully_idea, Idea2 = quine_cicero_idea, Object = cicero.
+--1> ;
+
+*** Yes
+Idea1 = tom_tully_idea, Idea2 = quine_tully_idea, Object = cicero.
+--1> ;
+
+*** Yes
+Idea1 = tom_catiline_idea, Idea2 = quine_catiline_idea, Object = catiline.
+--1> ;
+
+*** Yes
+Idea1 = tom_denounced_idea, Idea2 = quine_denounced_idea, Object = denounced.
+--1> ;
+
+*** Yes
+Idea1 = tom_mortal_idea, Idea2 = quine_mortal_idea, Object = mortal.
+--1> ;
+
+*** Yes
+Idea1 = tom_human_idea, Idea2 = quine_human_idea, Object = human.
+--1> ;
+
+*** Yes
+Idea1 = tom_dolphin_idea, Idea2 = quine_dolphin_idea, Object = dolphin.
+--1> ;
+
+*** Yes
+Idea1 = tom_roman_idea, Idea2 = quine_roman_idea, Object = roman.
+--1> ;	
+
+*** Yes
+Idea1 = tom_american_idea, Idea2 = quine_american_idea, Object = american.
+--1> ;
+
+*** No
+> 
+> same_sense_word(tom, quine, now, now, Word1, Word2, Object)?
+
+*** Yes
+Object = russell, Word1 = russell_word, Word2 = russell_word.
+--1> ;
+
+*** Yes
+Object = quine, Word1 = quine_word, Word2 = quine_word.
+--1> ;	
+
+*** Yes
+Object = cicero, Word1 = cicero_word, Word2 = cicero_word.
+--1> ;
+
+*** Yes
+Object = cicero, Word1 = cicero_word, Word2 = tully_word.
+--1> ;
+
+*** Yes
+Object = catiline, Word1 = catiline_word, Word2 = catiline_word.
+--1> ;
+
+*** Yes
+Object = cicero, Word1 = tully_word, Word2 = cicero_word.
+--1> ;
+
+*** Yes
+Object = cicero, Word1 = tully_word, Word2 = tully_word.
+--1> ;
+
+*** Yes
+Object = denounced, Word1 = denounced_word, Word2 = denounced_word.
+--1> ;
+
+*** Yes
+Object = roman, Word1 = roman_word, Word2 = roman_word.
+--1> ;
+
+*** Yes
+Object = dolphin, Word1 = dolphin_word, Word2 = dolphin_word.
+--1> ;
+
+*** Yes
+Object = human, Word1 = human_word, Word2 = human_word.
+--1> ;
+
+*** No
+> ;	
+> ;
+> 	  
+> same_sense_thought(tom, quine, now, now,
+|    		    [tom_denounced_idea, tom_cicero_idea, tom_catiline_idea],
+|    		    [quine_denounced_idea, quine_cicero_idea, quine_catiline_idea] )?
+
+*** Yes
+--1> 
+
+*** No
+> 
+> same_sense_thought(tom, quine, now, now,
+|    		    [tom_denounced_idea, tom_tully_idea, tom_catiline_idea],
+|    		    [quine_denounced_idea, quine_cicero_idea, quine_catiline_idea] )?
+
+*** Yes
+--1> 
+
+*** No
+> 
+> 
+> same_sense_sentence(tom, quine, now, now,
+|    		    [denounced_word, tully_word, catiline_word],
+|    		    [denounced_word, cicero_word, catiline_word] )?
+
+*** Yes
+--1> 
+
+*** No
+> 
+> 
+> 
+> 
+> 
+> 
+> write_stats(Ignore)?
+Stats Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+

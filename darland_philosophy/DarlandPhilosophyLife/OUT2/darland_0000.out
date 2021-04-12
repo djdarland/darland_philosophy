@@ -4,7 +4,7 @@
 *** Yes
 
 *** Yes
-Fri 05 Feb 2021 08:48:21 PM CST
+Sun 28 Feb 2021 03:34:12 PM CST
 
 *** Yes
 > > 
@@ -239,10 +239,8 @@ Ignore = @.
 > 
 > rrrr( quine, now, cicero_word, quine_tully_idea)?
 
-*** Yes
---1> 
-
 *** No
+> 
 > %% Next should be TRUE.
 > 
 > rrrr( quine, now, tully_word, quine_tully_idea)?
@@ -255,10 +253,8 @@ Ignore = @.
 > 
 > rrrr( quine, now, tully_word, quine_cicero_idea)?
 
-*** Yes
---1> 
-
 *** No
+> 
 > %% Next should be TRUE.
 > 
 > ssss( quine, now, quine_tully_idea, cicero)?
@@ -293,7 +289,7 @@ Ignore = @.
 *** No
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.61258 Seconds
+Clock Time 1.61455 Seconds
 CPU Time 0 Milliseconds
 
 *** Yes

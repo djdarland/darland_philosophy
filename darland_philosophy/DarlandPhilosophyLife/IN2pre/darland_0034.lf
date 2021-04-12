@@ -84,63 +84,126 @@ write_time(Ignore)?
 %% Theoretically the arguments could be variables - to find ANY cases.
 %% But there are so many combinations that there is too little memory.
 
-qqqq(opaque_believes_words, tom, now, [[denounced_word],
+qqqq(truly_opaque_believes_words, tom, now, [[denounced_word],
 				 [cicero_word],
 				 [catiline_word]] )?
 ;
 
-qqqq(opaque_believes_words, tom, now, [[denounced_word],
+qqqq(truly_opaque_believes_words, tom, now, [[denounced_word],
 				 [tully_word],
 				 [catiline_word]] )?
 ;
 
-qqqq(opaque_believes_in_ideas, tom, now, [tom_denounced_idea,
+qqqq(truly_opaque_believes_in_ideas, tom, now, [tom_denounced_idea,
 					 tom_cicero_idea,
 					 tom_catiline_idea])?
 ;
 
-%% THIS is the only OPAQUE case -- when only OBJECTS are considered.
-	
-qqqq(opaque_believes_objects, tom, now,  [[denounced], [cicero], [catiline]])?
+qqqq(truly_opaque_believes_objects, tom, now,  [[denounced], [cicero], [catiline]])?
 ;
 
-qqqq(opaque_believes_words_ideas, tom, now,  [[denounced_word, tom_denounced_idea],
+qqqq(truly_opaque_believes_words_ideas, tom, now,  [[denounced_word, tom_denounced_idea],
 				       [cicero_word, tom_cicero_idea],
 				       [catiline_word, tom_catiline_idea]])?
 ;
 
-qqqq(opaque_believes_words_ideas, tom, now,  [[denounced_word, tom_denounced_idea],
+qqqq(truly_opaque_believes_words_ideas, tom, now,  [[denounced_word, tom_denounced_idea],
 				       [tully_word, tom_tully_idea],
 				       [catiline_word, tom_catiline_idea]])?
 ;
 
-qqqq(opaque_believes_words_objects, tom, now,  [[denounced_word, denounced],
+qqqq(truly_opaque_believes_words_objects, tom, now,  [[denounced_word, denounced],
 					 [cicero_word, cicero],
 					 [catiline_word, catiline]])?
 ;
 
-qqqq(opaque_believes_words_objects, tom, now,  [[denounced_word, denounced],
+qqqq(truly_opaque_believes_words_objects, tom, now,  [[denounced_word, denounced],
 					 [tully_word, cicero],
 					 [catiline_word, catiline]])?
 ;
 
-qqqq(opaque_believes_ideas_objects, tom, now,  [[tom_denounced_idea, denounced],
+qqqq(truly_opaque_believes_ideas_objects, tom, now,  [[tom_denounced_idea, denounced],
 					 [tom_cicero_idea, cicero],
 					 [tom_catiline_idea, catiline]])?
 ;
 
-qqqq(opaque_believes_ideas_objects, tom, now,  [[tom_denounced_idea, denounced],
+qqqq(truly_opaque_believes_ideas_objects, tom, now,  [[tom_denounced_idea, denounced],
 					 [tom_tully_idea, cicero],
 					 [tom_catiline_idea, catiline]])?
 ;
 
-qqqq(opaque_believes_words_ideas_objects, tom, now,
+qqqq(truly_opaque_believes_words_ideas_objects, tom, now,
 				     [[denounced_word, tom_denounced_idea, denounced],
 				     [cicero_word, tom_cicero_idea, cicero],
 				     [catiline_word, tom_catiline_idea, catiline]])?
 ;
 
-qqqq(opaque_believes_words_ideas_objects, tom, now,
+qqqq(truly_opaque_believes_words_ideas_objects, tom, now,
+				     [[denounced_word, tom_denounced_idea, denounced],
+				     [tully_word, tom_tully_idea, cicero],
+				     [catiline_word, tom_catiline_idea, catiline]])?
+;
+
+%% pseudo_opaque
+
+	
+qqqq(pseudo_opaque_believes_words, tom, now, [[denounced_word],
+				 [cicero_word],
+				 [catiline_word]] )?
+;
+
+qqqq(pseudo_opaque_believes_words, tom, now, [[denounced_word],
+				 [tully_word],
+				 [catiline_word]] )?
+;
+
+qqqq(pseudo_opaque_believes_in_ideas, tom, now, [tom_denounced_idea,
+					 tom_cicero_idea,
+					 tom_catiline_idea])?
+;
+
+%% THIS is the only PSEUDO_OPAQUE case -- when only OBJECTS are considered.
+	
+qqqq(pseudo_opaque_believes_objects, tom, now,  [[denounced], [cicero], [catiline]])?
+;
+
+qqqq(pseudo_opaque_believes_words_ideas, tom, now,  [[denounced_word, tom_denounced_idea],
+				       [cicero_word, tom_cicero_idea],
+				       [catiline_word, tom_catiline_idea]])?
+;
+
+qqqq(pseudo_opaque_believes_words_ideas, tom, now,  [[denounced_word, tom_denounced_idea],
+				       [tully_word, tom_tully_idea],
+				       [catiline_word, tom_catiline_idea]])?
+;
+
+qqqq(pseudo_opaque_believes_words_objects, tom, now,  [[denounced_word, denounced],
+					 [cicero_word, cicero],
+					 [catiline_word, catiline]])?
+;
+
+qqqq(pseudo_opaque_believes_words_objects, tom, now,  [[denounced_word, denounced],
+					 [tully_word, cicero],
+					 [catiline_word, catiline]])?
+;
+
+qqqq(pseudo_opaque_believes_ideas_objects, tom, now,  [[tom_denounced_idea, denounced],
+					 [tom_cicero_idea, cicero],
+					 [tom_catiline_idea, catiline]])?
+;
+
+qqqq(pseudo_opaque_believes_ideas_objects, tom, now,  [[tom_denounced_idea, denounced],
+					 [tom_tully_idea, cicero],
+					 [tom_catiline_idea, catiline]])?
+;
+
+qqqq(pseudo_opaque_believes_words_ideas_objects, tom, now,
+				     [[denounced_word, tom_denounced_idea, denounced],
+				     [cicero_word, tom_cicero_idea, cicero],
+				     [catiline_word, tom_catiline_idea, catiline]])?
+;
+
+qqqq(pseudo_opaque_believes_words_ideas_objects, tom, now,
 				     [[denounced_word, tom_denounced_idea, denounced],
 				     [tully_word, tom_tully_idea, cicero],
 				     [catiline_word, tom_catiline_idea, catiline]])?

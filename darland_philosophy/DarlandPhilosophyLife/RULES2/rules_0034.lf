@@ -23,49 +23,96 @@
 %% I take a belief as opaque if the Subject believes and
 %% disbelieves the same arguments in a belief.
 
-%% It turns out this only occurs in the opaque_believes_objects case
-%% This is not an ontological problem, because although it is opaque,
+%% truly_opaque is belief in exact contraries - this never occurrs!
+
+%% It turns out this only occurs in the pseudo_opaque_believes_objects case
+%% This is not an ontological problem, because although it is pseudo_opaque,
 %% it is defined in terms of universals none of which are opaque.
+%% belief and disbelief are not really contraries.
 
 %% 1
 
-opaque_believes_words(Subject, Time, List) :-
+truly_opaque_believes_words(Subject, Time, List) :-
+    believes_words(Subject, Time, List),
+    \+ believes_words(Subject, Time, List).
+
+%% 2
+
+truly_opaque_believes_in_ideas(Subject, Time, List) :-
+    believes_in_ideas(Subject, Time, List),
+    \+ believes_in_ideas(Subject, Time, List).
+
+%% 3
+
+truly_opaque_believes_objects(Subject, Time, List) :-
+    believes_objects(Subject, Time, List),
+    \+ believes_objects(Subject, Time, List).
+
+%% 4
+
+truly_opaque_believes_words_ideas(Subject, Time, List) :-
+    believes_words_ideas(Subject, Time, List),
+    \+ believes_words_ideas(Subject, Time, List).
+
+%% 5
+
+truly_opaque_believes_words_objects(Subject, Time, List) :-
+    believes_words_objects(Subject, Time, List),
+    \+ believes_words_objects(Subject, Time, List).
+
+%% 6
+
+truly_opaque_believes_ideas_objects(Subject, Time, List) :-
+    believes_ideas_objects(Subject, Time, List),
+    \+ believes_ideas_objects(Subject, Time, List).
+
+%% 7
+
+truly_opaque_believes_words_ideas_objects(Subject, Time, List) :-
+    believes_words_ideas_objects(Subject, Time, List),
+    \+ believes_words_ideas_objects(Subject, Time, List).
+
+%% pseudo_opaque
+
+%% 1
+
+pseudo_opaque_believes_words(Subject, Time, List) :-
     believes_words(Subject, Time, List),
     disbelieves_words(Subject, Time, List).
 
 %% 2
 
-opaque_believes_in_ideas(Subject, Time, List) :-
+pseudo_opaque_believes_in_ideas(Subject, Time, List) :-
     believes_in_ideas(Subject, Time, List),
     disbelieves_in_ideas(Subject, Time, List).
 
 %% 3
 
-opaque_believes_objects(Subject, Time, List) :-
+pseudo_opaque_believes_objects(Subject, Time, List) :-
     believes_objects(Subject, Time, List),
     disbelieves_objects(Subject, Time, List).
 
 %% 4
 
-opaque_believes_words_ideas(Subject, Time, List) :-
+pseudo_opaque_believes_words_ideas(Subject, Time, List) :-
     believes_words_ideas(Subject, Time, List),
     disbelieves_words_ideas(Subject, Time, List).
 
 %% 5
 
-opaque_believes_words_objects(Subject, Time, List) :-
+pseudo_opaque_believes_words_objects(Subject, Time, List) :-
     believes_words_objects(Subject, Time, List),
     disbelieves_words_objects(Subject, Time, List).
 
 %% 6
 
-opaque_believes_ideas_objects(Subject, Time, List) :-
+pseudo_opaque_believes_ideas_objects(Subject, Time, List) :-
     believes_ideas_objects(Subject, Time, List),
     disbelieves_ideas_objects(Subject, Time, List).
 
 %% 7
 
-opaque_believes_words_ideas_objects(Subject, Time, List) :-
+pseudo_opaque_believes_words_ideas_objects(Subject, Time, List) :-
     believes_words_ideas_objects(Subject, Time, List),
     disbelieves_words_ideas_objects(Subject, Time, List).
 
