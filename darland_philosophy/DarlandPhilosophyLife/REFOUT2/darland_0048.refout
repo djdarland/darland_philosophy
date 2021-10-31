@@ -1,0 +1,40 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+Time Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> believes_means(tom, now, uuuu, cicero_word, cicero)?
+
+*** Yes
+--1> 
+
+*** No
+> 
+> believes_means(tom, now, uuuu, denounced_word, denounced)?
+
+*** Yes
+--1> 
+
+*** No
+> 
+> believes_means(tom, now, uuuu, catiline_word, catiline)?
+
+*** Yes
+--1> halt?
+

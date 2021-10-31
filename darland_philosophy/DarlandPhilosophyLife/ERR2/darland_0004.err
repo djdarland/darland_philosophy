@@ -1,0 +1,33 @@
+*** Error: 'believes_word_idea_object_A(@,@,1,1,[[@,@,@],[@,@,@]])' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'believes_word_idea_object_A(@,@,1,2,[[@,@,@],[@,@,@],[@,@,@]])' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'believes_word_idea_A(@,@,@,@,[[@,@],[@,@]])' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'believes_word_idea_A(@,@,@,@,[[@,@],[@,@],[@,@]])' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'believes_idea_object_A(@,@,1,1,[[@,@],[@,@]])' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'believes_idea_object_A(@,@,@,@,[[@,@],[A_Idea,A_Object],[A_Idea,A_Object]])' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'believes_object_A(@,@,1,1,[[@],[@]])' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'believes_object_A(@,@,1,2,[[@],[@],[@]])' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort

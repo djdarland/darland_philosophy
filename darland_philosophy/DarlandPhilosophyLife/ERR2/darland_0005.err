@@ -1,0 +1,61 @@
+*** Error: 'opaque_believes_word_idea_object_L(@,@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'opaque_believes_word_object_L(@,@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'opaque_believes_word_idea_L(@,@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'opaque_believes_idea_object_L(@,@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'opaque_believes_object_L(@,@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'transparent_believes_word_idea_object_L(@,@,1,1,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'transparent_believes_word_idea_object_L(@,@,1,2,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'transparent_believes_word_object_L(@,@,1,1,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'transparent_believes_word_object_L(@,@,1,2,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'transparent_believes_word_idea_L(@,@,1,1,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'transparent_believes_word_idea_L(@,@,1,2,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'transparent_believes_idea_object_L(@,@,1,1,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'transparent_believes_idea_object_L(@,@,1,2,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'transparent_believes_object_L(@,@,1,1,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'transparent_believes_object_L(@,@,1,2,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort

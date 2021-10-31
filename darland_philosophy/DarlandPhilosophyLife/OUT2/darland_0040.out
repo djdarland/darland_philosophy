@@ -531,6 +531,10 @@ F = human, O = russell.
 --1> ;
 
 *** Yes
+F = human, O = quine.
+--1> ;
+
+*** Yes
 F = human, O = cicero.
 --1> ;
 
@@ -556,10 +560,6 @@ F = roman, O = catiline.
 
 *** Yes
 F = american, O = quine.
---1> ;
-
-*** Yes
-F = dolphin, O = flipper.
 --1> 	
 
 *** No
@@ -597,6 +597,10 @@ F = human_word, O = russell, W = russell_word.
 --1> ;
 
 *** Yes
+F = human_word, O = quine, W = quine_word.
+--1> ;
+
+*** Yes
 F = human_word, O = cicero, W = cicero_word.
 --1> ;
 
@@ -606,10 +610,6 @@ F = human_word, O = catiline, W = catiline_word.
 
 *** Yes
 F = human_word, O = cicero, W = tully_word.
---1> ;
-
-*** Yes
-F = dolphin_class_word, O = flipper, W = flipper_class_word.
 --1> 	
 
 *** No
@@ -623,6 +623,10 @@ F = dolphin_class_word, O = flipper, W = flipper_class_word.
 
 *** Yes
 F = tom_human_idea, I = tom_russell_idea, O = russell.
+--1> ;
+
+*** Yes
+F = tom_human_idea, I = tom_quine_idea, O = quine.
 --1> ;
 
 *** Yes
@@ -651,10 +655,6 @@ F = tom_roman_idea, I = tom_catiline_idea, O = catiline.
 
 *** Yes
 F = tom_american_idea, I = tom_quine_idea, O = quine.
---1> ;
-
-*** Yes
-F = tom_dolphin_class_idea, I = tom_flipper_class_idea, O = flipper.
 --1> 	
 
 *** No
@@ -688,6 +688,10 @@ F = human_word, I = tom_russell_idea, O = russell, W = russell_word.
 --1> ;
 
 *** Yes
+F = human_word, I = tom_quine_idea, O = quine, W = quine_word.
+--1> ;
+
+*** Yes
 F = human_word, I = tom_cicero_idea, O = cicero, W = cicero_word.
 --1> ;
 
@@ -697,14 +701,6 @@ F = human_word, I = tom_catiline_idea, O = catiline, W = catiline_word.
 
 *** Yes
 F = human_word, I = tom_tully_idea, O = cicero, W = tully_word.
---1> ;
-
-*** Yes
-F = dolphin_class_word, 
-I = tom_flipper_class_idea, 
-O = flipper, 
-W = flipper_class_word.
-
 --1> 	
 
 *** No

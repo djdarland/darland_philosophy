@@ -384,6 +384,81 @@ qqqq(function_plural_word_idea, tom, now, roman_word, human_class_word,
 qqqq(function_plural_word_idea, tom, now, dolphin_word, roman_class_word,
 				 tom_roman_class_idea)?
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Start testing new predicates 9/21/2021 
+
+
+qqqq(tttt, tom, now, Y, X)? 
+
+;
+
+;
+
+qqqq(inclusion_plural_words_objects, tom, now, human_class_word, american_class_word)?
+	
+qqqq(inclusion_plural_ideas_objects, tom, now, tom_human_class_idea, tom_american_class_idea)?
+
+qqqq(inclusion_plural_words_ideas_objects, tom, now, human_class_word, tom_human_class_idea, american_class_word, tom_american_class_idea)?
+
+
+qqqq(in_intersection_plural_words_objects, tom, now, human_class_word, roman_class_word, cicero)?
+
+qqqq(in_intersection_plural_ideas_objects, tom, now, tom_human_class_idea, tom_roman_class_idea, cicero)?
+
+qqqq(in_intersection_plural_words_ideas_objects, tom, now, human_class_word, roman_class_word, tom_human_class_idea, tom_roman_class_idea, cicero)?
+
+qqqq(in_union_plural_words_objects, tom, now, human_class_word, roman_class_word, russell)?
+
+qqqq(in_union_plural_ideas_objects, tom, now, tom_human_class_idea, tom_roman_class_idea, russell)?
+
+qqqq(in_union_plural_words_ideas_objects, tom, now, human_class_word, roman_class_word, tom_human_class_idea, tom_roman_class_idea, russell)?
+
+qqqq(in_w1_minus_w2_words_objects, tom, now, human_class_word, roman_class_word, cicero)?
+
+
+qqqq(in_w1_minus_w2_words_objects, tom, now, human_class_word, roman_class_word, russell)?
+
+qqqq(in_i1_minus_i2_ideas_objects, tom, now, tom_human_class_idea, tom_roman_class_idea, cicero)?
+
+qqqq(in_i1_minus_i2_ideas_objects, tom, now, tom_human_class_idea, tom_roman_class_idea, russell)?
+
+qqqq(in_wi1_minus_wi2_words_ideas_objects, tom, now, human_class_word, roman_class_word, tom_human_class_idea, tom_roman_class_idea, cicero)?
+
+qqqq(in_wi1_minus_wi2_words_ideas_objects, tom, now, human_class_word, roman_class_word, tom_human_class_idea, tom_roman_class_idea, russell)?
+
+qqqq(in_one_plural_word, tom, now, flipper_class_word)?
+
+qqqq(in_one_plural_word, tom, now, american_class_word)?
+
+qqqq(in_one_plural_idea, tom, now, tom_flipper_class_idea)?
+
+qqqq(in_one_plural_idea, tom, now, tom_american_class_idea)?
+
+qqqq(in_one_plural_word_idea, tom, now, flipper_class_word, tom_flipper_class_idea)?
+
+qqqq(in_one_plural_word_idea, tom, now, american_class_word, tom_american_class_idea)?
+
+qqqq(in_two_plural_word, tom, now, american_class_word)?
+
+qqqq(in_two_plural_word, tom, now, flipper_class_word)?
+
+qqqq(in_two_plural_idea, tom, now, tom_american_class_idea)?
+
+qqqq(in_two_plural_idea, tom, now, tom_flipper_class_idea)?
+
+qqqq(in_two_plural_word_idea, tom, now, american_class_word, tom_american_class_idea)?
+
+qqqq(in_two_plural_word_idea, tom, now, flipper_class_word, tom_flipper_class_idea)?
+
+qqqq(in_successor_plural_idea_object, tom, now, tom_flipper_class_idea, tom_cat_class_idea)?
+
+A = bagof(Objects, ssss(tom, now, tom_cicero_idea, Objects))?
+
+
+class_list(B, tom, now, tom_flipper_class_idea)?
+
+
+
 write_stats(Ignore)?
 
 halt?
