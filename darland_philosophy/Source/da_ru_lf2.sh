@@ -47,7 +47,11 @@ echo "63 rules_0063.lf - Rules for Satisfiability Problem with Statistics"
 echo "64 rules_0064.lf - Rules for Stats for Traverse - Satisfiability"
 echo "65 rules_0065.lf - Rules for call_once Satisfiability Problem - 2"
 echo "68 rules_0068.lf - Rules for Traced Satisfiability Problem"
-
+echo "71 rules_0071.lf - Whitehead Rules for Understanding Using Number"
+echo "72 rules_0072.lf - Whitehead Rules for Belief Using Number"
+echo "73 rules_0073.lf - Whitehead Rules for Checking Database of Facts"
+echo "74 rules_0074.lf - Whitehead Rules for Opacity Using Number"
+echo "81 rules_0081.lf - Rules for Rules for Physics Using Number"
 echo "-----------"
 if test -f da_ru_lf2.sh
 then
@@ -95,6 +99,11 @@ case $select in
 64) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0064.lf;;
 65) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0065.lf;;
 68) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0068.lf;;
+71) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0071.lf;;
+72) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0072.lf;;
+73) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0073.lf;;
+74) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0074.lf;;
+81) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0081.lf;;
 666) $EDITOR da_ru_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

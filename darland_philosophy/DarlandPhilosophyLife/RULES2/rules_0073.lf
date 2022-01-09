@@ -1,0 +1,140 @@
+rrrr_check1(S, T, W, I) :-
+	rrrr(S,T,W,I),
+	\+ person(S, N),
+	write("Error: have rrrr(", S,
+	      ", ", T,
+	      ", ", W,
+	      ", ", I, " but not person(", S,
+	      ",", N, ")").
+
+rrrr_check2(S, T, W, I) :-
+	rrrr(S,T,W,I),
+	\+ idea_of(S, I),
+	write("Error: have rrrr(", S,
+	      ", ", T,
+	      ", ", W,
+	      ", ", I,
+	      " but not qqqq(idea_of, ",
+	      S,
+	      ", ", I, ").").
+
+ssss_check1(S, T, W, I) :-
+	ssss(S,T,I,O),
+	\+ person(S, N),
+	write("Error: have ssss(", S,
+	      ", ", T,
+	      ", ", I,
+	      ", ", O, " but not person(", S,
+	      ",", N, ")").
+
+ssss_check2(S, T, W, I) :-
+	ssss(S,T,I,O),
+	\+ idea_of(S, I),
+	write("Error: have ssss(", S,
+	      ", ", T,
+	      ", ", I,
+	      ", ", O,
+	      " but not qqqq(idea_of, ",
+	      S,
+	      ", ", I, ").").
+
+tttt_check1(S, T, W, I) :-
+	tttt(S,T,I,O),
+	\+ person(S, N),
+	write("Error: have tttt(", S,
+	      ", ", T,
+	      ", ", I,
+	      ", ", O, " but not person(", S,
+	      ",", N, ")").
+
+tttt_check2(S, T, W, I) :-
+	tttt(S,T,I,O),
+	\+ idea_of(S, I),
+	write("Error: have tttt(", S,
+	      ", ", T,
+	      ", ", I,
+	      ", ", O,
+	      " but not qqqq(idea_of, ",
+	      S,
+	      ", ", I, ").").
+
+check_arity(I, A) :-
+	idea_of(S, I),
+%	write("arity S = ", S, " I = ", I),nl,
+	type_idea(I,T),
+%	write("type I = ", I, " T = ", T),nl,
+	T > 0,
+	\+ arity_idea(I, N),
+	write("Error: have idea_of(", S, ",", I, ").",
+	      " but not qqqq(arity_idea, ", I, ", NNNN)").
+
+check_relation1(I, R) :-
+	idea_of(S, I),
+	write("type I = ", I, " T = ", T),nl,
+	T > 0,
+	ssss(S, T, I, R),
+	\+ relation(I, R),
+	write("Error: have ssss(", S,
+	      ",", T, ",", I, ",", R, ").",
+	      " but not relation(", R, ").").
+check_relation2(I, R) :-
+	relation(R),
+	\+ ssss(S, T, I, R),
+	write("Error: have relation(", R, ").",
+	      " but not qqqq(ssss, ", S, ", ",
+	     T, ", ", I, ",", R, ").").
+
+check_type(I,T) :-
+	idea_of(S, I),
+	\+ type_idea(I,T),
+	write("Error: have idea_of(", S, ",", I, ").",
+	      " but not qqqq(type_idea, ", I, ", NNNN)").
+
+check_number(I,N) :-
+	idea_of(S, I),
+	\+ number_idea(I,T),
+	write("Error: have idea_of(", S, ",", I, ").",
+	      " but not qqqq(number_idea, ", I, ", NNNN)").
+
+rrrr_check3(W,I) :-
+	idea_of(S, I),
+	\+ rrrr(S, T, W, I),
+	write("Warning: have idea_of(", S, ",", I, ").",
+	      " but not qqqq(rrrr, ", S, ", ", T,
+	      ", ",  W, ", ", I, ").").
+
+ssss_check3(W,I) :-
+	idea_of(S, I),
+	number_idea(I, singular),
+	\+ ssss(S, T, I, O),
+	write("Warning: have idea_of(", S, ",", I, ").",
+	      " but not qqqq(ssss, ", S, ", ", T,
+	      ", ",  I, ", ", O, ").").
+
+tttt_check3(W,I) :-
+	idea_of(S, I),
+	number_idea(I, plural),
+	\+ tttt(S, T, I, O),
+	write("Warning: have idea_of(", S, ",", I, ").",
+	      " but not qqqq(tttt, ", S, ", ", T,
+	      ", ",  I, ", ", O, ").").
+
+check_conceptual_feeling_in_ideas1(S,Sa,T,L) :-
+	conceptual_feeling_in_ideas(S,Sa,T,L),
+	\+ person(S, N),
+	write("Error: have conceptual_feeling_in_ideas(",
+	      S, ", ",
+	      Sa, 
+	      ", ", T,
+	      ", ", L,
+	      " but not person(", S,
+	      ",", N, ")").
+
+
+check_dc1(Dc, Aos) :-
+	defining_characteristic(Dc),
+	\+ qqqq4([Dc, Aos]),
+	write("Warning: Have defining_characteristic(",
+	      Dc, ") but not qqqq4([", Dc, ", ", Aos,
+	      "]).").
+

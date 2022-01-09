@@ -24,6 +24,8 @@ echo "Philosophy Facts Files"
 echo "-----------"
 
 echo "31 facts_0031.lf data for Everything with Number added for Ideas"
+echo "71 facts_0071.lf data for Whitehead phil"
+echo "81 facts_0081.lf data for Physics"
 
 echo "-----------"
 if test -f da_fa_lf2.sh
@@ -43,6 +45,8 @@ case $select in
 5) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0005.lf;;
 6) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0006.lf;;
 31) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0031.lf;;
+71) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0071.lf;;
+81) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0081.lf;;
 666) $EDITOR da_fa_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 
