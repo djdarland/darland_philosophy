@@ -1,3 +1,27 @@
+I am now working on expressing my ideas in terms
+of Alfred North Whitehead's Process and Reality.
+
+NOTES:
+You will WildLIFE and Unicon.
+See https://github.com/djdarland/WildLIFE
+
+and
+
+http://unicon.org
+
+I got an error using the ppa, but unicon seemed to
+work anyway.
+
+then you need to compile qqqq_pre.icn
+
+unicon qqqq_pre.icn
+
+also create directories within DarlandPhilosophyLife:
+LFTMP2
+REFDIFF2
+ERRDIFF2
+
+
 I restarted my resumtion of my work. I have had several new ideas.
 Mainly, I have one main predicate - qqqq (in my writing Q).
 My writing is mostly at:
