@@ -230,7 +230,7 @@ quine_opaque_believes_objects(Subject, Time,
 	corefer(List1, List2),
 	conceptual_feeling_objects(Subject, believes,
 				   Time, List1),
-	\+ conceptual_feeling(Subject, believes,
+	\+ conceptual_feeling_objects(Subject, believes,
 			      Time, List2).
 
 
@@ -239,7 +239,7 @@ quine_opaque_believes_objects(Subject, Time,
 	corefer(List1, List2),
 	conceptual_feeling_objects(Subject, believes,
 				   Time, List1),
-	\+ conceptual_feeling(Subject, believes,
+	\+ conceptual_feeling_objects(Subject, believes,
 			      Time, List2).
 
 %% 4
