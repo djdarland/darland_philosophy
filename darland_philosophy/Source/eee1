@@ -38,6 +38,10 @@ echo "71 Edit darland_0071.lf Cases with Understanding Using Number - For Whiteh
 echo "72 Edit darland_0072.lf Cases with Atomic Belief Using Number - For Whitehead"
 echo "73 Edit darland_0073.lf Cases for checking database of facts - For Whitehead"
 echo "74 Edit darland_0074.lf Cases with Opacity Using Number - For Whitehead"
+echo "75 Edit darland_0075.lf Essentially Singular terms"
+echo "76 Edit darland_0076.lf Plural terms"
+echo "77 Edit darland_0077.lf Contingently Singular terms"
+echo "78 Edit darland_0078.lf Singular terms"
 
 echo "-----------"
 echo "500 NO_WARANTY.txt"
@@ -101,6 +105,10 @@ case $select in
 72) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0072.lf;;
 73) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0073.lf;;
 74) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0074.lf;;
+75) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0075.lf;;
+76) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0076.lf;;
+77) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0077.lf;;
+78) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0078.lf;;
 91) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0091.lf;;
 92) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0092.lf;;
 94) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0094.lf;;
@@ -146,8 +154,11 @@ echo "71 Edit darland_0071.lf Cases with Understanding in singular - For Whitehe
 echo "72 Edit darland_0072.lf Cases with Atomic Belief in singular - For Whitehead"
 echo "73 Edit darland_0073.lf Cases for checking database of facts - For Whitehead"
 echo "74 Edit darland_0074.lf Cases with Opacity Using singular - For Whitehead"
+echo "75 Edit darland_0075.lf Essentially Singular terms"
+echo "76 Edit darland_0076.lf Plural terms"
+echo "77 Edit darland_0077.lf Contingently Singular terms"
+echo "78 Edit darland_0078.lf Singular terms"
 
-echo "81 Edit darland_0081.lf Cases For Physics"
 
 echo "-----------"
 echo "500 NO_WARANTY.txt"

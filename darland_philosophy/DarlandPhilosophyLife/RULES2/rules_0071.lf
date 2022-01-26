@@ -104,6 +104,21 @@ sense_of_object(Idea) :- ssss(Subject, Time, Idea, Object).
 %% uniqueness is essential to essentially singular ideas
 %% So it is required even for
 %% understanding or belief if ssss is used
+corefer([Head1 | Tail1], [Head2 | Tail2]) :-
+	corefer(Head1, Head2),
+	corefer(Tail1, Tail2).
+
+corefer(Head1, Head2) :-
+	\+ differ_refer(Head1, Head2).
+
+differ_refer(Head1, Head2) :-
+	refer([Head1, X]),
+	\+ refer([Head2, X]).
+	
+differ_refer(Head2, Head1) :-
+	refer([Head1, X]),
+	\+ refer([Head2, X]).
+	
 
 ssss2(Subject, Time, Idea, Object) :-
 	ssss(Subject, Time, Idea, Object),
@@ -111,7 +126,7 @@ ssss2(Subject, Time, Idea, Object) :-
 
 non_unique(Subject, Time, Idea, Object1) :-
 	ssss(Subject, Time, Idea, Object2),
-	Object1 :\== Object2.
+	\+ corefer(Object1, Object2).
 
 %% tttt2 also requires uniqueness
 %% this uniqueness is for contingently singular ideas
@@ -122,7 +137,7 @@ tttt2(Subject, Time, Idea, Object) :-
 
 non_unique_t(Subject, Time, Idea, Object1) :-
 	tttt(Subject, Time, Idea, Object2),
-	Object1 :\== Object2.
+	\+ corefer(Object1, Object2).
 
 %% definition of rrss in terms of rrrr and ssss.
 %% Note: qqqq is a dynamic predicate in WildLIFE

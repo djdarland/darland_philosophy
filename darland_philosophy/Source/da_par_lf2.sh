@@ -51,7 +51,10 @@ echo "71 Test darland_0071.lf Some examples understanding in singular - WHITEHEA
 echo "72 Test darland_0072.lf Some examples belief in singular - WHITEHEAD PR"
 echo "73 Test darland_0073.lf FACTS Database check"
 echo "74 Test darland_0074.lf Some examples opacity, agnosticism in singular - WHITEHEAD PR"
-echo "81 Test darland_0081.lf Physics Examples"
+echo "75 Test darland_0075.lf Some examples essentially singular terms"
+echo "76 Test darland_0076.lf Some examples plural terms"
+echo "77 Test darland_0077.lf Some examples contingently singular terms"
+echo "78 Test darland_0078.lf Some examples singular terms"
 echo "-----------"
 if test -f da_par_lf2.sh
 then
@@ -110,7 +113,10 @@ case $select in
 72) echo "Testing 0072"; cd ../*Life; ./work2.sh "darland_0072";;
 73) echo "Testing 0073"; cd ../*Life; ./work2.sh "darland_0073";;
 74) echo "Testing 0074"; cd ../*Life; ./work2.sh "darland_0074";;
-81) echo "Testing 0081"; cd ../*Life; ./work2.sh "darland_0081";;
+75) echo "Testing 0075"; cd ../*Life; ./work2.sh "darland_0075";;
+76) echo "Testing 0076"; cd ../*Life; ./work2.sh "darland_0076";;
+77) echo "Testing 0077"; cd ../*Life; ./work2.sh "darland_0077";;
+78) echo "Testing 0078"; cd ../*Life; ./work2.sh "darland_0078";;
 56) echo "Testing 0000"; cd ../*Life; ./work2.sh "darland_0000";;
 666) $EDITOR da_par_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;

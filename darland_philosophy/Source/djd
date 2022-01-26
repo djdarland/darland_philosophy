@@ -1,10 +1,9 @@
-darland_2017_0001.lf
-darland_2017_0002.lf
-darland_2017_0003.lf
-darland_2017_0004.lf
-darland_2017_0005.lf
-darland_2017_0006.lf
-darland_2017_0007.lf
-darland_2017_0008.lf
-darland_2017_0009.lf
-darland_2017_0010.lf
+$EDITOR da_clr_lf2.sh
+$EDITOR da_fa_lf2.sh
+$EDITOR da_in_lf2.sh
+$EDITOR da_lf2.sh
+$EDITOR da_lg_lf2.sh
+$EDITOR da_par_lf2.sh
+$EDITOR da_ru_lf2.sh
+$EDITOR pr_lf2.sh
+$EDITOR tsda_lf2.sh

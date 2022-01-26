@@ -80,7 +80,7 @@ check_relation1(I, R) :-
 check_relation2(I, R) :-
 	relation(R),
 	\+ ssss(S, T, I, R),
-	write("Error: have relation(", R, ").",
+	write("Warning: have relation(", R, ").",
 	      " but not qqqq(ssss, ", S, ", ",
 	     T, ", ", I, ",", R, ").").
 
@@ -133,8 +133,30 @@ check_conceptual_feeling_in_ideas1(S,Sa,T,L) :-
 
 check_dc1(Dc, Aos) :-
 	defining_characteristic(Dc),
-	\+ qqqq4([Dc, Aos]),
+	\+ refer([Dc, Aos]),
 	write("Warning: Have defining_characteristic(",
-	      Dc, ") but not qqqq4([", Dc, ", ", Aos,
+	      Dc, ") but not refer([", Dc, ", ", Aos,
 	      "]).").
 
+check_idea_of_1(Subject, Idea) :-
+	idea_of(Subject, Idea),
+	\+ rrrr(Subject, T, W, Idea),
+	write("Warning: Have idea_of(",
+	      Subject, ",", Idea, ") but not",
+	      "rrrr(", Subject, "and that idea").
+	
+check_idea_of_2(Subject, Idea) :-
+	idea_of(Subject, Idea),
+	\+ ssss(Subject, T, Idea, Object),
+	\+ tttt(Subject, T, Idea, Object),
+	write("Warning: Have idea_of(",
+	      Subject, ",", Idea, ") but not",
+	      "ssss(", Subject, "and that idea",
+	      "nor tttt(", Subject, "and that idea").
+	
+check_corefer(Item1, Item2) :-
+	defining_characteristic(Item1),
+%	write("Hello1",Item1),nl,
+	defining_characteristic(Item2),
+%	write("Hello2",Item2),nl,
+	corefer(Item1, Item2, []).

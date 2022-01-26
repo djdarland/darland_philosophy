@@ -61,13 +61,13 @@
 %% rrrr, ssss, and tttt represent prehensions.
 
 
-%% qqqq(rrrr, Type, Subject_dc, Time,
+%% rrrr( Type, Subject_dc, Time,
 %% A_word_dc, A_idea_dc).
 
 %% indicates that the Subject kas a prehrension of
 %% A_word_dc in prehension of A_idea_dc
 
-%% qqqq(ssss, Type, Subject_dc, Time,
+%% ssss( Type, Subject_dc, Time,
 %% A_idea_dc, A_object_dc).
 
 %% indicates that the Subject_dc has a prehrension of
@@ -731,63 +731,63 @@ refer([quine_tully_idea_dc, quine_tully_idea00005]).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-qqqq(rrrr, tom_dc, now, cicero_word_dc,
+rrrr( tom_dc, now, cicero_word_dc,
      tom_cicero_idea_dc).
-qqqq(rrrr, tom_dc, now, tully_word_dc,
+rrrr( tom_dc, now, tully_word_dc,
      tom_tully_idea_dc).
-qqqq(rrrr, tom_dc, now, santa_word_dc,
+rrrr( tom_dc, now, santa_word_dc,
      tom_santa_idea_dc).
-qqqq(rrrr, tom_dc, now, catiline_word_dc,
+rrrr( tom_dc, now, catiline_word_dc,
      tom_catiline_idea_dc).
-qqqq(rrrr, tom_dc, now, quine_word_dc,
+rrrr( tom_dc, now, quine_word_dc,
      tom_quine_idea_dc).
-qqqq(rrrr, tom_dc, now, tom_word_dc,
+rrrr( tom_dc, now, tom_word_dc,
      tom_tom_idea_dc).
-qqqq(rrrr, tom_dc, now, russell_word_dc,
+rrrr( tom_dc, now, russell_word_dc,
      tom_russell_idea_dc).
-qqqq(rrrr, tom_dc, now, wrote_DeSenectute_word_dc,
+rrrr( tom_dc, now, wrote_DeSenectute_word_dc,
      tom_wrote_DeSenectute_idea_dc).
-qqqq(rrrr, tom_dc, now, denounced_word_dc,
+rrrr( tom_dc, now, denounced_word_dc,
      tom_denounced_idea_dc).
-qqqq(rrrr, tom_dc, now, roman_word_dc,
+rrrr( tom_dc, now, roman_word_dc,
      tom_roman_idea_dc).
-qqqq(rrrr, tom_dc, now, human_word_dc,
+rrrr( tom_dc, now, human_word_dc,
      tom_human_idea_dc).
-qqqq(rrrr, tom_dc, now, american_word_dc,
+rrrr( tom_dc, now, american_word_dc,
      tom_american_idea_dc).
-qqqq(rrrr, tom_dc, now, mortal_word_dc,
+rrrr( tom_dc, now, mortal_word_dc,
      tom_mortal_idea_dc).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-qqqq(rrrr, quine_dc, now, cicero_word_dc,
+rrrr( quine_dc, now, cicero_word_dc,
      quine_cicero_idea_dc).
-qqqq(rrrr, quine_dc, now, tully_word_dc,
+rrrr( quine_dc, now, tully_word_dc,
      quine_tully_idea_dc).
-qqqq(rrrr, quine_dc, now, santa_word_dc,
+rrrr( quine_dc, now, santa_word_dc,
      quine_santa_idea_dc).
-qqqq(rrrr, quine_dc, now, catiline_word_dc,
+rrrr( quine_dc, now, catiline_word_dc,
      quine_catiline_idea_dc).
-qqqq(rrrr, quine_dc, now, quine_word_dc,
+rrrr( quine_dc, now, quine_word_dc,
      quine_quine_idea_dc).
-qqqq(rrrr, quine_dc, now, tom_word_dc,
+rrrr( quine_dc, now, tom_word_dc,
      quine_tom_idea_dc).
-qqqq(rrrr, quine_dc, now, russell_word_dc,
+rrrr( quine_dc, now, russell_word_dc,
      quine_russell_idea_dc).
-qqqq(rrrr, quine_dc, now, wrote_DeSenectute_word_dc,
+rrrr( quine_dc, now, wrote_DeSenectute_word_dc,
      quine_wrote_DeSenectute_idea_dc).
-qqqq(rrrr, quine_dc, now, denounced_word_dc,
+rrrr( quine_dc, now, denounced_word_dc,
      quine_denounced_idea_dc).
-qqqq(rrrr, quine_dc, now, roman_word_dc,
+rrrr( quine_dc, now, roman_word_dc,
      quine_roman_idea_dc).
-qqqq(rrrr, quine_dc, now, human_word_dc,
+rrrr( quine_dc, now, human_word_dc,
      quine_human_idea_dc).
-qqqq(rrrr, quine_dc, now, american_word_dc,
+rrrr( quine_dc, now, american_word_dc,
      quine_american_idea_dc).
-qqqq(rrrr, quine_dc, now, mortal_word_dc,
+rrrr( quine_dc, now, mortal_word_dc,
      quine_mortal_idea_dc).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% qqqq(ssss, Type, Subject, Time, A_idea, A_object)
+%% ssss( Type, Subject, Time, A_idea, A_object)
 %%
 %% there are two ideas and defining characteristics
 %% for the same person - cicero (tully)
@@ -797,99 +797,99 @@ qqqq(rrrr, quine_dc, now, mortal_word_dc,
 %% an actual occasion to have 2 names.
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-qqqq(ssss, tom_dc, now, tom_tom_idea_dc, tom_dc).
-% qqqq(ssss, tom_dc, now, tom_santa_idea_dc, santa_dc).
+ssss( tom_dc, now, tom_tom_idea_dc, tom_dc).
+% ssss( tom_dc, now, tom_santa_idea_dc, santa_dc).
 
-qqqq(ssss, tom_dc, now, tom_russell_idea_dc, russell_dc).
+ssss( tom_dc, now, tom_russell_idea_dc, russell_dc).
 	
-qqqq(ssss, tom_dc, now, tom_quine_idea_dc, quine_dc).
-qqqq(ssss, quine_dc, now, quine_tom_idea_dc, tom_dc).
+ssss( tom_dc, now, tom_quine_idea_dc, quine_dc).
+ssss( quine_dc, now, quine_tom_idea_dc, tom_dc).
 	
-qqqq(ssss, tom_dc, now, tom_cicero_idea_dc,
+ssss( tom_dc, now, tom_cicero_idea_dc,
      tom_cicero_dc).
 	
-qqqq(ssss, tom_dc, now, tom_tully_idea_dc,
+ssss( tom_dc, now, tom_tully_idea_dc,
      tom_tully_dc).
 	
-qqqq(ssss, tom_dc, now, tom_catiline_idea_dc,
+ssss( tom_dc, now, tom_catiline_idea_dc,
      catiline_dc).
 
-qqqq(ssss, quine_dc, now, quine_catiline_idea_dc,
+ssss( quine_dc, now, quine_catiline_idea_dc,
      catiline_dc).
 
-qqqq(ssss, tom_dc, now, tom_denounced_idea_dc,
+ssss( tom_dc, now, tom_denounced_idea_dc,
      denounced_rel).
 
-qqqq(ssss, tom_dc, now,
+ssss( tom_dc, now,
      tom_wrote_DeSenectute_idea_dc,
      wrote_DeSenectute_rel).
 
-qqqq(ssss, tom_dc, now, tom_human_idea_dc, human_rel).
+ssss( tom_dc, now, tom_human_idea_dc, human_rel).
 
-qqqq(ssss, tom_dc, now, tom_mortal_idea_dc, mortal_rel).
+ssss( tom_dc, now, tom_mortal_idea_dc, mortal_rel).
 
-qqqq(ssss, tom_dc, now, tom_roman_idea_dc, roman_rel).
+ssss( tom_dc, now, tom_roman_idea_dc, roman_rel).
 
-qqqq(ssss, tom_dc, now, tom_american_idea_dc,
+ssss( tom_dc, now, tom_american_idea_dc,
      american_rel).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-qqqq(ssss, quine_dc, now, quine_russell_idea_dc, russell_dc).
+ssss( quine_dc, now, quine_russell_idea_dc, russell_dc).
 	
-qqqq(ssss, quine_dc, now, quine_cicero_idea_dc,
+ssss( quine_dc, now, quine_cicero_idea_dc,
      cicero_dc).
 	
-qqqq(ssss, quine_dc, now, quine_tully_idea_dc,
+ssss( quine_dc, now, quine_tully_idea_dc,
      tully_dc).
 	
-qqqq(ssss, quine_dc, now, quine_quine_idea_dc, quine_dc).
+ssss( quine_dc, now, quine_quine_idea_dc, quine_dc).
 	
-qqqq(ssss, quine_dc, now, quine_catiline_idea_dc,
+ssss( quine_dc, now, quine_catiline_idea_dc,
      catiline_dc).
 
-qqqq(ssss, quine_dc, now, quine_denounced_idea_dc,
+ssss( quine_dc, now, quine_denounced_idea_dc,
      denounced_rel).
 
-qqqq(ssss, quine_dc, now,
+ssss( quine_dc, now,
      quine_wrote_DeSenectute_idea_dc,
      wrote_DeSenectute_rel).
 
-qqqq(ssss, quine_dc, now, quine_human_idea_dc, human_rel).
+ssss( quine_dc, now, quine_human_idea_dc, human_rel).
 
-qqqq(ssss, quine_dc, now, quine_mortal_idea_dc, mortal_rel).
+ssss( quine_dc, now, quine_mortal_idea_dc, mortal_rel).
 
-qqqq(ssss, quine_dc, now, quine_roman_idea_dc, roman_rel).
+ssss( quine_dc, now, quine_roman_idea_dc, roman_rel).
 
-qqqq(ssss, quine_dc, now, quine_american_idea_dc,
+ssss( quine_dc, now, quine_american_idea_dc,
      american_rel).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-qqqq(idea_of, quine_dc, quine_denounced_idea_dc).
-qqqq(idea_of, quine_dc, quine_cicero_idea_dc).
-qqqq(idea_of, quine_dc, quine_catiline_idea_dc).
-qqqq(idea_of, quine_dc, quine_tully_idea_dc).
-qqqq(idea_of, tom_dc, tom_santa_idea_dc).
-qqqq(idea_of, tom_dc, tom_denounced_idea_dc).
-qqqq(idea_of, tom_dc, tom_cicero_idea_dc).
-qqqq(idea_of, tom_dc, tom_catiline_idea_dc).
-qqqq(idea_of, tom_dc, tom_tully_idea_dc).
-qqqq(idea_of, tom_dc, tom_quine_idea_dc).
-qqqq(idea_of, tom_dc, tom_tom_idea_dc).
-qqqq(idea_of, tom_dc, tom_russell_idea_dc).
-qqqq(idea_of, tom_dc, tom_wrote_DeSenectute_idea_dc).
-qqqq(idea_of, tom_dc, tom_roman_idea_dc).
-qqqq(idea_of, tom_dc, tom_human_idea_dc).
-qqqq(idea_of, tom_dc, tom_american_idea_dc).
-qqqq(idea_of, tom_dc, tom_mortal_idea_dc).
-qqqq(idea_of, quine_dc, quine_santa_idea_dc).
-qqqq(idea_of, quine_dc, quine_quine_idea_dc).
-qqqq(idea_of, quine_dc, quine_tom_idea_dc).
-qqqq(idea_of, quine_dc, quine_russell_idea_dc).
-qqqq(idea_of, quine_dc, quine_wrote_DeSenectute_idea_dc).
-qqqq(idea_of, quine_dc, quine_roman_idea_dc).
-qqqq(idea_of, quine_dc, quine_human_idea_dc).
-qqqq(idea_of, quine_dc, quine_american_idea_dc).
-qqqq(idea_of, quine_dc, quine_mortal_idea_dc).
+idea_of( quine_dc, quine_denounced_idea_dc).
+idea_of( quine_dc, quine_cicero_idea_dc).
+idea_of( quine_dc, quine_catiline_idea_dc).
+idea_of( quine_dc, quine_tully_idea_dc).
+idea_of( tom_dc, tom_santa_idea_dc).
+idea_of( tom_dc, tom_denounced_idea_dc).
+idea_of( tom_dc, tom_cicero_idea_dc).
+idea_of( tom_dc, tom_catiline_idea_dc).
+idea_of( tom_dc, tom_tully_idea_dc).
+idea_of( tom_dc, tom_quine_idea_dc).
+idea_of( tom_dc, tom_tom_idea_dc).
+idea_of( tom_dc, tom_russell_idea_dc).
+idea_of( tom_dc, tom_wrote_DeSenectute_idea_dc).
+idea_of( tom_dc, tom_roman_idea_dc).
+idea_of( tom_dc, tom_human_idea_dc).
+idea_of( tom_dc, tom_american_idea_dc).
+idea_of( tom_dc, tom_mortal_idea_dc).
+idea_of( quine_dc, quine_santa_idea_dc).
+idea_of( quine_dc, quine_quine_idea_dc).
+idea_of( quine_dc, quine_tom_idea_dc).
+idea_of( quine_dc, quine_russell_idea_dc).
+idea_of( quine_dc, quine_wrote_DeSenectute_idea_dc).
+idea_of( quine_dc, quine_roman_idea_dc).
+idea_of( quine_dc, quine_human_idea_dc).
+idea_of( quine_dc, quine_american_idea_dc).
+idea_of( quine_dc, quine_mortal_idea_dc).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -903,72 +903,72 @@ qqqq(idea_of, quine_dc, quine_mortal_idea_dc).
 %% They never even need to be related or believed.
 %% Only ideas have arities and types.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-qqqq(arity_idea, tom_denounced_idea_dc, 2).
-qqqq(arity_idea, tom_wrote_DeSenectute_idea_dc, 1).
-qqqq(arity_idea, tom_human_idea_dc, 1).
-qqqq(arity_idea, tom_mortal_idea_dc, 1).
-qqqq(arity_idea, tom_roman_idea_dc, 1).
-qqqq(arity_idea, tom_american_idea_dc, 1).
-qqqq(type_idea, tom_denounced_idea_dc, 1).
-qqqq(type_idea, tom_wrote_DeSenectute_idea_dc, 1).
-qqqq(type_idea, tom_human_idea_dc, 1).
-qqqq(type_idea, tom_mortal_idea_dc, 1).
-qqqq(type_idea, tom_roman_idea_dc, 1).
-qqqq(type_idea, tom_american_idea_dc, 1).
-qqqq(type_idea, tom_cicero_idea_dc, 0).
-qqqq(type_idea, tom_tully_idea_dc, 0).
-qqqq(type_idea, tom_catiline_idea_dc, 0).
-qqqq(type_idea, tom_quine_idea_dc, 0).
-qqqq(type_idea, tom_tom_idea_dc, 0).
-qqqq(type_idea, tom_russell_idea_dc, 0).
-qqqq(type_idea, tom_santa_idea_dc, 0).
-qqqq(number_idea, tom_denounced_idea_dc, singular).
-qqqq(number_idea, tom_wrote_DeSenectute_idea_dc,singular).
-qqqq(number_idea, tom_roman_idea_dc, singular).
-qqqq(number_idea, tom_human_idea_dc, singular).
-qqqq(number_idea, tom_american_idea_dc, singular).
-qqqq(number_idea, tom_mortal_idea_dc, singular).
-qqqq(number_idea, tom_cicero_idea_dc, singular).
-qqqq(number_idea, tom_tully_idea_dc, singular).
-qqqq(number_idea, tom_catiline_idea_dc, singular).
-qqqq(number_idea, tom_tom_idea_dc, singular).
-qqqq(number_idea, tom_quine_idea_dc, singular).
-qqqq(number_idea, tom_russell_idea_dc, singular).
-qqqq(number_idea, tom_santa_idea_dc, singular).
+arity_idea( tom_denounced_idea_dc, 2).
+arity_idea( tom_wrote_DeSenectute_idea_dc, 1).
+arity_idea( tom_human_idea_dc, 1).
+arity_idea( tom_mortal_idea_dc, 1).
+arity_idea( tom_roman_idea_dc, 1).
+arity_idea( tom_american_idea_dc, 1).
+type_idea( tom_denounced_idea_dc, 1).
+type_idea( tom_wrote_DeSenectute_idea_dc, 1).
+type_idea( tom_human_idea_dc, 1).
+type_idea( tom_mortal_idea_dc, 1).
+type_idea( tom_roman_idea_dc, 1).
+type_idea( tom_american_idea_dc, 1).
+type_idea( tom_cicero_idea_dc, 0).
+type_idea( tom_tully_idea_dc, 0).
+type_idea( tom_catiline_idea_dc, 0).
+type_idea( tom_quine_idea_dc, 0).
+type_idea( tom_tom_idea_dc, 0).
+type_idea( tom_russell_idea_dc, 0).
+type_idea( tom_santa_idea_dc, 0).
+number_idea( tom_denounced_idea_dc, singular).
+number_idea( tom_wrote_DeSenectute_idea_dc,singular).
+number_idea( tom_roman_idea_dc, singular).
+number_idea( tom_human_idea_dc, singular).
+number_idea( tom_american_idea_dc, singular).
+number_idea( tom_mortal_idea_dc, singular).
+number_idea( tom_cicero_idea_dc, singular).
+number_idea( tom_tully_idea_dc, singular).
+number_idea( tom_catiline_idea_dc, singular).
+number_idea( tom_tom_idea_dc, singular).
+number_idea( tom_quine_idea_dc, singular).
+number_idea( tom_russell_idea_dc, singular).
+number_idea( tom_santa_idea_dc, singular).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-qqqq(arity_idea, quine_denounced_idea_dc, 2).
-qqqq(arity_idea, quine_wrote_DeSenectute_idea_dc, 1).
-qqqq(arity_idea, quine_human_idea_dc, 1).
-qqqq(arity_idea, quine_mortal_idea_dc, 1).
-qqqq(arity_idea, quine_roman_idea_dc, 1).
-qqqq(arity_idea, quine_american_idea_dc, 1).
-qqqq(type_idea, quine_denounced_idea_dc, 1).
-qqqq(type_idea, quine_wrote_DeSenectute_idea_dc, 1).
-qqqq(type_idea, quine_human_idea_dc, 1).
-qqqq(type_idea, quine_mortal_idea_dc, 1).
-qqqq(type_idea, quine_roman_idea_dc, 1).
-qqqq(type_idea, quine_american_idea_dc, 1).
-qqqq(type_idea, quine_cicero_idea_dc, 0).
-qqqq(type_idea, quine_tully_idea_dc, 0).
-qqqq(type_idea, quine_catiline_idea_dc, 0).
-qqqq(type_idea, quine_quine_idea_dc, 0).
-qqqq(type_idea, quine_tom_idea_dc, 0).
-qqqq(type_idea, quine_russell_idea_dc, 0).
-qqqq(type_idea, quine_santa_idea_dc, 0).
-qqqq(number_idea, quine_denounced_idea_dc, singular).
-qqqq(number_idea, quine_wrote_DeSenectute_idea_dc,
+arity_idea( quine_denounced_idea_dc, 2).
+arity_idea( quine_wrote_DeSenectute_idea_dc, 1).
+arity_idea( quine_human_idea_dc, 1).
+arity_idea( quine_mortal_idea_dc, 1).
+arity_idea( quine_roman_idea_dc, 1).
+arity_idea( quine_american_idea_dc, 1).
+type_idea( quine_denounced_idea_dc, 1).
+type_idea( quine_wrote_DeSenectute_idea_dc, 1).
+type_idea( quine_human_idea_dc, 1).
+type_idea( quine_mortal_idea_dc, 1).
+type_idea( quine_roman_idea_dc, 1).
+type_idea( quine_american_idea_dc, 1).
+type_idea( quine_cicero_idea_dc, 0).
+type_idea( quine_tully_idea_dc, 0).
+type_idea( quine_catiline_idea_dc, 0).
+type_idea( quine_quine_idea_dc, 0).
+type_idea( quine_tom_idea_dc, 0).
+type_idea( quine_russell_idea_dc, 0).
+type_idea( quine_santa_idea_dc, 0).
+number_idea( quine_denounced_idea_dc, singular).
+number_idea( quine_wrote_DeSenectute_idea_dc,
      singular).
-qqqq(number_idea, quine_roman_idea_dc, singular).
-qqqq(number_idea, quine_human_idea_dc, singular).
-qqqq(number_idea, quine_american_idea_dc, singular).
-qqqq(number_idea, quine_mortal_idea_dc, singular).
-qqqq(number_idea, quine_cicero_idea_dc, singular).
-qqqq(number_idea, quine_tully_idea_dc, singular).
-qqqq(number_idea, quine_catiline_idea_dc, singular).
-qqqq(number_idea, quine_tom_idea_dc, singular).
-qqqq(number_idea, quine_quine_idea_dc, singular).
-qqqq(number_idea, quine_russell_idea_dc, singular).
-qqqq(number_idea, quine_santa_idea_dc, singular).
+number_idea( quine_roman_idea_dc, singular).
+number_idea( quine_human_idea_dc, singular).
+number_idea( quine_american_idea_dc, singular).
+number_idea( quine_mortal_idea_dc, singular).
+number_idea( quine_cicero_idea_dc, singular).
+number_idea( quine_tully_idea_dc, singular).
+number_idea( quine_catiline_idea_dc, singular).
+number_idea( quine_tom_idea_dc, singular).
+number_idea( quine_quine_idea_dc, singular).
+number_idea( quine_russell_idea_dc, singular).
+number_idea( quine_santa_idea_dc, singular).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %% conceptual_feeling_in_ideas is the only primitive
@@ -978,51 +978,51 @@ qqqq(number_idea, quine_santa_idea_dc, singular).
 
 %% Beliefs
 
-qqqq(conceptual_feeling_in_ideas, quine_dc, believes, now,
+conceptual_feeling_in_ideas( quine_dc, believes, now,
      [quine_denounced_idea_dc, quine_cicero_idea_dc,
       quine_catiline_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, quine_dc, believes, now,
+conceptual_feeling_in_ideas( quine_dc, believes, now,
      [quine_denounced_idea_dc, quine_tully_idea_dc,
       quine_catiline_idea_dc]).
-qqqq(conceptual_feeling_in_ideas, quine_dc, believes,
+conceptual_feeling_in_ideas( quine_dc, believes,
      now, [quine_wrote_De_Senectute_idea_dc,
 	   quine_cicero_idea_dc]).
-qqqq(conceptual_feeling_in_ideas, quine_dc, believes,
+conceptual_feeling_in_ideas( quine_dc, believes,
      now, [quine_wrote_De_Senectute_idea_dc,
 	   quine_tully_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, quine_dc, believes,
+conceptual_feeling_in_ideas( quine_dc, believes,
      now, [quine_wrote_De_Senectute_idea_dc,
 	   quine_tully_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, tom_dc, believes, now,
+conceptual_feeling_in_ideas( tom_dc, believes, now,
      [tom_denounced_idea_dc, tom_cicero_idea_dc,
       tom_catiline_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, tom_dc, disbelieves, now,
+conceptual_feeling_in_ideas( tom_dc, disbelieves, now,
      [tom_denounced_idea_dc, tom_tully_idea_dc,
       tom_catiline_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, tom_dc, believes,
+conceptual_feeling_in_ideas( tom_dc, believes,
      now, [tom_wrote_De_Senectute_idea_dc,
 	   tom_tully_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, tom_dc, disbelieves,
+conceptual_feeling_in_ideas( tom_dc, disbelieves,
      now, [tom_wrote_De_Senectute_idea_dc,
 	   tom_cicero_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, tom_dc, believes, now,     [tom_roman_idea_dc, tom_catiline_idea_dc]).
+conceptual_feeling_in_ideas( tom_dc, believes, now,     [tom_roman_idea_dc, tom_catiline_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, tom_dc,believes, now,
+conceptual_feeling_in_ideas( tom_dc,believes, now,
      [tom_denounced_idea_dc, tom_santa_idea_dc,
       tom_catiline_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, quine,believes, now,
+conceptual_feeling_in_ideas( quine,believes, now,
      [quine_denounced_idea_dc, quine_cicero_idea_dc,
       quine_catiline_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, tom_dc, believes, now,
+conceptual_feeling_in_ideas( tom_dc, believes, now,
      [[wrote_DeSenectute_word_dc],
       [tully_word_dc]]).
 
@@ -4105,110 +4105,110 @@ should_not_sa_words_ideas_objects(tom_dc, now, agnostic,
 
 %% only exist as words and ideas
 
-qqqq(idea_of, tom_dc, tom_cat_class_idea_dc).
-qqqq(idea_of, tom_dc, tom_dolphin_class_idea_dc).
-qqqq(idea_of, tom_dc, tom_intelligent_fish_class_idea_dc).
-qqqq(idea_of, tom_dc, tom_human_class_idea_dc).
-qqqq(idea_of, tom_dc, tom_santa_class_idea_dc).
-qqqq(idea_of, tom_dc, tom_mortal_class_idea_dc).
-qqqq(idea_of, tom_dc, tom_roman_class_idea_dc).
-qqqq(idea_of, tom_dc, tom_american_class_idea_dc).
-qqqq(idea_of, tom_dc, tom_featherless_biped_class_idea_dc).
+idea_of( tom_dc, tom_cat_class_idea_dc).
+idea_of( tom_dc, tom_dolphin_class_idea_dc).
+idea_of( tom_dc, tom_intelligent_fish_class_idea_dc).
+idea_of( tom_dc, tom_human_class_idea_dc).
+idea_of( tom_dc, tom_santa_class_idea_dc).
+idea_of( tom_dc, tom_mortal_class_idea_dc).
+idea_of( tom_dc, tom_roman_class_idea_dc).
+idea_of( tom_dc, tom_american_class_idea_dc).
+idea_of( tom_dc, tom_featherless_biped_class_idea_dc).
 
-qqqq(arity_idea, tom_cat_class_idea_dc, 1).
-qqqq(arity_idea, tom_dolphin_class_idea_dc, 1).
-qqqq(arity_idea, tom_intelligent_fish_class_idea_dc, 1).
-qqqq(type_idea, tom_cat_class_idea_dc, 0).
-qqqq(type_idea, tom_santa_class_idea_dc, 0).
-qqqq(type_idea, tom_human_class_idea_dc, 0).
-qqqq(type_idea, tom_mortal_class_idea_dc, 0).
-qqqq(type_idea, tom_dolphin_class_idea_dc, 0).
-qqqq(type_idea, tom_intelligent_fish_class_idea_dc, 0).
-qqqq(type_idea, tom_roman_class_idea_dc, 0).
-qqqq(type_idea, tom_american_class_idea_dc, 0).
-qqqq(type_idea, tom_featherless_biped_class_idea_dc, 0).
-qqqq(number_idea, tom_cat_class_idea_dc, plural).
-qqqq(number_idea, tom_santa_class_idea_dc, plural).
-qqqq(number_idea, tom_human_class_idea_dc, plural).
-qqqq(number_idea, tom_roman_class_idea_dc, plural).
-qqqq(number_idea, tom_american_class_idea_dc, plural).
-qqqq(number_idea, tom_mortal_class_idea_dc, plural).
-qqqq(number_idea, tom_dolphin_class_idea_dc, plural).
-qqqq(number_idea, tom_intelligent_fish_class_idea_dc, plural).
-qqqq(number_idea, tom_featherless_biped_class_idea_dc, plural).
+arity_idea( tom_cat_class_idea_dc, 1).
+arity_idea( tom_dolphin_class_idea_dc, 1).
+arity_idea( tom_intelligent_fish_class_idea_dc, 1).
+type_idea( tom_cat_class_idea_dc, 0).
+type_idea( tom_santa_class_idea_dc, 0).
+type_idea( tom_human_class_idea_dc, 0).
+type_idea( tom_mortal_class_idea_dc, 0).
+type_idea( tom_dolphin_class_idea_dc, 0).
+type_idea( tom_intelligent_fish_class_idea_dc, 0).
+type_idea( tom_roman_class_idea_dc, 0).
+type_idea( tom_american_class_idea_dc, 0).
+type_idea( tom_featherless_biped_class_idea_dc, 0).
+number_idea( tom_cat_class_idea_dc, plural).
+number_idea( tom_santa_class_idea_dc, plural).
+number_idea( tom_human_class_idea_dc, plural).
+number_idea( tom_roman_class_idea_dc, plural).
+number_idea( tom_american_class_idea_dc, plural).
+number_idea( tom_mortal_class_idea_dc, plural).
+number_idea( tom_dolphin_class_idea_dc, plural).
+number_idea( tom_intelligent_fish_class_idea_dc, plural).
+number_idea( tom_featherless_biped_class_idea_dc, plural).
 
-qqqq(rrrr, tom_dc, now, cat_class_word_dc,
+rrrr( tom_dc, now, cat_class_word_dc,
      tom_cat_class_idea_dc).
-qqqq(rrrr, tom_dc, now, santa_class_word_dc,
+rrrr( tom_dc, now, santa_class_word_dc,
      tom_santa_class_idea_dc).
-qqqq(rrrr, tom_dc, now, human_class_word_dc,
+rrrr( tom_dc, now, human_class_word_dc,
      tom_human_class_idea_dc).
-qqqq(rrrr, tom_dc, now, dolphin_class_word_dc,
+rrrr( tom_dc, now, dolphin_class_word_dc,
      tom_dolphin_class_idea_dc).
-qqqq(rrrr, tom_dc, now, intelligent_fish_class_word_dc,
+rrrr( tom_dc, now, intelligent_fish_class_word_dc,
      tom_intelligent_fish_class_idea_dc).
-qqqq(rrrr, tom_dc, now, mortal_class_word_dc,
+rrrr( tom_dc, now, mortal_class_word_dc,
      tom_mortal_class_idea_dc).
-qqqq(rrrr, tom_dc, now, roman_class_word_dc,
+rrrr( tom_dc, now, roman_class_word_dc,
      tom_roman_class_idea_dc).
-qqqq(rrrr, tom_dc, now, american_class_word_dc,
+rrrr( tom_dc, now, american_class_word_dc,
      tom_american_class_idea_dc).
-qqqq(rrrr, tom_dc, now, featherless_biped_class_word_dc, tom_featherless_biped_class_idea_dc).
-qqqq(tttt, tom_dc, now, tom_cat_class_idea_dc, misty_dc).
-qqqq(tttt, tom_dc, now, tom_cat_class_idea_dc, rosie_dc).
-qqqq(tttt, tom_dc, now, tom_human_class_idea_dc,
+rrrr( tom_dc, now, featherless_biped_class_word_dc, tom_featherless_biped_class_idea_dc).
+tttt( tom_dc, now, tom_cat_class_idea_dc, misty_dc).
+tttt( tom_dc, now, tom_cat_class_idea_dc, rosie_dc).
+tttt( tom_dc, now, tom_human_class_idea_dc,
      catiline_dc).
-qqqq(tttt, tom_dc, now, tom_human_class_idea_dc,
+tttt( tom_dc, now, tom_human_class_idea_dc,
      tom_cicero_dc).
-qqqq(tttt, tom_dc, now, tom_human_class_idea_dc,
+tttt( tom_dc, now, tom_human_class_idea_dc,
      tom_dc).
-qqqq(tttt, tom_dc, now, tom_human_class_idea_dc,
+tttt( tom_dc, now, tom_human_class_idea_dc,
      tom_cicero_dc).
-qqqq(tttt, tom_dc, now, tom_human_class_idea_dc,
+tttt( tom_dc, now, tom_human_class_idea_dc,
      quine_dc).
-qqqq(tttt, tom_dc, now, tom_featherless_biped_class_idea_dc,     catiline_dc).
-qqqq(tttt, tom_dc, now, tom_featherless_biped_class_idea_dc,
+tttt( tom_dc, now, tom_featherless_biped_class_idea_dc,     catiline_dc).
+tttt( tom_dc, now, tom_featherless_biped_class_idea_dc,
      tom_cicero_dc).
-qqqq(tttt, tom_dc, now, tom_featherless_biped_class_idea_dc,
+tttt( tom_dc, now, tom_featherless_biped_class_idea_dc,
      tom_dc).
-qqqq(tttt, tom_dc, now, tom_featherless_biped_class_idea_dc,
+tttt( tom_dc, now, tom_featherless_biped_class_idea_dc,
      quine_dc).
 qqq(tttt, tom_dc, now, tom_mortal_class_idea_dc,
      catiline_dc).
-qqqq(tttt, tom_dc, now, tom_mortal_class_idea_dc,
+tttt( tom_dc, now, tom_mortal_class_idea_dc,
      tom_cicero_dc).
-qqqq(tttt, tom_dc, now, tom_mortal_class_idea_dc,
+tttt( tom_dc, now, tom_mortal_class_idea_dc,
      tom_dc).
-qqqq(tttt, tom_dc, now, tom_mortal_class_idea_dc,
+tttt( tom_dc, now, tom_mortal_class_idea_dc,
      tom_cicero_dc).
-qqqq(tttt, tom_dc, now, tom_mortal_class_idea_dc,
+tttt( tom_dc, now, tom_mortal_class_idea_dc,
      misty_dc).
-qqqq(tttt, tom_dc, now, tom_mortal_class_idea_dc,
+tttt( tom_dc, now, tom_mortal_class_idea_dc,
      rosie_dc).
-qqqq(tttt, tom_dc, now, tom_dolphin_class_idea_dc,
+tttt( tom_dc, now, tom_dolphin_class_idea_dc,
      flipper_dc).
-qqqq(tttt, tom_dc, now, tom_roman_class_idea_dc,
+tttt( tom_dc, now, tom_roman_class_idea_dc,
      tom_cicero_dc).
-qqqq(tttt, tom_dc, now, tom_roman_class_idea_dc,
+tttt( tom_dc, now, tom_roman_class_idea_dc,
      catiline_dc).
-qqqq(tttt, tom_dc, now, tom_american_class_idea_dc,
+tttt( tom_dc, now, tom_american_class_idea_dc,
      quine_dc).
-qqqq(tttt, tom_dc, now, tom_intelligent_fish_class_idea_dc, flipper_dc).
+tttt( tom_dc, now, tom_intelligent_fish_class_idea_dc, flipper_dc).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% BELIEFS  (in ideas)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-qqqq(conceptual_feeling_in_ideas, tom_dc, believes,
+conceptual_feeling_in_ideas( tom_dc, believes,
      now, [tom_mortal_idea_dc, tom_human_class_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, tom_dc, believes,
+conceptual_feeling_in_ideas( tom_dc, believes,
      now, [tom_human_idea_dc, tom_catiline_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, tom_dc, believes,
+conceptual_feeling_in_ideas( tom_dc, believes,
      now, [tom_human_idea_dc, tom_human_class_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, tom_dc, believes,
+conceptual_feeling_in_ideas( tom_dc, believes,
      now, [tom_human_idea_dc, tom_cicero_idea_dc]).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

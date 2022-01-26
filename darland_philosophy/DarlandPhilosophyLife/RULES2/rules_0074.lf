@@ -2,19 +2,29 @@
 
 %% This file is part of darland's philosophy.
 
-%% darland's philosophy is free software: you can redistribute it and/or modify
-%% it under the terms of the GNU General Public License as published by
-%% the Free Software Foundation, either version 3 of the License, or
+%% darland's philosophy is free software: you can
+%% redistribute it and/or modify
+%% it under the terms of the
+%% GNU General Public License as published by
+%% the Free Software Foundation, either
+%% version 3 of the License, or
 %% (at your option) any later version.
 
-%% darland's philosophy is distributed in the hope that it will be useful, 
-%% but WITHOUT ANY WARRANTY; without even the implied warranty of
-%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% darland's philosophy is distributed in the hope
+%% that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even
+%% the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%% See the
 %% GNU General Public License for more details.
 
-%% You should have received a copy of the GNU General Public License
-%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
-%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% You should have received
+%% a copy of the GNU General Public License
+%% along with darland's philosophy.
+%% If not, see <http://www.gnu.org/licenses/>.
+
+%% Life predicates to simulate
+%% Dennis J. Darlands philosophy. 
 %% Started Writing 1/4/2017 
 %% This is a total rewrite of what I started about 10 years ago.
 
@@ -27,7 +37,8 @@
 
 %% 1
 
-conceptual_feeling_words(Subject, Subjective_aim, Time, [[Relation_Word] | List]) :-
+conceptual_feeling_words(Subject, Subjective_aim, Time,
+			 [[Relation_Word] | List]) :-
 	Subjective_aim :== truly_opaque,
 	conceptual_feeling_words(Subject, believes,
 				 Time, List),
@@ -36,7 +47,8 @@ conceptual_feeling_words(Subject, Subjective_aim, Time, [[Relation_Word] | List]
 
 %% 2
 
-conceptual_feeling_in_ideas(Subject, Subjective_aim, Time, List) :-
+conceptual_feeling_in_ideas(Subject, Subjective_aim, Time,
+			    List) :-
 	Subjective_aim :== truly_opaque,
 	conceptual_feeling_in_ideas(Subject, believes,
 				    Time, List),
@@ -45,16 +57,18 @@ conceptual_feeling_in_ideas(Subject, Subjective_aim, Time, List) :-
 
 %% 3
 
-conceptual_feeling_objects(Subject, Subjective_aim,  Time, List) :-
+conceptual_feeling_objects(Subject, Subjective_aim,  Time,
+			   List) :-
 	Subjective_aim :== truly_opaque,
 	conceptual_feeling_objects(Subject, believes,
 				   Time, List),
 	\+ conceptual_feeling_objects(Subject, believes,
-			      Time, List).
+				      Time, List).
 
 %% 4
 
-conceptual_feeling_words_ideas(Subject, Subjective_aim,  Time, List) :-
+conceptual_feeling_words_ideas(Subject, Subjective_aim,
+			       Time, List) :-
 	Subjective_aim :== truly_opaque,
 	conceptual_feeling_words_ideas(Subject, believes,
 				       Time, List),
@@ -65,7 +79,8 @@ conceptual_feeling_words_ideas(Subject, Subjective_aim,  Time, List) :-
 
 %% 5
 
-conceptual_feeling_words_objects(Subject, Subjective_aim,  Time, List) :-
+conceptual_feeling_words_objects(Subject, Subjective_aim,
+				 Time, List) :-
 	Subjective_aim :== truly_opaque,
 	conceptual_feeling_words_objects(Subject,
 					 believes,
@@ -76,7 +91,8 @@ conceptual_feeling_words_objects(Subject, Subjective_aim,  Time, List) :-
 
 %% 6
 
-conceptual_feeling_ideas_objects(Subject, Subjective_aim,  Time, List) :-
+conceptual_feeling_ideas_objects(Subject, Subjective_aim,
+				 Time, List) :-
 	Subjective_aim :== truly_opaque,
 	conceptual_feeling_ideas_objects(Subject,
 					 believes,
@@ -87,7 +103,9 @@ conceptual_feeling_ideas_objects(Subject, Subjective_aim,  Time, List) :-
 
 %% 7
 
-conceptual_feeling_words_ideas_objects(Subject, Subjective_aim, Time, List) :-
+conceptual_feeling_words_ideas_objects(Subject,
+				       Subjective_aim, Time,
+				       List) :-
 	Subjective_aim :== truly_opaque,
 	conceptual_feeling_words_ideas_objects(Subject,
 					       believes,
@@ -109,76 +127,84 @@ conceptual_feeling_words_ideas_objects(Subject, Subjective_aim, Time, List) :-
 
 %% 1
 
-conceptual_feeling_words(Subject, Subjective_aim, Time, [[Relation_Word] | List]) :-
+conceptual_feeling_words(Subject, Subjective_aim, Time,
+			 [[Relation_Word] | List]) :-
 	Subjective_aim :== pseudo_opaque,
 	conceptual_feeling_words(Subject, believes,
 				 Time, List),
 	conceptual_feeling_words(Subject, disbelieves,
-				    Time, List).
+				 Time, List).
 
 %% 2
 
-conceptual_feeling_in_ideas(Subject, Subjective_aim, Time, List) :-
+conceptual_feeling_in_ideas(Subject, Subjective_aim, Time,
+			    List) :-
 	Subjective_aim :== pseudo_opaque,
 	conceptual_feeling_in_ideas(Subject, believes,
 				    Time, List),
 	conceptual_feeling_in_ideas(Subject, disbelieves,
-				       Time, List).
+				    Time, List).
 
 %% 3
 
-conceptual_feeling_objects(Subject, Subjective_aim,  Time, List) :-
+conceptual_feeling_objects(Subject, Subjective_aim,  Time,
+			   List) :-
 	Subjective_aim :== pseudo_opaque,
 	conceptual_feeling_objects(Subject, believes,
 				   Time, List),
 	conceptual_feeling_objects(Subject, disbelieves,
-			      Time, List).
+				   Time, List).
 
 %% 4
 
-conceptual_feeling_words_ideas(Subject, Subjective_aim,  Time, List) :-
+conceptual_feeling_words_ideas(Subject, Subjective_aim,
+			       Time, List) :-
 	Subjective_aim :== pseudo_opaque,
 	conceptual_feeling_words_ideas(Subject, believes,
 				       Time, List),
 	conceptual_feeling_words_ideas(Subject,
-					  disbelieves,
-					  Time,
-					  List).
+				       disbelieves,
+				       Time,
+				       List).
 
 %% 5
 
-conceptual_feeling_words_objects(Subject, Subjective_aim,  Time, List) :-
+conceptual_feeling_words_objects(Subject, Subjective_aim,
+				 Time, List) :-
 	Subjective_aim :== pseudo_opaque,
 	conceptual_feeling_words_objects(Subject,
 					 believes,
 					 Time, List),
 	conceptual_feeling_words_objects(Subject,
-					    disbelieves,
-					    Time, List).
+					 disbelieves,
+					 Time, List).
 
 %% 6
 
-conceptual_feeling_ideas_objects(Subject, Subjective_aim,  Time, List) :-
+conceptual_feeling_ideas_objects(Subject, Subjective_aim,
+				 Time, List) :-
 	Subjective_aim :== pseudo_opaque,
 	conceptual_feeling_ideas_objects(Subject,
 					 believes,
 					 Time, List),
 	conceptual_feeling_ideas_objects(Subject,
-					    disbelieves,
-					    Time, List).
+					 disbelieves,
+					 Time, List).
 
 %% 7
 
-conceptual_feeling_words_ideas_objects(Subject, Subjective_aim, Time, List) :-
+conceptual_feeling_words_ideas_objects(Subject,
+				       Subjective_aim, Time,
+				       List) :-
 	Subjective_aim :== pseudo_opaque,
 	conceptual_feeling_words_ideas_objects(Subject,
 					       believes,
 					       Time,
 					       List),
 	conceptual_feeling_words_ideas_objects(Subject,
-						  disbelieves,
-						  Time,
-						  List).
+					       disbelieves,
+					       Time,
+					       List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% quine_opaque
@@ -231,7 +257,7 @@ quine_opaque_believes_objects(Subject, Time,
 	conceptual_feeling_objects(Subject, believes,
 				   Time, List1),
 	\+ conceptual_feeling_objects(Subject, believes,
-			      Time, List2).
+				      Time, List2).
 
 
 quine_opaque_believes_objects(Subject, Time,
@@ -240,7 +266,7 @@ quine_opaque_believes_objects(Subject, Time,
 	conceptual_feeling_objects(Subject, believes,
 				   Time, List1),
 	\+ conceptual_feeling_objects(Subject, believes,
-			      Time, List2).
+				      Time, List2).
 
 %% 4
 
@@ -312,7 +338,7 @@ quine_opaque_believes_ideas_objects(Subject, Time,
 quine_opaque_believes_words_ideas_objects(Subject,
 					  Time,
 					  List1,
-					 List2) :-
+					  List2) :-
 	corefer(List1, List2),
 	conceptual_feeling_words_ideas_objects(Subject,
 					       believes,
@@ -325,7 +351,7 @@ quine_opaque_believes_words_ideas_objects(Subject,
 quine_opaque_believes_words_ideas_objects(Subject,
 					  Time,
 					  List2,
-					 List1) :-
+					  List1) :-
 	corefer(List1, List2),
 	conceptual_feeling_words_ideas_objects(Subject,
 					       believes,
@@ -339,7 +365,8 @@ quine_opaque_believes_words_ideas_objects(Subject,
 
 %% 1
 
-conceptual_feeling_words(Subject, Subjective_aim, Time, List) :-
+conceptual_feeling_words(Subject, Subjective_aim, Time,
+			 List) :-
 	Subjective_aim :== agnostic,
 	conceptual_feeling_words(Subject, understands, Time, List),
 	\+ conceptual_feeling_words(Subject, believes,
@@ -349,9 +376,11 @@ conceptual_feeling_words(Subject, Subjective_aim, Time, List) :-
 
 %% 2
 
-conceptual_feeling_in_ideas(Subject, Subjective_aim, Time, List) :-
+conceptual_feeling_in_ideas(Subject, Subjective_aim, Time,
+			    List) :-
 	Subjective_aim :== agnostic,
-	conceptual_feeling_in_ideas(Subject, understands, Time, List),
+	conceptual_feeling_in_ideas(Subject, understands,
+				    Time, List),
 	\+ conceptual_feeling_in_ideas(Subject, believes,
 				       Time, List),
 	\+ conceptual_feeling_in_ideas(Subject,
@@ -360,7 +389,8 @@ conceptual_feeling_in_ideas(Subject, Subjective_aim, Time, List) :-
 
 %% 3
 
-conceptual_feeling_objects(Subject, Subjective_aim, Time, List) :-
+conceptual_feeling_objects(Subject, Subjective_aim, Time,
+			   List) :-
 	Subjective_aim :== agnostic,
 	conceptual_feeling_objects(Subject, understands, Time, List),
 	
@@ -372,7 +402,8 @@ conceptual_feeling_objects(Subject, Subjective_aim, Time, List) :-
 
 %% 4
 
-conceptual_feeling_words_ideas(Subject, Subjective_aim, Time, List) :-
+conceptual_feeling_words_ideas(Subject, Subjective_aim,
+			       Time, List) :-
 	Subjective_aim :== agnostic,
 	conceptual_feeling_words_ideas(Subject, understands, Time, List),
 	\+ conceptual_feeling_words_ideas(Subject,
@@ -384,7 +415,8 @@ conceptual_feeling_words_ideas(Subject, Subjective_aim, Time, List) :-
 
 %% 5
 
-conceptual_feeling_words_objects(Subject, Subjective_aim, Time, List) :-
+conceptual_feeling_words_objects(Subject, Subjective_aim,
+				 Time, List) :-
 	Subjective_aim :== agnostic,
 	conceptual_feeling_words_objects(Subject, understands, Time, List),
 	\+ conceptual_feeling_words_objects(Subject,
@@ -396,9 +428,11 @@ conceptual_feeling_words_objects(Subject, Subjective_aim, Time, List) :-
 
 %% 6
 
-conceptual_feeling_ideas_objects(Subject, Subjective_aim, Time, List) :-
+conceptual_feeling_ideas_objects(Subject, Subjective_aim,
+				 Time, List) :-
 	Subjective_aim :== agnostic,
-	conceptual_feeling_ideas_objects(Subject, understands, Time, List),
+	conceptual_feeling_ideas_objects(Subject, understands,
+					 Time, List),
 	\+ conceptual_feeling_ideas_objects(Subject,
 					    believes,
 					    Time, List),
@@ -408,7 +442,9 @@ conceptual_feeling_ideas_objects(Subject, Subjective_aim, Time, List) :-
 
 %% 7
 
-conceptual_feeling_words_ideas_objects(Subject, Subjective_aim, Time, List) :-
+conceptual_feeling_words_ideas_objects(Subject,
+				       Subjective_aim, Time,
+				       List) :-
 	Subjective_aim :== agnostic,
 	conceptual_feeling_words_ideas_objects(Subject, understands, Time, List),
 	\+ conceptual_feeling_words_ideas_objects(Subject,
@@ -420,18 +456,3 @@ conceptual_feeling_words_ideas_objects(Subject, Subjective_aim, Time, List) :-
 						  Time,
 						  List).
 
- corefer([Head1 | Tail1], [Head2 | Tail2]) :-
-	corefer(Head1, Head2),
-	corefer(Tail1, Tail2).
-
-corefer(Head1, Head2) :-
-	\+ differ_refer(Head1, Head2).
-
-differ_refer(Head1, Head2) :-
-	qqqq4(Head1, X),
-	\+ qqqq4(Head2, X).
-	
-differ_refer(Head2, Head1) :-
-	qqqq4(Head1, X),
-	\+ qqqq4(Head2, X).
-	

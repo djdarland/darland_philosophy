@@ -8,14 +8,14 @@
 *** Yes
 
 *** Yes
-Mon 17 Jan 2022 02:26:40 AM CST
+Tue 25 Jan 2022 11:05:40 PM CST
 
 *** Yes
 > 
 *** Yes
 > 
 > write_time(Ignore)?
-0Mon 17 Jan 2022 02:26:40 AM CST
+0Tue 25 Jan 2022 11:05:40 PM CST
 
 *** Yes
 Ignore = @.
@@ -166,13 +166,9 @@ Ignore = @.
 *** Yes
 --1> ;
 
-*** Yes
---1> ;
-
-*** Yes
---1> 
-
 *** No
+> ;
+> 
 > quine_opaque_believes_in_ideas(quine_dc, now,
 |    			       [quine_denounced_idea_dc,
 |    				quine_cicero_idea_dc,
@@ -191,10 +187,10 @@ Ignore = @.
 > 
 > quine_opaque_believes_objects(tom_dc, now,
 |    			       [[denounced_rel],
-|    				[cicero_dc],
+|    				[tom_cicero_dc],
 |    				[catiline_dc]],
 |    			       [[denounced_rel],
-|    				[tully_dc],
+|    				[tom_tully_dc],
 |    				[catiline_dc]])?
 
 *** Yes
@@ -216,7 +212,7 @@ Ignore = @.
 |    				cicero_dc,
 |    				catiline_dc],
 |    			       [denounced_rel,
-|    				tull_dc,
+|    				tully_dc,
 |    				catiline_dc])?
 
 *** No
@@ -282,13 +278,13 @@ Ignore = @.
 |    				  [[denounced_word_dc,
 |    				   denounced_rel],
 |    				  [cicero_word_dc,
-|    				   cicero_dc],
+|    				   tom_cicero_dc],
 |    				  [catiline_word_dc,
 |    				  catiline_dc]],
 |    				  [[denounced_word_dc,
 |    				   denounced_rel],
 |    				  [tully_word_dc,
-|    				   tully_dc],
+|    				   tom_tully_dc],
 |    				  [catiline_word_dc,
 |    				  catiline_dc]])?
 
@@ -331,13 +327,13 @@ Ignore = @.
 |    				  [[tom_denounced_idea_dc,
 |    				   denounced_rel],
 |    				  [tom_cicero_idea_dc,
-|    				   cicero_dc],
+|    				   tom_cicero_dc],
 |    				  [tom_catiline_idea_dc,
 |    				  catiline_dc]],
 |    				  [[tom_denounced_idea_dc,
 |    				   denounced_rel],
 |    				  [tom_tully_idea_dc,
-|    				   tully_dc],
+|    				   tom_tully_dc],
 |    				  [tom_catiline_idea_dc,
 |    				  catiline_dc]])?
 
@@ -382,7 +378,7 @@ Ignore = @.
 |    				      denounced_rel],
 |    				     [cicero_word_dc,
 |    				      tom_cicero_idea_dc,
-|    				      cicero_dc],
+|    				      tom_cicero_dc],
 |    				     [catiline_word_dc,
 |    				      tom_catiline_idea_dc,
 |    				      catiline_dc]],
@@ -391,7 +387,7 @@ Ignore = @.
 |    				      denounced_rel],
 |    				     [tully_word_dc,
 |    				      tom_tully_idea_dc,
-|    				      tully_dc],
+|    				      tom_tully_dc],
 |    				     [catiline_word_dc,
 |    				      tom_catiline_idea_dc,
 |    				      catiline_dc]])?
@@ -913,87 +909,35 @@ Subject = tom_dc.
 > %% 3 negative	
 > 	
 > test_not_sa_objects(Subject, now, truly_opaque_believes)?
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
+**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tully_dc]]
+**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
+**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[cicero_dc],[cicero_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[denounced_rel]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tully_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
+**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1005,15 +949,67 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** truly_opaque_believes not [and should not] objects [[cicero_dc],[cicero_dc],[catiline_dc]]
+**3C** truly_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[denounced_rel]]
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc]]
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1355,7 +1351,7 @@ Subject = tom_dc.
 > %% 5 negative	
 > 	
 > test_not_sa_words_objects(Subject, now, truly_opaque_believes)?
-**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1367,27 +1363,27 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tully_dc],[catiline_word_dc,catiline_dc]]
+**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** truly_opaque_believes not [and should not] words_objects [[tully_word_dc,tully_dc],[tully_word_dc,tully_dc],[catiline_word_dc,catiline_dc]]
+**5C** truly_opaque_believes not [and should not] words_objects [[tully_word_dc,tom_tully_dc],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[denounced_word_dc,denounced_rel]]
+**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[denounced_word_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc]]
+**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1399,23 +1395,23 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tully_dc],[catiline_word_dc,catiline_dc]]
+**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** truly_opaque_believes not [and should not] words_objects [[tully_word_dc,tully_dc],[tully_word_dc,tully_dc],[catiline_word_dc,catiline_dc]]
+**5C** truly_opaque_believes not [and should not] words_objects [[tully_word_dc,tom_tully_dc],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[denounced_word_dc,denounced_rel]]
+**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[denounced_word_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc]]
+**5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1555,7 +1551,7 @@ Subject = tom_dc.
 > %% 6 negative	
 > 	
 > test_not_sa_ideas_objects(Subject, now, truly_opaque_believes)?
-**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1567,23 +1563,23 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,cicero_dc],[tom_cicero_idea_dc,cicero_dc],[tom_catiline_idea_dc,catiline]]
+**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,tom_cicero_dc],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
+**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc]]
+**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1595,19 +1591,19 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,cicero_dc],[tom_cicero_idea_dc,cicero_dc],[tom_catiline_idea_dc,catiline]]
+**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,tom_cicero_dc],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
+**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc]]
+**6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1749,7 +1745,7 @@ Subject = tom_dc.
 > %% 7 negative	
 > 	
 > test_not_sa_words_ideas_objects(Subject, now, truly_opaque_believes)?
-**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1761,7 +1757,7 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1769,7 +1765,7 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
+**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,tom_cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1777,15 +1773,15 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1797,7 +1793,7 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1805,7 +1801,7 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
+**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,tom_cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -1813,11 +1809,11 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -2355,87 +2351,35 @@ Subject = tom_dc.
 > %% 3 negative	
 > 	
 > test_not_sa_objects(Subject, now, pseudo_opaque_believes)?
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
+**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tully_dc]]
+**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
+**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[cicero_dc],[cicero_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[denounced_rel]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tully_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
-*** Yes
-Subject = tom_dc.
---1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[cicero_dc]]
+**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -2447,15 +2391,67 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[cicero_dc],[cicero_dc],[catiline_dc]]
+**3C** pseudo_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc],[denounced_rel]]
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[cicero_dc]]
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -2797,7 +2793,7 @@ Subject = tom_dc.
 > %% 5 negative	
 > 	
 > test_not_sa_words_objects(Subject, now, pseudo_opaque_believes)?
-**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -2809,27 +2805,27 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tully_dc],[catiline_word_dc,catiline_dc]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** pseudo_opaque_believes not [and should not] words_objects [[tully_word_dc,tully_dc],[tully_word_dc,tully_dc],[catiline_word_dc,catiline_dc]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[tully_word_dc,tom_tully_dc],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[denounced_word_dc,denounced_rel]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[denounced_word_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -2841,23 +2837,23 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tully_dc],[catiline_word_dc,catiline_dc]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** pseudo_opaque_believes not [and should not] words_objects [[tully_word_dc,tully_dc],[tully_word_dc,tully_dc],[catiline_word_dc,catiline_dc]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[tully_word_dc,tom_tully_dc],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[denounced_word_dc,denounced_rel]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[denounced_word_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc]]
+**5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -2997,7 +2993,7 @@ Subject = tom_dc.
 > %% 6 negative	
 > 	
 > test_not_sa_ideas_objects(Subject, now, pseudo_opaque_believes)?
-**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -3009,23 +3005,23 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,cicero_dc],[tom_cicero_idea_dc,cicero_dc],[tom_catiline_idea_dc,catiline]]
+**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,tom_cicero_dc],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
+**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc]]
+**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -3037,19 +3033,19 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,cicero_dc],[tom_cicero_idea_dc,cicero_dc],[tom_catiline_idea_dc,catiline]]
+**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,tom_cicero_dc],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
+**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc]]
+**6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -3191,7 +3187,7 @@ Subject = tom_dc.
 > %% 7 negative	
 > 	
 > test_not_sa_words_ideas_objects(Subject, now, pseudo_opaque_believes)?
-**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -3203,7 +3199,7 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -3211,7 +3207,7 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
+**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,tom_cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -3219,15 +3215,15 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -3239,7 +3235,7 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -3247,7 +3243,7 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
+**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,tom_cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -3255,11 +3251,11 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -3735,35 +3731,35 @@ Subject = tom_dc.
 > %% 3 negative	
 > 	
 > test_not_sa_objects(Subject, now, agnostic)?
-**3C** agnostic not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
+**3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** agnostic not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
+**3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** agnostic not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
+**3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** agnostic not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
+**3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** agnostic not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
+**3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** agnostic not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
+**3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** agnostic not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
+**3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**3C** agnostic not [and should not] objects [[denounced_rel],[cicero_dc],[catiline_dc]]
+**3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -4093,7 +4089,7 @@ Subject = tom_dc.
 > %% 5 negative	
 > 	
 > test_not_sa_words_objects(Subject, now, agnostic)?
-**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -4101,15 +4097,15 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tully_dc],[catiline_word_dc,catiline_dc]]
+**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -4117,11 +4113,11 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tully_dc],[catiline_word_dc,catiline_dc]]
+**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,cicero_dc],[catiline_word_dc,catiline_dc]]
+**5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -4269,7 +4265,7 @@ Subject = tom_dc.
 > %% 6 negative	
 > 	
 > test_not_sa_ideas_objects(Subject, now, agnostic)?
-**6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -4277,11 +4273,11 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -4289,7 +4285,7 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+**6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -4439,7 +4435,7 @@ Subject = tom_dc.
 > %% 7 negative	
 > 	
 > test_not_sa_words_ideas_objects(Subject, now, agnostic)?
-**7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -4447,11 +4443,11 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -4459,7 +4455,7 @@ Subject = tom_dc.
 *** Yes
 Subject = tom_dc.
 --1> ;
-**7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+**7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
@@ -4532,11 +4528,11 @@ Subject = tom_dc.
 > 
 > 
 > write_stats(Ignore)?
-CPU Time 1.12 Seconds
-Clock Time 1.11907 Seconds
+CPU Time 6.4 Seconds
+Clock Time 6.39014 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2920200 bytes ( 2851K) (0%)
+Heap size   :  2736408 bytes ( 2672K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 
