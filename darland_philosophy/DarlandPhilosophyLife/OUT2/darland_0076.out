@@ -14,7 +14,7 @@
 *** Yes
 
 *** Yes
-Tue 25 Jan 2022 11:06:30 PM CST
+Sat 29 Jan 2022 07:13:29 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
@@ -1539,11 +1539,11 @@ B = [].
 > 
 > 
 > write_stats(Ignore)?
-CPU Time 0.63 Seconds
-Clock Time 0.607454 Seconds
+CPU Time 0.65 Seconds
+Clock Time 0.63193 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2682976 bytes ( 2620K) (0%)
+Heap size   :  2842424 bytes ( 2775K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 

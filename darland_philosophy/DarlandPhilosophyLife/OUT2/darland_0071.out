@@ -4,7 +4,7 @@
 *** Yes
 
 *** Yes
-Tue 25 Jan 2022 11:04:57 PM CST
+Sat 29 Jan 2022 07:10:14 PM CST
 
 *** Yes
 > 
@@ -17,6 +17,185 @@ Ignore = @.
 --1> 
 
 *** No
+> %% 1
+> conceptual_feeling_words(earther_dc,
+|    			 understands, then,
+|    			 [[wet_word_dc], [water_word_dc]])?
+
+*** Yes
+--1> ;
+
+*** No
+> ;
+> 
+> conceptual_feeling_words(twin_earther_dc,
+|    			 understands, then,
+|    			 [[wet_word_dc], [water_word_dc]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% 2
+> 
+> conceptual_feeling_in_ideas(earther_dc, understands, then,
+|    			    [[earther_wet_idea_dc],
+|    			     [earther_water_idea_dc]])?
+
+*** Yes
+--1> 
+
+*** No
+> conceptual_feeling_in_ideas(twin_earther_dc, understands, then,
+|    			    [[twin_earther_wet_idea_dc],
+|    			     [twin_earther_water_idea_dc]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% 3
+> 
+> conceptual_feeling_objects(earther_dc, understands, then,
+|    			   [[wet_rel], [h2o_dc]])?
+
+*** Yes
+--1> conceptual_feeling_objects(earther_dc, understands, then,
+|    			   [[wet_rel], [xyz_dc]])?
+
+*** No
+--1> conceptual_feeling_objects(twin_earther_dc, understands, then,
+|    			   [[wet_rel], [h2o_dc]])?
+
+*** No
+--1> conceptual_feeling_objects(twin_earther_dc, understands, then,
+|    			   [[wet_rel], [xyz_dc]])?
+
+*** Yes
+----2> 
+
+*** No
+--1> %% 4
+--1> 	  
+--1> conceptual_feeling_words_ideas(earther_dc,
+|    			       understands, then,
+|    			       [[wet_word_dc,
+|    				 earther_wet_idea_dc],
+|    				[water_word_dc,
+|    				earther_water_idea_dc]])?
+
+*** Yes
+----2> 
+
+*** No
+--1> conceptual_feeling_words_ideas(twin_earther_dc,
+|    			       understands, then,
+|    			       [[wet_word_dc,
+|    				 twin_earther_wet_idea_dc],
+|    				[water_word_dc,
+|    				twin_earther_water_idea_dc]])?
+
+*** Yes
+----2> 
+
+*** No
+--1> %% 5
+--1> conceptual_feeling_words_objects(earther_dc, understands,
+|    				 then,
+|    				 [[wet_word_dc, wet_rel],
+|    				  [water_word_dc, h2o_dc]])?
+
+*** Yes
+----2> 
+
+*** No
+--1> conceptual_feeling_words_objects(earther_dc, understands,
+|    				 then,
+|    				 [[wet_word_dc, wet_rel],
+|    				  [water_word_dc, xyz_dc]])?
+
+*** No
+--1> 
+
+*** No
+> conceptual_feeling_words_objects(twin_earther_dc, understands,
+|    				 then,
+|    				 [[wet_word_dc, wet_rel],
+|    				  [water_word_dc, h2o_dc]])?
+
+*** No
+> 
+> conceptual_feeling_words_objects(twin_earther_dc, understands,
+|    				 then,
+|    				 [[wet_word_dc, wet_rel],
+|    				  [water_word_dc, xyz_dc]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% 6
+> 
+> conceptual_feeling_ideas_objects( earther_dc,
+|    				  understands,
+|    				  then,
+|    				  [[earther_wet_idea_dc,
+|    				    wet_rel],
+|    				   [earther_water_idea_dc,
+|    				    h2o_dc]])?
+
+*** Yes
+--1> 
+
+*** No
+> conceptual_feeling_ideas_objects( twin_earther_dc,
+|    				  understands,
+|    				  then,
+|    				  [[twin_earther_wet_idea_dc,
+|    				    wet_rel],
+|    				   [twin_earther_water_idea_dc,
+|    				    xyz_dc]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% 7
+> 	  
+> conceptual_feeling_words_ideas_objects(earther_dc,
+|    				       understands,
+|    				       then,
+|    				       [[wet_word_dc,
+|    					 earther_wet_idea_dc,
+|    					 wet_rel],
+|    					[water_word_dc,
+|    					 earther_water_idea_dc,
+|    					 h2o_dc]])?
+
+*** Yes
+--1> 
+
+*** No
+> conceptual_feeling_words_ideas_objects(twin_earther_dc,
+|    				       understands,
+|    				       then,
+|    				       [[wet_word_dc,
+|    					 twin_earther_wet_idea_dc,
+|    					 wet_rel],
+|    					[water_word_dc,
+|    					 twin_earther_water_idea_dc,
+|    					 xyz_dc]])?
+
+*** Yes
+--1> 
+
+*** No
+> 
+> 
+> corefer([h2o_dc, xyz_dc])?
+
+*** No
+> 	
 > %% 1 positive
 > 
 > test_sa_words(Subject, now, understands)?
@@ -1442,12 +1621,16 @@ Subject = tom_dc.
 > ;
 > ;
 > 
+> corefer([h2o_dc, xyz_dc])?
+
+*** No
+> 	
 > write_stats(Ignore)?
-CPU Time 0.07 Seconds
-Clock Time 0.0713069 Seconds
+CPU Time 0.12 Seconds
+Clock Time 0.09232 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2217120 bytes ( 2165K) (0%)
+Heap size   :  2290200 bytes ( 2236K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 

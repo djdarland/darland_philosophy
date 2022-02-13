@@ -6,7 +6,7 @@
 *** Yes
 
 *** Yes
-Tue 25 Jan 2022 03:03:18 PM CST
+Sat 29 Jan 2022 07:10:38 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > 
@@ -136,38 +136,6 @@ Subject = tom_dc, Time = now.
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
 **1A** believes [and should] words [[roman_word_dc],[catiline_word_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
@@ -213,38 +181,6 @@ Subject = tom_dc, Time = now.
 Subject = tom_dc, Time = now.
 --1> ;
 **1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
-*** Yes
-Subject = tom_dc, Time = now.
---1> ;
-**1A** believes [and should] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
@@ -282,6 +218,22 @@ Subject = tom_dc, Time = now.
 --1> ;
 
 *** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
 > ;
 > ;
 > ;
@@ -328,6 +280,10 @@ Subject = tom_dc, Time = now.
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+**1C** believes not [and should not] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
 **1C** believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
@@ -346,7 +302,6 @@ Subject = tom_dc, Time = now.
 --1> ;
 
 *** No
-> ;
 > ;
 > ;
 > ;
@@ -653,6 +608,7 @@ Subject = tom_dc, Time = now.
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
 **3A** believes [and should] objects [[roman_rel],[catiline_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
@@ -669,6 +625,7 @@ Subject = tom_dc, Time = now.
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
 **3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
@@ -701,6 +658,7 @@ Subject = tom_dc, Time = now.
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
 **3A** believes [and should] objects [[roman_rel],[catiline_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
@@ -717,6 +675,7 @@ Subject = tom_dc, Time = now.
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
 
 *** No
 > ;
@@ -769,38 +728,54 @@ Subject = tom_dc, Time = now.
 > %% 3 negative	
 > 	
 > test_not_sa_objects(Subject, Time, believes)?
+cfo truly 00001B
 **3C** believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
 **3C** believes not [and should not] objects [[tom_tully_dc],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
 **3C** believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[denounced_rel]]
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
 **3C** believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
 **3C** believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
 **3C** believes not [and should not] objects [[tom_tully_dc],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
 **3C** believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[denounced_rel]]
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
 **3C** believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc, Time = now.
 --1> ;
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
 
 *** No
 > ;
@@ -2002,12 +1977,318 @@ Subject = tom_dc, Time = now.
 > ;
 > ;
 > 
+> %% Checks on Belief follow.
+> 
+> %% 3 positive
+> 
+> test_sa_objects(Subject, Time, believes_truly)?
+cfo truly 00001A
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+cfo truly 00001A
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes_truly [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+cfo truly 00001A
+cfo truly 00001A
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 3 negative
+> 	
+> test_not_sa_objects(Subject, Time, believes_truly)?
+cfo truly 00001A
+cfo truly 00001B
+**3C** believes_truly not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001A
+cfo truly 00001B
+**3C** believes_truly not [and should not] objects [[denounced_rel],[tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001A
+cfo truly 00001B
+**3C** believes_truly not [and should not] objects [[tully_dc],[tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001A
+cfo truly 00001B
+**3C** believes_truly not [and should not] objects [[denounced_rel],[tully_dc],[denounced_rel]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001A
+cfo truly 00001B
+**3C** believes_truly not [and should not] objects [[denounced_rel],[cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001A
+cfo truly 00001B
+cfo truly 00001A
+cfo truly 00001B
+cfo truly 00001A
+cfo truly 00001B
+cfo truly 00001A
+cfo truly 00001B
+cfo truly 00001A
+cfo truly 00001B
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> 
+> 	
 > write_stats(Ignore)?
-CPU Time 0.28 Seconds
-Clock Time 0.262593 Seconds
+CPU Time 0.3 Seconds
+Clock Time 0.291976 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2438352 bytes ( 2381K) (0%)
+Heap size   :  2599624 bytes ( 2538K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 

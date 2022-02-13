@@ -10,7 +10,7 @@
 *** Yes
 
 *** Yes
-Tue 25 Jan 2022 11:05:16 PM CST
+Sat 29 Jan 2022 07:11:37 PM CST
 
 *** Yes
 > 
@@ -688,6 +688,14 @@ type I = tom_mortal_class_idea_dc T = @
 type I = tom_roman_class_idea_dc T = @
 type I = tom_american_class_idea_dc T = @
 type I = tom_featherless_biped_class_idea_dc T = @
+type I = earther_water_idea_dc T = @
+type I = twin_earther_water_idea_dc T = @
+type I = earther_wet_idea_dc T = @
+type I = twin_earther_wet_idea_dc T = @
+type I = twin_earther_water_idea_dc T = @
+type I = earther_water_idea_dc T = @
+type I = twin_earther_wet_idea_dc T = @
+type I = earther_wet_idea_dc T = @
 
 *** No
 > ;
@@ -770,11 +778,11 @@ I = @, R = unknown_relation003_rel.
 > 
 > 
 > write_stats(Ignore)?
-CPU Time 0.13 Seconds
-Clock Time 0.12618 Seconds
+CPU Time 0.18 Seconds
+Clock Time 0.153837 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2557728 bytes ( 2497K) (0%)
+Heap size   :  2719288 bytes ( 2655K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 

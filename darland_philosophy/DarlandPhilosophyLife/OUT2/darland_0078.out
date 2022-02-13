@@ -18,7 +18,7 @@
 *** Yes
 
 *** Yes
-Tue 25 Jan 2022 11:07:59 PM CST
+Sat 29 Jan 2022 07:14:23 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
@@ -710,11 +710,11 @@ F = human_word_dc, I = tom_russell_idea_dc, O = russell_dc, W = russell_word_dc.
 *** No
 > 
 > write_stats(Ignore)?
-CPU Time 0.47 Seconds
-Clock Time 0.451831 Seconds
+CPU Time 0.52 Seconds
+Clock Time 0.494576 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2801952 bytes ( 2736K) (0%)
+Heap size   :  2961400 bytes ( 2891K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 

@@ -8,14 +8,14 @@
 *** Yes
 
 *** Yes
-Tue 25 Jan 2022 11:05:40 PM CST
+Sat 29 Jan 2022 07:11:59 PM CST
 
 *** Yes
 > 
 *** Yes
 > 
 > write_time(Ignore)?
-0Tue 25 Jan 2022 11:05:40 PM CST
+0Sat 29 Jan 2022 07:11:59 PM CST
 
 *** Yes
 Ignore = @.
@@ -192,15 +192,19 @@ Ignore = @.
 |    			       [[denounced_rel],
 |    				[tom_tully_dc],
 |    				[catiline_dc]])?
+cfo truly 00001B
 
 *** Yes
 --1> ;
+cfo truly 00001B
 
 *** Yes
 --1> ;
+cfo truly 00001B
 
 *** Yes
 --1> ;
+cfo truly 00001B
 
 *** Yes
 --1> 
@@ -909,110 +913,162 @@ Subject = tom_dc.
 > %% 3 negative	
 > 	
 > test_not_sa_objects(Subject, now, truly_opaque_believes)?
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
 
 *** No
 > ;
@@ -2351,110 +2407,162 @@ Subject = tom_dc.
 > %% 3 negative	
 > 	
 > test_not_sa_objects(Subject, now, pseudo_opaque_believes)?
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
 **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
 
 *** No
 > ;
@@ -3731,38 +3839,102 @@ Subject = tom_dc.
 > %% 3 negative	
 > 	
 > test_not_sa_objects(Subject, now, agnostic)?
+cfo truly 00001B
+cfo truly 00001B
 **3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
 **3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
 **3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
+cfo truly 00001B
 **3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
+cfo truly 00001B
 **3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
 **3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
 **3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
+cfo truly 00001B
 **3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
 *** Yes
 Subject = tom_dc.
 --1> ;
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
 
 *** No
 > ;
@@ -4528,11 +4700,11 @@ Subject = tom_dc.
 > 
 > 
 > write_stats(Ignore)?
-CPU Time 6.4 Seconds
-Clock Time 6.39014 Seconds
+CPU Time 6.61 Seconds
+Clock Time 6.59871 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2736408 bytes ( 2672K) (0%)
+Heap size   :  2897072 bytes ( 2829K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 

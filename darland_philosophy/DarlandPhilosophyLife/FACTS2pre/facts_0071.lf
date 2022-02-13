@@ -115,8 +115,6 @@ subjective_aim(understanding_sa).
 
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 actual_occasion(unknown_occasion00001).
 actual_occasion(unknown_occasion00002).
@@ -1014,10 +1012,6 @@ qqqq(conceptual_feeling_in_ideas, tom_dc, disbelieves,
 
 qqqq(conceptual_feeling_in_ideas, tom_dc, believes, now,     [tom_roman_idea_dc, tom_catiline_idea_dc]).
 
-qqqq(conceptual_feeling_in_ideas, tom_dc,believes, now,
-     [tom_denounced_idea_dc, tom_santa_idea_dc,
-      tom_catiline_idea_dc]).
-
 qqqq(conceptual_feeling_in_ideas, quine,believes, now,
      [quine_denounced_idea_dc, quine_cicero_idea_dc,
       quine_catiline_idea_dc]).
@@ -1025,6 +1019,10 @@ qqqq(conceptual_feeling_in_ideas, quine,believes, now,
 qqqq(conceptual_feeling_in_ideas, tom_dc, believes, now,
      [[wrote_DeSenectute_word_dc],
       [tully_word_dc]]).
+
+qqqq(conceptual_feeling_in_ideas, tom_dc, disbelieves, now,
+     [tom_denounced_idea_dc, tom_santa_idea_dc,
+      tom_catiline_idea_dc]).
 
 %% A fact -- indicated by qqqq4
 
@@ -1466,7 +1464,7 @@ should_sa_words(tom_dc, now, disbelieves,
 
 %% Next should be TRUE
 
-should_sa_words(tom_dc, now, believes,
+should_sa_words(tom_dc, now, disbelieves,
      [[denounced_word_dc],
       [santa_word_dc],
       [catiline_word_dc]]).
@@ -2794,7 +2792,7 @@ should_sa_words(tom_dc, now, disbelieves,
 
 %% Next should be TRUE
 
-should_sa_words(tom_dc, now, believes,
+should_not_sa_words(tom_dc, now, believes,
      [[denounced_word_dc],
       [santa_word_dc],
       [catiline_word_dc]]).
@@ -4382,3 +4380,218 @@ qqqq4([human_rel, catiline_dc]).
 qqqq4([human_rel, tom_dc]).
 qqqq4([human_rel, tom_cicero_dc]).
 qqqq4([human_rel, quine_dc]).
+qqqq4([denounced_rel,
+      tom_cicero_dc,
+      catiline_dc]).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BELIEF
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% OBJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Next should be TRUE
+
+should_sa_objects(tom_dc, now, believes_truly,
+     [[denounced_rel],
+      [tom_cicero_dc],
+      [catiline_dc]]).
+
+should_sa_objects(tom_dc, now, disbelieves_truly,
+     [[denounced_rel],
+      [tully_dc],
+      [catiline_dc]]).
+
+%% Next should be TRUE
+
+should_not_sa_objects(tom_dc, now, believes_truly,
+     [[denounced_rel],
+      [santa_dc],
+      [catiline_dc]]).
+
+%% Next should be TRUE
+
+should_sa_objects(tom_dc, now, believes_truly,
+     [[roman_rel],
+      [catiline_dc]]).
+
+%% Next should be FALSE
+
+should_not_sa_objects(tom_dc, now, believes_truly,
+     [[denounced_rel],
+      [tully_dc],
+      [catiline_dc]]).
+
+%% Next should be FALSE -- wrong type
+
+should_not_sa_objects(tom_dc, now, believes_truly,
+     [[tully_dc],
+      [tully_dc],
+      [catiline_dc]]).
+
+%% Next should be FALSE -- wrong type
+
+should_not_sa_objects(tom_dc, now, believes_truly,
+     [[denounced_rel],
+      [tully_dc],
+      [denounced_rel]]).
+
+%% Next should be FALSE -- wrong arity
+
+should_not_sa_objects(tom_dc, now, believes_truly,
+     [[denounced_rel],
+      [cicero_dc]]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This section added for Putnam Twin Earth example
+
+%%%%%%%%%%%%
+
+actual_occasion(earther_00001).
+actual_occasion(earther_00002).
+actual_occasion(earther_00003).
+actual_occasion(earther_00004).
+actual_occasion(earther_00005).
+
+actual_occasion(twin_earther_00001).
+actual_occasion(twin_earther_00002).
+actual_occasion(twin_earther_00003).
+actual_occasion(twin_earther_00004).
+actual_occasion(twin_earther_00005).
+
+actual_occasion(wet_word_00001).
+actual_occasion(wet_word_00002).
+actual_occasion(wet_word_00003).
+actual_occasion(wet_word_00004).
+actual_occasion(wet_word_00005).
+
+actual_occasion(earther_wet_idea_00001).
+actual_occasion(earther_wet_idea_00002).
+actual_occasion(earther_wet_idea_00003).
+actual_occasion(earther_wet_idea_00004).
+actual_occasion(earther_wet_idea_00005).
+
+actual_occasion(twin_earther_wet_idea_00001).
+actual_occasion(twin_earther_wet_idea_00002).
+actual_occasion(twin_earther_wet_idea_00003).
+actual_occasion(twin_earther_wet_idea_00004).
+actual_occasion(twin_earther_wet_idea_00005).
+
+actual_occasion(h2o_00001).
+actual_occasion(h2o_00002).
+actual_occasion(h2o_00003).
+actual_occasion(h2o_00004).
+actual_occasion(h2o_00005).
+
+actual_occasion(xyz_00001).
+actual_occasion(xyz_00002).
+actual_occasion(xyz_00003).
+actual_occasion(xyz_00004).
+actual_occasion(xyz_00005).
+
+actual_occasion(water_word_00001).
+actual_occasion(water_word_00002).
+actual_occasion(water_word_00003).
+actual_occasion(water_word_00004).
+actual_occasion(water_word_00005).
+
+actual_occasion(earther_water_idea_00001).
+actual_occasion(earther_water_idea_00002).
+actual_occasion(earther_water_idea_00003).
+actual_occasion(earther_water_idea_00004).
+actual_occasion(earther_water_idea_00005).
+
+actual_occasion(twin_earther_water_idea_00001).
+actual_occasion(twin_earther_water_idea_00002).
+actual_occasion(twin_earther_water_idea_00003).
+actual_occasion(twin_earther_water_idea_00004).
+actual_occasion(twin_earther_water_idea_00005).
+
+defining_characteristic(earther_dc).
+defining_characteristic(twin_earther_dc).
+defining_characteristic(water_word_dc).
+defining_characteristic(wet_word_dc).
+defining_characteristic(twin_earther_water_idea_dc).
+defining_characteristic(earther_water_idea_dc).
+
+refer([earther_dc, earther_00001]).
+refer([earther_dc, earther_00002]).
+refer([earther_dc, earther_00003]).
+refer([earther_dc, earther_00004]).
+refer([earther_dc, earther_00005]).
+
+refer([twin_earther_dc, earther_00001]).
+refer([twin_earther_dc, earther_00002]).
+refer([twin_earther_dc, earther_00003]).
+refer([twin_earther_dc, earther_00004]).
+refer([twin_earther_dc, earther_00005]).
+
+refer([water_word_dc, water_word_00001]).
+refer([water_word_dc, water_word_00002]).
+refer([water_word_dc, water_word_00003]).
+refer([water_word_dc, water_word_00004]).
+refer([water_word_dc, water_word_00005]).
+
+refer([wet_word_dc, wet_word_00001]).
+refer([wet_word_dc, wet_word_00002]).
+refer([wet_word_dc, wet_word_00003]).
+refer([wet_word_dc, wet_word_00004]).
+refer([wet_word_dc, wet_word_00005]).
+
+refer([earther_water_idea_dc, h2o_00001]).
+refer([earther_water_idea_dc, h2o_00002]).
+refer([earther_water_idea_dc, h2o_00003]).
+refer([earther_water_idea_dc, h2o_00004]).
+refer([earther_water_idea_dc, h2o_00005]).
+
+refer([twin_earther_water_idea_dc, xyz_00001]).
+refer([twin_earther_water_idea_dc, xyz_00002]).
+refer([twin_earther_water_idea_dc, xyz_00003]).
+refer([twin_earther_water_idea_dc, xyz_00004]).
+refer([twin_earther_water_idea_dc, xyz_00005]).
+
+rrrr(earther_dc, then, water_word_dc,
+     earther_water_idea_dc).
+rrrr(earther_dc, then, wet_word_dc,
+     earther_wet_idea_dc).
+rrrr(twin_earther_dc, then, water_word_dc,
+     twin_earther_water_idea_dc).
+rrrr(twin_earther_dc, then, wet_word_dc,
+     twin_earther_wet_idea_dc).
+
+ssss(earther_dc, then, earther_water_idea_dc,
+    h2o_dc).
+ssss(twin_earther_dc, then, twin_earther_water_idea_dc,
+    xyz_dc).
+ssss(earther_dc, then, earther_wet_idea_dc,
+    wet_rel).
+ssss(twin_earther_dc, then, twin_earther_wet_idea_dc,
+    wet_rel).
+
+relation(wet_rel).
+
+qqqq(idea_of, earther_dc, earther_water_idea_dc).
+qqqq(idea_of, twin_earther_dc, twin_earther_water_idea_dc).
+qqqq(idea_of, earther_dc, earther_wet_idea_dc).
+qqqq(idea_of, twin_earther_dc, twin_earther_wet_idea_dc).
+
+qqqq(arity_idea, earther_wet_idea_dc, 1).
+qqqq(arity_idea, twin_earther_wet_idea_dc, 1).
+qqqq(type_idea, earther_wet_idea_dc, 1).
+qqqq(type_idea, twin_earther_wet_idea_dc, 1).
+qqqq(type_idea, earther_water_idea_dc, 0).
+qqqq(type_idea, twin_earther_water_idea_dc, 0).
+
+personal_order(earther_dc).
+personal_order(twin_earther_dc).
+qqqq(idea_of, twin_earther_dc, twin_earther_water_idea_dc).
+qqqq(idea_of, earther_dc, earther_water_idea_dc).
+qqqq(idea_of, twin_earther_dc, twin_earther_wet_idea_dc).
+qqqq(idea_of, earther_dc, earther_wet_idea_dc).
+qqqq(number_idea, earther_water_idea_dc, singular).
+qqqq(number_idea, twin_earther_water_idea_dc, singular).
+qqqq(number_idea, earther_wet_idea_dc, singular).
+qqqq(number_idea, twin_earther_wet_idea_dc, singular).
+
+

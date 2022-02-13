@@ -16,7 +16,7 @@
 *** Yes
 
 *** Yes
-Tue 25 Jan 2022 11:07:35 PM CST
+Sat 29 Jan 2022 07:14:04 PM CST
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
@@ -453,11 +453,11 @@ W = american_class_word_dc.
 > ;
 > 	
 > write_stats(Ignore)?
-CPU Time 0.43 Seconds
-Clock Time 0.412209 Seconds
+CPU Time 0.46 Seconds
+Clock Time 0.435407 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2710520 bytes ( 2646K) (0%)
+Heap size   :  2869968 bytes ( 2802K) (0%)
 Total memory: 1677721584 bytes (1638399K)
 X predicates are not installed.
 
