@@ -1,0 +1,175 @@
+% From Wikipedea.
+
+% The universe of the Game of Life is an infinite, two-dimensional orthogonal grid of square cells, each of which is in one of two possible states, live or dead (or populated and unpopulated, respectively). Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur:
+
+%    Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+%    Any live cell with two or three live neighbours lives on to the next generation.
+%    Any live cell with more than three live neighbours dies, as if by overpopulation.
+%    Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+
+% These rules, which compare the behavior of the automaton to real life, can be condensed into the following:
+
+%    Any live cell with two or three live neighbours survives.
+%    Any dead cell with three live neighbours becomes a live cell.
+%    All other live cells die in the next generation. Similarly, all other dead cells stay dead.
+
+%The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed, live or dead; births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick.[nb 1] Each generation is a pure function of the preceding one. The rules continue to be applied repeatedly to create further generations.
+
+process :-
+    N = 5,   % world size
+    creative_advance(0, N, Prior_World, World).
+
+position_in_world(N:int, X:int, Y:int) ->
+    (
+%	write("Position X = ", X, "Y = ", Y, "Pos = ", X + (Y - 1) * N),
+	X + (Y - 1) * N
+    ).   
+
+assign_world(N:int, X:int, Y:int, Val:int, World) :-
+    cond(in_grid(N, X, Y),
+	 (
+	     %%% write("N = ", N),
+	     %%% write("X = ", X),
+	     %%% write("Y = ", Y),
+	     Pos = position_in_world(N, X, Y),
+	     %%% write("Pos = ", Pos),
+	     %%% write("Val = ", Val),nl,
+%	     write("in assign position = ", Pos),nl,
+	     World.Pos = Val
+	 ),
+	 write("assign out of bounds X = ", X, " Y = ", Y)
+	).
+	
+
+get_value(N:int, X:int, Y:int, World) ->
+    cond(X < 1, random(2),
+	 cond(X > N, random(2),
+	      cond(Y < 1, random(2),
+		   cond(Y > N, random(2),
+			World.position_in_world(N, X, Y)
+		       )
+		  )
+	     )
+	).
+
+in_grid(N, X, Y) :- X > 0, Y > 0, X =< N, Y =< N.
+
+prehends_for_X(N, X, Y, Prior_World, World) :-
+%    write("Hello_dennis_X X = ", X, " Y = ", Y), nl,
+    cond(X =< N,
+	 cond(Y < N,
+	      (
+		  prehends_for_Y(N, X, Y + 1, Prior_World, World),
+		  cond(X < N,
+		       prehends_for_X(N, X + 1, 0, Prior_World, World)
+%		       write(" DONEDONE")
+		      )
+%		  (
+%		      write("Prehend Y Done"),
+%		      nl
+%		  )
+	      )
+%	      write("Y Done")
+	     )
+	).
+
+prehends_for_Y(N, X, Y, Prior_World, World) :-
+ %   write("Hello_dennis_Y X = ", X, " Y = ", Y), nl,
+    prehends_for_X_Y(N, X - 1, Y - 1, 0, Count_1, Prior_World, World),
+    prehends_for_X_Y(N, X - 1, Y, Count_1, Count_2, Prior_World, World),
+    prehends_for_X_Y(N, X - 1, Y + 1, Count_2, Count_3, Prior_World, World),
+    prehends_for_X_Y(N, X , Y - 1, Count_3, Count_4, Prior_World, World),
+    prehends_for_X_Y(N, X , Y + 1, Count_4, Count_5, Prior_World, World),
+    prehends_for_X_Y(N, X + 1, Y - 1, Count_5, Count_6, Prior_World, World),
+    prehends_for_X_Y(N, X + 1, Y, Count_6, Count_7, Prior_World, World),
+    prehends_for_X_Y(N, X + 1, Y + 1, Count_7, Count_8, Prior_World, World),
+    determine_fate(N, X, Y, Count_8, Prior_World, World),
+    cond(Y < N,
+	 (
+	     prehends_for_Y(N, X, Y + 1, Prior_World, World)
+	 )
+%	 write(" for_Y Done")
+	).
+
+prehends_for_X_Y(N, X, Y, Count_In, Count_Out, Prior_World, World) :-
+    Count_Out = Count_In + get_value(N, X, Y, Prior_World).
+%    write("Prior = ", prior_world),nl,
+%    write("X_Y X = ", X, " Y = ", Y, "In = ", Count_In, " Out = ", Count_Out),
+%    nl.
+
+%    Any live cell with two or three live neighbours survives.
+%    Any dead cell with three live neighbours becomes a live cell.
+%    All other live cells die in the next generation. Similarly, all other dead cells stay dead.
+
+determine_fate(N, X, Y, Count, Prior_World, World) :-
+    %    temp_world = prior_world,
+    Val = get_value(N, X, Y, Prior_World),
+%    write("Fate N = ", N, " X = ", X, " Y = ", Y, " Count = ", Count, " Val = ", Val), nl,
+    cond((Val =:= 1), % was alive
+	 cond((Count =:= 2) or (Count =:= 3),
+	      lives(N, X, Y, World), % survives
+	      dies(N, X, Y, World)), % dies
+	 cond(Count =:= 3,   % was dead
+	      lives(N, X, Y, World), % becomes alive
+	      dies(N, X, Y, World)) % stays dead
+	).
+dies(N, X, Y, World) :-
+    assign_world(N, X, Y, 0, World). % dies
+%    write("dies  X = ", X, " Y = ", Y).
+
+lives(N, X, Y, World) :-
+    assign_world(N, X, Y, 1, World). % lives
+%    write("lives X = ", X, " Y = ", Y).
+
+init_world(N, Prior_World, World)   :-
+%    write("Here"), nl,
+    Prior_World = prior_world,
+    World = world,
+    init_X(N, 1, Prior_World).
+%     prior_world <- old,
+%     world <- new,
+%     write("There prior_world = ", Prior_World), nl.
+%   world = Prior_world.
+%    write("prior_world = ", prior_world),nl.
+%    write("      world = ", world),nl.
+
+init_X(N, X, Prior_World) :-
+    init_Y(N, X, 1, Prior_World),
+    cond(X < N,
+	 init_X(N, X + 1, Prior_World)
+%	 (
+%	     write("init X done"),nl
+%	 ),
+%	 write("init X done 2"),nl
+	).
+
+init_Y(N, X, Y, Prior_World) :-
+    %%% write("init X = ",X), nl,
+    %%% write("init Y = ",Y), nl,
+    assign_world(N, X, Y, random(2), Prior_World),
+    cond(Y < N,
+	 init_Y(N, X, Y + 1, Prior_World)
+%	 (
+%	     write("init Y done"),nl
+%	 ),
+%	 write("init Y done 2"),nl
+	).
+
+creative_advance(Time, N, Prior_World, World) :-    
+    Time_Limit = 100,
+    cond(Time =:= 0, 
+	 (
+	     init_world(N, Prior_World, World),
+	     creative_advance(Time + 1, N, Prior_World, World)
+	 ),
+	 cond(Time < Time_Limit,
+	      (
+		  write("Time = ", Time, " World = ", Prior_World ),nl,
+		  Next_World = newer_world,
+		  prehends_for_X(N, 1, 0, Prior_World, Next_World),
+		  creative_advance(Time + 1, N, Next_World, Future_World)
+	      )
+	     )
+	 ).
+
+

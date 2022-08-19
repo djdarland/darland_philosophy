@@ -1,0 +1,10 @@
+grandfather(X, Z) :- father(X, Y), father(Y, Z).
+
+eternal_object(X) :- defining_characteristic(X).
+
+defining_characteristic(X) :- social_order(X).
+
+social_order(X) :- personal_order(X).
+
+actual_entity(X) :- actual_occasion(X).
+

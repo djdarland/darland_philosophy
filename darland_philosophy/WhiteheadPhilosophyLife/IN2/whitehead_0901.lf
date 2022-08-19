@@ -1,0 +1,12 @@
+load("RULES2/life_0001.lf")?
+% load("FACTS2/facts_0101.lf")?
+load("RULES2/w_rules_0901.lf")?
+trace_input(true)?
+
+write_time(Ignore)?
+
+process?
+
+write_stats(Ignore)?
+
+halt?

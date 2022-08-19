@@ -1,0 +1,47 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Tue 05 Jul 2022 12:17:47 PM CDT
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> 
+> grandfather(A, B)?
+
+*** Yes
+A = clinton, B = dennis.
+--1> 
+
+*** No
+> ;
+> 
+> ;
+> 
+> write_stats(Ignore)?
+CPU Time 0 Seconds
+Clock Time 3.29018e-05 Seconds
+
+Stack size  :     3952 bytes (    3K) (0%)
+Heap size   :   492072 bytes (  480K) (0%)
+Total memory: 1677721584 bytes (1638399K)
+X predicates are not installed.
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+
