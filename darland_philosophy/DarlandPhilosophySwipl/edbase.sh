@@ -1,2 +1,0 @@
-cd ../Source
-./edbase.sh
