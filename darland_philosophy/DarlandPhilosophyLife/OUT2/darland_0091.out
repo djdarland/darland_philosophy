@@ -1,0 +1,1460 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Mon 09 May 2022 01:12:04 AM CDT
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> %% 1 positive
+> 
+> test_sa_words(Subject, now, understands)?
+**1A** understands [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1A** understands [and should] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1A** understands [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1A** understands [and should] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1A** understands [and should] words [[wrote_DeSenectute_word_dc],[cicero_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1A** understands [and should] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1A** understands [and should] words [[wrote_DeSenectute_word_dc],[cicero_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1A** understands [and should] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1A** understands [and should] words [[wrote_DeSenectute_word_dc],[santa_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1A** understands [and should] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1A** understands [and should] words [[roman_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1A** understands [and should] words [[mortal_word_dc],[human_class_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 1 negative
+> 	
+> test_not_sa_words(Subject, now, understands)?
+**1C** understands not [and should not] words [[tully_word_dc],[tully_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1C** understands not [and should not] words [[wrote_DeSenectute_word_dc],[tully_denounced_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**1C** understands not [and should not] words [[denounced_word_dc],[cicero_word_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 2 positive
+> 	
+> test_sa_ideas(Subject, now, understands)?
+2B@nowunderstands
+2BB[[tom_roman_idea_dc],[tom_catiline_idea_dc]]
+2BB[[tom_denounced_idea_dc],[tom_cicero_idea_dc],[tom_catiline_idea_dc]]
+2BB[[tom_denounced_idea_dc],[tom_tully_idea_dc],[tom_catiline_idea_dc]]
+2BB[[quine_denounced_idea_dc],[quine_cicero_idea_dc],[quine_catiline_idea_dc]]
+2BB[[quine_denounced_idea_dc],[quine_tully_idea_dc],[quine_catiline_idea_dc]]
+2BB[[tom_wrote_DeSenectute_idea_dc],[tom_cicero_idea_dc]]
+2BB[[tom_wrote_DeSenectute_idea_dc],[tom_tully_idea_dc]]
+2BB[[quine_wrote_DeSenectute_idea_dc],[quine_cicero_idea_dc]]
+2BB[[quine_wrote_DeSenectute_idea_dc],[quine_tully_idea_dc]]
+2BB[[tom_denounced_idea_dc],[tom_santa_idea_dc],[tom_catiline_idea_dc]]
+2BB[[tom_denounced_idea_dc],[tom_tully_idea_dc],[tom_catiline_idea_dc]]
+2BB[[tom_human_class_idea_dc],[tom_cicero_idea_dc]]
+2BBB[[tom_human_class_idea_dc],[tom_cicero_idea_dc]]
+2BB[[tom_human_class_idea_dc],[tom_catiline_idea_dc]]
+2BBB[[tom_human_class_idea_dc],[tom_catiline_idea_dc]]
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 2 negative	
+> 	
+> test_not_sa_ideas(Subject, now, understands)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 3 positive
+> 	
+> test_sa_objects(Subject, now, understands)?
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3A** understands [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 3 negative	
+> 	
+> test_not_sa_objects(Subject, now, understands)?
+**3C** understands not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** understands not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** understands not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**3C** understands not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 4 positive
+> 	
+> test_sa_words_ideas(Subject, now, understands)?
+**4A** understands [and should] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**4A** understands [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**4A** understands [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**4A** understands [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**4A** understands [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**4A** understands [and should] words_ideas [[mortal_word_dc,tom_mortal_idea_dc],[human_class_word_dc,tom_human_class_idea_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 4 negative	
+> 	
+> test_not_sa_words_ideas(Subject, now, understands)?
+**4C** understands not [and should not] words_ideas [[cicero_word_dc,tom_cicero_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**4C** understands not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_word_dc],[denounced_word_dc,tom_denounced_idea_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**4C** understands not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**4C** understands not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**4C** understands not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 5 positive
+> 	
+> test_sa_words_objects(Subject, now, understands)?
+**5A** understands [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**5A** understands [and should] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**5A** understands [and should] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**5A** understands [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**5A** understands [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**5A** understands [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**5A** understands [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 5 negative	
+> 	
+> test_not_sa_words_objects(Subject, now, understands)?
+**5C** understands not [and should not] words_objects [[denounced_word_dc,denounced_rel],[santa_word_dc,santa_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**5C** understands not [and should not] words_objects [[tully_word_dc,tom_tully_dc],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**5C** understands not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[denounced_word_dc,denounced_rel]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**5C** understands not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 6 positive
+> 	
+> test_sa_ideas_objects(Subject, now, understands)?
+**6A** understands [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**6A** understands [and should] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**6A** understands [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**6A** understands [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**6A** understands [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**6A** understands [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 6 negative	
+> 	
+> test_not_sa_ideas_objects(Subject, now, understands)?
+**6C** understands not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_santa_idea_dc,santa_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**6C** understands not [and should not] ideas_objects [[tom_cicero_idea_dc,tom_cicero_dc],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**6C** understands not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**6C** understands not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 7 positive
+> 	
+> test_sa_words_ideas_objects(Subject, now, understands)?
+**7A** understands [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**7A** understands [and should] words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**7A** understands [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**7A** understands [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**7A** understands [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**7A** understands [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 7 negative	
+> 	
+> test_not_sa_words_ideas_objects(Subject, now, understands)?
+**7C** understands not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[santa_word_dc,tom_santa_idea_dc,santa_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**7C** understands not and should not words_ideas_objects [[cicero_word_dc,tom_cicero_idea_dc,cicero_80_dc],[cicero_word_dc,tom_cicero_idea_dc,cicero_80_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**7C** understands not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,tom_cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**7C** understands not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**7C** understands not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+**7C** understands not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> write_stats(Ignore)?
+CPU Time 0.1 Seconds
+Clock Time 0.078665 Seconds
+
+Stack size  :     3952 bytes (    3K) (0%)
+Heap size   :  2288632 bytes ( 2234K) (0%)
+Total memory: 1677721584 bytes (1638399K)
+X predicates are not installed.
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+

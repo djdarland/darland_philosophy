@@ -1,0 +1,2 @@
+universal(X) :- robustly_russellian_universal(X).
+

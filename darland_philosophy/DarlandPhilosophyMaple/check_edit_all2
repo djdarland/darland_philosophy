@@ -1,0 +1,37 @@
+#!/bin/csh -f
+
+##  Copyright (C) 2017 Dennis J. Darland
+
+##  This file is part of darland's philosophy.
+
+##  darland's philosophy is free software: you can redistribute it and/or modify
+##  it under the terms of the GNU General Public License as published by
+##  the Free Software Foundation, either version 3 of the License, or
+##  (at your option) any later version.
+
+##  darland's philosophy is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##  GNU General Public License for more details.
+
+##  You should have received a copy of the GNU General Public License
+##  along with darland's philosophy.  If not, see <http://www.gnu.org/licenses/>.
+
+
+# Test program for darland's philosophy
+
+set umask=666
+rm -f editdiffs2.sh
+touch editdiffs2.sh
+rm IN2/*~
+if ($1 == 1) then
+echo "Running complete Test"
+./check_edit2 `ls IN2` | tee editdiffs2.sh
+else 
+echo "Testing $1 - $2 only! "
+rm MAPLETMP2/*.mxt
+touch MAPLETMP2/$2.mxt
+./check_edit2 `ls MAPLETMP2`
+echo "$2 Tested"
+endif
+chmod u+x editdiffs2.sh

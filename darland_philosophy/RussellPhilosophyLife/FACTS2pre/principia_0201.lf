@@ -1,0 +1,20 @@
+particular(a_patch).
+particular(b_patch).
+
+robustly_russellian_universal(red).
+robustly_russellian_universal(blue).
+robustly_russellian_universal(belief).
+
+red(a_patch).
+blue(b_patch).
+
+sense_datum(sd_0001).
+
+acquanted(russell, red).
+acquanted(russell, a_patch).
+
+sensation(russell, sd0001).
+
+belief(russell, red, a_patch).
+
+

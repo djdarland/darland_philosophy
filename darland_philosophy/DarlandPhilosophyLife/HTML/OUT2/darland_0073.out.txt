@@ -1,0 +1,795 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Sat 29 Jan 2022 07:11:37 PM CST
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> check_corefer(Item1, Item2)?
+
+*** Yes
+Item1 = cat_class_dc, Item2 = cat_class_dc.
+--1> ;
+
+*** Yes
+Item1 = human_class_dc, Item2 = human_class_dc.
+--1> ;
+
+*** Yes
+Item1 = rosie_dc, Item2 = rosie_dc.
+--1> ;
+
+*** Yes
+Item1 = misty_dc, Item2 = misty_dc.
+--1> ;
+
+*** Yes
+Item1 = quine_dc, Item2 = quine_dc.
+--1> ;
+
+*** Yes
+Item1 = quine_dc, Item2 = quine_dc.
+--1> ;
+
+*** Yes
+Item1 = quine_dc, Item2 = quine_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_dc, Item2 = tom_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_dc, Item2 = tom_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_dc, Item2 = tom_dc.
+--1> ;
+
+*** Yes
+Item1 = cicero_dc, Item2 = cicero_dc.
+--1> ;
+
+*** Yes
+Item1 = cicero_dc, Item2 = tully_dc.
+--1> ;
+
+*** Yes
+Item1 = cicero_dc, Item2 = cicero_dc.
+--1> ;
+
+*** Yes
+Item1 = cicero_dc, Item2 = tully_dc.
+--1> ;
+
+*** Yes
+Item1 = cicero_dc, Item2 = cicero_dc.
+--1> ;
+
+*** Yes
+Item1 = cicero_dc, Item2 = tully_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_tully_dc, Item2 = tom_tully_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_cicero_dc, Item2 = tom_cicero_dc.
+--1> ;
+
+*** Yes
+Item1 = tully_dc, Item2 = cicero_dc.
+--1> ;
+
+*** Yes
+Item1 = tully_dc, Item2 = tully_dc.
+--1> ;
+
+*** Yes
+Item1 = tully_dc, Item2 = cicero_dc.
+--1> ;
+
+*** Yes
+Item1 = tully_dc, Item2 = tully_dc.
+--1> ;
+
+*** Yes
+Item1 = tully_dc, Item2 = cicero_dc.
+--1> ;
+
+*** Yes
+Item1 = tully_dc, Item2 = tully_dc.
+--1> ;
+
+*** Yes
+Item1 = cicero_word_dc, Item2 = cicero_word_dc.
+--1> ;
+
+*** Yes
+Item1 = santa_word_dc, Item2 = santa_word_dc.
+--1> ;
+
+*** Yes
+Item1 = catiline_word_dc, Item2 = catiline_word_dc.
+--1> ;
+
+*** Yes
+Item1 = catiline_word_dc, Item2 = catiline_word_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_cicero_idea_dc, Item2 = tom_cicero_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_tully_idea_dc, Item2 = tom_tully_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = quine_cicero_idea_dc, Item2 = quine_cicero_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = quine_tully_idea_dc, Item2 = quine_tully_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = quine_tully_idea_dc, Item2 = quine_tully_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_catiline_idea_dc, Item2 = tom_catiline_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_catiline_idea_dc, Item2 = tom_catiline_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = quine_catiline_idea_dc, Item2 = quine_catiline_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = quine_catiline_idea_dc, Item2 = quine_catiline_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_santa_idea_dc, Item2 = tom_santa_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = quine_santa_idea_dc, Item2 = quine_santa_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = catiline_dc, Item2 = catiline_dc.
+--1> ;
+
+*** Yes
+Item1 = catiline_dc, Item2 = catiline_dc.
+--1> ;
+
+*** Yes
+Item1 = catiline_dc, Item2 = catiline_dc.
+--1> ;
+
+*** Yes
+Item1 = catiline_word_dc, Item2 = catiline_word_dc.
+--1> ;
+
+*** Yes
+Item1 = catiline_word_dc, Item2 = catiline_word_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_catiline_idea_dc, Item2 = tom_catiline_idea_dc.
+--1> ;
+
+*** Yes
+Item1 = tom_catiline_idea_dc, Item2 = tom_catiline_idea_dc.
+--1> 	
+
+*** No
+> 
+> 
+> rrrr_check1(S, T, W, I)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 	
+> rrrr_check2(S, T, W, I)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> ssss_check1(S, T, W, I)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 	
+> ssss_check2(S, T, W, I)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> tttt_check1(S, T, W, I)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 	
+> tttt_check2(S, T, W, I)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> check_arity(I,A)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> check_type(I,A)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> check_number(I,A)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> check_dc1(Dc, Aos)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 	
+> %% check_conceptual_feeling_in_ideas1(S,believes,T,L)?
+> ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    ;
+|    
+|    rrrr_check3(S, T, W, I)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> ssss_check3(S, T, I, O)?
+Warning: have idea_of(tom_dc,tom_santa_idea_dc). but not qqqq(ssss, tom_dc, @, tom_santa_idea_dc, @).
+*** Yes
+I = @, O = @, S = @, T = tom_santa_idea_dc.
+--1> ;
+Warning: have idea_of(quine_dc,quine_santa_idea_dc). but not qqqq(ssss, quine_dc, @, quine_santa_idea_dc, @).
+*** Yes
+I = @, O = @, S = @, T = quine_santa_idea_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> check_relation1(I, R)?
+type I = quine_denounced_idea_dc T = @
+type I = quine_cicero_idea_dc T = @
+type I = quine_catiline_idea_dc T = @
+type I = quine_tully_idea_dc T = @
+type I = tom_santa_idea_dc T = @
+type I = tom_denounced_idea_dc T = @
+type I = tom_cicero_idea_dc T = @
+type I = tom_catiline_idea_dc T = @
+type I = tom_tully_idea_dc T = @
+type I = tom_quine_idea_dc T = @
+type I = tom_tom_idea_dc T = @
+type I = tom_russell_idea_dc T = @
+type I = tom_wrote_DeSenectute_idea_dc T = @
+type I = tom_roman_idea_dc T = @
+type I = tom_human_idea_dc T = @
+type I = tom_american_idea_dc T = @
+type I = tom_mortal_idea_dc T = @
+type I = quine_santa_idea_dc T = @
+type I = quine_quine_idea_dc T = @
+type I = quine_tom_idea_dc T = @
+type I = quine_russell_idea_dc T = @
+type I = quine_wrote_DeSenectute_idea_dc T = @
+type I = quine_roman_idea_dc T = @
+type I = quine_human_idea_dc T = @
+type I = quine_american_idea_dc T = @
+type I = quine_mortal_idea_dc T = @
+type I = tom_cat_class_idea_dc T = @
+type I = tom_dolphin_class_idea_dc T = @
+type I = tom_intelligent_fish_class_idea_dc T = @
+type I = tom_human_class_idea_dc T = @
+type I = tom_santa_class_idea_dc T = @
+type I = tom_mortal_class_idea_dc T = @
+type I = tom_roman_class_idea_dc T = @
+type I = tom_american_class_idea_dc T = @
+type I = tom_featherless_biped_class_idea_dc T = @
+type I = earther_water_idea_dc T = @
+type I = twin_earther_water_idea_dc T = @
+type I = earther_wet_idea_dc T = @
+type I = twin_earther_wet_idea_dc T = @
+type I = twin_earther_water_idea_dc T = @
+type I = earther_water_idea_dc T = @
+type I = twin_earther_wet_idea_dc T = @
+type I = earther_wet_idea_dc T = @
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> check_relation2(I, R)?
+Warning: have relation(unknown_relation001_rel). but not qqqq(ssss, @, @, @,unknown_relation001_rel).
+*** Yes
+I = @, R = unknown_relation001_rel.
+--1> ;
+Warning: have relation(unknown_relation002_rel). but not qqqq(ssss, @, @, @,unknown_relation002_rel).
+*** Yes
+I = @, R = unknown_relation002_rel.
+--1> ;
+Warning: have relation(unknown_relation003_rel). but not qqqq(ssss, @, @, @,unknown_relation003_rel).
+*** Yes
+I = @, R = unknown_relation003_rel.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> write_stats(Ignore)?
+CPU Time 0.18 Seconds
+Clock Time 0.153837 Seconds
+
+Stack size  :     3952 bytes (    3K) (0%)
+Heap size   :  2719288 bytes ( 2655K) (0%)
+Total memory: 1677721584 bytes (1638399K)
+X predicates are not installed.
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+

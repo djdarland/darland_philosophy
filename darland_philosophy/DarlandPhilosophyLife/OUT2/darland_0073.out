@@ -10,7 +10,7 @@
 *** Yes
 
 *** Yes
-Sat 29 Jan 2022 07:11:37 PM CST
+Mon 09 May 2022 01:11:56 AM CDT
 
 *** Yes
 > 
@@ -778,8 +778,8 @@ I = @, R = unknown_relation003_rel.
 > 
 > 
 > write_stats(Ignore)?
-CPU Time 0.18 Seconds
-Clock Time 0.153837 Seconds
+CPU Time 0.2 Seconds
+Clock Time 0.183971 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
 Heap size   :  2719288 bytes ( 2655K) (0%)

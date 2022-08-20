@@ -1,0 +1,23 @@
+load("FACTS2/reduc_0401.lf")?
+load("RULES2/r_rules_0401.lf")?
+great_general(napoleon)?
+;
+;	
+;
+;	
+great_general(2, washington)?
+;
+;	
+;
+;	
+great_general(2, trump)?
+;
+;	
+;
+;	
+% great_general(2, X)?
+;
+;	
+;
+;	
+

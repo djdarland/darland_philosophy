@@ -42,6 +42,7 @@ echo "75 Edit darland_0075.lf Essentially Singular terms"
 echo "76 Edit darland_0076.lf Plural terms"
 echo "77 Edit darland_0077.lf Contingently Singular terms"
 echo "78 Edit darland_0078.lf Singular terms"
+echo "81 Edit darland_0081.lf Cases with Metaphysics - For Whitehead"
 
 echo "-----------"
 echo "500 NO_WARANTY.txt"
@@ -109,10 +110,10 @@ case $select in
 76) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0076.lf;;
 77) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0077.lf;;
 78) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0078.lf;;
+81) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0081.lf;;
 91) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0091.lf;;
 92) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0092.lf;;
 94) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0094.lf;;
-81) $EDITOR ../DarlandPhilosophyLife/IN2pre/darland_0081.lf;;
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
 666) $EDITOR eee1 ;;
@@ -158,8 +159,7 @@ echo "75 Edit darland_0075.lf Essentially Singular terms"
 echo "76 Edit darland_0076.lf Plural terms"
 echo "77 Edit darland_0077.lf Contingently Singular terms"
 echo "78 Edit darland_0078.lf Singular terms"
-
-
+echo "81 Edit darland_0081.lf Cases with Metaphysics - For Whitehead"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"

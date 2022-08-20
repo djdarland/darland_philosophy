@@ -55,6 +55,7 @@ echo "75 rules_0075.lf - Rules for essentially singular terms"
 echo "76 rules_0076.lf - Rules for plural terms"
 echo "77 rules_0077.lf - Rules for contingently singular terms"
 echo "78 rules_0078.lf - Rules for singular terms"
+echo "81 rules_0081.lf - Whitehead Rules Metaphysics"
 echo "-----------"
 if test -f da_ru_lf2.sh
 then
@@ -110,6 +111,7 @@ case $select in
 76) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0076.lf;;
 77) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0077.lf;;
 78) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0078.lf;;
+81) $EDITOR ../DarlandPhilosophyLife/RULES2/rules_0081.lf;;
 666) $EDITOR da_ru_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

@@ -20,7 +20,7 @@
 *** Yes
 > 
 *** Yes
-> Tue Sep 10 19:37:46 CDT 2019
+> Sun 28 Feb 2021 03:09:25 PM CST
 > write_time(Ignore)?
 0
 *** Yes
@@ -1681,7 +1681,7 @@ Pair_List_2 = [[quine_denounced_idea,_A],
 > 
 > write_stats(Ignore)?
 I am not sure of units here
-Clock Time 1.56816 Seconds
+Clock Time 1.61455 Seconds
 CPU Time 100 Milliseconds
 
 *** Yes

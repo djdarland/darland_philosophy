@@ -1,0 +1,63 @@
+%% I am going to comment on one sample carefully and thoroughly I hope.
+%% I hope any reader can learn enough to apply principles in other cases.
+
+%% predicate1(Arg1, Arg2, Arg3) :- predicate2(Arg1, Arg2),
+%%                                 predicate3(Arg1, Arg3).'
+
+%% means if predicate3(Arg1, Arg2) and predicate3(Arg1, Arg3)
+%%       then predicate1(Arg1, Arg2, Arg3).
+
+%% ":-" means "if"
+%% "," separates Arguments in predicates and means "and" between clauses.
+%%
+
+%% Two rules can be used for "or"
+%% if we add
+%% predicate1(Arg1, Arg2, Arg3) :- predicate4(Arg1, Arg2),
+%%                                 predicate5(Arg1, Arg3).
+%% then we have:
+
+%%       if (predicate3(Arg1, Arg2) and predicate3(Arg1, Arg3))
+%%       or (predicate4(Arg1, Arg2) and predicate5(Arg1, Arg3))
+%%       then predicate1(Arg1, Arg2, Arg3).
+
+%%   "\+" is negation by "failure" (if it cannot see it is true is says false)
+%%   I also use qqqq4 to state positive facts in the database.
+%%          and qqqq5 to state negative facts in the database.
+
+%%   You can run WildLife on an totally empty file.
+%%   It will produce no output - not even any errors!
+
+%%   match_word below is recursive. Each call removes a Word.
+%%   It also subtracts one from the Arity of the Relation_Idea.
+%%   The list is finite in WildLIFE, so eventually there will be
+%%   an empty list and the Arity can be checked. (or be -999)
+%%   It also checks if the Ideas are one less in type than the Relation Idea.
+%%   rrrr sees if the Subject has that relation between the Word and the Idea.
+
+understands_words(Subject, Time, [[Relation_Word] | List]) :-
+	rrrr(Subject, Time, Relation_Word, Relation_Idea),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	% List of Words.
+	% Objects should be Type one less than Type of Relation
+	match_word(Subject, Time, List, Arity, Type - 1).
+
+%% The following are auxilary predicates - they have no ontological
+%% Significance.
+
+match_word(Subject, Time, [], 0, Type).
+
+%% -999 indicates arbitrary arity.
+match_word(Subject, Time, [], -999, Type).
+
+match_word(Subject, Time, [[Word] | List],
+	   Arity, Type) :-
+	% List of Word Object Pairs.
+	rrrr(Subject, Time, Word, Idea),
+	type_idea(Idea, Type),
+	match_word(Subject, Time, List,
+		   % if Arity is not Arbitrary sub 1
+		   cond(Arity =\= -999, Arity - 1, -999),
+		   Type).
+

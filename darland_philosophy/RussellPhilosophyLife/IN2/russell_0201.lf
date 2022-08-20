@@ -1,0 +1,6 @@
+load("FACTS2/principia_0201.lf")?
+load("RULES2/r_rules_0201.lf")?
+universal(X)?
+;
+;
+;	

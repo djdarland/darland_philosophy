@@ -1,0 +1,57 @@
+echo "-----------"
+echo "Russell Philosophy Query Edits"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2019, 2021, 2022  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+
+echo "101 Edit russell0101.lf Basic Principles Era"
+echo "201 Edit russell0201.lf Basic Principia Era"
+echo "301 Edit russell0301.lf Basic Neutral Era"
+echo "401 Edit russell0401.lf Basic ax reduc"
+
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f lll1
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+while [ $select -ne 999 ]
+do 
+case $select in
+101) $EDITOR ../RussellPhilosophyLife/IN2pre/russell_0101.lf;;
+201) $EDITOR ../RussellPhilosophyLife/IN2pre/russell_0201.lf;;
+301) $EDITOR ../RussellPhilosophyLife/IN2pre/russell_0301.lf;;
+401) $EDITOR ../RussellPhilosophyLife/IN2pre/russell_0401.lf;;
+
+500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
+501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
+666) $EDITOR lll1 ;;
+777) $EDITOR NOTES_DJD.txt & ;;
+esac
+echo "-----------"
+echo "Russell Philosophy Query Edits"
+echo "-----------"
+echo "select"
+read select
+echo "101 Edit russell0101.lf Basic Principles Era"
+echo "201 Edit russell0201.lf Basic Principia Era"
+echo "301 Edit russell0301.lf Basic Neutral Era"
+echo "401 Edit russell0401.lf Basic ax reduc"
+
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f lll1
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+done

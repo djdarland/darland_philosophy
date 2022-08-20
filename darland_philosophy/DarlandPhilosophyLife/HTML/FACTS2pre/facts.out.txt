@@ -1,0 +1,25 @@
+% understands_words( tom, now,
+%          [[denounced_word],
+%           [cicero_word],
+%           [catiline_word]])?
+% understands_words(tom,now,[[denounced_word],[cicero_word],[catiline_word]])?
+rrrr(tom, now, denounced_word, tom_now_denounced_idea)
+type_idea(tom_now_denounced_idea, 1)
+rrrr(tom, now, cicero_word, tom_now_cicero_idea)
+type_idea(tom_now_cicero_idea, 0)
+rrrr(tom, now, catiline_word, tom_now_catiline_idea)
+type_idea(tom_now_catiline_idea, 0)
+arity_idea(tom_now_denounced_idea, 2)
+% 
+% understands_words( quine, now,
+%          [[denounced_word],
+%           [cicero_word],
+%           [catiline_word]])?
+% understands_words(quine,now,[[denounced_word],[cicero_word],[catiline_word]])?
+rrrr(quine, now, denounced_word, quine_now_denounced_idea)
+type_idea(quine_now_denounced_idea, 1)
+rrrr(quine, now, cicero_word, quine_now_cicero_idea)
+type_idea(quine_now_cicero_idea, 0)
+rrrr(quine, now, catiline_word, quine_now_catiline_idea)
+type_idea(quine_now_catiline_idea, 0)
+arity_idea(quine_now_denounced_idea, 2)

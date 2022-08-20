@@ -16,7 +16,7 @@
 *** Yes
 
 *** Yes
-Sat 29 Jan 2022 07:14:04 PM CST
+Mon 09 May 2022 01:12:03 AM CDT
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
@@ -453,8 +453,8 @@ W = american_class_word_dc.
 > ;
 > 	
 > write_stats(Ignore)?
-CPU Time 0.46 Seconds
-Clock Time 0.435407 Seconds
+CPU Time 0.43 Seconds
+Clock Time 0.431103 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
 Heap size   :  2869968 bytes ( 2802K) (0%)

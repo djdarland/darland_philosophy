@@ -12,7 +12,7 @@
 *** Yes
 
 *** Yes
-Sat 29 Jan 2022 07:12:57 PM CST
+Mon 09 May 2022 01:12:03 AM CDT
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
@@ -288,8 +288,8 @@ Ignore = @.
 
 *** No
 > write_stats(Ignore)?
-CPU Time 0.03 Seconds
-Clock Time 0.018672 Seconds
+CPU Time 0.06 Seconds
+Clock Time 0.047086 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
 Heap size   :  2733184 bytes ( 2669K) (0%)

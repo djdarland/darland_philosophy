@@ -1,0 +1,9 @@
+great_general(2, X) :- \+ lacks_quality_of_great_general(2, X),
+	write(X, " is a great general.").
+
+lacks_quality_of_great_general(2, X) :-
+	quality_that_makes_great_general(1, Y),
+	\+ fact(Y, X),
+	write(X ," lacks quality ", Y, " of a great general.").
+
+

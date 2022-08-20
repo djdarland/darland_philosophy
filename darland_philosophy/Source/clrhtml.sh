@@ -1,4 +1,4 @@
-cd ../D*e
+cd ../D*fe
 cd HTML/FACTS2pre
 rm *.txt
 cd ../..

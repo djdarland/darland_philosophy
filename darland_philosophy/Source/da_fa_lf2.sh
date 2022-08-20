@@ -25,7 +25,7 @@ echo "-----------"
 
 echo "31 facts_0031.lf data for Everything with Number added for Ideas"
 echo "71 facts_0071.lf data for Whitehead phil"
-echo "81 facts_0081.lf data for Physics"
+echo "81 facts_0081.lf data for Whitehead Metaphysics"
 
 echo "-----------"
 if test -f da_fa_lf2.sh

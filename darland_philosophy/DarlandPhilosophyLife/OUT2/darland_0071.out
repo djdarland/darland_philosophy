@@ -4,7 +4,7 @@
 *** Yes
 
 *** Yes
-Sat 29 Jan 2022 07:10:14 PM CST
+Mon 09 May 2022 01:11:55 AM CDT
 
 *** Yes
 > 
@@ -1626,8 +1626,8 @@ Subject = tom_dc.
 *** No
 > 	
 > write_stats(Ignore)?
-CPU Time 0.12 Seconds
-Clock Time 0.09232 Seconds
+CPU Time 0.09 Seconds
+Clock Time 0.0852821 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
 Heap size   :  2290200 bytes ( 2236K) (0%)

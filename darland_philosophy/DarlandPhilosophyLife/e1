@@ -1,0 +1,4 @@
+$EDITOR timing2.txt
+$EDITOR satworst.icn
+unicon satworst
+./satworst.sh

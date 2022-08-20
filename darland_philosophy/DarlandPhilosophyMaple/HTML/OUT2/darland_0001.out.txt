@@ -1,0 +1,565 @@
+    |\^/|     Maple 2020 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2020
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> with(LinearAlgebra):
+> Digits := 12;
+                                  Digits := 12
+
+
+> init := proc()
+> global particle1, particle2, particle3, world;
+>     particle1 := table():
+>     particle2 := table():
+>     particle3 := table():
+>     
+>     particle1[name] := "particle1":
+>     particle1[mass] := 1.3:
+>     particle1[charge] := 3.3:
+>     particle1[location] := <1.0,2.0,3.0>:
+>     particle1[velocity] := <1.0,2.0,3.0>:
+>     particle1[name] := "particle1":
+>     
+>     particle2[name] := "particle2":
+>     particle2[mass] := 2.3:
+>     particle2[charge] := 4.3:
+>     particle2[location] := <8.0,1.0,2.0>:
+>     particle2[velocity] := <7.0,-3.0,0.0>:
+>     
+>     particle3[name] := "particle3":
+>     particle3[mass] := 4.1:
+>     particle3[charge] := -2.3:
+>     particle3[location] := <-8.0,-1.0,2.0>:
+>     particle3[velocity] := <5.0,3.0,0.0>:
+>     
+>     world := {particle1, particle2, particle3}:
+
+> end;
+init := proc()
+global particle1, particle2, particle3, world;
+    particle1 := table();
+    particle2 := table();
+    particle3 := table();
+    particle1[name] := "particle1";
+    particle1[mass] := 1.3;
+    particle1[charge] := 3.3;
+    particle1[location] := <1.0, 2.0, 3.0>;
+    particle1[velocity] := <1.0, 2.0, 3.0>;
+    particle1[name] := "particle1";
+    particle2[name] := "particle2";
+    particle2[mass] := 2.3;
+    particle2[charge] := 4.3;
+    particle2[location] := <8.0, 1.0, 2.0>;
+    particle2[velocity] := <7.0, -3.0, 0.>;
+    particle3[name] := "particle3";
+    particle3[mass] := 4.1;
+    particle3[charge] := -2.3;
+    particle3[location] := <-8.0, -1.0, 2.0>;
+    particle3[velocity] := <5.0, 3.0, 0.>;
+    world := {particle1, particle2, particle3}
+end proc
+
+
+> external_world := proc(w, p) w minus {p};
+> end;
+               external_world := proc(w, p) w minus {p} end proc
+
+
+> ewp1 := external_world(world, particle1);
+                        ewp1 := world minus {particle1}
+
+> ewp2 := external_world(world, particle2);
+                        ewp2 := world minus {particle2}
+
+> ewp3 := external_world(world, particle3);
+                        ewp3 := world minus {particle3}
+
+
+# field (Vector) of gravity caused by p2 at p1
+> gravity := proc(p2, p1)
+> local G;
+>     G := 6.67E-3; # changed to have greater effect
+>     G * p2[mass] * (p2[location] - p1[location]) / DotProduct(p2[location], p1[location]);
+> end:
+
+# Add to Set of gravity Vectors at p1
+> union_to_physical_feeling_grav := proc(p)
+>     local p2;
+>     p[physical_feeling_grav] := {};
+>     for p2 in external_world(world, p) do
+>         p[physical_feeling_grav] := p[physical_feeling_grav] union {gravity(p2, p)};
+>     od;
+>     return 0;
+> end:
+
+# Add to Sum of gravity Vectors at p1
+> sum_to_body_grav := proc(p)
+>     local p2;
+>     p[body_grav] := <0.0, 0.0, 0.0>;
+>     for p2 in external_world(world, p) do
+>         p[body_grav] := p[body_grav] + gravity(p2, p);
+>     od;
+>     return 0;
+> end:
+
+
+# out := map(union_to_physical_feeling_grav, world):
+# out2 := map(sum_to_body_grav, world):
+
+
+> jump := proc(delta_time)
+> global particle1, particle2, particle3, world;
+> local out, out2, particle;
+>     for particle in world do
+>         particle[acceleration] := particle[body_grav]
+>         / particle[mass];
+>         particle[location] := particle[location]
+>         + particle[velocity] * delta_time;
+>         particle[velocity] := particle[velocity]
+>         + particle[acceleration] * delta_time;
+>         out := map(union_to_physical_feeling_grav, world):
+>         out2 := map(sum_to_body_grav, world):
+>     od;
+> end;
+jump := proc(delta_time)
+local out, out2, particle;
+global particle1, particle2, particle3, world;
+    for particle in world do
+        particle[acceleration] := particle[body_grav]/particle[mass];
+        particle[location] :=
+            particle[location] + particle[velocity]*delta_time;
+        particle[velocity] :=
+            particle[velocity] + particle[acceleration]*delta_time;
+        out := map(union_to_physical_feeling_grav, world);
+        out2 := map(sum_to_body_grav, world)
+    end do
+end proc
+
+
+> run := proc(start_time, end_time, delta_time)
+> global particle1, particle2, particle3, world;
+> local world_time, out, out2;
+>     world_time := start_time;
+>     init();
+>     out := map(union_to_physical_feeling_grav, world):
+>     out2 := map(sum_to_body_grav, world):
+>     while world_time <= end_time do
+>         print("world_time = ", world_time);
+>         map(print, evalf(world));
+>         jump(delta_time);
+>         world_time := world_time + delta_time;
+>     od;
+> end;
+run := proc(start_time, end_time, delta_time)
+local world_time, out, out2;
+global particle1, particle2, particle3, world;
+    world_time := start_time;
+    init();
+    out := map(union_to_physical_feeling_grav, world);
+    out2 := map(sum_to_body_grav, world);
+    while world_time <= end_time do
+        print("world_time = ", world_time);
+        map(print, evalf(world));
+        jump(delta_time);
+        world_time := world_time + delta_time
+    end do
+end proc
+
+
+> run(0.0, 0.4, 0.1);
+                              "world_time = ", 0.
+
+memory used=3.3MB, alloc=40.3MB, time=0.05
+                               [0.0682424375000000 ]
+                               [                   ]
+table([mass = 1.3, body_grav = [0.0195514375000000 ], charge = 3.3,
+                               [                   ]
+                               [0.00587793750000000]
+
+                                   [1.0]             [1.0]
+                                   [   ]             [   ]
+    name = "particle1", location = [2.0], velocity = [2.0],
+                                   [   ]             [   ]
+                                   [3.0]             [3.0]
+
+                             [ 0.00671168750000000 ]  [0.0615307500000000 ]
+                             [                     ]  [                   ]
+    physical_feeling_grav = {[-0.000958812500000000], [0.0205102500000000 ]}
+                             [                     ]  [                   ]
+                             [-0.000958812500000000]  [0.00683675000000000]
+
+    ])
+
+                               [0.00337942110657890 ]
+                               [                    ]
+table([mass = 2.3, body_grav = [0.00143856045082236 ], charge = 4.3,
+                               [                    ]
+                               [0.000541937500000000]
+
+                                   [8.0]             [7.0 ]
+                                   [   ]             [    ]
+    name = "particle2", location = [1.0], velocity = [-3.0],
+                                   [   ]             [    ]
+                                   [2.0]             [ 0. ]
+
+                             [-0.00379356250000000]  [0.00717298360657890 ]
+                             [                    ]  [                    ]
+    physical_feeling_grav = {[0.000541937500000000], [0.000896622950822362]}
+                             [                    ]  [                    ]
+                             [0.000541937500000000]  [        -0.         ]
+
+    ])
+
+                               [-0.0235336188524711 ]
+                               [                    ]
+table([mass = 4.1, body_grav = [-0.00700623360655889], charge = -2.3,
+                               [                    ]
+                               [-0.00216775000000000]
+
+                                   [-8.0]             [5.0]
+                                   [    ]             [   ]
+    name = "particle3", location = [-1.0], velocity = [3.0],
+                                   [    ]             [   ]
+                                   [2.0 ]             [0. ]
+
+                             [-0.0195097500000000 ]  [-0.00402386885247109 ]
+                             [                    ]  [                     ]
+    physical_feeling_grav = {[-0.00650325000000000], [-0.000502983606558886]}
+                             [                    ]  [                     ]
+                             [-0.00216775000000000]  [         -0.         ]
+
+    ])
+
+                              "world_time = ", 0.1
+
+                               [0.0803088311687275]
+                               [                  ]
+table([mass = 1.3, body_grav = [0.0235615584415221],
+                               [                  ]
+                               [0.0100184415584251]
+
+                   [0.0524941826923234 ]
+                   [                   ]
+    acceleration = [0.0150395673076968 ], charge = 3.3, name = "particle1",
+                   [                   ]
+                   [0.00452149038461674]
+
+               [1.10000000000000]             [1.00524941826923]
+               [                ]             [                ]
+    location = [2.20000000000000], velocity = [2.00150395673077],
+               [                ]             [                ]
+               [3.30000000000000]             [3.00045214903846]
+
+                             [0.00658337662337916 ]  [0.0737254545453484]
+                             [                    ]  [                  ]
+    physical_feeling_grav = {[-0.00129935064935115], [0.0248609090908733]}
+                             [                    ]  [                  ]
+                             [-0.00112610389610433]  [0.0111445454545294]
+
+    ])
+
+                               [0.00345455870661351 ]
+                               [                    ]
+table([mass = 2.3, body_grav = [0.00135452896310201 ],
+                               [                    ]
+                               [0.000636493506493752]
+
+                   [0.00164067716096400 ]
+                   [                    ]
+    acceleration = [0.000646881520120994], charge = 4.3, name = "particle2",
+                   [                    ]
+                   [0.000278465909091221]
+
+               [8.70000000000000 ]             [  7.00016406771610   ]
+               [                 ]             [                     ]
+    location = [0.700000000000000], velocity = [  -2.99993531184799  ],
+               [                 ]             [                     ]
+               [       2.        ]             [0.0000278465909091221]
+
+                             [-0.00372103896104040]  [0.00717559766765391 ]
+                             [                    ]  [                    ]
+    physical_feeling_grav = {[0.000734415584415868], [0.000620113378686140]}
+                             [                    ]  [                    ]
+                             [0.000636493506493752]  [        -0.         ]
+
+    ])
+
+                               [-0.0274016989133066 ]
+                               [                    ]
+table([mass = 4.1, body_grav = [-0.00823059575344229],
+                               [                    ]
+                               [-0.00353363636363127]
+
+                   [-0.00531643365839788 ]
+                   [                     ]
+    acceleration = [-0.00163403433964316 ], charge = -2.3, name = "particle3",
+                   [                     ]
+                   [-0.000624850332593985]
+
+               [-7.50000000000000 ]             [   4.99946835663416   ]
+               [                  ]             [                      ]
+    location = [-0.700000000000000], velocity = [   2.99983659656604   ],
+               [                  ]             [                      ]
+               [        2.        ]             [-0.0000624850332593985]
+
+                             [-0.0233763636363300 ]  [-0.00402533527697658 ]
+                             [                    ]  [                     ]
+    physical_feeling_grav = {[-0.00788272727271592], [-0.000347868480726371]}
+                             [                    ]  [                     ]
+                             [-0.00353363636363127]  [         -0.         ]
+
+    ])
+
+                              "world_time = ", 0.2
+
+                               [0.110112633455194 ]
+                               [                  ]
+table([mass = 1.3, body_grav = [0.0338121698275561],
+                               [                  ]
+                               [0.0189600602410868]
+
+                   [0.0617760239759628 ]
+                   [                   ]
+    acceleration = [0.0181242757242532 ], charge = 3.3, name = "particle1",
+                   [                   ]
+                   [0.00770649350648314]
+
+               [1.20052494182692]             [1.01142702066683]
+               [                ]             [                ]
+    location = [2.40015039567308], velocity = [2.00331638430319],
+               [                ]             [                ]
+               [3.60004521490385]             [3.00122279838911]
+
+                             [0.00646888946971501 ]  [0.103643743985479 ]
+                             [                    ]  [                  ]
+    physical_feeling_grav = {[-0.00157798932307964], [0.0353901591506357]}
+                             [                    ]  [                  ]
+                             [-0.00126233409381045]  [0.0202223943348973]
+
+    ])
+
+                               [0.00358202071310777 ]
+                               [                    ]
+table([mass = 2.3, body_grav = [0.00124500579956557 ],
+                               [                    ]
+                               [0.000713497170342820]
+
+                   [0.00165677885560210 ]
+                   [                    ]
+    acceleration = [0.000601290874607766], charge = 4.3, name = "particle2",
+                   [                    ]
+                   [0.000312147194437600]
+
+               [9.40001640677161 ]             [  7.00032974560166   ]
+               [                 ]             [                     ]
+    location = [0.400006468815201], velocity = [  -2.99987518276053  ],
+               [                 ]             [                     ]
+               [2.00000278465909 ]             [0.0000590613103528821]
+
+                             [-0.00365632883070848]  [ 0.00723834954381625  ]
+                             [                    ]  [                      ]
+    physical_feeling_grav = {[0.000891907008697187], [ 0.000353098790868387 ]}
+                             [                    ]  [                      ]
+                             [0.000713493183458083]  [                    -8]
+                                                     [0.398688473697724 10  ]
+
+    ])
+
+                               [-0.0369231880809512 ]
+                               [                    ]
+table([mass = 4.1, body_grav = [-0.0114193497841033 ],
+                               [                    ]
+                               [-0.00641198092809790]
+
+                   [-0.00622842865864197 ]
+                   [                     ]
+    acceleration = [-0.00194353103718458 ], charge = -2.3, name = "particle3",
+                   [                     ]
+                   [-0.000971282363307742]
+
+               [-7.00005316433658 ]             [  4.99884551376830   ]
+               [                  ]             [                     ]
+    location = [-0.400016340343396], velocity = [  2.99964224346232   ],
+               [                  ]             [                     ]
+               [ 1.99999375149667 ]             [-0.000159613269590173]
+
+                             [-0.0328626505319811 ]  [ -0.00406053754897009  ]
+                             [                    ]  [                       ]
+    physical_feeling_grav = {[-0.0112212699745918 ], [ -0.000198079809511534 ]}
+                             [                    ]  [                       ]
+                             [-0.00641197869155280]  [                     -8]
+                                                     [-0.223654509635309 10  ]
+
+    ])
+
+                              "world_time = ", 0.3
+
+                               [0.238023735154420 ]
+                               [                  ]
+table([mass = 1.3, body_grav = [0.0783779091144403],
+                               [                  ]
+                               [0.0550476084948090]
+
+                   [0.0847020257347899]
+                   [                  ]
+    acceleration = [0.0260093614058202], charge = 3.3, name = "particle1",
+                   [                  ]
+                   [0.0145846617239173]
+
+               [1.30166764389361]             [1.01989722324031]
+               [                ]             [                ]
+    location = [2.60048203410340], velocity = [2.00591732044378],
+               [                ]             [                ]
+               [3.90016749474276]             [3.00268126456150]
+
+                             [0.00636457749017699 ]  [0.231659157664243 ]
+                             [                    ]  [                  ]
+    physical_feeling_grav = {[-0.00180878615313472], [0.0801866952675750]}
+                             [                    ]  [                  ]
+                             [-0.00137453776300003]  [0.0564221462578090]
+
+    ])
+
+                               [0.00376479374130605 ]
+                               [                    ]
+table([mass = 2.3, body_grav = [0.00111108851054096 ],
+                               [                    ]
+                               [0.000776926353015814]
+
+                   [0.00169852201097442 ]
+                   [                    ]
+    acceleration = [0.000547129745324395], charge = 4.3, name = "particle2",
+                   [                    ]
+                   [0.000339892370574309]
+
+               [10.1000493813318 ]             [  7.00049959780275   ]
+               [                 ]             [                     ]
+    location = [0.100018950539148], velocity = [  -2.99982046978600  ],
+               [                 ]             [                     ]
+               [2.00000869079013 ]             [0.0000930505474103130]
+
+                             [-0.00359736988575221]  [ 0.00736216362705826  ]
+                             [                    ]  [                      ]
+    physical_feeling_grav = {[0.00102235739090223 ], [0.0000887311196387250 ]}
+                             [                    ]  [                      ]
+                             [0.000776912648652189]  [                    -7]
+                                                     [0.137043636247700 10  ]
+
+    ])
+
+                               [-0.0775828978794512]
+                               [                   ]
+table([mass = 4.1, body_grav = [-0.0254748257129309],
+                               [                   ]
+                               [-0.0178899565012654]
+
+                   [-0.00842450706171980]
+                   [                    ]
+    acceleration = [-0.00272641182274136], charge = -2.3, name = "particle3",
+                   [                    ]
+                   [-0.00170884612073074]
+
+               [-6.50016861295975 ]             [  4.99800306306212   ]
+               [                  ]             [                     ]
+    location = [-0.100052115997165], velocity = [  2.99936960228004   ],
+               [                  ]             [                     ]
+               [ 1.99997779016972 ]             [-0.000330497881663247]
+
+                             [-0.0734529036496380]  [ -0.00412999422981317  ]
+                             [                   ]  [                       ]
+    physical_feeling_grav = {[-0.0254250497189872], [-0.0000497759939436750 ]}
+                             [                   ]  [                       ]
+                             [-0.0178899488134516]  [                     -8]
+                                                    [-0.768781374072463 10  ]
+
+    ])
+
+                              "world_time = ", 0.4
+
+                               [-0.370036593234108]
+                               [                  ]
+table([mass = 1.3, body_grav = [-0.134205069779875],
+                               [                  ]
+                               [-0.113305899064845]
+
+                   [0.183095180888070 ]
+                   [                  ]
+    acceleration = [0.0602906993188183], charge = 3.3, name = "particle1",
+                   [                  ]
+                   [0.0423443142267889]
+
+               [1.40365736621764]             [1.03820674132911]
+               [                ]             [                ]
+    location = [2.80107376614777], velocity = [2.01194639037566],
+               [                ]             [                ]
+               [4.20043562119891]             [3.00691569598418]
+
+                             [0.00626729751510984 ]  [-0.376303890749218]
+                             [                    ]  [                  ]
+    physical_feeling_grav = {[-0.00200165029719745], [-0.132203419482678]}
+                             [                    ]  [                  ]
+                             [-0.00146764828138475]  [-0.111838250783460]
+
+    ])
+
+                               [0.00400869134679056 ]
+                               [                    ]
+table([mass = 2.3, body_grav = [0.000951653362565911],
+                               [                    ]
+                               [0.000829573258089894]
+
+                   [0.00176663816250709 ]
+                   [                    ]
+    acceleration = [0.000484065771395824], charge = 4.3, name = "particle2",
+                   [                    ]
+                   [0.000362924044527925]
+
+               [ 10.8000993411121 ]             [  7.00067626161901  ]
+               [                  ]             [                    ]
+    location = [-0.199963096439451], velocity = [ -2.99977206320886  ],
+               [                  ]             [                    ]
+               [ 2.00001799584487 ]             [0.000129342951863105]
+
+                             [-0.00354238555201861]  [ 0.00755107689880917  ]
+                             [                    ]  [                      ]
+    physical_feeling_grav = {[0.00113136755928551 ], [-0.000179714196719602 ]}
+                             [                    ]  [                      ]
+                             [0.000829540332956596]  [                    -7]
+                                                     [0.329251332982611 10  ]
+
+    ])
+
+                               [0.115079897830908 ]
+                               [                  ]
+table([mass = 4.1, body_grav = [0.0420189726780333],
+                               [                  ]
+                               [0.0354608903148029]
+
+                   [-0.0176356689989635 ]
+                   [                    ]
+    acceleration = [-0.00610857103664651], charge = -2.3, name = "particle3",
+                   [                    ]
+                   [-0.00463754059620181]
+
+               [-6.00036830665354]             [  4.99623949616223   ]
+               [                 ]             [                     ]
+    location = [0.199884844230840], velocity = [  2.99875874517638   ],
+               [                 ]             [                     ]
+               [1.99994474038155 ]             [-0.000794251941283428]
+
+                             [0.119315867798532 ]  [ -0.00423596996762466  ]
+                             [                  ]  [                       ]
+    physical_feeling_grav = {[0.0419181573969467], [ 0.000100815281086606  ]}
+                             [                  ]  [                       ]
+                             [0.0354609087849996]  [                     -7]
+                                                   [-0.184701967282928 10  ]
+
+    ])
+
+                                      0.5
+
+
+
+> quit;
+memory used=6.2MB, alloc=40.3MB, time=0.07

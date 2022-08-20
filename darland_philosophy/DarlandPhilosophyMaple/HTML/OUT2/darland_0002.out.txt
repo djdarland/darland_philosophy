@@ -1,0 +1,1648 @@
+    |\^/|     Maple 2020 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2020
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+> with(LinearAlgebra):
+> Digits := 12;
+                                  Digits := 12
+
+
+###############################################
+> init := proc()
+> global particle1, particle2, particle3, world, G, c, e0;
+>     c := 3E8;
+>     e0 := 8.85e-12;
+>     G := 6.67e-11;
+>     particle1 := table():
+>     particle2 := table():
+>     particle3 := table():
+>     
+>     particle1[name] := "particle1":
+>     particle1[mass] := 1.3:
+>     particle1[charge] := 3.3:
+>     particle1[location] := <1.0,2.0,3.0>:
+>     particle1[retarded_location] := <1.0,2.0,3.0>:
+>     particle1[velocity] := <1.0,2.0,3.0>:
+>     particle1[acceleration] := <1.0,1.0,0.0>:
+>     particle1[name] := "particle1":
+>     particle1[elec_f_E] := <3.0,1.0,8.0>:
+>     particle1[mag_f_B] := <1.0,6.0,2.0>:
+
+>     
+>     particle2[name] := "particle2":
+>     particle2[mass] := 2.3:
+>     particle2[charge] := 4.3:
+>     particle2[location] := <8.0,1.0,2.0>:
+>     particle2[retarded_location] := <1.0,2.0,3.0>:
+>     particle2[velocity] := <7.0,-3.0,0.0>:
+>     particle2[acceleration] := <1.0,1.0,0.0>:
+>     particle2[elec_f_E] := <-5.0,3.0,-2.0>:
+>     particle2[mag_f_B] := <8.0,-2.0,-1.0>:
+>     
+>     particle3[name] := "particle3":
+>     particle3[mass] := 4.1:
+>     particle3[charge] := -2.3:
+>     particle3[location] := <-8.0,-1.0,2.0>:
+>     particle3[retarded_location] := <1.0,2.0,3.0>:
+>     particle3[velocity] := <5.0,3.0,0.0>:
+>     particle3[acceleration] := <1.0,1.0,0.0>:
+>     particle3[elec_f_E] := <-1.0,-2.0,8.0>:
+>     particle3[mag_f_B] := <4.0,-1.0,6.0>:
+>     
+>     world := {particle1, particle2, particle3}:
+
+> end;
+init := proc()
+global particle1, particle2, particle3, world, G, c, e0;
+    c := 0.3*10^9;
+    e0 := 0.885*10^(-11);
+    G := 0.667*10^(-10);
+    particle1 := table();
+    particle2 := table();
+    particle3 := table();
+    particle1[name] := "particle1";
+    particle1[mass] := 1.3;
+    particle1[charge] := 3.3;
+    particle1[location] := <1.0, 2.0, 3.0>;
+    particle1[retarded_location] := <1.0, 2.0, 3.0>;
+    particle1[velocity] := <1.0, 2.0, 3.0>;
+    particle1[acceleration] := <1.0, 1.0, 0.>;
+    particle1[name] := "particle1";
+    particle1[elec_f_E] := <3.0, 1.0, 8.0>;
+    particle1[mag_f_B] := <1.0, 6.0, 2.0>;
+    particle2[name] := "particle2";
+    particle2[mass] := 2.3;
+    particle2[charge] := 4.3;
+    particle2[location] := <8.0, 1.0, 2.0>;
+    particle2[retarded_location] := <1.0, 2.0, 3.0>;
+    particle2[velocity] := <7.0, -3.0, 0.>;
+    particle2[acceleration] := <1.0, 1.0, 0.>;
+    particle2[elec_f_E] := <-5.0, 3.0, -2.0>;
+    particle2[mag_f_B] := <8.0, -2.0, -1.0>;
+    particle3[name] := "particle3";
+    particle3[mass] := 4.1;
+    particle3[charge] := -2.3;
+    particle3[location] := <-8.0, -1.0, 2.0>;
+    particle3[retarded_location] := <1.0, 2.0, 3.0>;
+    particle3[velocity] := <5.0, 3.0, 0.>;
+    particle3[acceleration] := <1.0, 1.0, 0.>;
+    particle3[elec_f_E] := <-1.0, -2.0, 8.0>;
+    particle3[mag_f_B] := <4.0, -1.0, 6.0>;
+    world := {particle1, particle2, particle3}
+end proc
+
+
+###################################################
+
+> external_world := proc(w, p) w minus {p};
+> end;
+               external_world := proc(w, p) w minus {p} end proc
+
+
+> ewp1 := external_world(world, particle1);
+                        ewp1 := world minus {particle1}
+
+> ewp2 := external_world(world, particle2);
+                        ewp2 := world minus {particle2}
+
+> ewp3 := external_world(world, particle3);
+                        ewp3 := world minus {particle3}
+
+
+####################################################
+# field (Vector) of gravity caused by p2 at p1
+> gravity := proc(p2, p1)
+> global G;
+>     G * p2[mass] * (p2[location] - p1[location]) / DotProduct(p2[location], p1[location]);
+> end:
+######################################################
+# Add to Set of gravity Vectors at p1
+> union_to_physical_feeling_grav := proc(p)
+>     local p2;
+>     p[physical_feeling_grav] := {};
+>     for p2 in external_world(world, p) do
+>         p[physical_feeling_grav] := p[physical_feeling_grav] union {gravity(p2, p)};
+>     od;
+>     return 0;
+> end:
+################################################
+# Add to Sum of gravity Vectors at p1
+> sum_to_body_grav := proc(p)
+>     local p2;
+>     p[body_grav] := <0.0, 0.0, 0.0>;
+>     for p2 in external_world(world, p) do
+>         p[body_grav] := p[body_grav] + gravity(p2, p);
+>     od;
+>     return 0;
+> end:
+###################################################
+# compute p retarded location
+> calc_retarded_loc := proc(p1, p2, wrld_time, retarded_time) 
+>     p1[location] - p2[location] ; # approximation
+> end;
+calc_retarded_loc :=
+
+    proc(p1, p2, wrld_time, retarded_time) p1[location] - p2[location] end proc
+
+####################################################
+# electric field (Vector) caused by p2 at p1
+> elec_E := proc(p2, p1)
+> global c; # speed of light
+> global e0;
+> local u, dp_rp_u, dp3,
+>     rr, urr, coef, partA, partB, together;
+>     p1[retarded_location] := calc_retarded_loc(p1, p2, world_time, p1[last_time]);
+>     # length of retarded location
+>     rr := sqrt(DotProduct(p1[retarded_location],
+>                         p1[retarded_location]));
+#    print("elec rr = ", rr);
+>     urr := p1[retarded_location] / rr; # unit vector
+>               
+#    print("elec urr = ", urr);
+>     u := (c * urr) - p2[velocity]; # approximaion
+#    print("elec u = ", u);
+>     
+>     dp_rp_u := DotProduct(p1[retarded_location], u);
+#    print("elec dp_rp_u = ", dp_rp_u);
+>     dp3 := dp_rp_u * dp_rp_u * dp_rp_u;
+#    print("elec dp3 = ", dp3);
+
+>     coef := (p2[charge] * rr / (4.0 * Pi * e0 * dp3));
+#    print("elec coef = ", coef);
+>     
+>     partA := coef * 
+>     ((c * c) - DotProduct(p2[velocity],
+>                           p2[velocity])) * u; 
+>     partB := coef * CrossProduct(
+>         p1[retarded_location],
+>         CrossProduct(u,
+>                      p2[acceleration]));
+#    print("elec partB = ", partB);
+>     together := partA + partB;
+#    print("elec together = ", together);
+> return together;
+> end;
+elec_E := proc(p2, p1)
+local u, dp_rp_u, dp3, rr, urr, coef, partA, partB, together;
+global c, e0;
+    p1[retarded_location] :=
+        calc_retarded_loc(p1, p2, world_time, p1[last_time]);
+    rr := sqrt(LinearAlgebra:-DotProduct(p1[retarded_location],
+        p1[retarded_location]));
+    urr := p1[retarded_location]/rr;
+    u := c*urr - p2[velocity];
+    dp_rp_u := LinearAlgebra:-DotProduct(p1[retarded_location], u);
+    dp3 := dp_rp_u*dp_rp_u*dp_rp_u;
+    coef := p2[charge]*rr/(4.0*Pi*e0*dp3);
+    partA := coef*
+        (c*c - LinearAlgebra:-DotProduct(p2[velocity], p2[velocity]))*u;
+    partB := coef*LinearAlgebra:-CrossProduct(p1[retarded_location],
+        LinearAlgebra:-CrossProduct(u, p2[acceleration]));
+    together := partA + partB;
+    return together
+end proc
+
+######################################################
+# Add to Set of electric Vectors at p1
+> union_to_physical_feeling_elec := proc(p)
+>     local p2;
+>     p[physical_feeling_elec] := {};
+>     for p2 in external_world(world, p) do
+>         p[physical_feeling_elec] := p[physical_feeling_elec] union {elec_E(p2, p)};
+>     od;
+>     return 0;
+> end:
+################################################
+# Add to Sum of elec Vectors at p1
+> sum_to_body_elec := proc(p)
+>     local p2;
+>     p[body_elec] := <0.0, 0.0, 0.0>;
+>     for p2 in external_world(world, p) do
+>         p[body_elec] := p[body_elec] + elec_E(p2, p);
+>     od;
+>     return 0;
+> end:
+###################################################
+#################################################
+# magnetic field (Vector) caused by p2 at p1
+> mag_B := proc(p2, p1)
+> global c; # speed of light
+>     local rsq, runit;
+>     p1[retarded_location] := calc_retarded_loc(p1,
+>                                               p2,
+>                                               world_time,
+>                                               p2[last_time]);
+>     return (1.0/c * (CrossProduct(p1[retarded_location],
+>                           elec_E(p2, p1))));
+> end;
+mag_B := proc(p2, p1)
+local rsq, runit;
+global c;
+    p1[retarded_location] :=
+        calc_retarded_loc(p1, p2, world_time, p2[last_time]);
+    return 1.0*
+        LinearAlgebra:-CrossProduct(p1[retarded_location], elec_E(p2, p1))/
+        c
+end proc
+
+######################################################
+# Add to Set of mag Vectors at p1
+> union_to_physical_feeling_mag := proc(p)
+>     local p2;
+>     p[physical_feeling_mag] := {};
+>     for p2 in external_world(world, p) do
+>         p[physical_feeling_mag] := p[physical_feeling_mag] union {mag_B(p2, p)};
+>     od;
+>     return 0;
+> end:
+################################################
+# Add to Sum of mag Vectors at p1
+> sum_to_body_mag := proc(p)
+>     local p2;
+>     p[body_mag] := <0.0, 0.0, 0.0>;
+>     for p2 in external_world(world, p) do
+>         p[body_mag] := p[body_mag] + mag_B(p2, p);
+#        print("HHHHRRR", p[body_mag]);
+>     od;
+>     return 0;
+> end:
+###################################################
+####################################################
+> jump := proc(delta_time)
+> global particle1, particle2, particle3, world;
+> local out, out2, out3, out4, out5, out6, particle;
+>     for particle in world do
+>         particle[acceleration] := particle[body_grav]
+>         / particle[mass];
+>         particle[acceleration] := particle[acceleration]
+>         + particle[charge] * particle[body_elec]
+>         / particle[mass];
+#        print("body_mag HERE === ", particle[body_mag]);
+>         particle[acceleration] := particle[acceleration]
+>         + particle[charge] * CrossProduct(
+>             particle[velocity], particle[body_mag])
+>         / particle[mass];
+>         
+>         particle[location] := particle[location]
+>         + particle[velocity] * delta_time;
+>         particle[velocity] := particle[velocity]
+>         + particle[acceleration] * delta_time;
+>         out := map(union_to_physical_feeling_grav, world):
+>         out2 := map(sum_to_body_grav, world):
+>         out3 := map(union_to_physical_feeling_elec, world):
+>         out4 := map(sum_to_body_elec, world):
+>         out5 := map(union_to_physical_feeling_mag, world):
+>         out6 := map(sum_to_body_mag, world):
+>     od;
+> end;
+jump := proc(delta_time)
+local out, out2, out3, out4, out5, out6, particle;
+global particle1, particle2, particle3, world;
+    for particle in world do
+        particle[acceleration] := particle[body_grav]/particle[mass];
+        particle[acceleration] := particle[acceleration]
+             + particle[charge]*particle[body_elec]/particle[mass];
+        particle[acceleration] := particle[acceleration] + particle[charge]
+            *LinearAlgebra:-CrossProduct(particle[velocity],
+            particle[body_mag])/particle[mass];
+        particle[location] :=
+            particle[location] + particle[velocity]*delta_time;
+        particle[velocity] :=
+            particle[velocity] + particle[acceleration]*delta_time;
+        out := map(union_to_physical_feeling_grav, world);
+        out2 := map(sum_to_body_grav, world);
+        out3 := map(union_to_physical_feeling_elec, world);
+        out4 := map(sum_to_body_elec, world);
+        out5 := map(union_to_physical_feeling_mag, world);
+        out6 := map(sum_to_body_mag, world)
+    end do
+end proc
+
+
+> run := proc(start_time, end_time, delta_time)
+> global particle1, particle2, particle3, world;
+> local world_time, out, out2, out3, out4, out5, out6;
+>     world_time := start_time;
+>     init();
+>     out := map(union_to_physical_feeling_grav, world):
+>     out2 := map(sum_to_body_grav, world):
+>     out3 := map(union_to_physical_feeling_elec, world):
+>     out4 := map(sum_to_body_elec, world):
+>     out5 := map(union_to_physical_feeling_mag, world):
+>     out6 := map(sum_to_body_mag, world):
+>     while world_time <= end_time do
+>         print("world_time = ", world_time);
+>         map(print, evalf(world));
+>         jump(delta_time);
+>         world_time := world_time + delta_time;
+>     od;
+> end;
+run := proc(start_time, end_time, delta_time)
+local world_time, out, out2, out3, out4, out5, out6;
+global particle1, particle2, particle3, world;
+    world_time := start_time;
+    init();
+    out := map(union_to_physical_feeling_grav, world);
+    out2 := map(sum_to_body_grav, world);
+    out3 := map(union_to_physical_feeling_elec, world);
+    out4 := map(sum_to_body_elec, world);
+    out5 := map(union_to_physical_feeling_mag, world);
+    out6 := map(sum_to_body_mag, world);
+    while world_time <= end_time do
+        print("world_time = ", world_time);
+        map(print, evalf(world));
+        jump(delta_time);
+        world_time := world_time + delta_time
+    end do
+end proc
+
+
+> run(0.0, 0.4, 0.1);
+memory used=3.2MB, alloc=40.3MB, time=0.12
+                              "world_time = ", 0.
+
+                                  [1.0]             [3.0]
+                                  [   ]             [   ]
+table([mass = 1.3, acceleration = [1.0], elec_f_E = [1.0], name = "particle1",
+                                  [   ]             [   ]
+                                  [0. ]             [8.0]
+
+                             [1.0]                      [9.]             [1.0]
+                             [   ]                      [  ]             [   ]
+    charge = 3.3, velocity = [2.0], retarded_location = [3.], location = [2.0],
+                             [   ]                      [  ]             [   ]
+                             [3.0]                      [1.]             [3.0]
+
+    physical_feeling_grav =
+
+     [                    -10 ]  [                    -9 ]
+     [0.671168750000000 10    ]  [0.615307500000000 10   ]
+     [                        ]  [                       ]
+    {[                     -11], [                    -9 ]},
+     [-0.958812500000000 10   ]  [0.205102500000000 10   ]
+     [                        ]  [                       ]
+     [                     -11]  [                    -10]
+     [-0.958812500000000 10   ]  [0.683675000000000 10   ]
+
+    physical_feeling_mag =
+
+     [                     -7]  [                     -8]
+     [-0.252710830171650 10  ]  [-0.757551362116374 10  ]
+     [                       ]  [                       ]
+    {[                     -7], [                    -7 ]},
+     [-0.589658610025452 10  ]  [0.126258559028181 10   ]
+     [                       ]  [                       ]
+     [                     -6]  [                    -7 ]
+     [-0.117931720018269 10  ]  [0.303020548820193 10   ]
+
+    physical_feeling_elec =
+
+     [                     9]  [                     9]
+     [-0.743118503765152 10 ]  [-0.214414987558727 10 ]
+     [                      ]  [                      ]
+    {[                    9 ], [                     8]},
+     [0.106159791306381 10  ]  [-0.714716615095071 10 ]
+     [                      ]  [                      ]
+     [                    9 ]  [                     8]
+     [0.106159783725056 10  ]  [-0.238238879273871 10 ]
+
+                [                    -9 ]             [                     -7]
+                [0.682424375000000 10   ]             [-0.328465966383288 10  ]
+                [                       ]             [                       ]
+    body_grav = [                    -9 ], body_mag = [                     -7]
+                [0.195514375000000 10   ]             [-0.463400050997271 10  ]
+                [                       ]             [                       ]
+                [                    -10]             [                     -7]
+                [0.587793750000000 10   ]             [-0.876296651362497 10  ]
+
+                [1.0]
+                [   ]
+    , mag_f_B = [6.0],
+                [   ]
+                [2.0]
+
+                [                     9]
+                [-0.957533491323879 10 ]
+                [                      ]
+    body_elec = [                    8 ]
+                [0.346881297968741 10  ]
+                [                      ]
+                [                    8 ]
+                [0.823358957976692 10  ]
+
+    ])
+
+                                  [1.0]             [-5.0]
+                                  [   ]             [    ]
+table([mass = 2.3, acceleration = [1.0], elec_f_E = [3.0 ], name = "particle2",
+                                  [   ]             [    ]
+                                  [0. ]             [-2.0]
+
+                             [7.0 ]                      [16.]
+                             [    ]                      [   ]
+    charge = 4.3, velocity = [-3.0], retarded_location = [2. ],
+                             [    ]                      [   ]
+                             [ 0. ]                      [0. ]
+
+               [8.0]
+               [   ]
+    location = [1.0], physical_feeling_grav =
+               [   ]
+               [2.0]
+
+     [                     -10]  [                    -10]
+     [-0.379356250000000 10   ]  [0.717298360657890 10   ]
+     [                        ]  [                       ]
+    {[                    -11 ], [                    -11]},
+     [0.541937500000000 10    ]  [0.896622950822362 10   ]
+     [                        ]  [                       ]
+     [                    -11 ]  [          -0.          ]
+     [0.541937500000000 10    ]
+
+    physical_feeling_mag =
+
+     [                    -8 ]
+     [0.646469602981557 10   ]  [          0.          ]
+     [                       ]  [                      ]
+    {[                    -6 ], [          0.          ]},
+     [0.142223316430903 10   ]  [                      ]
+     [                       ]  [                    -7]
+     [                     -7]  [0.335847773154241 10  ]
+     [-0.969704441228533 10  ]
+
+    physical_feeling_elec =
+
+     [                    9 ]  [                     8]
+     [0.570300274682533 10  ]  [-0.789286505805889 10 ]
+     [                      ]  [                      ]
+    {[                     8], [                     7]},
+     [-0.814714719676667 10 ]  [-0.986608069285904 10 ]
+     [                      ]  [                      ]
+     [                     8]  [         -0.          ]
+     [-0.814714739070755 10 ]
+
+                [                    -10]             [                    -8 ]
+                [0.337942110657890 10   ]             [0.646469602981557 10   ]
+                [                       ]             [                       ]
+    body_grav = [                    -10], body_mag = [                    -6 ]
+                [0.143856045082236 10   ]             [0.142223316430903 10   ]
+                [                       ]             [                       ]
+                [                    -11]             [                     -7]
+                [0.541937500000000 10   ]             [-0.633856668074292 10  ]
+
+                [8.0 ]
+                [    ]
+    , mag_f_B = [-2.0],
+                [    ]
+                [-1.0]
+
+                [                    9 ]
+                [0.491371624101945 10  ]
+                [                      ]
+    body_elec = [                     8]
+                [-0.913375526605257 10 ]
+                [                      ]
+                [                     8]
+                [-0.814714739070755 10 ]
+
+    ])
+
+                                  [1.0]             [-1.0]
+                                  [   ]             [    ]
+table([mass = 4.1, acceleration = [1.0], elec_f_E = [-2.0], name = "particle3",
+                                  [   ]             [    ]
+                                  [0. ]             [8.0 ]
+
+                              [5.0]                      [-16.]
+                              [   ]                      [    ]
+    charge = -2.3, velocity = [3.0], retarded_location = [-2. ],
+                              [   ]                      [    ]
+                              [0. ]                      [ 0. ]
+
+               [-8.0]
+               [    ]
+    location = [-1.0], physical_feeling_grav =
+               [    ]
+               [2.0 ]
+
+     [                     -9 ]  [                     -10]
+     [-0.195097500000000 10   ]  [-0.402386885247109 10   ]
+     [                        ]  [                        ]
+    {[                     -10], [                     -11]},
+     [-0.650325000000000 10   ]  [-0.502983606558886 10   ]
+     [                        ]  [                        ]
+     [                     -10]  [          -0.           ]
+     [-0.216775000000000 10   ]
+
+    physical_feeling_mag =
+
+     [                    -7 ]
+     [0.253614998360221 10   ]  [          0.           ]
+     [                       ]  [                       ]
+    {[                     -7], [          0.           ]},
+     [-0.941998567182871 10  ]  [                       ]
+     [                       ]  [                     -6]
+     [                    -7 ]  [-0.102445083061752 10  ]
+     [0.543460714816504 10   ]
+
+    physical_feeling_elec =
+
+     [                     9]  [                     9]
+     [-0.307638878493842 10 ]  [-0.147562248158480 10 ]
+     [                      ]  [                      ]
+    {[                     9], [                     8]},
+     [-0.102546294642816 10 ]  [-0.184452790989647 10 ]
+     [                      ]  [                      ]
+     [                     8]  [          0.          ]
+     [-0.341821007504221 10 ]
+
+                [                     -9 ]
+                [-0.235336188524711 10   ]
+                [                        ]
+    body_grav = [                     -10],
+                [-0.700623360655888 10   ]
+                [                        ]
+                [                     -10]
+                [-0.216775000000000 10   ]
+
+               [                    -7 ]
+               [0.253614998360221 10   ]            [4.0 ]
+               [                       ]            [    ]
+    body_mag = [                     -7], mag_f_B = [-1.0],
+               [-0.941998567182871 10  ]            [    ]
+               [                       ]            [6.0 ]
+               [                     -7]
+               [-0.480990115801012 10  ]
+
+                [                     9]
+                [-0.455201126652322 10 ]
+                [                      ]
+    body_elec = [                     9]
+                [-0.120991573741781 10 ]
+                [                      ]
+                [                     8]
+                [-0.341821007504221 10 ]
+
+    ])
+
+                              "world_time = ", 0.1
+
+                                  [                     10]
+                                  [-0.243066193951519 10  ]             [3.0]
+                                  [                       ]             [   ]
+table([mass = 1.3, acceleration = [                     8 ], elec_f_E = [1.0],
+                                  [ 0.880544833305530 10  ]             [   ]
+                                  [                       ]             [8.0]
+                                  [                     9 ]
+                                  [ 0.209006504717223 10  ]
+
+                                                 [                     9]
+                                                 [-0.243066192951519 10 ]
+                                                 [                      ]
+    name = "particle1", charge = 3.3, velocity = [                    7 ],
+                                                 [0.880545033305530 10  ]
+                                                 [                      ]
+                                                 [                    8 ]
+                                                 [0.209006534717223 10  ]
+
+                        [8.60000000000000]             [1.10000000000000]
+                        [                ]             [                ]
+    retarded_location = [2.90000000000000], location = [2.20000000000000],
+                        [                ]             [                ]
+                        [1.30000000000000]             [3.30000000000000]
+
+    physical_feeling_grav =
+
+     [                    -10 ]  [                    -9]
+     [0.658337662337916 10    ]  [0.737254545453484 10  ]
+     [                        ]  [                      ]
+    {[                     -10], [                    -9]},
+     [-0.129935064935115 10   ]  [0.248609090908733 10  ]
+     [                        ]  [                      ]
+     [                     -10]  [                    -9]
+     [-0.112610389610433 10   ]  [0.111445454545294 10  ]
+
+                            [0.256728317254220]  [-0.0116723028615090]
+                            [                 ]  [                   ]
+    physical_feeling_mag = {[-3.30772770341717], [ 0.119179418938290 ]},
+                            [                 ]  [                   ]
+                            [5.68042062424885 ]  [-0.205752792426848 ]
+
+    physical_feeling_elec =
+
+     [                     9]  [                     9]
+     [-0.614412358713272 10 ]  [-0.446428778009753 10 ]
+     [                      ]  [                      ]
+    {[                    9 ], [                    8 ]},
+     [0.129387417868161 10  ]  [0.476142710521019 10  ]
+     [                      ]  [                      ]
+     [                    9 ]  [                    8 ]
+     [0.109801301580102 10  ]  [0.479024301876123 10  ]
+
+                [                    -9]
+                [0.803088311687275 10  ]             [0.245056014392711]
+                [                      ]             [                 ]
+    body_grav = [                    -9], body_mag = [-3.18854828447888],
+                [0.235615584415221 10  ]             [                 ]
+                [                      ]             [5.47466783182200 ]
+                [                    -9]
+                [0.100184415584251 10  ]
+
+              [1.0]
+              [   ]
+    mag_f_B = [6.0],
+              [   ]
+              [2.0]
+
+                [                     10]
+                [-0.106084113672302 10  ]
+                [                       ]
+    body_elec = [                     9 ]
+                [ 0.177001688920263 10  ]
+                [                       ]
+                [                     9 ]
+                [ 0.157703731767714 10  ]
+
+    ])
+
+                                  [                     8]
+                                  [-0.353672290312710 10 ]             [-5.0]
+                                  [                      ]             [    ]
+table([mass = 2.3, acceleration = [                     8], elec_f_E = [3.0 ],
+                                  [-0.309215499070580 10 ]             [    ]
+                                  [                      ]             [-2.0]
+                                  [                     8]
+                                  [-0.159045216145740 10 ]
+
+                                                 [                     7]
+                                                 [-0.353671590312710 10 ]
+                                                 [                      ]
+    name = "particle2", charge = 4.3, velocity = [                     7],
+                                                 [-0.309215799070580 10 ]
+                                                 [                      ]
+                                                 [                     7]
+                                                 [-0.159045216145740 10 ]
+
+                        [16.2000000000000]             [8.70000000000000 ]
+                        [                ]             [                 ]
+    retarded_location = [1.40000000000000], location = [0.700000000000000],
+                        [                ]             [                 ]
+                        [       0.       ]             [       2.        ]
+
+    physical_feeling_grav =
+
+     [                     -10]  [                    -10]
+     [-0.372103896104040 10   ]  [0.717559766765391 10   ]
+     [                        ]  [                       ]
+    {[                    -11 ], [                    -11]},
+     [0.734415584415868 10    ]  [0.620113378686140 10   ]
+     [                        ]  [                       ]
+     [                    -11 ]  [          -0.          ]
+     [0.636493506493752 10    ]
+
+                            [0.00615009334888529]  [0.121433524259620]
+                            [                   ]  [                 ]
+    physical_feeling_mag = {[-0.0485549360699611], [-1.40515935214703]},
+                            [                   ]  [                 ]
+                            [0.0919793181203614 ]  [2.40406679117421 ]
+
+    physical_feeling_elec =
+
+     [                     8]  [                    8 ]
+     [-0.963053454562740 10 ]  [0.494379257005708 10  ]
+     [                      ]  [                      ]
+    {[                    8 ], [                     7]},
+     [0.361970712169259 10  ]  [-0.612672277825266 10 ]
+     [                      ]  [                      ]
+     [                    8 ]  [                     7]
+     [0.260214694842304 10  ]  [-0.653984507759726 10 ]
+
+                [                    -10]
+                [0.345455870661351 10   ]             [0.127583617608506]
+                [                       ]             [                 ]
+    body_grav = [                    -10], body_mag = [-1.45371428821700],
+                [0.135452896310201 10   ]             [                 ]
+                [                       ]             [2.49604610929457 ]
+                [                    -11]
+                [0.636493506493752 10   ]
+
+              [8.0 ]
+              [    ]
+    mag_f_B = [-2.0],
+              [    ]
+              [-1.0]
+
+                [                     8]
+                [-0.468674197557032 10 ]
+                [                      ]
+    body_elec = [                    8 ]
+                [0.300703484386733 10  ]
+                [                      ]
+                [                    8 ]
+                [0.194816244066331 10  ]
+
+    ])
+
+                                  [                    9 ]
+                                  [0.492722488644911 10  ]             [-1.0]
+                                  [                      ]             [    ]
+table([mass = 4.1, acceleration = [                    10], elec_f_E = [-2.0],
+                                  [0.119648722691407 10  ]             [    ]
+                                  [                      ]             [8.0 ]
+                                  [                    9 ]
+                                  [0.674449740905820 10  ]
+
+                                                  [                    8]
+                                                  [0.492722538644911 10 ]
+                                                  [                     ]
+    name = "particle3", charge = -2.3, velocity = [                    9],
+                                                  [0.119648725691407 10 ]
+                                                  [                     ]
+                                                  [                    8]
+                                                  [0.674449740905820 10 ]
+
+                        [-16.2000000000000]             [-7.50000000000000 ]
+                        [                 ]             [                  ]
+    retarded_location = [-1.40000000000000], location = [-0.700000000000000],
+                        [                 ]             [                  ]
+                        [       0.        ]             [        2.        ]
+
+    physical_feeling_grav =
+
+     [                     -9 ]  [                     -10]
+     [-0.233763636363300 10   ]  [-0.402533527697658 10   ]
+     [                        ]  [                        ]
+    {[                     -10], [                     -11]},
+     [-0.788272727271592 10   ]  [-0.347868480726371 10   ]
+     [                        ]  [                        ]
+     [                     -10]  [          -0.           ]
+     [-0.353363636363127 10   ]
+
+                            [3.74201054444276 ]  [-0.00375755476794801]
+                            [                 ]  [                    ]
+    physical_feeling_mag = {[-37.7309126735430], [ 0.0434802766005413 ]},
+                            [                 ]  [                    ]
+                            [59.4141200546668 ]  [-0.0761786389806799 ]
+
+    physical_feeling_elec =
+
+     [                     9 ]  [                     9]
+     [-0.875305905356453 10  ]  [-0.149524922344609 10 ]
+     [                       ]  [                      ]
+    {[                     10], [                     8]},
+     [-0.236774687697111 10  ]  [-0.115111913326065 10 ]
+     [                       ]  [                      ]
+     [                     10]  [   805190.307418237   ]
+     [-0.144850831151600 10  ]
+
+                [                     -9 ]
+                [-0.274016989133066 10   ]             [3.73825298967481 ]
+                [                        ]             [                 ]
+    body_grav = [                     -10], body_mag = [-37.6874323969424],
+                [-0.823059575344229 10   ]             [                 ]
+                [                        ]             [59.3379414156861 ]
+                [                     -10]
+                [-0.353363636363127 10   ]
+
+              [4.0 ]
+              [    ]
+    mag_f_B = [-1.0],
+              [    ]
+              [6.0 ]
+
+                [                     10]
+                [-0.102483082770106 10  ]
+                [                       ]
+    body_elec = [                     10]
+                [-0.237925806830372 10  ]
+                [                       ]
+                [                     10]
+                [-0.144770312120858 10  ]
+
+    ])
+
+                              "world_time = ", 0.2
+
+                                  [                     10]
+                                  [-0.240136298329690 10  ]             [3.0]
+                                  [                       ]             [   ]
+table([mass = 1.3, acceleration = [                    10 ], elec_f_E = [1.0],
+                                  [0.384026124471970 10   ]             [   ]
+                                  [                       ]             [8.0]
+                                  [                    10 ]
+                                  [0.236222680460839 10   ]
+
+                                                 [                     9]
+                                                 [-0.483202491281209 10 ]
+                                                 [                      ]
+    name = "particle1", charge = 3.3, velocity = [                    9 ],
+                                                 [0.392831574805026 10  ]
+                                                 [                      ]
+                                                 [                    9 ]
+                                                 [0.257123333932562 10  ]
+
+                        [                     8]
+                        [-0.292338360816010 10 ]
+                        [                      ]
+    retarded_location = [                     8],
+                        [-0.110843246358351 10 ]
+                        [                      ]
+                        [                     7]
+                        [-0.465443076188597 10 ]
+
+               [                     8]
+               [-0.243066181951519 10 ]
+               [                      ]
+    location = [   880547.233305530   ], physical_feeling_grav =
+               [                      ]
+               [                    7 ]
+               [0.209006864717223 10  ]
+
+     [                    -15 ]  [                     -16]
+     [0.459807259673081 10    ]  [-0.840367632254821 10   ]
+     [                        ]  [                        ]
+    {[                     -16], [                     -16]},
+     [-0.228389921306115 10   ]  [-0.318634462591897 10   ]
+     [                        ]  [                        ]
+     [                     -16]  [                     -16]
+     [-0.431745456629112 10   ]  [-0.133798142260292 10   ]
+
+    physical_feeling_mag =
+
+     [                    -7 ]  [                     -7]
+     [0.148841565363060 10   ]  [-0.143970601376732 10  ]
+     [                       ]  [                       ]
+    {[                     -6], [                    -6 ]},
+     [-0.116948972127991 10  ]  [0.131549657773259 10   ]
+     [                       ]  [                       ]
+     [                    -6 ]  [                     -6]
+     [0.220380776161634 10   ]  [-0.222853850327732 10  ]
+
+    physical_feeling_elec =
+
+     [                    -5]  [-0.0000779787525868659]
+     [0.740056922745280 10  ]  [                      ]
+     [                      ]  [                    -5]
+    {[                    -5], [0.111309645785488 10  ]},
+     [0.509295004904094 10  ]  [                      ]
+     [                      ]  [                    -5]
+     [                    -5]  [0.585724158484445 10  ]
+     [0.252824617998927 10  ]
+
+                [                    -15 ]
+                [0.375770496447598 10    ]
+                [                        ]
+    body_grav = [                     -16],
+                [-0.547024383898012 10   ]
+                [                        ]
+                [                     -16]
+                [-0.565543598889404 10   ]
+
+               [                    -9 ]
+               [0.487096398632746 10   ]            [1.0]
+               [                       ]            [   ]
+    body_mag = [                    -7 ], mag_f_B = [6.0],
+               [0.146006856452685 10   ]            [   ]
+               [                       ]            [2.0]
+               [                     -8]
+               [-0.247307416609723 10  ]
+
+                [-0.0000705781833594131]
+                [                      ]
+                [                    -5]
+    body_elec = [0.620604650689582 10  ]
+                [                      ]
+                [                    -5]
+                [0.838548776483372 10  ]
+
+    ])
+
+                                  [                     9]
+                                  [-0.198125194213467 10 ]             [-5.0]
+                                  [                      ]             [    ]
+table([mass = 2.3, acceleration = [                    8 ], elec_f_E = [3.0 ],
+                                  [0.832076930312748 10  ]             [    ]
+                                  [                      ]             [-2.0]
+                                  [                    8 ]
+                                  [0.586419267543169 10  ]
+
+                                                 [                     8]
+                                                 [-0.233492353244738 10 ]
+                                                 [                      ]
+    name = "particle2", charge = 4.3, velocity = [                    7 ],
+                                                 [0.522861131242168 10  ]
+                                                 [                      ]
+                                                 [                    7 ]
+                                                 [0.427374051397428 10  ]
+
+                        [                     7]
+                        [-0.528088077676183 10 ]
+                        [                      ]
+    retarded_location = [                     8],
+                        [-0.122740869682112 10 ]
+                        [                      ]
+                        [                     7]
+                        [-0.690354262520394 10 ]
+
+               [-353662.890312710]
+               [                 ]
+    location = [-309215.099070580], physical_feeling_grav =
+               [                 ]
+               [-159043.216145740]
+
+     [                     -15]  [                     -15]
+     [-0.259891059815219 10   ]  [-0.221668660728903 10   ]
+     [                        ]  [                        ]
+    {[                    -16 ], [                     -15]},
+     [0.129089955520848 10    ]  [-0.515213377262006 10   ]
+     [                        ]  [                        ]
+     [                    -16 ]  [                     -15]
+     [0.244030040703411 10    ]  [-0.289781025685684 10   ]
+
+    physical_feeling_mag =
+
+     [                    -7 ]  [                     -9]
+     [0.406881803081328 10   ]  [-0.431081634810127 10  ]
+     [                       ]  [                       ]
+    {[                     -6], [                    -8 ]},
+     [-0.357195092881896 10  ]  [0.378213504627440 10   ]
+     [                       ]  [                       ]
+     [                    -6 ]  [                     -8]
+     [0.622280934089112 10   ]  [-0.639465360926972 10  ]
+
+                             [-0.0000264646826162001]
+                             [                      ]  [0.0000109546719907669]
+                             [                    -5]  [                     ]
+    physical_feeling_elec = {[0.910831085205954 10  ], [0.0000258246679996642]}
+                             [                      ]  [                     ]
+                             [                    -5]  [0.0000145355838906742]
+                             [0.695866365441938 10  ]
+
+                  [                     -15]
+                  [-0.481559720544122 10   ]
+                  [                        ]
+    , body_grav = [                     -15],
+                  [-0.502304381709922 10   ]
+                  [                        ]
+                  [                     -15]
+                  [-0.265378021615343 10   ]
+
+               [                    -7 ]
+               [0.402570986733227 10   ]            [8.0 ]
+               [                       ]            [    ]
+    body_mag = [                     -6], mag_f_B = [-2.0],
+               [-0.353412957835622 10  ]            [    ]
+               [                       ]            [-1.0]
+               [                    -6 ]
+               [0.615886280479842 10   ]
+
+                [-0.0000155100106254332]
+                [                      ]
+    body_elec = [0.0000349329788517238 ]
+                [                      ]
+                [0.0000214942475450936 ]
+
+    ])
+
+                                  [1207.63738939181 ]             [-1.0]
+                                  [                 ]             [    ]
+table([mass = 4.1, acceleration = [-347.962788792757], elec_f_E = [-2.0],
+                                  [                 ]             [    ]
+                                  [-265.104928905277]             [8.0 ]
+
+                                                  [                    8]
+                                                  [0.492723746282301 10 ]
+                                                  [                     ]
+    name = "particle3", charge = -2.3, velocity = [                    9],
+                                                  [0.119648690895128 10 ]
+                                                  [                     ]
+                                                  [                    8]
+                                                  [0.674449475800891 10 ]
+
+                        [                    7]
+                        [0.528088077676183 10 ]
+                        [                     ]
+    retarded_location = [                    8],
+                        [0.122740869682112 10 ]
+                        [                     ]
+                        [                    7]
+                        [0.690354262520394 10 ]
+
+               [                    7]
+               [0.492721788644912 10 ]
+               [                     ]
+    location = [                    8], physical_feeling_grav =
+               [0.119648718691407 10 ]
+               [                     ]
+               [                    7]
+               [0.674449940905820 10 ]
+
+     [                    -16]  [                    -15]
+     [0.266458029739333 10   ]  [0.124350712116214 10   ]
+     [                       ]  [                       ]
+    {[                    -16], [                    -15]},
+     [0.101030439358406 10   ]  [0.289022138464052 10   ]
+     [                       ]  [                       ]
+     [                    -17]  [                    -15]
+     [0.424238012044828 10   ]  [0.162560087579774 10   ]
+
+    physical_feeling_mag =
+
+     [                     -7]  [                    -6 ]
+     [-0.440561235451798 10  ]  [0.126762843129005 10   ]
+     [                       ]  [                       ]
+    {[                    -6 ], [                     -5]},
+     [0.499061989628844 10   ]  [-0.120401125436204 10  ]
+     [                       ]  [                       ]
+     [                     -6]  [                    -5 ]
+     [-0.853601614016325 10  ]  [0.207112059979829 10   ]
+
+                                                      [-0.0000392031229160417]
+                             [0.0000773138051168021]  [                      ]
+                             [                     ]  [                    -5]
+    physical_feeling_elec = {[0.000131204606377551 ], [0.638972040065995 10  ]}
+                             [                     ]  [                      ]
+                             [0.0000727190346620981]  [                    -5]
+                                                      [0.611398225493379 10  ]
+
+                  [                    -15]
+                  [0.150996515090147 10   ]
+                  [                       ]
+    , body_grav = [                    -15],
+                  [0.299125182399893 10   ]
+                  [                       ]
+                  [                    -15]
+                  [0.166802467700222 10   ]
+
+               [                    -7 ]
+               [0.827067195838248 10   ]            [4.0 ]
+               [                       ]            [    ]
+    body_mag = [                     -6], mag_f_B = [-1.0],
+               [-0.704949264733197 10  ]            [    ]
+               [                       ]            [6.0 ]
+               [                    -5 ]
+               [0.121751898578197 10   ]
+
+                [0.0000381106822007603]
+                [                     ]
+    body_elec = [0.000137594326778211 ]
+                [                     ]
+                [0.0000788330169170319]
+
+    ])
+
+                              "world_time = ", 0.3
+
+                                  [-11.9961325040830]             [3.0]
+                                  [                 ]             [   ]
+table([mass = 1.3, acceleration = [-2.71550791474482], elec_f_E = [1.0],
+                                  [                 ]             [   ]
+                                  [-18.3947740428152]             [8.0]
+
+                                                 [                     9]
+                                                 [-0.483202492480823 10 ]
+                                                 [                      ]
+    name = "particle1", charge = 3.3, velocity = [                    9 ],
+                                                 [0.392831574533475 10  ]
+                                                 [                      ]
+                                                 [                    9 ]
+                                                 [0.257123332093084 10  ]
+
+                        [                     8]
+                        [-0.824813226725450 10 ]
+                        [                      ]
+    retarded_location = [                    8 ],
+                        [0.162339637551547 10  ]
+                        [                      ]
+                        [                    8 ]
+                        [0.143134078733613 10  ]
+
+               [                     8]
+               [-0.726268673232729 10 ]
+               [                      ]
+    location = [                    8 ], physical_feeling_grav =
+               [0.401637047138081 10  ]
+               [                      ]
+               [                    8 ]
+               [0.278024020404284 10  ]
+
+     [                    -16 ]  [                    -16 ]
+     [0.507761225003628 10    ]  [0.363553919205018 10    ]
+     [                        ]  [                        ]
+    {[                     -16], [                     -17]},
+     [-0.290042741599699 10   ]  [-0.715546375371503 10   ]
+     [                        ]  [                        ]
+     [                     -16]  [                     -17]
+     [-0.199901020506427 10   ]  [-0.630893802491431 10   ]
+
+    physical_feeling_mag =
+
+     [                     -8]  [                     -7]
+     [-0.200371593601534 10  ]  [-0.130506418914770 10  ]
+     [                       ]  [                       ]
+    {[                    -7 ], [                    -6 ]},
+     [0.257470894297312 10   ]  [0.132437289163266 10   ]
+     [                       ]  [                       ]
+     [                     -7]  [                     -6]
+     [-0.424468351544483 10  ]  [-0.225412171971068 10  ]
+
+    physical_feeling_elec =
+
+     [                     -5]  [                    -5]
+     [-0.501038671314295 10  ]  [0.215160685675137 10  ]
+     [                       ]  [                      ]
+    {[                    -5 ], [                    -6]},
+     [0.304410247167713 10   ]  [0.396387240216103 10  ]
+     [                       ]  [                      ]
+     [                    -5 ]  [                    -6]
+     [0.208298616263255 10   ]  [0.108319798176447 10  ]
+
+                [                    -16 ]
+                [0.871315144208647 10    ]
+                [                        ]
+    body_grav = [                     -16],
+                [-0.361597379136849 10   ]
+                [                        ]
+                [                     -16]
+                [-0.262990400755570 10   ]
+
+               [                     -7]
+               [-0.150543578274923 10  ]            [1.0]
+               [                       ]            [   ]
+    body_mag = [                    -6 ], mag_f_B = [6.0],
+               [0.158184378592997 10   ]            [   ]
+               [                       ]            [2.0]
+               [                     -6]
+               [-0.267859007125516 10  ]
+
+                [                     -5]
+                [-0.285877985639159 10  ]
+                [                       ]
+    body_elec = [                    -5 ]
+                [0.344048971189323 10   ]
+                [                       ]
+                [                    -5 ]
+                [0.219130596080900 10   ]
+
+    ])
+
+                                  [0.575254967978589]             [-5.0]
+                                  [                 ]             [    ]
+table([mass = 2.3, acceleration = [1.77195450975008 ], elec_f_E = [3.0 ],
+                                  [                 ]             [    ]
+                                  [0.974990330471100]             [-2.0]
+
+                                                 [                     8]
+                                                 [-0.233492352669483 10 ]
+                                                 [                      ]
+    name = "particle2", charge = 4.3, velocity = [                    7 ],
+                                                 [0.522861148961713 10  ]
+                                                 [                      ]
+                                                 [                    7 ]
+                                                 [0.427374061147332 10  ]
+
+                        [                     8]
+                        [-0.125430417720322 10 ]
+                        [                      ]
+    retarded_location = [                     8],
+                        [-0.237160949264818 10 ]
+                        [                      ]
+                        [                     8]
+                        [-0.132206633318154 10 ]
+
+               [                     7]
+               [-0.268858642276009 10 ]
+    location = [                      ], physical_feeling_grav =
+               [   213646.032171588   ]
+               [                      ]
+               [   268330.835251688   ]
+
+     [                     -16]  [                     -15]
+     [-0.286995475002051 10   ]  [-0.193111129945329 10   ]
+     [                        ]  [                        ]
+    {[                    -16 ], [                     -15]},
+     [0.163937201773743 10    ]  [-0.365130083466314 10   ]
+     [                        ]  [                        ]
+     [                    -16 ]  [                     -15]
+     [0.112987533329720 10    ]  [-0.203543708219669 10   ]
+
+    physical_feeling_mag =
+
+     [                     -8]  [                    -8 ]
+     [-0.106074603819932 10  ]  [0.301237571341734 10   ]
+     [                       ]  [                       ]
+    {[                    -7 ], [                     -7]},
+     [0.116621163711695 10   ]  [-0.258978767298688 10  ]
+     [                       ]  [                       ]
+     [                     -7]  [                    -7 ]
+     [-0.199138931555811 10  ]  [0.452276768165247 10   ]
+
+    physical_feeling_elec =
+
+     [                     -5]  [                    -5]
+     [-0.121183772559996 10  ]  [0.314853931325676 10  ]
+     [                       ]  [                      ]
+    {[                    -6 ], [                    -5]},
+     [0.886228407350743 10   ]  [0.642947912040409 10  ]
+     [                       ]  [                      ]
+     [                    -6 ]  [                    -5]
+     [0.588178444123803 10   ]  [0.359756540550819 10  ]
+
+                [                     -15]
+                [-0.221810677445534 10   ]
+                [                        ]
+    body_grav = [                     -15],
+                [-0.348736363288939 10   ]
+                [                        ]
+                [                     -15]
+                [-0.192244954886697 10   ]
+
+               [                    -8 ]
+               [0.195162967521802 10   ]            [8.0 ]
+               [                       ]            [    ]
+    body_mag = [                     -7], mag_f_B = [-2.0],
+               [-0.142357603586994 10  ]            [    ]
+               [                       ]            [-1.0]
+               [                    -7 ]
+               [0.253137836609437 10   ]
+
+                [                    -5]
+                [0.193670158765680 10  ]
+                [                      ]
+    body_elec = [                    -5]
+                [0.731570752775484 10  ]
+                [                      ]
+                [                    -5]
+                [0.418574384963199 10  ]
+
+    ])
+
+                                  [38.3505020810928 ]             [-1.0]
+                                  [                 ]             [    ]
+table([mass = 4.1, acceleration = [-11.0588052675511], elec_f_E = [-2.0],
+                                  [                 ]             [    ]
+                                  [-8.39886691592326]             [8.0 ]
+
+                                                  [                    8]
+                                                  [0.492723784632803 10 ]
+                                                  [                     ]
+    name = "particle3", charge = -2.3, velocity = [                    9],
+                                                  [0.119648689789247 10 ]
+                                                  [                     ]
+                                                  [                    8]
+                                                  [0.674449467402024 10 ]
+
+                        [                    8]
+                        [0.125430417720322 10 ]
+                        [                     ]
+    retarded_location = [                    8],
+                        [0.237160949264818 10 ]
+                        [                     ]
+                        [                    8]
+                        [0.132206633318154 10 ]
+
+               [                    7]
+               [0.985445534927212 10 ]
+               [                     ]
+    location = [                    8], physical_feeling_grav =
+               [0.239297409586534 10 ]
+               [                     ]
+               [                    8]
+               [0.134889941670671 10 ]
+
+     [                     -16]  [                    -15]
+     [-0.115273193894274 10   ]  [0.108330633871770 10   ]
+     [                        ]  [                       ]
+    {[                    -17 ], [                    -15]},
+     [0.226880558044623 10    ]  [0.204829071212810 10   ]
+     [                        ]  [                       ]
+     [                    -17 ]  [                    -15]
+     [0.200039498350942 10    ]  [0.114183055830546 10   ]
+
+    physical_feeling_mag =
+
+     [                    -7 ]  [                     -7]
+     [0.103337622071049 10   ]  [-0.148134103594403 10  ]
+     [                       ]  [                       ]
+    {[                     -6], [                    -6 ]},
+     [-0.101948890158269 10  ]  [0.166514097537530 10   ]
+     [                       ]  [                       ]
+     [                    -6 ]  [                     -6]
+     [0.175176798210274 10   ]  [-0.284649780757713 10  ]
+
+    physical_feeling_elec =
+
+     [                     -5]
+     [-0.165506618944487 10  ]  [0.0000205664105598531]
+     [                       ]  [                     ]
+    {[                    -6 ], [0.0000320783441704097]},
+     [0.962900707961141 10   ]  [                     ]
+     [                       ]  [0.0000176948594071725]
+     [                    -6 ]
+     [0.658019327477536 10   ]
+
+                [                    -16]             [                     -8]
+                [0.968033144823423 10   ]             [-0.447964815233536 10  ]
+                [                       ]             [                       ]
+    body_grav = [                    -15], body_mag = [                    -7 ]
+                [0.207097876793256 10   ]             [0.645652073792602 10   ]
+                [                       ]             [                       ]
+                [                    -15]             [                     -6]
+                [0.116183450814056 10   ]             [-0.109472982547438 10  ]
+
+                [4.0 ]
+                [    ]
+    , mag_f_B = [-1.0],
+                [    ]
+                [6.0 ]
+
+                [0.0000189113443704082]
+                [                     ]
+    body_elec = [0.0000330412448783709]
+                [                     ]
+                [0.0000183528787346501]
+
+    ])
+
+                              "world_time = ", 0.4
+
+                                  [-370.352331181848]             [3.0]
+                                  [                 ]             [   ]
+table([mass = 1.3, acceleration = [-338.379367826495], elec_f_E = [1.0],
+                                  [                 ]             [   ]
+                                  [-179.015497846521]             [8.0]
+
+                                                 [                     9]
+                                                 [-0.483202529516056 10 ]
+                                                 [                      ]
+    name = "particle1", charge = 3.3, velocity = [                    9 ],
+                                                 [0.392831540695538 10  ]
+                                                 [                      ]
+                                                 [                    9 ]
+                                                 [0.257123314191534 10  ]
+
+                        [                     9]
+                        [-0.135728809766955 10 ]
+                        [                      ]
+    retarded_location = [                    8 ],
+                        [0.435522522295774 10  ]
+                        [                      ]
+                        [                    8 ]
+                        [0.332812464086495 10  ]
+
+               [                     9]
+               [-0.120947116571355 10 ]
+               [                      ]
+    location = [                    8 ], physical_feeling_grav =
+               [0.794468621671556 10  ]
+               [                      ]
+               [                    8 ]
+               [0.535147352497368 10  ]
+
+     [                    -16 ]  [                    -16 ]
+     [0.252854638586219 10    ]  [0.172906062901255 10    ]
+     [                        ]  [                        ]
+    {[                     -16], [                     -17]},
+     [-0.171684430315367 10   ]  [-0.554815773926575 10   ]
+     [                        ]  [                        ]
+     [                     -16]  [                     -17]
+     [-0.115209811182191 10   ]  [-0.423972574050163 10   ]
+
+    physical_feeling_mag =
+
+     [                     -8]  [                     -8]
+     [-0.144549283982296 10  ]  [-0.901792153922024 10  ]
+     [                       ]  [                       ]
+    {[                    -7 ], [                    -7 ]},
+     [0.177119144526514 10   ]  [0.931770797010445 10   ]
+     [                       ]  [                       ]
+     [                     -7]  [                     -6]
+     [-0.295665749057048 10  ]  [-0.158709904352402 10  ]
+
+    physical_feeling_elec =
+
+     [                     -5]  [                    -6 ]
+     [-0.150431741004158 10  ]  [0.847977262651622 10   ]
+     [                       ]  [                       ]
+    {[                    -5 ], [                    -7 ]},
+     [0.109792417210475 10   ]  [0.786984848401636 10   ]
+     [                       ]  [                       ]
+     [                    -6 ]  [                     -8]
+     [0.731258832847825 10   ]  [-0.197906632615879 10  ]
+
+                [                    -16 ]
+                [0.425760701487474 10    ]
+                [                        ]
+    body_grav = [                     -16],
+                [-0.227166007708025 10   ]
+                [                        ]
+                [                     -16]
+                [-0.157607068587208 10   ]
+
+               [                     -7]
+               [-0.104634143790432 10  ]            [1.0]
+               [                       ]            [   ]
+    body_mag = [                    -6 ], mag_f_B = [6.0],
+               [0.110888994153696 10   ]            [   ]
+               [                       ]            [2.0]
+               [                     -6]
+               [-0.188276479258107 10  ]
+
+                [                     -6]
+                [-0.656340147389953 10  ]
+                [                       ]
+    body_elec = [                    -5 ]
+                [0.117662265694491 10   ]
+                [                       ]
+                [                    -6 ]
+                [0.729279766521667 10   ]
+
+    ])
+
+                                  [-0.0881891373466186]             [-5.0]
+                                  [                   ]             [    ]
+table([mass = 2.3, acceleration = [-0.263039967140766 ], elec_f_E = [3.0 ],
+                                  [                   ]             [    ]
+                                  [-0.160009890539615 ]             [-2.0]
+
+                                                 [                     8]
+                                                 [-0.233492352757673 10 ]
+                                                 [                      ]
+    name = "particle2", charge = 4.3, velocity = [                    7 ],
+                                                 [0.522861146331314 10  ]
+                                                 [                      ]
+                                                 [                    7 ]
+                                                 [0.427374059547233 10  ]
+
+                        [                     8]
+                        [-0.198052031450551 10 ]
+                        [                      ]
+    retarded_location = [                     8],
+                        [-0.351581027564448 10 ]
+                        [                      ]
+                        [                     8]
+                        [-0.195377839446883 10 ]
+
+               [                     7]
+               [-0.502350994945493 10 ]
+    location = [                      ], physical_feeling_grav =
+               [   736507.181133302   ]
+               [                      ]
+               [   695704.896399020   ]
+
+     [                     -16]  [                     -15]
+     [-0.142917839200906 10   ]  [-0.160512099905431 10   ]
+     [                        ]  [                        ]
+    {[                    -17 ], [                     -15]},
+     [0.970390258304250 10    ]  [-0.284940319005861 10   ]
+     [                        ]  [                        ]
+     [                    -17 ]  [                     -15]
+     [0.651185889290648 10    ]  [-0.158344789775284 10   ]
+
+    physical_feeling_mag =
+
+     [                    -9 ]  [                     -9]
+     [0.894800989054669 10   ]  [-0.897666062295507 10  ]
+     [                       ]  [                       ]
+    {[                     -8], [                    -8 ]},
+     [-0.750648330433972 10  ]  [0.997756855753342 10   ]
+     [                       ]  [                       ]
+     [                    -7 ]  [                     -7]
+     [0.131499294628266 10   ]  [-0.170446107310745 10  ]
+
+    physical_feeling_elec =
+
+     [                     -6]  [                    -5]
+     [-0.376049600518868 10  ]  [0.145854975540041 10  ]
+     [                       ]  [                      ]
+    {[                    -6 ], [                    -5]},
+     [0.289362774033178 10   ]  [0.284739444387687 10  ]
+     [                       ]  [                      ]
+     [                    -6 ]  [                    -5]
+     [0.190768048889301 10   ]  [0.158999129320805 10  ]
+
+                [                     -15]
+                [-0.174803883825522 10   ]
+                [                        ]
+    body_grav = [                     -15],
+                [-0.275236416422819 10   ]
+                [                        ]
+                [                     -15]
+                [-0.151832930882377 10   ]
+
+               [                     -11]
+               [-0.286507324083798 10   ]            [8.0 ]
+               [                        ]            [    ]
+    body_mag = [                     -8 ], mag_f_B = [-2.0],
+               [ 0.247108525319370 10   ]            [    ]
+               [                        ]            [-1.0]
+               [                     -8 ]
+               [-0.389468126824788 10   ]
+
+                [                    -5]
+                [0.108250015488154 10  ]
+                [                      ]
+    body_elec = [                    -5]
+                [0.313675721791005 10  ]
+                [                      ]
+                [                    -5]
+                [0.178075934209735 10  ]
+
+    ])
+
+                                  [19.8950948922486 ]             [-1.0]
+                                  [                 ]             [    ]
+table([mass = 4.1, acceleration = [-5.73347060270301], elec_f_E = [-2.0],
+                                  [                 ]             [    ]
+                                  [-4.36325659347855]             [8.0 ]
+
+                                                  [                    8]
+                                                  [0.492723804527898 10 ]
+                                                  [                     ]
+    name = "particle3", charge = -2.3, velocity = [                    9],
+                                                  [0.119648689215900 10 ]
+                                                  [                     ]
+                                                  [                    8]
+                                                  [0.674449463038768 10 ]
+
+                        [                    8]
+                        [0.198052031450551 10 ]
+                        [                     ]
+    retarded_location = [                    8],
+                        [0.351581027564448 10 ]
+                        [                     ]
+                        [                    8]
+                        [0.195377839446883 10 ]
+
+               [                    8]
+               [0.147816931956002 10 ]
+               [                     ]
+    location = [                    8], physical_feeling_grav =
+               [0.358946099375781 10 ]
+               [                     ]
+               [                    8]
+               [0.202334888410874 10 ]
+
+     [                     -17]  [                    -16]
+     [-0.548238736028368 10   ]  [0.900433731176807 10   ]
+     [                        ]  [                       ]
+    {[                    -17 ], [                    -15]},
+     [0.175917196610865 10    ]  [0.159844569198410 10   ]
+     [                        ]  [                       ]
+     [                    -17 ]  [                    -16]
+     [0.134430328357369 10    ]  [0.888275649958909 10   ]
+
+    physical_feeling_mag =
+
+     [                    -8 ]  [                     -8]
+     [0.400199858291701 10   ]  [-0.978124445421171 10  ]
+     [                       ]  [                       ]
+    {[                     -7], [                    -6 ]},
+     [-0.401506123082706 10  ]  [0.109977366278337 10   ]
+     [                       ]  [                       ]
+     [                    -7 ]  [                     -6]
+     [0.688626883329261 10   ]  [-0.187988362521962 10  ]
+
+    physical_feeling_elec =
+
+     [                     -6]  [                    -5]
+     [-0.487361294353145 10  ]  [0.950895131245465 10  ]
+     [                       ]  [                      ]
+    {[                    -6 ], [0.0000140326850755912 ]},
+     [0.308589521932854 10   ]  [                      ]
+     [                       ]  [                    -5]
+     [                    -6 ]  [0.771467100239836 10  ]
+     [0.208247424171991 10   ]
+
+                [                    -16]             [                     -8]
+                [0.845609857573970 10   ]             [-0.577924587129470 10  ]
+                [                       ]             [                       ]
+    body_grav = [                    -15], body_mag = [                    -7 ]
+                [0.161603741164519 10   ]             [0.698267539700666 10   ]
+                [                       ]             [                       ]
+                [                    -16]             [                     -6]
+                [0.901718682794646 10   ]             [-0.119125674189036 10  ]
+
+                [4.0 ]
+                [    ]
+    , mag_f_B = [-1.0],
+                [    ]
+                [6.0 ]
+
+                [                    -5]
+                [0.902159001810150 10  ]
+                [                      ]
+    body_elec = [0.0000143412745975241 ]
+                [                      ]
+                [                    -5]
+                [0.792291842657035 10  ]
+
+    ])
+
+                                      0.5
+
+
+
+> quit;
+memory used=28.3MB, alloc=43.3MB, time=0.29

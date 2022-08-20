@@ -1,0 +1,16 @@
+fact(courageous, napoleon).
+fact(intelligent, napoleon).
+fact(stuborn, napoleon).
+fact(courageous, washington).
+fact(intelligent, washington).
+fact(stuborn, washington).
+fact(stuborn, trump).
+
+person(0, napoleon).
+person(0, washington).
+person(0, trump).
+
+quality_that_makes_great_general(1,courageous).
+quality_that_makes_great_general(1,intelligent).
+quality_that_makes_great_general(1,stuborn).
+
