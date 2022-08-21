@@ -23,6 +23,24 @@ echo "enter 0 to proceed 888 to next, or crtl-c to quit"
 read answer
 while [ $answer -ne 888 ]
 do
+    if test -d LFTMP2
+    then
+       echo "LFTMP2 exists"
+    else
+	mkdir "LFTMP2"
+    fi
+    if test -d ERRDIFF2
+    then
+	echo "ERRDIFF2 exists"
+    else
+	mkdir ERRDIFF2
+    fi
+    if test -d REFDIFF2
+    then
+		echo "REFDIFF2 exists"
+    else
+       mkdir REFDIFF2
+    fi
     if test -f IN2pre/$1.mxt 
     then
 	echo "1 IN2pre/$1.mxt"

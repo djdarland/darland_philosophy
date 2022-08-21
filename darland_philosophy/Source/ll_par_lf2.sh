@@ -37,10 +37,10 @@ echo "select"
 read select
 case $select in
 
-101) echo "Testing 0101"; cd ../R*Life; ./work2.sh "russell_0101";;
-201) echo "Testing 0201"; cd ../R*Life; ./work2.sh "russell_0201";;
-301) echo "Testing 0301"; cd ../R*Life; ./work2.sh "russell_0301";;
-401) echo "Testing 0401"; cd ../R*Life; ./work2.sh "russell_0401";;
+101) echo "Testing 0101"; cd ../RussellPhilosophyLife; ./work2.sh "russell_0101";;
+201) echo "Testing 0201"; cd ../RussellPhilosophyLife; ./work2.sh "russell_0201";;
+301) echo "Testing 0301"; cd ../RussellPhilosophyLife; ./work2.sh "russell_0301";;
+401) echo "Testing 0401"; cd ../RussellPhilosophyLife; ./work2.sh "russell_0401";;
 666) $EDITOR ll_par_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 

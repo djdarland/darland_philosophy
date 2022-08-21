@@ -4,7 +4,7 @@
 *** Yes
 
 *** Yes
-Mon 09 May 2022 01:11:54 AM CDT
+Sat 20 Aug 2022 06:59:37 PM CDT
 
 *** Yes
 > 
@@ -605,8 +605,8 @@ Ignore = @.
 > 
 > 
 > write_stats(Ignore)?
-CPU Time 0.02 Seconds
-Clock Time 0.00891304 Seconds
+CPU Time 0.01 Seconds
+Clock Time 0.0162778 Seconds
 
 Stack size  :     3952 bytes (    3K) (0%)
 Heap size   :   785576 bytes (  767K) (0%)
