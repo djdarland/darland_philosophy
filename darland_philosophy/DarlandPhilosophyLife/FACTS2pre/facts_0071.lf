@@ -79,7 +79,7 @@ dynamic(actual_occasion)?      % sort of like "events"
 dynamic(eternal_object)?       % sort of like "universals"
 dynamic(defining_characteristic)? % a kind of universal
 dynamic(subjective_aim)?       % another kind of universal
-dynamic(relation)?             % another kind of universal
+% dynamic(relation)?             % another kind of universal
 dynamic(conceptual_feeling_words)?
 dynamic(conceptual_feeling_in_ideas)?
 dynamic(conceptual_feeling_objects)?
@@ -106,6 +106,8 @@ relation(mortal_rel).
 relation(american_rel).
 relation(denounced_rel).
 relation(wrote_DeSenectute_rel).
+relation(wet_rel).
+
 subjective_aim(understanding_sa).
 
 % some representative actual equations - there would
@@ -4551,25 +4553,23 @@ refer([twin_earther_water_idea_dc, xyz_00003]).
 refer([twin_earther_water_idea_dc, xyz_00004]).
 refer([twin_earther_water_idea_dc, xyz_00005]).
 
-rrrr(earther_dc, then, water_word_dc,
+rrrr(earther_dc, at_some_time, water_word_dc,
      earther_water_idea_dc).
-rrrr(earther_dc, then, wet_word_dc,
+rrrr(earther_dc, at_some_time, wet_word_dc,
      earther_wet_idea_dc).
-rrrr(twin_earther_dc, then, water_word_dc,
+rrrr(twin_earther_dc, at_some_time, water_word_dc,
      twin_earther_water_idea_dc).
-rrrr(twin_earther_dc, then, wet_word_dc,
+rrrr(twin_earther_dc, at_some_time, wet_word_dc,
      twin_earther_wet_idea_dc).
 
-ssss(earther_dc, then, earther_water_idea_dc,
+ssss(earther_dc, at_some_time, earther_water_idea_dc,
     h2o_dc).
-ssss(twin_earther_dc, then, twin_earther_water_idea_dc,
+ssss(twin_earther_dc, at_some_time, twin_earther_water_idea_dc,
     xyz_dc).
-ssss(earther_dc, then, earther_wet_idea_dc,
+ssss(earther_dc, at_some_time, earther_wet_idea_dc,
     wet_rel).
-ssss(twin_earther_dc, then, twin_earther_wet_idea_dc,
+ssss(twin_earther_dc, at_some_time, twin_earther_wet_idea_dc,
     wet_rel).
-
-relation(wet_rel).
 
 qqqq(idea_of, earther_dc, earther_water_idea_dc).
 qqqq(idea_of, twin_earther_dc, twin_earther_water_idea_dc).

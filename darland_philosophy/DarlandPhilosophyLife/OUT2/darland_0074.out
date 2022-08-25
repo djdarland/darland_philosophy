@@ -8,14 +8,13 @@
 *** Yes
 
 *** Yes
-Mon 09 May 2022 01:11:56 AM CDT
 
 *** Yes
 > 
 *** Yes
 > 
 > write_time(Ignore)?
-0Mon 09 May 2022 01:11:56 AM CDT
+Time Skipped for Test Suite
 
 *** Yes
 Ignore = @.
@@ -81,7 +80,8 @@ Ignore = @.
 > %% R | S is represented by rrss
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -4700,13 +4700,7 @@ Subject = tom_dc.
 > 
 > 
 > write_stats(Ignore)?
-CPU Time 6.51 Seconds
-Clock Time 6.50668 Seconds
-
-Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2897072 bytes ( 2829K) (0%)
-Total memory: 1677721584 bytes (1638399K)
-X predicates are not installed.
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

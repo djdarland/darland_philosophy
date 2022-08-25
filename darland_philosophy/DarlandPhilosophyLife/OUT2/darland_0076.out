@@ -14,14 +14,14 @@
 *** Yes
 
 *** Yes
-Mon 09 May 2022 01:12:03 AM CDT
 
 *** Yes
 > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
 *** Yes
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -1539,13 +1539,7 @@ B = [].
 > 
 > 
 > write_stats(Ignore)?
-CPU Time 0.63 Seconds
-Clock Time 0.622386 Seconds
-
-Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2842424 bytes ( 2775K) (0%)
-Total memory: 1677721584 bytes (1638399K)
-X predicates are not installed.
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

@@ -3,12 +3,48 @@
 load("RULES2/life_0001.lf")?
 load("FACTS2/facts_0071.lf")?
 load("RULES2/rules_0071.lf")?
-load("RULES2/rules_0073.lf")?
 load("RULES2/rules_0072.lf")?
+load("RULES2/rules_0073.lf")?
 load("RULES2/rules_0074.lf")?
 trace_input(true)?
 
 write_time(Ignore)?
+
+% for some reason (maybe because relation is dynamic - does not work).
+% check_relation1(I, R)?
+check_relation2(I, R)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
 
 check_corefer(Item1, Item2)?
 ;
@@ -436,74 +472,6 @@ rrrr_check3(S, T, W, I)?
 ;
 
 ssss_check3(S, T, I, O)?
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-
-check_relation1(I, R)?
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
-
-check_relation2(I, R)?
 ;
 ;
 ;

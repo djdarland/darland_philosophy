@@ -1,8 +1,21 @@
-I am now working on expressing my ideas in terms
-of Alfred North Whitehead's Process and Reality.
+The main work is accessed with ./eee
+It is largely (but not completely) finished.
+Currently I am using option 120 to check results and approve
+references to test suite.
+
+Some (using Maple) is accessed with ./mmm
+
+Future work is intended in:
+
+./lll (Gregory Landini's interpretation of Bertrand Russell.)
+
+and
+
+./www (more on Alfred North Whitehead.)
+
 
 NOTES:
-You will WildLIFE and Unicon.
+You will need WildLIFE and Unicon.
 See https://github.com/djdarland/WildLIFE
 
 and
@@ -16,12 +29,6 @@ then you need to compile qqqq_pre.icn
 
 unicon qqqq_pre.icn
 
-also create directories within DarlandPhilosophyLife:
-LFTMP2
-REFDIFF2
-ERRDIFF2
-
-
 I restarted my resumtion of my work. I have had several new ideas.
 Mainly, I have one main predicate - qqqq (in my writing Q).
 My writing is mostly at:
@@ -32,12 +39,7 @@ The maim command I use is now ./eee in the Source directory.
 ./eee allows (rather will eventually allow) all the program to be demonstrated.
 I also plan to eventually make some sort of video demos.
 Right now, I am mainly using github to manage my source code.
-Even eventually, it will probably be easier to get code from a .tar.gz backup.
-
-I'm resuming work on my philosophy programming.
-I previously was using both SwiProlog & WildLIFE.
-I have done more work on WildLIFE & believe it more solid.
-Using just it allows more flexibility in using its features.
+You can get .zip file from github.
 
 It may be obtained at:
 https://github.com/djdarland/WildLIFE
@@ -52,27 +54,9 @@ I wanted it as a starting point, however.
 I am having some trouble with predicates with varying number of arguments.
 (It's just complicated & tricky.) - NOW Solved
 
-Anyway I have decided on the following.
-Create 2 sets to repesent my ideas.
-1. using variable # of arguments (up to 2) - but not processed as lists.
-2. using variable # of arguments - but processed as lists.
 
-
-Also
-Predicates used with either will have no special suffix.
-Predicates for (1) will have "_A" suffix.
-Predicates for (2) will have "_L" suffix.
-
-I plan to implement 1 first (with up to 2 arguments - besides relation).
-It will help with planning - It is conceptually simpler.
-
-The 2nd I will do later - it is more compact & eligant.
-It will be able to handle any number of arguments.
-
-All above done.
+I am using variable # of arguments - but processed as lists.
 
 I've worked out Quine's case from pp. 145-146 of Word & Object.
 And more.
-
-Everything is still very early on.
 

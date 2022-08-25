@@ -4,14 +4,14 @@
 *** Yes
 
 *** Yes
-Mon 09 May 2022 01:11:55 AM CDT
 
 *** Yes
 > 
 *** Yes
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -19,7 +19,7 @@ Ignore = @.
 *** No
 > %% 1
 > conceptual_feeling_words(earther_dc,
-|    			 understands, then,
+|    			 understands, at_some_time,
 |    			 [[wet_word_dc], [water_word_dc]])?
 
 *** Yes
@@ -29,7 +29,7 @@ Ignore = @.
 > ;
 > 
 > conceptual_feeling_words(twin_earther_dc,
-|    			 understands, then,
+|    			 understands, at_some_time,
 |    			 [[wet_word_dc], [water_word_dc]])?
 
 *** Yes
@@ -38,7 +38,7 @@ Ignore = @.
 *** No
 > %% 2
 > 
-> conceptual_feeling_in_ideas(earther_dc, understands, then,
+> conceptual_feeling_in_ideas(earther_dc, understands, at_some_time,
 |    			    [[earther_wet_idea_dc],
 |    			     [earther_water_idea_dc]])?
 
@@ -46,7 +46,7 @@ Ignore = @.
 --1> 
 
 *** No
-> conceptual_feeling_in_ideas(twin_earther_dc, understands, then,
+> conceptual_feeling_in_ideas(twin_earther_dc, understands, at_some_time,
 |    			    [[twin_earther_wet_idea_dc],
 |    			     [twin_earther_water_idea_dc]])?
 
@@ -56,19 +56,19 @@ Ignore = @.
 *** No
 > %% 3
 > 
-> conceptual_feeling_objects(earther_dc, understands, then,
+> conceptual_feeling_objects(earther_dc, understands, at_some_time,
 |    			   [[wet_rel], [h2o_dc]])?
 
 *** Yes
---1> conceptual_feeling_objects(earther_dc, understands, then,
+--1> conceptual_feeling_objects(earther_dc, understands, at_some_time,
 |    			   [[wet_rel], [xyz_dc]])?
 
 *** No
---1> conceptual_feeling_objects(twin_earther_dc, understands, then,
+--1> conceptual_feeling_objects(twin_earther_dc, understands, at_some_time,
 |    			   [[wet_rel], [h2o_dc]])?
 
 *** No
---1> conceptual_feeling_objects(twin_earther_dc, understands, then,
+--1> conceptual_feeling_objects(twin_earther_dc, understands, at_some_time,
 |    			   [[wet_rel], [xyz_dc]])?
 
 *** Yes
@@ -78,7 +78,7 @@ Ignore = @.
 --1> %% 4
 --1> 	  
 --1> conceptual_feeling_words_ideas(earther_dc,
-|    			       understands, then,
+|    			       understands, at_some_time,
 |    			       [[wet_word_dc,
 |    				 earther_wet_idea_dc],
 |    				[water_word_dc,
@@ -89,7 +89,7 @@ Ignore = @.
 
 *** No
 --1> conceptual_feeling_words_ideas(twin_earther_dc,
-|    			       understands, then,
+|    			       understands, at_some_time,
 |    			       [[wet_word_dc,
 |    				 twin_earther_wet_idea_dc],
 |    				[water_word_dc,
@@ -101,7 +101,7 @@ Ignore = @.
 *** No
 --1> %% 5
 --1> conceptual_feeling_words_objects(earther_dc, understands,
-|    				 then,
+|    				 at_some_time,
 |    				 [[wet_word_dc, wet_rel],
 |    				  [water_word_dc, h2o_dc]])?
 
@@ -110,7 +110,7 @@ Ignore = @.
 
 *** No
 --1> conceptual_feeling_words_objects(earther_dc, understands,
-|    				 then,
+|    				 at_some_time,
 |    				 [[wet_word_dc, wet_rel],
 |    				  [water_word_dc, xyz_dc]])?
 
@@ -119,14 +119,14 @@ Ignore = @.
 
 *** No
 > conceptual_feeling_words_objects(twin_earther_dc, understands,
-|    				 then,
+|    				 at_some_time,
 |    				 [[wet_word_dc, wet_rel],
 |    				  [water_word_dc, h2o_dc]])?
 
 *** No
 > 
 > conceptual_feeling_words_objects(twin_earther_dc, understands,
-|    				 then,
+|    				 at_some_time,
 |    				 [[wet_word_dc, wet_rel],
 |    				  [water_word_dc, xyz_dc]])?
 
@@ -138,7 +138,7 @@ Ignore = @.
 > 
 > conceptual_feeling_ideas_objects( earther_dc,
 |    				  understands,
-|    				  then,
+|    				  at_some_time,
 |    				  [[earther_wet_idea_dc,
 |    				    wet_rel],
 |    				   [earther_water_idea_dc,
@@ -150,7 +150,7 @@ Ignore = @.
 *** No
 > conceptual_feeling_ideas_objects( twin_earther_dc,
 |    				  understands,
-|    				  then,
+|    				  at_some_time,
 |    				  [[twin_earther_wet_idea_dc,
 |    				    wet_rel],
 |    				   [twin_earther_water_idea_dc,
@@ -164,7 +164,7 @@ Ignore = @.
 > 	  
 > conceptual_feeling_words_ideas_objects(earther_dc,
 |    				       understands,
-|    				       then,
+|    				       at_some_time,
 |    				       [[wet_word_dc,
 |    					 earther_wet_idea_dc,
 |    					 wet_rel],
@@ -178,7 +178,7 @@ Ignore = @.
 *** No
 > conceptual_feeling_words_ideas_objects(twin_earther_dc,
 |    				       understands,
-|    				       then,
+|    				       at_some_time,
 |    				       [[wet_word_dc,
 |    					 twin_earther_wet_idea_dc,
 |    					 wet_rel],
@@ -1626,13 +1626,7 @@ Subject = tom_dc.
 *** No
 > 	
 > write_stats(Ignore)?
-CPU Time 0.09 Seconds
-Clock Time 0.0852821 Seconds
-
-Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2290200 bytes ( 2236K) (0%)
-Total memory: 1677721584 bytes (1638399K)
-X predicates are not installed.
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

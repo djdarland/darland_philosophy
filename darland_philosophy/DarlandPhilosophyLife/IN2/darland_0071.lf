@@ -63,47 +63,47 @@ write_time(Ignore)?
 
 %% 1
 conceptual_feeling_words(earther_dc,
-			 understands, then,
+			 understands, at_some_time,
 			 [[wet_word_dc], [water_word_dc]])?
 ;
 ;
 
 conceptual_feeling_words(twin_earther_dc,
-			 understands, then,
+			 understands, at_some_time,
 			 [[wet_word_dc], [water_word_dc]])?
 
 %% 2
 
-conceptual_feeling_in_ideas(earther_dc, understands, then,
+conceptual_feeling_in_ideas(earther_dc, understands, at_some_time,
 			    [[earther_wet_idea_dc],
 			     [earther_water_idea_dc]])?
 
-conceptual_feeling_in_ideas(twin_earther_dc, understands, then,
+conceptual_feeling_in_ideas(twin_earther_dc, understands, at_some_time,
 			    [[twin_earther_wet_idea_dc],
 			     [twin_earther_water_idea_dc]])?
 
 %% 3
 
-conceptual_feeling_objects(earther_dc, understands, then,
+conceptual_feeling_objects(earther_dc, understands, at_some_time,
 			   [[wet_rel], [h2o_dc]])?
-conceptual_feeling_objects(earther_dc, understands, then,
+conceptual_feeling_objects(earther_dc, understands, at_some_time,
 			   [[wet_rel], [xyz_dc]])?
-conceptual_feeling_objects(twin_earther_dc, understands, then,
+conceptual_feeling_objects(twin_earther_dc, understands, at_some_time,
 			   [[wet_rel], [h2o_dc]])?
-conceptual_feeling_objects(twin_earther_dc, understands, then,
+conceptual_feeling_objects(twin_earther_dc, understands, at_some_time,
 			   [[wet_rel], [xyz_dc]])?
 
 %% 4
 	  
 conceptual_feeling_words_ideas(earther_dc,
-			       understands, then,
+			       understands, at_some_time,
 			       [[wet_word_dc,
 				 earther_wet_idea_dc],
 				[water_word_dc,
 				earther_water_idea_dc]])?
 
 conceptual_feeling_words_ideas(twin_earther_dc,
-			       understands, then,
+			       understands, at_some_time,
 			       [[wet_word_dc,
 				 twin_earther_wet_idea_dc],
 				[water_word_dc,
@@ -111,22 +111,22 @@ conceptual_feeling_words_ideas(twin_earther_dc,
 
 %% 5
 conceptual_feeling_words_objects(earther_dc, understands,
-				 then,
+				 at_some_time,
 				 [[wet_word_dc, wet_rel],
 				  [water_word_dc, h2o_dc]])?
 
 conceptual_feeling_words_objects(earther_dc, understands,
-				 then,
+				 at_some_time,
 				 [[wet_word_dc, wet_rel],
 				  [water_word_dc, xyz_dc]])?
 
 conceptual_feeling_words_objects(twin_earther_dc, understands,
-				 then,
+				 at_some_time,
 				 [[wet_word_dc, wet_rel],
 				  [water_word_dc, h2o_dc]])?
 
 conceptual_feeling_words_objects(twin_earther_dc, understands,
-				 then,
+				 at_some_time,
 				 [[wet_word_dc, wet_rel],
 				  [water_word_dc, xyz_dc]])?
 
@@ -134,7 +134,7 @@ conceptual_feeling_words_objects(twin_earther_dc, understands,
 
 conceptual_feeling_ideas_objects( earther_dc,
 				  understands,
-				  then,
+				  at_some_time,
 				  [[earther_wet_idea_dc,
 				    wet_rel],
 				   [earther_water_idea_dc,
@@ -142,7 +142,7 @@ conceptual_feeling_ideas_objects( earther_dc,
 
 conceptual_feeling_ideas_objects( twin_earther_dc,
 				  understands,
-				  then,
+				  at_some_time,
 				  [[twin_earther_wet_idea_dc,
 				    wet_rel],
 				   [twin_earther_water_idea_dc,
@@ -152,7 +152,7 @@ conceptual_feeling_ideas_objects( twin_earther_dc,
 	  
 conceptual_feeling_words_ideas_objects(earther_dc,
 				       understands,
-				       then,
+				       at_some_time,
 				       [[wet_word_dc,
 					 earther_wet_idea_dc,
 					 wet_rel],
@@ -162,7 +162,7 @@ conceptual_feeling_words_ideas_objects(earther_dc,
 
 conceptual_feeling_words_ideas_objects(twin_earther_dc,
 				       understands,
-				       then,
+				       at_some_time,
 				       [[wet_word_dc,
 					 twin_earther_wet_idea_dc,
 					 wet_rel],

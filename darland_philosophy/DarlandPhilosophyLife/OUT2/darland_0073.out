@@ -10,19 +10,66 @@
 *** Yes
 
 *** Yes
-Mon 09 May 2022 01:11:56 AM CDT
 
 *** Yes
 > 
 *** Yes
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
 
 *** No
+> % for some reason (maybe because relation is dynamic - does not work).
+> % check_relation1(I, R)?
+> check_relation2(I, R)?
+Warning: have relation(unknown_relation001_rel). but not qqqq(ssss, @, @, @,unknown_relation001_rel).
+*** Yes
+I = @, R = unknown_relation001_rel.
+--1> ;
+Warning: have relation(unknown_relation002_rel). but not qqqq(ssss, @, @, @,unknown_relation002_rel).
+*** Yes
+I = @, R = unknown_relation002_rel.
+--1> ;
+Warning: have relation(unknown_relation003_rel). but not qqqq(ssss, @, @, @,unknown_relation003_rel).
+*** Yes
+I = @, R = unknown_relation003_rel.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
 > check_corefer(Item1, Item2)?
 
 *** Yes
@@ -652,139 +699,9 @@ I = @, O = @, S = @, T = quine_santa_idea_dc.
 > ;
 > ;
 > 
-> check_relation1(I, R)?
-type I = quine_denounced_idea_dc T = @
-type I = quine_cicero_idea_dc T = @
-type I = quine_catiline_idea_dc T = @
-type I = quine_tully_idea_dc T = @
-type I = tom_santa_idea_dc T = @
-type I = tom_denounced_idea_dc T = @
-type I = tom_cicero_idea_dc T = @
-type I = tom_catiline_idea_dc T = @
-type I = tom_tully_idea_dc T = @
-type I = tom_quine_idea_dc T = @
-type I = tom_tom_idea_dc T = @
-type I = tom_russell_idea_dc T = @
-type I = tom_wrote_DeSenectute_idea_dc T = @
-type I = tom_roman_idea_dc T = @
-type I = tom_human_idea_dc T = @
-type I = tom_american_idea_dc T = @
-type I = tom_mortal_idea_dc T = @
-type I = quine_santa_idea_dc T = @
-type I = quine_quine_idea_dc T = @
-type I = quine_tom_idea_dc T = @
-type I = quine_russell_idea_dc T = @
-type I = quine_wrote_DeSenectute_idea_dc T = @
-type I = quine_roman_idea_dc T = @
-type I = quine_human_idea_dc T = @
-type I = quine_american_idea_dc T = @
-type I = quine_mortal_idea_dc T = @
-type I = tom_cat_class_idea_dc T = @
-type I = tom_dolphin_class_idea_dc T = @
-type I = tom_intelligent_fish_class_idea_dc T = @
-type I = tom_human_class_idea_dc T = @
-type I = tom_santa_class_idea_dc T = @
-type I = tom_mortal_class_idea_dc T = @
-type I = tom_roman_class_idea_dc T = @
-type I = tom_american_class_idea_dc T = @
-type I = tom_featherless_biped_class_idea_dc T = @
-type I = earther_water_idea_dc T = @
-type I = twin_earther_water_idea_dc T = @
-type I = earther_wet_idea_dc T = @
-type I = twin_earther_wet_idea_dc T = @
-type I = twin_earther_water_idea_dc T = @
-type I = earther_water_idea_dc T = @
-type I = twin_earther_wet_idea_dc T = @
-type I = earther_wet_idea_dc T = @
-
-*** No
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> 
-> check_relation2(I, R)?
-Warning: have relation(unknown_relation001_rel). but not qqqq(ssss, @, @, @,unknown_relation001_rel).
-*** Yes
-I = @, R = unknown_relation001_rel.
---1> ;
-Warning: have relation(unknown_relation002_rel). but not qqqq(ssss, @, @, @,unknown_relation002_rel).
-*** Yes
-I = @, R = unknown_relation002_rel.
---1> ;
-Warning: have relation(unknown_relation003_rel). but not qqqq(ssss, @, @, @,unknown_relation003_rel).
-*** Yes
-I = @, R = unknown_relation003_rel.
---1> ;
-
-*** No
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> ;
-> 
 > 
 > write_stats(Ignore)?
-CPU Time 0.2 Seconds
-Clock Time 0.183971 Seconds
-
-Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2719288 bytes ( 2655K) (0%)
-Total memory: 1677721584 bytes (1638399K)
-X predicates are not installed.
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

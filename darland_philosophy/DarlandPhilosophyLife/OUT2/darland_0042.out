@@ -10,7 +10,6 @@
 *** Yes
 
 *** Yes
-Mon 09 May 2022 01:11:55 AM CDT
 
 *** Yes
 > > > > > > > > > > > > > > > > > > 
@@ -55,7 +54,8 @@ Mon 09 May 2022 01:11:55 AM CDT
 > 
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 

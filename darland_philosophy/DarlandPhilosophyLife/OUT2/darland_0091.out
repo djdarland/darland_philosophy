@@ -4,14 +4,14 @@
 *** Yes
 
 *** Yes
-Mon 09 May 2022 01:12:04 AM CDT
 
 *** Yes
 > 
 *** Yes
 > 
 > write_time(Ignore)?
-0
+Time Skipped for Test Suite
+
 *** Yes
 Ignore = @.
 --1> 
@@ -1443,13 +1443,7 @@ Subject = tom_dc.
 > ;
 > 
 > write_stats(Ignore)?
-CPU Time 0.1 Seconds
-Clock Time 0.078665 Seconds
-
-Stack size  :     3952 bytes (    3K) (0%)
-Heap size   :  2288632 bytes ( 2234K) (0%)
-Total memory: 1677721584 bytes (1638399K)
-X predicates are not installed.
+Stats Skipped for Test Suite
 
 *** Yes
 Ignore = @.

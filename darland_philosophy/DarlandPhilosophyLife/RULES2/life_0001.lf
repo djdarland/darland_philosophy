@@ -17,17 +17,17 @@
 
 persistent(clock_start)?
 
-% write_time(Ignore) :- write("Time Skipped for Test Suite"), nl.
+write_time(Ignore) :- write("Time Skipped for Test Suite"), nl.
 
-write_time(Ignore) :- write(system("date")),
-	clock_start <<- real_time.
+% write_time(Ignore) :- write(system("date")),
+%	clock_start <<- real_time.
 
-% write_stats(Ignore) :- write("Stats Skipped for Test Suite"), nl.
+write_stats(Ignore) :- write("Stats Skipped for Test Suite"), nl.
 
 
-write_stats(Ignore) :- write("CPU Time ", cpu_time, " Seconds"),nl,
-	write("Clock Time ", real_time - clock_start, " Seconds"),nl,
-	statistics.
+% write_stats(Ignore) :- write("CPU Time ", cpu_time, " Seconds"),nl,
+%	write("Clock Time ", real_time - clock_start, " Seconds"),nl,
+%	statistics.
 
 call_goal(Goal) :- write('AA001 Goal = ', Goal), Goal = [H | T], write('AA002 H = ', H, 'T = ', T), call_sub_1(H, T, 0).
 call_sub_1(H, T, N) :- write('BB001 H = ', H, 'T = ', T, 'N = ', N), T = [T1 | T2], H.N = T1, call_sub_1(H, T2, N + 1).

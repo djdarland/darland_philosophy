@@ -68,62 +68,65 @@ check_arity(I, A) :-
 	write("Error: have idea_of(", S, ",", I, ").",
 	      " but not qqqq(arity_idea, ", I, ", NNNN)").
 
-check_relation1(I, R) :-
-	idea_of(S, I),
-	write("type I = ", I, " T = ", T),nl,
-	T > 0,
-	ssss(S, T, I, R),
-	\+ relation(I, R),
-	write("Error: have ssss(", S,
-	      ",", T, ",", I, ",", R, ").",
-	      " but not relation(", R, ").").
-check_relation2(I, R) :-
-	relation(R),
-	\+ ssss(S, T, I, R),
-	write("Warning: have relation(", R, ").",
-	      " but not qqqq(ssss, ", S, ", ",
-	     T, ", ", I, ",", R, ").").
+check_relation1(Idea, Relation) :-
+	idea_of(Subject, Idea),
+	ssss(Subject, Time, Idea, Relation),
+	type_idea(Idea, Type),
+	write("Idea = ", Idea, " Type = ", Type),nl,
+	Type > 0,
+	\+ relation(Idea, Relation),
+	write("Error: have ssss(", Subject,
+	      ",", Time, ",", Idea, ",", Relation, ").",
+	      " but not relation(", Relation, ").").
 
-check_type(I,T) :-
-	idea_of(S, I),
-	\+ type_idea(I,T),
-	write("Error: have idea_of(", S, ",", I, ").",
-	      " but not qqqq(type_idea, ", I, ", NNNN)").
+check_relation2(Idea, Relation) :-
+	relation(Relation),
+	\+ ssss(Subject, Time, Idea, Relation),
+	\+ tttt(Subject, Time, Idea, Relation),
+	write("Warning: have relation(", Relation, ").",
+	      " but not qqqq(ssss, ", Subject, ", ",
+	     Time, ", ", Idea, ",", Relation, ").").
 
-check_number(I,N) :-
-	idea_of(S, I),
-	\+ number_idea(I,T),
-	write("Error: have idea_of(", S, ",", I, ").",
-	      " but not qqqq(number_idea, ", I, ", NNNN)").
+check_type(Idea,Type) :-
+	idea_of(Subject, Idea),
+	\+ type_idea(Idea,Type),
+	write("Error: have idea_of(", Subject, ",", Idea, ").",
+	      " but not qqqq(type_idea, ", Idea, ", NNNN)").
 
-rrrr_check3(W,I) :-
-	idea_of(S, I),
-	\+ rrrr(S, T, W, I),
-	write("Warning: have idea_of(", S, ",", I, ").",
-	      " but not qqqq(rrrr, ", S, ", ", T,
-	      ", ",  W, ", ", I, ").").
+check_number(Idea,N) :-
+	idea_of(Subject, Idea),
+	\+ number_idea(Idea,N),
+	write("Error: have idea_of(", Subject, ",", Idea, ").",
+	      " but not qqqq(number_idea, ", Idea, ", NNNN)").
 
-ssss_check3(W,I) :-
-	idea_of(S, I),
-	number_idea(I, singular),
-	\+ ssss(S, T, I, O),
-	write("Warning: have idea_of(", S, ",", I, ").",
-	      " but not qqqq(ssss, ", S, ", ", T,
-	      ", ",  I, ", ", O, ").").
+rrrr_check3(Word,Idea) :-
+	idea_of(Subject, Idea),
+	\+ rrrr(Subject, Time, Word, Idea),
+	write("Warning: have idea_of(", Subject, ",", Idea, ").",
+	      " but not qqqq(rrrr, ", Subject, ", ", Time,
+	      ", ",  Word, ", ", Idea, ").").
 
-tttt_check3(W,I) :-
-	idea_of(S, I),
-	number_idea(I, plural),
-	\+ tttt(S, T, I, O),
-	write("Warning: have idea_of(", S, ",", I, ").",
-	      " but not qqqq(tttt, ", S, ", ", T,
-	      ", ",  I, ", ", O, ").").
+ssss_check3(Word,Idea) :-
+	idea_of(Subject, Idea),
+	number_idea(Idea, singular),
+	\+ ssss(Subject, Time, Idea, Object),
+	write("Warning: have idea_of(", Subject, ",", Idea, ").",
+	      " but not qqqq(ssss, ", Subject, ", ", Time,
+	      ", ",  Idea, ", ", Object, ").").
 
-check_conceptual_feeling_in_ideas1(S,Sa,T,L) :-
-	conceptual_feeling_in_ideas(S,Sa,T,L),
-	\+ person(S, N),
+tttt_check3(Word,Idea) :-
+	idea_of(Subject, Idea),
+	number_idea(Idea, plural),
+	\+ tttt(Subject, Time, Idea, Object),
+	write("Warning: have idea_of(", Subject, ",", Idea, ").",
+	      " but not qqqq(tttt, ", Subject, ", ", Time,
+	      ", ",  Idea, ", ", Object, ").").
+
+check_conceptual_feeling_in_ideas1(Subject,Sa,T,L) :-
+	conceptual_feeling_in_ideas(Subject,Sa,T,L),
+	\+ person(Subject, N),
 	write("Error: have conceptual_feeling_in_ideas(",
-	      S, ", ",
+	      Subject, ", ",
 	      Sa, 
 	      ", ", T,
 	      ", ", L,
