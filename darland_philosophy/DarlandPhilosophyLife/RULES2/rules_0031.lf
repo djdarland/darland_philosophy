@@ -1,4 +1,4 @@
-%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+%% Copyright (C) 2017, 2019, 2020, 2021, 2022 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
 
@@ -14,7 +14,7 @@
 
 %% You should have received a copy of the GNU General Public License
 %% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
-%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Life predicates to simulate Dennis J. Darlands philosophy. 
 %% Started Writing 1/4/2017 
 %% This is a total rewrite of what I started about 10 years ago.
 %% 
@@ -46,13 +46,36 @@ sense_of_object(Idea) :- ssss(Subject, Time, Idea, Object).
 %% I also use qqqq4 for positive [base] facts.
 %% I also use qqqq5 for negative [base] facts.
 %% This is to avoid conflict with qqqq.
+%% These are to deal with negation by failure, and are otherwise convenient.
+
+%% Using qqqq as the only ontologically significant relation eliminates
+%% any need to consider relations as intensional.
+
+%% Traditionally if (x)(Fx equ Gx) then if taken extensionally, F = G.
+%% But with qqqq this becomes (x)(qqqq(F,x) equ qqqq(G, x)).
+%% F and G are no longer predicates so the issue of their equality
+%% under extensionality does not arise.
+
+%% As I am using quantification and negation as provided in WildLIFE,
+%% I do not analyze them here.
+
+%% I think, perhaps quantification and variables would best be handled
+%% as Quine did in "Variables Explained Away", Proceedings of the American
+%% Philosophical Society 104: 343-347.
+%% Gregory Landini uses that in his _Repairing Bertrand Russell's 1913 Theory
+%% of Knowledge_.
+
+%% I find Landini's book difficult in other respects, and have not finished
+%% it - (As of 8/26/2022).
 
 %% A script qqqq_pre_all.sh translates fact and query files
 %% using a Unicon program qqqq_pre.icn converting the qqqq predicates
 %% to the predicates in the rules files.
 %% This is done only for efficiency.
+%% E.g. convets qqqq(f, x, y) to f(x, y)
 
-%% some possible arguments (universals) are rrrr, ssss, and rrss.
+%% some possible arguments (universals) are rrrr, ssss,
+%% tttt, rrss, and rrtt.
 %% rrss is defined in terms of rrrr and ssss.
 %% rrrr and ssss are undefined here
 %% - but not necessarily ontologically primitive 
@@ -97,7 +120,7 @@ rrss(Subject, Time, Word, Object) :-
 	rrrr(Subject, Time, Word, Idea),
 	ssss2(Subject, Time, Idea, Object).
 
-%% definition of rrss in terms of rrrr and ssss.
+%% definition of rrtt in terms of rrrr andtttt.
 %% Note: qqqq is a dynamic predicate in WildLIFE - so it can be extended.
 
 rrtt(Subject, Time, Word, Object) :-
@@ -120,10 +143,6 @@ rrtt(Subject, Time, Word, Object) :-
 
 %% 7 words_ideas_objects
 
-%% Modified to add Number to ideas
-%%	- singular
-%%      - or plural
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% understands_words is defined.
 %% It applies to an intelligent Subject at some Time.
@@ -134,19 +153,23 @@ rrtt(Subject, Time, Word, Object) :-
 %% idea corresponding to the relation idea.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%% ONE EXAMPLE EXPLAINED CAREFULLY - I HOPE!!
 %% 1
-
 
 %% I am going to comment on one sample carefully and thoroughly I hope.
 %% I hope any reader can learn enough to apply principles in other cases.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% First some illustrations of WildLIFE 
+
 %% predicate1(Arg1, Arg2, Arg3) :- predicate2(Arg1, Arg2),
 %%                                 predicate3(Arg1, Arg3).'
 
-%% means if predicate3(Arg1, Arg2) and predicate3(Arg1, Arg3)
+%% means if predicate2(Arg1, Arg2) and predicate3(Arg1, Arg3)
 %%       then predicate1(Arg1, Arg2, Arg3).
 
 %% ":-" means "if"
+
 %% "," separates Arguments in predicates and means "and" between clauses.
 %%
 
@@ -160,13 +183,15 @@ rrtt(Subject, Time, Word, Object) :-
 %%       or (predicate4(Arg1, Arg2) and predicate5(Arg1, Arg3))
 %%       then predicate1(Arg1, Arg2, Arg3).
 
-%%   "\+" is negation by "failure" (if it cannot see it is true is says false)
+%%   "\+" is negation by "failure"
+%% (if it cannot prove that something is true is says that it is false)
 %%   I also use qqqq4 to state positive facts in the database.
 %%          and qqqq5 to state negative facts in the database.
 
-%%   You can run WildLife on an totally empty file.
-%%   It will produce no output - not even any errors!
+%% End of WildLIFE Illustrations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%   Begining Of Philosophy Sample 
 %%   match_word below is recursive. Each call removes a Word.
 %%   It also subtracts one from the Arity of the Relation_Idea.
 %%   The list is finite in WildLIFE, so eventually there will be
@@ -174,27 +199,36 @@ rrtt(Subject, Time, Word, Object) :-
 %%   It also checks if the Ideas are one less in type than the Relation Idea.
 %%   rrrr sees if the Subject has that relation between the Word and the Idea.
 understands_words(Subject, Time, [[Relation_Word] | List]) :-
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	% List of Words.
-	% Objects should be Type one less than Type of Relation
-	match_word(Subject, Time, List, Arity, Type - 1).
+    %% Get Relation_Idea that matches other arguments.
+    rrrr(Subject, Time, Relation_Word, Relation_Idea),
+    %% Get Arity of Relation_Idea
+    arity_idea(Relation_Idea, Arity),
+    %% Get Type of Relation_Idea
+    type_idea(Relation_Idea, Type),
+    % List of Words.
+    % Objects should be Type one less than Type of Relation
+    match_word(Subject, Time, List, Arity, Type - 1).
 
 %% The following are auxilary predicates - they have no ontological
 %% Significance.
 
+%% Match Empty List - Recursion Ends And Arity has counted down to 0.
 match_word(Subject, Time, [], 0, Type).
 
-%% -999 indicates arbitrary arity.
+%% Match Empty List -  -999 indicates arbitrary arity.
 match_word(Subject, Time, [], -999, Type).
 
+%% Tackle Words Recursively one at a Time.
 match_word(Subject, Time, [[Word] | List],
 	   Arity, Type) :-
-	% List of Word Object Pairs.
-	rrrr(Subject, Time, Word, Idea),
-	type_idea(Idea, Type),
-	match_word(Subject, Time, List,
+    
+    % List of Word Object Pairs.
+    %% Get Idea that Matches Word
+    rrrr(Subject, Time, Word, Idea),
+    %% Get Type of Idea
+    type_idea(Idea, Type),
+    %% Recurse - with remaider of List and subtract one from Arity unless -999
+    match_word(Subject, Time, List,
 		   % if Arity is not Arbitrary sub 1
 		   cond(Arity =\= -999, Arity - 1, -999),
 		   Type).

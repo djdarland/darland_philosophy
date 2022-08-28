@@ -37,16 +37,16 @@ echo "999 quit"
 echo "select"
 read select
 case $select in
-0) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0000.lf;;
-1) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0001.lf;;
-2) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0002.lf;;
-3) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0003.lf;;
-4) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0004.lf;;
-5) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0005.lf;;
-6) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0006.lf;;
-31) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0031.lf;;
-71) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0071.lf;;
-81) $EDITOR ../DarlandPhilosophyLife/FACTS2pre/facts_0081.lf;;
+0) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0000.lf;;
+1) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0001.lf;;
+2) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0002.lf;;
+3) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0003.lf;;
+4) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0004.lf;;
+5) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0005.lf;;
+6) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0006.lf;;
+31) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0031.lf;;
+71) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0071.lf;;
+81) $EDITOR ../DarlandPhilosophyLife/FACTS2/facts_0081.lf;;
 666) $EDITOR da_fa_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 
