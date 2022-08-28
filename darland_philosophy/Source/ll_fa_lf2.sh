@@ -38,10 +38,10 @@ echo "999 quit"
 echo "select"
 read select
 case $select in
-101) $EDITOR ../RussellPhilosophyLife/FACTS2pre/principles_0101.lf;;
-201) $EDITOR ../RussellPhilosophyLife/FACTS2pre/principia_0201.lf;;
-301) $EDITOR ../RussellPhilosophyLife/FACTS2pre/neutral_0301.lf;;
-401) $EDITOR ../RussellPhilosophyLife/FACTS2pre/reduc_0401.lf;;
+101) $EDITOR ../RussellPhilosophyLife/FACTS2/principles_0101.lf;;
+201) $EDITOR ../RussellPhilosophyLife/FACTS2/principia_0201.lf;;
+301) $EDITOR ../RussellPhilosophyLife/FACTS2/neutral_0301.lf;;
+401) $EDITOR ../RussellPhilosophyLife/FACTS2/reduc_0401.lf;;
 666) $EDITOR ll_fa_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 esac

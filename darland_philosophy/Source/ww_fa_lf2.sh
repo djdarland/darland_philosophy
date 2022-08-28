@@ -38,10 +38,10 @@ echo "999 quit"
 echo "select"
 read select
 case $select in
-101) $EDITOR ../WhiteheadPhilosophyLife/FACTS2pre/facts_0101.lf;;
-201) $EDITOR ../WhiteheadPhilosophyLife/FACTS2pre/facts_0201.lf;;
-301) $EDITOR ../WhiteheadPhilosophyLife/FACTS2pre/facts_0301.lf;;
-401) $EDITOR ../WhiteheadPhilosophyLife/FACTS2pre/facts_0401.lf;;
+101) $EDITOR ../WhiteheadPhilosophyLife/FACTS2/facts_0101.lf;;
+201) $EDITOR ../WhiteheadPhilosophyLife/FACTS2/facts_0201.lf;;
+301) $EDITOR ../WhiteheadPhilosophyLife/FACTS2/facts_0301.lf;;
+401) $EDITOR ../WhiteheadPhilosophyLife/FACTS2/facts_0401.lf;;
 666) $EDITOR ww_fa_lf2.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 esac

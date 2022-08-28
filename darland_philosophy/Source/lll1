@@ -26,10 +26,10 @@ read select
 while [ $select -ne 999 ]
 do 
 case $select in
-101) $EDITOR ../RussellPhilosophyLife/IN2pre/russell_0101.lf;;
-201) $EDITOR ../RussellPhilosophyLife/IN2pre/russell_0201.lf;;
-301) $EDITOR ../RussellPhilosophyLife/IN2pre/russell_0301.lf;;
-401) $EDITOR ../RussellPhilosophyLife/IN2pre/russell_0401.lf;;
+101) $EDITOR ../RussellPhilosophyLife/IN2/russell_0101.lf;;
+201) $EDITOR ../RussellPhilosophyLife/IN2/russell_0201.lf;;
+301) $EDITOR ../RussellPhilosophyLife/IN2/russell_0301.lf;;
+401) $EDITOR ../RussellPhilosophyLife/IN2/russell_0401.lf;;
 
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;

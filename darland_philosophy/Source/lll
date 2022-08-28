@@ -19,7 +19,6 @@ echo "125 Run and View a Particular WildLife Query"
 echo "126 Clear WildLife Reference Files"
 echo "127 Clear WildLife HTML Files"
 echo "128 Copy WilfdLIFE HTML Files"
-echo "131 Preprocess all qlll"
 
 echo "-----------"
 echo "500 NO_WARANTY.txt"
@@ -44,7 +43,7 @@ case $select in
 126) ./ll_clr_lf2.sh;;
 127) ./llclrhtml.sh;;
 128) ./llcphtml.sh;;
-131) cd ../D*fe; ./llqqqq_pre_all.sh;;
+
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
 666) $EDITOR lll ;;
@@ -71,7 +70,6 @@ echo "125 Run and View a Particular WildLife Query"
 echo "126 Clear WildLife Reference Files"
 echo "127 Clear WildLife HTML Files"
 echo "128 Copy WilfdLIFE HTML Files"
-echo "131 Preprocess all qlll"
 
 echo "-----------"
 echo "500 NO_WARANTY.txt"

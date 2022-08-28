@@ -27,11 +27,11 @@ read select
 while [ $select -ne 999 ]
 do 
 case $select in
-101) $EDITOR ../WhiteheadPhilosophyLife/IN2pre/whitehead_0101.lf;;
-201) $EDITOR ../WhiteheadPhilosophyLife/IN2pre/whitehead_0201.lf;;
-301) $EDITOR ../WhiteheadPhilosophyLife/IN2pre/whitehead_0301.lf;;
-401) $EDITOR ../WhiteheadPhilosophyLife/IN2pre/whitehead_0401.lf;;
-901) $EDITOR ../WhiteheadPhilosophyLife/IN2pre/whitehead_0901.lf;;
+101) $EDITOR ../WhiteheadPhilosophyLife/IN2/whitehead_0101.lf;;
+201) $EDITOR ../WhiteheadPhilosophyLife/IN2/whitehead_0201.lf;;
+301) $EDITOR ../WhiteheadPhilosophyLife/IN2/whitehead_0301.lf;;
+401) $EDITOR ../WhiteheadPhilosophyLife/IN2/whitehead_0401.lf;;
+901) $EDITOR ../WhiteheadPhilosophyLife/IN2/whitehead_0901.lf;;
 
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
