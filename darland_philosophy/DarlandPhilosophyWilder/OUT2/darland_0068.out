@@ -1,0 +1,144 @@
+
+*** Yes
+
+*** Yes
+Fri 05 Mar 2021 09:52:01 PM CST
+
+*** Yes
+> 
+*** Yes
+> 
+> %% I figured TRUE and FALSE by starting simple & copying expressions into
+> %% other expressions.
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> % TRUE
+> satisfiable([top, P])?
+> ;
+> ;
+> 
+> % FALSE
+> satisfiable([nand, [top, P],[top, P]])?
+Rules 68 Succeeded visits = 1 max_depth = 1
+
+*** Yes
+P = 0.
+--1> ;
+
+*** No
+> ;
+> 
+> % TRUE	
+> satisfiable([nand, [top, P],[top, Q]])?
+Rules 68 Succeeded visits = 1 max_depth = 1
+
+*** Yes
+P = 0, Q = @.
+--1> ;
+
+*** No
+> ;
+> 
+> % TRUE	
+> satisfiable([nand, [top, P], [nand, [top, P], [top, P]]])?
+Rules 68 Succeeded visits = 1 max_depth = 1
+
+*** Yes
+P = 0.
+--1> ;
+
+*** No
+> ;
+> ;
+> 
+> % TRUE
+> satisfiable([nand, [top, P], [nand, [top, Q], [top, P]]])?
+Rules 68 Succeeded visits = 1 max_depth = 1
+
+*** Yes
+P = 0, Q = @.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> % TRUE
+> satisfiable([nand, [top, P], [nand, [top, Q], R]])?
+Rules 68 Succeeded visits = 1 max_depth = 1
+
+*** Yes
+P = 0, Q = @, R = @.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> 	
+> %% TRUE
+> satisfiable([top, 1])?
+> 
+> %% FALSE
+> satisfiable([top, 0])?
+Rules 68 Failed visits = 1 max_depth = 0
+
+*** No
+> 
+> %% TRUE
+> satisfiable([nand, [top, 1], [top, 0]])?
+Rules 68 Succeeded visits = 1 max_depth = 1
+
+*** Yes
+> 
+> %% TRUE
+> satisfiable([nand, [top, 0], [top, 1]])?
+Rules 68 Succeeded visits = 1 max_depth = 1
+
+*** Yes
+> 
+> %% TRUE
+> satisfiable([nand, [top, 0], [top, 0]])?
+Rules 68 Succeeded visits = 1 max_depth = 1
+
+*** Yes
+> 
+> %% FALSE
+> satisfiable([nand, [top, 1], [top, 1]])?
+Rules 68 Failed visits = 1 max_depth = 0
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%
+> 
+> %% TRUE
+> satisfiable([nand, [nand, [top, 0], [top, 1]], [top, 0]])?
+Rules 68 Succeeded visits = 1 max_depth = 1
+
+*** Yes
+> 
+> %% FALSE
+> satisfiable([nand, [nand, [top, 0], [top, 0]], [top, 1]])?
+Branch Left - Left = 1 Right = 0
+Branch Right - Left = 0 Right = 1
+> 
+> %% TRUE
+> satisfiable([nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]])?
+Rules 68 Succeeded visits = 1 max_depth = 1
+
+*** Yes
+> 
+> 
+> halt?
+

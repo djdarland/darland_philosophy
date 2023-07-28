@@ -1,0 +1,1880 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> 
+*** Yes
+> Sun 28 Feb 2021 03:09:25 PM CST
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+*** No
+> remark(3001, Remark)?
+
+*** Yes
+Remark = 'Test Set 3 - about belief.'.
+--1> 
+*** No
+> remark(3002, Remark)?
+
+*** Yes
+Remark = 'A person can have contradictory beliefs. This can because he does not know of all facts. Thus for `believes` so defined - it fails of substituitivity of identity. It is not referentially transparent - it is referentially opaque. But this `believes` is defined in terms which themselves are referentially transparent. There is no need to flee intension. We must analyze it when needed. There is no logical problem when `believes` is analyzed. I use one kind of belief in my `database` of facts - `belives_internal`. I define 5 more kinds of belief.(`believes_external_internal_object`, `believes_external_object`, `believes_external_internal`, `believes_internal_object`, and `believes_object`. All are reverentially transparent except `believes_object` - it is reverentially opaque.'.
+
+--1> 
+*** No
+> remark(3003, Remark)?
+
+*** Yes
+Remark = 'Tom believes both `Cicero denounced Cataline.` and `Cicero did not denounced Cataline.` He has two different internal symbols for Cicero (`cicero` and `tully` - but both refer to the same object - there is only one object! And (also) in Prolog or Life two atoms cannot be equal.'.
+
+--1> 
+*** No
+> remark(3004, Remark)?
+
+*** Yes
+Remark = 'In SwiProlog I use `is` for the arithmetic with types. It requires `Type` be instantiated. So multiple queries are needed. With WildLife I could have placed, e.g. `Type + 1` where I used `Type_p1`, and not needed the predicate `type_p1` at all.'.
+
+--1> 
+*** No
+> remark(3005, Remark)?
+
+*** Yes
+Remark = '`believes_internal` is a (here primative) psychological relation between internal symbols. Usually these internal symbols relate to external objects (not always). The relation to the objects is usually learned from interaction with other people. However this is mostly coordinated via the external objects and external symbols. The internal symbols may vary from person to person. I thought about calling the internal symbols `neural centers` - but that is stretching my knowledge. They are referentially transparent - even though `cicero = tully`, `cicero_int != tully_int`.'.
+
+--1> 
+*** No
+> remark(3006, Remark)?
+
+*** Yes
+Remark = '`believes_object` is a (defined) relation between a person and (usually) external objects medeated by symbolic relations. It is referentially opaque. I do not regard that as a problem as the relations it is defined in terms of are referentially transparent.'.
+
+--1> 
+*** No
+> remark(3007, Remark)?
+
+*** Yes
+Remark = 'Beliefs that go all the way to the objects can be opaque. Because we can never have complete knowledge - or, at least, if we do, then opacity never occurs.'.
+
+--1> 
+*** No
+> remark(3008, Remark)?
+
+*** Yes
+Remark = 'Beliefs involving symbols (external or internal) can never be opaque as the symbols themselves are different - whether or not they stand for the same object. Only `believes_object` does not involve symbols. (Althogh symbols are used in its definition, they `cancel out`.'.
+
+--1> 
+*** No
+> remark(3009, Remark)?
+
+*** Yes
+Remark = 'There is a Logical_Form for belief - it is either `pos_pos`, `pos_neg`, `neg_pos` or `neg_neg`. The first neg indicates not believing the second would indicate believing not. For simple beliefs `pos` & `neg` would have been sufficient. They would indicate belief or disbelief. However for those I use `pos_pos` and `pos_neg`. This simplifies things. A logical form of `neg_pos` indicates the person has no belief that something is true. (They might either believe it false or have no belief regarding it. Similarly for `neg_neg`.'.
+
+--1> 
+*** No
+> quote_note(br0008, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+*** Yes
+Article_Title = 'On the Nature of Truth [1]', 
+Article_Year = '1907', 
+Author = 'Bertrand Russell', 
+Author_Article = 'Bertrand Russell', 
+Author_Book = 'Bertrand Russell', 
+Book_Title = 'CPBR 05: Toward `Principia Mathematica`', 
+Book_Year = '1905-1908', 
+Note1 = 'This belief relation of Russell`s is my `believes_internal` relation. Russell`s ideas are my `internal_symbols` or `internal_relation_symbols`. What Russell`s ideas are of is what my `internal_symbols` or `internal_relation_symbols` are related to. [see my remark 8]', 
+Notes_Article = none, 
+Notes_Book = none, 
+Pages = '451-452', 
+Quotation = 'Thus a belief, if this view [a belief is not a single thing related to a fact] is adopted, will not consist of one idea with a complex object, but will consist of several related ideas. That is, if we believe (say) that A is B, we shall have the ideas of A and of B, and these ideas will be related in a certain manner; but we shall not have a sinle complex idea which can be described as the idea of `A is B`. A belief will then differ from an idea or presentation by the fact that it will consist of several interrelated ideas. Certain ideas standing in certain relations will be called the belief that so-and-so. In the event of the objects standing in he corresponding relation, we shall say that the belief is true, or that it is belief in a fact. In the event of the objects not standing in the corresponding relation, there will be no objective complex corresponding to the belief, and the belief is belief in nothing, though it is not `thinking of nothing`, because it is thinking of the objects of the ideas which constitute the belief. Thus it would seem that the argument that false beliefs must be beliefs in something is not conclusive in favour of objective falsehood.'.
+
+--1> 
+*** No
+> quote_note(br0009, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+*** Yes
+Article_Title = 'On the Nature of Truth [2]', 
+Article_Year = '1910', 
+Author = 'Bertrand Russell', 
+Author_Article = 'Bertrand Russell', 
+Author_Book = 'Bertrand Russell', 
+Book_Title = 'Philosophical Essays', 
+Book_Year = '1910', 
+Note1 = 'This relation of Russell`s corresponds to my `believes` relation defined in `common_2017_0001.pl` for prolog or `common_2017_0001.lf` for WildLife. It is defined in terms of the `believes_internal`, `internal_symbol` and `internal_relation_symbol` relations. [see my remark 9]', 
+Notes_Article = none, 
+Notes_Book = none, 
+Pages = '155', 
+Quotation = 'The theory of judgment [belief] which I am advocating is, that judgment is not a dual relation of mind to a single objective, but a multiple relation of the mind to the various other terms with which the judgment is concerned. Thus if I judge that A loves B, that is not a relation of me to `A`s love for B`, but a relation between me and A and love and B. If it were a relation of me to `A`s love for B`, it would be impossible unless there were such a thing s `A`s love for B`, i.e. unless A loved B, i.e. unless the judgment were true; but in fact false judgments are possible. When the judgment is taken as a relation between me and A and love and B, the mere fact that the the judgement occurs does not involve any relation between its objects A and love and B; thus the possibility of false judgments is fully allowed for.'.
+
+--1> 
+*** No
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> believes_in_ideas(Subject, Time, 1, 1,
+|    		  [Relation_Idea, A_Idea])?
+
+*** Yes
+A_Idea = tom_cicero_idea, 
+Relation_Idea = tom_of_orations_idea, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = tom_tully_idea, 
+Relation_Idea = tom_of_De_Senectute_idea, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_cicero_idea, 
+Relation_Idea = quine_of_orations_idea, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_tully_idea, 
+Relation_Idea = quine_of_De_Senectute_idea, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_tully_idea, 
+Relation_Idea = quine_of_orations_idea, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_cicero_idea, 
+Relation_Idea = quine_of_De_Senectute_idea, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = tom_tully_idea, 
+Relation_Idea = tom_human_idea, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_in_ideas(Subject, Time, 1, 2,
+|    		  [Relation_Idea, A_Idea, B_Idea])?
+
+*** Yes
+A_Idea = tom_cicero_idea, 
+B_Idea = tom_catiline_idea, 
+Relation_Idea = tom_denounced_idea, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_cicero_idea, 
+B_Idea = quine_catiline_idea, 
+Relation_Idea = quine_denounced_idea, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_tully_idea, 
+B_Idea = quine_catiline_idea, 
+Relation_Idea = quine_denounced_idea, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> 
+> 		 
+> believes_in_words(Subject, Time, 1, 1,
+|    		  [Relation_Word, A_Word])?
+
+*** Yes
+A_Word = cicero_word, 
+Relation_Word = of_orations_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Word = tom_tully_word, 
+Relation_Word = of_De_Senectute_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Word = cicero_word, 
+Relation_Word = of_orations_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Word = tully_word, 
+Relation_Word = of_De_Senectute_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Word = tully_word, 
+Relation_Word = of_orations_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Word = tully_word, Relation_Word = human_word, Subject = tom, Time = now.
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_in_words(Subject, Time, 1, 2,
+|    		  [Relation_Word, A_Word, B_Word])?
+
+*** Yes
+A_Word = cicero_word, 
+B_Word = catiline_word, 
+Relation_Word = denounced_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Word = cicero_word, 
+B_Word = catiline_word, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Word = tully_word, 
+B_Word = catiline_word, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Word = cicero_word, 
+B_Word = catiline_word, 
+Relation_Word = denounced_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> believes_word_idea_object_L(Subject, Time, 1, 1, Triple_List)?
+
+*** Yes
+Subject = tom, 
+Time = now, 
+Triple_List = [[of_orations_word,tom_of_orations_idea,of_orations],
+               [cicero_word,tom_cicero_idea,cicero]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List = [[of_orations_word,quine_of_orations_idea,of_orations],
+               [cicero_word,quine_cicero_idea,cicero]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List = [[of_orations_word,quine_of_orations_idea,of_orations],
+               [cicero_word,quine_tully_idea,cicero]].
+
+--1> 
+
+*** Yes
+Subject = tom, 
+Time = now, 
+Triple_List = [[of_De_Senectute_word,tom_of_De_Senectute_idea,of_De_Senectute],
+               [tully_word,tom_tully_idea,cicero]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List = [[of_orations_word,quine_of_orations_idea,of_orations],
+               [tully_word,quine_cicero_idea,cicero]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List = [[of_orations_word,quine_of_orations_idea,of_orations],
+               [tully_word,quine_tully_idea,cicero]].
+
+--1> 
+
+*** Yes
+Subject = tom, 
+Time = now, 
+Triple_List = [[human_word,tom_human_idea,human],
+               [tully_word,tom_tully_idea,cicero]].
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_word_idea_object_L(Subject, Time, 1, 2, Triple_List)?
+
+*** Yes
+Subject = tom, 
+Time = now, 
+Triple_List = [[denounced_word,tom_denounced_idea,denounced],
+               [cicero_word,tom_cicero_idea,cicero],
+               [catiline_word,tom_catiline_idea,catiline]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List = [[denounced_word,quine_denounced_idea,denounced],
+               [cicero_word,quine_cicero_idea,cicero],
+               [catiline_word,quine_catiline_idea,catiline]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List = [[denounced_word,quine_denounced_idea,denounced],
+               [cicero_word,quine_tully_idea,cicero],
+               [catiline_word,quine_catiline_idea,catiline]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List = [[denounced_word,quine_denounced_idea,denounced],
+               [tully_word,quine_cicero_idea,cicero],
+               [catiline_word,quine_catiline_idea,catiline]].
+
+--1> 
+
+*** Yes
+Subject = quine, 
+Time = now, 
+Triple_List = [[denounced_word,quine_denounced_idea,denounced],
+               [tully_word,quine_tully_idea,cicero],
+               [catiline_word,quine_catiline_idea,catiline]].
+
+--1> 
+
+*** Yes
+Subject = tom, 
+Time = now, 
+Triple_List = [[denounced_word,tom_denounced_idea,denounced],
+               [cicero_word,tom_cicero_idea,cicero],
+               [catiline_word,tom_catiline_idea,catiline]].
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> believes_word_object_L(Subject, Time, 1, 1, Pair_List)?
+
+*** Yes
+Pair_List = [[of_orations_word,of_orations],[cicero_word,cicero]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[of_orations_word,of_orations],[cicero_word,cicero]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[of_orations_word,of_orations],[cicero_word,cicero]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[of_De_Senectute_word,of_De_Senectute],[tully_word,cicero]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[of_orations_word,of_orations],[tully_word,cicero]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[of_orations_word,of_orations],[tully_word,cicero]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[human_word,human],[tully_word,cicero]], Subject = tom, Time = now.
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_word_object_L(Subject, Time, 1, 2, Pair_List)?
+
+*** Yes
+Pair_List = [[denounced_word,denounced],
+             [cicero_word,cicero],
+             [catiline_word,catiline]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[denounced_word,denounced],
+             [cicero_word,cicero],
+             [catiline_word,catiline]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[denounced_word,denounced],
+             [cicero_word,cicero],
+             [catiline_word,catiline]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[denounced_word,denounced],
+             [tully_word,cicero],
+             [catiline_word,catiline]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[denounced_word,denounced],
+             [tully_word,cicero],
+             [catiline_word,catiline]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[denounced_word,denounced],
+             [cicero_word,cicero],
+             [catiline_word,catiline]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> believes_word_idea_object_A(Subject, Time, 1, 1,
+|    			  [[Relation_Word, Relation_Idea, Relation],
+|    			  [A_Word, A_Idea, A_Object]])?
+
+*** Yes
+A_Idea = tom_tully_idea, 
+A_Object = cicero, 
+A_Word = tully_word, 
+Relation = human, 
+Relation_Idea = tom_human_idea, 
+Relation_Word = human_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_word_idea_object_A(Subject, Time, 1, 2,
+|    			  [[Relation_Word, Relation_Idea, Relation],
+|    			  [A_Word, A_Idea, A_Object],
+|    			  [B_Word, B_Idea, B_Object]])?
+
+*** Yes
+A_Idea = tom_cicero_idea, 
+A_Object = cicero, 
+A_Word = cicero_word, 
+B_Idea = tom_catiline_idea, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Idea = tom_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_cicero_idea, 
+A_Object = cicero, 
+A_Word = cicero_word, 
+B_Idea = quine_catiline_idea, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Idea = quine_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_tully_idea, 
+A_Object = cicero, 
+A_Word = cicero_word, 
+B_Idea = quine_catiline_idea, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Idea = quine_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_cicero_idea, 
+A_Object = cicero, 
+A_Word = tully_word, 
+B_Idea = quine_catiline_idea, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Idea = quine_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_tully_idea, 
+A_Object = cicero, 
+A_Word = tully_word, 
+B_Idea = quine_catiline_idea, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Idea = quine_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = tom_cicero_idea, 
+A_Object = cicero, 
+A_Word = cicero_word, 
+B_Idea = tom_catiline_idea, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Idea = tom_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> believes_word_object_A(Subject, Time, 1, 1,
+|    		     [[Relation_Word, Relation],
+|    		     [A_Word, A_Object]])?
+
+*** Yes
+A_Object = cicero, 
+A_Word = tully_word, 
+Relation = human, 
+Relation_Word = human_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_word_object_A(Subject, Time, 1, 2,
+|    		     [[Relation_Word, Relation],
+|    		     [A_Word, A_Object],
+|    		     [B_Word, B_Object]])?
+
+*** Yes
+A_Object = cicero, 
+A_Word = cicero_word, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Word = denounced_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Object = cicero, 
+A_Word = cicero_word, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Object = cicero, 
+A_Word = cicero_word, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Object = cicero, 
+A_Word = tully_word, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Object = cicero, 
+A_Word = tully_word, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Object = cicero, 
+A_Word = cicero_word, 
+B_Object = catiline, 
+B_Word = catiline_word, 
+Relation = denounced, 
+Relation_Word = denounced_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_word_idea_A(Subject, Time, 1, 1,
+|    		   [[Relation_Word, Relation_Idea],
+|    		   [A_Word, A_Idea]])?
+
+*** Yes
+A_Idea = tom_tully_idea, 
+A_Word = tully_word, 
+Relation_Idea = tom_human_idea, 
+Relation_Word = human_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_word_idea_A(Subject, Time, 1, 2,
+|    		   [[Relation_Word, Relation_Idea],
+|    		   [A_Word, A_Idea],
+|    		   [B_Word, B_Idea]])?
+
+*** Yes
+A_Idea = tom_cicero_idea, 
+A_Word = cicero_word, 
+B_Idea = tom_catiline_idea, 
+B_Word = catiline_word, 
+Relation_Idea = tom_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_cicero_idea, 
+A_Word = cicero_word, 
+B_Idea = quine_catiline_idea, 
+B_Word = catiline_word, 
+Relation_Idea = quine_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_tully_idea, 
+A_Word = cicero_word, 
+B_Idea = quine_catiline_idea, 
+B_Word = catiline_word, 
+Relation_Idea = quine_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_cicero_idea, 
+A_Word = tully_word, 
+B_Idea = quine_catiline_idea, 
+B_Word = catiline_word, 
+Relation_Idea = quine_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_tully_idea, 
+A_Word = tully_word, 
+B_Idea = quine_catiline_idea, 
+B_Word = catiline_word, 
+Relation_Idea = quine_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = tom_cicero_idea, 
+A_Word = cicero_word, 
+B_Idea = tom_catiline_idea, 
+B_Word = catiline_word, 
+Relation_Idea = tom_denounced_idea, 
+Relation_Word = denounced_word, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_word_idea_L(Subject, Time, 1, 1,
+|    		     Pair_List)?
+
+*** Yes
+Pair_List = [[of_orations_word,tom_of_orations_idea],
+             [cicero_word,tom_cicero_idea]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[of_orations_word,quine_of_orations_idea],
+             [cicero_word,quine_cicero_idea]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[of_orations_word,quine_of_orations_idea],
+             [cicero_word,quine_tully_idea]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[of_De_Senectute_word,tom_of_De_Senectute_idea],
+             [tully_word,tom_tully_idea]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[of_orations_word,quine_of_orations_idea],
+             [tully_word,quine_tully_idea]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[of_orations_word,quine_of_orations_idea],
+             [tully_word,quine_cicero_idea]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[human_word,tom_human_idea],[tully_word,tom_tully_idea]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_word_idea_L(Subject, Time, 1, 2,
+|    		     Pair_List)?
+
+*** Yes
+Pair_List = [[denounced_word,tom_denounced_idea],
+             [cicero_word,tom_cicero_idea],
+             [catiline_word,tom_catiline_idea]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[denounced_word,quine_denounced_idea],
+             [cicero_word,quine_cicero_idea],
+             [catiline_word,quine_catiline_idea]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[denounced_word,quine_denounced_idea],
+             [cicero_word,quine_tully_idea],
+             [catiline_word,quine_catiline_idea]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[denounced_word,quine_denounced_idea],
+             [tully_word,quine_tully_idea],
+             [catiline_word,quine_catiline_idea]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[denounced_word,quine_denounced_idea],
+             [tully_word,quine_cicero_idea],
+             [catiline_word,quine_catiline_idea]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[denounced_word,tom_denounced_idea],
+             [cicero_word,tom_cicero_idea],
+             [catiline_word,tom_catiline_idea]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> believes_idea_object_A(Subject, Time,  1, 1,
+|    		     [[Relation_Idea, Relation],
+|    		     [A_Idea, A_Object]])?
+
+*** Yes
+A_Idea = tom_tully_idea, 
+A_Object = cicero, 
+Relation = human, 
+Relation_Idea = tom_human_idea, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_idea_object_A(Subject, Time,  1, 2,
+|    		     [[Relation_Idea, Relation],
+|    		     [A_Idea, A_Object],
+|    		     [B_Idea, B_Object]])?
+
+*** Yes
+A_Idea = tom_cicero_idea, 
+A_Object = cicero, 
+B_Idea = tom_catiline_idea, 
+B_Object = catiline, 
+Relation = denounced, 
+Relation_Idea = tom_denounced_idea, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_cicero_idea, 
+A_Object = cicero, 
+B_Idea = quine_catiline_idea, 
+B_Object = catiline, 
+Relation = denounced, 
+Relation_Idea = quine_denounced_idea, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Idea = quine_tully_idea, 
+A_Object = cicero, 
+B_Idea = quine_catiline_idea, 
+B_Object = catiline, 
+Relation = denounced, 
+Relation_Idea = quine_denounced_idea, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> believes_object_A(Subject, Time,  1, 1,
+|    		     [[Relation],
+|    		     [A_Object]])?
+
+*** Yes
+A_Object = cicero, Relation = human, Subject = tom, Time = now.
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_object_A(Subject, Time,  1, 2,
+|    		     [[Relation],
+|    		     [A_Object],
+|    		     [B_Object]])?
+
+*** Yes
+A_Object = cicero, 
+B_Object = catiline, 
+Relation = denounced, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Object = cicero, 
+B_Object = catiline, 
+Relation = denounced, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+A_Object = cicero, 
+B_Object = catiline, 
+Relation = denounced, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_idea_object_L(Subject, Time,  1, 1, Pair_List)?
+
+*** Yes
+Pair_List = [[tom_of_orations_idea,of_orations],[tom_cicero_idea,cicero]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[tom_of_De_Senectute_idea,of_De_Senectute],
+             [tom_tully_idea,cicero]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[quine_of_orations_idea,of_orations],[quine_cicero_idea,cicero]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[quine_of_De_Senectute_idea,of_De_Senectute],
+             [quine_tully_idea,cicero]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[quine_of_orations_idea,of_orations],[quine_tully_idea,cicero]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[quine_of_De_Senectute_idea,of_De_Senectute],
+             [quine_cicero_idea,cicero]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[tom_human_idea,human],[tom_tully_idea,cicero]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_idea_object_L(Subject, Time,  1, 2, Pair_List)?
+
+*** Yes
+Pair_List = [[tom_denounced_idea,denounced],
+             [tom_cicero_idea,cicero],
+             [tom_catiline_idea,catiline]], 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[quine_denounced_idea,denounced],
+             [quine_cicero_idea,cicero],
+             [quine_catiline_idea,catiline]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** Yes
+Pair_List = [[quine_denounced_idea,denounced],
+             [quine_tully_idea,cicero],
+             [quine_catiline_idea,catiline]], 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_object_L(Subject, Time,  1, 1, List)?
+
+*** Yes
+List = [[of_orations],[cicero]], Subject = tom, Time = now.
+--1> 
+
+*** Yes
+List = [[of_De_Senectute],[cicero]], Subject = tom, Time = now.
+--1> 
+
+*** Yes
+List = [[of_orations],[cicero]], Subject = quine, Time = now.
+--1> 
+
+*** Yes
+List = [[of_De_Senectute],[cicero]], Subject = quine, Time = now.
+--1> 
+
+*** Yes
+List = [[of_orations],[cicero]], Subject = quine, Time = now.
+--1> 
+
+*** Yes
+List = [[of_De_Senectute],[cicero]], Subject = quine, Time = now.
+--1> 
+
+*** Yes
+List = [[human],[cicero]], Subject = tom, Time = now.
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> believes_object_L(Subject, Time,  1, 2, List)?
+
+*** Yes
+List = [[denounced],[cicero],[catiline]], Subject = tom, Time = now.
+--1> 
+
+*** Yes
+List = [[denounced],[cicero],[catiline]], Subject = quine, Time = now.
+--1> 
+
+*** Yes
+List = [[denounced],[cicero],[catiline]], Subject = quine, Time = now.
+--1> 
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.61455 Seconds
+CPU Time 16.6667 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+*** No
+>  
+> 
+> halt?
+

@@ -1,0 +1,216 @@
+
+*** Yes
+
+*** Yes
+> 
+*** Yes
+> 
+> %% I figured TRUE and FALSE by starting simple & copying expressions into
+> %% other expressions.
+> 
+> write_time(Ignore)?
+Time Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> % TRUE
+> traverse_pass([nand, P, [nand, [top, Q], R]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> ;
+> ;	
+> ;
+> 	
+> % TRUE
+> traverse_pass([top,P])?
+> ;
+> ;
+> 
+> % FALSE
+> traverse_pass([nand, [top, P], [top, P]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> ;
+> ;
+> 
+> % TRUE	
+> traverse_pass([nand, [top, P], [top, Q]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> ;
+> ;
+> 
+> % TRUE	
+> traverse_pass([nand, [top, P], [nand, [top, P], [top, P]]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> ;
+> ;
+> ;
+> 
+> % TRUE
+> traverse_pass([nand, [top, P], [nand, [top, Q], [top, P]]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> 	
+> %% TRUE
+> traverse_pass([top, 1])?
+> 
+> %% FALSE
+> traverse_pass([top, 0])?
+> 
+> %% TRUE
+> traverse_pass([nand, [top, 1], [top, 0]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> 
+> %% TRUE
+> traverse_pass([nand, [top, 0], [top, 1]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> 
+> %% TRUE
+> traverse_pass([nand, [top, 0], [top, 0]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> 
+> %% FALSE
+> traverse_pass([nand, [top, 1], [top, 1]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%
+> 
+> %% TRUE
+> traverse_pass([nand, [nand, [top, 0], [top, 1]], [top, 0]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> 
+> %% FALSE
+> traverse_pass([nand, [nand, [top, 0], [top, 0]], [top, 1]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> %% TRUE
+> traverse_pass([nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> 
+> %% TRUE
+> traverse_pass([nand, [nand, [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]], [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]]], [nand, [nand, [top, 0], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]]], [top, 0]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> 
+> traverse_pass([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], A19])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> 
+> traverse_pass([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], [top, 1]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+
+*** No
+> 
+> 
+> write_stats(Ignore)?
+Stats Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+

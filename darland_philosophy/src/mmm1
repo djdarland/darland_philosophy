@@ -1,0 +1,76 @@
+echo "-----------"
+echo "Darland Philosophy Query Edits"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2019, 2021  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+echo "01 Edit darland_0001.lf Physics Vector Calculations"
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f mmm1
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+while [ $select -ne 999 ]
+do 
+case $select in
+1) $EDITOR ../DarlandPhilosophyMaple/IN2pre/darland_0001.mxt;;
+500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
+501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
+666) $EDITOR mmm1 ;;
+777) $EDITOR NOTES_DJD.txt & ;;
+esac
+echo "-----------"
+echo "Darland Philosophy Query Edits"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2019  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+
+echo "Note 31 forward are Current Versions - Still in Progress"
+echo "31 Edit darland_0031.lf Cases with Understanding Using Number"
+echo "32 Edit darland_0032.lf Cases with Atomic Belief Using Number"
+echo "33 Was for True Atomic belief - superceeded by 4 using NAND" 
+echo "34 Edit darland_0033.lf Cases with Opacity Using Number"
+echo "35 Edit darland_0034.lf Multi Tests Using Number"
+echo "36 Edit darland_0035.lf Agreement Using Number"
+echo "37 Edit darland_0037.lf Essentially Singular terms"
+echo "38 Edit darland_0038.lf Plural terms"
+echo "39 Edit darland_0039.lf Contingently Singular terms"
+echo "40 Edit darland_0040.lf Singular terms"
+echo "41 Was for belief with NAND - cannot be done"
+echo "42 Edit darland_0042.lf True NAND Beliefs using Number"
+echo "43 was for disbelieves NAND - cannot be done"
+echo "44 was for agnostic NAND - cannoot be done"
+echo "45 Edit darland_0045.lf Same sense"
+echo "46 Edit darland_0046.lf Nonsense"
+echo "47 Edit darland_0047.lf Believing Nonsense"
+echo "48 Edit darland_0048.lf Natural Meaning Beliefs"
+echo "61 Edit darland_0061.lf - Tests for Atomic and Molecular Facts"
+echo "62 Edit darland_0062.lf - Tests for Satisfiability"
+echo "63 Edit darland_0063.lf - Tests for Satisfiability with Statistics"
+echo "71 Edit darland_0071.lf Cases with Understanding Using Number - For Whitehead"
+echo "72 Edit darland_0072.lf Cases with Atomic Belief Using Number - For Whitehead"
+echo "81 Edit darland_0081.lf Cases For Physics"
+
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f eee1
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+done

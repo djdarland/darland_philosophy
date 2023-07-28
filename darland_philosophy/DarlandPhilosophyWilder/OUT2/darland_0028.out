@@ -1,0 +1,45 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Sun 28 Feb 2021 03:34:13 PM CST
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> qqqq4([denounced, cicero, catiline])?
+
+*** Yes
+> 
+> qqqq2(qqqq4, denounced, cicero, catiline)?
+> 
+> qqqq3([qqqq4, denounced, cicero, catiline])?
+> 
+> tryit1(denounced, cicero, catiline)?
+> 
+> tryit2(denounced, cicero, catiline)?
+
+*** No
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.61455 Seconds
+CPU Time 0 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+

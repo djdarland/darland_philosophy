@@ -1,0 +1,1124 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Fri Feb 17 22:16:10 CST 2017
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> remark(3001, Remark)?
+
+*** Yes
+Remark = 'Test Set 3 - about belief.'.
+--1> 
+
+*** No
+> remark(3002, Remark)?
+
+*** Yes
+Remark = 'A person can have contradictory beliefs. This can because he does not know of all facts. Thus for `believes` so defined - it fails of substituitivity of identity. It is not referentially transparent - it is referentially opaque. But this `believes` is defined in terms which themselves are referentially transparent. There is no need to flee intension. We must analyze it when needed. There is no logical problem when `believes` is analyzed. I use one kind of belief in my `database` of facts - `belives_internal`. I define 5 more kinds of belief.(`believes_external_internal_object`, `believes_external_object`, `believes_external_internal`, `believes_internal_object`, and `believes_object`. All are reverentially transparent except `believes_object` - it is reverentially opaque.'.
+
+--1> 
+
+*** No
+> remark(3003, Remark)?
+
+*** Yes
+Remark = 'Tom believes both `Cicero denounced Cataline.` and `Cicero did not denounced Cataline.` He has two different internal symbols for Cicero (`cicero` and `tully` - but both refer to the same object - there is only one object! And (also) in Prolog or Life two atoms cannot be equal.'.
+
+--1> 
+
+*** No
+> remark(3004, Remark)?
+
+*** Yes
+Remark = 'In SwiProlog I use `is` for the arithmetic with types. It requires `Type` be instantiated. So multiple queries are needed. With WildLife I could have placed, e.g. `Type + 1` where I used `Type_p1`, and not needed the predicate `type_p1` at all.'.
+
+--1> 
+
+*** No
+> remark(3005, Remark)?
+
+*** Yes
+Remark = '`believes_internal` is a (here primative) psychological relation between internal symbols. Usually these internal symbols relate to external objects (not always). The relation to the objects is usually learned from interaction with other people. However this is mostly coordinated via the external objects and external symbols. The internal symbols may vary from person to person. I thought about calling the internal symbols `neural centers` - but that is stretching my knowledge. They are referentially transparent - even though `cicero = tully`, `cicero_int != tully_int`.'.
+
+--1> 
+
+*** No
+> remark(3006, Remark)?
+
+*** Yes
+Remark = '`believes_object` is a (defined) relation between a person and (usually) external objects medeated by symbolic relations. It is referentially opaque. I do not regard that as a problem as the relations it is defined in terms of are referentially transparent.'.
+
+--1> 
+
+*** No
+> remark(3007, Remark)?
+
+*** Yes
+Remark = 'Beliefs that go all the way to the objects can be opaque. Because we can never have complete knowledge - or, at least, if we do, then opacity never occurs.'.
+
+--1> 
+
+*** No
+> remark(3008, Remark)?
+
+*** Yes
+Remark = 'Beliefs involving symbols (external or internal) can never be opaque as the symbols themselves are different - whether or not they stand for the same object. Only `believes_object` does not involve symbols. (Althogh symbols are used in its definition, they `cancel out`.'.
+
+--1> 
+
+*** No
+> remark(3009, Remark)?
+
+*** Yes
+Remark = 'There is a Logical_Form for belief - it is either `pos_pos`, `pos_neg`, `neg_pos` or `neg_neg`. The first neg indicates not believing the second would indicate believing not. For simple beliefs `pos` & `neg` would have been sufficient. They would indicate belief or disbelief. However for those I use `pos_pos` and `pos_neg`. This simplifies things. A logical form of `neg_pos` indicates the person has no belief that something is true. (They might either believe it false or have no belief regarding it. Similarly for `neg_neg`.'.
+
+--1> 
+
+*** No
+> quote_note(br0008, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+*** Yes
+Article_Title = 'On the Nature of Truth [1]', 
+Article_Year = '1907', 
+Author = 'Bertrand Russell', 
+Author_Article = 'Bertrand Russell', 
+Author_Book = 'Bertrand Russell', 
+Book_Title = 'CPBR 05: Toward `Principia Mathematica`', 
+Book_Year = '1905-1908', 
+Note1 = 'This belief relation of Russell`s is my `believes_internal` relation. Russell`s ideas are my `internal_symbols` or `internal_relation_symbols`. What Russell`s ideas are of is what my `internal_symbols` or `internal_relation_symbols` are related to. [see my remark 8]', 
+Notes_Article = none, 
+Notes_Book = none, 
+Pages = '451-452', 
+Quotation = 'Thus a belief, if this view [a belief is not a single thing related to a fact] is adopted, will not consist of one idea with a complex object, but will consist of several related ideas. That is, if we believe (say) that A is B, we shall have the ideas of A and of B, and these ideas will be related in a certain manner; but we shall not have a sinle complex idea which can be described as the idea of `A is B`. A belief will then differ from an idea or presentation by the fact that it will consist of several interrelated ideas. Certain ideas standing in certain relations will be called the belief that so-and-so. In the event of the objects standing in he corresponding relation, we shall say that the belief is true, or that it is belief in a fact. In the event of the objects not standing in the corresponding relation, there will be no objective complex corresponding to the belief, and the belief is belief in nothing, though it is not `thinking of nothing`, because it is thinking of the objects of the ideas which constitute the belief. Thus it would seem that the argument that false beliefs must be beliefs in something is not conclusive in favour of objective falsehood.'.
+
+--1> 
+
+*** No
+> quote_note(br0009, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+*** Yes
+Article_Title = 'On the Nature of Truth [2]', 
+Article_Year = '1910', 
+Author = 'Bertrand Russell', 
+Author_Article = 'Bertrand Russell', 
+Author_Book = 'Bertrand Russell', 
+Book_Title = 'Philosophical Essays', 
+Book_Year = '1910', 
+Note1 = 'This relation of Russell`s corresponds to my `believes` relation defined in `common_2017_0001.pl` for prolog or `common_2017_0001.lf` for WildLife. It is defined in terms of the `believes_internal`, `internal_symbol` and `internal_relation_symbol` relations. [see my remark 9]', 
+Notes_Article = none, 
+Notes_Book = none, 
+Pages = '155', 
+Quotation = 'The theory of judgment [belief] which I am advocating is, that judgment is not a dual relation of mind to a single objective, but a multiple relation of the mind to the various other terms with which the judgment is concerned. Thus if I judge that A loves B, that is not a relation of me to `A`s love for B`, but a relation between me and A and love and B. If it were a relation of me to `A`s love for B`, it would be impossible unless there were such a thing s `A`s love for B`, i.e. unless A loved B, i.e. unless the judgment were true; but in fact false judgments are possible. When the judgment is taken as a relation between me and A and love and B, the mere fact that the the judgement occurs does not involve any relation between its objects A and love and B; thus the possibility of false judgments is fully allowed for.'.
+
+--1> 
+
+*** No
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% believes_external_internal_object(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object)?
+> %% Simple query repeated by semi-colons
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> believes_external_internal_object(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object)?
+
+*** Yes
+A_External_Symbol = cicero_ext, 
+A_Internal_Symbol = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Internal_Symbol = tom_cataline_int, 
+B_Object = cataline, 
+C_External_Symbol = nop, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = denounced_ext, 
+Internal_Relation_Symbol = tom_denounced_int, 
+Logical_Form = pos_pos, 
+Relation = denounced, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol = tully_ext, 
+A_Internal_Symbol = tom_tully_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Internal_Symbol = tom_cataline_int, 
+B_Object = cataline, 
+C_External_Symbol = nop, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = denounced_ext, 
+Internal_Relation_Symbol = tom_denounced_int, 
+Logical_Form = pos_neg, 
+Relation = denounced, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol = tully_ext, 
+A_Internal_Symbol = tom_tully_int, 
+A_Object = cicero, 
+Arity = 1, 
+B_External_Symbol = nop, 
+B_Internal_Symbol = nop, 
+B_Object = nop, 
+C_External_Symbol = nop, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = human_ext, 
+Internal_Relation_Symbol = tom_human_int, 
+Logical_Form = pos_pos, 
+Relation = human, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol = cicero_ext, 
+A_Internal_Symbol = quine_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Internal_Symbol = quine_cataline_int, 
+B_Object = cataline, 
+C_External_Symbol = nop, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = denounced_ext, 
+Internal_Relation_Symbol = quine_denounced_int, 
+Logical_Form = pos_pos, 
+Relation = denounced, 
+Subject = quine, 
+Time = now.
+
+--1>  ;
+
+*** Yes
+A_External_Symbol = tully_ext, 
+A_Internal_Symbol = quine_tully_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Internal_Symbol = quine_cataline_int, 
+B_Object = cataline, 
+C_External_Symbol = nop, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = denounced_ext, 
+Internal_Relation_Symbol = quine_denounced_int, 
+Logical_Form = pos_pos, 
+Relation = denounced, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** No
+> %%
+> %% Next find all (there are a lot fewer beliefs than understandings
+> %% (at least in my database)
+> %%
+> 
+> find_all([Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object], 
+|    believes_external_internal_object(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object), L)?
+
+*** Yes
+A_External_Symbol = @, 
+A_Internal_Symbol = @, 
+A_Object = @, 
+Arity = @, 
+B_External_Symbol = @, 
+B_Internal_Symbol = @, 
+B_Object = @, 
+C_External_Symbol = @, 
+C_Internal_Symbol = @, 
+C_Object = @, 
+External_Relation_Symbol = @, 
+Internal_Relation_Symbol = @, 
+L = [[tom,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      tom_denounced_int,
+      denounced,
+      cicero_ext,
+      cicero,
+      tom_cicero_int,
+      cataline_ext,
+      tom_cataline_int,
+      cataline,
+      nop,
+      nop,
+      nop],
+     [tom,
+      now,
+      pos_neg,
+      0,
+      2,
+      denounced_ext,
+      tom_denounced_int,
+      denounced,
+      tully_ext,
+      cicero,
+      tom_tully_int,
+      cataline_ext,
+      tom_cataline_int,
+      cataline,
+      nop,
+      nop,
+      nop],
+     [tom,
+      now,
+      pos_pos,
+      0,
+      1,
+      human_ext,
+      tom_human_int,
+      human,
+      tully_ext,
+      cicero,
+      tom_tully_int,
+      nop,
+      nop,
+      nop,
+      nop,
+      nop,
+      nop],
+     [quine,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      quine_denounced_int,
+      denounced,
+      cicero_ext,
+      cicero,
+      quine_cicero_int,
+      cataline_ext,
+      quine_cataline_int,
+      cataline,
+      nop,
+      nop,
+      nop],
+     [quine,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      quine_denounced_int,
+      denounced,
+      tully_ext,
+      cicero,
+      quine_tully_int,
+      cataline_ext,
+      quine_cataline_int,
+      cataline,
+      nop,
+      nop,
+      nop]], 
+Logical_Form = @, 
+Relation = @, 
+Subject = @, 
+Time = @.
+
+--1> 
+
+*** No
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% Next Types > 0 - No results
+> 
+> believes_external_internal_object(Subject, Time, Logical_Form, 1, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object)?
+
+*** No
+>  ;
+> 
+> believes_external_internal_object(Subject, Time, Logical_Form, 2, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object)?
+
+*** No
+>  ;
+> 
+> believes_external_internal_object(Subject, Time, Logical_Form, 3, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object)?
+
+*** No
+>  ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> believes_external_object(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+
+*** Yes
+A_External_Symbol = cicero_ext, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Object = cataline, 
+C_External_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = denounced_ext, 
+Logical_Form = pos_pos, 
+Relation = denounced, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol = tully_ext, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Object = cataline, 
+C_External_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = denounced_ext, 
+Logical_Form = pos_neg, 
+Relation = denounced, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol = tully_ext, 
+A_Object = cicero, 
+Arity = 1, 
+B_External_Symbol = nop, 
+B_Object = nop, 
+C_External_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = human_ext, 
+Logical_Form = pos_pos, 
+Relation = human, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol = cicero_ext, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Object = cataline, 
+C_External_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = denounced_ext, 
+Logical_Form = pos_pos, 
+Relation = denounced, 
+Subject = quine, 
+Time = now.
+
+--1>  ;
+
+*** Yes
+A_External_Symbol = tully_ext, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Object = cataline, 
+C_External_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = denounced_ext, 
+Logical_Form = pos_pos, 
+Relation = denounced, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** No
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> find_all([Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object], believes_external_object(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object), L)?
+
+*** Yes
+A_External_Symbol = @, 
+A_Object = @, 
+Arity = @, 
+B_External_Symbol = @, 
+B_Object = @, 
+C_External_Symbol = @, 
+C_Object = @, 
+External_Relation_Symbol = @, 
+L = [[tom,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      denounced,
+      cicero_ext,
+      cicero,
+      cataline_ext,
+      cataline,
+      nop,
+      nop],
+     [tom,
+      now,
+      pos_neg,
+      0,
+      2,
+      denounced_ext,
+      denounced,
+      tully_ext,
+      cicero,
+      cataline_ext,
+      cataline,
+      nop,
+      nop],
+     [tom,now,pos_pos,0,1,human_ext,human,tully_ext,cicero,nop,nop,nop,nop],
+     [quine,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      denounced,
+      cicero_ext,
+      cicero,
+      cataline_ext,
+      cataline,
+      nop,
+      nop],
+     [quine,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      denounced,
+      tully_ext,
+      cicero,
+      cataline_ext,
+      cataline,
+      nop,
+      nop]], 
+Logical_Form = @, 
+Relation = @, 
+Subject = @, 
+Time = @.
+
+--1> 
+
+*** No
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> believes_external_object(Subject, Time, Logical_Form, 1, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+
+*** No
+>  ;
+> 
+> believes_external_object(Subject, Time, Logical_Form, 2, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+
+*** No
+>  ;
+> 
+> believes_external_object(Subject, Time, Logical_Form, 3, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+
+*** No
+>  ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> believes_external_internal(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol)?
+
+*** Yes
+A_External_Symbol = cicero_ext, 
+A_Internal_Symbol = tom_cicero_int, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Internal_Symbol = tom_cataline_int, 
+C_External_Symbol = nop, 
+C_Internal_Symbol = nop, 
+External_Relation_Symbol = denounced_ext, 
+Internal_Relation_Symbol = tom_denounced_int, 
+Logical_Form = pos_pos, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol = tully_ext, 
+A_Internal_Symbol = tom_tully_int, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Internal_Symbol = tom_cataline_int, 
+C_External_Symbol = nop, 
+C_Internal_Symbol = nop, 
+External_Relation_Symbol = denounced_ext, 
+Internal_Relation_Symbol = tom_denounced_int, 
+Logical_Form = pos_neg, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol = tully_ext, 
+A_Internal_Symbol = tom_tully_int, 
+Arity = 1, 
+B_External_Symbol = nop, 
+B_Internal_Symbol = nop, 
+C_External_Symbol = nop, 
+C_Internal_Symbol = nop, 
+External_Relation_Symbol = human_ext, 
+Internal_Relation_Symbol = tom_human_int, 
+Logical_Form = pos_pos, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol = cicero_ext, 
+A_Internal_Symbol = quine_cicero_int, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Internal_Symbol = quine_cataline_int, 
+C_External_Symbol = nop, 
+C_Internal_Symbol = nop, 
+External_Relation_Symbol = denounced_ext, 
+Internal_Relation_Symbol = quine_denounced_int, 
+Logical_Form = pos_pos, 
+Subject = quine, 
+Time = now.
+
+--1>  ;
+
+*** Yes
+A_External_Symbol = tully_ext, 
+A_Internal_Symbol = quine_tully_int, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Internal_Symbol = quine_cataline_int, 
+C_External_Symbol = nop, 
+C_Internal_Symbol = nop, 
+External_Relation_Symbol = denounced_ext, 
+Internal_Relation_Symbol = quine_denounced_int, 
+Logical_Form = pos_pos, 
+Subject = quine, 
+Time = now.
+
+--1> 
+
+*** No
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> find_all([Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol], believes_external_internal(Subject, Time, Logical_Form, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol), L)?
+
+*** Yes
+A_External_Symbol = @, 
+A_Internal_Symbol = @, 
+Arity = @, 
+B_External_Symbol = @, 
+B_Internal_Symbol = @, 
+C_External_Symbol = @, 
+C_Internal_Symbol = @, 
+External_Relation_Symbol = @, 
+Internal_Relation_Symbol = @, 
+L = [[tom,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      tom_denounced_int,
+      cicero_ext,
+      tom_cicero_int,
+      cataline_ext,
+      tom_cataline_int,
+      nop,
+      nop],
+     [tom,
+      now,
+      pos_neg,
+      0,
+      2,
+      denounced_ext,
+      tom_denounced_int,
+      tully_ext,
+      tom_tully_int,
+      cataline_ext,
+      tom_cataline_int,
+      nop,
+      nop],
+     [tom,
+      now,
+      pos_pos,
+      0,
+      1,
+      human_ext,
+      tom_human_int,
+      tully_ext,
+      tom_tully_int,
+      nop,
+      nop,
+      nop,
+      nop],
+     [quine,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      quine_denounced_int,
+      cicero_ext,
+      quine_cicero_int,
+      cataline_ext,
+      quine_cataline_int,
+      nop,
+      nop],
+     [quine,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      quine_denounced_int,
+      tully_ext,
+      quine_tully_int,
+      cataline_ext,
+      quine_cataline_int,
+      nop,
+      nop]], 
+Logical_Form = @, 
+Subject = @, 
+Time = @.
+
+--1> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--1> 
+--1> believes_external_internal(Subject, Time, Logical_Form, 1, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol)?
+
+*** No
+A_External_Symbol = @, 
+A_Internal_Symbol = @, 
+Arity = @, 
+B_External_Symbol = @, 
+B_Internal_Symbol = @, 
+C_External_Symbol = @, 
+C_Internal_Symbol = @, 
+External_Relation_Symbol = @, 
+Internal_Relation_Symbol = @, 
+L = [[tom,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      tom_denounced_int,
+      cicero_ext,
+      tom_cicero_int,
+      cataline_ext,
+      tom_cataline_int,
+      nop,
+      nop],
+     [tom,
+      now,
+      pos_neg,
+      0,
+      2,
+      denounced_ext,
+      tom_denounced_int,
+      tully_ext,
+      tom_tully_int,
+      cataline_ext,
+      tom_cataline_int,
+      nop,
+      nop],
+     [tom,
+      now,
+      pos_pos,
+      0,
+      1,
+      human_ext,
+      tom_human_int,
+      tully_ext,
+      tom_tully_int,
+      nop,
+      nop,
+      nop,
+      nop],
+     [quine,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      quine_denounced_int,
+      cicero_ext,
+      quine_cicero_int,
+      cataline_ext,
+      quine_cataline_int,
+      nop,
+      nop],
+     [quine,
+      now,
+      pos_pos,
+      0,
+      2,
+      denounced_ext,
+      quine_denounced_int,
+      tully_ext,
+      quine_tully_int,
+      cataline_ext,
+      quine_cataline_int,
+      nop,
+      nop]], 
+Logical_Form = @, 
+Subject = @, 
+Time = @.
+
+--1>  ;
+
+*** No
+> 
+> believes_external_internal(Subject, Time, Logical_Form, 2, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol)?
+
+*** No
+>  ;
+> 
+> believes_external_internal(Subject, Time, Logical_Form, 3, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol)?
+
+*** No
+>  ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> believes_internal_object(Subject, Time, Logical_Form, 0, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+
+*** Yes
+A_Internal_Symbol = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_Internal_Symbol = tom_cataline_int, 
+B_Object = cataline, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+Internal_Relation_symbol = tom_denounced_int, 
+Logical_Form = pos_pos, 
+Relation = denounced, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_Internal_Symbol = tom_tully_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_Internal_Symbol = tom_cataline_int, 
+B_Object = cataline, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+Internal_Relation_symbol = tom_denounced_int, 
+Logical_Form = pos_neg, 
+Relation = denounced, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_Internal_Symbol = tom_tully_int, 
+A_Object = cicero, 
+Arity = 1, 
+B_Internal_Symbol = nop, 
+B_Object = nop, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+Internal_Relation_symbol = tom_human_int, 
+Logical_Form = pos_pos, 
+Relation = human, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_Internal_Symbol = tom_tully_int, 
+A_Object = cicero, 
+Arity = 1, 
+B_Internal_Symbol = nop, 
+B_Object = nop, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+Internal_Relation_symbol = tom_featherless_biped_int, 
+Logical_Form = pos_pos, 
+Relation = featherless_biped, 
+Subject = tom, 
+Time = now.
+
+--1>  ;
+
+*** Yes
+A_Internal_Symbol = tom_tully_int, 
+A_Object = cicero, 
+Arity = 1, 
+B_Internal_Symbol = nop, 
+B_Object = nop, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+Internal_Relation_symbol = tom_american_int, 
+Logical_Form = pos_pos, 
+Relation = american, 
+Subject = tom, 
+Time = now.
+
+--1> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--1> find_all([Subject, Time, Logical_Form, 0, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object], believes_internal_object(Subject, Time, Logical_Form, 0, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object), L)?
+
+*** Yes
+A_Internal_Symbol = tom_tully_int, 
+A_Object = cicero, 
+Arity = 1, 
+B_Internal_Symbol = nop, 
+B_Object = nop, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+Internal_Relation_symbol = tom_american_int, 
+L = [[tom,
+      now,
+      pos_pos,
+      0,
+      1,
+      tom_american_int,
+      american,
+      tom_tully_int,
+      cicero,
+      nop,
+      nop,
+      nop,
+      nop]], 
+Logical_Form = pos_pos, 
+Relation = american, 
+Subject = tom, 
+Time = now.
+
+----2> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+----2> 
+----2> believes_internal_object(Subject, Time, Logical_Form, 1, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+
+*** No
+A_Internal_Symbol = tom_tully_int, 
+A_Object = cicero, 
+Arity = 1, 
+B_Internal_Symbol = nop, 
+B_Object = nop, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+Internal_Relation_symbol = tom_american_int, 
+L = [[tom,
+      now,
+      pos_pos,
+      0,
+      1,
+      tom_american_int,
+      american,
+      tom_tully_int,
+      cicero,
+      nop,
+      nop,
+      nop,
+      nop]], 
+Logical_Form = pos_pos, 
+Relation = american, 
+Subject = tom, 
+Time = now.
+
+----2>  ;
+
+*** No
+A_Internal_Symbol = tom_tully_int, 
+A_Object = cicero, 
+Arity = 1, 
+B_Internal_Symbol = nop, 
+B_Object = nop, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+Internal_Relation_symbol = tom_american_int, 
+Logical_Form = pos_pos, 
+Relation = american, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> 
+> believes_internal_object(Subject, Time, Logical_Form, 2, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+
+*** No
+>  ;
+> 
+> 
+> believes_internal_object(Subject, Time, Logical_Form, 3, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+
+*** No
+>  ;
+> 
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> believes_object(Subject, Time, Logical_Form, 0, Arity, Relation, A_Object, B_Object, C_Object)?
+
+*** Yes
+A_Object = cicero, 
+Arity = 2, 
+B_Object = cataline, 
+C_Object = nop, 
+Logical_Form = pos_pos, 
+Relation = denounced, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_Object = cicero, 
+Arity = 2, 
+B_Object = cataline, 
+C_Object = nop, 
+Logical_Form = pos_neg, 
+Relation = denounced, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_Object = cicero, 
+Arity = 1, 
+B_Object = nop, 
+C_Object = nop, 
+Logical_Form = pos_pos, 
+Relation = human, 
+Subject = tom, 
+Time = now.
+
+--1> ;
+
+*** Yes
+A_Object = cicero, 
+Arity = 1, 
+B_Object = nop, 
+C_Object = nop, 
+Logical_Form = pos_pos, 
+Relation = featherless_biped, 
+Subject = tom, 
+Time = now.
+
+--1>  ;
+
+*** Yes
+A_Object = cicero, 
+Arity = 1, 
+B_Object = nop, 
+C_Object = nop, 
+Logical_Form = pos_pos, 
+Relation = american, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> find_all([Subject, Time, Logical_Form, 0, Arity, Relation, A_Object, B_Object, C_Object], believes_object(Subject, Time, Logical_Form, 0, Arity, Relation, A_Object, B_Object, C_Object), L)?
+
+*** Yes
+A_Object = @, 
+Arity = @, 
+B_Object = @, 
+C_Object = @, 
+L = [[tom,now,pos_pos,0,2,denounced,cicero,cataline,nop],
+     [tom,now,pos_neg,0,2,denounced,cicero,cataline,nop],
+     [tom,now,pos_pos,0,1,human,cicero,nop,nop],
+     [tom,now,pos_pos,0,1,featherless_biped,cicero,nop,nop],
+     [tom,now,pos_pos,0,1,american,cicero,nop,nop],
+     [tom,now,pos_pos,0,1,roman,cicero,nop,nop],
+     [quine,now,pos_pos,0,2,denounced,cicero,cataline,nop],
+     [quine,now,pos_pos,0,2,denounced,cicero,cataline,nop]], 
+Logical_Form = @, 
+Relation = @, 
+Subject = @, 
+Time = @.
+
+--1> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+--1> 
+--1> believes_object(Subject, Time, Logical_Form, 1, Arity, Relation, A_Object, B_Object, C_Object)?
+
+*** No
+A_Object = @, 
+Arity = @, 
+B_Object = @, 
+C_Object = @, 
+L = [[tom,now,pos_pos,0,2,denounced,cicero,cataline,nop],
+     [tom,now,pos_neg,0,2,denounced,cicero,cataline,nop],
+     [tom,now,pos_pos,0,1,human,cicero,nop,nop],
+     [tom,now,pos_pos,0,1,featherless_biped,cicero,nop,nop],
+     [tom,now,pos_pos,0,1,american,cicero,nop,nop],
+     [tom,now,pos_pos,0,1,roman,cicero,nop,nop],
+     [quine,now,pos_pos,0,2,denounced,cicero,cataline,nop],
+     [quine,now,pos_pos,0,2,denounced,cicero,cataline,nop]], 
+Logical_Form = @, 
+Relation = @, 
+Subject = @, 
+Time = @.
+
+--1>  ;
+
+*** No
+> 
+> believes_object(Subject, Time, Logical_Form, 2, Arity, Relation, A_Object, B_Object, C_Object)?
+
+*** No
+>  ;
+> 
+> believes_object(Subject, Time, Logical_Form, 3, Arity, Relation, A_Object, B_Object, C_Object)?
+
+*** No
+>  ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.48739 Seconds
+CPU Time 483.333 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+>  
+> 
+> halt?
+

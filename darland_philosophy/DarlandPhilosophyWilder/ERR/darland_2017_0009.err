@@ -1,0 +1,25 @@
+*** Error: 'not_formally_equivalent(0,1,human,featherless_biped)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'formally_equivalent(0,1,human,featherless_biped)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'not_formally_equivalent(0,1,human,human)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'formally_equivalent(0,1,human,human)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'internal_synonym(@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'understands_object(@,@,1,2,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort

@@ -1,0 +1,9 @@
+understands_words( tom, now,
+         [[denounced_word],
+          [cicero_word],
+          [catiline_word]])?
+
+understands_words( quine, now,
+         [[denounced_word],
+          [cicero_word],
+          [catiline_word]])?

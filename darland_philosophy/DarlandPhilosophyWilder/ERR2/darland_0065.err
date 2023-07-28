@@ -1,0 +1,17 @@
+*** Syntax error near line 91 in file "RULES2/rules_0064.lf": bad symbol in list ')'.
+
+*** Abort
+
+*** END Abort*** Error: function result 'add_prop(@)' should be a boolean or a predicate.
+
+*** Abort
+
+*** END Abort*** Error: 'add_end_node(1)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'add_end_node(0)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort

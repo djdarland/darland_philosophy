@@ -1,0 +1,774 @@
+%% Copyright (C) 2017, 2019, 2020, 2021, 2023 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+%% 
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% I define what Idealism and What there being a Private Language means
+
+%% I was reminded of the need to use qqqq
+%% by a criticism of Prof. Landini regarding the need of it
+%% here for the Cases for Reality.
+
+%% I also define replacements for classes.
+
+%% we need to define membership in, existence, equality, and
+%% functions of plural terms
+%% 
+%% There are 7 relations of both each
+
+%% The 7 cases are:
+
+%% 1 words
+%% 2 ideas
+%% 3 objects
+
+%% 4 words_ideas
+%% 5 words_objects
+%% 6 ideas_objects
+
+%% 7 words_ideas_objects
+
+%% Modified to add Number to ideas
+%%	- plural
+%%      - or plural
+
+%% First some "metaphysics"
+
+qqqq(realism, Object) :-
+    pos_qq([Universal, Object]),
+    \+ qqqq(ssss, Subject, Universal, Object).
+
+qqqq(idealism, Object) :-
+    \+ qqqq(realism, Object).
+
+qqqq(there_is_private_language, Idea) :-
+    qqqq(ssss, Subject, Time, Idea, Object),
+    \+ qqqq(rrrr, Subject, Time, Word, Idea).
+     
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% First Membership
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 0
+%% In reality
+
+qqqq(member_reality, Universal, Object) :-
+	pos_qq([Universal, Object]).
+		  
+%% 5
+%% guarantees word & object
+
+qqqq(member_plural_word_object,Subject, Time, Word, Object) :-
+	qqqq(rrrr,Subject, Time, Word, Idea),
+	qqqq(tttt,Subject, Time, Idea, Object),
+	qqqq(number_idea,Idea, plural).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea & object
+
+qqqq(member_plural_idea_object, Subject, Time, Idea, Object) :-
+	% List of Word Object Pairs.
+	qqqq(tttt,Subject, Time, Idea, Object),
+	qqqq(number_idea,Idea, plural).
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% 
+qqqq(member_plural_word_idea_object,Subject, Time, Word, Idea, Object) :-
+	% List of Word Idea_Object Triples.
+	qqqq(rrrr,Subject, Time, Word, Idea),
+	qqqq(tttt,Subject, Time, Idea, Object),
+	qqqq(number_idea,Idea, plural).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 0
+%% in Reality
+%% guaranties Universal and Object exist
+
+qqqq(exists_object, Universal, Object) :-
+ 	pos_qq([Universal, Object]).
+
+qqqq(exists_object, Universal, Object_1, Object_2) :-
+ 	pos_qq([Universal, Object_1, Object2]).
+
+qqqq(exists_object, Universal, Object_1, Object_2, Object_3) :-
+ 	pos_qq(Universal, Object_1, Object2, Object_3).
+
+%% 
+%% 1
+%% only guarantees word & idea exist
+
+qqqq(exists_plural_word,Subject, Time, Word) :-
+	qqqq(rrrr,Subject, Time, Word, Idea),
+	qqqq(number_idea,Idea, plural).
+
+
+%% 2
+%% only quarantees plural idea exists 
+
+qqqq(exists_plural_idea,Subject, Time, Idea) :-
+	qqqq(number_idea,Idea, plural).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+%% Guarantees Object with Idea exists
+
+qqqq(exists_plural_object,Subject, Time, Object) :-
+	qqqq(tttt,Subject, Time, Idea, Object),
+	qqqq(number_idea,Idea, plural).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+%% guarantees word and idea
+
+qqqq(exists_plural_word_idea,Subject, Time, Word, Idea) :-
+	qqqq(rrrr,Subject, Time, Word, Idea),
+	qqqq(number_idea,Idea, plural).
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 5
+%% guarantees word & object
+
+qqqq(exists_plural_word_object,Subject, Time, Word, Object) :-
+	qqqq(rrrr,Subject, Time, Word, Idea),
+	qqqq(number_idea,Idea, plural),
+	qqqq(tttt,Subject, Time, Idea, Object).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea & object
+
+qqqq(exists_plural_idea_object, Subject, Time, Idea, Object) :-
+	% List of Word Object Pairs.
+	qqqq(tttt,Subject, Time, Idea, Object),
+	qqqq(number_idea,Idea, plural).
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% 
+qqqq(exists_plural_word_idea_object,Subject, Time, Word, Idea, Object) :-
+	% List of Word Idea_Object Triples.
+	qqqq(rrrr,Subject, Time, Word, Idea),
+	qqqq(number_idea,Idea, plural),
+	qqqq(tttt,Subject, Time, Idea, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now equality -- only applies with object specified
+%% this is extensional equality - not intensional.
+%% two different plural terms may apply to the same objects,
+%% and yet be distinct
+
+%% 0
+%% in Reality
+
+qqqq(equals_object, Object_1, Object_2) :-
+    Object_1 :== Object_2.
+
+qqqq(equals_extension, Universal_1, Universal_2) :-
+    \+ qqqq(differ_extension, Universal_1, Universal_2).
+
+qqqq(differ_extension, Universal_1, Universal_2) :-
+    qqqq(pos_qq, [Universal_2, X]),
+    \+ pos_qq([Universal_1,X]).
+
+qqqq(differ_extension, Universal_1, Universal_2) :-
+    pos_qq([Universal_1, X]),
+    \+ pos_qq([ Universal_2,X]).
+
+%% 1
+%% NA
+
+%% 2
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+%% NA
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 5
+%% guarantees word & object
+
+qqqq(equal_plural_words_objects,Subject, Time, Word1, Word2) :-
+	\+ qqqq(differ_plural_words_objects,Subject, Time, Word1, Word2).
+
+differ_plural_words_objects(Subject, Time, Word1, Word2) :- 
+	qqqq(member_plural_word_object,Subject, Time, Word1, Object),
+	\+ qqqq(member_plural_word_object,Subject, Time, Word2, Object).
+
+qqqq(differ_plural_words_objects,Subject, Time, Word1, Word2) :- 
+	qqqq(member_plural_word_object,Subject, Time, Word2, Object),
+	\+ qqqq(member_plural_word_object,Subject, Time, Word1, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea & object
+
+qqqq(equal_plural_ideas_objects, Subject, Time, Idea1, Idea2) :-
+	\+ differ_plural_ideas_objects( Subject, Time, Idea1, Idea2).
+
+qqqq(differ_plural_ideas_objects, Subject, Time, Idea1, Idea2) :-
+	qqqq(member_plural_idea_object, Subject, Time, Idea1, Object),
+	  \+ qqqq(member_plural_idea_object, Subject, Time, Idea2, Object).
+
+qqqq(differ_plural_ideas_objects, Subject, Time, Idea1, Idea2) :-
+	qqqq(member_plural_idea_object, Subject, Time, Idea2, Object),
+	\+ qqqq(member_plural_idea_object, Subject, Time, Idea1, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% 
+qqqq(equal_plural_words_ideas_objects,Subject, Time, Word1, Word2, Idea1, Idea2) :-
+	\+ qqqq(differ_plural_words_ideas_objects,Subject, Time, Word1, Word2,
+					     Idea1, Idea2,
+					     Object1, Object2).
+
+qqqq(differ_plural_words_ideas_objects,Subject, Time, Word1, Word2, Idea1, Idea2) :-
+	qqqq(member_plural_word_idea_object,Subject, Time, Word1, Idea1, Object),
+	\+ qqqq(member_plural_word_idea_object,Subject, Time, Word2, Idea2, Object).
+
+qqqq(differ_plural_words_ideas_objects,Subject, Time, Word1, Word2, Idea1, Idea2) :-
+	qqqq(member_plural_word_idea_object,Subject, Time, Word2, Idea2, Object),
+	\+ qqqq(member_plural_word_idea_object,Subject, Time, Word1, Idea1, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now functions -- only applies with object specified
+%% 0
+%% in Reality
+
+qqqq(function,Function, Universal) :-
+    \+ qqqq(exception, Function, Universal, X).
+
+qqqq(exception, Function, Universal, X) :-
+    qqqq(pos_qq,[Universal, X]),
+    \+ qqqq(pos_qq,[Function, X]).
+
+%% 1
+%% NA
+
+%% 2
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+%% Guarantees Object exists
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+%% NA
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 5
+%% guarantees word & object
+
+qqqq(function_plural_word,Subject, Time, Function_Word, Word) :-
+	qqqq(rrrr,Subject, Time, Function_Word, Function_Idea),
+	qqqq(rrrr,Subject, Time, Word, Idea),
+	qqqq(number_idea,Function_Idea, singular),
+	qqqq(number_idea,Idea, plural),
+	qqqq(ssss2,Subject, Time, Function_Idea, Function),
+	\+ qqqq(function_fails,Function, Idea).
+
+qqqq(function_fails,Function, Idea) :-
+	qqqq(tttt,Subject, Time, Idea, Object),
+	\+ qqqq(neg_qq,[Function, Object]).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea & object
+
+qqqq(function_plural_idea, Subject, Time, Function_Idea, Idea) :-
+	% List of Word Object Pairs.
+	qqqq(ssss2,Subject, Time, Function_Idea, Function),
+	qqqq(number_idea,Function_Idea, singular),
+	qqqq(number_idea,Idea, plural),
+	\+ qqqq(function_fails,Function, Idea).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% 
+qqqq(function_plural_word_idea,Subject, Time,
+				      Function_Word, Word, Idea) :-
+	% List of Word Idea_Object Triples.
+	qqqq(rrrr,Subject, Time, Function_Word, Function_Idea),
+	qqqq(rrrr,Subject, Time, Word, Idea),
+	qqqq(number_idea,Function_Idea, singular),
+	qqqq(number_idea,Idea, plural),
+	qqqq(ssss2,Subject, Time, Function_Idea, Function),
+	\+ qqqq(function_fails,Function, Idea).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% other items
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now inclusion -- only applies with object specified
+
+%% 0
+%% in Reality
+qqqq(not_included_in, Universal_1, Universal_2) :-
+    pos_qq([Universal_1, X]),
+    \+ pos_qq([Universal_2, X]).
+
+qqqq(included_in, Universal_1, Universal_2) :-
+    \+ qqqq( not_included_in, Universal_1, Universal_2).
+
+%% 1
+%% NA
+
+%% 2
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+%% NA
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 5
+%% guarantees word & object
+%% Word1 includes all members of Word2
+
+qqqq(inclusion_plural_words_objects,Subject, Time, Word1, Word2) :-
+	qqqq(not_inclusion_plural_words_objects,Subject, Time, Word1, Word2).
+
+qqqq(not_inclusion_plural_words_objects, Subject, Time, Word1, Word2) :-
+	qqqq(member_plural_word_object, Subject, Time, Word2, Object),
+	qqqq(not_member_plural_word_object, Subject, Time, Word1, Object).
+
+qqqq(not_member_plural_word_object,Subject, Time, Word, Object) :-
+	\+ qqqq(member_plural_word_object,Subject, Time, Word, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea & object
+%% Idea1 includes all members of Idea2
+
+qqqq(inclusion_plural_ideas_objects, Subject, Time, Idea1, Idea2) :-
+	\+ qqqq(not_inclusion_plural_ideas_objects, Subject, Time, Idea1, Idea2).
+
+qqqq(not_inclusion_plural_ideas_objects, Subject, Time, Idea1, Idea2) :-
+	qqqq(member_plural_idea_object, Subject, Time, Idea2, Object),
+	qqqq(not_member_plural_idea_object, Subject, Time, Idea1, Object).
+
+qqqq(not_member_plural_idea_object, Subject, Time, Idea, Object) :-
+	\+ qqqq(member_plural_idea_object, Subject, Time, Idea, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% 
+
+qqqq(inclusion_plural_words_ideas_objects,Subject, Time, Word1, Word2, Idea1, Idea2) :-
+	\+ qqqq(not_inclusion_plural_words_ideas_objects,Subject, Time, Word1, Word2, Idea1, Idea2).
+
+qqqq(not_inclusion_plural_words_ideas_objects, Subject, Time, Word1, Word2, Idea1, Idea2) :-
+	qqqq(member_plural_word_idea_object, Subject, Time, Word2, Idea2, Object),
+	qqqq(not_member_plural_word_idea_object, Subject, Time, Word1, Idea1, Object).
+
+qqqq(not_member_plural_word_idea_object,Subject, Time, Word, Idea, Object) :-
+	\+ qqqq(member_plural_word_idea_object,Subject, Time, Word, Idea, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now in_intersection -- only applies with object specified
+
+%% 0
+%% in Reality
+
+qqqq(in_intersection, Universal_1, Universal_2, X) :-
+    pos_qq([Universal_1, X]),
+    pos_qq([Universal_2, X]).
+
+
+%% 1
+%% NA
+
+%% 2
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+%% NA
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 5
+%% guarantees word & object
+
+qqqq(in_intersection_plural_words_objects,Subject, Time, Word1, Word2, Object) :-
+	qqqq(member_plural_word_object,Subject, Time, Word1, Object),
+	qqqq(member_plural_word_object,Subject, Time, Word2, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea & object
+
+qqqq(in_intersection_plural_ideas_objects, Subject, Time, Idea1, Idea2, Object) :-
+	qqqq(member_plural_idea_object, Subject, Time, Idea1, Object),
+	qqqq(member_plural_idea_object, Subject, Time, Idea2, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% 
+qqqq(in_intersection_plural_words_ideas_objects,Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
+	qqqq(member_plural_word_idea_object,Subject, Time, Word1, Idea1, Object),
+	qqqq(member_plural_word_idea_object,Subject, Time, Word2, Idea2, Object).
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now in_union -- only applies with object specified
+
+%% 0
+%% in Reality
+
+qqqq(in_union, Universal_1, Universal_2, X) :-
+    pos_qq([Universal_1, X]).
+
+qqqq(in_union, Universal_1, Universal_2, X) :-
+    pos_qq([Universal_2, X]).
+
+%% 1
+%% NA
+
+%% 2
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+%% NA
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 5
+%% guarantees word & object
+
+qqqq(in_union_plural_words_objects,Subject, Time, Word1, Word2, Word3, Object) :-
+	qqqq(member_plural_word_object,Subject, Time, Word1, Object).
+
+qqqq(in_union_plural_words_objects,Subject, Time, Word1, Word2, Word3, Object) :-
+	member_plural_word_object(Subject, Time, Word2, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea & object
+
+qqqq(in_union_plural_ideas_objects, Subject, Time, Idea1, Idea2, Object) :-
+	qqqq(member_plural_idea_object, Subject, Time, Idea1, Object).
+
+qqqq(in_union_plural_ideas_objects, Subject, Time, Idea1, Idea2, Object) :-
+	qqqq(member_plural_idea_object, Subject, Time, Idea2, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% 
+qqqq(in_union_plural_words_ideas_objects,Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
+	qqqq(member_plural_word_idea_object,Subject, Time, Word1, Idea1, Object).
+
+qqqq(in_union_plural_words_ideas_objects,Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
+	qqqq(member_plural_word_idea_object,Subject, Time, Word2, Idea2, Object).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now in_plural1_minus_plural2 -- only applies with object specified
+%% complements of plural already defined within inclusion
+
+%% 0
+%% in Reality
+
+qqqq(in_first_minus_second, Universal_1, Universal_2, X) :-
+    pos_qq([Universal_1, X]),
+    \+ pos_qq([Universal_2, X]).
+
+
+%% 1
+%% NA
+
+%% 2
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+%% NA
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 5
+%% guarantees word & object
+
+qqqq(in_w1_minus_w2_words_objects,Subject, Time, Word1, Word2, Object) :-
+	qqqq(member_plural_word_object,Subject, Time, Word1, Object).
+	qqqq(not_member_plural_word_object,Subject, Time, Word2, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea & object
+
+qqqq(in_i1_minus_i2_ideas_objects, Subject, Time, Idea1, Idea2, Object) :-
+	qqqq(member_plural_idea_object, Subject, Time, Idea1, Object),
+	qqqq(not_member_plural_idea_object, Subject, Time, Idea2, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% 
+qqqq(in_wi1_minus_wi2_words_ideas_objects,Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
+	qqqq(member_plural_word_idea_object,Subject, Time, Word1, Idea1, Object),
+	qqqq(not_member_plural_word_idea_object,Subject, Time, Word2, Idea2, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% now zero
+%% 0
+%% in Reality
+qqqq(in_zero, F) :-
+    \+ F(X).
+
+%% 4
+%% guarantees word & idea
+
+qqqq(in_zero_plural_word,Subject, Time, Word) :-
+	
+	qqqq(not_member_plural_word,Subject, Time, Word, Object).
+
+%% 5
+%% guarantees word 
+
+qqqq(in_zero_plural_word,Subject, Time, Word) :-
+	qqqq(not_member_plural_word,Subject, Time, Word, Object).
+
+%% 6
+%% guarantees idea
+
+qqqq(in_zero_plural_idea,Subject, Time, Idea) :-
+	qqqq(not_member_plural_idea,Subject, Time, Idea, Object).
+
+
+%% 7
+%% guarantees word, idea, object
+
+qqqq(in_zero_plural_word_idea_object,Subject, Time, Word, Idea) :-
+	qqqq(not_member_plural_word_idea_object,Subject, Time, Word, Idea, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now one
+
+%% 0
+%% in Reality
+
+qqqq(in_one, F) :-
+    pos_qq([F, X]),
+    \+ qqqq(greater_one,F, X).
+
+qqqq(greater_one, F) :-
+    pos_qq([F, X]),
+    pos_qq([F, Y]),
+    X :\== Y.
+
+%% 
+%% guarantees word
+%% 5
+
+qqqq(in_one_plural_word, Subject, Time, Word) :-
+	qqqq(member_plural_word_object, Subject, Time, Word, Object),
+	\+ qqqq(greater_one_word,Subject, Time, Word).
+
+qqqq(greater_one_word,Subject, Time, Word) :-
+	qqqq(member_plural_word_object,Subject, Time, Word, Object1),
+	qqqq(member_plural_word_object,Subject, Time, Word, Object2),
+	Object1 :\== Object2.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea
+
+qqqq(in_one_plural_idea, Subject, Time, Idea) :-
+	qqqq(member_plural_idea_object, Subject, Time, Idea, Object),
+	\+ qqqq(greater_one_idea,Subject, Time, Idea).
+
+qqqq(greater_one_idea,Subject, Time, Idea) :-
+	qqqq(member_plural_idea_object,Subject, Time, Idea, Object1),
+	qqqq(member_plural_idea_object,Subject, Time, Idea, Object2),
+	Object1 :\== Object2.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% guarantees word, idea
+
+qqqq(in_one_plural_word_idea, Subject, Time, Word, Idea) :-
+	qqqq(member_plural_word_idea_object, Subject, Time, Word, Idea, Object),
+	\+ qqqq(greater_one_word_idea_object,Subject, Time, Word, Idea).
+
+qqqq(greater_one_word_idea_object,Subject, Time, Word, Idea) :-
+	qqqq(member_plural_word_idea_object,Subject, Time, Word, Idea, Object1),
+	qqqq(member_plural_word_idea_object,Subject, Time, Word, Idea, Object2),
+	Object1 :\== Object2.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now two
+
+qqqq(in_two, F) :-
+    pos_qq([F, X]),
+    pos_qq([F, Y]),
+    X :\== Y,
+    \+ qqqq(greater_two,F, X).
+
+qqqq(greater_two, F) :-
+    pos_qq([F, X]),
+    pos_qq([F, Y]),
+    pos_qq([F, Z]),
+    X :\== Y,
+    X :\== Z,
+    Y :\== Z.
+
+%% 
+%% guarantees word
+%% 5
+
+qqqq(in_two_plural_word, Subject, Time, Word) :-
+	qqqq(member_plural_word_object, Subject, Time, Word, Object1),
+	qqqq(member_plural_word_object, Subject, Time, Word, Object2),
+	Object1 :\== Object2,
+	\+ qqqq(greater_two_word,Subject, Time, Word).
+
+qqqq(greater_two_word,Subject, Time, Word) :-
+	qqqq(member_plural_word_object,Subject, Time, Word, Object1),
+	qqqq(member_plural_word_object,Subject, Time, Word, Object2),
+	qqqq(member_plural_word_object,Subject, Time, Word, Object3),
+	Object1 :\== Object2,
+	Object2 :\== Object3,
+	Object1 :\== Object3.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% guarantees idea
+%% 6
+
+qqqq(in_two_plural_idea, Subject, Time, Idea) :-
+	qqqq(member_plural_idea_object, Subject, Time, Idea, Object1),
+	qqqq(member_plural_idea_object, Subject, Time, Idea, Object2),
+	Object1 :\== Object2,
+	\+ qqqq(greater_two_idea,Subject, Time, Idea).
+
+qqqq(greater_two_idea,Subject, Time, Idea) :-
+	qqqq(member_plural_idea_object,Subject, Time, Idea, Object1),
+	qqqq(member_plural_idea_object,Subject, Time, Idea, Object2),
+	qqqq(member_plural_idea_object,Subject, Time, Idea, Object3),
+	Object1 :\== Object2,
+	Object2 :\== Object3,
+	Object1 :\== Object3.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% guarantees word, idea
+%% 7
+
+qqqq(in_two_plural_word_idea, Subject, Time, Word, Idea) :-
+	qqqq(member_plural_word_idea_object, Subject, Time, Word, Idea, Object1),
+	qqqq(member_plural_word_idea_object, Subject, Time, Word, Idea, Object2),
+	Object1 :\== Object2,
+	\+ qqqq(greater_two_idea,Subject, Time, Word, Idea).
+
+qqqq(greater_two_idea,Subject, Time, Word, Idea) :-
+	qqqq(member_plural_word_idea_object,Subject, Time, Word, Idea, Object1),
+	qqqq(member_plural_word_idea_object,Subject, Time, Word, Idea, Object2),
+	qqqq(member_plural_word_idea_object,Subject, Time, Word, Idea, Object3),
+	Object1 :\== Object2,
+	Object2 :\== Object3,
+	Object1 :\== Object3.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% now successor IS NEEDED - BUT NOT FINISHED
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% find_all from Prolog Programming in Depth
+%% by Michael A. Covington, Donald Nute, Andre Vellino
+%% page 164 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% find_all(X, Goal, List)
+%% X contains one or more uninstantiated variables that can also occur in Goal.
+%% (X can be a single uninstantiated variable.)
+%% List is a list of all of the instantiations 
+%% of X with which Goal will succeed.
+%% Modified (djd 2/2017) to remove explicit 'call'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+qqqq(instantiation_of_universal, Universal,A) :-
+    find_all(X, pos_qq([Universal,X]), A),
+    write(A).
+
+qqqq(instantiation_of_predecessor_of_instantiation, Universal_1, Universal_2,X,Y) :-
+    qqqq(instantiation_of_predecessor_of_instantiation_B, Universal_1, Universal_2,X,Y,[],[]).
+
+qqqq(instantiation_of_predecessor_of_instantiation_B, Universal_1, Universal_2,
+    [], [B],A_List,B_List) :-
+     \+ qqqq(member,B, B_List),
+     B_List_Out = qqqq(append,B_List, [B]),
+     pos_qq([Universal_2, B]).
+
+qqqq(instantiation_of_predecessor_of_instantiation_B, Universal_1, Universal_2,
+    [A], [B | Rest_B],A_List,B_List) :-
+    pos_qq([Universal_1, A]),
+    \+ qqqq(member,A, A_List),
+    A_List_Out = qqqq(append,A_List, [A]),
+    pos_qq([Universal_2, B]),
+    \+ qqqq(member,B, B_List),
+    B_List_Out = qqqq(append,B_List, [B]),
+    qqqq(instantiation_of_predecessor_of_instantiation_B, Universal_1, Universal_2, [] , Rest_B,A_List_Out, B_List_Out).
+
+qqqq(instantiation_of_predecessor_of_instantiation_B, Universal_1, Universal_2,
+    [A | Rest_A], [B | Rest_B], A_List, B_List) :-
+    pos_qq([Universal_1, A]),
+    \+ qqqq(member,A, A_List),
+    A_List_Out = qqqq(append,A_List, [A]),
+    pos_qq([Universal_2, B]),
+    \+ qqqq(member,B, B_List),
+    B_List_Out = qqqq(append,B_List, [B]),
+   qqqq(instantiation_of_predecessor_of_instantiation_B, Universal_1, Universal_2, Rest_A , Rest_B, A_List_Out,B_List_Out).

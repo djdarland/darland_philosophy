@@ -1,0 +1,68 @@
+%% Copyright (C) 2017 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+
+check_arity(1, A, nop, nop) :- A \= nop.
+
+check_arity(2, A, B, nop) :- A \= nop, B \= nop.
+
+check_arity(3, A, B, C) :- A \= nop, B \= nop, C \= nop.
+
+different(A, B) :- A \= B.
+
+apply_predicate(Logical_Form, Type, Arity, Relation, A_object, B_object, C_object) :- apply(Relation, [Logical_Form, A_object, B_object, C_object]).
+
+type_p1(Type, Type_p1) :- Type_p1 is Type + 1.
+type_p2(Type, Type_p2) :- Type_p2 is Type + 2.
+type_p3(Type, Type_p3) :- Type_p3 is Type + 3.
+
+
+write_type(Loc, Type) :- write(Loc), write('Type = '), write( Type), write( '|').
+
+write_time(Ignore) :- write('will be time someday').
+
+
+write_stats(Ignore) :- write('will be stats someday').
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% find_all from Prolog Programming in Depth
+%% by Michael A. Covington, Donald Nute, Andre Vellino
+%% page 164 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% find_all(X, Goal, List)
+%% X contains one or more uninstantiated variables that can also occur in Goal.
+%% (X can be a single uninstantiated variable.)
+%% List is a list of all of the instantiations 
+%% of X with which Goal will succeed.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% find_all(X, Goal, _) :- asserta(find_item('*MARK*')), call(Goal), asserta(find_item(X)), fail.
+
+%% find_all(_, _, List) :- find_collect([], L), !, List = L.
+
+%% find_collect(List1, List2) :- find_next(X), !, find_collect([X | List1], List2).
+
+%% find_collect(List, List).
+
+%% find_next(X) :- retract(find_item(X)), !, different(X, '*MARK*').
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Use swi prolog findall
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+find_all(A, B, C) :- findall(A, B, C).

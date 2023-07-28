@@ -1,0 +1,1567 @@
+% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+%% 
+%%
+%%
+%%
+
+%%    There are only two soets of primitive sort of belief - in ideas
+
+%%    believes_in_ideas( Subject, Time,
+%%		      [Relation_Idea,
+%%		      A_Idea,
+%%		      B_Idea,
+%%		      C_Idea, ... ])
+
+%%    disbelieves_in_ideas( Subject, Time,
+%%		      [Relation_Idea,
+%%		      A_Idea,
+%%		      B_Idea,
+%%		      C_Idea, ... ])
+
+%% The Subject at Time has a belief relation between the Relation_Idea and
+%% The following Ideas.
+
+%% There are 7 relations of both belief and belief_not.
+%% Those of understanding are defined in terms of rrrr and ssss
+%% Those of belief require also a belief_in_ideas relation.
+
+%% The 7 cases are:
+
+%% 1 words
+%% 2 ideas
+%% 3 objects
+
+%% 4 words_ideas
+%% 5 words_objects
+%% 6 ideas_objects
+
+%% 7 words_ideas_objects
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 2
+
+%% top
+
+%% believes_in_ideas -- which all others use
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 2
+
+%% top
+
+%% believes_in_ideas -- which all others use
+
+believes_in_ideas4( Subject, Time, [top, Idea_List]) :-
+%	write(believes_in_ideas4, Idea_List),
+	believes_in_ideas( Subject, Time, Idea_List).
+%	Idea_List_Save = Idea_List,
+%	believes_in_ideas2( Subject, Time,
+%				 [top, Idea_List, Idea_List_Save]).
+
+believes_in_ideas4( Subject, Time, [nand, Idea_List_1, Idea_List_2]) :-
+	Idea_List_Save_1 = Idea_List_1,
+	Idea_List_Save_2 = Idea_List_2,
+	believes_in_ideas3( Subject, Time,
+				  [nand,
+				   Idea_List_1, Idea_List_Save_1,
+				   Idea_List_2, Idea_List_Save_2]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A
+
+believes_in_ideas3( Subject, Time,
+			 [nand,
+			  Idea_List_1, Idea_List_Save_1,
+			  Idea_List_2, Idea_List_Save_2]) :-
+%	write(believes_in_ideas_A),
+%	believes_in_ideas4( Subject, Time, Idea_List_1),
+	Idea_List_Save_1 = Idea_List_1,
+	believes_in_ideas2( Subject, Time,
+				    [top, Idea_List_1, Idea_List_Save_1]).
+%% B 
+believes_in_ideas3( Subject, Time,
+			 [nand,
+			  Idea_List_1, Idea_List_Save_1,
+			  Idea_List_2, Idea_List_Save_2]) :-
+%	write(believes_in_ideas_B),
+%	believes_in_ideas4( Subject, Time, Idea_List_2),
+	Idea_List_Save_2 = Idea_List_2,
+	believes_in_ideas2( Subject, Time,
+				 [top, Idea_List_2, Idea_List_Save_2]).
+
+%% C
+
+believes_in_ideas3( Subject, Time,
+			 [nand,
+			  [nand,
+			   Idea_List_1, Idea_List_Save_1,
+			   Idea_List_2, Idea_List_Save_2],
+			  [top, Idea_List_3, Idea_List_Save_3]]) :-
+%	write(believes_in_ideas_C),
+	believes_in_ideas3( Subject, Time,
+				    [nand,
+				     Idea_List_1, Idea_List_Save_1,
+				     Idea_List_2, Idea_List_Save_2]).
+
+%% D
+believes_in_ideas3( Subject, Time,
+			 [nand,
+			  [nand,
+			   Idea_List_1, Idea_List_Save_1,
+			   Idea_List_2, Idea_List_Save_2],
+			  [top, Idea_List_3, Idea_List_Save_3]]) :-
+%	write(believes_in_ideas_D),
+	believes_in_ideas3( Subject, Time,
+				    [top ,
+				     Idea_List_3, Idea_List_Save_3]).
+
+
+%% E
+believes_in_ideas3( Subject, Time,
+			 [nand, Idea_List_1, Idea_List_Save_1,
+			  [nand,
+			   Idea_List_2, Idea_List_Save_2,
+			   Idea_List_3, Idea_List_Save_3]]) :-
+%	write(believes_in_ideas_E),
+	believes_in_ideas3( Subject, Time,
+				    [top,
+				     Idea_List_1, Idea_List_Save_1]).
+
+%% F
+believes_in_ideas3( Subject, Time,
+			 [nand, Idea_List_1, Idea_List_Save_1,
+			  [nand,
+			   Idea_List_2, Idea_List_Save_2,
+			   Idea_List_3, Idea_List_Save_3]]) :-
+%	write(believes_in_ideas_F),
+	believes_in_ideas3( Subject, Time,
+				    [nand,
+				     Idea_List_2, Idea_List_Save_2,
+				     Idea_List_3, Idea_List_Save_3]).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+believes_in_ideas2( Subject, Time, [top, [Relation_Idea | Idea_List], Idea_List_Save]) :-
+	number_idea(Relation_Idea, singular),
+	ssss2(Subject, Time, Relation_Idea, Relation),
+	match_ideas_objects_belief(Subject, Time, Idea_List , [Relation], Idea_List_Save).
+
+believes_in_ideas2( Subject, Time, [top, [Relation_Idea | Idea_List], Idea_List_Save]) :-
+	number_idea(Relation_Idea, plural),
+	tttt(Subject, Time, Relation_Idea, Relation),
+	match_ideas_objects_belief(Subject, Time, Idea_List , [Relation], Idea_List_Save).
+
+match_ideas_objects(Subject, Time, [], Object_List, Idea_List_Save) :-
+	believes_in_ideas4( Subject, Time, Idea_List_Save).
+	
+match_ideas_objects_belief(Subject, Time, [Idea | Idea_List], Object_List, Idea_List_Save) :-
+	number_idea(Idea, singular),
+	ssss2(Subject, Time, Idea, Object),
+	Object_List_Out = append(Object_List, [Object]),
+	match_ideas_objects_belief(Subject, Time, Idea_List , Object_List_Out, Idea_List_Save).
+	
+match_ideas_objects(Subject, Time, [Idea | Idea_List], Object_List, Idea_List_Save) :-
+	number_idea(Idea, plural),
+	tttt(Subject, Time, Idea, Object),
+	Object_List_Out = append(Object_List, [Object]),
+	match_ideas_objects_belief(Subject, Time, Idea_List , Object_List_Out, Idea_List_Save).
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 1
+
+%% top
+
+believes_words( Subject, Time, [top, [[Relation_Word] | List]]) :-
+	%% list of words
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_word_belief(Subject, Time, List,
+			  Arity, Type - 1, [Relation_Idea]).
+
+%% A
+
+believes_words( Subject, Time, [nand, List_1, List_2]) :-
+	
+%	write(believes_wordsA),
+	\+ believes_words( Subject, Time, [top, List_1]).
+
+%% B
+
+believes_words( Subject, Time, [nand, List_1, List_2]) :-
+%	write(believes_wordsB),
+	\+ believes_words( Subject, Time, [top, List_2]).
+
+%% C
+
+believes_words( Subject, Time, [nand, [nand, List_1, List_2], List_3]) :-
+%	write(believes_wordsC),
+	\+ believes_words( Subject, Time, [nand, List_1, List_2]).
+
+%% D
+
+believes_words( Subject, Time, [nand, [nand, List_1, List_2], List_3]) :-
+%	write(believes_wordsD),
+	\+ believes_words( Subject, Time, [top, List_3]).
+
+%% E
+
+believes_words( Subject, Time, [nand, List_1, [nand, List_2, List_3]]) :-
+%	write(believes_wordsE),
+	\+ believes_words( Subject, Time, [top, List_1]).
+
+%% F
+
+believes_words( Subject, Time, [nand, List_1, [nand, List_2, List_3]]) :-
+%	write(believes_wordsF),
+	\+ believes_words( Subject, Time, [nand, List_2, List_3]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+match_word_belief(Subject, Time, [], 0, Type, Idea_List) :-
+	believes_in_ideas4( Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_word_belief(Subject, Time, [], -999, Idea_List) :-
+	believes_in_ideas4( Subject, Time, [top, Idea_List]).
+
+match_word_belief(Subject, Time,
+		  [[Word] | List],
+		  Arity, Type, Idea_List) :-
+	% List of Word Idea Pair.
+	rrrr( Subject, Time, Word, Idea),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_belief(Subject, Time,
+			  List,
+			  % if Arity is not Arbitrary sub 1
+			  cond(Arity =\= -999, Arity - 1,
+			       -999),
+			  Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 3
+
+%% top singular
+
+believes_objects( Subject, Time, [top, [[Relation] | List]]) :-
+	%% list of idea object Pairs
+	number_idea(Relation_Idea, singular),
+	ssss2( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+%	(Arity =:= length(List) or Arity =:= -999),  
+	type_idea( Relation_Idea, Type),
+	match_object_belief(Subject, Time, List,
+			    Arity, Type - 1, [Relation_Idea]).
+
+%% top plural
+
+believes_objects( Subject, Time, [top, [[Relation] | List]]) :-
+	%% list of idea object Pairs
+	number_idea(Relation_Idea, plural),
+	tttt( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+%	(Arity =:= length(List) or Arity =:= -999),  
+	type_idea( Relation_Idea, Type),
+	match_object_belief(Subject, Time, List,
+			    Arity, Type - 1, [Relation_Idea]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A
+believes_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(believes_objects_A),
+	\+ believes_objects( Subject, Time, [top, List_1]).
+
+%% B
+believes_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(believes_objects_B),
+	\+ believes_objects( Subject, Time, [top, List_2]).
+
+%% C
+believes_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(believes_objects_C),
+	\+ believes_objects( Subject, Time, [nand, List_1, List_2]).
+
+%% D
+believes_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(believes_objects_D),
+	\+ believes_objects( Subject, Time, [top, List_3]).
+
+%% E
+believes_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(believes_objects_E),
+	\+ believes_objects( Subject, Time, [top, List_1]).
+
+%% F
+believes_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(believes_objects_F),
+	\+ believes_objects( Subject, Time, [nand, List_2, List_3]).
+
+%% list of idea object Pairs
+	
+match_object_belief(Subject, Time, [], 0, Type, Idea_List) :- 
+	believes_in_ideas4( Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_object_belief(Subject, Time, [], -999, Idea_List) :-
+	believes_in_ideas4( Subject, Time, [top, Idea_List]).
+
+match_object_belief(Subject, Time,
+		    [[Object] | List],
+		    Arity, Type, Idea_List) :-
+	% List of Objects.
+	number_idea(Idea, singular),
+	ssss2( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_object_belief(Subject, Time,
+			    List,
+			    % if Arity is not Arbitrary sub 1
+			    cond(Arity =\= -999, Arity - 1,
+				 -999),
+			    Type, Idea_List_Out).
+
+match_object_belief(Subject, Time,
+		    [[Object] | List],
+		    Arity, Type, Idea_List) :-
+	% List of Objects.
+	number_idea(Idea, plural),
+	tttt( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_object_belief(Subject, Time,
+			    List,
+			    % if Arity is not Arbitrary sub 1
+			    cond(Arity =\= -999, Arity - 1,
+				 -999),
+			    Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+
+believes_words_ideas( Subject, Time, [top, [[Relation_Word, Relation_Idea] | PairList]]) :-
+%	write(believes_words_ideasA, Relation_Word, Relation_Idea, PairList),
+	%% list of word, idea pairs
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, singular),
+	ssss2( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_word_idea_belief(Subject, Time, PairList,
+			       Arity, Type - 1, [Relation_Idea]).
+
+believes_words_ideas( Subject, Time, [top, [[Relation_Word, Relation_Idea] | PairList]]) :-
+%	write(believes_words_ideasB, Relation_Word, Relation_Idea, PairList),
+	%% list of word, idea pairs
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, plural),
+	tttt( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_word_idea_belief(Subject, Time, PairList,
+			       Arity, Type - 1, [Relation_Idea]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% > believes_words_ideas( tom, now,
+% |         [nand, 
+% |          [[denounced_word, tom_denounced_idea],
+% |           [cicero_word, tom_cicero_idea],
+% |           [catiline_word, tom_catiline_idea]],
+% |          [[denounced_word, tom_denounced_idea],
+% |           [cicero_word, tom_cicero_idea],
+% |           [catiline_word, tom_catiline_idea]]])?
+
+%% A
+
+believes_words_ideas( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(believes_words_ideas_A),
+	\+ believes_words_ideas( Subject, Time, [top, List_1]).
+
+%% B
+believes_words_ideas( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(believes_words_ideas_B),
+	\+ believes_words_ideas( Subject, Time, [top, List_2]).
+
+%% C
+believes_words_ideas( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(believes_words_ideas_C),
+	\+ believes_words_ideas( Subject, Time, [nand, List_1, List_2]).
+
+%% D
+believes_words_ideas( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(believes_words_ideas_D),
+	\+ believes_words_ideas( Subject, Time, [top, List_3]).
+
+%% E
+believes_words_ideas( Subject, Time, [nand, List_1, [nand, List_2, List_3]]) :-
+%	write(believes_words_ideas_E),
+	\+ believes_words_ideas( Subject, Time, [top, List_1]).
+
+%% F
+believes_words_ideas( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+	write(believes_words_ideas_F),
+	\+ believes_words_ideas( Subject, Time, [nand, List_2, List_3]).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+match_word_idea_belief(Subject, Time, [], 0, Type, Idea_List) :-
+	believes_in_ideas4( Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_word_idea_belief(Subject, Time, [], -999, Idea_List) :-
+	believes_in_ideas4( Subject, Time, [top, Idea_List]).
+
+match_word_idea_belief(Subject, Time,
+		       [[Word, Idea] | PairList],
+		       Arity, Type, Idea_List) :-
+	
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, singular),
+	ssss2( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_idea_belief(Subject, Time,
+			       PairList,
+			       % if Arity is not Arbitrary sub 1
+			       cond(Arity =\= -999, Arity - 1,
+				    -999),
+			       Type, Idea_List_Out).
+
+match_word_idea_belief(Subject, Time,
+		       [[Word, Idea] | PairList],
+		       Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, plural),
+	tttt( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_idea_belief(Subject, Time,
+			       PairList,
+			       % if Arity is not Arbitrary sub 1
+			       cond(Arity =\= -999, Arity - 1,
+				    -999),
+			       Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 5
+
+believes_words_objects( Subject, Time, [top, [[Relation_Word, Relation] | Pair_List]]) :-
+	%% list of word, idea object pairs
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, singular),
+	ssss2( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_word_object_belief(Subject, Time, Pair_List,
+			       Arity, Type - 1, [Relation_Idea]).
+
+believes_words_objects( Subject, Time, [top, [[Relation_Word, Relation] | Pair_List]]) :-
+	%% list of word, idea object pairs
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, plural),
+	tttt( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_word_object_belief(Subject, Time, Pair_List,
+			       Arity, Type - 1, [Relation_Idea]).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A
+believes_words_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(believes_words_objects_A),
+	\+ believes_words_objects( Subject, Time, [top, List_1]).
+
+%% B
+believes_words_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(believes_words_objects_B),
+	\+ believes_words_objects( Subject, Time, [top, List_2]).
+
+%% C
+believes_words_objects( Subject, Time, [nand, [nand, List_1 ,List_2], List_3] ) :-
+%	write(believes_words_objects_C),
+	\+ believes_words_objects( Subject, Time, [nand, List_1, List_2]).
+
+%% D
+believes_words_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(believes_words_objects_D),
+	\+ believes_words_objects( Subject, Time, [top, List_3]).
+
+%% E
+believes_words_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(believes_words_objects_E),
+	\+ believes_words_objects( Subject, Time, [top, List_1]).
+
+%% F
+believes_words_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(believes_words_objects_F),
+	\+ believes_words_objects( Subject, Time, [nand, [[Relation_2] | List_2],[nand, [[Relation_3] | List_3]]]).
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+match_word_object_belief(Subject, Time, [], 0, Type, Idea_List) :-
+	believes_in_ideas4( Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_word_object_belief(Subject, Time, [], -999, [top, Idea_List]) :-
+	believes_in_ideas4( Subject, Time, [top, Idea_List]).
+
+match_word_object_belief(Subject, Time,
+			 [[Word, Object] | Pair_List],
+			 Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, singular),
+	ssss2( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_object_belief(Subject, Time,
+				 Pair_List,
+				 % if Arity is not Arbitrary sub 1
+				 cond(Arity =\= -999, Arity - 1,
+				      -999),
+				 Type, Idea_List_Out).
+
+match_word_object_belief(Subject, Time,
+			 [[Word, Object] | Pair_List],
+			 Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, plural),
+	tttt( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_object_belief(Subject, Time,
+				 Pair_List,
+				 % if Arity is not Arbitrary sub 1
+				 cond(Arity =\= -999, Arity - 1,
+				      -999),
+				 Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 6
+
+believes_ideas_objects(Subject, Time, [top, [[Relation_Idea, Relation] | PairList]]) :-
+	%% list of word, idea object triples
+	number_idea(Relation_Idea, singular),
+	ssss2(Subject, Time, Relation_Idea, Relation),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	match_idea_object_belief(Subject, Time, PairList,
+				 Arity, Type - 1, [Relation_Idea]).
+
+believes_ideas_objects(Subject, Time, [top, [[Relation_Idea, Relation] | PairList]]) :-
+	%% list of word, idea object triples
+	number_idea(Relation_Idea, plural),
+	tttt(Subject, Time, Relation_Idea, Relation),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	match_idea_object_belief(Subject, Time, PairList,
+				 Arity, Type - 1, [Relation_Idea]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A
+believes_ideas_objects( Subject, Time, [nand, [List_1, List_2]] ) :-
+%	write(believes_ideas_objects_A),
+	\+ believes_ideas_objects( Subject, Time, [top, List_1]).
+
+%% B
+believes_ideas_objects( Subject, Time, [nand, [List_1, List_2]] ) :-
+%	write(believes_ideas_objects_B),
+	\+ believes_ideas_objects( Subject, Time, [top, List_2]).
+
+%% C
+believes_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(believes_ideas_objects_C),
+	\+ believes_ideas_objects( Subject, Time, [nand, List_1, List_2]).
+
+%% D
+believes_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+	write(believes_ideas_objects_D),
+	\+ believes_ideas_objects( Subject, Time, [top, List_3]).
+
+%% E
+believes_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(believes_ideas_objects_E),
+	\+ believes_ideas_objects( Subject, Time, [top, List_1]).
+
+%% F
+believes_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(believes_ideas_objects_F),
+	\+ believes_ideas_objects( Subject, Time, [nand, List_2, List_3]).
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+match_idea_object_belief(Subject, Time, [], 0, Type, Idea_List) :-
+	believes_in_ideas4(Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_idea_object_belief(Subject, Time, [], Arity, Idea_List) :-
+	Arity =:= -999,
+	believes_in_ideas4(Subject, Time, [top, Idea_List]).
+
+
+
+match_idea_object_belief(Subject, Time,
+			 [[Idea, Object] | PairList],
+			 Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	number_idea(Relation_Idea, singular),
+	ssss2(Subject, Time, Idea, Object),
+	type_idea(Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	Arity > 0,
+	match_idea_object_belief(Subject, Time,
+				 PairList,
+				 % if Arity is not Arbitrary sub 1
+				 cond(Arity =\= -999, Arity - 1,
+				      -999),
+				 Type, Idea_List_Out).
+
+match_idea_object_belief(Subject, Time,
+			 [[Idea, Object] | PairList],
+			 Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	number_idea(Relation_Idea, plural),
+	tttt(Subject, Time, Idea, Object),
+	type_idea(Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	Arity > 0,
+	match_idea_object_belief(Subject, Time,
+				 PairList,
+				 % if Arity is not Arbitrary sub 1
+				 cond(Arity =\= -999, Arity - 1,
+				      -999),
+				 Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 7
+
+believes_words_ideas_objects( Subject, Time, [top, [[Relation_Word, Relation_Idea, Relation] | TripleList]]) :-
+	%% list of word, idea object triples
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, singular),
+	ssss2( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_triple_word_idea_object_belief(Subject, Time, TripleList,
+					     Arity, Type - 1, [Relation_Idea]).
+
+believes_words_ideas_objects( Subject, Time, [top, [[Relation_Word, Relation_Idea, Relation] | TripleList]]) :-
+	%% list of word, idea object triples
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, plural),
+	tttt( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_triple_word_idea_object_belief(Subject, Time, TripleList,
+					     Arity, Type - 1, [Relation_Idea]).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A
+believes_words_ideas_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(believes_words_ideas_objects_A),
+	\+ believes_words_ideas_objects( Subject, Time, [top, List_1]).
+
+%% B
+believes_words_ideas_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(believes_words_ideas_objects_B),
+	\+ believes_words_ideas_objects( Subject, Time, [top, List_2]).
+
+%% C
+believes_words_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(believes_words_ideas_objects_C),
+	\+ believes_words_ideas_objects( Subject, Time, [nand, List_1 ,List_2]).
+
+%% D
+believes_words_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2],List_3] ) :-
+%	write(believes_words_ideas_objects_D),
+	\+ believes_words_ideas_objects( Subject, Time, [top, List_3]).
+
+%% E
+believes_words_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(believes_words_ideas_objects_E),
+	\+ believes_words_ideas_objects( Subject, Time, [top, List_1]).
+
+%% F
+believes_words_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(believes_words_ideas_objects_F),
+	\+ believes_words_ideas_objects( Subject, Time, [nand, List_2 ,List_3]).
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+match_triple_word_idea_object_belief(Subject, Time, [], 0, Type, Idea_List) :-
+	believes_in_ideas4( Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_triple_word_idea_object_belief(Subject, Time, [], -999, Idea_List) :-
+	believes_in_ideas4( Subject, Time, [top, Idea_List]).
+
+match_triple_word_idea_object_belief(Subject, Time,
+				     [[Word, Idea, Object] | TripleList],
+				     Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, singular),
+	ssss2( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_triple_word_idea_object_belief(Subject, Time,
+					     TripleList,
+					     % if Arity is not Arbitrary sub 1
+					     cond(Arity =\= -999, Arity - 1,
+						  -999),
+					     Type, Idea_List_Out).
+
+match_triple_word_idea_object_belief(Subject, Time,
+				     [[Word, Idea, Object] | TripleList],
+				     Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, plural),
+	tttt( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_triple_word_idea_object_belief(Subject, Time,
+					     TripleList,
+					     % if Arity is not Arbitrary sub 1
+					     cond(Arity =\= -999, Arity - 1,
+						  -999),
+					     Type, Idea_List_Out).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 1 words
+%% 2 ideas
+%% 3 objects
+
+%% 4 words_ideas
+%% 5 words_objects
+%% 6 ideas_objects
+
+%% 7 words_ideas_objects
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Now Contradicting true beliefs!!
+
+%% 1
+contradicts_true_words( Subject, Time, List) :-
+	believes_words( Subject, Time, List),
+	disbelieves_words( Subject, Time, List).
+
+%% 2
+contradicts_true_ideas( Subject, Time, List) :-
+	believes_in_ideas( Subject, Time, List),
+	disbelieves_in_ideas( Subject, Time, List).
+
+%% 3
+contradicts_true_objects( Subject, Time, List) :-
+	believes_objects( Subject, Time, List),
+	disbelieves_objects( Subject, Time, List).
+
+%% 4
+contradicts_true_words_ideas( Subject, Time, Pair_List) :-
+	believes_words_ideas( Subject, Time, Pair_List),
+	disbelieves_words_ideas( Subject, Time, Pair_List).
+
+%% 5
+contradicts_true_words_objects( Subject, Time, Pair_List) :-
+	believes_words_objects( Subject, Time, Pair_List),
+	disbelieves_words_objects( Subject, Time, Pair_List).
+
+%% 6
+contradicts_true_ideas_objects( Subject, Time, Pair_List) :-
+	believes_ideas_objects( Subject, Time, Pair_List),
+	disbelieves_ideas_objects( Subject, Time, Pair_List).
+
+%% 7
+contradicts_true_words_ideas_objects( Subject, Time, Triple_List) :-
+	believes_words_ideas_objects( Subject, Time, Triple_List),
+	disbelieves_words_ideas_objects( Subject, Time, Triple_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% DIS
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 2
+
+%% top
+
+%% disbelieves_in_ideas -- which all others use
+
+disbelieves_in_ideas4( Subject, Time, [top, Idea_List]) :-
+	disbelieves_in_ideas( Subject, Time, Idea_List),
+	Idea_List_Save = Idea_List,
+	disbelieves_in_ideas2( Subject, Time,
+				 [top, Idea_List, Idea_List_Save]).
+
+disbelieves_in_ideas4( Subject, Time, [nand, Idea_List_1, Idea_List_2]) :-
+	Idea_List_Save_1 = Idea_List_1,
+	Idea_List_Save_2 = Idea_List_2,
+	disbelieves_in_ideas3( Subject, Time,
+				  [nand,
+				   Idea_List_1, Idea_List_Save_1,
+				   Idea_List_2, Idea_List_Save_2]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A
+
+disbelieves_in_ideas3( Subject, Time,
+			 [nand,
+			  Idea_List_1, Idea_List_Save_1,
+			  Idea_List_2, Idea_List_Save_2]) :-
+%	write(disbelieves_in_ideas_A),
+%	disbelieves_in_ideas4( Subject, Time, Idea_List_1),
+	Idea_List_Save_1 = Idea_List_1,
+	\+ disbelieves_in_ideas2( Subject, Time,
+				    [top, Idea_List_1, Idea_List_Save_1]).
+%% B 
+disbelieves_in_ideas3( Subject, Time,
+			 [nand,
+			  Idea_List_1, Idea_List_Save_1,
+			  Idea_List_2, Idea_List_Save_2]) :-
+%	write(disbelieves_in_ideas_B),
+%	disbelieves_in_ideas4( Subject, Time, Idea_List_2),
+	Idea_List_Save_2 = Idea_List_2,
+	\+ disbelieves_in_ideas2( Subject, Time,
+				 [top, Idea_List_2, Idea_List_Save_2]).
+
+%% C
+
+disbelieves_in_ideas3( Subject, Time,
+			 [nand,
+			  [nand,
+			   Idea_List_1, Idea_List_Save_1,
+			   Idea_List_2, Idea_List_Save_2],
+			  [top, Idea_List_3, Idea_List_Save_3]]) :-
+%	write(disbelieves_in_ideas_C),
+	\+ disbelieves_in_ideas3( Subject, Time,
+				    [nand,
+				     Idea_List_1, Idea_List_Save_1,
+				     Idea_List_2, Idea_List_Save_2]).
+
+%% D
+disbelieves_in_ideas3( Subject, Time,
+			 [nand,
+			  [nand,
+			   Idea_List_1, Idea_List_Save_1,
+			   Idea_List_2, Idea_List_Save_2],
+			  [top, Idea_List_3, Idea_List_Save_3]]) :-
+%	write(disbelieves_in_ideas_D),
+	\+ disbelieves_in_ideas3( Subject, Time,
+				    [top ,
+				     Idea_List_3, Idea_List_Save_3]).
+
+
+%% E
+disbelieves_in_ideas3( Subject, Time,
+			 [nand, Idea_List_1, Idea_List_Save_1,
+			  [nand,
+			   Idea_List_2, Idea_List_Save_2,
+			   Idea_List_3, Idea_List_Save_3]]) :-
+%	write(disbelieves_in_ideas_E),
+	\+ disbelieves_in_ideas3( Subject, Time,
+				    [top,
+				     Idea_List_1, Idea_List_Save_1]).
+
+%% F
+disbelieves_in_ideas3( Subject, Time,
+			 [nand, Idea_List_1, Idea_List_Save_1,
+			  [nand,
+			   Idea_List_2, Idea_List_Save_2,
+			   Idea_List_3, Idea_List_Save_3]]) :-
+%	write(disbelieves_in_ideas_F),
+	\+ disbelieves_in_ideas3( Subject, Time,
+				    [nand,
+				     Idea_List_2, Idea_List_Save_2,
+				     Idea_List_3, Idea_List_Save_3]).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+disbelieves_in_ideas2( Subject, Time, [top, [Relation_Idea | Idea_List], Idea_List_Save]) :-
+	number_idea(Relation_Idea, singular),
+	ssss2(Subject, Time, Relation_Idea, Relation),
+	match_ideas_objects_disbelief(Subject, Time, Idea_List , [Relation], Idea_List_Save).
+
+disbelieves_in_ideas2( Subject, Time, [top, [Relation_Idea | Idea_List], Idea_List_Save]) :-
+	number_idea(Relation_Idea, plural),
+	tttt(Subject, Time, Relation_Idea, Relation),
+	match_ideas_objects_disbelief(Subject, Time, Idea_List , [Relation], Idea_List_Save).
+
+match_ideas_objects_disbelief(Subject, Time, [], Object_List, Idea_List_Save) :-
+	disbelieves_in_ideas4( Subject, Time, Idea_List_Save),
+	qqqq4(Object_List).  %% qqqq4 indicates fact
+	
+match_ideas_objects(Subject, Time, [Idea | Idea_List], Object_List, Idea_List_Save) :-
+	number_idea(Idea, singular),
+	ssss2(Subject, Time, Idea, Object),
+	Object_List_Out = append(Object_List, [Object]),
+	match_ideas_objects_disbelief(Subject, Time, Idea_List , Object_List_Out, Idea_List_Save).
+	
+match_ideas_objects(Subject, Time, [Idea | Idea_List], Object_List, Idea_List_Save) :-
+	number_idea(Idea, plural),
+	tttt(Subject, Time, Idea, Object),
+	Object_List_Out = append(Object_List, [Object]),
+	match_ideas_objects_disbelief(Subject, Time, Idea_List , Object_List_Out, Idea_List_Save).
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 1
+
+%% top
+
+disbelieves_words( Subject, Time, [top, [[Relation_Word] | List]]) :-
+	%% list of words
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_word_disbelief(Subject, Time, List,
+			  Arity, Type - 1, [Relation_Idea]).
+
+%% A
+
+disbelieves_words( Subject, Time, [nand, List_1, List_2]) :-
+	
+%	write(disbelieves_wordsA),
+	\+ disbelieves_words( Subject, Time, [top, List_1]).
+
+%% B
+
+disbelieves_words( Subject, Time, [nand, List_1, List_2]) :-
+%	write(disbelieves_wordsB),
+	\+ disbelieves_words( Subject, Time, [top, List_2]).
+
+%% C
+
+disbelieves_words( Subject, Time, [nand, [nand, List_1, List_2], List_3]) :-
+%	write(disbelieves_wordsC),
+	\+ disbelieves_words( Subject, Time, [nand, List_1, List_2]).
+
+%% D
+
+disbelieves_words( Subject, Time, [nand, [nand, List_1, List_2], List_3]) :-
+%	write(disbelieves_wordsD),
+	\+ disbelieves_words( Subject, Time, [top, List_3]).
+
+%% E
+
+disbelieves_words( Subject, Time, [nand, List_1, [nand, List_2, List_3]]) :-
+%	write(disbelieves_wordsE),
+	\+ disbelieves_words( Subject, Time, [top, List_1]).
+
+%% F
+
+disbelieves_words( Subject, Time, [nand, List_1, [nand, List_2, List_3]]) :-
+%	write(disbelieves_wordsF),
+	\+ disbelieves_words( Subject, Time, [nand, List_2, List_3]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+match_word_disbelief(Subject, Time, [], 0, Type, Idea_List) :-
+	disbelieves_in_ideas4( Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_word_disbelief(Subject, Time, [], -999, Idea_List) :-
+	disbelieves_in_ideas4( Subject, Time, [top, Idea_List]).
+
+match_word_disbelief(Subject, Time,
+		  [[Word] | List],
+		  Arity, Type, Idea_List) :-
+	% List of Word Idea Pair.
+	rrrr( Subject, Time, Word, Idea),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_disbelief(Subject, Time,
+			  List,
+			  % if Arity is not Arbitrary sub 1
+			  cond(Arity =\= -999, Arity - 1,
+			       -999),
+			  Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 3
+
+%% top singular
+
+disbelieves_objects( Subject, Time, [top, [[Relation] | List]]) :-
+	%% list of idea object Pairs
+	number_idea(Relation_Idea, singular),
+	ssss2( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+%	(Arity =:= length(List) or Arity =:= -999),  
+	type_idea( Relation_Idea, Type),
+	match_object_disbelief(Subject, Time, List,
+			    Arity, Type - 1, [Relation_Idea]).
+
+%% top plural
+
+disbelieves_objects( Subject, Time, [top, [[Relation] | List]]) :-
+	%% list of idea object Pairs
+	number_idea(Relation_Idea, plural),
+	tttt( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+%	(Arity =:= length(List) or Arity =:= -999),  
+	type_idea( Relation_Idea, Type),
+	match_object_disbelief(Subject, Time, List,
+			    Arity, Type - 1, [Relation_Idea]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% A
+qqqq6([nand, Prop_1, Prop_2]) :-
+	qqqq5(Prop_1).
+%% B
+qqqq6([nand, Prop_1, Prop_2]) :-
+	qqqq5(Prop_2).
+%% C	
+qqqq6([nand, [nand, Prop_1, Prop_2], Prop_3]) :-
+	\+ qqqq6([nand, Prop_1, Prop_2]).
+
+%% D
+qqqq6([nand, [nand, Prop_1, Prop_2], Prop_3]) :-
+	qqqq5([Prop_3]).
+%% E
+qqqq6([nand, [Prop_1], [nand, Prop_2, Prop_3]]) :-
+	qqqq5([Prop_1]).
+%% F	
+qqqq6([nand, [Prop_1], [nand, Prop_2, Prop_3]]) :-
+	\+ qqqq6([nand, Prop_2, Prop_3]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A
+disbelieves_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(disbelieves_objects_A),
+	\+ disbelieves_objects( Subject, Time, [top, List_1]).
+
+%% B
+disbelieves_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(disbelieves_objects_B),
+	\+ disbelieves_objects( Subject, Time, [top, List_2]).
+
+%% C
+disbelieves_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(disbelieves_objects_C),
+	\+ disbelieves_objects( Subject, Time, [nand, List_1, List_2]).
+
+%% D
+disbelieves_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(disbelieves_objects_D),
+	\+ disbelieves_objects( Subject, Time, [top, List_3]).
+
+%% E
+disbelieves_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(disbelieves_objects_E),
+	\+ disbelieves_objects( Subject, Time, [top, List_1]).
+
+%% F
+disbelieves_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(disbelieves_objects_F),
+	\+ disbelieves_objects( Subject, Time, [nand, List_2, List_3]).
+
+%% list of idea object Pairs
+	
+match_object_disbelief(Subject, Time, [], 0, Type, Idea_List) :- 
+	disbelieves_in_ideas4( Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_object_disbelief(Subject, Time, [], -999, Idea_List) :-
+	disbelieves_in_ideas4( Subject, Time, [top, Idea_List]).
+
+match_object_disbelief(Subject, Time,
+		    [[Object] | List],
+		    Arity, Type, Idea_List) :-
+	% List of Objects.
+	number_idea(Idea, singular),
+	ssss2( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_object_disbelief(Subject, Time,
+			    List,
+			    % if Arity is not Arbitrary sub 1
+			    cond(Arity =\= -999, Arity - 1,
+				 -999),
+			    Type, Idea_List_Out).
+
+match_object_disbelief(Subject, Time,
+		    [[Object] | List],
+		    Arity, Type, Idea_List) :-
+	% List of Objects.
+	number_idea(Idea, plural),
+	tttt( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_object_disbelief(Subject, Time,
+			    List,
+			    % if Arity is not Arbitrary sub 1
+			    cond(Arity =\= -999, Arity - 1,
+				 -999),
+			    Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+
+disbelieves_words_ideas( Subject, Time, [top, [[Relation_Word, Relation_Idea] | PairList]]) :-
+%	write(disbelieves_words_ideasA, Relation_Word, Relation_Idea, PairList),
+	%% list of word, idea pairs
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, singular),
+	ssss2( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_word_idea_disbelief(Subject, Time, PairList,
+			       Arity, Type - 1, [Relation_Idea]).
+
+disbelieves_words_ideas( Subject, Time, [top, [[Relation_Word, Relation_Idea] | PairList]]) :-
+%	write(disbelieves_words_ideasB, Relation_Word, Relation_Idea, PairList),
+	%% list of word, idea pairs
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, plural),
+	tttt( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_word_idea_disbelief(Subject, Time, PairList,
+			       Arity, Type - 1, [Relation_Idea]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% > disbelieves_words_ideas( tom, now,
+% |         [nand, 
+% |          [[denounced_word, tom_denounced_idea],
+% |           [cicero_word, tom_cicero_idea],
+% |           [catiline_word, tom_catiline_idea]],
+% |          [[denounced_word, tom_denounced_idea],
+% |           [cicero_word, tom_cicero_idea],
+% |           [catiline_word, tom_catiline_idea]]])?
+
+%% A
+
+disbelieves_words_ideas( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(disbelieves_words_ideas_A),
+	\+ disbelieves_words_ideas( Subject, Time, [top, List_1]).
+
+%% B
+disbelieves_words_ideas( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(disbelieves_words_ideas_B),
+	\+ disbelieves_words_ideas( Subject, Time, [top, List_2]).
+
+%% C
+disbelieves_words_ideas( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(disbelieves_words_ideas_C),
+	\+ disbelieves_words_ideas( Subject, Time, [nand, List_1, List_2]).
+
+%% D
+disbelieves_words_ideas( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(disbelieves_words_ideas_D),
+	\+ disbelieves_words_ideas( Subject, Time, [top, List_3]).
+
+%% E
+disbelieves_words_ideas( Subject, Time, [nand, List_1, [nand, List_2, List_3]]) :-
+%	write(disbelieves_words_ideas_E),
+	\+ disbelieves_words_ideas( Subject, Time, [top, List_1]).
+
+%% F
+disbelieves_words_ideas( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(disbelieves_words_ideas_F),
+	\+ disbelieves_words_ideas( Subject, Time, [nand, List_2, List_3]).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+match_word_idea_disbelief(Subject, Time, [], 0, Type, Idea_List) :-
+	disbelieves_in_ideas4( Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_word_idea_disbelief(Subject, Time, [], -999, Idea_List) :-
+	disbelieves_in_ideas4( Subject, Time, [top, Idea_List]).
+
+match_word_idea_disbelief(Subject, Time,
+		       [[Word, Idea] | PairList],
+		       Arity, Type, Idea_List) :-
+	
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, singular),
+	ssss2( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_idea_disbelief(Subject, Time,
+			       PairList,
+			       % if Arity is not Arbitrary sub 1
+			       cond(Arity =\= -999, Arity - 1,
+				    -999),
+			       Type, Idea_List_Out).
+
+match_word_idea_disbelief(Subject, Time,
+		       [[Word, Idea] | PairList],
+		       Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, plural),
+	tttt( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_idea_disbelief(Subject, Time,
+			       PairList,
+			       % if Arity is not Arbitrary sub 1
+			       cond(Arity =\= -999, Arity - 1,
+				    -999),
+			       Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 5
+
+disbelieves_words_objects( Subject, Time, [top, [[Relation_Word, Relation] | Pair_List]]) :-
+	%% list of word, idea object pairs
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, singular),
+	ssss2( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_word_object_disbelief(Subject, Time, Pair_List,
+			       Arity, Type - 1, [Relation_Idea]).
+
+disbelieves_words_objects( Subject, Time, [top, [[Relation_Word, Relation] | Pair_List]]) :-
+	%% list of word, idea object pairs
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, plural),
+	tttt( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_word_object_disbelief(Subject, Time, Pair_List,
+			       Arity, Type - 1, [Relation_Idea]).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A
+disbelieves_words_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(disbelieves_words_objects_A),
+	\+ disbelieves_words_objects( Subject, Time, [top, List_1]).
+
+%% B
+disbelieves_words_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(disbelieves_words_objects_B),
+	\+ disbelieves_words_objects( Subject, Time, [top, List_2]).
+
+%% C
+disbelieves_words_objects( Subject, Time, [nand, [nand, List_1 ,List_2], List_3] ) :-
+%	write(disbelieves_words_objects_C),
+	\+ disbelieves_words_objects( Subject, Time, [nand, List_1, List_2]).
+
+%% D
+disbelieves_words_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(disbelieves_words_objects_D),
+	\+ disbelieves_words_objects( Subject, Time, [top, List_3]).
+
+%% E
+disbelieves_words_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(disbelieves_words_objects_E),
+	\+ disbelieves_words_objects( Subject, Time, [top, List_1]).
+
+%% F
+disbelieves_words_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(disbelieves_words_objects_F),
+	\+ disbelieves_words_objects( Subject, Time, [nand, [[Relation_2] | List_2],[nand, [[Relation_3] | List_3]]]).
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+match_word_object_disbelief(Subject, Time, [], 0, Type, Idea_List) :-
+	disbelieves_in_ideas4( Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_word_object_disbelief(Subject, Time, [], -999, [top, Idea_List]) :-
+	disbelieves_in_ideas4( Subject, Time, [top, Idea_List]).
+
+match_word_object_disbelief(Subject, Time,
+			 [[Word, Object] | Pair_List],
+			 Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, singular),
+	ssss2( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_object_disbelief(Subject, Time,
+				 Pair_List,
+				 % if Arity is not Arbitrary sub 1
+				 cond(Arity =\= -999, Arity - 1,
+				      -999),
+				 Type, Idea_List_Out).
+
+match_word_object_disbelief(Subject, Time,
+			 [[Word, Object] | Pair_List],
+			 Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, plural),
+	tttt( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_word_object_disbelief(Subject, Time,
+				 Pair_List,
+				 % if Arity is not Arbitrary sub 1
+				 cond(Arity =\= -999, Arity - 1,
+				      -999),
+				 Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 6
+
+disbelieves_ideas_objects(Subject, Time, [top, [[Relation_Idea, Relation] | PairList]]) :-
+	%% list of word, idea object triples
+	number_idea(Relation_Idea, singular),
+	ssss2(Subject, Time, Relation_Idea, Relation),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	match_idea_object_disbelief(Subject, Time, PairList,
+				 Arity, Type - 1, [Relation_Idea]).
+
+disbelieves_ideas_objects(Subject, Time, [top, [[Relation_Idea, Relation] | PairList]]) :-
+	%% list of word, idea object triples
+	number_idea(Relation_Idea, plural),
+	tttt(Subject, Time, Relation_Idea, Relation),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	match_idea_object_disbelief(Subject, Time, PairList,
+				 Arity, Type - 1, [Relation_Idea]).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A
+disbelieves_ideas_objects( Subject, Time, [nand, [List_1, List_2]] ) :-
+%	write(disbelieves_ideas_objects_A),
+	\+ disbelieves_ideas_objects( Subject, Time, [top, List_1]).
+
+%% B
+disbelieves_ideas_objects( Subject, Time, [nand, [List_1, List_2]] ) :-
+%	write(disbelieves_ideas_objects_B),
+	\+ disbelieves_ideas_objects( Subject, Time, [top, List_2]).
+
+%% C
+disbelieves_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(disbelieves_ideas_objects_C),
+	\+ disbelieves_ideas_objects( Subject, Time, [nand, List_1, List_2]).
+
+%% D
+disbelieves_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(disbelieves_ideas_objects_D),
+	\+ disbelieves_ideas_objects( Subject, Time, [top, List_3]).
+
+%% E
+disbelieves_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(disbelieves_ideas_objects_E),
+	\+ disbelieves_ideas_objects( Subject, Time, [top, List_1]).
+
+%% F
+disbelieves_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(disbelieves_ideas_objects_F),
+	\+ disbelieves_ideas_objects( Subject, Time, [nand, List_2, List_3]).
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+match_idea_object_disbelief(Subject, Time, [], 0, Type, Idea_List) :-
+	disbelieves_in_ideas4(Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_idea_object_disbelief(Subject, Time, [], Arity, Idea_List) :-
+	Arity =:= -999,
+	disbelieves_in_ideas4(Subject, Time, [top, Idea_List]).
+
+
+
+match_idea_object_disbelief(Subject, Time,
+			 [[Idea, Object] | PairList],
+			 Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	number_idea(Relation_Idea, singular),
+	ssss2(Subject, Time, Idea, Object),
+	type_idea(Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	Arity > 0,
+	match_idea_object_disbelief(Subject, Time,
+				 PairList,
+				 % if Arity is not Arbitrary sub 1
+				 cond(Arity =\= -999, Arity - 1,
+				      -999),
+				 Type, Idea_List_Out).
+
+match_idea_object_disbelief(Subject, Time,
+			 [[Idea, Object] | PairList],
+			 Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	number_idea(Relation_Idea, plural),
+	tttt(Subject, Time, Idea, Object),
+	type_idea(Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	Arity > 0,
+	match_idea_object_disbelief(Subject, Time,
+				 PairList,
+				 % if Arity is not Arbitrary sub 1
+				 cond(Arity =\= -999, Arity - 1,
+				      -999),
+				 Type, Idea_List_Out).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 7
+
+disbelieves_words_ideas_objects( Subject, Time, [top, [[Relation_Word, Relation_Idea, Relation] | TripleList]]) :-
+	%% list of word, idea object triples
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, singular),
+	ssss2( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_triple_word_idea_object_disbelief(Subject, Time, TripleList,
+					     Arity, Type - 1, [Relation_Idea]).
+
+disbelieves_words_ideas_objects( Subject, Time, [top, [[Relation_Word, Relation_Idea, Relation] | TripleList]]) :-
+	%% list of word, idea object triples
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+	number_idea(Relation_Idea, plural),
+	tttt( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_triple_word_idea_object_disbelief(Subject, Time, TripleList,
+					     Arity, Type - 1, [Relation_Idea]).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% A
+disbelieves_words_ideas_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(disbelieves_words_ideas_objects_A),
+	\+ disbelieves_words_ideas_objects( Subject, Time, [top, List_1]).
+
+%% B
+disbelieves_words_ideas_objects( Subject, Time, [nand, List_1, List_2] ) :-
+%	write(disbelieves_words_ideas_objects_B),
+	\+ disbelieves_words_ideas_objects( Subject, Time, [top, List_2]).
+
+%% C
+disbelieves_words_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2], List_3] ) :-
+%	write(disbelieves_words_ideas_objects_C),
+	\+ disbelieves_words_ideas_objects( Subject, Time, [nand, List_1 ,List_2]).
+
+%% D
+disbelieves_words_ideas_objects( Subject, Time, [nand, [nand, List_1, List_2],List_3] ) :-
+%	write(disbelieves_words_ideas_objects_D),
+	\+ disbelieves_words_ideas_objects( Subject, Time, [top, List_3]).
+
+%% E
+disbelieves_words_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(disbelieves_words_ideas_objects_E),
+	\+ disbelieves_words_ideas_objects( Subject, Time, [top, List_1]).
+
+%% F
+disbelieves_words_ideas_objects( Subject, Time, [nand, List_1, [nand, List_2, List_3]] ) :-
+%	write(disbelieves_words_ideas_objects_F),
+	\+ disbelieves_words_ideas_objects( Subject, Time, [nand, List_2 ,List_3]).
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+match_triple_word_idea_object_disbelief(Subject, Time, [], 0, Type, Idea_List) :-
+	disbelieves_in_ideas4( Subject, Time, [top, Idea_List]).
+
+%% -999 indicates arbitrary arity.
+match_triple_word_idea_object_disbelief(Subject, Time, [], -999, Idea_List) :-
+	disbelieves_in_ideas4( Subject, Time, [top, Idea_List]).
+
+match_triple_word_idea_object_disbelief(Subject, Time,
+				     [[Word, Idea, Object] | TripleList],
+				     Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, singular),
+	ssss2( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_triple_word_idea_object_disbelief(Subject, Time,
+					     TripleList,
+					     % if Arity is not Arbitrary sub 1
+					     cond(Arity =\= -999, Arity - 1,
+						  -999),
+					     Type, Idea_List_Out).
+
+match_triple_word_idea_object_disbelief(Subject, Time,
+				     [[Word, Idea, Object] | TripleList],
+				     Arity, Type, Idea_List) :-
+	% List of Word Idea Object Triple.
+	rrrr( Subject, Time, Word, Idea),
+	number_idea(Idea, plural),
+	tttt( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	Idea_List_Out = append(Idea_List, [Idea]),
+	match_triple_word_idea_object_disbelief(Subject, Time,
+					     TripleList,
+					     % if Arity is not Arbitrary sub 1
+					     cond(Arity =\= -999, Arity - 1,
+						  -999),
+					     Type, Idea_List_Out).
+

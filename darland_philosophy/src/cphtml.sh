@@ -1,0 +1,100 @@
+# cp sample.txt ../DarlandPhilosophyLife/HTML/sample.txt
+cd ../D*er
+cp FACTS3/facts_0031.wlr HTML/FACTS3/facts_0031.wlr.txt
+cp FACTS3/facts_0033.wlr HTML/FACTS3/facts_0033.wlr.txt
+# cp FACTS2pre/facts_0071.lf HTML/FACTS2pre/facts_0071.lf.txt
+# cp FACTS2pre/factsgen.icn HTML/FACTS2pre/factsgen.icn.txt
+# cp FACTS2pre/result.in HTML/FACTS2pre/results.in.txt
+# cp FACTS2pre/facts.out HTML/FACTS2pre/facts.out.txt
+cp IN3/darland_0031.wlr HTML/IN3/darland_0031.wlr.txt
+cp IN3/darland_0032.wlr HTML/IN3/darland_0032.wlr.txt
+cp IN3/darland_0033.wlr HTML/IN3/darland_0033.wlr.txt
+cp IN3/darland_0034.wlr HTML/IN3/darland_0034.wlr.txt
+# cp IN2pre/darland_0034.lf HTML/IN2pre/darland_0034.lf.txt
+# cp IN2pre/darland_0035.lf HTML/IN2pre/darland_0035.lf.txt
+# cp IN2pre/darland_0036.lf HTML/IN2pre/darland_0036.lf.txt
+# cp IN2pre/darland_0037.lf HTML/IN2pre/darland_0037.lf.txt
+# cp IN2pre/darland_0038.lf HTML/IN2pre/darland_0038.lf.txt
+# cp IN2pre/darland_0039.lf HTML/IN2pre/darland_0039.lf.txt
+# cp IN2pre/darland_0040.lf HTML/IN2pre/darland_0040.lf.txt
+# cp IN2pre/darland_0042.lf HTML/IN2pre/darland_0042.lf.txt
+# cp IN2pre/darland_0045.lf HTML/IN2pre/darland_0045.lf.txt
+# cp IN2pre/darland_0046.lf HTML/IN2pre/darland_0046.lf.txt
+# cp IN2pre/darland_0047.lf HTML/IN2pre/darland_0047.lf.txt
+# cp IN2pre/darland_0048.lf HTML/IN2pre/darland_0048.lf.txt
+# cp IN2pre/darland_0061.lf HTML/IN2pre/darland_0061.lf.txt
+# cp IN2pre/darland_0063.lf HTML/IN2pre/darland_0063.lf.txt
+# cp IN2pre/darland_0071.lf HTML/IN2pre/darland_0071.lf.txt
+# cp IN2pre/darland_0072.lf HTML/IN2pre/darland_0072.lf.txt
+# cp IN2pre/darland_0073.lf HTML/IN2pre/darland_0073.lf.txt
+# cp IN2pre/darland_0074.lf HTML/IN2pre/darland_0074.lf.txt
+# cp IN2pre/darland_0075.lf HTML/IN2pre/darland_0075.lf.txt
+# cp IN2pre/darland_0076.lf HTML/IN2pre/darland_0076.lf.txt
+# cp IN2pre/darland_0077.lf HTML/IN2pre/darland_0077.lf.txt
+# cp IN2pre/darland_0078.lf HTML/IN2pre/darland_0078.lf.txt
+cp OUT2/darland_0031.out HTML/OUT3/darland_0031.out.txt
+cp OUT2/darland_0032.out HTML/OUT3/darland_0032.out.txt
+cp OUT2/darland_0033.out HTML/OUT3/darland_0033.out.txt
+cp OUT2/darland_0034.out HTML/OUT3/darland_0034.out.txt
+# cp OUT2/darland_0034.out HTML/OUT2/darland_0034.out.txt
+# cp OUT2/darland_0035.out HTML/OUT2/darland_0035.out.txt
+# cp OUT2/darland_0036.out HTML/OUT2/darland_0036.out.txt
+# cp OUT2/darland_0037.out HTML/OUT2/darland_0037.out.txt
+# cp OUT2/darland_0038.out HTML/OUT2/darland_0038.out.txt
+# cp OUT2/darland_0039.out HTML/OUT2/darland_0039.out.txt
+# cp OUT2/darland_0040.out HTML/OUT2/darland_0040.out.txt
+# cp OUT2/darland_0042.out HTML/OUT2/darland_0042.out.txt
+# cp OUT2/darland_0045.out HTML/OUT2/darland_0045.out.txt
+# cp OUT2/darland_0046.out HTML/OUT2/darland_0046.out.txt
+# cp OUT2/darland_0047.out HTML/OUT2/darland_0047.out.txt
+# cp OUT2/darland_0048.out HTML/OUT2/darland_0048.out.txt
+# cp OUT2/darland_0061.out HTML/OUT2/darland_0061.out.txt
+# cp OUT2/darland_0062.out HTML/OUT2/darland_0062.out.txt
+# cp OUT2/darland_0063.out HTML/OUT2/darland_0063.out.txt
+# cp OUT2/darland_0065.out HTML/OUT2/darland_0065.out.txt
+# cp OUT2/darland_0066.out HTML/OUT2/darland_0066.out.txt
+# cp OUT2/darland_0067B.out HTML/OUT2/darland_0067B.out.txt
+# cp OUT2/darland_0067C.out HTML/OUT2/darland_0067C.out.txt
+# cp OUT2/darland_0067D.out HTML/OUT2/darland_0067D.out.txt
+# cp OUT2/darland_0071.out HTML/OUT2/darland_0071.out.txt
+# cp OUT2/darland_0072.out HTML/OUT2/darland_0072.out.txt
+# cp OUT2/darland_0073.out HTML/OUT2/darland_0073.out.txt
+# cp OUT2/darland_0074.out HTML/OUT2/darland_0074.out.txt
+# cp OUT2/darland_0075.out HTML/OUT2/darland_0075.out.txt
+# cp OUT2/darland_0076.out HTML/OUT2/darland_0076.out.txt
+# cp OUT2/darland_0077.out HTML/OUT2/darland_0077.out.txt
+# cp OUT2/darland_0078.out HTML/OUT2/darland_0078.out.txt
+cp RULES3/life_0001.lf HTML/RULES3/life_0001.lf.txt
+cp RULES3/rules_0031.wlr HTML/RULES3/rules_0031.wlr.txt
+cp RULES3/rules_0032.wlr HTML/RULES3/rules_0032.wlr.txt
+cp RULES3/rules_0033.wlr HTML/RULES3/rules_0033.wlr.txt
+cp RULES3/rules_0034.wlr HTML/RULES3/rules_0034.wlr.txt
+# cp RULES2/rules_0034.lf HTML/RULES2/rules_0034.lf.txt
+# cp RULES2/rules_0035.lf HTML/RULES2/rules_0035.lf.txt
+# cp RULES2/rules_0036.lf HTML/RULES2/rules_0036.lf.txt
+# cp RULES2/rules_0037.lf HTML/RULES2/rules_0037.lf.txt
+# cp RULES2/rules_0038.lf HTML/RULES2/rules_0038.lf.txt
+# cp RULES2/rules_0039.lf HTML/RULES2/rules_0039.lf.txt
+# cp RULES2/rules_0040.lf HTML/RULES2/rules_0040.lf.txt
+# cp RULES2/rules_0042.lf HTML/RULES2/rules_0042.lf.txt
+# cp RULES2/rules_0043.lf HTML/RULES2/rules_0043.lf.txt
+# cp RULES2/rules_0045.lf HTML/RULES2/rules_0045.lf.txt
+# cp RULES2/rules_0046.lf HTML/RULES2/rules_0046.lf.txt
+# cp RULES2/rules_0047.lf HTML/RULES2/rules_0047.lf.txt
+# cp RULES2/rules_0048.lf HTML/RULES2/rules_0048.lf.txt
+# cp RULES2/rules_0061.lf HTML/RULES2/rules_0061.lf.txt
+# cp RULES2/rules_0062.lf HTML/RULES2/rules_0062.lf.txt
+# cp RULES2/rules_0063.lf HTML/RULES2/rules_0063.lf.txt
+# cp RULES2/rules_0064.lf HTML/RULES2/rules_0064.lf.txt
+# cp RULES2/rules_0065.lf HTML/RULES2/rules_0065.lf.txt
+# cp RULES2/rules_0071.lf HTML/RULES2/rules_0071.lf.txt
+# cp RULES2/rules_0072.lf HTML/RULES2/rules_0072.lf.txt
+# cp RULES2/rules_0073.lf HTML/RULES2/rules_0073.lf.txt
+# cp RULES2/rules_0074.lf HTML/RULES2/rules_0074.lf.txt
+# cp RULES2/rules_0075.lf HTML/RULES2/rules_0075.lf.txt
+# cp RULES2/rules_0076.lf HTML/RULES2/rules_0076.lf.txt
+# cp RULES2/rules_0077.lf HTML/RULES2/rules_0077.lf.txt
+# cp RULES2/rules_0078.lf HTML/RULES2/rules_0078.lf.txt
+
+
+

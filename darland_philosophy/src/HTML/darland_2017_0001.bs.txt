@@ -1,0 +1,169 @@
+%% Copyright (C) 2017 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+%% This file only echos facts 
+%% In WildLife queries end in "?" - in Prolog in "?"
+%%
+%% In Wilidife extra ";" are echoed but otherwise ignored - in Prolog they 
+%% cause errors.
+%%
+
+%%PROLOG =protocol('log/darland_2017_0001.log').
+%%%%%PROLOG =use_module(library(statistics)).
+%%PROLOG =['facts/common_facts_2017_0001'].
+%%PROLOG =['facts/common_facts_2017_0002'].
+%%PROLOG =['rules/common_2017_0001'].
+%%PROLOG =['rules/prolog_2017_0001'].
+
+%%LIFE =load("FACTS/common_facts_2017_0001.lf")?
+%%LIFE =load("FACTS/common_facts_2017_0002.lf")?
+%%LIFE =load("RULES/common_2017_0001.lf")?
+%%LIFE =load("RULES/life_2017_0001.lf")?
+%%LIFE =trace_input(true)?
+
+write_time(Ignore)?
+
+listing(internal_symbol)?
+listing(internal_relation_symbol)?
+listing(external_symbol)?
+listing(internal_synonym)?
+listing(external_relation_symbol)?
+listing(believes_internal)?
+listing(believes_there_is_internal_symbol_of_internal_relation_symbol)?
+listing(believes_there_is_internal_symbol_of_internal_symbol)?
+listing(believes_there_is_internal_symbol_of_external_relation_symbol)?
+listing(believes_believes_internal)?
+listing(human)?
+listing(human_ext)?
+listing(featherless_biped)?
+listing(featherless_biped_ext)?
+listing(american)?
+listing(american_int)?
+listing(american_ext)?
+listing(roman)?
+listing(roman_int)?
+listing(roman_ext)?
+listing(roman_ext_int)?
+listing(arity)?
+listing(type)?
+listing(denounced)?
+listing(denounced_int)?
+listing(quine_denounced_int)?
+listing(denounced_int_ext)?
+listing(quine_human_int)?
+listing(quine_featherless_biped_int)?
+listing(remark)?
+
+
+
+remark(1001, Remark)?
+
+remark(1002, Remark)?
+
+remark(1008, Remark)?
+
+remark(1009, Remark)?
+
+remark(1010, Remark)?
+
+remark(1011, Remark)?
+
+remark(1012, Remark)?
+
+remark(1013, Remark)?
+
+remark(1014, Remark)?
+
+remark(1015, Remark)?
+
+remark(1005, Remark)?
+
+remark(1006, Remark)?
+
+remark(1007, Remark)?
+
+remark(1003, Remark)?
+
+remark(1004, Remark)?
+
+remark(1016, Remark)?
+
+quote_note(br0001, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+quote_note(br0002, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+quote_note(br0003, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+quote_note(br0004, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+quote_note(br0005, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+internal_relation_symbol(Subject, Time, Type, Arity, Symbol, Relation)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+%%LIFE =;
+
+internal_symbol(Subject, Time, Type, Symbol, Object)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+%%LIFE =;
+
+external_relation_symbol(Subject, Time, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol)?
+;
+;
+;
+;
+;
+;
+;
+%%LIFE =;
+
+external_symbol(Subject, Time, Type, External_Symbol, Internal_Symbol)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+%%LIFE =;
+
+believes_internal(Subject, Time, Logical_Form, Type, Arity, Internal_relation_symbol, A_internal_symbol, B_internal_symbol, C_internal_symbol)?
+;
+%%LIFE =;
+
+write_stats(IGNORE)?
+
+
+
+%%PROLOG = noprotocol.

@@ -1,0 +1,8 @@
+cd ../D*e/F*e
+rm uniclass.*
+unicon factsgen >djd1 2>djd2
+$EDITOR djd1 djd2
+./factsgen <result.in >djd3 2>djd4
+$EDITOR djd3 djd4
+$EDITOR facts.out factsgen.icn
+

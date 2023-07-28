@@ -1,0 +1,25 @@
+limit-5       clock_time                cpu_time
+3	      1.6151 Seconds            0 Milliseconds
+4             1.6151 Seconds  		0 Milliseconds
+5	      1.6151 Seconds 		0 Milliseconds
+6 	      1.6151 Seconds    	0 Milliseconds
+7 	      1.6151 Seconds   		16.6667 Milliseconds
+8 	      1.6151 Seconds   		33.3333 Milliseconds
+9	      1.6151 Seconds   		50 Millisecond
+10	      1.6151 Seconds    	133.333 Milliseconds
+11	      1.6151 Seconds  		550 Milliseconds
+12	      1.6151 Seconds		2266.67 Milliseconds
+13	      1.6151 Seconds		8816.67 Milliseconds
+14	      1.6151 Seconds	      	39366.7 Milliseconds
+15	      1.6151 Seconds	      	235300 Milliseconds
+
+
+
+
+
+
+
+ 
+
+ 
+

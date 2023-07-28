@@ -1,0 +1,3 @@
+unicon qqqq_pre.icn
+./qqqq_pre_all.sh
+$EDITOR IN2/darland_0026.lf

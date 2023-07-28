@@ -1,0 +1,218 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Sun 28 Feb 2021 03:34:13 PM CST
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> %% "%% start comment lines"
+> 
+> %% cls stands for class
+> %% capital letters start variables.
+> %% lower case start constants
+> %% we want 
+> %% cls(exists, X, wrote_waverley)?
+> %% to be true - scott
+> 
+> cls(exists, X, wrote_waverley)?
+
+*** Yes
+X = scott.
+--1> 
+
+*** No
+> %% we want 
+> %% cls(exists, bertie, wrote_waverley)? 
+> %% to be false
+> 
+> cls(exists, bertie, wrote_waverley)? 
+
+*** No
+> 
+> %% we want 
+> %% cls(exists, X, helped_write_pm)? 
+> %% to be true - classes need not be unique
+> 
+> cls(exists, X, helped_write_pm)? 
+
+*** Yes
+X = bertie.
+--1> ;
+
+*** Yes
+X = alfred.
+--1> 	
+
+*** No
+> %% we want 
+> %% cls(exists, bertie, helped_write_pm)? 
+> %% to be true
+> 
+> cls(exists, bertie, helped_write_pm)? 
+
+*** Yes
+--1> 
+
+*** No
+> %% we want 
+> %% cls(exists, alfred, helped_write_pm)?
+> %% to be true
+> 
+> cls(exists, alfred, helped_write_pm)?
+
+*** Yes
+--1> 
+
+*** No
+> %% we want 
+> %% cls(member, X, wrote_waverley)?
+> %% to be true - scott
+> 
+> cls(member, X, wrote_waverley)?
+
+*** Yes
+X = scott.
+--1> 
+
+*** No
+> %% we want 
+> %% cls(member, bertie, wrote_waverley)? 
+> %% to be false
+> 
+> cls(member, bertie, wrote_waverley)? 
+
+*** No
+> 
+> %% we want 
+> %% cls(member, X, helped_write_pm)? 
+> %% to be true - classes need not be unique
+> 
+> cls(member, X, helped_write_pm)? 
+
+*** Yes
+X = bertie.
+--1> ;
+
+*** Yes
+X = alfred.
+--1> 	
+
+*** No
+> %% we want 
+> %% cls(member, bertie, helped_write_pm)? 
+> %% to be true
+> 
+> cls(member, bertie, helped_write_pm)? 
+
+*** Yes
+--1> 
+
+*** No
+> %% we want 
+> %% cls(member, alfred, helped_write_pm)?
+> %% to be true
+> 
+> cls(member, alfred, helped_write_pm)?
+
+*** Yes
+--1> 
+
+*** No
+> %% we want 
+> %% cls(equals, is_morning_star, is_evening_star)?
+> %% to be true
+> 
+> cls(equals, is_morning_star, is_evening_star)?
+
+*** Yes
+> 
+> %% we want 
+> %% cls(equals, is_bertie, is_alfred)?
+> %% to be false
+> 
+> cls(equals, is_bertie, is_alfred)?
+
+*** No
+> 
+> %% we want 
+> %% cls(equals, is_morning_star, is_scott)?
+> %% to be false
+> 
+> cls(equals, is_morning_star, is_scott)?
+
+*** No
+> 
+> %% we want 
+> %% cls(function, bald, X, present_king_of_france)?
+> %% to be false
+> 
+> cls(function, bald, present_king_of_france)?
+
+*** No
+> 
+> %% we want 
+> %% cls(function, one, wrote_process_and_reality)?
+> %% to be true
+> 
+> cls(function, one, wrote_process_and_reality)?
+
+*** Yes
+--1> 
+
+*** No
+> %% we want 
+> %% cls(function, one, wrote_pm)?
+> %% to be false
+> 
+> cls(function, one, wrote_pm)?
+
+*** No
+> 
+> %% we want 
+> %% cls(function, two, wrote_process_and_reality)?
+> %% to be false
+> 
+> cls(function, two, wrote_process_and_reality)?
+
+*** No
+> 
+> %% we want 
+> %% cls(function, two, wrote_pm)?
+> %% to be true
+> 
+> cls(function, two, wrote_pm)?
+
+*** No
+> 
+> %% we want 
+> %% cls(equals, wrote_pm, wrote_waverley)?
+> %% to be false
+> 
+> cls(equals, wrote_pm, wrote_waverley)?
+
+*** No
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.61455 Seconds
+CPU Time 0 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+

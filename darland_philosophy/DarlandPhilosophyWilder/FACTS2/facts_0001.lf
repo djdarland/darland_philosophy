@@ -1,0 +1,167 @@
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+
+%% Life database for use with predicates 
+%% to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017
+%% Major re-write starting 8/19/2019
+%%
+%% Total rewite of what I started about 2007.
+%%
+
+%% common_facts_2017_0001.lf    %% Facts primarily about understanding
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% conventions.
+%% tom, quine, cicero etc stand for people (instances of Subjects or Objects.)
+%% There could also be non-animate objects such as a table.
+%% there (some would argue) might also be non-human Subjects - such as a dog.
+%% tom might have an idea of cicero. This would be represented tom_cicero_idea.
+%% The 1st tom indicates that it is tom's idea. cicero indicates that it is an
+%% idea of cicero. The final idea indicates that it is an idea.
+%% tom might have an word in a shared language for cicero. This is indicated by %% cicero_word. 
+%% quine might also an idea quine_cicero_idea of cicero. (note his idea is
+%% different). quine might share, however the word cicero_word with tom.
+
+%% words are related to ideas.
+%% The words being shared through learning.
+
+%% relates words to ideas.
+
+%% rrrr( Type, Subject, Time, A_word, A_idea)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+rrrr( tom, now, denounced_word, tom_denounced_idea).
+rrrr( tom, now, cicero_word, tom_cicero_idea).
+rrrr( tom, now, catiline_word, tom_catiline_idea).
+rrrr( tom, now, tully_word, tom_tully_idea).
+rrrr( tom, now, tom_word, tom_tom_idea).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+rrrr( quine, now, cicero_word, quine_cicero_idea).
+rrrr( quine, now, catiline_word, quine_catiline_idea).
+rrrr( quine, now, tully_word, quine_tully_idea).
+rrrr( quine, now, tom_word, quine_tom_idea).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+rrrr( tom, now, of_orations_word, tom_of_orations_idea).
+rrrr( tom, now, of_De_Senectute_word, tom_of_De_Senectute_idea).
+rrrr( tom, now, human_word, tom_human_idea).
+rrrr( tom, now, featherless_biped_word, tom_featherless_biped_idea).
+rrrr( tom, now, american_word, tom_american_idea).
+rrrr( tom, now, roman_word, tom_roman_idea).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+rrrr( quine, now, denounced_word, quine_denounced_idea).
+rrrr( quine, now, of_orations_word, quine_of_orations_idea).
+rrrr( quine, now, of_De_Senectute_word, quine_of_De_Senectute_idea).
+rrrr( quine, now, human_word, quine_human_idea).
+rrrr( quine, now, featherless_biped_word, quine_featherless_biped_idea).
+rrrr( quine, now, american_word, quine_american_idea).
+rrrr( quine, now, roman_word, quine_roman_idea).
+rrrr( quine, now, formally_equivalent_word, quine_formally_equivalent_idea).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ssss( Type, Subject, Time, A_idea, A_object)
+%%
+%% there are two ideas for the same person - cicero (tully)
+%% but prolog & wild life cannot let two atoms be identical 
+%% so the object must be the same for both (cicero)
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ssss( tom, now, tom_cicero_idea, cicero).
+ssss( tom, now, tom_tully_idea, cicero).
+ssss( tom, now, tom_catiline_idea, catiline).
+ssss( tom, now, tom_tom_idea, tom).
+ssss( tom, now, tom_human_idea, human).
+ssss( tom, now, tom_featherless_biped_idea, featherless_biped).
+ssss( tom, now, tom_denounced_idea, denounced).
+ssss( tom, now, tom_of_orations_idea, of_orations).
+ssss( tom, now, tom_of_De_Senectute_idea, of_De_Senectute).
+ssss( tom, now, tom_american_idea, american).
+ssss( tom, now, tom_roman_idea, roman).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ssss( quine, now, quine_cicero_idea, cicero).
+ssss( quine, now, quine_tully_idea, cicero).
+ssss( quine, now, quine_catiline_idea, catiline).
+ssss( quine, now, quine_tom_idea, tom).
+ssss( quine, now, quine_human_idea, human).
+ssss( quine, now, quine_featherless_biped_idea, featherless_biped).
+ssss( quine, now, quine_denounced_idea, denounced).
+ssss( quine, now, quine_of_orations_idea, of_orations).
+ssss( quine, now, quine_of_De_Senectute_idea, of_De_Senectute).
+ssss( quine, now, quine_featherless_biped_idea, featherless_biped).
+ssss( quine, now, quine_american_idea, american).
+ssss( quine, now, quine_roman_idea, roman).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+idea_synonym( quine, now, quine_tully_idea, quine_cicero_idea).
+idea_synonym( quine, now, quine_bachelor_idea, quine_unmarried_male_idea).
+idea_synonym( tom, now, tom_bachelor_idea, tom_unmarried_male_idea).
+%% There are several understands relations symbols defined in terms of the
+%% words and ideas.
+
+%% This solve a problem that some philosophers have if a sentence was never
+%% uttered. I only require that there was an relation_idea and
+%% ideas of objects. They never even need to be related or believed. 
+
+arity_idea( tom_human_idea, 1).
+arity_idea( quine_human_idea, 1).
+arity_idea( tom_denounced_idea, 2).
+arity_idea( quine_denounced_idea, 2).
+
+type_idea( tom_human_idea, 1).
+type_idea( tom_denounced_idea, 1).
+type_idea( tom_cicero_idea, 0).
+type_idea( tom_tully_idea, 0).
+type_idea( tom_catiline_idea, 0).
+type_idea( tom_idea, 0).
+type_idea( tom_tom_idea, 0).
+type_idea( tom_quine_idea, 0).
+
+type_idea( quine_quine_idea, 0).
+type_idea( quine_human_idea, 1).
+type_idea( quine_denounced_idea, 1).
+type_idea( quine_cicero_idea, 0).
+type_idea( quine_tully_idea, 0).
+type_idea( quine_catiline_idea, 0).
+
+rrrr( dennis, now, human_word, dennis_human_idea).
+ssss( dennis, now, dennis_human_idea, human).
+rrrr( dennis, now, tully_word, dennis_tully_idea).
+ssss( dennis, now, dennis_tully_idea, cicero).
+rrrr( dennis, now, cicero_word, dennis_cicero_idea).
+ssss( dennis, now, dennis_cicero_idea, cicero).
+rrrr( dennis, now, bertie_word, dennis_bertie_idea).
+ssss( dennis, now, dennis_bertie_idea, bertie).
+rrrr( dennis, now, ludwig_word, dennis_ludwig_idea).
+ssss( dennis, now, dennis_ludwig_idea, ludwig).
+rrrr( dennis, now, plato_word, dennis_plato_idea).
+ssss( dennis, now, dennis_plato_idea, plato).
+rrrr( dennis, now, cicero_aristotle, dennis_aristotle_idea).
+ssss( dennis, now, dennis_aristotle_idea, aristotle).
+rrrr( dennis, now, cicero_frege, dennis_frege_idea).
+ssss( dennis, now, dennis_frege_idea, frege).
+
+%% A fact
+
+qqqq4([denounced, cicero, catiline]).
+
+%% Negative facts
+
+qqqq5([denounced, russell, catiline]).
+
+qqqq5([denounced, quine, catiline]).
+
+

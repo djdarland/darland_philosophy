@@ -1,0 +1,153 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Fri Feb 17 22:16:11 CST 2017
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> 
+> 
+> remark(6001, Remark)?
+
+*** Yes
+Remark = 'Test Set 6 - about propositions.'.
+--1> 
+
+*** No
+> quote_note(br0010, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+*** Yes
+Article_Title = none, 
+Article_Year = none, 
+Author = 'Bertrand Russell', 
+Author_Article = none, 
+Author_Book = 'Bertrand Russell', 
+Book_Title = 'CPBR 07: Theory of Knowledge, The 1913 Manuscript', 
+Book_Year = '1913', 
+Note1 = none, 
+Notes_Article = none, 
+Notes_Book = none, 
+Pages = '109-110', 
+Quotation = 'TBD'.
+
+--1> 
+
+*** No
+> internal_proposition(0, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+
+*** Yes
+A_Internal_Symbol = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_Internal_Symbol = tom_cicero_int, 
+B_Object = cicero, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+Internal_Relation_Symbol = tom_denounced_int, 
+Relation = denounced.
+
+--1> ;
+
+*** Yes
+A_Internal_Symbol = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_Internal_Symbol = tom_tully_int, 
+B_Object = cicero, 
+C_Internal_Symbol = nop, 
+C_Object = nop, 
+Internal_Relation_Symbol = tom_denounced_int, 
+Relation = denounced.
+
+--1> 
+
+*** No
+> internal_proposition(1, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+
+*** No
+> ;
+> 
+> internal_proposition(2, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+
+*** No
+> ;
+> 
+> internal_proposition(3, Arity, Internal_Relation_Symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+
+*** No
+> ;
+> 
+> 
+> external_proposition(0, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+
+*** Yes
+A_External_Symbol = cicero_ext, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol = cicero_ext, 
+B_Object = cicero, 
+C_External_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = denounced_ext, 
+Relation = denounced.
+
+--1> ;
+
+*** Yes
+A_External_Symbol = cicero_ext, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol = cataline_ext, 
+B_Object = cataline, 
+C_External_Symbol = nop, 
+C_Object = nop, 
+External_Relation_Symbol = denounced_ext, 
+Relation = denounced.
+
+--1> 
+
+*** No
+> external_proposition(1, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+
+*** No
+> ;
+> 
+> external_proposition(2, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+
+*** No
+> ;
+> 
+> external_proposition(3, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+
+*** No
+> ;
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.48739 Seconds
+CPU Time 16.6667 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+>  
+> 
+> 
+> halt?
+

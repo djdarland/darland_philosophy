@@ -1,0 +1,173 @@
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+%% 
+%%
+%% I have made the propositional attitude relatons support arbitrary arity.
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define sense (close to Frege's Sinn) (useless)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% qqqq is the only relation having ontological status.
+%% qqqq is the exemplification of a universal in the following arguments.
+
+%% I define some other WildLIFE predicates (relations), however, these
+%% could all be eliminated.
+
+%% as in the predicate pred(Arg1, Arg2, ...)
+%% by
+%% qqqq(Pred, Arg1, Arg2, ...) :-
+%%    Pred = pred,
+%%    ...
+%% I also use qqqq4 for positive [base] facts.
+%% I also use qqqq5 for negative [base] facts.
+%% This is to avoid conflict with qqqq.
+
+%% A script qqqq_pre_all.sh translates fact and query files
+%% using a Unicon program qqqq_pre.icn converting the qqqq predicates
+%% to the predicates in the rules files.
+%% This is done only for efficiency.
+
+%% some possible arguments (universals) are rrrr, ssss, and rrss.
+%% rrss is defined in terms of rrrr and ssss.
+%% rrrr and ssss are undefined here
+%% - but not necessarily ontologically primitive 
+
+%% rrrr is relation between word and idea.
+%% ssss is relation between idea and one object.
+%% tttt is relation between idea and one or more objects.
+
+%% rrss is relative product of rrrr and ssss.
+%% rrtt is relative product of rrrr and tttt.
+
+%% also there are ssss2 and tttt2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% There are 7 relations of nonsense.
+%% They  are defined in terms of understanding
+
+%% The 7 cases are:
+
+%% 1 words
+%% 2 ideas
+%% 3 objects
+
+%% 4 words_ideas
+%% 5 words_objects
+%% 6 ideas_objects
+
+%% 7 words_ideas_objects
+
+%% Modified to add Number to ideas
+%%	- singular
+%%      - or plural
+
+%% 1
+
+
+%% I am going to comment on one sample carefully and thoroughly I hope.
+%% I hope any reader can learn enough to apply principles in other cases.
+
+%% predicate1(Arg1, Arg2, Arg3) :- predicate2(Arg1, Arg2),
+%%                                 predicate3(Arg1, Arg3).'
+
+%% means if predicate3(Arg1, Arg2) and predicate3(Arg1, Arg3)
+%%       then predicate1(Arg1, Arg2, Arg3).
+
+%% ":-" means "if"
+%% "," separates Arguments in predicates and means "and" between clauses.
+%%
+
+%% Two rules can be used for "or"
+%% if we add
+%% predicate1(Arg1, Arg2, Arg3) :- predicate4(Arg1, Arg2),
+%%                                 predicate5(Arg1, Arg3).
+%% then we have:
+
+%%       if (predicate3(Arg1, Arg2) and predicate3(Arg1, Arg3))
+%%       or (predicate4(Arg1, Arg2) and predicate5(Arg1, Arg3))
+%%       then predicate1(Arg1, Arg2, Arg3).
+
+%%   "\+" is negation by "failure" (if it cannot see it is true is says false)
+%%   I also use qqqq4 to state positive facts in the database.
+%%          and qqqq5 to state negative facts in the database.
+
+%%   You can run WildLife on an totally empty file.
+%%   It will produce no output - not even any errors!
+
+%%   match_word below is recursive. Each call removes a Word.
+%%   It also subtracts one from the Arity of the Relation_Idea.
+%%   The list is finite in WildLIFE, so eventually there will be
+%%   an empty list and the Arity can be checked. (or be -999)
+%%   It also checks if the Ideas are one less in type than the Relation Idea.
+%%   rrrr sees if the Subject has that relation between the Word and the Idea.
+
+nonsense_words(Subject, Time, Word_List) :-
+	\+ understands_words(Subject, Time, Word_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The following are other forms of nonsense
+%% I could copy, paste & edit the comments.
+%% But I will rely on the readers intelligence.
+%% It is better to be sure the above is correct.
+%% And to reduce the amount of editing if there are changes.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 2
+nonsense_ideas(Subject, Time, Idea_List) :-
+	\+ understands_ideas(Subject, Time, Idea_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+
+nonsense_objects(Subject, Time, Object_List) :-
+	\+ understands_objects(Subject, Time, Object_List).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+
+nonsense_words_ideas(Subject, Time, PairList) :-
+	\+ understands_words_ideas(Subject, Time, PairList).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 5
+
+nonsense_words_objects(Subject, Time, PairList) :-
+	\+ understands_words_objects(Subject, Time, PairList).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 6
+
+nonsense_ideas_objects( Subject, Time, PairList) :-
+	\+ understands_ideas_objects( Subject, Time, PairList).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% 7
+
+nonsense_words_ideas_objects(Subject, Time, TripleList) :-
+	\+ understands_words_ideas_objects(Subject, Time, TripleList).
+

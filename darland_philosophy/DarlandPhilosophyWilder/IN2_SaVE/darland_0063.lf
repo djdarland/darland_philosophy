@@ -1,0 +1,103 @@
+%% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+load("RULES2/life_0001.lf")?
+load("RULES2/rules_0062.lf")?
+trace_input(true)?
+
+%% I figured TRUE and FALSE by starting simple & copying expressions into
+%% other expressions.
+
+write_time(Ignore)?
+
+%% TRUE
+satisfiable([top, 1])?
+
+%% FALSE
+satisfiable([top, 0])?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% TRUE
+satisfiable([nand, [top, 1], [top, 0]])?
+
+%% TRUE
+satisfiable([nand, [top, 0], [top, 1]])?
+
+%% TRUE
+satisfiable([nand, [top, 0], [top, 0]])?
+
+%% FALSE
+satisfiable([nand, [top, 1], [top, 1]])?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% TRUE
+satisfiable([nand, [nand, [top, 1], [top, 0]], [top, 0]])?
+
+%% TRUE
+satisfiable([nand, [top, 0], [nand, [top, 1], [top, 0]]])?
+
+%% TRUE
+satisfiable([nand, [top, 0], [top, 0]])?
+
+%% FALSE
+satisfiable([nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [nand, [top, 0], [nand, [top, 1], [top, 0]]]])?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% TRUE
+satisfiable([nand, [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [top, 0]], [top, 0]])?
+
+%% TRUE
+satisfiable([nand, [top, 0], [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [top, 0]]])?
+
+%% TRUE
+satisfiable([nand, [top, 0], [top, 0]])?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% TRUE
+satisfiable([nand, [nand, [nand, [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [nand, [top, 0], [nand, [top, 1], [top, 0]]]], [nand, [top, 1], [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [nand, [top, 0], [nand, [top, 1], [top, 0]]]]]], [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [nand, [top, 0], [nand, [top, 1], [top, 0]]]]], [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [nand, [top, 0], [nand, [top, 1], [top, 0]]]]])?
+
+%% TRUE
+satisfiable([nand, [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [nand, [top, 0], [nand, [top, 1], [top, 0]]]], [nand, [nand, [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [nand, [top, 0], [nand, [top, 1], [top, 0]]]], [nand, [top, 1], [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [nand, [top, 0], [nand, [top, 1], [top, 0]]]]]], [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [nand, [top, 0], [nand, [top, 1], [top, 0]]]]]])?
+
+%% TRUE
+satisfiable([nand, [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [nand, [top, 0], [nand, [top, 1], [top, 0]]]], [nand, [nand, [top, 0], [nand, [top, 1], [top, 0]]], [nand, [top, 0], [nand, [top, 1], [top, 0]]]]])?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Now Truly satisfiability !!!
+%% Put variables in.
+%% Ones satisfiable should remain so.
+%% Ones not satisfiable might become satisfiable.
+
+%% TRUE
+satisfiable([nand, [nand, [nand, [nand, [nand, A1, [nand, A2, A3]], [nand, A4, [nand, A5, A6]]], [nand, A7, [nand, [nand, A8, [nand, A9, A10]], [nand, A11, [nand, A12, A13]]]]], [nand, [nand, A14, [nand, A15, A16]], [nand, A17, [nand, A18, A19]]]], [nand, [nand, A20, [nand, A21, A22]], [nand, A23, [nand, A24, A25]]]])?
+
+%% TRUE
+satisfiable([nand, [nand, [nand, A1, [nand, A2, A3]], [nand, A4, [nand, A5, A6]]], [nand, [nand, [nand, [nand, A7, [nand, A8, A9]], [nand, A10, [nand, A11, A12]]], [nand, A13, [nand, [nand, A14, [nand, A15, A16]], [nand, A17, [nand, A18, A19]]]]], [nand, [nand, A20, [nand, A21, A22]], [nand, A23, [nand, A24, A25]]]]])?
+
+%% TRUE
+satisfiable([nand, [nand, [nand, A1, [nand, A2, A3]], [nand, A4, [nand, A5, A6]]], [nand, [nand, A7, [nand, A8, A9]], [nand, A10, [nand, A11, A12]]]])?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+write_stats(Ignore)?
+
+halt?

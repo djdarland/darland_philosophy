@@ -1,0 +1,511 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Fri Feb 17 22:16:11 CST 2017
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> 
+> 
+> remark(4001, Remark)?
+
+*** Yes
+Remark = 'Test Set 4 - about understanding obout understanding. Also understanding about belief'.
+
+--1> 
+
+*** No
+> remark(4002, Remark)?
+
+*** Yes
+Remark = 'I have not checked this out thorougly - other things were prerequisites.'.
+
+--1> 
+
+*** No
+> understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+
+*** Yes
+A_Internal_Symbol_1 = quine_cicero_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_Internal_Symbol_1 = quine_cicero_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_Internal_Symbol_1 = quine_cicero_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_Internal_Symbol_1 = quine_tully_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_Internal_Symbol_1 = quine_tully_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_Internal_Symbol_1 = quine_cicero_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_Internal_Symbol_1 = quine_tully_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_Internal_Symbol_1 = quine_tully_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_Internal_Symbol_1 = quine_cicero_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_Internal_Symbol_1 = quine_cicero_int, 
+B_Internal_Symbol_2 = tom_tully_int, 
+B_Object = cicero, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> 
+
+*** No
+> understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+
+*** No
+> ;
+> 
+> understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+
+*** No
+> ;
+> 
+> understands_internal_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2)?
+
+*** No
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> understands_internal_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+
+*** Yes
+A_External_Symbol_2 = cicero_ext, 
+A_Internal_Symbol_1 = quine_cicero_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol_2 = cicero_ext, 
+B_Internal_Symbol_1 = quine_cicero_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_External_Symbol_2 = nop, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+External_Relation_Symbol_2 = denounced_ext, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol_2 = cicero_ext, 
+A_Internal_Symbol_1 = quine_cicero_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol_2 = cicero_ext, 
+B_Internal_Symbol_1 = quine_tully_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_External_Symbol_2 = nop, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+External_Relation_Symbol_2 = denounced_ext, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol_2 = cicero_ext, 
+A_Internal_Symbol_1 = quine_tully_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol_2 = cicero_ext, 
+B_Internal_Symbol_1 = quine_cicero_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_External_Symbol_2 = nop, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+External_Relation_Symbol_2 = denounced_ext, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol_2 = cicero_ext, 
+A_Internal_Symbol_1 = quine_tully_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol_2 = cicero_ext, 
+B_Internal_Symbol_1 = quine_tully_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_External_Symbol_2 = nop, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+External_Relation_Symbol_2 = denounced_ext, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol_2 = cicero_ext, 
+A_Internal_Symbol_1 = quine_cicero_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol_2 = tully_ext, 
+B_Internal_Symbol_1 = quine_cicero_int, 
+B_Internal_Symbol_2 = tom_tully_int, 
+B_Object = cicero, 
+C_External_Symbol_2 = nop, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+External_Relation_Symbol_2 = denounced_ext, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> 
+
+*** No
+> understands_internal_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+
+*** No
+> ;
+> 
+> understands_internal_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+
+*** No
+> ;
+> 
+> understands_internal_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_2, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+
+*** No
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> understands_external_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+
+*** Yes
+A_External_Symbol_1 = cicero_ext, 
+A_Internal_Symbol_1 = quine_cicero_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol_1 = cicero_ext, 
+B_Internal_Symbol_1 = quine_cicero_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_External_Symbol_1 = nop, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+External_Relation_Symbol_1 = denounced_ext, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol_1 = cicero_ext, 
+A_Internal_Symbol_1 = quine_cicero_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol_1 = tully_ext, 
+B_Internal_Symbol_1 = quine_tully_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_External_Symbol_1 = nop, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+External_Relation_Symbol_1 = denounced_ext, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol_1 = tully_ext, 
+A_Internal_Symbol_1 = quine_tully_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol_1 = cicero_ext, 
+B_Internal_Symbol_1 = quine_cicero_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_External_Symbol_1 = nop, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+External_Relation_Symbol_1 = denounced_ext, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol_1 = tully_ext, 
+A_Internal_Symbol_1 = quine_tully_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol_1 = tully_ext, 
+B_Internal_Symbol_1 = quine_tully_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_External_Symbol_1 = nop, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+External_Relation_Symbol_1 = denounced_ext, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> ;
+
+*** Yes
+A_External_Symbol_1 = cicero_ext, 
+A_Internal_Symbol_1 = quine_cicero_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol_1 = cicero_ext, 
+B_Internal_Symbol_1 = quine_cicero_int, 
+B_Internal_Symbol_2 = tom_tully_int, 
+B_Object = cicero, 
+C_External_Symbol_1 = nop, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+External_Relation_Symbol_1 = denounced_ext, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> 
+
+*** No
+> understands_external_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+
+*** No
+> ;
+> 
+> understands_external_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+
+*** No
+> ;
+> 
+> understands_external_and_understands_internal_object(Subject_1, Time_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1)?
+
+*** No
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> understands_external_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 0, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+
+*** Yes
+A_External_Symbol_1 = cicero_ext, 
+A_External_Symbol_2 = cicero_ext, 
+A_Internal_Symbol_1 = quine_cicero_int, 
+A_Internal_Symbol_2 = tom_cicero_int, 
+A_Object = cicero, 
+Arity = 2, 
+B_External_Symbol_1 = cicero_ext, 
+B_External_Symbol_2 = cicero_ext, 
+B_Internal_Symbol_1 = quine_cicero_int, 
+B_Internal_Symbol_2 = tom_cicero_int, 
+B_Object = cicero, 
+C_External_Symbol_1 = nop, 
+C_External_Symbol_2 = nop, 
+C_Internal_Symbol_1 = nop, 
+C_Internal_Symbol_2 = nop, 
+C_Object = nop, 
+External_Relation_Symbol_1 = denounced_ext, 
+Internal_Relation_Symbol_1 = quine_denounced_int, 
+Internal_Relation_Symbol_2 = tom_denounced_int, 
+Relation = denounced, 
+Subject_1 = quine, 
+Subject_2 = tom, 
+Time_1 = now, 
+Time_2 = now.
+
+--1> 
+
+*** No
+> understands_external_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 1, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+
+*** No
+> 
+> understands_external_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 2, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+
+*** No
+> 
+> understands_external_and_understands_external_object(Subject_1, Time_1, Subject_2, Time_2, 3, Arity, Relation, A_Object, B_Object, C_Object, Internal_Relation_Symbol_1, A_Internal_Symbol_1, B_Internal_Symbol_1, C_Internal_Symbol_1, Internal_Relation_Symbol_2, A_Internal_Symbol_2, B_Internal_Symbol_2, C_Internal_Symbol_2, External_Relation_Symbol_1, A_External_Symbol_1, B_External_Symbol_1, C_External_Symbol_1, A_External_Symbol_2, B_External_Symbol_2, C_External_Symbol_2)?
+
+*** No
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.48739 Seconds
+CPU Time 33.3333 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+>  
+> 
+> halt?
+

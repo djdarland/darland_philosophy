@@ -1,0 +1,611 @@
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+%% 
+%%
+%% I have made the propositional attitude relatons support arbitrary arity.
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Define sense (close to Frege's Sinn) (useless)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+sense_of_relation(Idea) :- ssss(Subject, Time, Idea, Relation).
+
+sense_of_object(Idea) :- ssss(Subject, Time, Idea, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% qqqq is the only relation having ontological status.
+%% qqqq is the exemplification of a universal in the following arguments.
+
+%% some possible arguments (universals) are rrrr, ssss, and rrss.
+%% rrss is defined in terms of rrrr and ssss.
+%% rrrr and ssss are undefined here
+%% - but not neverssarily ontologically primitive 
+
+%% rrrr is relation between word and idea.
+%% ssss is relation between idea and object.
+
+%% rrss is relative product of rrrr and ssss.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% definition of rrss in terms of rrrr and ssss.
+%% Note: qqqq is a dynamic predicate in WildLIFE - so it can be extended.
+
+rrss(Subject, Time, Word, Object) :-
+	rrrr(Subject, Time, Word, Idea),
+	ssss(Subject, Time, Idea, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% There are 7 relations of both understanding.
+%% Those of understanding are defined in terms of rrrr and ssss
+
+%% The 7 cases are:
+
+%% 1 words
+%% 2 ideas
+%% 3 objects
+
+%% 4 words_ideas
+%% 5 words_objects
+%% 6 ideas_objects
+
+%% 7 words_ideas_objects
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% understands_words is defined.
+%% It applies to an intelligent Subject at some Time.
+%% There is a list of words.
+%% The arity_idea must match the number of words following the relation word.
+%% (Or an arity_relation of -999 matches any number of words.)
+%% The type ideas corresponding to the words must be one less thasn the type 
+%% idea corresponding to the relation idea.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 1
+
+understands_words(Subject, Time, [[Relation_Word] | List]) :-
+	rrrr(Subject, Time, Relation_Word, Relation_Idea),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	% List of Words.
+	% Objects should be Type one less than Type of Relation
+	match_word(Subject, Time, List, Arity, Type - 1).
+
+%% The following are auxilary predicates - they have no ontological
+%% Significance.
+
+match_word(Subject, Time, [], 0, Type).
+
+%% -999 indicates arbitrary arity.
+match_word(Subject, Time, [], -999, Type).
+
+match_word(Subject, Time, [[Word] | List],
+	   Arity, Type) :-
+	% List of Word Object Pairs.
+	rrrr(Subject, Time, Word, Idea),
+	type_idea(Idea, Type),
+	match_word(Subject, Time, List,
+		   % if Arity is not Arbitrary sub 1
+		   cond(Arity =\= -999, Arity - 1, -999),
+		   Type).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The following are other forms of understanding.
+%% I could copy, paste & edit the comments.
+%% But I will rely on the readers intelligence.
+%% It is better to be sure the above is correct.
+%% And to reduce the amount of editing if there are changes.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 2
+
+understands_ideas(Subject, Time, [[Relation_Idea] | List]) :-
+	ssss(Subject, Time, Relation_Idea, Object),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	% List of Ideas.
+	% Objects should be Type one less than Type of Relation
+	match_idea(Subject, Time, List, Arity, Type - 1).
+
+%% The following are auxilary predicates - they have no ontological
+%% Significance.
+
+match_idea(Subject, Time, [], 0, Type).
+
+%% -999 indicates arbitrary arity.
+match_idea(Subject, Time, [], -999, Type).
+
+match_idea(Subject, Time, [[Idea] | List],
+	   Arity, Type) :-
+	% List of Word Object Pairs.
+	ssss(Subject, Time, Idea, Object),
+	type_idea(Idea, Type),
+	match_idea(Subject, Time, List,
+		   % if Arity is not Arbitrary sub 1
+		   cond(Arity =\= -999, Arity - 1, -999),
+		   Type).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+
+understands_objects(Subject, Time, [[Relation] | List]) :-
+	ssss(Subject, Time, Relation_Idea, Relation),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	% List of Ideas.
+	% Objects should be Type one less than Type of Relation
+	match_object(Subject, Time, List, Arity, Type - 1).
+
+%% The following are auxilary predicates - they have no ontological
+%% Significance.
+
+match_object(Subject, Time, [], 0, Type).
+
+%% -999 indicates arbitrary arity.
+match_object(Subject, Time, [], -999, Type).
+
+match_object(Subject, Time, [[Object] | List],
+	   Arity, Type) :-
+	% List of Word Object Pairs.
+	ssss(Subject, Time, Idea, Object),
+	type_idea(Idea, Type),
+	match_object(Subject, Time, List,
+		   % if Arity is not Arbitrary sub 1
+		   cond(Arity =\= -999, Arity - 1, -999),
+		   Type).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+
+understands_words_ideas(Subject, Time,
+			[[Relation_Word, Relation_idea] | PairList]) :-
+	rrrr(Subject, Time, Relation_Word, Relation_Idea),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	% List of Word Object Pairs.
+	% Objects should be Type one less than Type of Relation
+	match_pair_word_idea(Subject, Time, PairList, Arity, Type - 1).
+
+%% The following are auxilary predicates - they have no ontological
+%% Significance.
+
+match_pair_word_idea(Subject, Time, [], 0, Type).
+
+%% -999 indicates arbitrary arity.
+match_pair_word_object(Subject, Time, [], -999, Type).
+
+match_pair_word_idea(Subject, Time, [[Word, Idea] | PairList],
+		       Arity, Type) :-
+	% List of Word Object Pairs.
+	rrrr(Subject, Time, Word, Idea),
+	type_idea(Idea, Type),
+	match_pair_word_idea(Subject, Time, PairList,
+			       % if Arity is not Arbitrary sub 1
+			       cond(Arity =\= -999, Arity - 1, -999),
+			       Type).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 5
+
+understands_words_objects(Subject, Time, [[Relation_Word, Relation] | PairList]) :-
+	rrrr(Subject, Time, Relation_Word, Relation_Idea),
+	ssss(Subject, Time, Relation_Idea, Relation),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	% List of Word Object Pairs.
+	% Objects should be Type one less than Type of Relation
+	match_pair_word_object(Subject, Time, PairList, Arity, Type - 1).
+
+%% The following are auxilary predicates - they have no ontological
+%% Significance.
+
+match_pair_word_object(Subject, Time, [], 0, Type).
+
+%% -999 indicates arbitrary arity.
+match_pair_word_object(Subject, Time, [], -999, Type).
+
+match_pair_word_object(Subject, Time, [[Word, Object] | PairList],
+		       Arity, Type) :-
+	% List of Word Object Pairs.
+	rrrr(Subject, Time, Word, Idea),
+	ssss(Subject, Time, Idea, Object),
+	type_idea(Idea, Type),
+	match_pair_word_object(Subject, Time, PairList,
+			       % if Arity is not Arbitrary sub 1
+			       cond(Arity =\= -999, Arity - 1, -999),
+			       Type).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 6
+
+understands_ideas_objects( Subject, Time, [[Relation_Idea, Relation] | PairList]) :-
+	% List of Word Object Pairs.
+	ssss( Subject, Time, Relation_Idea, Relation),
+	arity_idea( Relation_Idea, Arity),
+	type_idea( Relation_Idea, Type),
+	match_pair_idea_object_relation(Subject, Time, PairList, Arity, Type - 1).
+
+match_pair_idea_object_relation(Subject, Time, [], -999, Type).
+
+match_pair_idea_object_relation(Subject, Time, [], 0, Type).
+
+match_pair_idea_object_relation(Subject, Time, [[Idea, Object] | PairList],
+			       Arity, Type) :-
+	% List of Word Object Pairs.
+	ssss( Subject, Time, Idea, Object),
+	type_idea( Idea, Type),
+	match_pair_idea_object_relation(Subject, Time, PairList,
+					% if Arity is not Arbitrary sub 1
+					cond(Arity =\= -999, Arity - 1, -999),
+					Type).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The following are other forms of understanding.
+%% I could copy, paste & edit the comments.
+%% But I will rely on the readers intelligence.
+%% It is better to be sure the above is correct.
+%% And to reduce the amount of editing it there are changes.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 7
+
+understands_words_ideas_objects(Subject, Time, [[Relation_Word, Relation_Idea, Relation] | TripleList]) :-
+	% List of Word Idea_Object Triples.
+	rrrr(Subject, Time, Relation_Word, Relation_Idea),
+	ssss(Subject, Time, Relation_Idea, Relation),
+	arity_idea(Relation_Idea, Arity),
+	type_idea(Relation_Idea, Type),
+	match_triple_word_idea_object_relation(Subject, Time, TripleList,
+					      Arity, Type - 1).
+
+match_triple_word_idea_object_relation(Subject, Time, [], 0, Type).
+
+%% -999 indicates arbitrary arity.
+match_triple_word_idea_object_relation(Subject, Time, [], -999, Type).
+
+match_triple_word_idea_object_relation(Subject, Time,
+				       [[Word, Idea, Object] | TripleList],
+				       Arity, Type) :-
+	% List of Word Idea Object Triple.
+	rrrr(Subject, Time, Word, Idea),
+	ssss(Subject, Time, Idea, Object),
+	type_idea(Idea, Type),
+	match_triple_word_idea_object_relation(Subject, Time,
+					       TripleList,
+					       % if Arity is not Arbitrary sub 1
+					       cond(Arity =\= -999, Arity - 1,
+						    -999),
+					       Type).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The FOLLOWING are NOT USED currently
+
+understand_same_objects_by_ideas( Subject_1, Time_1, [[Idea_1, Object_1] | Pair_List1],
+     Subject_2, Time_2, [[Idea_2, Object_2] | Pair_List2]) :-
+	%	write(usoA, USIOA), nl,
+	% List of Word Object Pairs.
+	%	write(usoA, USIOA), nl,
+	ssss( Subject_1, Time_1, Idea_1, Object_1),
+	ssss( Subject_2, Time_2, Idea_2, Object_2),
+	Object_1 = Object2,
+	match_same_pair_idea_object_relation(Subject_1, Time_1, Pair_List1, 
+					     Subject_2, Time_2, Pair_List2).
+
+match_same_pair_idea_object_relation(Subject_1, Time_1, [], 
+				     Subject_2, Time_2, []).
+
+match_same_pair_idea_object_relation(Subject_1, Time_1,
+				     [[Idea_1 , Object_1] | Pair_List1],
+				     Subject_2, Time_2,
+				     [[Idea_2 , Object_2] | Pair_List2]) :-
+	% List of Word Object Pairs.
+	ssss( Subject_1, Time_1, Idea_1, Object_1),
+	ssss( Subject_2, Time_2, Idea_2, Object_2),
+	Object_1 = Object2,
+	match_same_pair_idea_object_relation(Subject_1, Time_1,
+					     Pair_List1,
+					     Subject_2, Time_2,
+					     Pair_List2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+understand_same_objects_by_words( Subject_1, Time_1, Pair_List1, Subject_2, Time_2, Pair_List2) :-
+	% List of Word Object Pairs.
+	match_same_pair_word_object_relation(Subject_1, Time_1, Pair_List1, 
+					     Subject_2, Time_2, Pair_List2).
+
+match_same_pair_word_object_relation(Subject_1, Time_1, [],
+				     Subject_2, Time_2, []).
+
+match_same_pair_word_object_relation(Subject_1, Time_1,
+				     [[Word_1 , Object_1] | Pair_List1],
+				     Subject_2, Time_2,
+				     [[Word_2 , Object_2] | Pair_List2]) :-
+	% List of Word Object Pairs.
+	rrss( Subject_1, Time_1, Word_1, Object_1),
+	rrss( Subject_2, Time_2, Word_2, Object_2),
+	Word_1 = Word_2,
+	Object_1 = Object_2, 
+	match_same_pair_word_object_relation(Subject_1, Time_1, Pair_List1, 
+					 Subject_2, Time_2, Pair_List2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The following is very preliminary.
+%% I need to go over it all again.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Rules on Philosophical Terminology
+
+%% DEBUG VERSION 
+%% pl_external_synonym_simple_expanded(Number, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Author_1, Author_Article_1, Author_Book_1, Article_Title_1, Book_Title_1, Pages_1, Quotation_1, Article_Year_1, Book_Year_1, Note1, Notes_Article_1, Notes_Book_1, Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2, Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3, Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4) :- write(['A0001']), nl, term(External_Term_1), write(['A0002']), nl, term(External_Term_2), write(['A0003', Number, External_Term_1, External_Term_2]), nl, pl_external_synonym(Number, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Quote_2, Quote_3, Quote_4), quote_note(Quote_1, Author_1, Author_Article_1, Author_Book_1, Article_Title_1, Book_Title_1, Pages_1, Quotation_1, Article_Year_1, Book_Year_1, Note1, Notes_Article_1, Notes_Book_1), write(['A0004', Number, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Quote_2, Quote_3, Quote_4 ]), nl, quote_note(Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2), write(['A0005', Quote_2, Author_2, Author_Article_2, Author_Book_2, Article_Title_2, Book_Title_2, Pages_2, Quotation_2, Article_Year_2, Book_Year_2, Note2, Notes_Article_2, Notes_Book_2] ), nl, quote_note(Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3), write(['A0006', Quote_3, Author_3, Author_Article_3, Author_Book_3, Article_Title_3, Book_Title_3, Pages_3, Quotation_3, Article_Year_3, Book_Year_3, Note3, Notes_Article_3, Notes_Book_3]), nl, quote_note(Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4), write(['A0007', Quote_4, Author_4, Author_Article_4, Author_Book_4, Article_Title_4, Book_Title_4, Pages_4, Quotation_4, Article_Year_4, Book_Year_4, Note4, Notes_Article_4, Notes_Book_4] ), nl.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% pl_external_synonym expanded with full names and supporting quotations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+pl_external_synonym_simple_expanded(Number,
+				    Philosopher_1, Philosopher_2,
+				    External_Term_1, External_Term_2,
+				    Quote_1, Author_1, Author_Article_1,
+				    Author_Book_1, Article_Title_1,
+				    Book_Title_1, Pages_1, Quotation_1,
+				    Article_Year_1, Book_Year_1, Note1,
+				    Notes_Article_1, Notes_Book_1,
+				    Quote_2, Author_2, Author_Article_2,
+				    Author_Book_2, Article_Title_2,
+				    Book_Title_2, Pages_2, Quotation_2,
+				    Article_Year_2, Book_Year_2, Note2,
+				    Notes_Article_2, Notes_Book_2,
+				    Quote_3, Author_3, Author_Article_3,
+				    Author_Book_3, Article_Title_3,
+				    Book_Title_3, Pages_3, Quotation_3,
+				    Article_Year_3, Book_Year_3, Note3,
+				    Notes_Article_3, Notes_Book_3,
+				    Quote_4, Author_4, Author_Article_4,
+				    Author_Book_4, Article_Title_4,
+				    Book_Title_4, Pages_4, Quotation_4,
+				    Article_Year_4, Book_Year_4, Note4,
+				    Notes_Article_4, Notes_Book_4) :-
+    term(External_Term_1), term(External_Term_2),
+    pl_external_synonym(Number, Philosopher_1, Philosopher_2,
+			External_Term_1, External_Term_2,
+			Quote_1, Quote_2, Quote_3, Quote_4),
+    quote_note(Quote_1, Author_1, Author_Article_1, Author_Book_1,
+	       Article_Title_1, Book_Title_1, Pages_1, Quotation_1,
+	       Article_Year_1, Book_Year_1, Note1, Notes_Article_1,
+	       Notes_Book_1),
+    quote_note(Quote_2, Author_2, Author_Article_2, Author_Book_2,
+	       Article_Title_2, Book_Title_2, Pages_2, Quotation_2,
+	       Article_Year_2, Book_Year_2, Note2, Notes_Article_2,
+	       Notes_Book_2),
+    quote_note(Quote_3, Author_3, Author_Article_3, Author_Book_3,
+	       Article_Title_3, Book_Title_3, Pages_3, Quotation_3,
+	       Article_Year_3, Book_Year_3, Note3, Notes_Article_3,
+	       Notes_Book_3),
+    quote_note(Quote_4, Author_4, Author_Article_4, Author_Book_4,
+	       Article_Title_4, Book_Title_4, Pages_4, Quotation_4,
+	       Article_Year_4, Book_Year_4, Note4, Notes_Article_4,
+	       Notes_Book_4).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% pl_external_synonym componded - two philosophers using term same as another
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+pl_external_synonym_compound_expanded(Number1A, Number1B, Philosopher_1,
+				      Philosopher_2A, Philosopher_2B,
+				      External_Term_1, External_Term_2A,
+				      External_Term_2B, Quote_1A, Author_1A,
+				      Author_Article_1A, Author_Book_1A,
+				      Article_Title_1A, Book_Title_1A,
+				      Pages_1A, Quotation_1A, Article_Year_1A,
+				      Book_Year_1A, Note1A, Notes_Article_1A,
+				      Notes_Book_1A, Quote_2A, Author_2A,
+				      Author_Article_2A, Author_Book_2A,
+				      Article_Title_2A, Book_Title_2A,
+				      Pages_2A, Quotation_2A, Article_Year_2A,
+				      Book_Year_2A, Note2A, Notes_Article_2A,
+				      Notes_Book_2A, Quote_3A, Author_3A,
+				      Author_Article_3A, Author_Book_3A,
+				      Article_Title_3A, Book_Title_3A,
+				      Pages_3A, Quotation_3A, Article_Year_3A,
+				      Book_Year_3A, Note3A, Notes_Article_3A,
+				      Notes_Book_3A, Quote_4A, Author_4A,
+				      Author_Article_4A, Author_Book_4A,
+				      Article_Title_4A, Book_Title_4A,
+				      Pages_4A, Quotation_4A, Article_Year_4A,
+				      Book_Year_4A, Note4A, Notes_Article_4A,
+				      Notes_Book_4A, Quote_1B, Author_1B,
+				      Author_Article_1B, Author_Book_1B,
+				      Article_Title_1B, Book_Title_1B,
+				      Pages_1B, Quotation_1B, Article_Year_1B,
+				      Book_Year_1B, Note1B, Notes_Article_1B,
+				      Notes_Book_1B, Quote_2B, Author_2B,
+				      Author_Article_2B, Author_Book_2B,
+				      Article_Title_2B, Book_Title_2B,
+				      Pages_2B, Quotation_2B, Article_Year_2B,
+				      Book_Year_2B, Note2B, Notes_Article_2B,
+				      Notes_Book_2B, Quote_3B, Author_3B,
+				      Author_Article_3B, Author_Book_3B,
+				      Article_Title_3B, Book_Title_3B,
+				      Pages_3B, Quotation_3B, Article_Year_3B,
+				      Book_Year_3B, Note3B, Notes_Article_3B,
+				      Notes_Book_3B, Quote_4B, Author_4B,
+				      Author_Article_4B, Author_Book_4B,
+				      Article_Title_4B, Book_Title_4B,
+				      Pages_4B, Quotation_4B, Article_Year_4B,
+				      Book_Year_4B, Note4B, Notes_Article_4B,
+				      Notes_Book_4B) :-
+    term(External_Term_1), term(External_Term_2),
+    pl_external_synonym(NumberA, Philosopher_1, Philosopher_2A, External_Term_1,
+			External_Term_2A, Quote_1A, Quote_2A, Quote_3A,
+			Quote_4A),
+    pl_external_synonym(NumberB, Philosopher_1, Philosopher_2B, External_Term_1,
+			External_Term_2B, Quote_1B, Quote_2B, Quote_3B,
+			Quote_4B),
+    quote_note(Quote_1A, Author_1A, Author_Article_1A, Author_Book_1A,
+	       Article_Title_1A, Book_Title_1A, Pages_1A, Quotation_1A,
+	       Article_Year_1A, Book_Year_1A, Note1A, Notes_Article_1A,
+	       Notes_Book_1A),
+    quote_note(Quote_2A, Author_2A, Author_Article_2A, Author_Book_2A,
+	       Article_Title_2A, Book_Title_2A, Pages_2A, Quotation_2A,
+	       Article_Year_2A, Book_Year_2A, Note2A, Notes_Article_2A,
+	       Notes_Book_2A),
+    quote_note(Quote_3A, Author_3A, Author_Article_3A, Author_Book_3A,
+	       Article_Title_3A, Book_Title_3A, Pages_3A, Quotation_3A,
+	       Article_Year_3A, Book_Year_3A, Note3A, Notes_Article_3A,
+	       Notes_Book_3A),
+    quote_note(Quote_4A, Author_4A, Author_Article_4A, Author_Book_4A,
+	       Article_Title_4A, Book_Title_4A, Pages_4A, Quotation_4A,
+	       Article_Year_4A, Book_Year_4A, Note4A, Notes_Article_4A,
+	       Notes_Book_4A),
+    quote_note(Quote_1B, Author_1B, Author_Article_1B, Author_Book_1B,
+	       Article_Title_1B, Book_Title_1B, Pages_1B, Quotation_1B,
+	       Article_Year_1B, Book_Year_1B, Note1B, Notes_Article_1B,
+	       Notes_Book_1B),
+    quote_note(Quote_2B, Author_2B, Author_Article_2B, Author_Book_2B,
+	       Article_Title_2B, Book_Title_2B, Pages_2B, Quotation_2B,
+	       Article_Year_2B, Book_Year_2B, Note2B, Notes_Article_2B,
+	       Notes_Book_2B),
+    quote_note(Quote_3B, Author_3B, Author_Article_3B, Author_Book_3B,
+	       Article_Title_3B, Book_Title_3B, Pages_3B, Quotation_3B,
+	       Article_Year_3B, Book_Year_3B, Note3B, Notes_Article_3B,
+	       Notes_Book_3B),
+    quote_note(Quote_4B, Author_4B, Author_Article_4B, Author_Book_4B,
+	       Article_Title_4B, Book_Title_4B, Pages_4B, Quotation_4B,
+	       Article_Year_4B, Book_Year_4B, Note4B, Notes_Article_4B,
+	       Notes_Book_4B),
+    different(Philosopher_2A, Philosopher_2B).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Philosopher 2 using 2 different terms as philosopher 1 uses 1 term
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+pl_ambiguity_1(Number_1, Number_2, Philosopher_1, Philosopher_2,
+	       External_Term_1, External_Term_2A, External_Term_2B) :-
+    pl_external_synonym(Number_1, Philosopher_Abbreviation_1,
+			Philosopher_Abbreviation_2,
+			External_Term_1, External_Term_2A,
+			Quote_1A, Quote_2A, Quote_3A, Quote_4A),
+    pl_external_synonym(Number_2, Philosopher_Abbreviation_1,
+			Philosopher_Abbreviation_2,
+			External_Term_1, External_Term_2B,
+			Quote_1B, Quote_2B, Quote_3B, Quote_4B),
+    different(External_Term_2A, External_Term_2B),
+    philosopher(Philosopher_Abbreviation_1, Philosopher_1),
+    philosopher(Philosopher_Abbreviation_2, Philosopher_2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Philosopher 1 using 2 different terms as philosopher 2 uses 1 term
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+pl_ambiguity_2(Number_1, Number_2, Philosopher_1, Philosopher_2,
+	       External_Term_1A, External_Term_1B, External_Term_2) :-
+    pl_external_synonym(Number_1, Philosopher_Abbreviation_1,
+			Philosopher_Abbreviation_2,
+			External_Term_1A, External_Term_2,
+			Quote_1A, Quote_2A, Quote_3A, Quote_4A),
+    pl_external_synonym(Number_2, Philosopher_Abbreviation_1,
+			Philosopher_Abbreviation_2,
+			External_Term_1B, External_Term_2,
+			Quote_1B, Quote_2B, Quote_3B, Quote_4B),
+    different(External_Term_1A, External_Term_1B),
+    philosopher(Philosopher_Abbreviation_1, Philosopher_1),
+    philosopher(Philosopher_Abbreviation_2, Philosopher_2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Expand quotation info when there is both book and article info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+quote_note(Id_Number, Author, Author_Article, Author_Book,
+	   Article_Title, Book_Title, Pages, Quotation,
+	   Article_Year, Book_Year, Note1, Notes_Article, Notes_Book) :-
+    philosophical_quotation(Id_Number, Author_Abbreviation,
+			    Article_Abbreviation, Book_Abbreviation,
+			    Pages, Quotation, Note1),
+    article(Article_Abbreviation, Book_Abbreviation,
+	    Author_Article_Abbreviation, Article_Title, Article_Year,
+	    Notes_Article),
+    book(Book_Abbreviation, Author_Book_Abbreviation, Book_Title,
+	 Book_Year, Notes_Book),
+    philosopher(Author_Article_Abbreviation, Author_Article),
+    philosopher(Author_Book_Abbreviation, Author_Book),
+    actual_author(Author_Abbreviation, Author_Article_Abbreviation,
+		  Author_Book_Abbreviation),
+    philosopher(Author_Abbreviation, Author).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Expand quotation info when there is only book info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+quote_note(Id_Number, Author, none, Author_Book, none, Book_Title, Pages,
+	   Quotation, none, Book_Year, Note1, none, Notes_Book) :-
+    philosophical_quotation(Id_Number, Author_Abbreviation, none,
+			    Book_Abbreviation, Pages, Quotation, Note1),
+    book(Book_Abbreviation, Author_Book_Abbreviation, Book_Title, Book_Year,
+	 Notes_Book),
+    philosopher(Author_Book_Abbreviation, Author_Book),
+    actual_author(Author_Abbreviation, none, Author_Book_Abbreviation),
+    philosopher(Author_Abbreviation, Author).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Expand quotation info when there is only article info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+quote_note(Id_Number, Author, Author_Article, none, Article_Title, none, Pages,
+	   Quotation, Article_Year, none, Note1, Notes_Article, none) :-
+    philosophical_quotation(Id_Number, Author_Abbreviation,
+			    Article_Abbreviation, none, Pages, Quotation,
+			    Note1),
+    article(Article_Abbreviation, none, Author_Article_Abbreviation,
+	    Article_Title, Article_Year, Notes_Article),
+    philosopher(Author_Article_Abbreviation, Author_Article),
+    actual_author(Author_Abbreviation, Author_Article_Abbreviation, none),
+    philosopher(Author_Abbreviation, Author).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Expand quotation info when there is no info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+quote_note(none, none, none, none, none, none, none, none, none, none, none,
+	   none, none).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If there is article author info use it - otherwise use book info
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+actual_author(Author_Abbreviation, Author_Article_Abbreviation,
+	      Author_Book_Abbreviation) :-
+    different(Author_Article_Abbreviation, none),
+    Author_Abbreviation = Author_Article_Abbreviation, !.
+
+actual_author(Author_Abbreviation, Author_Article_Abbreviation,
+	      Author_Book_Abbreviation) :-
+    Author_Abbreviation = Author_Book_Abbreviation. 
+

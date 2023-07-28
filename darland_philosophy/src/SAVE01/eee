@@ -1,0 +1,86 @@
+echo "-----------"
+echo "Darland Philosophy Options"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2019, 2020, 2021  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+
+echo "1 Run wild_life interactively"
+echo "-----------"
+echo "111 Edit Darland Philosophy Queries"
+echo "120 Run and View Darland WildLife Philosophy"
+echo "121 Edit Darland Philosophy WildLife Facts"
+echo "122 Edit Darland Philosophy WildLife Rules"
+echo "123 Edit Darland Philosophy WildLife Logs"
+echo "125 Run and View a Particular WildLife Query"
+echo "126 Clear WildLife Reference Files"
+echo "127 Clear WildLife HTML Files"
+echo "128 Copy WilfdLIFE HTML Files"
+echo "131 Preprocess all qqqq"
+
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f eee
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+while [ $select -ne 999 ]
+do 
+case $select in
+1)   wild_life -memory=209715200;;
+111) ./eee1;;
+120) ./tsda_lf2.sh 1;;
+121) ./da_fa_lf2.sh 1;;
+122) ./da_ru_lf2.sh 1;;
+123) ./da_lg_lf2.sh 1;;
+125) ./da_par_lf2.sh;;
+126) ./da_clr_lf2.sh;;
+127) ./clrhtml.sh;;
+128) ./cphtml.sh;;
+131) cd ../D*; ./qqqq_pre_all.sh;;
+500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
+501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
+666) $EDITOR eee ;;
+777) $EDITOR NOTES_DJD.txt & ;;
+esac
+echo "-----------"
+echo "Darland Philosophy Options"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2021  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+
+echo "-----------"
+echo "1 Run wild_life interactively"
+echo "-----------"
+echo "111 Edit Darland Philosophy Queries"
+echo "120 Run and View Darland WildLife Philosophy (OUT OF DATE - use 125 particular"
+echo "121 Edit Darland Philosophy WildLife Facts"
+echo "122 Edit Darland Philosophy WildLife Rules"
+echo "123 Edit Darland Philosophy WildLife Logs"
+echo "125 Run and View a Particular WildLife Query"
+echo "126 Clear WildLife Reference Files"
+echo "127 Clear WildLife HTML Files"
+echo "128 Copy WilfdLIFE HTML Files"
+
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f eee
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+
+done

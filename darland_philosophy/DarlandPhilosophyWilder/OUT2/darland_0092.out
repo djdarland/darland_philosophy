@@ -1,0 +1,1989 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> > > > > > > > > > > > > > > > > > 
+*** Yes
+> 
+> %% This file uses queries to illustrate my points about belief
+> 
+> %% This is an example with a mini universe for queries of high complexity.
+> 
+> %% I use an example from Quine's Word & Object. (pp.144-151).
+> 
+> %% The Story of Cicero and Catiline is given
+> %% in _Caesar and Christ_, by Will Durant, pp. 140-147.
+> 
+> %% "Tully" is not in the index of that work (or "De Senectute").
+> 
+> %% Wikipedia gives the full name as "Marcus Tullius Cicero"
+> %% and notes "The name is infrequently anglicized as Tully."
+> %% It also does not mention "De Senectute".
+> 
+> %% "De Senectute" is in Wikipedia under "Writings of Cicero"
+> 
+> %% Tom believes that Cicero denounced Catiline.
+> %% Tom does not know Cicero = Tully.
+> 
+> %% In my philosophy, for Tom at that time,
+> %% "Cicero" R Toms_idea_of_Cicero
+> %% and
+> %% Toms_idea_of_Cicero S Cicero
+> %%
+> %%
+> %% but not 
+> %% "Cicero" R Toms_idea_of_Tully
+> %% 
+> %%
+> %% In my program the relation R is represented by the predicate
+> %% rrrr(Subject, Time, Type, Word, Idea)
+> %% In my program the relation S is represented by the predicate
+> %% ssss(Subject, Time, Type, Idea, Object)
+> 
+> %% R | S is represented by rrss
+> 
+> write_time(Ignore)?
+Time Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> %% I indicate for each query whether the immediate response should be
+> %% TRUE = Yes or FALSE = No
+> 
+> %% There may be subsequient No responses - as I may have asked for additional answers with semicolons.
+> 
+> %% There are 7 relations of both understanding and belief.
+> %% Those of understanding are defined in terms of rrrr and ssss
+> %% Those of belief require also a belief_in_ideas relation.
+> 
+> %% The 7 cases are:
+> 
+> %% words
+> %% ideas
+> %% objects
+> 
+> %% words_ideas
+> %% words_objects
+> %% ideas_objects
+> 
+> %% words_ideas_objects
+> 
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %%% BELIEF
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> conceptual_feeling_in_ideas(quine_dc, believes, now,
+|         [quine_denounced_idea_dc, quine_cicero_idea_dc,
+|          quine_catiline_idea_dc])?
+
+*** Yes
+--1> 
+
+*** No
+> 
+> conceptual_feeling_in_ideas(quine_dc, believes, now,
+|         [quine_denounced_idea_dc, quine_tully_idea_dc,
+|          quine_catiline_idea_dc])?
+
+*** Yes
+--1> 
+
+*** No
+> 
+> %% Checks on Belief follow.
+> 
+> %% 1 positive
+> 
+> test_sa_words(Subject, Time, believes)?
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[roman_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[roman_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[roman_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[roman_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[roman_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[roman_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[roman_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[roman_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[mortal_word_dc],[human_class_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[mortal_word_dc],[human_class_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[mortal_word_dc],[human_class_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1A** believes [and should] words [[mortal_word_dc],[human_class_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 1 negative
+> 	
+> test_not_sa_words(Subject, Time, believes)?
+**1C** believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1C** believes not [and should not] words [[tully_word_dc],[tully_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1C** believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[denounced_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1C** believes not [and should not] words [[denounced_word_dc],[cicero_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1C** believes not [and should not] words [[denounced_word_dc],[santa_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1C** believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1C** believes not [and should not] words [[tully_word_dc],[tully_word_dc],[catiline_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1C** believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[denounced_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**1C** believes not [and should not] words [[denounced_word_dc],[cicero_word_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 2 positive
+> 	
+> test_sa_ideas(Subject, Time, believes)?
+**2A** believes [and should] ideas [tom_denounced_idea_dc,tom_cicero_idea_dc,tom_catiline_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**2A** believes [and should] ideas [tom_roman_idea_dc,tom_catiline_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**2A** believes [and should] ideas [tom_denounced_idea_dc,tom_cicero_idea_dc,tom_catiline_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**2A** believes [and should] ideas [tom_roman_idea_dc,tom_catiline_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+2B@@believes
+2BB[quine_denounced_idea_dc,quine_cicero_idea_dc,quine_catiline_idea_dc]
+2BBB[quine_denounced_idea_dc,quine_cicero_idea_dc,quine_catiline_idea_dc]
+2BB[quine_denounced_idea_dc,quine_tully_idea_dc,quine_catiline_idea_dc]
+2BBB[quine_denounced_idea_dc,quine_tully_idea_dc,quine_catiline_idea_dc]
+2BB[tom_denounced_idea_dc,tom_cicero_idea_dc,tom_catiline_idea_dc]
+2BB[tom_roman_idea_dc,tom_catiline_idea_dc]
+2BB[quine_denounced_idea_dc,quine_cicero_idea_dc,quine_catiline_idea_dc]
+2BBB[quine_denounced_idea_dc,quine_cicero_idea_dc,quine_catiline_idea_dc]
+2BB[quine_denounced_idea_dc,quine_tully_idea_dc,quine_catiline_idea_dc]
+2BBB[quine_denounced_idea_dc,quine_tully_idea_dc,quine_catiline_idea_dc]
+2BB[tom_denounced_idea_dc,tom_cicero_idea_dc,tom_catiline_idea_dc]
+2BB[tom_roman_idea_dc,tom_catiline_idea_dc]
+2BB[mortal_idea_dc,garbage_tom_human_class_idea_dc]
+2BBB[mortal_idea_dc,garbage_tom_human_class_idea_dc]
+2BB[[mortal_idea_dc],[tom_human_class_idea_dc]]
+2BBB[[mortal_idea_dc],[tom_human_class_idea_dc]]
+2BB[[tom_human_idea_dc],[tom_cicero_idea_dc]]
+2BBB[[tom_human_idea_dc],[tom_cicero_idea_dc]]
+2BB[[tom_human_class_idea_dc],[tom_catiline_idea_dc]]
+2BBB[[tom_human_class_idea_dc],[tom_catiline_idea_dc]]
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 2 negative	
+> 	
+> test_not_sa_ideas(Subject, Time, believes)?
+**2C** believes not [and should not] ideas [tom_denounced_idea_dc,tom_tully_idea_dc,tom_catiline_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**2C** believes not [and should not] ideas [tom_tully_idea_dc,tom_tully_idea_dc,tom_catiline_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**2C** believes not [and should not] ideas [tom_denounced_idea_dc,tom_tully_idea_dc,tom_denounced_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**2C** believes not [and should not] ideas [tom_denounced_idea_dc,tom_cicero_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**2C** believes not [and should not] ideas [tom_denounced_idea_dc,tom_tully_idea_dc,tom_catiline_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**2C** believes not [and should not] ideas [tom_tully_idea_dc,tom_tully_idea_dc,tom_catiline_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**2C** believes not [and should not] ideas [tom_denounced_idea_dc,tom_tully_idea_dc,tom_denounced_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**2C** believes not [and should not] ideas [tom_denounced_idea_dc,tom_cicero_idea_dc]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 3 positive
+> 	
+> test_sa_objects(Subject, Time, believes)?
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+**3A** believes [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+**3A** believes [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**3A** believes [and should] objects [[roman_rel],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 3 negative	
+> 	
+> test_not_sa_objects(Subject, Time, believes)?
+cfo truly 00001B
+**3C** believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+**3C** believes not [and should not] objects [[tom_tully_dc],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+**3C** believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[denounced_rel]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+**3C** believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+**3C** believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+**3C** believes not [and should not] objects [[tom_tully_dc],[tom_tully_dc],[catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+**3C** believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[denounced_rel]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+**3C** believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+cfo truly 00001B
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 4 positive
+> 	
+> test_sa_words_ideas(Subject, Time, believes)?
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[mortal_word_dc,tom_mortal_idea_dc],[human_class_word_dc,tom_human_class_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[mortal_word_dc,tom_mortal_idea_dc],[human_class_word_dc,tom_human_class_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[mortal_word_dc,tom_mortal_idea_dc],[human_class_word_dc,tom_human_class_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4A** believes [and should] words_ideas [[mortal_word_dc,tom_mortal_idea_dc],[human_class_word_dc,tom_human_class_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 4 negative	
+> 	
+> test_not_sa_words_ideas(Subject, Time, believes)?
+**4C** believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4C** believes not [and should not] words_ideas [[tully_word_dc,tom_tully_idea_dc],[tully_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4C** believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_tully_word_dc],[denounced_word_dc,tom_denounced_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4C** believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4C** believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4C** believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4C** believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4C** believes not [and should not] words_ideas [[tully_word_dc,tom_tully_idea_dc],[tully_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4C** believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_tully_word_dc],[denounced_word_dc,tom_denounced_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4C** believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4C** believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**4C** believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 5 positive
+> 	
+> test_sa_words_objects(Subject, Time, believes)?
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5A** believes [and should] words_objects [[human_word_dc,human_rel],[human_class_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 5 negative	
+> 	
+> test_not_sa_words_objects(Subject, Time, believes)?
+**5C** believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5C** believes not [and should not] words_objects [[tully_word_dc,tom_tully_dc],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5C** believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[denounced_word_dc,denounced_rel]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5C** believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5C** believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5C** believes not [and should not] words_objects [[tully_word_dc,tom_tully_dc],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5C** believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[denounced_word_dc,denounced_rel]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**5C** believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 6 positive
+> 	
+> test_sa_ideas_objects(Subject, Time, believes)?
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6A** believes [and should] ideas_objects [[tom_human_idea_dc,human_rel],[tom_human_class_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 6 negative	
+> 	
+> test_not_sa_ideas_objects(Subject, Time, believes)?
+**6C** believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6C** believes not [and should not] ideas_objects [[tom_tully_idea_dc,tom_tully_dc],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6C** believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_denounced_idea_dc,denounced_rel]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6C** believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6C** believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6C** believes not [and should not] ideas_objects [[tom_tully_idea_dc,tom_tully_dc],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6C** believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_denounced_idea_dc,denounced_rel]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**6C** believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 7 positive
+> 	
+> test_sa_words_ideas_objects(Subject, Time, believes)?
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,tom_cicero_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7A** believes [and should] words_ideas_objects [[human_word_dc,tom_human_idea_dc,human_rel],[human_class_word_dc,tom_human_class_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 7 negative	
+> 	
+> test_not_sa_words_ideas_objects(Subject, Time, believes)?
+**7C** believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7C** believes not and should not words_ideas_objects [[tully_word_dc,tom_tully_idea_dc,tom_cicero_dc],[tully_word_dc,tom_tully_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7C** believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_word_dc,tom_tully_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7C** believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,cicero]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7C** believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7C** believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7C** believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7C** believes not and should not words_ideas_objects [[tully_word_dc,tom_tully_idea_dc,tom_cicero_dc],[tully_word_dc,tom_tully_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7C** believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_word_dc,tom_tully_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7C** believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,cicero]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7C** believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+**7C** believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+*** Yes
+Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> write_stats(Ignore)?
+Stats Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+
