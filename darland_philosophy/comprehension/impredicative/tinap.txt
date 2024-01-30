@@ -1,0 +1,193 @@
+Wild_Life Interpreter Version 4.20 Fri Jul 28 09:50:46 AM CDT 2023
+Copyright (C) 1991-93 DEC Paris Research Laboratory
+Extensions, Copyright (C) 1994-1995 Intelligent Software Group, SFU
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
+X interface not installed.
+No customizing file loaded.
+> *** Loading File "napoleon.lf"
+Hello
+*** Loading File "facts_napoleon.lf"
+*** Loading File "rules_pred.lf"
+*** Loading File "rules_impred.lf"
+
+ <EOF>
+
+*** Yes
+> 
+> monadic_natural_universal_ok("courage^x0", "x0", 1)?
+
+*** Yes
+--1>     
+
+*** No
+> monadic_universal_ok("courage^x0", "x0", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_universal_ok("smart^x0", "x0", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_universal_ok("strong^x0", "x0", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_proposition_ok("courage^x0", "napoleon", 1, Proposition)?
+
+*** Yes
+Proposition = "courage^x0(napoleon)".
+--1> 
+
+*** No
+> monadic_proposition_ok("smart^x0", "napoleon", 1, Proposition)?
+
+*** Yes
+Proposition = "smart^x0(napoleon)".
+--1> 
+
+*** No
+> monadic_proposition_ok("strong^x0", "napoleon", 1, Proposition)?
+
+*** Yes
+Proposition = "strong^x0(napoleon)".
+--1> 
+
+*** No
+> monadic_proposition_ok("property_of_great_general^x1", "courage^x0", 2, Proposition)?
+
+*** Yes
+Proposition = "property_of_great_general^x1(courage^x0)".
+--1> 
+
+*** No
+> monadic_proposition_ok("property_of_great_general^x1", "smart^x0", 2, Proposition)?
+
+*** Yes
+Proposition = "property_of_great_general^x1(smart^x0)".
+--1> 
+
+*** No
+> monadic_proposition_ok("property_of_great_general^x1", "strong^x0", 2, Proposition)?
+
+*** Yes
+Proposition = "property_of_great_general^x1(strong^x0)".
+--1> 
+
+*** No
+> monadic_pred_universal_ok("all", "x0", PRED, "x0", "y0", 1)?
+
+*** Yes
+PRED = "taller_than^x0^y0".
+--1> 
+
+*** No
+> monadic_pred_universal_ok("all", "y0", PRED, "y0", "x0", 1)?
+
+*** Yes
+PRED = "taller_than^y0^x0".
+--1> 
+
+*** No
+> gen_pred_monadic_proposition_ok("exists", "y0", "exists", "x0", PRED, "x0", "y0", 1, Proposition)?
+
+*** Yes
+PRED = "taller_than^x0^y0", 
+Proposition = "(exists y0)(exists x0)taller_than^x0^y0(x0,y0)".
+
+--1> 
+
+*** No
+> dyadic_universal_ok(Univ_name, Var_1, Var_2, Tp)?
+
+*** Yes
+Tp = 1, Univ_name = "taller_than^x0^y0", Var_1 = "x0", Var_2 = "y0".
+--1> 
+
+*** No
+> reduced_universal_ok("all", "x1", "f2^x1", "x1", 2, "x0", 1, Reduced_univ)?
+
+*** Yes
+Reduced_univ = "(all x1)f2^x1(x1,x0)".
+--1> 
+
+*** No
+> reduced_universal_ok("all", "x1", "property_of_great_general^x1", "x1", 2, "x0", 1, Reduced_univ)?
+
+*** Yes
+Reduced_univ = "(all x1)property_of_great_general^x1(x1,x0)".
+--1> 
+
+*** No
+> imp_monadic_proposition_ok("all", "x1", "f2^x1", "x1", 2, "x0", 1, Reduced_univ, "napoleon", Proposition)?
+
+*** Yes
+Proposition = "(all x1)f2^x1(x1,x0)(napoleon)", 
+Reduced_univ = "(all x1)f2^x1(x1,x0)".
+
+--1> 
+
+*** No
+> imp_monadic_proposition_ok("all", "x1", "property_of_great_general^x1", "x1", 2, "x0", 1, Reduced_univ, "napoleon", Proposition)?
+
+*** Yes
+Proposition = "(all x1)property_of_great_general^x1(x1,x0)(napoleon)", 
+Reduced_univ = "(all x1)property_of_great_general^x1(x1,x0)".
+
+--1> 
+
+*** No
+> imp_monadic_proposition_ok("all", "x2", "f3^x2", "x2", 3, "x1", 2, Reduced_univ, "f1^x0", Proposition)?
+
+*** Yes
+Proposition = "(all x2)f3^x2(x2,x1)(f1^x0)", 
+Reduced_univ = "(all x2)f3^x2(x2,x1)".
+
+--1> 
+
+*** No
+> imp_monadic_proposition_ok("all", "x1", "rational_squared_less than_two^x1", "x1", 2, "x0", 1, Reduced_univ, "1.1", Proposition)?
+
+*** Yes
+Proposition = "(all x1)rational_squared_less than_two^x1(x1,x0)(1.1)", 
+Reduced_univ = "(all x1)rational_squared_less than_two^x1(x1,x0)".
+
+--1> 
+
+*** No
+> imp_monadic_proposition_ok("all", "x1", "rational_squared_less than_two^x1", "x1", 2, "x0", 1, Reduced_univ, "1.2", Proposition)?
+
+*** Yes
+Proposition = "(all x1)rational_squared_less than_two^x1(x1,x0)(1.2)", 
+Reduced_univ = "(all x1)rational_squared_less than_two^x1(x1,x0)".
+
+--1> 
+
+*** No
+> imp_monadic_proposition_ok("all", "x1", "rational_squared_less than_two^x1", "x1", 2, "x0", 1, Reduced_univ, "1.3", Proposition)?
+
+*** Yes
+Proposition = "(all x1)rational_squared_less than_two^x1(x1,x0)(1.3)", 
+Reduced_univ = "(all x1)rational_squared_less than_two^x1(x1,x0)".
+
+--1> 
+
+*** No
+> imp_monadic_proposition_ok("all", "x1", "rational_squared_less than_two^x1", "x1", 2, "x0", 1, Reduced_univ, "1.4", Proposition)?
+
+*** Yes
+Proposition = "(all x1)rational_squared_less than_two^x1(x1,x0)(1.4)", 
+Reduced_univ = "(all x1)rational_squared_less than_two^x1(x1,x0)".
+
+--1> 
+
+*** No
+> halt?
+
+*** Exiting Wild_Life  [0.000s cpu, 0.000s gc (0.0%)]

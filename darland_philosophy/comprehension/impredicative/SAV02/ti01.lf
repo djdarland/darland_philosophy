@@ -1,0 +1,27 @@
+load("comp_impred.lf")?
+
+monadic_universal_ok("f1", "x0", 1)?
+
+monadic_universal_ok("nand(f1,g1)", "x0", 1)?
+
+dyadic_universal_ok("nand(f1,g1)", "x0", 1, "y0", 1)?
+
+dyadic_universal_ok(Name_1, Var_1, Tp_1, Var_2, Tp_2)?
+;
+;
+;
+;
+;
+;
+;
+;
+
+dyadic_universal_ok(Name_1, Var_1, Tp_1, Var_2, Tp_2)?
+;
+
+monadic_imp_universal_ok("exists", "x0", Univ, "y0", 1)?
+;
+;
+;
+
+% imp_universal_ok("exists","x0", "g1", 1)?

@@ -1,0 +1,49 @@
+imp_monadic_proposition_ok(Quant, Univ_name_1, Univ_name_2, Univ_name_1, Tp_2, Var_name, Tp_1 , Name, Obj) :-
+    reduced_universal_ok(Quant, Univ_name_1, Univ_name_2, Univ_name_1, Tp_2, Var_name, 1 , Name, Obj),
+    Tp_2 > 1,
+    Object(Obj).
+
+imp_monadic_proposition_ok(Quant, Univ_name_1, Univ_name_2, Univ_name_1, Tp_2, Var_name, Tp_1 , Name, Univ_name_3) :-
+    reduced_universal_ok(Quant, Univ_name_1, Univ_name_2, Univ_name_1, Tp_2, Var_name, Tp_1 , Name, Univ_name_3),
+    monadic_universal_ok(Univ_name_3, Var_3, Tp_3),
+    Tp_1 > Tp_3. 
+
+gen_imp_monadic_proposition_ok(Quant, Var_1, Quant_imp, Univ_name_1, Univ_name_2, Univ_name_1, Tp_2, Var_name, Tp_1 , Name, Var_1) :-
+    quant(Quant),
+    quant(Quant_imp),
+    variable_ok(Var_1, Tp_3),
+    reduced_universal_ok(Quant_imp, Univ_name_1, Univ_name_2, Univ_name_1, Tp_2, Var_name, Tp_1 , Name),
+    Tp_1 > Tp_3.
+
+monadic_imp_universal_ok(Quant, Univ_name, Name, Var_name, Tp) :-
+    quant(Quant),
+    Univ_name $\== Name,
+    reduced_universal_ok(Quant, Univ_name_1, Univ_name_2, Univ_name_1, Tp_2, Var_name, Tp_1 , Name),
+    strcon("(", Quant_imp) = Work0,
+    strcon(" ", Univ_name) = Work1,
+    strcon(Work1, ")") = Work2,
+    strcon(Work2, Name) = Work3,
+    strcon(Work3, "(") = Work4,
+    strcon(Work4, Var_name) = Work5,
+    strcon(Work5, ",") = Work6,
+    strcon(Work6, Var_2) = Work7,
+    strcon(Work7, ")") = Name_3.
+
+reduced_universal_ok(Quant, Univ_name_1, Univ_name_2, Univ_name_1, Tp_2, Var_name, Tp_1 , Name) :-
+    quant(Quant),
+    monadic_universal_ok(Univ_name_2, Var_2, Tp_2),
+    monadic_universal_ok(Univ_name_1, Var_1, Tp_1),
+    strcon("(", Quant) = Work0,
+    strcon(Work0, " ") = Work00,
+    strcon(Work00, Univ_name_1) = Work1,
+    strcon(Work1, ")") = Work2,
+    strcon(Work2, Univ_name_2) = Work3,
+    strcon(Work3, "(") = Work4,
+    strcon(Work4, Univ_name_1) = Work5,
+    strcon(Work5, ",") = Work6,
+    strcon(Work6, Var_name) = Work7,
+    strcon(Work7, ")") = Name.
+%    Tp >= Tp_imp,
+%    Tp >= Tp_2.
+    
+

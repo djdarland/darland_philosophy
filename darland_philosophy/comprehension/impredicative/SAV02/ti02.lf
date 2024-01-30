@@ -1,0 +1,7 @@
+load("comp_impred.lf")?
+
+proposition_ok("f1", "a", 1)?
+
+higher_proposition_ok("f2", "f1", 2)?
+
+

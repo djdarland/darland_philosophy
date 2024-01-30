@@ -1,0 +1,158 @@
+%% Copyright (C) 2024 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% 
+%%
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Study of impredicative comprehension
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    
+monadic_proposition_ok(Univ_name, Obj_name, Tp) :-
+    monadic_universal_ok(Univ_name, Var_1, Tp),
+    object(Obj_name),
+    Tp >= 1.
+
+monadic_proposition_ok(Univ_name, Univ_name_2, Tp) :-
+    monadic_universal_ok(Univ_name, Var_1, Tp),
+    monadic_universal_ok(Univ_name_2, Var_2, Tp_2),
+    Tp > Tp_2.
+
+monadic_proposition_ok(Univ_name, Univ_name_2, Tp) :-
+    monadic_universal_ok(Univ_name, Var_1, Tp),
+    molecular_monadic_universal_ok(Univ_name_2, Var_2, Tp_2),
+    Tp > Tp_2.
+
+monadic_proposition_ok(Univ_name, Univ_name_2, Tp) :-
+    molecular_monadic_universal_ok(Univ_name, Var_1, Tp),
+    monadic_universal_ok(Univ_name_2, Var_2, Tp_2),
+    Tp > Tp_2.
+
+monadic_proposition_ok(Univ_name, Univ_name_2, Tp) :-
+    molecular_monadic_universal_ok(Univ_name, Var_1, Tp),
+    molecular_monadic_universal_ok(Univ_name_2, Var_2, Tp_2),
+    Tp > Tp_2.
+
+dyadic_proposition_ok(Univ_name, Obj_name_1, Obj_name_2, Tp) :-
+    monadic_universal_ok(Name_1, Var_1, Tp_3, Obj_name_2, Tp_4),
+    object(Obj_name_1),
+    object(Obj_name_2),
+    Tp >= 1.
+
+gen_monadic_proposition_ok(Quant, Var_name, Univ_name, Var_name, Tp) :-
+    quant(Quant),
+    variable_ok(Var_name, Tp_1),
+    monadic_universal_ok(Univ_1, Var_1, Tp_2),
+    Tp > Tp_1.
+
+gen_imp_monadic_proposition_ok(Quant, Var_name, Quant_imp, Var_imp, Name_imp, Var_name, Tp) :-
+    quant(Quant),
+    quant(Quant_imp),
+    variable_ok(Var_name, Tp_1),
+    variable_ok(Var_imp, Tp_imp),
+    monadic_imp_universal_ok(Quant_imp, Var_imp, Name_imp, Var_name, Tp).
+
+
+gen_dyadic_proposition_ok(Quant_1, Var_name_1, Quant_2, Var_name_2, Univ_name, Var_name_1, Var_name_2) :-
+    quant(Quant_1),
+    variable_ok(Var_name_1, Tp_1),
+    quant(Quant_2),
+    variable_ok(Var_name_2, Tp_2),
+    Var_name_1 $\== Var_name_2,
+    dyadic_universal_ok(Univ_name, Var_name_1, Var_name_2, Tp),
+    Tp > Tp_1,
+    Tp > Tp_2.
+    
+monadic_universal_ok(Name_1, Var_1, Tp_1) :-
+    monadic_natural_universal_ok(Name_1, Var_1, Tp_1).
+
+dyadic_universal_ok(Name_3, Var_1, Tp_1, Var_2, Tp_2) :-
+    dyadic_natural_universal_ok(Name_3, Var_1, Tp_1, Var_2, Tp_2).
+
+molecular_dyadic_universal_ok(Name_3, Var_1, Tp_1, Var_2, Tp_2) :-
+    monadic_universal_ok(Name_1, Var_1, Tp_1),
+    monadic_universal_ok(Name_2, Var_2, Tp_2),
+    Var_1 $\== Var_2,
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+molecular_dyadic_universal_ok(Name_3, Var_1, Tp_1, Var_2, Tp_2) :-
+    molecular_monadic_universal_ok(Name_1, Var_1, Tp_1),
+    monadic_universal_ok(Name_2, Var_2, Tp_2),
+    Var_1 $\== Var_2,
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+molecular_dyadic_universal_ok(Name_3, Var_1, Tp_1, Var_2, Tp_2) :-
+    monadic_universal_ok(Name_1, Var_1, Tp_1),
+    molecular_monadic_universal_ok(Name_2, Var_2, Tp_2),
+    Var_1 $\== Var_2,
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+molecular_dyadic_universal_ok(Name_3, Var_1, Tp_1, Var_2, Tp_2) :-
+    molecular_monadic_universal_ok(Name_1, Var_1, Tp_1),
+    molecular_monadic_universal_ok(Name_2, Var_2, Tp_2),
+    Var_1 $\== Var_2,
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+molecular_monadic_universal_ok(Name_3, Var_1, Tp_1) :-
+    monadic_universal_ok(Name_1, Var_1, Tp_1),
+    monadic_universal_ok(Name_2, Var_2, Tp_2),
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+monadic_imp_universal_ok(Quant, Var_1, Name_3, Var_2, Tp_2) :-
+    quant(Quant),
+    dyadic_universal_ok(Name_1, Var_1, Tp_1, Var_2, Tp_2),
+    strcon(Quant, "(") = Work0,
+    strcon(Work0, Var_1) = Work1,
+    strcon(Work1, "),") = Work2,
+    strcon(Work2, Name_1) = Work3,
+    strcon(Work3, "(") = Work4,
+    strcon(Work4, Var_1) = Work5,
+    strcon(Work5, ",") = Work6,
+    strcon(Work6, Var_2) = Work7,
+    strcon(Work7, ")") = Name_3.
+
+monadic_imp_universal_ok(Quant, Var_1, Name_3, Var_2, Tp_2) :-
+    quant(Quant),
+    molecular_dyadic_universal_ok(Name_1, Var_1, Tp_1, Var_2, Tp_2),
+    strcon(Quant, "(") = Work0,
+    strcon(Work0, Var_1) = Work1,
+    strcon(Work1, "),") = Work2,
+    strcon(Work2, Name_1) = Work3,
+    strcon(Work3, "(") = Work4,
+    strcon(Work4, Var_1) = Work5,
+    strcon(Work5, ",") = Work6,
+    strcon(Work6, Var_2) = Work7,
+    strcon(Work7, ")") = Name_3.
+

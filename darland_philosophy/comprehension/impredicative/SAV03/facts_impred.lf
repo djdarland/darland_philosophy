@@ -1,0 +1,94 @@
+%% Copyright (C) 2024 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+dynamic(monadic_natural_universal_ok)?
+
+dynamic(dyadic_natural_universal_ok)?
+       
+monadic_natural_universal_ok("f1", "x0", 1).
+
+monadic_natural_universal_ok("f1", "y0", 1).
+
+monadic_natural_universal_ok("f1", "z0", 1).
+
+monadic_natural_universal_ok("g1", "x0", 1).
+
+monadic_natural_universal_ok("g1", "y0", 1).
+
+monadic_natural_universal_ok("g1", "z0", 1).
+
+monadic_natural_universal_ok("f2", "f1", 2).
+
+monadic_natural_universal_ok("f2", "y1", 2).
+
+monadic_natural_universal_ok("f2", "z1", 2).
+
+monadic_natural_universal_ok("g2", "x1", 2).
+
+monadic_natural_universal_ok("g2", "y1", 2).
+
+monadic_natural_universal_ok("g2", "z1", 2).
+
+dyadic_natural_universal_ok("h1", "x0", "y0", 1).
+
+dyadic_natural_universal_ok("h1", "y0", "x0", 1).
+
+dyadic_natural_universal_ok("h2", "x1", "y1", 2).
+
+dyadic_natural_universal_ok("h2", "y1", "x1", 2).
+
+predicate("f2").
+
+predicate("g2").
+
+predicate("h2").
+
+predicate("f3").
+
+predicate("g3").
+
+predicate("h3").
+
+variable_ok("x0", 0).
+
+variable_ok("y0", 0).
+
+variable_ok("z0", 0).
+
+variable_ok("x1", 1).
+
+variable_ok("y1", 1).
+
+variable_ok("z1", 1).
+
+variable_ok("x2", 2).
+
+variable_ok("y2", 2).
+
+variable_ok("z2", 2).
+
+object("a").
+
+object("b").
+
+quant("exists").
+
+quant("all").
+
+% uses_variable(f, x0).
+
+% uses_variable(h, x1).

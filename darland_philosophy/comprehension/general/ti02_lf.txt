@@ -1,0 +1,28 @@
+load("comp_pred.lf")?
+
+monadic_proposition_ok("f1^x0", "a", 1, Proposition)?
+
+monadic_proposition_ok("f1^y0", "a", 1, Proposition)?
+
+monadic_proposition_ok("f2^x1", "f1^x0", 2, Proposition)?
+
+monadic_proposition_ok("f2^y1", "f1^z0", 2, Proposition)?
+
+dyadic_proposition_ok("h1^x0^y0", "a", "b", 1, Proposition)?
+
+gen_pred_monadic_proposition_ok("exists", "y0", "all", "x0", PRED, "x0", "y0", Tp, Proposition)?
+
+gen_monadic_proposition_ok("exists", "x0", "f1^x0", "x0", 1, Proposition)?
+
+gen_dyadic_proposition_ok("exists", "x0", "all", "y0", "h1^x0^y0", "x0", "y0", Tp, Proposition)?
+
+monadic_pred_universal_ok("all", "x0", Univ, "x0", "y0", 1)?
+
+monadic_pred_universal_ok("exists", "x0", Univ, "x0", "y0", 1)?
+
+gen_pred_monadic_proposition_ok("exists", "y0", "exists", "x0", PRED, "x0", "y0", 1, Proposition)?
+
+gen_pred_monadic_proposition_ok("all", "y0", "exists", "x0", PRED, "x0", "y0", 1, Proposition)?
+
+
+halt?

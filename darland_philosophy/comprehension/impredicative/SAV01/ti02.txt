@@ -1,0 +1,143 @@
+Wild_Life Interpreter Version 4.20 Fri Jul 28 09:50:46 AM CDT 2023
+Copyright (C) 1991-93 DEC Paris Research Laboratory
+Extensions, Copyright (C) 1994-1995 Intelligent Software Group, SFU
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
+X interface not installed.
+No customizing file loaded.
+> *** Loading File "comp_impred.lf"
+Hello
+*** Loading File "facts_impred.lf"
+*** Loading File "rules_impred.lf"
+
+*** Yes
+> > 
+*** Yes
+A = "exists", B = "x0", C = "f", D = 1, E = B.
+--1> 
+*** Yes
+A = "exists", B = "x0", C = "g", D = 1, E = B.
+--1> 
+*** Yes
+A = "exists", B = "x0", C = "nand(f,f)", D = 1, E = B.
+--1> 
+*** Yes
+A = "exists", B = "x0", C = "nand(f,g)", D = 1, E = B.
+--1> 
+*** Yes
+A = "exists", B = "x0", C = "nand(f,nand(f,f))", D = 1, E = B.
+--1> 
+*** Yes
+A = "exists", B = "x0", C = "nand(f,nand(f,g))", D = 1, E = B.
+--1> 
+*** Yes
+A = "exists", B = "x0", C = "nand(f,nand(f,nand(f,f)))", D = 1, E = B.
+--1> 
+*** Yes
+A = "exists", B = "x0", C = "nand(f,nand(f,nand(f,g)))", D = 1, E = B.
+--1> 
+*** Yes
+A = "exists", B = "x0", C = "nand(f,nand(f,nand(f,nand(f,f))))", D = 1, E = B.
+--1> 
+*** Yes
+A = "exists", B = "x0", C = "nand(f,nand(f,nand(f,nand(f,g))))", D = 1, E = B.
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,f)))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,g)))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,f))))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,g))))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,f)))))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,g)))))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,f))))))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,g))))))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,f)))))))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,g)))))))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,f))))))))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** Yes
+A = "exists", 
+B = "x0", 
+C = "nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,nand(f,g))))))))))", 
+D = 1, 
+E = B.
+
+--1> 
+*** No
+> > 
+*** Exiting Wild_Life  [0.000s cpu, 0.000s gc (0.0%)]

@@ -1,0 +1,50 @@
+%% Copyright (C) 2024 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+dynamic(predicate_ok)?
+       
+predicate_ok("f", 1).
+
+predicate_ok("g", 1).
+
+predicate("h").
+
+predicate_ok("h", 2).
+
+variable_ok("x0", 0).
+
+variable_ok("y0", 0).
+
+variable_ok("x1", 1).
+
+variable_ok("y1", 1).
+
+variable_ok("x2", 2).
+
+variable_ok("y2", 2).
+
+object("a").
+
+object("b").
+
+quant("exists").
+
+quant("all").
+
+uses_variable(f, x0).
+
+uses_variable(h, x1).

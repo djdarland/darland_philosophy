@@ -1,0 +1,49 @@
+load("napoleon.lf")?
+
+monadic_natural_universal_ok("courage^x0", "x0", 1)?
+    
+monadic_universal_ok("courage^x0", "x0", 1)?
+
+monadic_universal_ok("smart^x0", "x0", 1)?
+
+monadic_universal_ok("strong^x0", "x0", 1)?
+
+monadic_proposition_ok("courage^x0", "napoleon", 1, Proposition)?
+
+monadic_proposition_ok("smart^x0", "napoleon", 1, Proposition)?
+
+monadic_proposition_ok("strong^x0", "napoleon", 1, Proposition)?
+
+monadic_proposition_ok("property_of_great_general^x1", "courage^x0", 2, Proposition)?
+
+monadic_proposition_ok("property_of_great_general^x1", "smart^x0", 2, Proposition)?
+
+monadic_proposition_ok("property_of_great_general^x1", "strong^x0", 2, Proposition)?
+
+monadic_pred_universal_ok("all", "x0", PRED, "x0", "y0", 1)?
+
+monadic_pred_universal_ok("all", "y0", PRED, "y0", "x0", 1)?
+
+gen_pred_monadic_proposition_ok("exists", "y0", "exists", "x0", PRED, "x0", "y0", 1, Proposition)?
+
+dyadic_universal_ok(Univ_name, Var_1, Var_2, Tp)?
+
+reduced_universal_ok("all", "x1", "f2^x1", "x1", 2, "x0", 1, Reduced_univ)?
+
+reduced_universal_ok("all", "x1", "property_of_great_general^x1", "x1", 2, "x0", 1, Reduced_univ)?
+
+imp_monadic_proposition_ok("all", "x1", "f2^x1", "x1", 2, "x0", 1, Reduced_univ, "napoleon", Proposition)?
+
+imp_monadic_proposition_ok("all", "x1", "property_of_great_general^x1", "x1", 2, "x0", 1, Reduced_univ, "napoleon", Proposition)?
+
+imp_monadic_proposition_ok("all", "x2", "f3^x2", "x2", 3, "x1", 2, Reduced_univ, "f1^x0", Proposition)?
+
+imp_monadic_proposition_ok("all", "x1", "rational_squared_less than_two^x1", "x1", 2, "x0", 1, Reduced_univ, "1.1", Proposition)?
+
+imp_monadic_proposition_ok("all", "x1", "rational_squared_less than_two^x1", "x1", 2, "x0", 1, Reduced_univ, "1.2", Proposition)?
+
+imp_monadic_proposition_ok("all", "x1", "rational_squared_less than_two^x1", "x1", 2, "x0", 1, Reduced_univ, "1.3", Proposition)?
+
+imp_monadic_proposition_ok("all", "x1", "rational_squared_less than_two^x1", "x1", 2, "x0", 1, Reduced_univ, "1.4", Proposition)?
+
+halt?

@@ -1,0 +1,247 @@
+%% Copyright (C) 2024 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% 
+%%
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Study of predicative comprehension
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    
+monadic_proposition_ok(Univ_name, Obj_name, Tp, Proposition) :-
+    monadic_universal_ok(Univ_name, Var_1, Tp),
+    object(Obj_name),
+    Tp >= 1,
+    strcon(Univ_name, "(") = Part1,
+    strcon(Part1, Obj_name) = Part2,
+    strcon(Part2, ")") = Proposition.
+
+monadic_proposition_ok(Univ_name_1, Univ_name_2, Tp, Proposition) :-
+    monadic_universal_ok(Univ_name_1, Var_1, Tp),
+    monadic_universal_ok(Univ_name_2, Var_2, Tp_2),
+    Tp > Tp_2,
+    strcon(Univ_name_1, "(") = Part1,
+    strcon(Part1, Univ_name_2) = Part2,
+    strcon(Part2, ")") = Proposition.
+
+monadic_proposition_ok(Univ_name, Univ_name_2, Tp, Proposition) :-
+    monadic_universal_ok(Univ_name, Var_1, Tp),
+    molecular_monadic_universal_ok(Univ_name_2, Var_2, Tp_2),
+    Tp > Tp_2,
+    strcon(Univ_name, "(") = Part1,
+    strcon(Part1, Univ_name_2) = Part2,
+    strcon(Part2, ")") = Proposition.
+
+monadic_proposition_ok(Univ_name, Univ_name_2, Tp, Proposition) :-
+    molecular_monadic_universal_ok(Univ_name, Var_1, Tp),
+    monadic_universal_ok(Univ_name_2, Var_2, Tp_2),
+    Tp > Tp_2,
+    strcon(Univ_name, "(") = Part1,
+    strcon(Part1, Univ_name_2) = Part2,
+    strcon(Part2, ")") = Proposition.
+
+monadic_proposition_ok(Univ_name, Univ_name_2, Tp, Proposition) :-
+    molecular_monadic_universal_ok(Univ_name, Var_1, Tp),
+    molecular_monadic_universal_ok(Univ_name_2, Var_2, Tp_2),
+    Tp > Tp_2,
+    strcon(Univ_name, "(") = Part1,
+    strcon(Part1, Univ_name_2) = Part2,
+    strcon(Part2, ")") = Proposition.
+
+dyadic_proposition_ok(Univ_name, Obj_name_1, Obj_name_2, Tp, Proposition) :-
+    dyadic_universal_ok(Univ_name, Var_name_1, Var_name_2, Tp),
+    object(Obj_name_1),
+    object(Obj_name_2),
+    Tp >= 1,
+    strcon(Univ_name, "(") = Part1,
+    strcon(Part1, Obj_name_1) = Part2,
+    strcon(Part2, ",") = Part3,
+    strcon(Part3, Obj_name_2) = Part4,
+    strcon(Part4, ")") = Proposition.
+
+
+gen_monadic_proposition_ok(Quant, Var_name, Univ_name, Var_name, Tp, Proposition) :-
+    quant(Quant),
+    variable_ok(Var_name, Tp_1),
+    monadic_universal_ok(Univ_1, Var_1, Tp),
+    Tp > Tp_1,
+    strcon("(", Quant) = Part1,
+    strcon(Part1, " ") = Part2,
+    strcon(Part2, Var_name) = Part3,
+    strcon(Part3, ")") = Part3b,
+    strcon(Part3b, Univ_name) = Part4,
+    strcon(Part4, "(") = Part5,
+    strcon(Part5, Var_name) = Part6,
+    strcon(Part6, ")") = Proposition.
+
+% gen_pred_monadic_proposition_ok("exists", "x0", "all", "y0", "h1^x0^y0", "x0", "y0", Tp, Proposition)?
+
+%HERE
+
+gen_pred_monadic_proposition_ok(Quant, Var_1, Quant_pred, Var_pred, Univ_pred, Var_pred, Var_1, Tp, Proposition) :-
+    quant(Quant),
+    quant(Quant_pred),
+    variable_ok(Var_1, Tp_1),
+    variable_ok(Var_pred, Tp_pred),
+    monadic_pred_universal_ok(Quant_pred, Var_pred, Univ_pred, Var_pred, Var_1, Tp, Univ_out),
+    Tp > Tp_1,
+    Tp > Tp_pred,
+    strcon("(", Quant) = Part1,
+    strcon(Part1, " ") = Part2,
+    strcon(Part2, Var_1) = Part3,
+    strcon(Part3, ")") = Part4,
+    strcon(Part4, Univ_out) = Proposition.
+
+gen_dyadic_proposition_ok(Quant_1, Var_name_1, Quant_2, Var_name_2, Univ_name, Var_name_1, Var_name_2, Tp, Proposition) :-
+    quant(Quant_1),
+    quant(Quant_2),
+    variable_ok(Var_name_1, Tp_1),
+    variable_ok(Var_name_2, Tp_2),
+    Var_name_1 $\== Var_name_2,
+    dyadic_universal_ok(Univ_name, Var_name_1, Var_name_2, Tp),
+    Tp > Tp_1,
+    Tp > Tp_2,
+    strcon("(", Quant_1) = Part1,
+    strcon(Part1, " ") = Part2,
+    strcon(Part2, Var_name_1) = Part3,
+    strcon(Part3, ")(") = Part4,
+    strcon(Part4, Quant_2) = Part5,
+    strcon(Part5, " ") = Part6,
+    strcon(Part6, Var_name_2) = Part7,
+    strcon(Part7, ")") = Part7a,
+    strcon(Part7a, Univ_name) = Part8,
+    strcon(Part8, "(") = Part9,
+    strcon(Part9, Var_name_1) = Part10,
+    strcon(Part10, ",") = Part11,
+    strcon(Part11, Var_name_2) = Part12,
+    strcon(Part12, ")") = Proposition.
+    
+universal_ok(simple, Univ, Var_list, Tp_1) :-
+    natural_universal_ok(nat, Univ, Var_list, Tp_1).
+
+molecular_universal_ok(molecular, Univ, Var_list, Tp) :-
+    universal_ok(simple, Univ_1, Var_list_1, Tp_1),
+    universal_ok(simple, Univ_2, Var_list_2, Tp_2),
+%    Var_1 $\== Var_2,
+    strcon("nand(", Univ_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Univ_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+molecular_dyadic_universal_ok(Name_3, Var_1, Tp_1, Var_2, Tp_2) :-
+    molecular_monadic_universal_ok(Name_1, Var_1, Tp_1),
+    monadic_universal_ok(Name_2, Var_2, Tp_2),
+    Var_1 $\== Var_2,
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+molecular_dyadic_universal_ok(Name_3, Var_1, Tp_1, Var_2, Tp_2) :-
+    monadic_universal_ok(Name_1, Var_1, Tp_1),
+    molecular_monadic_universal_ok(Name_2, Var_2, Tp_2),
+    Var_1 $\== Var_2,
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+molecular_dyadic_universal_ok(Name_3, Var_1, Tp_1, Var_2, Tp_2) :-
+    molecular_monadic_universal_ok(Name_1, Var_1, Tp_1),
+    molecular_monadic_universal_ok(Name_2, Var_2, Tp_2),
+    Var_1 $\== Var_2,
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+molecular_monadic_universal_ok(Name_3, Var_1, Tp_1) :-
+    monadic_universal_ok(Name_1, Var_1, Tp_1),
+    monadic_universal_ok(Name_2, Var_2, Tp_2),
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+
+molecular_monadic_universal_ok(Name_3, Var_1, Tp_1) :-
+    monadic_universal_ok(Name_1, Var_1, Tp_1),
+    monadic_universal_ok(Name_2, Var_2, Tp_2),
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3,
+    Tp_1 > Tp_2.
+
+molecular_monadic_universal_ok(Name_3, Var_1, Tp_1) :-
+    molecular_monadic_universal_ok(Name_1, Var_1, Tp_1),
+    monadic_universal_ok(Name_2, Var_2, Tp_2),
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+molecular_monadic_universal_ok(Name_3, Var_1, Tp_1) :-
+    monadic_universal_ok(Name_1, Var_1, Tp_1),
+    molecular_monadic_universal_ok(Name_2, Var_2, Tp_2),
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+molecular_monadic_universal_ok(Name_3, Var_1, Tp_1) :-
+    molecular_monadic_universal_ok(Name_1, Var_1, Tp_1),
+    molecular_monadic_universal_ok(Name_2, Var_2, Tp_2),
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = Name_3.
+
+% monadic_pred_universal_ok("exists", "x0", Univ, "x0", 1)?
+
+
+monadic_pred_universal_ok(Quant, Var_1, Univ, Var_1, Var_2, Tp, Univ_out) :-
+    quant(Quant),
+    dyadic_universal_ok(Univ, Var_1, Var_2, Tp),
+    strcon("(", Quant) = Work0,
+    strcon(Work0, " ") = Work00,
+    strcon(Work00, Var_1) = Work1,
+    strcon(Work1, ")") = Work2,
+    strcon(Work2, Univ) = Work3,
+    strcon(Work3, "(") = Work4,
+    strcon(Work4, Var_1) = Work5,
+    strcon(Work5, ",") = Work6,
+    strcon(Work6, Var_2) = Work7,
+    strcon(Work7, ")") = Univ_out.
+
+monadic_pred_universal_ok(Quant, Var_1, Univ_in, Var_1, Var_2, Tp, Univ_out) :-
+    quant(Quant),
+    molecular_dyadic_universal_ok(Univ_in, Var_1, Var_2, Tp),
+    strcon("(", Quant) = Work0,
+    strcon(Work0, " ") = Work1,
+    strcon(Work1, Var_1) = Work2,
+    strcon(Work2, ")") = Work3,
+    strcon(Work3, Name_1) = Work4,
+    strcon(Work4, "(") = Work5,
+    strcon(Work5, Var_1) = Work6,
+    strcon(Work6, ",") = Work7,
+    strcon(Work7, Var_2) = Work8,
+    strcon(Work8, ")") = Univ_out.
+

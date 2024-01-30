@@ -1,0 +1,8 @@
+load("comp_pred.lf")?
+
+
+monadic_proposition_ok("f1", "a", 1)?
+
+monadic_proposition_ok("f1", "b", 0)?	      
+
+halt?

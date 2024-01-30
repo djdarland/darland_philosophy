@@ -1,0 +1,11 @@
+cp comp_pred.lf comp_pred_lf.txt
+cp napoleon.lf napoleon_lf.txt
+cp facts_pred.lf facts_pred_lf.txt
+cp facts_napoleon.lf facts_napoleon_lf.txt
+cp rules_pred.lf rules_pred_lf.txt
+cp rules_impred.lf rules_impred_lf.txt
+cp ti01.lf ti01_lf.txt
+cp ti02.lf ti02_lf.txt
+cp ti03.lf ti03_lf.txt
+cp tinap.lf tinap_lf.txt
+sftp dennisda@dennisdarland.com <comp_impred.bat

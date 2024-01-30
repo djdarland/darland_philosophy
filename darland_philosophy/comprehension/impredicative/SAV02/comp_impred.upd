@@ -1,0 +1,7 @@
+cp comp_impred.lf comp_impred_lf.txt
+cp facts_impred.lf facts_impred_lf.txt
+cp rules_impred.lf rules_impred_lf.txt
+cp ti01.lf ti01_lf.txt
+cp ti02.lf ti02_lf.txt
+cp ti03.lf ti03_lf.txt
+sftp dennisda@dennisdarland.com <comp_impred.bat

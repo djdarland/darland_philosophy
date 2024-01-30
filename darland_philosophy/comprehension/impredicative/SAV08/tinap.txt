@@ -1,0 +1,144 @@
+Wild_Life Interpreter Version 4.20 Fri Jul 28 09:50:46 AM CDT 2023
+Copyright (C) 1991-93 DEC Paris Research Laboratory
+Extensions, Copyright (C) 1994-1995 Intelligent Software Group, SFU
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
+X interface not installed.
+No customizing file loaded.
+> *** Loading File "napoleon.lf"
+Hello
+*** Loading File "facts_napoleon.lf"
+*** Loading File "rules_pred.lf"
+*** Loading File "rules_impred.lf"
+
+ <EOF>
+
+*** Yes
+> 
+> monadic_natural_universal_ok("courage", "x0", 1)?
+
+*** Yes
+--1>     
+
+*** No
+> monadic_universal_ok("courage", "x0", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_universal_ok("smart", "x0", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_universal_ok("strong", "x0", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_proposition_ok("courage", "napoleon", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_proposition_ok("smart", "napoleon", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_proposition_ok("strong", "napoleon", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_universal_ok("property_of_great_general", "f1", 2)?
+
+*** Yes
+> 
+> monadic_proposition_ok("property_of_great_general", "courage", 2)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_proposition_ok("property_of_great_general", "smart", 2)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_proposition_ok("property_of_great_general", "strong", 2)?
+
+*** Yes
+--1> 
+
+*** No
+> monadic_pred_universal_ok("all", "x0", "(all x0)taller_than(x0,y0)", "y0", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> gen_pred_monadic_proposition_ok("exists", "y0", "exists", "x0", "(exists x0)taller_than(x0,y0)", "y0", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> gen_pred_monadic_proposition_ok("exists", "y0", "exists", "x0", "(exists x0)taller_than(x0,y0)", "y0", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> dyadic_universal_ok(Univ_name, Name, Tp_imp, Var_name, Tp)?
+
+*** Yes
+Name = "x0", Tp = 1, Tp_imp = 1, Univ_name = "taller_than", Var_name = "y0".
+--1> 
+
+*** No
+> reduced_universal_ok("all", "f1", "f2", "f1", 2, "x0", 1, Name)?
+
+*** Yes
+Name = "(all f1)f2(f1,x0)".
+--1> 
+
+*** No
+> imp_monadic_proposition_ok("all", "f1", "f2", "f1", 2, "x0", 1, Name, napoleon)?
+
+*** Yes
+Name = "(all f1)f2(f1,x0)".
+--1> 
+
+*** No
+> imp_monadic_proposition_ok("all", "f2", "f3", "f2", 3, "f1", 2, Name, "f1")?
+
+*** Yes
+Name = "(all f2)f3(f2,f1)".
+--1> 
+
+*** No
+> imp_monadic_proposition_ok("all", "f1", "property_of_great_general", "f1", 2, "x0", 1, Name, "napoleon")?
+
+*** Yes
+Name = "(all f1)property_of_great_general(f1,x0)".
+--1> 
+
+*** No
+> gen_imp_monadic_proposition_ok("exists", "x0", "all", "f1", "f2", "f1", 2, "x0", 1, Name, "x0")?
+
+*** Yes
+Name = "(all f1)f2(f1,x0)".
+--1> 
+
+*** No
+> halt?
+
+*** Exiting Wild_Life  [0.000s cpu, 0.000s gc (0.0%)]

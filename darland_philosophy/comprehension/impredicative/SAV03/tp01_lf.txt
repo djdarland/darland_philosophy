@@ -1,0 +1,6 @@
+load("comp_pred.lf")?
+
+
+proposition_ok("f", 1, "x0")?
+
+proposition_ok("f", 1, "x1")?	      

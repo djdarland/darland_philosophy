@@ -1,0 +1,98 @@
+%% Copyright (C) 2024 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% 
+%%
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Study of predicative comprehension
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+mon_predicate_ok(New_name, Var_1, Tp, Var_2) :- 
+    predicate_ok(Name_1, Tp),
+    predicate_ok(Name_2, Tp),
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = New_name.
+
+proposition_ok(Pred_name, Tp, Obj_name) :-
+    write("a0001"),nl,
+    predicate_ok(Pred_name, Tp),
+    write("a0003"),nl,
+    object(Obj_name),
+    write("a0003"),nl,
+    Tp >= 1.
+
+proposition_ok(Pred_name_1, Tp_1, Pred_name_2) :-
+    write("b0001"),nl,
+    predicate_ok(Pred_name_1, Tp_1),
+    write("b0002"),nl,
+    predicate_ok(Pred_name_2, Tp_2),
+    write("b0003"),nl,
+    Tp1 > Tp2.
+
+gen_proposition_ok(Quant, Var_name, Pred_name, Tp_1, Var_name) :-
+    quant(Quant),
+    variable_ok(Var_name, Tp_1),
+    predicate_ok(Pred_name, Tp_2),
+    Tp1 > Tp2.
+
+gen_gen_proposition_ok(Quant_1, Var_name_1, Quant_2, Var_name_2, Pred_name, Tp_1, Var_name_1, Var_name_2) :-
+    quant(Quant_1),
+    variable_ok(Var_name_1, Tp_2),
+    quant(Quant_2),
+    Var_name_1 $\== Var_name_2,
+    variable_ok(Var_name_2, Tp_3),
+    predicate_ok(Pred_name, Tp_1),
+    Tp_1 > Tp_2,
+    Tp_1 > Tp_3.
+
+gen_imp_proposition_ok(Quant, Var_name, Quant_imp, Var_name_imp, Imp_pred_name, Tp_1, Var_name) :-
+    quant(Quant),
+    quant(Quant_imp),
+    variable_ok(Var_name, Tp_2),
+    imp_pred_name(Var_name_imp, Imp_pred_name, Tp_3),
+    predicate_ok(Pred_name, Tp_1),
+    Tp_1 > Tp2.
+
+imp_pred_name(Var_name_imp, Imp_pred_name, Tp_1) :-
+    imp_predicate_ok(New_name, Tp_1).
+    
+imp_predicate_ok(New_name, Var_name_imp, Tp_1) :- 
+    predicate_ok(Name_1, Tp_1),
+    predicate_ok(Name_2, Tp_1),
+    uses_variable(New_name, Name_1),
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = New_name.
+
+imp_predicate_ok(New_name, Var_name_imp, Tp_1) :- 
+    predicate_ok(Name_1, Tp_1),
+    predicate_ok(Name_2, Tp_2),
+    uses_variable(New_name, Name_2),
+    Tp1 >= Tp_2,
+    strcon("nand(", Name_1) = Work1,
+    strcon(Work1, ",") = Work2,
+    strcon(Work2, Name_2) = Work3,
+    strcon(Work3, ")") = New_name.
+
+
+

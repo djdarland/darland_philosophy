@@ -1,0 +1,61 @@
+%% Copyright (C) 2024 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+dynamic(monadic_natural_universal_ok)?
+
+dynamic(dyadic_natural_universal_ok)?
+       
+monadic_natural_universal_ok("f1^x0", "x0", 1).
+
+monadic_natural_universal_ok("g1^x0", "x0", 1).
+
+monadic_natural_universal_ok("f2^x1", "x1", 2).
+
+monadic_natural_universal_ok("g2^x1", "x1", 2).
+
+monadic_natural_universal_ok("f3^x2", "x2", 3).
+
+monadic_natural_universal_ok("g3^x2", "x2", 3).
+
+monadic_natural_universal_ok("courage^x0", "x0", 1).
+
+monadic_natural_universal_ok("smart^x0", "x0", 1).
+
+monadic_natural_universal_ok("strong^x0", "x0", 1).
+
+monadic_natural_universal_ok("property_of_great_general^x1", "x1", 2).
+
+dyadic_natural_universal_ok("taller_than^x0^y0", "x0", "y0", 1).
+
+dyadic_natural_universal_ok("taller_than^y0^x0", "y0", "x0", 1).
+
+variable_ok("x0", 0).
+
+variable_ok("y0", 0).
+
+variable_ok("x1", 1).
+
+variable_ok("y1", 1).
+
+variable_ok("x2", 2).
+
+object("napoleon").
+
+quant("exists").
+
+quant("all").
+

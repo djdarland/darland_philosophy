@@ -1,0 +1,119 @@
+Wild_Life Interpreter Version 4.20 Fri Jul 28 09:50:46 AM CDT 2023
+Copyright (C) 1991-93 DEC Paris Research Laboratory
+Extensions, Copyright (C) 1994-1995 Intelligent Software Group, SFU
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
+X interface not installed.
+No customizing file loaded.
+> *** Loading File "comp_impred.lf"
+Hello
+*** Loading File "facts_impred.lf"
+*** Loading File "rules_impred.lf"
+
+ <EOF>
+
+*** Yes
+> 
+> predicate_ok("f1", 1)?
+
+*** Yes
+--1> 
+
+*** No
+> predicate_ok("f1", 2)?
+
+*** No
+> 
+> predicate_ok("f2", 2)?
+
+*** Yes
+--1> 
+
+*** No
+> predicate_ok("f2", 1)?
+
+*** No
+> 
+> predicate_ok("f3", 3)?
+
+*** Yes
+--1> 
+
+*** No
+> proposition_ok("f2", 2, "f1")?
+a0001
+a0003
+b0001
+b0002
+b0003
+
+*** Yes
+--1> 
+
+*** No
+> 
+> 
+> predicate_ok(X,Y)?
+
+*** Yes
+X = "f1", Y = 1.
+--1> ;
+
+*** Yes
+X = "g1", Y = 1.
+--1> ;
+
+*** Yes
+X = "h1", Y = 1.
+--1> ;
+
+*** Yes
+X = "f2", Y = 2.
+--1> ;
+
+*** Yes
+X = "g2", Y = 2.
+--1> ;
+
+*** Yes
+X = "h2", Y = 2.
+--1> ;
+
+*** Yes
+X = "f3", Y = 3.
+--1> ;
+
+*** Yes
+X = "g3", Y = 3.
+--1> ;
+
+*** Yes
+X = "h3", Y = 3.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+>     
+>  <EOF>
+
+*** Exiting Wild_Life  [0.000s cpu, 0.000s gc (0.0%)]

@@ -1,0 +1,69 @@
+load("comp_pred.lf")?
+
+universal_ok(simple, "f1^x0", ["x0"], 1)?
+
+universal_ok(simple, "h1^x0^y0", ["x0", "y0"], 1)?
+
+universal_ok(simple, Univ, [X], T)?
+;
+;
+;
+
+universal_ok(simple, Univ, [X, Y], T)?
+;
+;
+;
+
+universal_ok(simple, Univ, Var_list, T)?
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+
+molecular_universal_ok(molecular, Univ, Var_list, Tp)?
+
+
+halt?
+
+molecular_monadic_universal_ok("nand(f1^x0,g1^x0)", "x0", 1)?
+
+molecular_dyadic_universal_ok("nand(f1^x0,g1^y0)", "x0", 1, "y0", 1)?
+
+monadic_pred_universal_ok("exists", "x0", "h1^x0^y0" , "x0", "y0", 1, Univ_out)?
+
+halt?

@@ -1,0 +1,9 @@
+load("comp_impred.lf")?
+
+monadic_proposition_ok("f1", "a", 1)?
+
+dyadic_proposition_ok("h1", "a", "b", 1)?
+
+gen_monadic_proposition_ok("exists", "x0", "f1", "x0", 1)?
+
+gen_dyadic_proposition_ok("exists", "x0", "all", "y0", "h1", "x0", "y0", 1)?
