@@ -1,4 +1,4 @@
-cd public_html/darland_philosophy/WhiteheadPhilosophyLife
+cd public_html/darland_philosophy/DarlandPhilosophyLife
 
 cd HTML
 lcd HTML

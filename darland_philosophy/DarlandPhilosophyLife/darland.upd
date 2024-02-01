@@ -1,4 +1,4 @@
-cp anw.html HTML/anw.html
+cp darland.html HTML/darland.html
 cp FACTS2/facts_0031.lf HTML/FACTS2/facts_0031.lf.txt
 cp FACTS2/facts_0033.lf HTML/FACTS2/facts_0033.lf.txt
 cp FACTS2/facts_0071.lf HTML/FACTS2/facts_0071.lf.txt
@@ -94,4 +94,4 @@ cp RULES2/rules_0075.lf HTML/RULES2/rules_0075.lf.txt
 cp RULES2/rules_0076.lf HTML/RULES2/rules_0076.lf.txt
 cp RULES2/rules_0077.lf HTML/RULES2/rules_0077.lf.txt
 cp RULES2/rules_0078.lf HTML/RULES2/rules_0078.lf.txt
-sftp dennisda@dennisdarland.com <anw.bat
+sftp dennisda@dennisdarland.com <darland.bat

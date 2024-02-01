@@ -1,5 +1,5 @@
 echo "-----------"
-echo "Whitehead Philosophy Query Edits"
+echo "Darland Philosophy Query Edits"
 echo "-----------"
 
 echo "Copyright (C) 2017, 2019, 2021, 2024  Dennis J. Darland"
@@ -57,73 +57,73 @@ read select
 while [ $select -ne 999 ]
 do 
 case $select in
-0) $EDITOR ../WhiteheadPhilosophyLife/IN2/append.lf;;
-1) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0001.lf;;
-2) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0002.lf;;
-3) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0003.lf;;
-4) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0004.lf;;
-5) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0005.lf;;
-6) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0006.lf;;
-7) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0007.lf;;
-8) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0008.lf;;
-9) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0009.lf;;
-10) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0010.lf;;
-11) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0011.lf;;
-21) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0021.lf;;
-22) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0022.lf;;
-23) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0023.lf;;
-24) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0024.lf;;
-25) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0025.lf;;
-26) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0026.lf;;
-27) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0027.lf;;
-28) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0028.lf;;
-29) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0029.lf;;
-31) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0031.lf;;
-32) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0032.lf;;
-33) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0033.lf;;
-34) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0034.lf;;
-35) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0035.lf;;
-36) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0036.lf;;
-37) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0037.lf;;
-38) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0038.lf;;
-39) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0039.lf;;
-40) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0040.lf;;
-41) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0041.lf;;
-42) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0042.lf;;
-45) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0045.lf;;
-46) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0046.lf;;
-47) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0047.lf;;
-48) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0048.lf;;
-61) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0061.lf;;
-62) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0062.lf;;
-63) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0063.lf;;
-64) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0064.lf;;
-65) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0065.lf;;
-68) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0068.lf;;
-69) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0069.lf;;
-55) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0000.lf;;
-71) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0071.lf;;
-72) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0072.lf;;
-73) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0073.lf;;
-74) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0074.lf;;
-75) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0075.lf;;
-76) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0076.lf;;
-77) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0077.lf;;
-78) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0078.lf;;
-81) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0081.lf;;
-91) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0091.lf;;
-92) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0092.lf;;
-94) $EDITOR ../WhiteheadPhilosophyLife/IN2/darland_0094.lf;;
+0) $EDITOR ../DarlandPhilosophyLife/IN2/append.lf;;
+1) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0001.lf;;
+2) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0002.lf;;
+3) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0003.lf;;
+4) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0004.lf;;
+5) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0005.lf;;
+6) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0006.lf;;
+7) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0007.lf;;
+8) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0008.lf;;
+9) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0009.lf;;
+10) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0010.lf;;
+11) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0011.lf;;
+21) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0021.lf;;
+22) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0022.lf;;
+23) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0023.lf;;
+24) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0024.lf;;
+25) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0025.lf;;
+26) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0026.lf;;
+27) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0027.lf;;
+28) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0028.lf;;
+29) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0029.lf;;
+31) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0031.lf;;
+32) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0032.lf;;
+33) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0033.lf;;
+34) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0034.lf;;
+35) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0035.lf;;
+36) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0036.lf;;
+37) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0037.lf;;
+38) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0038.lf;;
+39) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0039.lf;;
+40) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0040.lf;;
+41) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0041.lf;;
+42) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0042.lf;;
+45) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0045.lf;;
+46) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0046.lf;;
+47) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0047.lf;;
+48) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0048.lf;;
+61) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0061.lf;;
+62) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0062.lf;;
+63) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0063.lf;;
+64) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0064.lf;;
+65) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0065.lf;;
+68) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0068.lf;;
+69) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0069.lf;;
+55) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0000.lf;;
+71) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0071.lf;;
+72) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0072.lf;;
+73) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0073.lf;;
+74) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0074.lf;;
+75) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0075.lf;;
+76) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0076.lf;;
+77) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0077.lf;;
+78) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0078.lf;;
+81) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0081.lf;;
+91) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0091.lf;;
+92) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0092.lf;;
+94) $EDITOR ../DarlandPhilosophyLife/IN2/darland_0094.lf;;
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
 666) $EDITOR eee1 ;;
 777) $EDITOR NOTES_DJD.txt & ;;
 esac
 echo "-----------"
-echo "Whitehead Philosophy Query Edits"
+echo "Darland Philosophy Query Edits"
 echo "-----------"
 
-echo "Copyright (C) 2017, 2019  Dennis J. Whitehead"
+echo "Copyright (C) 2017, 2019  Dennis J. Darland"
 echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
 echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; type 501 for details."
