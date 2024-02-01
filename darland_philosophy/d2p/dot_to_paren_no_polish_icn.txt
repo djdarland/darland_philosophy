@@ -1,0 +1,901 @@
+## Copyright (C) 2024 Dennis J. Darland
+
+## This file is part of darland's philosophy.
+
+## darland's philosophy is free software: you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation, either version 3 of the License, or
+## (at your option) any later version.
+
+## darland's philosophy is distributed in the hope that it will be useful, 
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+## GNU General Public License for more details.
+
+## You should have received a copy of the GNU General Public License
+## along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+$define NO_PRECEDENCE 0
+$define CONJUNCTION_HIGH_PRECEDENCE 1
+$define MAX_LOOP 50000000
+$define PM 0
+$define LUK 1
+$define POLISH_INCLUDED 0
+
+
+global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, delim_q2, delim_l2, loc, prefix_stk, reverse_polish, head, max_iter, stk
+
+procedure main()
+   # next 2 lines used to get debugging from unicon
+   &trace := MAX_LOOP  # how many function calls to trace
+   &dump := 1 # nonzero turns on termination dump
+   init() 
+   process()
+   finish()
+end
+procedure init() 
+   max_iter := MAX_LOOP
+   lextra := 0
+   qextra := 0
+   delim_l2 := ' =abcdefghijklmnopqrstuvwxyzFG$\\'
+   delim_q2 := ' =abcdefghijklmnopqrstuvwxyzFG$\\'
+   # initialize globals
+   echo := 1 # show original line with dots next to one with parens  
+   lineno := 0 # global as may be useful if error messages etc.
+   # The following are used to identify strings used in latex - mostly principia 
+   dot :=      "\\pmdot"
+   dott :=     "\\pmdott"
+   dottt :=    "\\pmdottt"
+   dotttt :=   "\\pmdotttt"
+   dottttt :=  "\\pmdottttt"
+   dotttttt := "\\pmdotttttt"
+   and :=      "\\pmand"
+   andd :=     "\\pmandd"
+   anddd :=    "\\pmanddd"
+   andddd :=   "\\pmandddd"
+   anddddd :=  "\\pmanddddd"
+   andddddd := "\\pmandddddd"
+   
+   qexist :=   "\\pmsome{"
+   qall :=   "\\pmall{"
+   qdsc :=   "\\dsc{"
+   qor := "\\pmor"
+   qimp := "\\pmimp"
+   qiff := "\\pmiff"
+   
+   sno_s := table(0)
+   val_s := table(0)
+   
+   val_s[1] := "."
+   sno_s[1] := "@SNO.@" # Not expected in linein - may be changed if conflict
+   val_s[2] := "^"
+   sno_s[2] := "@SNO^@" # Not expected in linein - may be changed if conflict
+   val_s[3] := "!"
+   sno_s[3] := "@SNO!@" # Not expected in linein - may be changed if conflict
+   val_s[4] := "%"
+   sno_s[4] := "@SNO%@" # Not expected in linein - may be changed if conflict
+   val_s[5] := ";"
+   sno_s[5] := "@SNO;@" # Not expected in linein - may be changed if conflict
+   val_s[6] := ":"
+   sno_s[6] := "@SNO:@" # Not expected in linein - may be changed if conflict
+   sno_s[7] := "@SNOpsi@"   
+   val_s[7] := "\\psi"
+   sno_s[8] := "@SNOalpha@"   
+   val_s[8] := "\\alpha"
+   sno_s[9] := "@SNObeta@"   
+   val_s[9] := "\\beta"
+   sno_s[10] := "@SNOgamma@"   
+   val_s[10] := "\\gamma"
+   sno_s[11] := "@SNOphi@"   
+   val_s[11] := "\\phi"
+   sno_s[12] := "@SNOphi@"   
+   val_s[12] := "\\phi"
+   sno_s[13] := "@SNOchi@"   
+   val_s[13] := "\\chi"
+   sno_s[14] := "@SNOpmpf@"   
+   val_s[14] := "\\pmpf"
+   sno_tmp := "@SNOTEMP@" # Not expected in linein - may be changed if conflict
+   val_tmp := "TEMP"
+end
+
+procedure finish()
+end
+
+procedure process()
+   while linein := read() do { # read from standard in
+      lineno +:= 1
+      # only change lines with dots
+      if find("\\pmand", linein) then a := 1 else a := 0
+      if find("\\pmdot", linein) then b := 1 else b := 0
+      if ((a + b) > 0) then {
+         if echo = 1 then {
+            write(linein)
+            write(&errout, linein)
+            write(" ")
+            }
+         a := find(dot, linein)
+         linein ? ((front := tab(a)) & (linein := tab(0)))  
+         # avoid any conflicts 
+         av := 1
+         while av <= *sno_s do {
+            linein := avoid(linein,sno_s[av],val_s[av])
+            av +:= 1
+            }
+         ## Next change possible leading dots
+         if lineout := sub_dot_leading(linein, dotttttt, " ^^^^^^ ")
+         then linein := lineout
+         else if lineout := sub_dot_leading(linein, dottttt,  " ^^^^^")
+         then linein := lineout
+         else if lineout := sub_dot_leading(linein, dotttt,   " ^^^^ ")
+         then linein := lineout
+         else if lineout := sub_dot_leading(linein, dottt,    " ^^^ ")
+         then linein := lineout
+         else if lineout := sub_dot_leading(linein, dott,     " ^^ ")
+         then linein := lineout
+         else if lineout := sub_dot_leading(linein, dot,      " ^ ") 
+         then linein := lineout
+         # first change dots associated with quantifiers with to "!"
+         # quantifiers must come first 
+         # if not first they would already be changed to wrong value
+         # also changes quantifier symbol to "TEMP" - to avoid getting stuck
+         # longer number of dots done first
+         # this is Group  II on page 9 of to *56
+         # ! before quantifier % after
+         linein := sub_qdot(linein, qexist, dotttttt,   (" " || repl("!", 6 + qextra) || " "))
+         linein := sub_qdot(linein, qexist, dottttt,   (" " || repl("!", 5 + qextra) || " "))
+         linein := sub_qdot(linein, qexist, dotttt,   (" " || repl("!", 4 + qextra) || " "))
+         linein := sub_qdot(linein, qexist, dottt,   (" " || repl("!", 3 + qextra) || " "))
+         linein := sub_qdot(linein, qexist, dott,   (" " || repl("!", 2 + qextra) || " "))
+         linein := sub_qdot(linein, qexist, dot,   (" " || repl("!", 1 + qextra) || " "))
+         linein := sub_qdot(linein, qexist, " ",   (" " || repl("!", qextra) || " "))
+         # Next change "TEMP" back to quantifier symbol
+         linein := sub_temp(linein, qexist)
+         
+         linein := sub_qdot(linein, qall, dotttttt,   (" " || repl("!",6 + qextra) || " "))
+         linein := sub_qdot(linein, qall, dottttt,   (" " || repl("!",5 + qextra) || " "))
+         linein := sub_qdot(linein, qall, dotttt,   (" " || repl("!",4 + qextra) || " "))
+         linein := sub_qdot(linein, qall, dottt,   (" " || repl("!",3 + qextra) || " "))
+         linein := sub_qdot(linein, qall, dott,   (" " || repl("!",2 + qextra) || " "))
+         linein := sub_qdot(linein, qall, dot,   (" " || repl("!",1 + qextra) || " "))
+         linein := sub_qdot(linein, qall, " ",   (" " || repl("!", qextra) || " "))
+         # Next change "TEMP" back to quantifier symbol
+         linein := sub_temp(linein, qall)
+
+         # Next change dots associated with truth functions 
+         # other than conjunction to "." before - "^" after
+         # Group I on page 9 to *56         
+         linein := sub_ldot(linein, qor, dotttttt,   (" " || repl(".", 6 + lextra) || " "))
+         linein := sub_ldot(linein, qor, dottttt,   (" " || repl(".", 5 + lextra) || " "))
+         linein := sub_ldot(linein, qor, dotttt,   (" " || repl(".", 4 + lextra) || " "))
+         linein := sub_ldot(linein, qor, dottt,   (" " || repl(".", 3 + lextra) || " "))
+         linein := sub_ldot(linein, qor, dott,   (" " || repl(".", 2 + lextra) || " "))
+         linein := sub_ldot(linein, qor, dot,   (" " || repl(".", 1 + lextra) || " "))
+         linein := sub_ldot(linein, qor, " ",   (" " || repl(".", lextra) || " "))
+         # Next change "TEMP" back to or symbol
+         linein := sub_temp(linein, qor)
+         linein := sub_ldot(linein, qimp, dotttttt,   (" " || repl(".", 6 + lextra)  || " "))
+         linein := sub_ldot(linein, qimp, dottttt,   (" " || repl(".", 5 + lextra) || " "))
+         linein := sub_ldot(linein, qimp, dotttt,   (" " || repl(".", 4 + lextra) || " "))
+         linein := sub_ldot(linein, qimp, dottt,   (" " || repl(".", 3 + lextra) || " "))
+         linein := sub_ldot(linein, qimp, dott,   (" " || repl(".", 2 + lextra) || " "))
+         linein := sub_ldot(linein, qimp, dot,   (" " || repl(".", 1 + lextra) || " "))
+         linein := sub_ldot(linein, qimp, " ",   (" " || repl(".", lextra) || " "))
+         # Next change "TEMP" back to imp symbol
+         linein := sub_temp(linein, qimp)
+
+         linein := sub_ldot(linein, qiff, dotttttt,   (" " || repl(".", 6 + lextra) || " "))
+         linein := sub_ldot(linein, qiff, dottttt,   (" " || repl(".", 5 + lextra) || " "))
+         linein := sub_ldot(linein, qiff, dotttt,   (" " || repl(".", 4 + lextra) || " "))
+         linein := sub_ldot(linein, qiff, dottt,   (" " || repl(".", 3 + lextra) || " "))
+         linein := sub_ldot(linein, qiff, dott,   (" " || repl(".", 2 + lextra) || " "))
+         linein := sub_ldot(linein, qiff, dot,   (" " || repl(".", 1 + lextra) || " "))
+         linein := sub_ldot(linein, qiff, " ",   (" " || repl(".", lextra) || " "))
+         # Next change "TEMP" back to quantifier symbol
+         linein := sub_temp(linein, qiff)
+
+         # Next change dots associated with conjunction to ";"
+         # Group III on page 9 to *56
+         linein := sub_dot(linein, andddddd, ";;;;;; \\land ::::::")
+         linein := sub_dot(linein, anddddd,  ";;;;; \\land :::::")
+         linein := sub_dot(linein, andddd,   ";;;; \\land ::::")
+         linein := sub_dot(linein, anddd,    ";;; \\land ::;")
+         linein := sub_dot(linein, andd,     ";; \\land ::")
+         linein := sub_dot(linein, and,      "; \\land :")
+
+         linein := front || linein
+         # next compute number of left parens to start with
+         # total number of "!" or "."
+         # ";" is neutral - produces same number of right or left paren
+         # Later as analyze keep track of open and close paren
+         # and add enough close paren to balance
+         first_dots := scan(linein)
+         av := 1
+         while av <= *sno_s do {
+            lineout := restore_avoided(lineout,sno_s[av],val_s[av]) # avoid should not occur in line
+            av +:= 1
+            }
+
+         # see comments within analyze
+         lineout := analyze(first_dots, linein)
+         # finally remove as many paren from left and right as possibe
+         # we will have started with more opening paren than needed
+         lineout2 := trim_excess(lineout)
+         write_note("Version with parentheses")
+
+#         write(lineout)
+#         write("")
+         lineout_sav := lineout
+        lineout3 := elim_extra_paren(lineout2)
+#         write_note("Version with some parentheses removed")
+         write(lineout3)
+         write("")
+         if (POLISH_INCLUDED = 1) then
+            to_Polish(lineout_sav)
+         }
+      else write(linein)      
+      }
+end
+
+procedure avoid(linein,sno,val) # avoid should not occur in line
+   if linein ? find(sno) then {
+      write("Error line = ",lineno, sno, " conflicts with internal value. (unlikely)")
+      write(&errout, "Error line = ",lineno, sno, " conflicts with internal value. (unlikely)")
+      write("May change in dot_to_paren.icn")
+      write(&errout, "May change in dot_to_paren.icn")
+      exit(1)
+      }
+   else {
+      while linein ? (part1 := tab(find(val)) &
+                      tab(match(".")) &
+                      part2 := tab(0)) do {
+                         linein := part1 || sno || part2
+                         }
+      }
+   return linein
+end
+
+procedure restore_avoided(lineout,sno,val) # avoid should not occur in line
+   write(&errout, "TOP restore ", val, " for ", sno)
+   while lineout ? (part1 := tab(find(sno)) &
+                   tab(match(sno)) &
+                   part2 := tab(0)) do {
+                      lineout := part1 || val || part2
+                      write(&errout, "restore ", val, " for ", sno)
+                      }
+   return lineout
+end
+
+# for groups I and III 
+procedure sub_dot(linein, dot_str, dots_out)
+   while linein ? ((part1 := tab(find(dot_str))) & 
+                   tab(match(dot_str)) & 
+                   (part2 := tab(0))) do {
+                      linein := part1 || dots_out || part2
+                      }
+   lineout := linein
+   return lineout 
+end 
+
+procedure sub_dot_leading(linein, dot_str, dots_out)
+   if linein ? (tab(match(dot_str)) & 
+                (part2 := tab(0))) then
+      {
+         linein :=  dots_out || part2
+         lineout := linein
+         return lineout 
+         }
+   else {
+      fail
+      }
+end 
+
+# for group II
+procedure sub_qdot(linein, quant , dot_str, dots_out)
+   # immediately before quantifier
+   while linein ? (
+                   part0 := tab(find(quant)) &
+                   part1 := tab(match(quant)) &
+                   part2 := (tab(many(' ')) | tab(match(""))) & 
+                   part3 := tab(many('abcdefghijklmnopqrstuvwxyzABCDERGHIJKLMNOPQRSTUVWXYZ\\')) &
+                   part4 := tab(match("}")) &
+                   (tab(many(' ')) | tab(match(""))) &
+                   part5 := tab(0)) do {
+                      max_iter -:= 1
+                      if max_iter <= 0 then exit()
+                      if part6 := sub_qdot2(part5, dotttttt, (" " || repl("%", 6 + qextra) || " "))  then
+                         linein := part0 || part2 || "TEMP" || part3 || part4 || part6
+                      else if part6 := sub_qdot2(part5, dottttt,  (" " || repl("%", 5 + qextra) || " " )) then
+                         linein := part0 || part2 || "TEMP" || part3 || part4 || part6
+                      
+                      else if part6 := sub_qdot2(part5, dotttt, (" " || repl("%", 4 + qextra) || " ")) then
+                         linein := "part0 || part2 || TEMP" || part3 || part4 || part6
+                      else if  part6 := sub_qdot2(part5, dottt, (" " || repl("%", 3 + qextra) || " ")) then
+                         linein := part0 || part2 || "TEMP" || part3 || part4 || part6
+                      
+                      else if part6 := sub_qdot2(part5, dott,  (" " || repl("%",2 + qextra) || " ")) then
+                         linein := part0 || part2 ||  "TEMP" || part3 || part4 || part6
+                      
+                      else if part6 := sub_qdot2(part5, dot,  (" " || repl("%", 1 + qextra) || " " )) then
+                         linein := part0 || part2 || "TEMP" || part3 || part4 || part6
+                      else if part6 := sub_qdot2(part5, " ",  (" " || repl("%", qextra) || " " )) then
+                         linein := part0 || part2 || "TEMP" || part3 || part4 || part6
+                      }
+   return linein
+end 
+
+procedure sub_qdot2(part, dot_str, dots_out)
+   if dot_str ~== " " then {
+      if (part ? (part0 := (tab(many(' ')) | tab(match("")))  &
+                  (part1 := tab(match(dot_str))) &
+                  (part2 := tab(0)))) then {
+                     part := part0 || dots_out || part2
+                     return part
+                     }
+      }
+   else if (part ? (part0 := (tab(many(' ')) | tab(match("")))  &
+                    part1 := tab(any(delim_q2)) &
+                    part2 := tab(0))) then {
+                       part := part0 || part1 || part2
+                       return part
+                       }
+   fail
+end
+
+# for group II
+procedure sub_ldot(linein, log_conn , dot_str, dots_out)
+   # immediately before connective
+   while linein ? (
+                   (if dot_str ~== " " then {
+                      part0 := tab(find(dot_str))  &
+                         part1 := tab(match(dot_str)) &
+                         (tab(many(' '))| tab(match(""))) &
+                         part2 := tab(match(log_conn)) 
+                      }
+                   else {
+                      (part0 := tab(many(' ')) | tab(match("")))
+                      part1 := "" &
+                         part2 := tab(match(log_conn)) 
+                      }) &
+                      bad := (tab(many(' ')) | tab(match(""))) &
+                      part5 := tab(0)) do {
+                         max_iter -:= 1
+                         if max_iter <= 0 then exit()
+                         if part6 := sub_ldot2(part5, dotttttt, (" " || repl("^", 6 + lextra) || " ")) then
+                            linein := part0 || dots_out || "TEMP"  || part6
+                         else if part6 := sub_ldot2(part5, dottttt, (" " || repl("^", 5 + lextra) || "  ")) then
+                            linein := part0 || dots_out || "TEMP"  || part6
+                         
+                         else if part6 := sub_ldot2(part5, dotttt, (" " || repl("^", 4 + lextra) || " ")) then
+                            linein := part0 || dots_out || "TEMP"  || part6
+                         else if  part6 := sub_ldot2(part5, dottt, (" " || repl("^", 3 + lextra) || " ")) then
+                            linein := part0 || dots_out || "TEMP"  || part6
+                         
+                         else if part6 := sub_ldot2(part5, dott,  (" " || repl("^", 2 + lextra) || " ")) then
+                            linein := part0 || dots_out || "TEMP"  || part6
+                         
+                         else if part6 := sub_ldot2(part5, dot,  (" " || repl("^", 1 + lextra) || " ")) then
+                            linein := part0 || dots_out || "TEMP"  || part6
+                         
+                         else if part6 := sub_ldot2(part5, " ",  (" " || repl("^", lextra) || " ")) then
+                            linein := part0 || dots_out || "TEMP"  || part6
+                         }
+   return linein
+end 
+
+procedure sub_ldot2(part, dot_str, dots_out)
+   if (dot_str ~== " ") then {
+      if (part ? (part0 := (tab(many(' ')) | tab(match("")))  &
+                  part1 := tab(match(dot_str)) &
+                  part2 := tab(0))) then {
+                     part := part0 || dots_out || part2
+                     return part
+                     }
+      }
+   else if (part ? (part0 := (tab(many(' ')) | tab(match("")))  &
+                    part1 := tab(any(delim_l2)) &
+                    part2 := tab(0))) then {
+                       part := part0 || dots_out || part2
+                       return part
+                       }
+   fail
+end
+
+# to put quantifier symbol for "TEMP" value
+procedure sub_temp(linein, temp)
+   while linein ? (part1 := tab(find("TEMP")) &
+      tab(match("TEMP")) &
+      part2 := tab(0)) do {
+         linein := part1 || temp || part2
+         }
+   return linein
+end
+
+# see how many opening paren to start with
+procedure scan(linein)
+   tot_dots := 0
+   i := 1
+   while i <= *linein do {
+      if linein[i] == "." then tot_dots +:= 1 
+      if linein[i] == "!" then tot_dots +:= 1 
+      if linein[i] == "^" then tot_dots +:= 1 
+      if linein[i] == "%" then tot_dots +:= 1 
+      i +:= 1
+      }    
+   return (tot_dots)
+end
+
+
+procedure trim_excess(line)
+   line := trim(line)
+   if line ? (part1 := tab(find("(")) & # part 1 is string up to 1st paren
+              part2 := tab(find("$")) & # part 2 is rest through the end
+              part3 := tab(match("$")))
+   then {
+      i := 2
+      it := part2
+      j := *part2
+      sav := part2
+      while ((part2[i] == "(") & (part2[j] == ")")) do {
+         it := part2[i:j]
+         part2 := it
+         i := 2
+         j := *part2
+         if check(it) == 1 then { 
+            sav := it
+            next
+               }
+         else break
+            }
+      return part1 || sav || "$"
+      }
+   else
+      return line
+end
+
+procedure check(line)
+   # make sure not too many paren removed
+   leftp := 0
+   rightp := 0
+   i := 1
+   while i <= *line do {
+      if line[i] == "(" then leftp +:= 1      
+      if line[i] == ")" then rightp +:= 1
+      if rightp > leftp then fail
+      i +:= 1
+      }
+   return 1
+end
+
+procedure quantifier_next(linein, i)
+   temp := linein[i:0]
+   if temp ? (tab(many('.') & (tab(match(qexist)) | tab(match(qall))) | tab(match(qdsc)))) then {
+      return 1
+      }
+   else fail
+end
+
+procedure next_paren(charin)
+   it := charin
+   if it == "." then return ")"
+   if it == "^" then return "("
+   if it == "!" then return "("
+   if it == "%" then return ")"
+   if it == ";" then return ")"
+   if it == ":" then return "("
+   return it
+end
+
+procedure append_lineout(lineout, str)
+   return (lineout || str)
+end
+
+# The Main work
+procedure analyze(first_dots, linein)
+   write(" ")
+   lineout := ""
+   ddd := find("^", linein)
+   linein ? ((front  := tab(ddd)) & (linework := tab(0)))  
+   linein := linework
+
+   lineout := repl("(", first_dots)
+   dots := first_dots
+   len_in := *linein 
+   i := 1
+   while i <= len_in do {
+      charin := linein[i]
+      charout := next_paren(charin)
+      if charout == "(" then
+         dots +:= 1
+      else if charout == ")" then
+         dots -:= 1
+      lineout := append_lineout(lineout, charout)
+      i +:= 1 # increment position in current line
+      }
+   # at end of line output line with enough closing parens to balance
+   lineout := front || lineout
+   lineout := reverse(lineout)
+   lineout ? (part1 := tab(find("$")) & tab(match("$")) & part2 := tab(0))
+   lineout := part1 || part2
+   lineout := reverse(lineout)
+   return (lineout || repl(")", dots) || "$") 
+end
+
+procedure parser(input, in_loc)
+   support := set(["\\pmimp", "\\pmiff", "\\land", "\\pmor"])
+   
+   expi := ""
+   op := []
+   loc := in_loc
+   
+   while (1=1) do {
+      explen := 1
+      if (input[loc] == "(") then {
+         expi ||:= parser(input, loc + 1)
+         } else if (input[loc] == ")") then {
+            if (not (match("\\pmimp", input[loc + 1 : 0])) &  not (match("\\pmor", input[loc + 1 : 0])) &  not (match("\\pmiff", input[loc + 1 : 0])))  then {
+               return expi
+               } else {
+                  if (not (find("\\land", op))) then {
+                     return expi
+                     } else {
+                        return "(" || expi || ")"
+                        }
+                  }
+            } else {
+               temp := input[loc]
+               expi ||:= temp
+               explen := *temp
+               if member(support, temp) then {
+                  push(op, temp)
+                  }
+               }
+      loc +:= explen
+      
+      if (loc >= *input) then {
+         break
+            }
+      }
+   return expi
+end
+
+procedure elim_extra_paren(linein)
+   linein_wrk := linein
+   lineout := ""
+   last := linein_wrk
+   while lineout ~== last do {
+      last := linein_wrk
+      lineout := eep1(linein_wrk)
+      linein_wrk := lineout
+      }
+   return lineout
+end
+
+procedure eep1(linein)
+   i := 2
+   while i < (*linein - 3) do {
+      j := (*linein - 1)
+      while j > i do {
+         max_iter -:= 1
+         if max_iter <= 0 then exit()
+         work := linein[i:j]
+         if (work[1:3] == "((" & work[-2:0] == "))" & part_ok(work[4:-3])) then {
+            out1 := "(" || work[3:-2] || ")"
+            out2 := linein[1:i] || out1 || linein[j:0]
+            return out2
+            }
+         j -:= 1
+         }
+      i +:= 1
+      }
+   return linein
+end
+
+procedure part_ok(linein)
+   i := 1
+   cnt := 0
+   while i <= *linein do {
+      if linein[i] == ")" then cnt -:= 1
+      if cnt < 0 then {
+         fail
+         }
+      if linein[i] == "(" then cnt +:= 1
+      i +:= 1
+      }
+   if cnt ~= 0 then {
+      fail
+      }
+   return 1
+end
+
+procedure to_Polish(infix)
+   if (infix ? find("(")) then {
+      if (infix ? find("$")) then {
+         infix ? (head1 := tab(find("pmthm")) & head2 := tab(match("pmthm")) & stmt := tab(0))
+         head := head1 || head2
+         stmt := reverse(stmt)
+         stmt ? (tail1 := tab(find("$")) & tail2 := tab(match("$")) & rest := tab(0))
+         stmt := reverse(rest)
+         
+#         write_note("Polish No Precedence") 
+         polish := infixToPolish(stmt, NO_PRECEDENCE, PM)
+#         write(head || polish || reverse(tail2 || tail1))
+#         write_note("Polish Conjunction High Precedence") 
+         polish := infixToPolish(stmt, CONJUNCTION_HIGH_PRECEDENCE, PM)
+#         write(head || polish || reverse(tail2 || tail1))
+#         write_note("Polish No Precedence Lukasiewicz notation") 
+         polish := infixToPolish(stmt, NO_PRECEDENCE, LUK)
+#         write(head || polish || reverse(tail2 || tail1))
+#         write_note("Polish Conjunction High Precedence Lukasiewicz notation") 
+         write_note("Polish Lukasiewicz notation") 
+         polish := infixToPolish(stmt, CONJUNCTION_HIGH_PRECEDENCE, LUK)
+         write(head || polish || reverse(tail2 || tail1))
+         write("")
+         }
+      }
+end
+
+procedure infixToPolish(infix, precedence_flag, pm_or_luk)
+   infix := reverse(infix)
+   polish := ""
+   iii := 1
+   while iii <= *infix do {
+      max_iter -:= 1
+      if max_iter < 0 then exit()
+      if (infix[iii] == ")")
+      then infix[iii] := "("
+      else if(infix[iii] == "(")
+      then infix[iii] := ")"
+      iii +:= 1
+      }
+    polish := infixToReverse_Polish(infix, precedence_flag, pm_or_luk)
+    polish := reverse(polish)
+    return polish
+end
+
+procedure op_symbol(symbol, pm_or_luk)
+   case pm_or_luk of {
+      LUK:
+         case stripped(symbol) of {
+            "pmimp\\" : return " C "
+            "dnal\\" : return " K "
+            "ffimp\\" : return " E "
+            "romp\\" : return " A "
+            "tonmp\\" : return " N "
+            default: return symbol
+            }
+      PM: return symbol
+      }
+end
+
+procedure precedence(operator, precedence_flag)
+   case precedence_flag of {
+      NO_PRECEDENCE:
+         return 1
+      CONJUNCTION_HIGH_PRECEDENCE:
+         case operator of {
+            "dnal\\": return 5
+            default: return 1
+            }
+      }
+end
+
+procedure infixToReverse_Polish(infix, precedence_flag, pm_or_luk)
+   stk := []
+   reverse_polish := "" 
+   while (*infix > 0) & (infix ~== " ") do {
+      max_iter -:= 1
+      if max_iter < 0 then exit()
+      nxt := get_next(infix)
+      if is_operand(stripped(nxt)) then {
+         # step 2
+         append_reverse_polish(nxt, pm_or_luk)
+         }
+      else if (stripped(nxt) == "(")  then 
+         {
+            # step 3
+            push_stack("(")
+            }
+      else if (stripped(nxt) == ")") then 
+         {
+            # step 4
+            while ((*stk > 0) & (top_stack() ~== "(" )) do {
+               max_iter -:= 1
+               if max_iter < 0 then exit()
+               append_reverse_polish(top_stack(), pm_or_luk)
+               pop_stack()
+               }
+            pop_stack()
+            }
+      else {
+         # step 5
+         while (*stk > 0 & (top_stack() ~== "(") & precedence(top_stack() >= precedence(nxt))) do {
+            max_iter -:= 1
+            if max_iter < 0 then exit()
+            append_reverse_polish(top_stack(), pm_or_luk)
+            pop_stack()
+            }
+         push_stack(stripped(nxt))
+         max_iter -:= 1
+         if max_iter < 0 then exit()
+         }
+      infix := infix[*nxt + 1 : 0]
+      }
+   while (*stk > 0) do {
+      max_iter -:= 1
+      if max_iter < 0 then exit()
+      append_reverse_polish(top_stack(), pm_or_luk)
+      pop_stack()
+      }
+   return reverse_polish
+end
+
+procedure push_stack(x)
+   push(stk, stripped(x))
+end
+
+procedure pop_stack()
+   if x := pop(stk) then
+      return x
+   else
+      return null
+end
+
+procedure top_stack()
+   if x := pop(stk) then {
+      push(stk, x)
+      return x
+      }
+   else
+      return null
+end
+
+procedure append_reverse_polish(x, pm_or_luk)
+   reverse_polish ||:= " " || op_symbol(x, pm_or_luk) || " "
+end
+
+procedure is_quantifier(infix)
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("emosmp\\")))) then
+      return it1 || it2
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("llamp\\")))) then
+      return it1 || it2
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("csdmp\\")))) then
+      return it1 || it2
+   else fail
+end
+
+procedure get_operand(infix)
+   if not is_quantifier(infix) then
+      if not is_operator(infix) then
+         if infix ? (it := (tab(many(' ')) | "") & (operand := tab(many('\\abcdefghijklmnopqrstuvwxyzBDFGHIJLMOPQRSTUVWXYZ}{][,'))))
+   then return it || operand
+         else fail
+end
+
+procedure get_operator(infix)
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("pmimp\\")))) then
+      return it1 || it2
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("romp\\")))) then
+      return it1 || it2
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("ffimp\\")))) then
+      return it1 || it2
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("dnal\\")))) then
+      return it1 || it2
+   else fail
+end
+
+procedure get_next(infix)
+   if infix ? (it1 := (tab(many(' ')) | "") & it2 := tab(match(")"))) then
+      return it1 || it2
+   else if infix ? (it1 := (tab(many(' ')) | "") & it2 := tab(match("("))) then
+      return it1 || it2
+   else if it := get_operator(infix) then
+      return it
+   if it := get_operand(infix) then
+      return it
+   else fail
+end
+
+procedure trim_excess_2(line)
+   line := trim(line)
+   line ? (part1 := tab(find("(")) & # part 1 is string up to 1st paren
+           part2 := tab(0) # part 2 is rest through the end
+           )
+   # remove any blanks within leading or trailing parens 
+   i := 1
+   while (part2[i] == "(") | (part2[i] == " ") do {
+      if part2[i] == " " then
+         part2[i] := ""
+      i +:= 1
+      }
+   part2 := reverse(part2)
+   i := 1
+   while (part2[i] == ")") | (part2[i] == " ") do {
+      if part2[i] == " " then
+         part2[i] := ""
+      i +:= 1
+      }
+   part2 := reverse(part2)
+   
+   i := 2
+   j := -1 # unicon counts either positive from start or negative from end
+   # remove as many first and last characters from end putting into it
+   #   part2 := "(" || part2 || ")"   # make sure have al least one pair
+   
+   it := part2
+   while ((part2[i] == "(") & (part2[j] == ")")) do {
+      it := part2
+      part2 := part2[2:-1]
+      if check(part2) then next
+      else break
+         }
+   return part1 || it
+end
+
+procedure check_2(line)
+   # make sure not too many paren removed
+   leftp := 0
+   rightp := 0
+   i := 1
+   while i <= *line do {
+      if line[i] == "(" then leftp +:= 1      
+      if line[i] == ")" then rightp +:= 1
+      if rightp > leftp then fail
+      i +:= 1
+      }
+   return 1
+end
+
+procedure stripped(in)
+   iii := 1
+   out := ""
+   while iii <= *in do {
+      if in[iii] ~== " " then
+         out ||:= in[iii]
+      iii +:= 1
+      }
+   return out
+end
+
+procedure is_operand(infix)
+   if not is_quantifier(infix) then
+      if not is_operator(infix) then
+         if infix ? (it := (tab(many(' ')) | "") & (operand := tab(many('\\abcdefghijklmnopqrstuvwxyzBDFGHIJLMOPQRSTUVWXYZ}{][,'))))
+   then return it || operand
+         else fail
+end
+
+procedure is_operator(infix)
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("pmimp\\")))) then
+      return it1 || it2
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("romp\\")))) then
+      return it1 || it2
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("ffimp\\")))) then
+      return it1 || it2
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("dnal\\")))) then
+      return it1 || it2
+   else fail
+end
+
+procedure is_unary_op(infix)
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("tonmp\\")))) then
+      return it1 || it2
+   else fail
+end
+
+procedure write_note(note)
+   write("")
+   write(note)
+   write("")
+end

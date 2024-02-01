@@ -1,0 +1,4 @@
+fix_too_long.icn has problem with Polish
+fix_too_long.icn has problem with Greek letters
+
+

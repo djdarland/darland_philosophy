@@ -1,0 +1,531 @@
+\documentclass[12pt]{article}
+\NeedsTeXFormat{LaTeX2e}
+\usepackage{principia} 
+\usepackage{fullpage}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amssymb} 
+\usepackage{amsmath} 
+\usepackage{pifont} 
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{color}
+\begin{document}
+
+\title{Instantiation, A Theory of Propositional Attitudes and Arithmetic without Incomplete Symbols}
+\author{Dennis J. Darland}
+\maketitle
+
+SECTION 1. qqqq - Instantiation.
+
+First I want to suggest using a single predicate qqqq, and universals rather than predicates. I choose to call it 'qqqq' rather than 'q' to make it easier to
+search for. Also, qqqq can take any finite number of arguments. (As WildLIFE can, although Prolog cannot (see Life/handbook.pdf page 97 under my software projects at dennisdarland.com ). For what would usually be \pmpf{f}{(x,y,z)} on this theory would be \pmpf{qqqq}{[f,x,y,z]} . Here qqqq is a predicate - my only predicate. f is a universal. x, y, and z are individuals. Individuals can be universals or particulars. Also, note, I am using braces instead of parenthesis for the predication. This is for convenience for my programs which translate dot notation to parenthetic and Polish. In Russell's multiple relation theory of belief, a predicate had to be able to appear in subject position as well as predicative position. I think this was one of Wittgenstein's objections to that theory. On my theory, universals and particulars both only occur in subject position. Another advantage of my theory is that all predicates are extensional. Note - I am numbering the propositions of this paper at 401 to avoid confusion with the numbering in Principia Mathematica.
+
+$\pmast 401 \pmcdot 1 \pmthm \pmdot \pmall{f, x, y, z} \pmpf{F}{[f,x,y,z]} \pmiff \pmpf{G}{[f,x,y,z]} \pmdot \pmimp \pmdot \pmpf{qqqq}{[ID,F,G]} $
+
+This is true because there is only one possible value for both F and G. namely qqqq. So, there is no reason to have equality for predicates. Also note that I use a universal ID for identity rather than an equal sign.
+
+To do pure logic, all that is required as primitives are 'qqqq', natural universals, universals (including the universal ID), 'nand', and 'there exists'.  
+
+Also universals are analogous to intensional predicates in that there is no axiom or theorem that:
+
+$\pmast 401 \pmcdot 2 \pmthm \pmdot \pmall{x} \pmpf{qqqq}{[f, x]} \pmiff \pmpf{qqqq}{[g, x]} \pmdot \pmimp \pmdot \pmpf{qqqq}{[ID, f, g]} $
+
+-----------------------------------------------------------
+
+SECTION 2. qqqq - Universals for Philosophy of Logic - Propositional Attitudes.
+
+Here is a background for my theory. It does not exactly
+represent Bertrand Russell's views at any time, but it
+does represent, in my opinion, a good way to revise
+his views.
+
+Before there was intelligent life, there was a world - there were facts.
+But truth is primarily a correspondence between belief and fact.
+So before there was intelligent life there was no truth.
+If there was rain was a fact, then there being rain or there not
+being rain would also be a fact. But without beliefs there would be
+no corresponding truths.
+Likewise, if it were not a fact then it not being a fact would be a fact.
+Any combination of disjunctions and negations of facts would also
+be a fact or its negation would be a fact.
+Likewise if F is a universal, and x is an a variable then
+
+$\pmsome{x}{qqqq}{[F,x]}$
+
+would be a fact
+
+in the case that some x instansiates F.
+
+Next consider a, b, c, ... to be individuals.
+and F, G, H to be universals. 
+Consider ia, ib, ic, ... to be ideas (in an intelligent being) of a, b, and c
+Consider iF, iG, iH to be ideas of universals
+Also wa, wb, wc, ... to be words for those ideas of individuals
+Also wF, wG, wH to be words for ideas of those ideas of universals
+
+(Note: Words and Ideas are also objects)
+
+Now to truth. First truth of belief.
+
+With ssss being the relation of an idea to the corresponding object.
+and rrrr being the relation of a word to the corresponding idea.
+
+By thest simple conventions:
+
+$\pmpf{qqqq}{[ssss, person, time, ia, a]}$
+
+and
+
+$\pmpf{qqqq}{[ssss, person, time, iF , F]} $
+
+In that case the belief of that intelligent being would be a relation
+of the ideas iF and ia.
+
+$\pmpf{qqqq}{[bbbb, person, time, iF, ia]} $
+
+This would be true in case $\pmpf{qqqq}{[F,a]}$
+
+That there is an assertion by that intelligent being would be:
+
+$\pmpf{qqqq}{[says, person, time, wF, a]}$
+
+In that case the belief of the sentence of that intelligent being would
+be a relation of the words wF and wa.
+
+This would be true in case F(a).
+Note in this case, by my conventions:
+
+Also
+
+$\pmpf{qqqq}{[rrss, person, time, wa, a]}$
+
+I'm going to work out more details in regard to truth functions next.
+
+For any facts 
+
+$\pmpf{qqqq}{[F,a]}$,
+
+and
+
+$\pmpf{qqqq}{[G, a, b]}$
+etc
+
+there will be facts (from PM *1.2)
+
+$\pmast 402 \pmcdot 001 \pmthm \pmdot \pmpf{qqqq}{[F,a]} \pmor \pmpf{qqqq}{[F,a]} \pmdot \pmimp \pmdot \pmpf{qqqq}{[F,a]}$
+
+$\pmast 402 \pmcdot 002 \pmthm \pmdot \pmpf {qqqq}{[G,a,b]} \pmor \pmpf{qqqq}{[G,a,b]} \pmdot \pmimp \pmdot \pmpf{qqqq}{[G,a,b]}$     
+
+Similarly for PM *1.3-*1.6
+
+But PM *1.1 and *1.7-1.72 are not facts. (In the same way.)
+
+They represent ways intelligent beings have learned to
+reason from facts to other facts. I have not been able to represent them.
+
+Logic describes how to make correct conclusions.
+
+Psychology describes the making of actual conclusions (and other things).
+
+For philosophy of logic also required are rrrr, ssss, tttt, bbbb, word, idea and says.
+
+ssss is a relation from a person’s idea to an individual at some time. tttt is a relation from a person’s idea to one or more (possibly infinite) number of individuals. There is also a relation rrrr from words to ideas. I think these relations causal, but the structure of the relations does not depend upon that. bbbb is a [psychological believing] relation among a person’s ideas at some time.
+
+---------------------------------------------------------------
+
+Thus, the universals I use for propositional attitudes include:
+
+$\pmast 402 \pmcdot 1 \pmpf{qqqq}{[rrrr, person, time, word, idea]}$
+
+Relation between a word and idea for a person at some time.
+For different people or the same person at different times, a word may mean different ideas.
+
+$\pmast 402 \pmcdot 2 \pmpf{qqqq}{[ssss, person, time, idea, object]}$
+
+Relation between an idea and a single object for a person at some time.
+For different people or the same person at different times, a idea may mean different individuals.
+
+$\pmast 402 \pmcdot 3 \pmpf{qqqq}{[tttt, person, time, idea, object]}$
+
+Relation between an idea and one or more objects for a person at some time.
+For different people or the same person at different times, a idea may mean different individuals.
+
+----------------------------------------------------------------
+
+I have an idea for understanding ssss and tttt, by relating their roles to Russell's theory of descriptions.
+
+There are the following correspondences between my theory, and what Russell,
+would apparently say. Only one or the other would be correct, but the would
+be alternative analyses of the same situations.
+
+In my theory
+
+$\pmast 402 \pmcdot 4 \pmthm \pmdot \pmall{y} \pmsome{x} \pmpf{qqqq}{[ssss, person, time, x, y]} $
+
+would correspond to 
+
+$\pmast 402 \pmcdot 5 \pmthm \pmdot \pmall{y} \pmsome{F} \pmpf{qqqq}{[Acq, person,time,F]} \pmand \pmpf{qqqq}{[F, y]} \pmand \pmall{z} \pmpf{F}{[z]} \pmiff \pmpf{qqqq}{[ID,z,y]} $
+
+in a theory using Russell's theory of definite descriptions.
+
+Also, in my theory
+
+$\pmast 402 \pmcdot 6 \pmthm \pmdot \pmall{y} \pmsome{x} \pmpf{qqqq}{[tttt, person, time, x, y]} $
+
+would correspond to
+
+$\pmast 402 \pmcdot 7 \pmthm \pmdot \pmall{y} \pmsome{F} \pmpf{qqqq}{[Acq, person,time,F]} \pmand \pmpf{F}{[y]} $
+
+in Russell's theory of classes.
+
+---------------------------------------------------------------
+
+I will also assume there are the following universals
+
+$\pmast 402 \pmcdot 8 \pmpf{qqqq}{[word, x]}$
+
+means x is a word - just a sound or mark - by itself meaningless
+
+$\pmast 402 \pmcdot 9 \pmpf{qqqq}{[idea, x]}$
+
+Means x is an idea
+
+$\pmast 402 \pmcdot 10 \pmpf{qqqq}{[naturaluniversal, x]}$ - Natural Universals (Possibly e.g. green, blue, etc.) To be discovered scientifically. These are a subcategory of universals - next.
+
+$\pmast 402 \pmcdot 11 \pmpf{qqqq}{[universal, x]}$ - Something in first argument position of qqqq, and possibly in other positions (E.g. grue, bleen). Obtained with Axiom of Reducibility.
+
+$\pmast 402 \pmcdot 12 \pmpf{qqqq}{[particular, x]}$ - Something in other argument positions of qqqq
+
+Universals perform pretty much the work that predicates usually do, except they appear as subject to the qqqq predicate.
+
+The universals rrrr, ssss, tttt, bbbb, word, idea, universal, and particular are needed for my multiple relative product theory of belief, previously published in BRS Bulletin No 167. It would need, however to be updated to use qqqq.
+They are not used in my development of arithmetic.
+
+Note: Universals may exist without being instantiated.
+
+I think the universals rrrr, ssss and tttt would have existed before life did. Because the laws of nature would not change, so whatever rrrr, ssss and tttt are, it was always possible that they could be instantiated, even if they were not. The same will be true of bbbb. It will be a relation of ideas for a person at some time.
+
+More useful definitions:
+
+$\pmast 402 \pmcdot 13 \pmthm \pmpf{qqqq}{[rrss, p, t, w, o]} \pmiddf \pmdot \pmpf{qqqq}{[rrrr, p, t, w, i]} \pmand \pmpf{qqqq}{[ssss, p, t, i, o]} $
+
+$\pmast 402 \pmcdot 14 \pmthm \pmpf{qqqq}{[rrtt, p, t, w, o]} \pmiddf \pmdot \pmpf{qqqq}{[rrrr, p, t, w, i]} \pmand \pmpf{qqqq}{[tttt, p, t, i, o]} $
+
+$\pmast 402 \pmcdot 15 \pmthm \pmpf{qqqq}{[cnvrrrr, p, t, i, w]} \pmiddf \pmdot \pmpf{qqqq}{[rrrr, p, t, w, i]} $
+
+$\pmast 402 \pmcdot 16 \pmthm \pmpf{qqqq}{[cnvssss, p, t, o, i]} \pmiddf \pmdot \pmpf{qqqq}{[ssss, p, t, i, o]} $
+
+$\pmast 402 \pmcdot 17 \pmthm \pmpf{qqqq}{[cnvtttt, p, t, o, i]} \pmiddf \pmdot \pmpf{qqqq}{[tttt, p, t, i, o]} $
+
+$\pmast 402 \pmcdot 18 \pmthm \pmpf{qqqq}{[cnvrrss, p, t, o, w]} \pmiddf \pmdot \pmpf{qqqq}{[cnvssss, p, t, o, i]} \pmand \pmpf{qqqq}{[cnvrrrr, p, t, i, w]} $
+
+$\pmast 402 \pmcdot 19 \pmthm \pmpf{qqqq}{[cnvrrtt, p, t, o, w]} \pmiddf \pmdot \pmpf{qqqq}{[cnvtttt, p, t, o, i]} \pmand \pmpf{qqqq}{[cnvrrrr, p, t, i, w]} $
+
+-------------------------------------------------------------------------
+
+SECTION 3. Discussion of Propositional Attitudes.
+
+Now some quotes from Russell, and comments on them:
+
+“A logical theory may be tested by its capacity for dealing with puzzles, and it is a wholesome plan, in thinking about logic, to stock the mind with as many puzzles as possible, since these serve much the same purpose as is served by experiments in physical science.” From “On Denoting” in CPBR Vol 4, p. 420.
+
+One puzzle I am going to deal with that I think Russell's multiple relation theory has difficulty with is opacity. This is because many logics take predicates to be extensional, although PM does not. I am suggesting instead what I call a 'multiple relative product' theory of belief. I explained this in the BRS Bulletin 167. This allows many beliefs to be often understood in a simpler way than Russell's, as quantifiers are usually not required within the belief relation itself. 
+
+I am going to suggest a view of judgment as involving ideas contrary to Russell’s. Russell said:
+
+“But although I think the theory that judgments consist of ideas may have been suggested in some such way, yet I think the theory itself is fundamentally mistaken. The view seems to be that there is some mental existent which may be called the “idea” of something outside the mind of the person who has the idea, and that, since judgment is a mental event, its constituents must be constituents of the mind of the person judging. But in this view ideas become a veil between us and outside things – we never really, in knowledge, attain to the things we are supposed to be knowing about, but only to the ideas of those things.”   From “Knowledge by Acquaintance and by Description”, CPBR Vol 6, p. 155.
+
+But on this view, it would seem that, if we had knowledge about an outside thing[no veil] , the outside thing would have to exist - we could not be mistaken.
+
+From the same essay, Russell says. 
+“Whenever a relation of supposing or judging occurs, the terms to which the supposing or judging mind is related by the relation of supposing or judging must be terms with which the mind in question is acquainted.” Ibid p. 155.
+
+Russell thinks we attain knowledge of external things such as physical objects or other persons minds through descriptions. But descriptions are only convenient abbreviations. When their definitions are applied, we have only knowledge by acquaintance.
+
+You can have a belief psychologically even if the objects do not exist. That seems to me must be true for Russell’s theory as well. As I understand Russell, to account for this he uses definite descriptions.
+
+This includes predicates (on my theory universals) which relate the objects of acquaintance to external objects in case they exist. But we are not acquainted with the external objects – so it is always possible that they might turn out to not exist.
+
+Suppose that we have some external object x that is a value of a universal u and we want to say Russell has a belief about x.
+
+Sample
+On Russell's multiple relation theory if we attempt to assert the sun is bright we start with:
+
+$\pmast 403 \pmcdot 1 \pmthm \pmpf{bbbb}{[russell,now,brightness,thesun]}$
+
+But the sun, or even brightness might not exist, in which case the above is nonsense.
+
+We can try Russell's definite descriptions: (in Russell's theory)
+
+let
+
+pob = theproprtyofbrightness Df
+
+pos = thepropertyofbeingthesun Df
+
+ID = therelationofidentity Df
+
+(latex seems to limit lengths)
+
+Using the outer scope, we get the equivalent of the above:
+
+$\pmast 403 \pmcdot 2 \pmthm \pmdott \pmsome{x,y} \pmpf{qqqq}{[bbbb, russell, now, x, y]} \pmand \pmpf{qqqq}{[pob, x]} \pmand \pmpf{qqqq}{[pos, y]} \pmand \pmall{w} \pmpf{qqqq}{[pob, w]} \pmimp \pmpf{qqqq}{[ID, w, x]} \pmand \pmall{z} \pmpf{qqqq}{[pos, z]} \pmimp \pmpf{qqqq}{[ID, z, y]} $
+
+But this is not sufficient. Russell could not believe in the case of (hypothetically) the sun not existing. The other (inner) scope is beyond this paper.
+
+One possibility would be to use Polish notation and use Quine's method of eliminating variables. Gregory Landini Has done this in his Repairing Russell's 1913 Theory of Knowledge. And to handle some cases, that would also be possible for my theory. 
+
+This can work even if brightness or the sun do not exist.
+
+However, there is another problem. Russell says that, in beliefs, we can only understand objects that we are acquainted with. 
+
+But pob and pos are properties of things that are external objects, and beliefs are supposed to only be understood from objects of acquaintance. Suppose pos is to be true of a property of being the sun, and the sun only. We are not acquainted with the sun. But pos must be stated in terms of which we are all acquainted! We cannot understand pos(sun) as we are not acquainted with the sun.
+
+-----------------------------------------------------------------
+
+SECTION 4. Discussion of Propositional Attitudes.
+
+One way that individuals are known to exist is through:
+
+$\pmast 404 \pmcdot 1 \pmthm \pmsome{y,z} \pmpf{qqqq}{[ssss,p,t,y,z]}$
+
+i.e., y is the idea of some individual z
+
+[but one could be mistaken - it is not certain, just because one believes it]
+
+or
+
+$\pmast 404 \pmcdot 2 \pmthm \pmsome{y,z} \pmpf{qqqq}{[tttt,p,t,y,z]}$
+
+These apply to individuals either universals or particulars.
+
+I deny idealism, thus it is not necessary that:
+
+$\pmast 404 \pmcdot 3 \pmthm \pmsome{w,z} \pmdot \pmpf{qqqq}{[w, z]} \pmimp \pmsome{y} \pmpf{qqqq}{[ssss,p,t,y,z]}$
+
+or necessary that:
+
+$\pmast 404 \pmcdot 4 \pmthm \pmsome{w,z} \pmdot \pmpf{qqqq}{[w, z]} \pmimp \pmsome{y} \pmpf{qqqq}{[tttt,p,t,y,z]}$
+
+i.e., there can be individuals of which there are no ideas.
+
+Notice there is no way to prove for certain that any particular universal exists. We could always be mistaken. So for any idea y there might be no z such that
+
+$\pmast 404 \pmcdot 5 \pmthm \pmpf{qqqq}{[ssss, p,t,y, z]}$
+
+We can only use our best scientific knowledge to posit what universals we take to exist. Tom believes now that the sun is bright is simply:
+
+tiob = tomsideaofbright
+
+tios = tomsideaofsun
+
+$\pmast 404 \pmcdot 6 \pmthm \pmpf{qqqq}{[bbbb, tom, now, tiob, tios]}$
+
+
+Tom thought now that the sun is bright is true is simply:
+
+$\pmast 404 \pmcdot 7 \pmthm \pmdott \pmpf{qqqq}{[bbbb,tom,now,tiob,tios]} \pmand \pmsome{x} \pmpf{qqqq}{[ssss,tom,now,tiob,x]} \pmand \pmsome{y} \pmpf{qqqq}{[ssss,tom,now,tios,y]} \pmand \pmpf{qqqq}{[x,y]}$
+
+
+Notice, there are no names here for the brightness or the sun. There are only the variables x and y. 
+
+I believe related to this Russell says, 'Now such things as matter (in the sense in which matter occurs in physics) and the minds of other people are known to us only by denoting phrases, i.e., we are not acquainted with them, but we know them as what has such and such properties. Hence, although we can form propositional functions C(x) which must hold of such and such material particle, or So-and-so's mind, yet we are not acquainted with the propositions which affirm these things that we know must be true, because we cannot apprehend the actual entities concerned. What we know is 'So-and-so has a mind which has such and such properties' but we do not know 'A has such and such properties', where A is the mind in question. In such a case, we know the properties of a thing without having acquaintance with the thing itself, and without, consequently, knowing any single proposition of which the thing itself is a constituent.' From “On Denoting” in CPBR Vol 4, p. 427.
+
+Tom asserts his belief “that the sun is bright”  is:
+
+$\pmast 404 \pmcdot 8 \pmthm \pmdot \pmpf{qqqq}{[bbbb, tom, now, tiob, tios]} \pmand \pmsome{x} \pmpf{qqqq}{[cnvrrrr, tom, now, tiob, x]} \pmand \pmsome{y} \pmpf{qqqq}{[cnvrrrr, tom, now, tios, y]} \pmand \pmpf{qqqq}{[says, tom, now, x, y]}$
+
+Tom's assertion of his belief “that the sun is bright”  is true if
+
+$\pmast 404 \pmcdot 9 \pmthm \pmdot \pmpf{qqqq}{[bbbb, tom, now, tiob, tios]} \pmand \pmsome{w} \pmpf{qqqq}{[cnvrrrr, tom, now, tiob, w]}\pmand \pmsome{x} \pmpf{qqqq}{[cnvrrrr, tom, now, tios, x]}\pmand \pmpf{qqqq}{[says, tom, now, x, y]} \pmand \pmsome{y} \pmpf{qqqq}{[ssss, tom, now, tiob, y]} \pmand \pmsome{z} \pmpf{qqqq}{[ssss, tom, now, tios, z]} \pmand \pmpf{qqqq}{[y,z]}$
+
+Note in these examples, I do not actually use names for bright, the sun, the name of bright or the name of the sun. We do not actually know these exist. They could only have proper names if we knew they existed. We only have relations that we believe to exist between our ideas and these objects. So, we must use quantifiers and variables.
+
+Truth is basically a correspondence between relations of ideas and relations of objects. Evidence for truth is that those relations of ideas simplify our understanding of experience and cohere.
+
+I see no reason to say my beliefs are only about ideas. In some varieties of my analysis of belief, (there are 7 varieties) the beliefs also involve the ssss, or tttt relation. These relations are a relations of meaning or about-ness (made explicit). The primitive bbbb relation of psychology permits states of belief to exist without objects existing, and varieties combine it with rrrr, ssss, tttt, word and idea to relate words to objects, etc.
+
+------------------------------------------------------------------------
+
+[From Wikipedia]
+
+'Goodman defined "grue" relative to an arbitrary but fixed time t:[a] an object is grue if and only if it is observed before t and is green, or else is not so observed and is blue. An object is "bleen" if and only if it is observed before t and is blue, or else is not so observed and is green.[3]'
+
+In my system green and blue would be natural universals. grue and bleen would be universals.
+
+------------------------------------------------------------------------------
+
+SECTION 5. Discussion of Comprehension Principles.
+
+Now, so far, my theory would be first order and inadequate for math.
+
+What is needed is that the existence of some universals implies the existence of other universals. One might try adopting essentially the axiom of reducibility [PM's comprehension principle] for this.
+
+$\pmast 405 \pmcdot 1 \pmthm \pmsome{u} \pmall{v} \pmdot \pmpf{qqqq}{[u,v]} \pmiff a$
+
+when for v we substitute for any variable of type n, for u one of type n + 1, and for a any formula [containing only universals hypothesized to exist] that does not contain u free. Frege to Goedel, p 601. I am not sure this is all that Russell intended by the axiom of reducibility. From his examples (all properties of great generals), I have wondered if it had to do with  greatest lower bounds or least upper bounds. Anyway, with this, my theory would no longer first order. I will illustrate what is lacking if one tries to do without it.
+
+I believe that it is also needed in PM, because of the use of incomplete symbols for [extensional] classes and relations in PM. $\pmast 20 \pmcdot 01$ and $\pmast 21 \pmcdot 02$ depend upon the existence of intensional functions. Thus $\pmast 12 \pmcdot 1$ and $\pmast 12 \pmcdot 11$ are needed. E.g. $\pmast 20 \pmcdot 112$,
+$\pmast 20 \pmcdot 701$, $\pmast 20 \pmcdot 702$, $\pmast 21 \pmcdot 703$,
+$\pmast 21 \pmcdot 112$, $\pmast 21 \pmcdot 112$ and $\pmast 21 \pmcdot 151$.
+Many other propositions of PM depend on $\pmast 12 \pmcdot 1$ and
+$\pmast 12 \pmcdot 11$ indirectly thru these.
+
+-------------------------------------------------------------------
+
+I tried to do without the axiom of reducibility $\pmast 12 \pmcdot 1$ and $\pmast 12 \pmcdot 11$ by using a different technique to get extensional results - that is no incomplete symbols. One can regard any lhs (left hand side) of a  definition as replaceable by the rhs (right hand side). One does not need such a universal to exist. It is an abbreviation. At any rate, it seemed useful to try this and see how far one can get this way. I tied to only quantify over particulars and not over universals. I have abbreviations for 'characteristics' of universals, but tried to not quantify over them. To try to check this, I capitalized variables for UNIVERSALS, and use lower case for variables for particulars. No variables for UNIVERSALS should appear within quantifiers. After doing this exercise, 7.14 and 7.15 failed this test. So it seems like the Axiom of Reducibility, or something like it is needed.
+
+--------------------------------------------------------------------
+
+SECTION 6. Some basic definitions (abbreviations) for universals
+
+$\pmast 406 \pmcdot 1 \pmthm \pmpf{qqqq}{[instantiates, z, Y]} \pmiddf \pmpf {qqqq}{[Y, z]} $
+
+$\pmast 406 \pmcdot 2 \pmthm \pmpf{qqqq}{[coextensive, X, Y]} \pmiddf \pmall{z} \pmpf{qqqq}{[X,z]} \pmiff \pmpf{qqqq}{[Y,z]} $
+
+$\pmast 406 \pmcdot 3 \pmthm \pmpf{qqqq}{[subuniversal, X, Y]} \pmiddf \pmall{z} \pmpf{qqqq}{[X, z]}  \pmimp \pmpf{qqqq}{[Y, z]} $
+
+$\pmast 406 \pmcdot 4 \pmthm \pmpf{qqqq}{[inintersection,z, X, Y]} \pmiddf \pmdot \pmpf{qqqq}{[X,z]} \pmand \pmpf{qqqq}{[Y,z]} $
+
+z is in intersection if in both x and y
+
+$\pmast 406 \pmcdot 5 \pmthm \pmpf{qqqq}{[inunion,z, X, Y]} \pmiddf \pmpf{qqqq}{[X,z]} \pmor \pmpf{qqqq}{[Y,z]} $
+
+$\pmast 406 \pmcdot 6 \pmthm \pmpf{qqqq}{[innegation, z, X]} \pmiddf \pmnot {qqqq}{[X, z]} $
+
+--------------------------------------------------------------------
+
+SECTION 7. Arithmetic.
+
+$\pmast 407 \pmcdot 1 \pmthm \pmpf{qqqq}{[instantiateszero, X]} \pmiddf \pmall{z} \pmpf{qqqq}{[X, z]} \pmimp \pmnot \pmpf{qqqq}{[ID, z, z]} $
+
+If this is true then x will be a universal that is true of nothing. 
+
+$\pmast 407 \pmcdot 2 \pmthm \pmdot \pmpf{qqqq}{[instantiatesone, X]} \pmiddf \pmsome{z} \pmpf{qqqq}{[X, z]} \pmand \pmall{w} \pmpf{qqqq}{[X, w]} \pmdot \pmimp \pmdot \pmpf{[ID, z, w]} $
+
+If this is true, x will be a universal true of exactly one thing.
+
+-----------------------------------------------------------------
+
+Next, I intend to indicate (partially defining) what would be required for arithmetic.
+
+$\pmast 407 \pmcdot 3 \pmthm \pmpf{qqqq}{[instsum,Z,X,Y]}$
+
+Roughly Z is sum of X and Y.
+
+This would be true if, e.g.:
+
+$\pmast 407 \pmcdot 4 \pmthm \pmpf{qqqq}{[instantaitesthree,Z]}$
+
+$\pmast 407 \pmcdot 5 \pmthm \pmpf{qqqq}{[instantiatesone,X]}$
+
+$\pmast 407 \pmcdot 6 \pmthm \pmpf{qqqq}{[instantiatestwo,Y]}$
+
+I believe I can define, as well,
+
+$\pmast 407 \pmcdot 7 \pmthm \pmpf{qqqq}{[instsucc,Y,X]}$
+
+Roughly Y is successor of X.
+
+$\pmast 407 \pmcdot 8 \pmthm \pmpf{qqqq}{[instnatural,Y]}$
+
+Then I would need to define
+
+$\pmast 407 \pmcdot 9 \pmthm \pmpf{qqqq}{[instssamenatural,X, Y]}$
+
+Roughly X = Y
+
+And prove such things as
+
+$\pmast 407 \pmcdot 10 \pmthm \pmdott \pmall{W,X,Y,Z} \pmpf{qqqq}{[instnatural,W]} \pmand \pmpf{qqqq}{[instnatural,X]} \pmand \pmpf{qqqq}{[instssum,Y,W,X]} \pmand \pmpf{qqqq}{[instsum,Z,X,W]} \pmdott \pmimp \pmdott \pmpf{qqqq}{[instssamenatural, Y, Z]}$
+
+I think I can define all these with only qqqq, nand and quantification over individuals (universals or particulars).
+
+Now what do I need to suppose to exist?
+
+Well I can adduce universals (such as X, Y, and Z above) as universals true of any finite number of individuals. And I can adduce an axiom of infinity if needed.
+
+Next defining many to one:
+
+$\pmast 407 \pmcdot 11 \pmthm \pmpf{function}{[R]} \pmiddf \pmdot \pmall{u,v,w} \pmpf{qqqq}{[R, u, v]} \pmand \pmpf{qqqq}{[R, u, w]} \pmdott \pmimp \pmdot \pmpf{qqqq}{[ID, v, w]} $
+
+Next defining one to many:
+
+$\pmast 407 \pmcdot 12 \pmthm \pmpf{lfunction}{[R]} \pmiddf \pmdot \pmall{u,v,w} \pmpf{qqqq}{[R, v, u]} \pmand \pmpf{qqqq}{[R, w, u]} \pmdott \pmimp \pmdot \pmpf{qqqq}{[ID, v, w]} $
+
+Next I define there being a relation that holds between two relations, if there is one-to-one mapping from one to the other.
+
+$\pmast 407 \pmcdot 13 \pmthm \pmpf{qqqq}{[onetoone,R]} \pmiddf \pmdot \pmpf{qqqq}{[function, R]} \pmand \pmpf{qqqq}{[lfunction, R]} \pmandd \pmall{x} \pmsome{y} \pmpf{qqqq}{[R,x,y]} \pmand \pmall{x} \pmsome{y} \pmpf{qqqq}{[R,y,x]} \pmdott \pmor \pmdot \pmall{x,y} \pmnot \pmpf{qqqq}{[R,x,y]}$
+
+Define successor. (another abbreviation)
+
+Want Y to be in successor of universal X is in number of.
+
+Z has same number as X.
+
+Z is true of all in Y except u.
+
+Extension of Y is extension of Z plus u.
+ 
+instssucc(Y,X) . (another abbreviation)
+
+It is true iff Y instantiates one more thing than X instantiates. 
+
+$\pmast 407 \pmcdot 14 \pmthm \pmpf{qqqq}{[instssucc, Y, X]} \pmiddf \pmdot \pmsome{Z} \pmpf{qqqq}{[onetoone, Z, X]} \pmand \pmall{w} \pmpf{qqqq}{[Z,w]} \pmimp \pmpf{qqqq}{[X, w]} \pmandd \pmsome{t} \pmall{u} \pmpf{qqqq}{[Y,t]} \pmand \pmnot \pmpf {qqqq}{[X, u]} \pmdott \pmimp \pmpf{qqqq}{[ID, u, t]} $
+
+The axiom of infinity below can be adduced.
+
+
+$\pmast 407 \pmcdot 15 \pmthm infaxiom \pmiddf \pmdot \pmsome{X} \pmpf{qqqq}{[instantiatesone, X]} \pmand \pmall{Y} \pmsome{Z} \pmpf{qqqq}{[instssucc, Y, Z]}$
+
+  
+Next, I should define:
+$\pmast 407 \pmcdot 16 \pmthm \pmpf{qqqq}{[instsum, C, A, B]}$
+
+Roughly C = A + B, but not really.
+ 
+Which would be true if C instantiates a number of things which is the sum of the things instantiated by A plus the number of things instantiated by B.
+I do not add directly relations (like you would numbers as classes). There is not really A + B = C. 
+There is nothing directly corresponding as entity with numbers. 
+ 
+---------------------------------------------------------------------
+
+SECTION 8. What Propositions Are.
+
+Propositions are anything that can be an object of a propositional attitude. Propositional attitudes can be understanding, asserting, believing, doubting, desiring, denying, being true, being false, etc.
+
+Actually, as in my philosophy in WildLIFE, there are 7 possible analyses for any particular case.
+
+Those of understanding are defined in terms of rrrr and ssss
+
+The 7 cases are:
+
+1 words : relations of words related by rrss to the same objects - ignoring idea and object.
+
+2 ideas : relations of ideas related by ssss to the same objects - ignoring word and object.
+
+3 objects : relations to the same objects (thru ssss) - ignoring word and idea involved - closest to direct realism)
+
+4 words-ideas : relations of ideas and words thru rrss to the same objects
+
+5 words-objects : relations of words to same objects thru rrss ignoring ideas
+
+6 ideas-objects : relations of ideas to same objects thru ssss ignoring words
+
+7 words-ideas-objects : relations of words and ideas to the same objects thu rrrr and ssss
+
+In the case of understanding in cases 2, 3 and 6 only ssss is required for the proposition to be defined. The other cases also require rrrr. Other propositional attitudes, except being true or false, require a psychological attitude among the ideas as well. Thus in my analyses, the use depends on context and in this sense, propositions are incomplete symbols. In any particular case, the definition could be applied.
+
+In my WildLIFE code, I manage multiple arities with ordered lists as this is simple. WildLIFE is capable of having the same predicate with multiple arities. 
+(Actually there would be many more if tttt is taken into account).
+
+----------------------------------------------------------------------
+
+Summary. I found that something like the Axiom of Reducibility is needed. However, I have also shown a way to dispense with 'incomplete' symbols. This would be cumbersome in practice, but shows more clearly what ontology is needed for arithmetic. In PM, incomplete symbols are introduced for convenience (and they are convenient) and give the appearance of there being classes, numbers, and other abstract particulars. But they are illusory.
+
+\href{https://dennisdarland.com/darland_philosophy/HTML/darland_philosophy.html}{Link to my philosophy using WildLIFE}.
+
+\end{document}
+
