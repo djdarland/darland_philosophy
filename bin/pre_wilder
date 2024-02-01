@@ -1,0 +1,1 @@
+snobol4 ~/bin/pre_wild.sno <$1 >$2

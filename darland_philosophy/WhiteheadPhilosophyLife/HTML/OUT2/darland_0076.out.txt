@@ -1,0 +1,1550 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > 
+*** Yes
+> 
+> write_time(Ignore)?
+Time Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> %% I indicate for each query whether the immediate response should be
+> %% TRUE = Yes or FALSE = No
+> 
+> %% There may be subsequient No responses
+> %% - as I may have asked for additional answers
+> %% with semicolons.
+> 
+> %% There are 7 relations of both understanding and belief.
+> %% Those of understanding are defined
+> %% in terms of rrrr and ssss
+> %% Those of belief require also a belief_in_ideas
+> %% relation.
+> 
+> %% The 7 cases are:
+> 
+> %% words
+> %% ideas
+> %% objects
+> 
+> %% words_ideas
+> %% words_objects
+> %% ideas_objects
+> 
+> %% words_ideas_objects
+> 
+> %% First membership
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 
+> %% 1
+> %% NA
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% 2
+> %% NA
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% 3
+> %% NA
+> 	
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% 4
+> %% NA
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 5
+> %% guarantees word & object
+> 
+> %% To keep the database simple I did not
+> %% declare "everyone" in these classes
+> %% There there are ideas with tttt relations
+> %% with several objects.
+> %%
+> 
+> member_plural_word_object( tom_dc, Time,
+|         Word, Object)?
+
+*** Yes
+Object = misty_dc, Time = now, Word = cat_class_word_dc.
+--1> ;
+
+*** Yes
+Object = rosie_dc, Time = now, Word = cat_class_word_dc.
+--1> ;	
+
+*** Yes
+Object = catiline_dc, Time = now, Word = human_class_word_dc.
+--1> ;
+
+*** Yes
+Object = tom_cicero_dc, Time = now, Word = human_class_word_dc.
+--1> ;	
+
+*** Yes
+Object = tom_dc, Time = now, Word = human_class_word_dc.
+--1> ;
+
+*** Yes
+Object = tom_cicero_dc, Time = now, Word = human_class_word_dc.
+--1> ;	
+
+*** Yes
+Object = quine_dc, Time = now, Word = human_class_word_dc.
+--1> ;
+
+*** Yes
+Object = flipper_dc, Time = now, Word = dolphin_class_word_dc.
+--1> ;	
+
+*** Yes
+Object = flipper_dc, Time = now, Word = intelligent_fish_class_word_dc.
+--1> ;
+
+*** Yes
+Object = tom_cicero_dc, Time = now, Word = mortal_class_word_dc.
+--1> ;	
+
+*** Yes
+Object = tom_dc, Time = now, Word = mortal_class_word_dc.
+--1> ;
+
+*** Yes
+Object = tom_cicero_dc, Time = now, Word = mortal_class_word_dc.
+--1> ;	
+
+*** Yes
+Object = misty_dc, Time = now, Word = mortal_class_word_dc.
+--1> ;
+
+*** Yes
+Object = rosie_dc, Time = now, Word = mortal_class_word_dc.
+--1> ;	
+
+*** Yes
+Object = tom_cicero_dc, Time = now, Word = roman_class_word_dc.
+--1> ;
+
+*** Yes
+Object = catiline_dc, Time = now, Word = roman_class_word_dc.
+--1> ;	
+
+*** Yes
+Object = quine_dc, Time = now, Word = american_class_word_dc.
+--1> ;
+
+*** Yes
+Object = catiline_dc, Time = now, Word = featherless_biped_class_word_dc.
+--1> ;	
+
+*** Yes
+Object = tom_cicero_dc, Time = now, Word = featherless_biped_class_word_dc.
+--1> ;
+
+*** Yes
+Object = tom_dc, Time = now, Word = featherless_biped_class_word_dc.
+--1> ;	
+
+*** Yes
+Object = quine_dc, Time = now, Word = featherless_biped_class_word_dc.
+--1> ;
+
+*** No
+> ;	
+> ;
+> ;	
+> ;
+> ;	
+> ;
+> ;	
+> ;
+> ;	
+> ;
+> ;	
+> 
+> member_plural_word_object( quine_dc, Time,
+|         Word, Object)?
+
+*** No
+> ;
+> ;	
+> ;
+> ;	
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 6
+> %% guarantees idea & object
+> 
+> member_plural_idea_object( tom_dc, Time,
+|         Idea, Object)?
+
+*** Yes
+Idea = tom_cat_class_idea_dc, Object = misty_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_cat_class_idea_dc, Object = rosie_dc, Time = now.
+--1> ;	
+
+*** Yes
+Idea = tom_human_class_idea_dc, Object = catiline_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, Object = tom_cicero_dc, Time = now.
+--1> ;	
+
+*** Yes
+Idea = tom_human_class_idea_dc, Object = tom_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, Object = tom_cicero_dc, Time = now.
+--1> ;	
+
+*** Yes
+Idea = tom_human_class_idea_dc, Object = quine_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_featherless_biped_class_idea_dc, Object = catiline_dc, Time = now.
+--1> ;	
+
+*** Yes
+Idea = tom_featherless_biped_class_idea_dc, Object = tom_cicero_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_featherless_biped_class_idea_dc, Object = tom_dc, Time = now.
+--1> ;	
+
+*** Yes
+Idea = tom_featherless_biped_class_idea_dc, Object = quine_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_mortal_class_idea_dc, Object = tom_cicero_dc, Time = now.
+--1> ;	
+
+*** Yes
+Idea = tom_mortal_class_idea_dc, Object = tom_dc, Time = now.
+--1> 
+
+*** No
+> member_plural_idea_object( quine_dc, Time,
+|         Idea, Object)?
+
+*** No
+> ;
+> ;	
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> 
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 7
+> %% 
+> 
+> member_plural_word_idea_object( tom_dc,Time, Word,
+|    			       Idea,
+|    			       Object)?
+
+*** Yes
+Idea = tom_cat_class_idea_dc, 
+Object = misty_dc, 
+Time = now, 
+Word = cat_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_cat_class_idea_dc, 
+Object = rosie_dc, 
+Time = now, 
+Word = cat_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, 
+Object = catiline_dc, 
+Time = now, 
+Word = human_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, 
+Object = tom_cicero_dc, 
+Time = now, 
+Word = human_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, 
+Object = tom_dc, 
+Time = now, 
+Word = human_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, 
+Object = tom_cicero_dc, 
+Time = now, 
+Word = human_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, 
+Object = quine_dc, 
+Time = now, 
+Word = human_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_dolphin_class_idea_dc, 
+Object = flipper_dc, 
+Time = now, 
+Word = dolphin_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_intelligent_fish_class_idea_dc, 
+Object = flipper_dc, 
+Time = now, 
+Word = intelligent_fish_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_mortal_class_idea_dc, 
+Object = tom_cicero_dc, 
+Time = now, 
+Word = mortal_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_mortal_class_idea_dc, 
+Object = tom_dc, 
+Time = now, 
+Word = mortal_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_mortal_class_idea_dc, 
+Object = tom_cicero_dc, 
+Time = now, 
+Word = mortal_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_mortal_class_idea_dc, 
+Object = misty_dc, 
+Time = now, 
+Word = mortal_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_mortal_class_idea_dc, 
+Object = rosie_dc, 
+Time = now, 
+Word = mortal_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_roman_class_idea_dc, 
+Object = tom_cicero_dc, 
+Time = now, 
+Word = roman_class_word_dc.
+
+--1> 
+
+*** No
+> member_plural_word_idea_object( quine_dc, Time, Word,
+|    			       Idea,
+|    			       Object)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> ;
+> ;
+> ;	
+> ;
+> ;
+> 
+> 
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 
+> %% 1
+> %% TRUE
+> 
+> 
+> exists_plural_word( tom_dc, Time, Word)? 
+
+*** Yes
+Time = now, Word = cat_class_word_dc.
+--1> ;
+
+*** Yes
+Time = now, Word = santa_class_word_dc.
+--1> ;
+
+*** Yes
+Time = now, Word = human_class_word_dc.
+--1> ;
+
+*** Yes
+Time = now, Word = dolphin_class_word_dc.
+--1> ;
+
+*** Yes
+Time = now, Word = intelligent_fish_class_word_dc.
+--1> ;
+
+*** Yes
+Time = now, Word = mortal_class_word_dc.
+--1> ;
+
+*** Yes
+Time = now, Word = roman_class_word_dc.
+--1> ;
+
+*** Yes
+Time = now, Word = american_class_word_dc.
+--1> ;
+
+*** Yes
+Time = now, Word = featherless_biped_class_word_dc.
+--1> ;
+
+*** No
+> 	
+> %% 2
+> %% TRUE
+> 
+> exists_plural_idea( tom_dc, Time, Idea)?
+
+*** Yes
+Idea = tom_cat_class_idea_dc, Time = @.
+--1> ;
+
+*** Yes
+Idea = tom_santa_class_idea_dc, Time = @.
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, Time = @.
+--1> ;
+
+*** Yes
+Idea = tom_roman_class_idea_dc, Time = @.
+--1> ;
+
+*** Yes
+Idea = tom_american_class_idea_dc, Time = @.
+--1> ;
+
+*** Yes
+Idea = tom_mortal_class_idea_dc, Time = @.
+--1> ;
+
+*** Yes
+Idea = tom_dolphin_class_idea_dc, Time = @.
+--1> ;
+
+*** Yes
+Idea = tom_intelligent_fish_class_idea_dc, Time = @.
+--1> ;
+
+*** Yes
+Idea = tom_featherless_biped_class_idea_dc, Time = @.
+--1> ;
+
+*** No
+> ;
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% 3
+> %% NA
+> 	
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% 4
+> %% guarantees word and idea
+> 
+> exists_plural_word_idea( tom_dc, Time, Word, Idea)?
+
+*** Yes
+Idea = tom_cat_class_idea_dc, Time = now, Word = cat_class_word_dc.
+--1> ;
+
+*** Yes
+Idea = tom_santa_class_idea_dc, Time = now, Word = santa_class_word_dc.
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, Time = now, Word = human_class_word_dc.
+--1> ;
+
+*** Yes
+Idea = tom_dolphin_class_idea_dc, Time = now, Word = dolphin_class_word_dc.
+--1> ;
+
+*** Yes
+Idea = tom_intelligent_fish_class_idea_dc, 
+Time = now, 
+Word = intelligent_fish_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_mortal_class_idea_dc, Time = now, Word = mortal_class_word_dc.
+--1> ;
+
+*** Yes
+Idea = tom_roman_class_idea_dc, Time = now, Word = roman_class_word_dc.
+--1> ;
+
+*** Yes
+Idea = tom_american_class_idea_dc, Time = now, Word = american_class_word_dc.
+--1> ;
+
+*** Yes
+Idea = tom_featherless_biped_class_idea_dc, 
+Time = now, 
+Word = featherless_biped_class_word_dc.
+
+--1> ;
+
+*** No
+> ;
+> 	
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 5
+> %% guarantees word & object
+> 
+> 
+> exists_plural_word_object( tom_dc, Time,
+|         Word, Object)?
+
+*** Yes
+Object = misty_dc, Time = now, Word = cat_class_word_dc.
+--1> ;
+
+*** Yes
+Object = rosie_dc, Time = now, Word = cat_class_word_dc.
+--1> ;	
+
+*** Yes
+Object = catiline_dc, Time = now, Word = human_class_word_dc.
+--1> ;
+
+*** Yes
+Object = tom_cicero_dc, Time = now, Word = human_class_word_dc.
+--1> ;
+
+*** Yes
+Object = tom_dc, Time = now, Word = human_class_word_dc.
+--1> ;
+
+*** Yes
+Object = tom_cicero_dc, Time = now, Word = human_class_word_dc.
+--1> ;
+
+*** Yes
+Object = quine_dc, Time = now, Word = human_class_word_dc.
+--1> ;
+
+*** Yes
+Object = flipper_dc, Time = now, Word = dolphin_class_word_dc.
+--1> ;
+
+*** Yes
+Object = flipper_dc, Time = now, Word = intelligent_fish_class_word_dc.
+--1> ;
+
+*** Yes
+Object = tom_cicero_dc, Time = now, Word = mortal_class_word_dc.
+--1> 
+
+*** No
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 6
+> %% guarantees idea & object
+> 
+> exists_plural_idea_object( tom_dc, Time,
+|         Idea, Object)?
+
+*** Yes
+Idea = tom_cat_class_idea_dc, Object = misty_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_cat_class_idea_dc, Object = rosie_dc, Time = now.
+--1> ;	
+
+*** Yes
+Idea = tom_human_class_idea_dc, Object = catiline_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, Object = tom_cicero_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, Object = tom_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, Object = tom_cicero_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, Object = quine_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_featherless_biped_class_idea_dc, Object = catiline_dc, Time = now.
+--1> 
+
+*** No
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 7
+> %% 
+> 	
+> exists_plural_word_idea_object( tom_dc, Time,
+|         Word, Idea, Object)?
+
+*** Yes
+Idea = tom_cat_class_idea_dc, 
+Object = misty_dc, 
+Time = now, 
+Word = cat_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_cat_class_idea_dc, 
+Object = rosie_dc, 
+Time = now, 
+Word = cat_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, 
+Object = catiline_dc, 
+Time = now, 
+Word = human_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, 
+Object = tom_cicero_dc, 
+Time = now, 
+Word = human_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, 
+Object = tom_dc, 
+Time = now, 
+Word = human_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, 
+Object = tom_cicero_dc, 
+Time = now, 
+Word = human_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_human_class_idea_dc, 
+Object = quine_dc, 
+Time = now, 
+Word = human_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_dolphin_class_idea_dc, 
+Object = flipper_dc, 
+Time = now, 
+Word = dolphin_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_intelligent_fish_class_idea_dc, 
+Object = flipper_dc, 
+Time = now, 
+Word = intelligent_fish_class_word_dc.
+
+--1> 
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% now equality -- only applies with object specified
+> %% 1
+> %% NA
+> 
+> %% 2
+> %% NA
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% 3
+> %% NA
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% 4
+> %% NA
+> 	
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 5
+> %%
+> %% TRUE
+> 
+> equal_plural_words_objects( tom_dc, now,
+|         human_class_word_dc,
+|        featherless_biped_class_word_dc)?
+
+*** Yes
+> 
+> %% FALSE
+> 
+> equal_plural_words_objects( tom_dc, now,
+|         human_class_word_dc,
+|        roman_class_word_dc)?
+
+*** No
+> 
+> %% FALSE
+> 
+> equal_plural_words_objects( tom_dc, now,
+|         roman_class_word_dc,
+|         featherless_biped_class_word_dc)?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 6
+> %% guarantees idea & object
+> 
+> %% TRUE
+> 
+> equal_plural_ideas_objects( tom_dc, now,
+|         tom_human_class_idea_dc,
+|         tom_featherless_biped_class_idea_dc)?
+
+*** Yes
+> 
+> %% FALSE
+> 
+> equal_plural_ideas_objects( tom_dc, now,
+|         tom_roman_class_idea_dc,
+|         tom_featherless_biped_class_idea_dc)?
+
+*** No
+> 	
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 7
+> %%
+> 
+> %% TRUE
+> 
+> equal_plural_words_ideas_objects( tom_dc, now,
+|         human_class_word_dc,
+|         featherless_biped_class_word_dc,
+|         tom_human_class_idea_dc,
+|         tom_featherless_biped_class_idea_dc)?
+
+*** Yes
+> ;
+> ;
+> ;
+> ;
+> ;
+> %% FALSE
+> 
+> equal_plural_words_ideas_objects( tom_dc, now,
+|         roman_class_word_dc,
+|         featherless_biped_class_word_dc,
+|         tom_roman_class_idea_dc,
+|         tom_featherless_biped_class_idea_dc)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> 
+> 
+> %% TRUE
+> 
+> equal_plural_words_ideas_objects( tom_dc, now,
+|         human_class_word_dc,
+|         featherless_biped_class_word_dc,
+|         tom_human_class_idea_dc,
+|         tom_featherless_biped_class_idea_dc)?
+
+*** Yes
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% now functions -- only applies with object specified
+> %% 1
+> %% NA
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 2
+> %% NA
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% 3
+> %% NA
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% 4
+> %% NA
+> 	
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% 5
+> %% guarantees word & object
+> 
+> %% TRUE
+> function_plural_word( tom_dc, now,
+|         human_word_dc,
+|         human_class_word_dc)?
+
+*** Yes
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% FALSE some humans are not roman
+> function_plural_word( tom_dc, now,
+|         roman_word_dc, human_class_word_dc)?
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% FALSE some humans are not dolphins 
+> function_plural_word( tom_dc, now,
+|         dolphin_word_dc,
+|         human_class_word_dc)?
+
+*** No
+> ;
+> ;	
+> ;
+> ;	
+> ;
+> ;	
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 6
+> %% guarantees idea & object
+> 
+> %% TRUE
+> function_plural_idea( tom_dc, now,
+|         tom_human_idea_dc,
+|         tom_human_class_idea_dc)?
+
+*** Yes
+--1> ;
+
+*** No
+> 
+> %% FALSE
+> function_plural_idea( tom_dc, now,
+|         tom_roman_idea_dc,
+|         tom_human_class_idea_dc)?
+
+*** No
+> ;
+> %% FALSE
+> function_plural_idea( tom_dc, now,
+|         tom_dolphin_idea_dc,
+|         tom_human_class_idea_dc)?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %% 7
+> %% 
+> %% TRUE
+> 
+> function_plural_word_idea( tom_dc, now,
+|         human_word_dc,
+|         human_class_word_dc,
+|         tom_human_class_idea_dc)?
+
+*** Yes
+--1> ;
+
+*** No
+> 
+> %% FALSE
+> function_plural_word_idea( tom_dc, now,
+|         roman_word_dc,
+|         human_class_word_dc,
+|         tom_roman_class_idea_dc)?
+
+*** No
+> ;
+> 	
+> %% FALSE
+> function_plural_word_idea( tom_dc, now,
+|         dolphin_word_dc,
+|         roman_class_word_dc,
+|         tom_roman_class_idea_dc)?
+
+*** No
+> ;
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 	
+> %% Start testing new predicates 9/21/2021 
+> 
+> tttt( tom_dc, now, Y, X)? 
+
+*** Yes
+X = misty_dc, Y = tom_cat_class_idea_dc.
+--1> ;
+
+*** Yes
+X = rosie_dc, Y = tom_cat_class_idea_dc.
+--1> ;
+
+*** Yes
+X = catiline_dc, Y = tom_human_class_idea_dc.
+--1> ;
+
+*** Yes
+X = tom_cicero_dc, Y = tom_human_class_idea_dc.
+--1> ;
+
+*** Yes
+X = tom_dc, Y = tom_human_class_idea_dc.
+--1> ;
+
+*** Yes
+X = tom_cicero_dc, Y = tom_human_class_idea_dc.
+--1> ;
+
+*** Yes
+X = quine_dc, Y = tom_human_class_idea_dc.
+--1> ;
+
+*** Yes
+X = catiline_dc, Y = tom_featherless_biped_class_idea_dc.
+--1> ;
+
+*** Yes
+X = tom_cicero_dc, Y = tom_featherless_biped_class_idea_dc.
+--1> ;
+
+*** Yes
+X = tom_dc, Y = tom_featherless_biped_class_idea_dc.
+--1> ;
+
+*** Yes
+X = quine_dc, Y = tom_featherless_biped_class_idea_dc.
+--1> ;
+
+*** Yes
+X = tom_cicero_dc, Y = tom_mortal_class_idea_dc.
+--1> ;
+
+*** Yes
+X = tom_dc, Y = tom_mortal_class_idea_dc.
+--1> ;
+
+*** Yes
+X = tom_cicero_dc, Y = tom_mortal_class_idea_dc.
+--1> ;
+
+*** Yes
+X = misty_dc, Y = tom_mortal_class_idea_dc.
+--1> ;
+
+*** Yes
+X = rosie_dc, Y = tom_mortal_class_idea_dc.
+--1> ;
+
+*** Yes
+X = flipper_dc, Y = tom_dolphin_class_idea_dc.
+--1> ;
+
+*** Yes
+X = tom_cicero_dc, Y = tom_roman_class_idea_dc.
+--1> ;
+
+*** Yes
+X = catiline_dc, Y = tom_roman_class_idea_dc.
+--1> ;
+
+*** Yes
+X = quine_dc, Y = tom_american_class_idea_dc.
+--1> ;
+
+*** Yes
+X = flipper_dc, Y = tom_intelligent_fish_class_idea_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% INCLUSION
+> 	
+> inclusion_plural_words_objects( tom_dc, now,
+|         human_class_word_dc,
+|         american_class_word_dc)?
+
+*** Yes
+> 	
+> inclusion_plural_words_objects( tom_dc, now,
+|         american_class_word_dc,
+|         human_class_word_dc)?
+
+*** No
+> 	
+> inclusion_plural_ideas_objects( tom_dc, now,
+|         tom_american_class_idea_dc,
+|         tom_human_class_idea_dc)?
+
+*** No
+> 
+> inclusion_plural_words_ideas_objects( tom_dc, now,
+|         american_class_word_dc,
+|         tom_american_class_idea_dc,
+|         human_class_word_dc,
+|         tom_human_class_idea_dc)?
+
+*** Yes
+> 
+> %% INTERSECTION
+> 
+> in_intersection_plural_words_objects( tom_dc, now,
+|         human_class_word_dc,
+|         dolphin_class_word_dc,
+|         tom_cicero_dc)?
+
+*** No
+> 
+> in_intersection_plural_words_objects( tom_dc, now,
+|         human_class_word_dc,
+|         roman_class_word_dc,
+|         tom_cicero_dc)?
+
+*** Yes
+--1> 
+
+*** No
+> in_intersection_plural_ideas_objects( tom_dc, now,
+|         tom_human_class_idea_dc,
+|         tom_dolphin_class_idea_dc,
+|         tom_cicero_dc)?
+
+*** No
+> 
+> in_intersection_plural_ideas_objects( tom_dc, now,
+|         tom_human_class_idea_dc,
+|         tom_roman_class_idea_dc,
+|         tom_cicero_dc)?
+
+*** Yes
+--1> 
+
+*** No
+> in_intersection_plural_words_ideas_objects( tom_dc, now,
+|         dolpin_class_word_dc,
+|         roman_class_word_dc,
+|         tom_dolphin_class_idea_dc,
+|         tom_roman_class_idea_dc,
+|         tom_cicero_dc)?
+
+*** No
+> 
+> in_intersection_plural_words_ideas_objects( tom_dc, now,
+|         human_class_word_dc,
+|         roman_class_word_dc,
+|         tom_human_class_idea_dc,
+|         tom_roman_class_idea_dc,
+|         tom_cicero_dc)?
+
+*** Yes
+--1> 
+
+*** No
+> %% UNION
+> 
+> in_union_plural_words_objects( tom_dc, now,
+|         human_class_word_dc,
+|         roman_class_word_dc,
+|         quine_dc)?
+
+*** Yes
+--1> 
+
+*** No
+> in_union_plural_words_objects( tom_dc, now,
+|         human_class_word_dc,
+|         roman_class_word_dc,
+|         flipper_dc)?
+
+*** No
+> 
+> in_union_plural_ideas_objects( tom_dc, now,
+|         tom_human_class_idea_dc,
+|         tom_roman_class_idea_dc,
+|         quine_dc)?
+
+*** Yes
+--1> 
+
+*** No
+> in_union_plural_words_ideas_objects( tom_dc, now,
+|         human_class_word_dc,
+|         roman_class_word_dc,
+|         tom_human_class_idea_dc,
+|         tom_roman_class_idea_dc,
+|         quine_dc)?
+
+*** Yes
+--1> 
+
+*** No
+> in_union_plural_words_ideas_objects( tom_dc, now,
+|         human_class_word_dc,
+|         roman_class_word_dc,
+|         tom_human_class_idea_dc,
+|         tom_roman_class_idea_dc,
+|         flipper_dc)?
+
+*** No
+> 
+> %% MINUS
+> 
+> in_w1_minus_w2_words_objects( tom_dc, now,
+|         human_class_word_dc,
+|         roman_class_word_dc,
+|         tom_cicero_dc)?
+
+*** No
+> 
+> 
+> in_w1_minus_w2_words_objects( tom_dc, now,
+|         human_class_word_dc,
+|         roman_class_word_dc,
+|         quine_dc)?
+
+*** Yes
+--1> 
+
+*** No
+> in_i1_minus_i2_ideas_objects( tom_dc, now,
+|         tom_human_class_idea_dc,
+|         tom_roman_class_idea_dc,
+|         tom_cicero_dc)?
+
+*** No
+> 
+> in_i1_minus_i2_ideas_objects( tom_dc, now,
+|         tom_human_class_idea_dc,
+|         tom_roman_class_idea_dc,
+|         quine_dc)?
+
+*** Yes
+--1> 
+
+*** No
+> in_wi1_minus_wi2_words_ideas_objects( tom_dc, now,
+|         human_class_word_dc,
+|         roman_class_word_dc,
+|         tom_human_class_idea_dc,
+|         tom_roman_class_idea_dc,
+|         tom_cicero_dc)?
+
+*** No
+> 
+> in_wi1_minus_wi2_words_ideas_objects( tom_dc, now,
+|         human_class_word_dc,
+|         roman_class_word_dc,
+|         tom_human_class_idea_dc,
+|         tom_roman_class_idea_dc,
+|         quine_dc)?
+
+*** Yes
+--1> 
+
+*** No
+> %% NUMBER ZERO
+> 
+> %% 5
+> 
+> in_zero_plural_word_object( Subject, Time, Word)?
+
+*** Yes
+Subject = tom_dc, Time = now, Word = santa_class_word_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 6
+> 	
+> in_zero_plural_idea_object( Subject, Time, Idea)?
+
+*** Yes
+Idea = tom_santa_class_idea_dc, Subject = @, Time = @.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> %% 7	
+> 	
+> in_zero_plural_word_idea_object( Subject, Time,
+|         Word, Idea)?
+
+*** Yes
+Idea = tom_santa_class_idea_dc, Subject = @, Time = @, Word = @.
+--1> 
+
+*** No
+> 
+> %% NUMBER ONE
+> 
+> %% 5
+> 
+> in_one_plural_word_object( Subject, Time, Word)?
+
+*** Yes
+Subject = tom_dc, Time = now, Word = dolphin_class_word_dc.
+--1> ;
+
+*** Yes
+Subject = tom_dc, Time = now, Word = intelligent_fish_class_word_dc.
+--1> ;
+
+*** Yes
+Subject = tom_dc, Time = now, Word = american_class_word_dc.
+--1> ;
+
+*** No
+> ;
+> ;
+> 
+> %% 6
+> 	
+> in_one_plural_idea_object( Subject, Time, Idea)?
+
+*** Yes
+Idea = tom_dolphin_class_idea_dc, Subject = tom_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_american_class_idea_dc, Subject = tom_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_intelligent_fish_class_idea_dc, Subject = tom_dc, Time = now.
+--1> ;
+
+*** No
+> ;
+> ;
+> 
+> %% 7
+> 	
+> in_one_plural_word_idea_object( Subject, Time,
+|         Word, Idea)?
+
+*** Yes
+Idea = tom_dolphin_class_idea_dc, 
+Subject = tom_dc, 
+Time = now, 
+Word = dolphin_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_intelligent_fish_class_idea_dc, 
+Subject = tom_dc, 
+Time = now, 
+Word = intelligent_fish_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_american_class_idea_dc, 
+Subject = tom_dc, 
+Time = now, 
+Word = american_class_word_dc.
+
+--1> ;
+
+*** No
+> ;
+> ;
+> 
+> %% NUMBER TWO
+> 
+> %% 5	
+> 	
+> in_two_plural_word_object( Subject, Time, Word)?
+
+*** Yes
+Subject = tom_dc, Time = now, Word = cat_class_word_dc.
+--1> ;
+
+*** Yes
+Subject = tom_dc, Time = now, Word = cat_class_word_dc.
+--1> ;	
+
+*** Yes
+Subject = tom_dc, Time = now, Word = roman_class_word_dc.
+--1> ;
+
+*** Yes
+Subject = tom_dc, Time = now, Word = roman_class_word_dc.
+--1> ;	
+
+*** No
+> ;
+> ;	
+> ;
+> ;	
+> 
+> %% 6	
+> 	
+> in_two_plural_idea_object( Subject, Time, Idea)?
+
+*** Yes
+Idea = tom_cat_class_idea_dc, Subject = tom_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_cat_class_idea_dc, Subject = tom_dc, Time = now.
+--1> ;	
+
+*** Yes
+Idea = tom_roman_class_idea_dc, Subject = tom_dc, Time = now.
+--1> ;
+
+*** Yes
+Idea = tom_roman_class_idea_dc, Subject = tom_dc, Time = now.
+--1> ;	
+
+*** No
+> ;
+> ;	
+> ;
+> ;	
+> 
+> %% 7	
+> 	
+> in_two_plural_word_idea_object( Subject, Time,
+|         Word,Idea)?
+
+*** Yes
+Idea = tom_cat_class_idea_dc, 
+Subject = tom_dc, 
+Time = now, 
+Word = cat_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_cat_class_idea_dc, 
+Subject = tom_dc, 
+Time = now, 
+Word = cat_class_word_dc.
+
+--1> ;	
+
+*** Yes
+Idea = tom_roman_class_idea_dc, 
+Subject = tom_dc, 
+Time = now, 
+Word = roman_class_word_dc.
+
+--1> ;
+
+*** Yes
+Idea = tom_roman_class_idea_dc, 
+Subject = tom_dc, 
+Time = now, 
+Word = roman_class_word_dc.
+
+--1> ;	
+
+*** No
+> ;
+> ;	
+> ;
+> ;	
+> 
+> 
+> 
+> %% SUCCESSOR
+> 
+> in_successor_plural_idea_object( tom_dc, now,
+|         tom_flipper_class_idea_dc, tom_cat_class_idea_dc)?
+
+*** No
+> 
+> %% OTHER
+> 
+> A = bagof(Objects, ssss(tom_dc, now, tom_cicero_idea_dc,
+|    			Objects))?
+
+*** Yes
+A = [tom_cicero_dc], Objects = @.
+--1> 
+
+*** No
+> 
+> class_list(B, tom_dc, now, tom_flipper_class_idea_dc)?
+
+*** Yes
+B = [].
+--1> 
+
+*** No
+> 
+> 
+> write_stats(Ignore)?
+Stats Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+

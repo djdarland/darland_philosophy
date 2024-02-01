@@ -41,6 +41,7 @@ do
     else
        mkdir REFDIFF2
     fi
+       
     if test -f IN2pre/$1.lf 
     then
 	echo "1 IN2pre/$1.lf"
@@ -77,8 +78,8 @@ do
 	11) ./approve_out2.sh $1;;
 	12) ./rest_out2.sh $1;;
 	14) wild_life_X;;
-	15) ../Source/ww_fa_lf2.sh 1;;
-	16) ../Source/ww_ru_lf2.sh 1;;
+	15) ../Source/da_fa_lf2.sh 1;;
+	16) ../Source/da_ru_lf2.sh 1;;
 	17) $EDITOR ../Source/NOTES_DJD.txt;;
 	888) exit 2;;
     esac
