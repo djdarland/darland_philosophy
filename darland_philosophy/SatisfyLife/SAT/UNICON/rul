@@ -1,0 +1,2 @@
+cd ../RULES
+$EDITOR rules.lf

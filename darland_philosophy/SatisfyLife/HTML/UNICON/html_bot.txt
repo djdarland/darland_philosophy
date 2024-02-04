@@ -1,0 +1,12 @@
+</ol>
+<address> Dennis J. Darland, phil at eclectic-philosopher dot com </address>
+<img src="https://shield.sitelock.com/shield/dennisdarland.com" id="sl_shield_image" alt="shield" 
+style="cursor: pointer;"/>
+<script id="sl_shield" src="//shield.sitelock.com/sitelock.js"></script>
+<br>
+<br>
+<br>
+<br>            
+
+
+<div id="nguard-popover-hover" style="display: block;"></div></body></html>

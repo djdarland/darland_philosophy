@@ -1,0 +1,143 @@
+global fout, fout_txt, count
+procedure main()
+   local i, test_type, max_node_power, scrout
+   test_type := 1
+   scrout := open("worst.sh", "w")
+   while test_type <= 3 do {
+      max_node_power := 1
+      while max_node_power < 20 do {
+         fname := "sat_" || test_type || "_" || right(max_node_power, 3, "0")
+         fname2 := "SAT_IN/" || fname || ".lf"
+         fname3 := "SAT_TXT/" || fname || ".lf.txt"
+         write(scrout, "wild_life -memory=209715200 <", fname2, " >SAT_OUT/", fname, ".OUT.txt")
+         fout := open(fname2, "w")
+         fout_txt := open(fname3, "w")
+         
+         init()
+         #   &trace := -1
+         number := 1
+         while number <= 10 do { # do 10 tests
+            count := 1
+            write(fout,"%% BEGIN number = ", number)
+            write(fout_txt,"%% BEGIN number = ", number)
+            write(&errout, "number = ", number)
+            limit := max_node_power
+            case test_type of {
+               1 : {
+                  sat_test :=  satgen_1(limit)  # all different variables in test
+                  sat_test := "satisfiable(" || sat_test || ")\?"
+                  write(fout,sat_test)
+                  write(fout_txt,sat_test)
+                  } 
+               2 : {
+                  sat_test :=  satgen_2(limit)  # all same variables in test
+                  sat_test := "satisfiable(" || sat_test || ")\?"
+                  write(fout,sat_test)
+                  write(fout_txt,sat_test)
+                  } 
+               3 : {
+                  sat_test :=  satgen_3(limit)  # random variables in test
+                  sat_test := "satisfiable(" || sat_test || ")\?"
+                  write(fout,sat_test)
+                  write(fout_txt,sat_test)
+                  } 
+               }
+            write(fout,";")
+            write(fout,";")
+            write(fout,";")
+            write(fout," ")
+            write(fout," ")
+            write(fout,"%% END number = ", number)
+            write(fout_txt,";")
+            write(fout_txt,";")
+            write(fout_txt,";")
+            write(fout_txt," ")
+            write(fout_txt," ")
+            write(fout_txt,"%% END number = ", number)
+            number +:= 1
+            }
+         fin()
+         max_node_power +:= 1
+         }
+      test_type +:= 1
+      }
+   close(scrout)
+end
+
+procedure init()
+   infile := open("satgen.top","r")
+   while line := read(infile) do {
+      write(fout,line)
+      write(fout_txt,line)
+      }
+   close(infile)
+end
+procedure fin()
+   infile := open("satgen.bot","r")
+   while line := read(infile) do {
+      write(fout,line)
+      write(fout_txt,line)
+      }
+   close(infile)
+   close(fout)
+   close(fout_txt)
+end
+
+procedure satgen_1(limit)
+   local part1, part2, part3, part4, i, conn
+   if limit < 2 then {
+      limit -:= 1
+      # increment global count - so all variables different
+      part1 := "var" || count
+      count := count + 1
+      write(&errout, "AAA part1 = ", part1)
+      return "[top, " ||  part1 ||  "]"
+      }
+   else {
+      write(&errout, "limit = ", limit)
+      part1 := "[nand, "
+      part2 := satgen_1(limit - 1) || "," 
+      part3 := satgen_1(limit - 1) 
+      part4 := "]"
+      return (part1 || part2 || part3 || part4)
+      }
+end
+procedure satgen_2(limit)
+   local part1, part2, part3, part4, i, conn
+   if limit < 2 then {
+      limit -:= 1
+      # do not increment count - so all variables are the same
+      part1 := "var" || count
+      write(&errout, "AAA part1 = ", part1)
+      return "[top, " ||  part1 ||  "]"
+      }
+   else {
+      write(&errout, "limit = ", limit)
+      part1 := "[nand, "
+      part2 := satgen_2(limit - 1) || "," 
+      part3 := satgen_2(limit - 1) 
+      part4 := "]"
+      return (part1 || part2 || part3 || part4)
+      }
+end
+procedure satgen_3(limit)
+   local part1, part2, part3, part4, i, conn
+   if limit < 2 then {
+      limit -:= 1
+      write(&errout, "count = ", count)
+      count2 := (2 ^ (count))
+      write(&errout, "count2 = ", count2)
+      # use random count2 - so variables are random
+      part1 := "var" || (?(count2 + 1))
+      write(&errout, "AAA part1 = ", part1)
+      return "[top, " ||  part1 ||  "]"
+      }
+   else {
+      write(&errout, "limit = ", limit)
+      part1 := "[nand, "
+      part2 := satgen_3(limit - 1) || "," 
+      part3 := satgen_3(limit - 1) 
+      part4 := "]"
+      return (part1 || part2 || part3 || part4)
+      }
+end

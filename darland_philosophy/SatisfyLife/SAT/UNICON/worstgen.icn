@@ -1,0 +1,167 @@
+global fout, fout_txt, count, htmlout
+procedure main()
+   local i, test_type, max_node_power, scrout
+   test_type := 1
+   scrout := open("worst.sh", "w")
+   htmlout := open("../HTML/worst.html", "w")
+   inithtml()
+   while test_type <= 3 do {
+      max_node_power := 1
+      while max_node_power < 16 do {
+         fname := "sat_" || test_type || "_" || right(max_node_power, 3, "0")
+         fname2 := "../IN/" || fname || ".lf"
+         fname3 := "../HTML/OUT/" || fname || ".lf.txt"
+         write(scrout, "wild_life -memory=209715200 <", fname2, " >../HTML/OUT/", fname, ".OUT.txt")
+         fout := open(fname2, "w")
+         fout_txt := open(fname3, "w")
+         
+         init()
+         #   &trace := -1
+         number := 1
+         while number <= 10 do { # do 10 tests
+            count := 1
+            write(fout,"%% BEGIN number = ", number)
+            write(fout_txt,"%% BEGIN number = ", number)
+            write(&errout, "number = ", number)
+            limit := max_node_power
+            case test_type of {
+               1 : {
+                  sat_test :=  satgen_1(limit)  # all different variables in test
+                  sat_test := "satisfiable(" || sat_test || ")\?"
+                  write(fout,sat_test)
+                  write(fout_txt,sat_test)
+                  } 
+               2 : {
+                  sat_test :=  satgen_2(limit)  # all same variables in test
+                  sat_test := "satisfiable(" || sat_test || ")\?"
+                  write(fout,sat_test)
+                  write(fout_txt,sat_test)
+                  } 
+               3 : {
+                  sat_test :=  satgen_3(limit)  # random variables in test
+                  sat_test := "satisfiable(" || sat_test || ")\?"
+                  write(fout,sat_test)
+                  write(fout_txt,sat_test)
+                  } 
+               }
+            write(fout,";")
+            write(fout,";")
+            write(fout,";")
+            write(fout," ")
+            write(fout," ")
+            write(fout,"%% END number = ", number)
+            write(fout_txt,";")
+            write(fout_txt,";")
+            write(fout_txt,";")
+            write(fout_txt," ")
+            write(fout_txt," ")
+            write(fout_txt,"%% END number = ", number)
+            number +:= 1
+            }
+         write(htmlout, "<li><a href=\"OUT/" , fname , ".lf.txt\" target=\"_blank\">", fname, ".lf.txt</a></li>")
+         write(htmlout, "<li><a href=\"OUT/" , fname , ".OUT.txt\" target=\"_blank\">", fname, ".OUT.txt</a></li>") 
+         fin()
+         max_node_power +:= 1
+         }
+      test_type +:= 1
+      }
+   write(scrout, "grep Time ../HTML/OUT/*.OUT.txt >../HTML/timing.txt")
+   finhtml()
+   close(scrout)
+end
+
+procedure init()
+   infile := open("sat.top","r")
+   while line := read(infile) do {
+      write(fout, line)
+      write(fout_txt,line)
+      }
+   close(infile)
+end
+procedure inithtml()
+   infile2 := open("html.top","r")
+   while line := read(infile2) do {
+      write(htmlout, line)
+      }
+   close(infile2)
+end
+
+procedure finhtml()
+   infile2 := open("html.bot","r")
+   while line := read(infile2) do {
+      write(htmlout,line)
+      }
+   close(htmlout)
+   close(infile2)
+end
+
+
+procedure fin()
+   infile := open("sat.bot","r")
+   while line := read(infile) do {
+      write(fout,line)
+      write(fout_txt,line)
+      }
+   close(infile)
+   close(fout)
+   close(fout_txt)
+end
+
+procedure satgen_1(limit)
+   local part1, part2, part3, part4, i, conn
+   if limit < 2 then {
+      limit -:= 1
+      # increment global count - so all variables different
+      part1 := "Var" || count
+      count := count + 1
+      write(&errout, "AAA part1 = ", part1)
+      return "[top, " ||  part1 ||  "]"
+      }
+   else {
+      write(&errout, "limit = ", limit)
+      part1 := "[nand, "
+      part2 := satgen_1(limit - 1) || "," 
+      part3 := satgen_1(limit - 1) 
+      part4 := "]"
+      return (part1 || part2 || part3 || part4)
+      }
+end
+procedure satgen_2(limit)
+   local part1, part2, part3, part4, i, conn
+   if limit < 2 then {
+      limit -:= 1
+      # do not increment count - so all variables are the same
+      part1 := "Var" || count
+      write(&errout, "AAA part1 = ", part1)
+      return "[top, " ||  part1 ||  "]"
+      }
+   else {
+      write(&errout, "limit = ", limit)
+      part1 := "[nand, "
+      part2 := satgen_2(limit - 1) || "," 
+      part3 := satgen_2(limit - 1) 
+      part4 := "]"
+      return (part1 || part2 || part3 || part4)
+      }
+end
+procedure satgen_3(limit)
+   local part1, part2, part3, part4, i, conn
+   if limit < 2 then {
+      limit -:= 1
+      write(&errout, "count = ", count)
+      count2 := (2 ^ (count))
+      write(&errout, "count2 = ", count2)
+      # use random count2 - so variables are random
+      part1 := "Var" || (?(count2 + 1))
+      write(&errout, "AAA part1 = ", part1)
+      return "[top, " ||  part1 ||  "]"
+      }
+   else {
+      write(&errout, "limit = ", limit)
+      part1 := "[nand, "
+      part2 := satgen_3(limit - 1) || "," 
+      part3 := satgen_3(limit - 1) 
+      part4 := "]"
+      return (part1 || part2 || part3 || part4)
+      }
+end

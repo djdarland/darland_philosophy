@@ -1,0 +1,4 @@
+cd HTML/OUT_AND
+rm *.txt
+cd ../OUT
+rm *.txt

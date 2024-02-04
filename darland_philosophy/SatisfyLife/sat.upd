@@ -1,0 +1,11 @@
+cp satisfy.html HTML/satisfy.html
+cp SAT/HTML/timing.txt HTML/timing.txt
+cp SAT/HTML/worst.html HTML/worst.html
+cp SAT/RULES/rules_0063.lf HTML/RULES/rules_0063_lf.txt
+cp SAT/UNICON/worstgen.icn HTML/UNICON/worstgen_icn.txt
+cp SAT/UNICON/worst.sh HTML/UNICON/worst_sh.txt
+cp SAT/UNICON/html.bot HTML/UNICON/html_bot.txt
+cp SAT/UNICON/html.top HTML/UNICON/html_top.txt
+cp SAT/UNICON/sat.bot HTML/UNICON/sat_bot.txt
+cp SAT/UNICON/sat.top HTML/UNICON/sat_top.txt
+sftp dennisda@dennisdarland.com <sat.bat

@@ -1,0 +1,96 @@
+global fout, fout_txt, count, htmlout, and_str
+procedure main()
+   local i, scrout
+   scrout := open("and.sh", "w")
+   htmlout := open("../HTML/and.html", "w")
+   inithtml()
+   max_and := 1
+   while max_and < 16 do {
+      write(&errout, "MAIN LOOP max_and = ", max_and)
+      fname := "sat_" || right(max_and, 3, "0")
+      fname2 := "../IN_AND/" || fname || ".lf"
+      fname3 := "../HTML/OUT_AND/" || fname || ".lf.txt"
+      write(scrout, "wild_life -memory=209715200 <", fname2, " >../HTML/OUT_AND/", fname, ".OUT.txt")
+      fout := open(fname2, "w")
+      fout_txt := open(fname3, "w")
+      
+      init()
+      #   &trace := -1
+      write(fout,"%% BEGIN max_and = ", max_and)
+      write(fout_txt,"%% BEGIN number = ", number)
+      sat_test :=  satgen_and(max_and)  # and all variables
+      sat_test := "satisfiable(" || sat_test || ")\?"
+      write(fout,sat_test)
+      write(fout_txt,sat_test)
+      write(fout,";")
+      write(fout,";")
+      write(fout,";")
+      write(fout," ")
+      write(fout," ")
+      write(fout,"%% END max_and = ", max_and)
+      write(fout_txt,";")
+      write(fout_txt,";")
+      write(fout_txt,";")
+      write(fout_txt," ")
+      write(fout_txt," ")
+      write(fout_txt,"%% END max_and = ", max_and)
+      write(htmlout, "<li><a href=\"OUT_AND/" , fname , ".lf.txt\" target=\"_blank\">", fname, ".lf.txt</a></li>")
+      write(htmlout, "<li><a href=\"OUT_AND/" , fname , ".OUT.txt\" target=\"_blank\">", fname, ".OUT.txt</a></li>") 
+      fin()
+      max_and +:= 1
+      }
+   write(scrout, "grep Time ../HTML/OUT_AND/*.OUT.txt >../HTML/and_timing.txt")
+   finhtml()
+   close(scrout)
+end
+
+procedure init()
+   infile := open("sat.top","r")
+   while line := read(infile) do {
+      write(fout, line)
+      write(fout_txt,line)
+      }
+   close(infile)
+end
+procedure inithtml()
+   infile2 := open("html.top","r")
+   while line := read(infile2) do {
+      write(htmlout, line)
+      }
+   close(infile2)
+end
+
+procedure finhtml()
+   infile2 := open("html.bot","r")
+   while line := read(infile2) do {
+      write(htmlout,line)
+      }
+   close(htmlout)
+   close(infile2)
+end
+
+
+procedure fin()
+   infile := open("sat.bot","r")
+   while line := read(infile) do {
+      write(fout,line)
+      write(fout_txt,line)
+      }
+   close(infile)
+   close(fout)
+   close(fout_txt)
+end
+
+procedure satgen_and(max_and)
+   and_str := "[nand, [nand, Var_1, Var_2], [nand, Var_1, Var_2]]"   
+   write("and_str = ", and_str)
+   i := 2
+   write(&errout, "and_str = ", and_str)
+   while i < max_and do {
+      write(&errout, "and_str = ", and_str)
+      new_str := "[nand, [nand, Var_" || i + 1 || ", " || and_str || "],[nand, Var_" || i + 1 || ", " || and_str || "]]"
+      and_str := new_str
+      i +:= 1
+      }
+   return and_str
+end

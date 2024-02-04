@@ -1,0 +1,112 @@
+%% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+persistent(clock_start)?
+
+write_time :- write(system("date")),
+	clock_start <<- real_time.
+
+write_stats :- write("CPU Time ", cpu_time, " Seconds"),nl,
+	write("Clock Time ", real_time - clock_start, " Seconds"),nl,
+	statistics.
+
+load("RULES2/rules_0063.lf")?
+
+write_time?
+%% BEGIN number = 1
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, var1],[top, var2]],[nand, [top, var3],[top, var4]]],[nand, [nand, [top, var5],[top, var6]],[nand, [top, var7],[top, var8]]]],[nand, [nand, [nand, [top, var9],[top, var10]],[nand, [top, var11],[top, var12]]],[nand, [nand, [top, var13],[top, var14]],[nand, [top, var15],[top, var16]]]]],[nand, [nand, [nand, [nand, [top, var17],[top, var18]],[nand, [top, var19],[top, var20]]],[nand, [nand, [top, var21],[top, var22]],[nand, [top, var23],[top, var24]]]],[nand, [nand, [nand, [top, var25],[top, var26]],[nand, [top, var27],[top, var28]]],[nand, [nand, [top, var29],[top, var30]],[nand, [top, var31],[top, var32]]]]]],[nand, [nand, [nand, [nand, [nand, [top, var33],[top, var34]],[nand, [top, var35],[top, var36]]],[nand, [nand, [top, var37],[top, var38]],[nand, [top, var39],[top, var40]]]],[nand, [nand, [nand, [top, var41],[top, var42]],[nand, [top, var43],[top, var44]]],[nand, [nand, [top, var45],[top, var46]],[nand, [top, var47],[top, var48]]]]],[nand, [nand, [nand, [nand, [top, var49],[top, var50]],[nand, [top, var51],[top, var52]]],[nand, [nand, [top, var53],[top, var54]],[nand, [top, var55],[top, var56]]]],[nand, [nand, [nand, [top, var57],[top, var58]],[nand, [top, var59],[top, var60]]],[nand, [nand, [top, var61],[top, var62]],[nand, [top, var63],[top, var64]]]]]]])?
+;
+;
+;
+ 
+ 
+%% END number = 1
+%% BEGIN number = 2
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, var1],[top, var2]],[nand, [top, var3],[top, var4]]],[nand, [nand, [top, var5],[top, var6]],[nand, [top, var7],[top, var8]]]],[nand, [nand, [nand, [top, var9],[top, var10]],[nand, [top, var11],[top, var12]]],[nand, [nand, [top, var13],[top, var14]],[nand, [top, var15],[top, var16]]]]],[nand, [nand, [nand, [nand, [top, var17],[top, var18]],[nand, [top, var19],[top, var20]]],[nand, [nand, [top, var21],[top, var22]],[nand, [top, var23],[top, var24]]]],[nand, [nand, [nand, [top, var25],[top, var26]],[nand, [top, var27],[top, var28]]],[nand, [nand, [top, var29],[top, var30]],[nand, [top, var31],[top, var32]]]]]],[nand, [nand, [nand, [nand, [nand, [top, var33],[top, var34]],[nand, [top, var35],[top, var36]]],[nand, [nand, [top, var37],[top, var38]],[nand, [top, var39],[top, var40]]]],[nand, [nand, [nand, [top, var41],[top, var42]],[nand, [top, var43],[top, var44]]],[nand, [nand, [top, var45],[top, var46]],[nand, [top, var47],[top, var48]]]]],[nand, [nand, [nand, [nand, [top, var49],[top, var50]],[nand, [top, var51],[top, var52]]],[nand, [nand, [top, var53],[top, var54]],[nand, [top, var55],[top, var56]]]],[nand, [nand, [nand, [top, var57],[top, var58]],[nand, [top, var59],[top, var60]]],[nand, [nand, [top, var61],[top, var62]],[nand, [top, var63],[top, var64]]]]]]])?
+;
+;
+;
+ 
+ 
+%% END number = 2
+%% BEGIN number = 3
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, var1],[top, var2]],[nand, [top, var3],[top, var4]]],[nand, [nand, [top, var5],[top, var6]],[nand, [top, var7],[top, var8]]]],[nand, [nand, [nand, [top, var9],[top, var10]],[nand, [top, var11],[top, var12]]],[nand, [nand, [top, var13],[top, var14]],[nand, [top, var15],[top, var16]]]]],[nand, [nand, [nand, [nand, [top, var17],[top, var18]],[nand, [top, var19],[top, var20]]],[nand, [nand, [top, var21],[top, var22]],[nand, [top, var23],[top, var24]]]],[nand, [nand, [nand, [top, var25],[top, var26]],[nand, [top, var27],[top, var28]]],[nand, [nand, [top, var29],[top, var30]],[nand, [top, var31],[top, var32]]]]]],[nand, [nand, [nand, [nand, [nand, [top, var33],[top, var34]],[nand, [top, var35],[top, var36]]],[nand, [nand, [top, var37],[top, var38]],[nand, [top, var39],[top, var40]]]],[nand, [nand, [nand, [top, var41],[top, var42]],[nand, [top, var43],[top, var44]]],[nand, [nand, [top, var45],[top, var46]],[nand, [top, var47],[top, var48]]]]],[nand, [nand, [nand, [nand, [top, var49],[top, var50]],[nand, [top, var51],[top, var52]]],[nand, [nand, [top, var53],[top, var54]],[nand, [top, var55],[top, var56]]]],[nand, [nand, [nand, [top, var57],[top, var58]],[nand, [top, var59],[top, var60]]],[nand, [nand, [top, var61],[top, var62]],[nand, [top, var63],[top, var64]]]]]]])?
+;
+;
+;
+ 
+ 
+%% END number = 3
+%% BEGIN number = 4
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, var1],[top, var2]],[nand, [top, var3],[top, var4]]],[nand, [nand, [top, var5],[top, var6]],[nand, [top, var7],[top, var8]]]],[nand, [nand, [nand, [top, var9],[top, var10]],[nand, [top, var11],[top, var12]]],[nand, [nand, [top, var13],[top, var14]],[nand, [top, var15],[top, var16]]]]],[nand, [nand, [nand, [nand, [top, var17],[top, var18]],[nand, [top, var19],[top, var20]]],[nand, [nand, [top, var21],[top, var22]],[nand, [top, var23],[top, var24]]]],[nand, [nand, [nand, [top, var25],[top, var26]],[nand, [top, var27],[top, var28]]],[nand, [nand, [top, var29],[top, var30]],[nand, [top, var31],[top, var32]]]]]],[nand, [nand, [nand, [nand, [nand, [top, var33],[top, var34]],[nand, [top, var35],[top, var36]]],[nand, [nand, [top, var37],[top, var38]],[nand, [top, var39],[top, var40]]]],[nand, [nand, [nand, [top, var41],[top, var42]],[nand, [top, var43],[top, var44]]],[nand, [nand, [top, var45],[top, var46]],[nand, [top, var47],[top, var48]]]]],[nand, [nand, [nand, [nand, [top, var49],[top, var50]],[nand, [top, var51],[top, var52]]],[nand, [nand, [top, var53],[top, var54]],[nand, [top, var55],[top, var56]]]],[nand, [nand, [nand, [top, var57],[top, var58]],[nand, [top, var59],[top, var60]]],[nand, [nand, [top, var61],[top, var62]],[nand, [top, var63],[top, var64]]]]]]])?
+;
+;
+;
+ 
+ 
+%% END number = 4
+%% BEGIN number = 5
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, var1],[top, var2]],[nand, [top, var3],[top, var4]]],[nand, [nand, [top, var5],[top, var6]],[nand, [top, var7],[top, var8]]]],[nand, [nand, [nand, [top, var9],[top, var10]],[nand, [top, var11],[top, var12]]],[nand, [nand, [top, var13],[top, var14]],[nand, [top, var15],[top, var16]]]]],[nand, [nand, [nand, [nand, [top, var17],[top, var18]],[nand, [top, var19],[top, var20]]],[nand, [nand, [top, var21],[top, var22]],[nand, [top, var23],[top, var24]]]],[nand, [nand, [nand, [top, var25],[top, var26]],[nand, [top, var27],[top, var28]]],[nand, [nand, [top, var29],[top, var30]],[nand, [top, var31],[top, var32]]]]]],[nand, [nand, [nand, [nand, [nand, [top, var33],[top, var34]],[nand, [top, var35],[top, var36]]],[nand, [nand, [top, var37],[top, var38]],[nand, [top, var39],[top, var40]]]],[nand, [nand, [nand, [top, var41],[top, var42]],[nand, [top, var43],[top, var44]]],[nand, [nand, [top, var45],[top, var46]],[nand, [top, var47],[top, var48]]]]],[nand, [nand, [nand, [nand, [top, var49],[top, var50]],[nand, [top, var51],[top, var52]]],[nand, [nand, [top, var53],[top, var54]],[nand, [top, var55],[top, var56]]]],[nand, [nand, [nand, [top, var57],[top, var58]],[nand, [top, var59],[top, var60]]],[nand, [nand, [top, var61],[top, var62]],[nand, [top, var63],[top, var64]]]]]]])?
+;
+;
+;
+ 
+ 
+%% END number = 5
+%% BEGIN number = 6
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, var1],[top, var2]],[nand, [top, var3],[top, var4]]],[nand, [nand, [top, var5],[top, var6]],[nand, [top, var7],[top, var8]]]],[nand, [nand, [nand, [top, var9],[top, var10]],[nand, [top, var11],[top, var12]]],[nand, [nand, [top, var13],[top, var14]],[nand, [top, var15],[top, var16]]]]],[nand, [nand, [nand, [nand, [top, var17],[top, var18]],[nand, [top, var19],[top, var20]]],[nand, [nand, [top, var21],[top, var22]],[nand, [top, var23],[top, var24]]]],[nand, [nand, [nand, [top, var25],[top, var26]],[nand, [top, var27],[top, var28]]],[nand, [nand, [top, var29],[top, var30]],[nand, [top, var31],[top, var32]]]]]],[nand, [nand, [nand, [nand, [nand, [top, var33],[top, var34]],[nand, [top, var35],[top, var36]]],[nand, [nand, [top, var37],[top, var38]],[nand, [top, var39],[top, var40]]]],[nand, [nand, [nand, [top, var41],[top, var42]],[nand, [top, var43],[top, var44]]],[nand, [nand, [top, var45],[top, var46]],[nand, [top, var47],[top, var48]]]]],[nand, [nand, [nand, [nand, [top, var49],[top, var50]],[nand, [top, var51],[top, var52]]],[nand, [nand, [top, var53],[top, var54]],[nand, [top, var55],[top, var56]]]],[nand, [nand, [nand, [top, var57],[top, var58]],[nand, [top, var59],[top, var60]]],[nand, [nand, [top, var61],[top, var62]],[nand, [top, var63],[top, var64]]]]]]])?
+;
+;
+;
+ 
+ 
+%% END number = 6
+%% BEGIN number = 7
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, var1],[top, var2]],[nand, [top, var3],[top, var4]]],[nand, [nand, [top, var5],[top, var6]],[nand, [top, var7],[top, var8]]]],[nand, [nand, [nand, [top, var9],[top, var10]],[nand, [top, var11],[top, var12]]],[nand, [nand, [top, var13],[top, var14]],[nand, [top, var15],[top, var16]]]]],[nand, [nand, [nand, [nand, [top, var17],[top, var18]],[nand, [top, var19],[top, var20]]],[nand, [nand, [top, var21],[top, var22]],[nand, [top, var23],[top, var24]]]],[nand, [nand, [nand, [top, var25],[top, var26]],[nand, [top, var27],[top, var28]]],[nand, [nand, [top, var29],[top, var30]],[nand, [top, var31],[top, var32]]]]]],[nand, [nand, [nand, [nand, [nand, [top, var33],[top, var34]],[nand, [top, var35],[top, var36]]],[nand, [nand, [top, var37],[top, var38]],[nand, [top, var39],[top, var40]]]],[nand, [nand, [nand, [top, var41],[top, var42]],[nand, [top, var43],[top, var44]]],[nand, [nand, [top, var45],[top, var46]],[nand, [top, var47],[top, var48]]]]],[nand, [nand, [nand, [nand, [top, var49],[top, var50]],[nand, [top, var51],[top, var52]]],[nand, [nand, [top, var53],[top, var54]],[nand, [top, var55],[top, var56]]]],[nand, [nand, [nand, [top, var57],[top, var58]],[nand, [top, var59],[top, var60]]],[nand, [nand, [top, var61],[top, var62]],[nand, [top, var63],[top, var64]]]]]]])?
+;
+;
+;
+ 
+ 
+%% END number = 7
+%% BEGIN number = 8
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, var1],[top, var2]],[nand, [top, var3],[top, var4]]],[nand, [nand, [top, var5],[top, var6]],[nand, [top, var7],[top, var8]]]],[nand, [nand, [nand, [top, var9],[top, var10]],[nand, [top, var11],[top, var12]]],[nand, [nand, [top, var13],[top, var14]],[nand, [top, var15],[top, var16]]]]],[nand, [nand, [nand, [nand, [top, var17],[top, var18]],[nand, [top, var19],[top, var20]]],[nand, [nand, [top, var21],[top, var22]],[nand, [top, var23],[top, var24]]]],[nand, [nand, [nand, [top, var25],[top, var26]],[nand, [top, var27],[top, var28]]],[nand, [nand, [top, var29],[top, var30]],[nand, [top, var31],[top, var32]]]]]],[nand, [nand, [nand, [nand, [nand, [top, var33],[top, var34]],[nand, [top, var35],[top, var36]]],[nand, [nand, [top, var37],[top, var38]],[nand, [top, var39],[top, var40]]]],[nand, [nand, [nand, [top, var41],[top, var42]],[nand, [top, var43],[top, var44]]],[nand, [nand, [top, var45],[top, var46]],[nand, [top, var47],[top, var48]]]]],[nand, [nand, [nand, [nand, [top, var49],[top, var50]],[nand, [top, var51],[top, var52]]],[nand, [nand, [top, var53],[top, var54]],[nand, [top, var55],[top, var56]]]],[nand, [nand, [nand, [top, var57],[top, var58]],[nand, [top, var59],[top, var60]]],[nand, [nand, [top, var61],[top, var62]],[nand, [top, var63],[top, var64]]]]]]])?
+;
+;
+;
+ 
+ 
+%% END number = 8
+%% BEGIN number = 9
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, var1],[top, var2]],[nand, [top, var3],[top, var4]]],[nand, [nand, [top, var5],[top, var6]],[nand, [top, var7],[top, var8]]]],[nand, [nand, [nand, [top, var9],[top, var10]],[nand, [top, var11],[top, var12]]],[nand, [nand, [top, var13],[top, var14]],[nand, [top, var15],[top, var16]]]]],[nand, [nand, [nand, [nand, [top, var17],[top, var18]],[nand, [top, var19],[top, var20]]],[nand, [nand, [top, var21],[top, var22]],[nand, [top, var23],[top, var24]]]],[nand, [nand, [nand, [top, var25],[top, var26]],[nand, [top, var27],[top, var28]]],[nand, [nand, [top, var29],[top, var30]],[nand, [top, var31],[top, var32]]]]]],[nand, [nand, [nand, [nand, [nand, [top, var33],[top, var34]],[nand, [top, var35],[top, var36]]],[nand, [nand, [top, var37],[top, var38]],[nand, [top, var39],[top, var40]]]],[nand, [nand, [nand, [top, var41],[top, var42]],[nand, [top, var43],[top, var44]]],[nand, [nand, [top, var45],[top, var46]],[nand, [top, var47],[top, var48]]]]],[nand, [nand, [nand, [nand, [top, var49],[top, var50]],[nand, [top, var51],[top, var52]]],[nand, [nand, [top, var53],[top, var54]],[nand, [top, var55],[top, var56]]]],[nand, [nand, [nand, [top, var57],[top, var58]],[nand, [top, var59],[top, var60]]],[nand, [nand, [top, var61],[top, var62]],[nand, [top, var63],[top, var64]]]]]]])?
+;
+;
+;
+ 
+ 
+%% END number = 9
+%% BEGIN number = 10
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, var1],[top, var2]],[nand, [top, var3],[top, var4]]],[nand, [nand, [top, var5],[top, var6]],[nand, [top, var7],[top, var8]]]],[nand, [nand, [nand, [top, var9],[top, var10]],[nand, [top, var11],[top, var12]]],[nand, [nand, [top, var13],[top, var14]],[nand, [top, var15],[top, var16]]]]],[nand, [nand, [nand, [nand, [top, var17],[top, var18]],[nand, [top, var19],[top, var20]]],[nand, [nand, [top, var21],[top, var22]],[nand, [top, var23],[top, var24]]]],[nand, [nand, [nand, [top, var25],[top, var26]],[nand, [top, var27],[top, var28]]],[nand, [nand, [top, var29],[top, var30]],[nand, [top, var31],[top, var32]]]]]],[nand, [nand, [nand, [nand, [nand, [top, var33],[top, var34]],[nand, [top, var35],[top, var36]]],[nand, [nand, [top, var37],[top, var38]],[nand, [top, var39],[top, var40]]]],[nand, [nand, [nand, [top, var41],[top, var42]],[nand, [top, var43],[top, var44]]],[nand, [nand, [top, var45],[top, var46]],[nand, [top, var47],[top, var48]]]]],[nand, [nand, [nand, [nand, [top, var49],[top, var50]],[nand, [top, var51],[top, var52]]],[nand, [nand, [top, var53],[top, var54]],[nand, [top, var55],[top, var56]]]],[nand, [nand, [nand, [top, var57],[top, var58]],[nand, [top, var59],[top, var60]]],[nand, [nand, [top, var61],[top, var62]],[nand, [top, var63],[top, var64]]]]]]])?
+;
+;
+;
+ 
+ 
+%% END number = 10
+write_stats?
+
+halt?

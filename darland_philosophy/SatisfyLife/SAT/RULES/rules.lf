@@ -1,0 +1,300 @@
+%% Copyright (C) 2017, 2019, 2020, 2021, 2024 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+
+%% This is to experiment with Satisfiability.
+%% It is an NP-complete problem
+%% See pages 320-331 in
+%% _Introduction to Automata Theory, Languages and Computation_
+%% By John E. Hopcroft
+%% and
+%% Jefferey D. Ullman
+
+%% First convert a boolean expression to nand using Polish notation.
+%% It looks to me like a binary search. So should be polynomial time!!!
+
+
+% next for statistics
+persistent(visits)?
+
+% next for statistics
+persistent(max_depth)?
+
+% list of nands - should represent any truth function of propositions.
+
+satisfiable(List) :-
+    write("START list = ",List),nl,
+    visits <<- 0,
+    max_depth <<- 0,
+    % Max Depth starts at 1, Left visits 0 Right visits 0
+    cond(sat(List, 1, 0, 0), 
+	 (write("Satisfiable visits = ", visits),
+	  write(" max_depth = ", max_depth),nl),
+	 (write("Not Satisfiable visits = ", visits),
+	  write(" max_depth = ", max_depth),nl,fail)).
+
+% Note took Left Branch
+note_branch_left(Left, Right) :-
+    write("Branch Left = ", Left + 1, " Right = ", Right), nl.
+
+% Note took Right Branch
+note_branch_right(Left, Right) :-
+	write("Branch Left = ", Left, " Right = ", Right + 1), nl.
+
+% Any True Proposition is Satisfiable [top indicates reached end]
+sat([top, P], Depth, Left, Right) :-
+    visits <<- visits + 1,
+    cond(Depth > max_depth,
+	 max_depth <<- Depth),
+    P = "TRUE".
+
+not_sat([top, P], Depth, Left, Right) :-
+    visits <<- visits + 1,
+    cond(Depth > max_depth,
+	 max_depth <<- Depth),
+    P = "FALSE".
+
+not_sat([top, P], Depth, Left, Right) :-
+    \+ sat([top, P], Depth, Left, Right).
+
+% 1 not FALSE - TRUE
+% VALUES ONLY
+
+sat([nand, Prop_1, Prop_2], Depth, Left, Right) :-
+    write("VALUES FALSE FALSE"), nl,
+    Prop_1 = [top, "FALSE"],
+    Prop_2 = [top, "FALSE"],
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% 2 FALSE - TRUE
+
+sat([nand, Prop_1, Prop_2], Depth, Left, Right) :-
+    write("VALUES FALSE TRUE "), nl,
+    Prop_1 = [top, "FALSE"],
+    Prop_2 = [top, "TRUE"],
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+
+% 3 TRUE - FALSE
+
+sat([nand, Prop_1, Prop_2], Depth, Left, Right) :-
+    write("VALUES TRUE FALSE"), nl,
+    Prop_1 = [top, "TRUE"],
+    Prop_2 = [top, "FALSE"],
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+
+% 4  TRUE TRUE
+
+not_sat([nand, Prop_1, Prop_2], Depth, Left, Right) :-
+    write("VALUES TRUE TRUE"), nl,
+    Prop_1 = [top, "TRUE"],
+    Prop_2 = [top, "TRUE"],
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% SAT ONLY
+
+% 1 not sat - not sat
+
+sat([nand, Prop_1, Prop_2], Depth, Left, Right) :-
+    write("SAT NOT NOT"), nl,
+    var(Prop_1),
+    var(Prop_2),
+    not_sat(Prop_1, Depth, Left, Right),
+    not_sat(Prop_2, Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% 2 not sat - sat
+
+sat([nand, Prop_1, Prop_2], Depth, Left, Right) :-
+    write("SAT NOT SAT"), nl,
+    var(Prop_1),
+    var(Prop_2),
+    not_sat(Prop_1, Depth, Left, Right),
+    sat(Prop_2, Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+
+% 3 sat - not sat
+
+sat([nand, Prop_1, Prop_2], Depth, Left, Right) :-
+    write("SAT SAT NOT"), nl,
+    var(Prop_1),
+    var(Prop_2),
+    sat(Prop_1, Depth, Left, Right),
+    not_sat(Prop_2, Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+
+% 4  sat - sat
+
+not_sat([nand, Prop_1, Prop_2], Depth, Left, Right) :-
+    write("SAT SAT SAT"), nl,
+    var(Prop_1),
+    var(Prop_2),
+    sat(Prop_1, Depth, Left, Right),
+    sat(Prop_2, Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NAND SECOND
+
+% 1 FALSE - not sat
+
+sat([nand, Prop_1, [nand, Prop_2, Prop_3]], Depth, Left, Right) :-
+    write("NAND1 FALSE NOT"), nl,
+    Prop_1 = [top, "FALSE"],
+    not_sat([nand, Prop_2, Prop_3], Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% 2 FALSE - sat
+
+sat([nand, Prop_1, [nand, Prop_2, Prop_3]], Depth, Left, Right) :-
+    write("NAND2 FALSE SAT"), nl,
+    Prop_1 = [top, "FALSE"],
+    sat([nand, Prop_2, Prop_3], Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% 3 TRUE - not sat
+
+sat([nand, Prop_1, [nand, Prop_2, Prop_3]], Depth, Left, Right) :-
+    write("NAND2 TRUE NOT"), nl,
+    Prop_1 = [top, "TRUE"],
+    not_sat([nand, Prop_2, Prop_3], Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% 4 TRUE - sat
+
+not_sat([nand, Prop_1, [nand, Prop_2, Prop_3]], Depth, Left, Right) :-
+    write("NAND2 TRUE SAT"), nl,
+    Prop_1 = [top, "TRUE"],
+    sat([nand, Prop_2, Prop_3], Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NAND FIRST
+
+% 1 not sat - FALSE
+
+sat([nand, [Prop_1, Prop_2], Prop_3], Depth, Left, Right) :-
+    write("NAND1 NOT FALSE"), nl,
+    not_sat([nand, Prop_1, Prop_2], Depth, Left, Right),
+    Prop_3 = [top, "FALSE"],
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% 2 not sat - TRUE
+
+sat([nand, [Prop_1, Prop_2], Prop_3], Depth, Left, Right) :-
+    write("NAND1 NOT TRUE"), nl,
+    not_sat([nand, Prop_1, Prop_2], Depth, Left, Right),
+    Prop_3 = [top, "TRUE"],
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% 3 sat - FALSE
+
+sat([nand, [Prop_1, Prop_2], Prop_3], Depth, Left, Right) :-
+    write("NAND1 SAT FALSE"), nl,
+    sat([nand, Prop_1, Prop_2], Depth, Left, Right),
+    Prop_3 = [top, "FALSE"],
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% 4 sat - TRUE
+
+not_sat([nand, [Prop_1, Prop_2], Prop_3], Depth, Left, Right) :-
+    write("NAND1 SAT TRUE"), nl,
+    Prop_3 = [top, "TRUE"],
+    sat([nand, Prop_1, Prop_2], Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BOTH NAND
+
+% 1 not sat - not sat
+
+sat([nand, [nand, Prop_1, Prop_2], [nand, Prop_3, Prop_4]], Depth, Left, Right) :-
+    write("NANDB NOT NOT"), nl,
+    not_sat([nand, Prop_1, Prop_2], Depth, Left, Right),
+    not_sat([nand, Prop_3, Prop_4], Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% 2 not sat - sat
+
+sat([nand, [nand, Prop_1, Prop_2], [nand, Prop_3, Prop_4]], Depth, Left, Right) :-
+    write("NANDB NOT SAT"), nl,
+    not_sat([nand, Prop_1, Prop_2], Depth, Left, Right),
+    sat([nand, Prop_3, Prop_4], Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% 3 sat - not sat
+
+sat([nand, [nand, Prop_1, Prop_2], [nand, Prop_3, Prop_4]], Depth, Left, Right) :-
+    write("NANDB SAT NOT"), nl,
+    sat([nand, Prop_1, Prop_2], Depth, Left, Right),
+    not_sat([nand, Prop_3, Prop_4], Depth, Left, Right),
+    Prop_3 = [top, "FALSE"],
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+
+% 4 sat - TRUE
+
+not_sat([nand, [nand, Prop_1, Prop_2], [nand, Prop_3, Prop_4]], Depth, Left, Right) :-
+    write("NANDB SAT SAT"), nl,
+    sat([nand, Prop_1, Prop_2], Depth, Left, Right),
+    sat([nand, Prop_3, Prop_4], Depth, Left, Right),
+    cond(Depth > max_depth,
+	 max_depth <<- Depth, succeed),
+    visits <<- visits + 1.
+

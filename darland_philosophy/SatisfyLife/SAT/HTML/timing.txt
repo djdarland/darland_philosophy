@@ -1,0 +1,90 @@
+../HTML/OUT/sat_1_001.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_1_001.OUT.txt:Clock Time 0.000252008 Seconds
+../HTML/OUT/sat_1_002.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_1_002.OUT.txt:Clock Time 0.000341892 Seconds
+../HTML/OUT/sat_1_003.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_1_003.OUT.txt:Clock Time 0.00114894 Seconds
+../HTML/OUT/sat_1_004.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_1_004.OUT.txt:Clock Time 0.00194383 Seconds
+../HTML/OUT/sat_1_005.OUT.txt:> > > > > > CPU Time 0.01 Seconds
+../HTML/OUT/sat_1_005.OUT.txt:Clock Time 0.0063262 Seconds
+../HTML/OUT/sat_1_006.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_1_006.OUT.txt:Clock Time 0.0088501 Seconds
+../HTML/OUT/sat_1_007.OUT.txt:> > > > > > CPU Time 0.02 Seconds
+../HTML/OUT/sat_1_007.OUT.txt:Clock Time 0.0249531 Seconds
+../HTML/OUT/sat_1_008.OUT.txt:> > > > > > CPU Time 0.03 Seconds
+../HTML/OUT/sat_1_008.OUT.txt:Clock Time 0.0466909 Seconds
+../HTML/OUT/sat_1_009.OUT.txt:> > > > > > CPU Time 0.1 Seconds
+../HTML/OUT/sat_1_009.OUT.txt:Clock Time 0.146344 Seconds
+../HTML/OUT/sat_1_010.OUT.txt:> > > > > > CPU Time 0.31 Seconds
+../HTML/OUT/sat_1_010.OUT.txt:Clock Time 0.372354 Seconds
+../HTML/OUT/sat_1_011.OUT.txt:> > > > > > CPU Time 1.54 Seconds
+../HTML/OUT/sat_1_011.OUT.txt:Clock Time 1.66911 Seconds
+../HTML/OUT/sat_1_012.OUT.txt:> > > > > > CPU Time 4.69 Seconds
+../HTML/OUT/sat_1_012.OUT.txt:Clock Time 4.89932 Seconds
+../HTML/OUT/sat_1_013.OUT.txt:> > > > > > CPU Time 24.58 Seconds
+../HTML/OUT/sat_1_013.OUT.txt:Clock Time 25.3462 Seconds
+../HTML/OUT/sat_1_014.OUT.txt:> > > > > > CPU Time 78.11 Seconds
+../HTML/OUT/sat_1_014.OUT.txt:Clock Time 79.2569 Seconds
+../HTML/OUT/sat_1_015.OUT.txt:> > > > > > CPU Time 391.53 Seconds
+../HTML/OUT/sat_1_015.OUT.txt:Clock Time 394.469 Seconds
+../HTML/OUT/sat_2_001.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_2_001.OUT.txt:Clock Time 0.000231981 Seconds
+../HTML/OUT/sat_2_002.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_2_002.OUT.txt:Clock Time 0.00030899 Seconds
+../HTML/OUT/sat_2_003.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_2_003.OUT.txt:Clock Time 0.00115609 Seconds
+../HTML/OUT/sat_2_004.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_2_004.OUT.txt:Clock Time 0.00194693 Seconds
+../HTML/OUT/sat_2_005.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_2_005.OUT.txt:Clock Time 0.00499797 Seconds
+../HTML/OUT/sat_2_006.OUT.txt:> > > > > > CPU Time 0.01 Seconds
+../HTML/OUT/sat_2_006.OUT.txt:Clock Time 0.0081811 Seconds
+../HTML/OUT/sat_2_007.OUT.txt:> > > > > > CPU Time 0.01 Seconds
+../HTML/OUT/sat_2_007.OUT.txt:Clock Time 0.0209529 Seconds
+../HTML/OUT/sat_2_008.OUT.txt:> > > > > > CPU Time 0.02 Seconds
+../HTML/OUT/sat_2_008.OUT.txt:Clock Time 0.0343308 Seconds
+../HTML/OUT/sat_2_009.OUT.txt:> > > > > > CPU Time 0.07 Seconds
+../HTML/OUT/sat_2_009.OUT.txt:Clock Time 0.0839951 Seconds
+../HTML/OUT/sat_2_010.OUT.txt:> > > > > > CPU Time 0.1 Seconds
+../HTML/OUT/sat_2_010.OUT.txt:Clock Time 0.135271 Seconds
+../HTML/OUT/sat_2_011.OUT.txt:> > > > > > CPU Time 0.26 Seconds
+../HTML/OUT/sat_2_011.OUT.txt:Clock Time 0.336957 Seconds
+../HTML/OUT/sat_2_012.OUT.txt:> > > > > > CPU Time 0.42 Seconds
+../HTML/OUT/sat_2_012.OUT.txt:Clock Time 0.596915 Seconds
+../HTML/OUT/sat_2_013.OUT.txt:> > > > > > CPU Time 1.16 Seconds
+../HTML/OUT/sat_2_013.OUT.txt:Clock Time 1.59767 Seconds
+../HTML/OUT/sat_2_014.OUT.txt:> > > > > > CPU Time 2.83 Seconds
+../HTML/OUT/sat_2_014.OUT.txt:Clock Time 3.44628 Seconds
+../HTML/OUT/sat_2_015.OUT.txt:> > > > > > CPU Time 9.29 Seconds
+../HTML/OUT/sat_2_015.OUT.txt:Clock Time 10.9797 Seconds
+../HTML/OUT/sat_3_001.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_3_001.OUT.txt:Clock Time 0.000233173 Seconds
+../HTML/OUT/sat_3_002.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_3_002.OUT.txt:Clock Time 0.000316143 Seconds
+../HTML/OUT/sat_3_003.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_3_003.OUT.txt:Clock Time 0.00118303 Seconds
+../HTML/OUT/sat_3_004.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_3_004.OUT.txt:Clock Time 0.001894 Seconds
+../HTML/OUT/sat_3_005.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_3_005.OUT.txt:Clock Time 0.00494194 Seconds
+../HTML/OUT/sat_3_006.OUT.txt:> > > > > > CPU Time 0 Seconds
+../HTML/OUT/sat_3_006.OUT.txt:Clock Time 0.00805306 Seconds
+../HTML/OUT/sat_3_007.OUT.txt:> > > > > > CPU Time 0.02 Seconds
+../HTML/OUT/sat_3_007.OUT.txt:Clock Time 0.0209279 Seconds
+../HTML/OUT/sat_3_008.OUT.txt:> > > > > > CPU Time 0.02 Seconds
+../HTML/OUT/sat_3_008.OUT.txt:Clock Time 0.033406 Seconds
+../HTML/OUT/sat_3_009.OUT.txt:> > > > > > CPU Time 0.07 Seconds
+../HTML/OUT/sat_3_009.OUT.txt:Clock Time 0.0832851 Seconds
+../HTML/OUT/sat_3_010.OUT.txt:> > > > > > CPU Time 0.08 Seconds
+../HTML/OUT/sat_3_010.OUT.txt:Clock Time 0.13651 Seconds
+../HTML/OUT/sat_3_011.OUT.txt:> > > > > > CPU Time 0.21 Seconds
+../HTML/OUT/sat_3_011.OUT.txt:Clock Time 0.342153 Seconds
+../HTML/OUT/sat_3_012.OUT.txt:> > > > > > CPU Time 0.45 Seconds
+../HTML/OUT/sat_3_012.OUT.txt:Clock Time 0.597331 Seconds
+../HTML/OUT/sat_3_013.OUT.txt:> > > > > > CPU Time 1.19 Seconds
+../HTML/OUT/sat_3_013.OUT.txt:Clock Time 1.62312 Seconds
+../HTML/OUT/sat_3_014.OUT.txt:> > > > > > CPU Time 2.9 Seconds
+../HTML/OUT/sat_3_014.OUT.txt:Clock Time 3.49828 Seconds
+../HTML/OUT/sat_3_015.OUT.txt:> > > > > > CPU Time 9.36 Seconds
+../HTML/OUT/sat_3_015.OUT.txt:Clock Time 11.0122 Seconds
