@@ -82,7 +82,7 @@ do
 	5) $EDITOR ERRDIFF2/$1.errdiff;;
 	6) $EDITOR REFERR2/$1.referr ERR2/$1.err;;
 	7) ./pre.sh ;;
-	8) $EDITOR ~/bin/pre_wild.sno ;;
+	8) $EDITOR pre_wild.sno ;;
 	10) ./pre.sh; ./check_edit_all2 "2" $1;;
 	11) ./approve_out2.sh $1;;
 	12) ./rest_out2.sh $1;;
