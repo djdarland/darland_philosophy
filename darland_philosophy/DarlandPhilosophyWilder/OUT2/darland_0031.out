@@ -293,7 +293,7 @@ Ignore = @.
 --1> 
 
 *** No
-> %% Next should be FALSE
+> %% Next should be FALSE - because there is no OBJECT santa
 > 
 > 
 > understands_objects( tom, now,
@@ -481,7 +481,7 @@ Ignore = @.
 --1> 
 
 *** No
-> %% Next should be FALSE
+> %% Next should be FALSE - no OBJECT santa
 > 
 > 
 > understands_words_objects( tom, now,
@@ -559,7 +559,7 @@ Ignore = @.
 --1> 
 
 *** No
-> %% Next should be FALSE
+> %% Next should be FALSE - no OBJECT santa
 > 
 > 
 > understands_ideas_objects( tom, now,
@@ -637,7 +637,7 @@ Ignore = @.
 --1> 
 
 *** No
-> %% Next should be FALSE
+> %% Next should be FALSE - No santa
 > 
 > 
 > understands_words_ideas_objects( tom, now,

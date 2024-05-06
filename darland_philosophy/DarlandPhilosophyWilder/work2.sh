@@ -68,7 +68,7 @@ do
     echo "8 Edit snobol4 preprocessor"
     echo "10 Rerun wild_life on $1"
     echo "11 Approve New $1 Output To Reference"
-    echo "12 Restore $1 Output Reference"
+    echo "12 Clear $1 Output Reference"
     echo "14 Run wild_life interactively"
     echo "15 Edit Darland Philosophy Facts"
     echo "16 Edit Darland Philosophy Rules"
@@ -89,7 +89,7 @@ do
 	8) $EDITOR pre_wild.sno ;;
 	10) ./pre.sh; ./check_edit_all2 "2" $1;;
 	11) ./approve_out2.sh $1;;
-	12) ./rest_out2.sh $1;;
+	12) ./clear_out2.sh $1;;
 	14) wild_life;;
 	15) ../src/da_fa_lf2.sh 1;;
 	16) ../src/da_ru_lf2.sh 1;;

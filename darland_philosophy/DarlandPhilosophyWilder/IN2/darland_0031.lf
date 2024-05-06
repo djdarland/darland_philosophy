@@ -227,7 +227,7 @@ understands_objects( tom, now,
       [cicero],
       [catiline]])?
 
-%% Next should be FALSE
+%% Next should be FALSE - because there is no OBJECT santa
 
 
 understands_objects( tom, now,
@@ -367,7 +367,7 @@ understands_words_objects( tom, now,
       [cicero_word, cicero],
       [catiline_word, catiline]])?
 
-%% Next should be FALSE
+%% Next should be FALSE - no OBJECT santa
 
 
 understands_words_objects( tom, now,
@@ -425,7 +425,7 @@ understands_ideas_objects( tom, now,
       [tom_cicero_idea, cicero],
       [tom_catiline_idea, catiline]])?
 
-%% Next should be FALSE
+%% Next should be FALSE - no OBJECT santa
 
 
 understands_ideas_objects( tom, now,
@@ -483,7 +483,7 @@ understands_words_ideas_objects( tom, now,
       [cicero_word, tom_cicero_idea, cicero],
       [catiline_word, tom_catiline_idea, catiline]])?
 
-%% Next should be FALSE
+%% Next should be FALSE - No santa
 
 
 understands_words_ideas_objects( tom, now,
