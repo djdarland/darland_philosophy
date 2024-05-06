@@ -53,13 +53,17 @@ do
     if test -f REFDIFF2/$1.refdiff
     then
 	echo "3 REFDIFF2/$1.refdiff"
-	echo "4 REFOUT2/$1.refout OUT2/$1.out"
+    else
+	echo "NO OUTPUT DIFFERENCES"
     fi
+    echo "4 REFOUT2/$1.refout OUT2/$1.out"
     if test -f ERRDIFF2/$1.errdiff 
     then
 	echo "5 ERRDIFF2/$1.errdiff"
-	echo "6 REFERR2/$1.referr ERR2/$1.err"
+    else
+	echo "NO ERROR DIFFERENCES"
     fi
+    echo "6 REFERR2/$1.referr ERR2/$1.err"
     echo "7 PREPROCESS all files"
     echo "8 Edit snobol4 preprocessor"
     echo "10 Rerun wild_life on $1"
@@ -86,7 +90,7 @@ do
 	10) ./pre.sh; ./check_edit_all2 "2" $1;;
 	11) ./approve_out2.sh $1;;
 	12) ./rest_out2.sh $1;;
-	14) wilder_life;;
+	14) wild_life;;
 	15) ../src/da_fa_lf2.sh 1;;
 	16) ../src/da_ru_lf2.sh 1;;
 	17) $EDITOR ../Source/NOTES_DJD.txt;;
