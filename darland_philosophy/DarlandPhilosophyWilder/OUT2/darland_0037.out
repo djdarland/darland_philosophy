@@ -1,3 +1,5 @@
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
 
 *** Yes
 
@@ -206,11 +208,7 @@ Ignore = @.
 > 
 > %% TRUE
 > function_essentially_singular_object( tom, now, roman, catiline)?
-
-*** Yes
---1> 
-
-*** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > 
 > %% 4
@@ -222,11 +220,7 @@ Ignore = @.
 > 
 > %% TRUE
 > function_essentially_singular_word_object( tom, now, roman_word, catiline_word, catiline)?
-
-*** Yes
---1> 
-
-*** No
+> 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 > %% 6
 > %% guarantees idea & object
@@ -244,11 +238,7 @@ Ignore = @.
 > function_essentially_singular_word_idea_object( tom, now,
 |    				   roman_word, catiline_word,
 |    				   tom_catiline_idea, catiline)?
-
-*** Yes
---1> 
-
-*** No
+> 
 > write_stats(Ignore)?
 Stats Skipped for Test Suite
 

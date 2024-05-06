@@ -1,0 +1,4403 @@
+1,4402d0
+< Ported to Linux and Cygwin December 2022 after many efforts since 1995
+< By Dennis J. Darland dennis.darland@hotmail.com
+< 
+< *** Yes
+< 
+< *** Yes
+< 
+< *** Yes
+< 
+< *** Yes
+< 
+< *** Yes
+< 
+< *** Yes
+< > 
+< *** Yes
+< > 
+< > write_time(Ignore)?
+< Time Skipped for Test Suite
+< 
+< *** Yes
+< Ignore = @.
+< --1> 
+< 
+< *** No
+< > %% This file is part of darland's philosophy.
+< > 
+< > %% darland's philosophy is free software: you can redistribute it and/or modify
+< > %% it under the terms of the GNU General Public License as published by
+< > %% the Free Software Foundation, either version 3 of the License, or
+< > %% (at your option) any later version.
+< > 
+< > %% darland's philosophy is distributed in the hope that it will be useful, 
+< > %% but WITHOUT ANY WARRANTY; without even the implied warranty of
+< > %% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+< > %% GNU General Public License for more details.
+< > 
+< > %% You should have received a copy of the GNU General Public License
+< > %% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+< > %% This file only checks rules (relating to propositions). 
+< > 
+< > trace_input(true)?
+< 
+< *** Yes
+< > 
+< > %% This file uses queries to demonstrate my points about
+< > %% the non-existence of any TRUE opacity.
+< > 
+< > %% This is an example with a mini universe for queries of high complexity.
+< > 
+< > %% I use an example from Quine's Word & Object. (pp.144-151).
+< > 
+< > %% The Story of Cicero and Catiline is given
+< > %% in _Caesar and Christ_, by Will Durant, pp. 140-147.
+< > 
+< > %% "Tully" is not in the index of that work (or "De Senectute").
+< > 
+< > %% Wikipedia gives the full name as "Marcus Tullius Cicero"
+< > %% and notes "The name is infrequently anglicized as Tully."
+< > %% It also does not mention "De Senectute".
+< > 
+< > %% "De Senectute" is in Wikipedia under "Writings of Cicero"
+< > 
+< > %% Tom believes that Cicero denounced Catiline.
+< > %% Tom does not know Cicero = Tully.
+< > 
+< > %% In my philosophy, for Tom at that time,
+< > %% "Cicero" R Toms_idea_of_Cicero
+< > %% and
+< > %% Toms_idea of_Cicero S Cicero
+< > %%
+< > %%
+< > %% but not 
+< > %% "Cicero" R Toms_idea_of_Tully
+< > %% 
+< > %%
+< > %% In my program the relation R is represented by the predicate
+< > %% rrrr(Subject, Time, Type, Word, Idea)
+< > %% In my program the relation S is represented by the predicate
+< > %% ssss(Subject, Time, Type, Idea, Object)
+< > 
+< > %% R | S is represented by rrss
+< > 
+< > write_time(Ignore)?
+< Time Skipped for Test Suite
+< 
+< *** Yes
+< Ignore = @.
+< --1> 
+< 
+< *** No
+< > %% I indicate for each query whether the immediate response should be
+< > %% TRUE = Yes or FALSE = No
+< > 
+< > %% There may be subsequient No responses - as I may have asked for additional answers with semicolons.
+< > 
+< > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+< > %% 1 words
+< > %% 2 ideas
+< > %% 3 objects
+< > 
+< > %% 4 words_ideas
+< > %% 5 words_objects
+< > %% 6 ideas_objects
+< > 
+< > %% 7 words_ideas_objects
+< > 
+< > %% begin check for opaque beliefs for each case.
+< > %% Theoretically the arguments could be variables
+< > %% - to find ANY cases.
+< > %% But there are so many combinations that there is
+< > %% too little memory.
+< > 
+< > %% quines_opacity
+< > quine_opaque_believes_in_ideas(tom_dc, now,
+< |    			       [tom_denounced_idea_dc,
+< |    				tom_cicero_idea_dc,
+< |    				tom_catiline_idea_dc],
+< |    			       [tom_denounced_idea_dc,
+< |    				tom_tully_idea_dc,
+< |    				tom_catiline_idea_dc])?
+< 
+< *** Yes
+< --1> 
+< 
+< *** No
+< > 
+< > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+< > %%% TRUE OPACITY
+< > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+< > 
+< > %% Checks on TRUE OPACITY follow.
+< > 
+< > %% truly_opaque_believes_words
+< > %% could only occur if the very same goal
+< > %% succeeded and failed to succeeed.
+< > %% That is IMPOSSIBLE
+< > 
+< > %% 1 positive
+< > 
+< > test_sa_words(Subject, now, truly_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 1 negative
+< > 	
+< > test_not_sa_words(Subject, now, truly_opaque_believes)?
+< **1C** truly_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[santa_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[tully_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_denounced_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[roman_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[santa_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[tully_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_denounced_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** truly_opaque_believes not [and should not] words [[roman_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 2 positive
+< > 	
+< > test_sa_ideas(Subject, now, truly_opaque_believes)?
+< 2B@nowtruly_opaque_believes
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 2 negative	
+< > 	
+< > test_not_sa_ideas(Subject, now, truly_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 3 positive
+< > 	
+< > test_sa_objects(Subject, now, truly_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 3 negative	
+< > 	
+< > test_not_sa_objects(Subject, now, truly_opaque_believes)?
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** truly_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 4 positive
+< > 	
+< > test_sa_words_ideas(Subject, now, truly_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 4 negative	
+< > 	
+< > test_not_sa_words_ideas(Subject, now, truly_opaque_believes)?
+< **4C** truly_opaque_believes not [and should not] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[cicero_word_dc,tom_cicero_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_word_dc],[denounced_word_dc,tom_denounced_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[cicero_word_dc,tom_cicero_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_word_dc],[denounced_word_dc,tom_denounced_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** truly_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 5 positive
+< > 	
+< > test_sa_words_objects(Subject, now, truly_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 5 negative	
+< > 	
+< > test_not_sa_words_objects(Subject, now, truly_opaque_believes)?
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[santa_word_dc,santa_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[tully_word_dc,tom_tully_dc],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[denounced_word_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[santa_word_dc,santa_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[tully_word_dc,tom_tully_dc],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[denounced_word_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** truly_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 6 positive
+< > 	
+< > test_sa_ideas_objects(Subject, now, truly_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 6 negative	
+< > 	
+< > test_not_sa_ideas_objects(Subject, now, truly_opaque_believes)?
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_santa_idea_dc,santa_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,tom_cicero_dc],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_santa_idea_dc,santa_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,tom_cicero_dc],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** truly_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 7 positive
+< > 	
+< > test_sa_words_ideas_objects(Subject, now, truly_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 7 negative	
+< > 	
+< > test_not_sa_words_ideas_objects(Subject, now, truly_opaque_believes)?
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[santa_word_dc,tom_santa_idea_dc,santa_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[cicero_word_dc,tom_cicero_idea_dc,cicero_80_dc],[cicero_word_dc,tom_cicero_idea_dc,cicero_80_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,tom_cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[santa_word_dc,tom_santa_idea_dc,santa_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[cicero_word_dc,tom_cicero_idea_dc,cicero_80_dc],[cicero_word_dc,tom_cicero_idea_dc,cicero_80_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,tom_cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** truly_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+< > %%% PSEUDO OPACITY
+< > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+< > 
+< > %% Checks on PSEUDO OPACITY follow.
+< > 
+< > %% pseudo_opaque_believes_words
+< > %% could only occur if the very same goal
+< > %% was believed and disbelieved
+< > %% That is LOGICALLY possible - psychologically ??
+< > 
+< > %% 1 positive
+< > 
+< > test_sa_words(Subject, now, pseudo_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 1 negative
+< > 	
+< > test_not_sa_words(Subject, now, pseudo_opaque_believes)?
+< **1C** pseudo_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[santa_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[tully_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_denounced_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[roman_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[santa_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[tully_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[wrote_DeSenectute_word_dc],[tully_denounced_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[denounced_word_dc],[cicero_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** pseudo_opaque_believes not [and should not] words [[roman_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 2 positive
+< > 	
+< > test_sa_ideas(Subject, now, pseudo_opaque_believes)?
+< 2B@nowpseudo_opaque_believes
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 2 negative	
+< > 	
+< > test_not_sa_ideas(Subject, now, pseudo_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 3 positive
+< > 	
+< > test_sa_objects(Subject, now, pseudo_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 3 negative	
+< > 	
+< > test_not_sa_objects(Subject, now, pseudo_opaque_believes)?
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_tully_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[wrote_DeSenectute_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[santa_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[roman_rel],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[tom_cicero_dc],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc],[denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< **3C** pseudo_opaque_believes not [and should not] objects [[denounced_rel],[tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 4 positive
+< > 	
+< > test_sa_words_ideas(Subject, now, pseudo_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 4 negative	
+< > 	
+< > test_not_sa_words_ideas(Subject, now, pseudo_opaque_believes)?
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[cicero_word_dc,tom_cicero_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_word_dc],[denounced_word_dc,tom_denounced_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[cicero_word_dc,tom_cicero_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_word_dc],[denounced_word_dc,tom_denounced_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** pseudo_opaque_believes not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 5 positive
+< > 	
+< > test_sa_words_objects(Subject, now, pseudo_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 5 negative	
+< > 	
+< > test_not_sa_words_objects(Subject, now, pseudo_opaque_believes)?
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[santa_word_dc,santa_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[tully_word_dc,tom_tully_dc],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[denounced_word_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[santa_word_dc,santa_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[tully_word_dc,tom_tully_dc],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[denounced_word_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** pseudo_opaque_believes not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 6 positive
+< > 	
+< > test_sa_ideas_objects(Subject, now, pseudo_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 6 negative	
+< > 	
+< > test_not_sa_ideas_objects(Subject, now, pseudo_opaque_believes)?
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_santa_idea_dc,santa_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,tom_cicero_dc],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_santa_idea_dc,santa_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_cicero_idea_dc,tom_cicero_dc],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_denounced_idea_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** pseudo_opaque_believes not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 7 positive
+< > 	
+< > test_sa_words_ideas_objects(Subject, now, pseudo_opaque_believes)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 7 negative	
+< > 	
+< > test_not_sa_words_ideas_objects(Subject, now, pseudo_opaque_believes)?
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[santa_word_dc,tom_santa_idea_dc,santa_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[cicero_word_dc,tom_cicero_idea_dc,cicero_80_dc],[cicero_word_dc,tom_cicero_idea_dc,cicero_80_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,tom_cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[santa_word_dc,tom_santa_idea_dc,santa_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[cicero_word_dc,tom_cicero_idea_dc,cicero_80_dc],[cicero_word_dc,tom_cicero_idea_dc,cicero_80_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_word_dc,tom_cicero_dc],[denounced_word_dc,tom_denounced_idea_dc,denounced_rel]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** pseudo_opaque_believes not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_dc],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+< > %%% AGNOSTIC
+< > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+< > 
+< > %% Checks on AGNOSTIC follow.
+< > 
+< > %% acnostic occurs
+< > %% if a goal is neither believed nor disbelieved
+< > 
+< > %% 1 positive
+< > 
+< > test_sa_words(Subject, now, agnostic)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 1 negative
+< > 	
+< > test_not_sa_words(Subject, now, agnostic)?
+< **1C** agnostic not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** agnostic not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** agnostic not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** agnostic not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** agnostic not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** agnostic not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** agnostic not [and should not] words [[denounced_word_dc],[cicero_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **1C** agnostic not [and should not] words [[denounced_word_dc],[tully_word_dc],[catiline_word_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 2 positive
+< > 	
+< > test_sa_ideas(Subject, now, agnostic)?
+< 2B@nowagnostic
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 2 negative	
+< > 	
+< > test_not_sa_ideas(Subject, now, agnostic)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 3 positive
+< > 	
+< > test_sa_objects(Subject, now, agnostic)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 3 negative	
+< > 	
+< > test_not_sa_objects(Subject, now, agnostic)?
+< cfo truly 00001B
+< cfo truly 00001B
+< **3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< **3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< **3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< cfo truly 00001B
+< **3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< cfo truly 00001B
+< **3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< **3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< **3C** agnostic not [and should not] objects [[denounced_rel],[tom_tully_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< cfo truly 00001B
+< **3C** agnostic not [and should not] objects [[denounced_rel],[tom_cicero_dc],[catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< cfo truly 00001B
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 4 positive
+< > 	
+< > test_sa_words_ideas(Subject, now, agnostic)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 4 negative	
+< > 	
+< > test_not_sa_words_ideas(Subject, now, agnostic)?
+< **4C** agnostic not [and should not] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** agnostic not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** agnostic not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** agnostic not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** agnostic not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** agnostic not [and should not] words_ideas [[roman_word_dc,tom_roman_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** agnostic not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** agnostic not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[cicero_word_dc,tom_cicero_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** agnostic not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[santa_word_dc,tom_santa_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **4C** agnostic not [and should not] words_ideas [[denounced_word_dc,tom_denounced_idea_dc],[tully_word_dc,tom_tully_idea_dc],[catiline_word_dc,tom_catiline_idea_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 5 positive
+< > 	
+< > test_sa_words_objects(Subject, now, agnostic)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 5 negative	
+< > 	
+< > test_not_sa_words_objects(Subject, now, agnostic)?
+< **5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** agnostic not [and should not] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** agnostic not [and should not] words_objects [[roman_word_dc,roman_rel],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[tully_word_dc,tom_tully_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **5C** agnostic not [and should not] words_objects [[denounced_word_dc,denounced_rel],[cicero_word_dc,tom_cicero_dc],[catiline_word_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 6 positive
+< > 	
+< > test_sa_ideas_objects(Subject, now, agnostic)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 6 negative	
+< > 	
+< > test_not_sa_ideas_objects(Subject, now, agnostic)?
+< **6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** agnostic not [and should not] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_cicero_idea_dc,tom_cicero_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** agnostic not [and should not] ideas_objects [[tom_roman_idea_dc,roman_rel],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **6C** agnostic not [and should not] ideas_objects [[tom_denounced_idea_dc,denounced_rel],[tom_tully_idea_dc,tom_tully_dc],[tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 7 positive
+< > 	
+< > test_sa_words_ideas_objects(Subject, now, agnostic)?
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > %% 7 negative	
+< > 	
+< > test_not_sa_words_ideas_objects(Subject, now, agnostic)?
+< **7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** agnostic not and should not words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[cicero_word_dc,tom_cicero_idea_dc,tom_cicero_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** agnostic not and should not words_ideas_objects [[roman_word_dc,tom_roman_idea_dc,roman_rel],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< **7C** agnostic not and should not words_ideas_objects [[denounced_word_dc,tom_denounced_idea_dc,denounced_rel],[tully_word_dc,tom_tully_idea_dc,tom_tully_dc],[catiline_word_dc,tom_catiline_idea_dc,catiline_dc]]
+< *** Yes
+< Subject = tom_dc.
+< --1> ;
+< 
+< *** No
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;	
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 
+< > 
+< > write_stats(Ignore)?
+< Stats Skipped for Test Suite
+< 
+< *** Yes
+< Ignore = @.
+< --1> 
+< 
+< *** No
+< > halt?
+< 

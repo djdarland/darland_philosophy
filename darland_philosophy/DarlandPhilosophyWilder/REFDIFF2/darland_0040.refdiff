@@ -1,0 +1,199 @@
+1,2d0
+< Ported to Linux and Cygwin December 2022 after many efforts since 1995
+< By Dennis J. Darland dennis.darland@hotmail.com
+530,538c528,565
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 	
+---
+> 
+> *** Yes
+> F = human, O = russell.
+> --1> ;
+> 
+> *** Yes
+> F = human, O = quine.
+> --1> ;
+> 
+> *** Yes
+> F = human, O = cicero.
+> --1> ;
+> 
+> *** Yes
+> F = human, O = cicero.
+> --1> ;
+> 
+> *** Yes
+> F = human, O = catiline.
+> --1> ;
+> 
+> *** Yes
+> F = roman, O = cicero.
+> --1> ;
+> 
+> *** Yes
+> F = roman, O = cicero.
+> --1> ;
+> 
+> *** Yes
+> F = roman, O = catiline.
+> --1> ;
+> 
+> *** Yes
+> F = american, O = quine.
+> --1> 	
+> 
+> *** No
+551,559c578,615
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 	
+---
+> 
+> *** Yes
+> F = roman_word, O = cicero, W = cicero_word.
+> --1> ;
+> 
+> *** Yes
+> F = roman_word, O = catiline, W = catiline_word.
+> --1> ;
+> 
+> *** Yes
+> F = roman_word, O = cicero, W = tully_word.
+> --1> ;
+> 
+> *** Yes
+> F = american_word, O = quine, W = quine_word.
+> --1> ;
+> 
+> *** Yes
+> F = human_word, O = russell, W = russell_word.
+> --1> ;
+> 
+> *** Yes
+> F = human_word, O = quine, W = quine_word.
+> --1> ;
+> 
+> *** Yes
+> F = human_word, O = cicero, W = cicero_word.
+> --1> ;
+> 
+> *** Yes
+> F = human_word, O = catiline, W = catiline_word.
+> --1> ;
+> 
+> *** Yes
+> F = human_word, O = cicero, W = tully_word.
+> --1> 	
+> 
+> *** No
+567,575c623,660
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 	
+---
+> 
+> *** Yes
+> F = tom_human_idea, I = tom_russell_idea, O = russell.
+> --1> ;
+> 
+> *** Yes
+> F = tom_human_idea, I = tom_quine_idea, O = quine.
+> --1> ;
+> 
+> *** Yes
+> F = tom_human_idea, I = tom_cicero_idea, O = cicero.
+> --1> ;
+> 
+> *** Yes
+> F = tom_human_idea, I = tom_tully_idea, O = cicero.
+> --1> ;
+> 
+> *** Yes
+> F = tom_human_idea, I = tom_catiline_idea, O = catiline.
+> --1> ;
+> 
+> *** Yes
+> F = tom_roman_idea, I = tom_cicero_idea, O = cicero.
+> --1> ;
+> 
+> *** Yes
+> F = tom_roman_idea, I = tom_tully_idea, O = cicero.
+> --1> ;
+> 
+> *** Yes
+> F = tom_roman_idea, I = tom_catiline_idea, O = catiline.
+> --1> ;
+> 
+> *** Yes
+> F = tom_american_idea, I = tom_quine_idea, O = quine.
+> --1> 	
+> 
+> *** No
+584,592c669,706
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > ;
+< > 	
+---
+> 
+> *** Yes
+> F = roman_word, I = tom_cicero_idea, O = cicero, W = cicero_word.
+> --1> ;
+> 
+> *** Yes
+> F = roman_word, I = tom_catiline_idea, O = catiline, W = catiline_word.
+> --1> ;
+> 
+> *** Yes
+> F = roman_word, I = tom_tully_idea, O = cicero, W = tully_word.
+> --1> ;
+> 
+> *** Yes
+> F = american_word, I = tom_quine_idea, O = quine, W = quine_word.
+> --1> ;
+> 
+> *** Yes
+> F = human_word, I = tom_russell_idea, O = russell, W = russell_word.
+> --1> ;
+> 
+> *** Yes
+> F = human_word, I = tom_quine_idea, O = quine, W = quine_word.
+> --1> ;
+> 
+> *** Yes
+> F = human_word, I = tom_cicero_idea, O = cicero, W = cicero_word.
+> --1> ;
+> 
+> *** Yes
+> F = human_word, I = tom_catiline_idea, O = catiline, W = catiline_word.
+> --1> ;
+> 
+> *** Yes
+> F = human_word, I = tom_tully_idea, O = cicero, W = tully_word.
+> --1> 	
+> 
+> *** No

@@ -1,0 +1,50 @@
+1,2d0
+< Ported to Linux and Cygwin December 2022 after many efforts since 1995
+< By Dennis J. Darland dennis.darland@hotmail.com
+31a30,31
+> 
+> *** No
+36c36,40
+< > 
+---
+> 
+> *** Yes
+> --1> 
+> 
+> *** No
+38c42,46
+< > 	
+---
+> 
+> *** Yes
+> --1> 	
+> 
+> *** No
+40c48,52
+< > 
+---
+> 
+> *** Yes
+> --1> 
+> 
+> *** No
+41a54,55
+> 
+> *** No
+44c58,62
+< > 
+---
+> 
+> *** Yes
+> --1> 
+> 
+> *** No
+56c74,79
+< > 	
+---
+> 
+> *** Yes
+> X = @, Y = @, Z = russell.
+> --1> 	
+> 
+> *** No

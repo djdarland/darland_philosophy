@@ -1,3 +1,5 @@
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
 
 *** Yes
 
@@ -27,39 +29,19 @@ Ignore = @.
 > %% Next should be FALSE
 > 
 > qqqq6([nand, [denounced, cicero, catiline], [denounced, cicero, catiline]])?
-
-*** No
 > 
 > %% Next should be TRUE
 > 
 > qqqq6([nand, [denounced, cicero, catiline], [roman, russell]])?
-
-*** Yes
---1> 
-
-*** No
+> 
 > qqqq6([nand, [nand, [denounced, cicero, catiline], [roman, russell]], [american, russell]])?
-
-*** Yes
---1> 	
-
-*** No
-> qqqq6([nand, [nand, [denounced, cicero, catiline], [roman, russell]], [american, russell]])?
-
-*** Yes
---1> 
-
-*** No
-> qqqq6([nand, [[denounced, cicero, catiline]], [nand, [roman, russell], [american, russell]]])?
-
-*** No
 > 	
 > qqqq6([nand, [nand, [denounced, cicero, catiline], [roman, russell]], [american, russell]])?
-
-*** Yes
---1> 
-
-*** No
+> 
+> qqqq6([nand, [[denounced, cicero, catiline]], [nand, [roman, russell], [american, russell]]])?
+> 	
+> qqqq6([nand, [nand, [denounced, cicero, catiline], [roman, russell]], [american, russell]])?
+> 
 > %%%%%%%%%%%%%%%%%%%%
 > 
 > qqqq6([nand, [nand, [roman, russell], [nand, [denounced, cicero, catiline], [roman, russell]], [american, russell]]])?
@@ -71,12 +53,7 @@ Ignore = @.
 *** No
 > 
 > qqqq6([nand, [nand, [denouced, X, Y], [roman, Z]], [american, Z]])?
-
-*** Yes
-X = @, Y = @, Z = russell.
---1> 	
-
-*** No
+> 	
 > write_stats(Ignore)?
 Stats Skipped for Test Suite
 

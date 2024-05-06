@@ -1,8 +1,7 @@
-1,3d0
+1,2d0
 < Ported to Linux and Cygwin December 2022 after many efforts since 1995
-< Wilder_Life By Dennis J. Darland dennis.darland@hotmail.com
-< Wilder_Life Added for Dennis J. Darland's Philosophy April 2023
-50,53c47,50
+< By Dennis J. Darland dennis.darland@hotmail.com
+49,52c47,50
 < > %% In my program the relation R is represented by the universal
 < > %% qqqq(rrrr,Subject, Time, Type, Word, Idea)
 < > %% In my program the relation S is represented by the universal
@@ -12,77 +11,77 @@
 > > %% rrrr(Subject, Time, Type, Word, Idea)
 > > %% In my program the relation S is represented by the predicate
 > > %% ssss(Subject, Time, Type, Idea, Object)
-85d81
+84d81
 < > 
-93d88
+92d88
 < > 
-101d95
+100d95
 < > 
-109d102
+108d102
 < > 
-115d107
+114d107
 < > 
-123d114
+122d114
 < > 
-131d121
+130d121
 < > 
-139d128
+138d128
 < > 
-147d135
+146d135
 < > 
-155d142
+154d142
 < > 
-163d149
+162d149
 < > 
-172d157
+171d157
 < > 
-184d168
+183d168
 < > 
-192d175
+191d175
 < > 
-200d182
+199d182
 < > 
-210d191
+209d191
 < > 
-218d198
+217d198
 < > 
-226d205
+225d205
 < > 
-234d212
+233d212
 < > 
-242d219
+241d219
 < > 
-250d226
+249d226
 < > 
-258d233
+257d233
 < > 
-266d240
+265d240
 < > 
-275d248
+274d248
 < > 
-290d262
+289d262
 < > 
-297d268
+296d268
 < > 
-305d275
+304d275
 < > 
-313d282
+312d282
 < > 
-321d289
+320d289
 < > 
-327d294
+326d294
 < > 
-335d301
+334d301
 < > 
-343d308
+342d308
 < > 
-351d315
+350d315
 < > 
-359d322
+358d322
 < > 
-367d329
+366d329
 < > 
-375d336
+374d336
 < > 
-383d343
+382d343
 < > 

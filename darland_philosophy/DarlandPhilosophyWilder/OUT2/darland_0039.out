@@ -1,3 +1,5 @@
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
 
 *** Yes
 
@@ -387,16 +389,8 @@ W2 = intelligent_fish_class_word.
 > %% TRUE
 > 
 > function_contingently_singular_object( tom, now, F, O)?
-
-*** Yes
-F = dolphin, O = flipper.
---1> ;
-
-*** Yes
-F = dolphin, O = flipper.
---1> ;	
-
-*** No
+> ;
+> ;	
 > ;
 > ;	
 > ;
@@ -413,16 +407,8 @@ F = dolphin, O = flipper.
 > 
 > %% TRUE
 > function_contingently_singular_word_object( tom, now, F, W, O)?
-
-*** Yes
-F = dolphin_class_word, O = flipper, W = flipper_class_word.
---1> ;
-
-*** Yes
-F = dolphin_class_word, O = flipper, W = intelligent_fish_class_word.
---1> ;
-
-*** No
+> ;
+> ;
 > ;
 > ;
 > ;
@@ -434,16 +420,8 @@ F = dolphin_class_word, O = flipper, W = intelligent_fish_class_word.
 > 
 > %% TRUE
 > function_contingently_singular_idea_object( tom, now, F, I, O)?
-
-*** Yes
-F = tom_dolphin_class_idea, I = tom_flipper_class_idea, O = flipper.
---1> ;	
-
-*** Yes
-F = tom_dolphin_class_idea, I = tom_intelligent_fish_class_idea, O = flipper.
---1> ;
-
-*** No
+> ;	
+> ;
 > ;	
 > ;
 > ;	
@@ -457,24 +435,8 @@ F = tom_dolphin_class_idea, I = tom_intelligent_fish_class_idea, O = flipper.
 |         F,
 |         W,
 |         I, O)?
-
-*** Yes
-F = dolphin_class_word, 
-I = tom_flipper_class_idea, 
-O = flipper, 
-W = flipper_class_word.
-
---1> ;
-
-*** Yes
-F = dolphin_class_word, 
-I = tom_intelligent_fish_class_idea, 
-O = flipper, 
-W = intelligent_fish_class_word.
-
---1> ;
-
-*** No
+> ;
+> ;
 > ;
 > ;
 > ;

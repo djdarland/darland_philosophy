@@ -1,3 +1,5 @@
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
 
 *** Yes
 
@@ -449,10 +451,8 @@ X = catiline.
 > %% TRUE
 > function_plural_word( tom, now, human_word, human_class_word)?
 
-*** Yes
---1> 
-
 *** No
+> 
 > %% FALSE some humans are not roman
 > function_plural_word( tom, now, roman_word, human_class_word)?
 
@@ -470,10 +470,8 @@ X = catiline.
 > %% TRUE
 > function_plural_idea( tom, now, tom_human_idea, quine_human_class_idea)?
 
-*** Yes
---1> 
-
 *** No
+> 
 > %% FALSE
 > function_plural_idea( tom, now, tom_roman_idea, quine_human_class_idea)?
 
@@ -492,10 +490,8 @@ X = catiline.
 > function_plural_word_idea( tom, now, human_word, human_class_word,
 |    				 tom_human_class_idea)?
 
-*** Yes
---1> 
-
 *** No
+> 
 > %% FALSE
 > function_plural_word_idea( tom, now, roman_word, human_class_word,
 |    				 tom_roman_class_idea)?

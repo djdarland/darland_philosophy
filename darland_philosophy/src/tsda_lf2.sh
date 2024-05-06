@@ -16,8 +16,8 @@
 ##  along with darland's philosophy.  If not, see <http://www.gnu.org/licenses/>.
 
 
-cd ../DarlandPhilosophyLife
-./qqqq_pre_all.sh
+cd ../DarlandPhilosophyWilder
+./pre.sh
 ./check_edit_all2 1
 if [ $1 -eq 1 ]
 then 

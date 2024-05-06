@@ -1,12 +1,11 @@
-1,3d0
+1,2d0
 < Ported to Linux and Cygwin December 2022 after many efforts since 1995
-< Wilder_Life By Dennis J. Darland dennis.darland@hotmail.com
-< Wilder_Life Added for Dennis J. Darland's Philosophy April 2023
-14c11
+< By Dennis J. Darland dennis.darland@hotmail.com
+13c11
 < > > > > > > > > > > > > > > > > > > 
 ---
 > > > > > > > > > > > > > > > > > > > > > 
-47,52c44,47
+46,51c44,47
 < > %% For reasons I will not get into presently, I use only one predicate
 < > %% Q for instantiation of a universal. In programs it is qqqq
 < > %% In my program the relation R is represented by the universal rrrr
@@ -18,95 +17,95 @@
 > > %% rrrr(Subject, Time, Type, Word, Idea)
 > > %% In my program the relation S is represented by the predicate
 > > %% ssss(Subject, Time, Type, Idea, Object)
-98d92
+97d92
 < > 
-110d103
+109d103
 < > 
-122d114
+121d114
 < > 
-133d124
+132d124
 < > 
-143d133
+142d133
 < > 
-153d142
+152d142
 < > 
-163d151
+162d151
 < > 
-178d165
+177d165
 < > 
-190d176
+189d176
 < > 
-201d186
+200d186
 < > 
-211d195
+210d195
 < > 
-221d204
+220d204
 < > 
-231d213
+230d213
 < > 
-244d225
+243d225
 < > 
-256d236
+255d236
 < > 
-267d246
+266d246
 < > 
-277d255
+276d255
 < > 
-287d264
+286d264
 < > 
-297d273
+296d273
 < > 
-310d285
+309d285
 < > 
-322d296
+321d296
 < > 
-333d306
+332d306
 < > 
-343d315
+342d315
 < > 
-353d324
+352d324
 < > 
-363d333
+362d333
 < > 
-372d341
+371d341
 < > 
-382d350
+381d350
 < > 
-396d363
+395d363
 < > 
-408d374
+407d374
 < > 
-419d384
+418d384
 < > 
-429d393
+428d393
 < > 
-439d402
+438d402
 < > 
-449d411
+448d411
 < > 
-462d423
+461d423
 < > 
-474d434
+473d434
 < > 
-485d444
+484d444
 < > 
-495d453
+494d453
 < > 
-505d462
+504d462
 < > 
-527d483
+526d483
 < > 
-539d494
+538d494
 < > 
-550d504
+549d504
 < > 
-560d513
+559d513
 < > 
-570d522
+569d522
 < > 
-580d531
+579d531
 < > 
-589d539
+588d539
 < > 
-598d547
+597d547
 < > 
