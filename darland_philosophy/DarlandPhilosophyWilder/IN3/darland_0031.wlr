@@ -211,6 +211,17 @@ qqqq(understands_objects, tom, now,
       [catiline]])?
 
 %% Next should be FALSE - because there is no OBJECT santa
+%% NOTE 1 on names of objects, negation as failure.
+%% Actually, in using WildLIFE (or Prolog), here in doing philosophy,
+%% We are assuming sort of a "bird's eye view". Every word
+%% should stand for an object. Here there is no object santa.
+%% There can be a word for santa and an idea of santa. If there were
+%% an object santa, then ssss(tom, now, tom_santa_idea, santa).
+%% but, since there is no santa, this is not really false, but
+%% it is nonsense. As WildLIFE and Prolog use negation by failure,
+%% such cases, where I have an name in object position, when there
+%% is not such an object, it will say "No", or "False", but really is
+%% Nonsense. Really, I should just omit such examples.  
 
 qqqq(understands_objects, tom, now,
      [[denounced],
@@ -224,6 +235,7 @@ qqqq(understands_objects, tom, now,
       [catiline]])?
 
 %% Next should be FALSE -- there is no (separate) object tully
+%% See NOTE 1 above
 
 qqqq(understands_objects, tom, now,
      [[denounced],
@@ -334,6 +346,7 @@ qqqq(understands_words_objects, tom, now,
       [catiline_word, catiline]])?
 
 %% Next should be FALSE - no OBJECT santa
+%% See NOTE 1 above
 
 qqqq(understands_words_objects, tom, now,
      [[denounced_word, denounced],
@@ -354,6 +367,8 @@ qqqq(understands_words_objects, tom, now,
       [catiline_word, catiline]])?
 
 %% Next should be FALSE -- wrong type
+%%
+%% Also See NOTE 1 above
 
 qqqq(understands_words_objects, tom, now,
      [[tully_word, tully],
@@ -385,6 +400,7 @@ qqqq(understands_ideas_objects, tom, now,
       [tom_catiline_idea, catiline]])?
 
 %% Next should be FALSE - no OBJECT santa
+%% See NOTE 1 above
 
 qqqq(understands_ideas_objects, tom, now,
      [[tom_denounced_idea, denounced],
@@ -436,6 +452,7 @@ qqqq(understands_words_ideas_objects, tom, now,
       [catiline_word, tom_catiline_idea, catiline]])?
 
 %% Next should be FALSE - No santa
+%% See NOTE 1 above
 
 qqqq(understands_words_ideas_objects, tom, now,
      [[denounced_word, tom_denounced_idea, denounced],

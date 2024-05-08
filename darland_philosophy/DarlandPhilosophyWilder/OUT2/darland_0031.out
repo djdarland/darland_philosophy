@@ -294,6 +294,17 @@ Ignore = @.
 
 *** No
 > %% Next should be FALSE - because there is no OBJECT santa
+> %% NOTE 1 on names of objects, negation as failure.
+> %% Actually, in using WildLIFE (or Prolog), here in doing philosophy,
+> %% We are assuming sort of a "bird's eye view". Every word
+> %% should stand for an object. Here there is no object santa.
+> %% There can be a word for santa and an idea of santa. If there were
+> %% an object santa, then ssss(tom, now, tom_santa_idea, santa).
+> %% but, since there is no santa, this is not really false, but
+> %% it is nonsense. As WildLIFE and Prolog use negation by failure,
+> %% such cases, where I have an name in object position, when there
+> %% is not such an object, it will say "No", or "False", but really is
+> %% Nonsense. Really, I should just omit such examples.  
 > 
 > 
 > understands_objects( tom, now,
@@ -315,6 +326,7 @@ Ignore = @.
 
 *** No
 > %% Next should be FALSE -- there is no (separate) object tully
+> %% See NOTE 1 above
 > 
 > 
 > understands_objects( tom, now,
@@ -482,6 +494,7 @@ Ignore = @.
 
 *** No
 > %% Next should be FALSE - no OBJECT santa
+> %% See NOTE 1 above
 > 
 > 
 > understands_words_objects( tom, now,
@@ -515,6 +528,8 @@ Ignore = @.
 
 *** No
 > %% Next should be FALSE -- wrong type
+> %%
+> %% Also See NOTE 1 above
 > 
 > 
 > understands_words_objects( tom, now,
@@ -560,6 +575,7 @@ Ignore = @.
 
 *** No
 > %% Next should be FALSE - no OBJECT santa
+> %% See NOTE 1 above
 > 
 > 
 > understands_ideas_objects( tom, now,
@@ -638,6 +654,7 @@ Ignore = @.
 
 *** No
 > %% Next should be FALSE - No santa
+> %% See NOTE 1 above
 > 
 > 
 > understands_words_ideas_objects( tom, now,
