@@ -51,12 +51,21 @@
 
 %% First some "metaphysics"
 
+%% Realism is true if there an universal that applies to an object
+%% but no person has an idea of that object.
+%%
+
 qqqq(realism, Object) :-
     pos_qq([Universal, Object]),
-    \+ qqqq(ssss, Subject, Universal, Object).
+    \+ qqqq(ssss, Subject, Time, Idea, Object).
+
+%% Idealism is true if Realism is false.
 
 qqqq(idealism, Object) :-
     \+ qqqq(realism, Object).
+
+%% There is a private language if there is an idea of an object,
+%% but no word for that idea.
 
 qqqq(there_is_private_language, Idea) :-
     qqqq(ssss, Subject, Time, Idea, Object),
@@ -69,12 +78,17 @@ qqqq(there_is_private_language, Idea) :-
 
 %% 0
 %% In reality
+%% pos_qq is "positive qqqq"
+%% neq_qq is "negative qqqq"
+%% - needed to avoid negation by failure
 
 qqqq(member_reality, Universal, Object) :-
 	pos_qq([Universal, Object]).
 		  
 %% 5
 %% guarantees word & object
+%% "plural word" is word for a in idea that has tttt relation
+%% to possibly multiple objects.
 
 qqqq(member_plural_word_object,Subject, Time, Word, Object) :-
 	qqqq(rrrr,Subject, Time, Word, Idea),
@@ -83,6 +97,7 @@ qqqq(member_plural_word_object,Subject, Time, Word, Object) :-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
+%% idea applying to multiple objects
 
 qqqq(member_plural_idea_object, Subject, Time, Idea, Object) :-
 	% List of Word Object Pairs.

@@ -262,6 +262,7 @@ Ignore = @.
 
 *** No
 > %% Next should be FALSE -- there is no (separate) object tully
+> %% ALSO see NOTE 1 in example 0031
 > 
 > 
 > believes_objects( tom, now,
@@ -272,6 +273,7 @@ Ignore = @.
 *** No
 > 
 > %% Next should be FALSE -- wrong type
+> %% ALSO see NOTE 1 in example 0031
 > 
 > 
 > believes_objects( tom, now,
@@ -282,6 +284,7 @@ Ignore = @.
 *** No
 > 
 > %% Next should be FALSE -- wrong type
+> %% ALSO see NOTE 1 in example 0031
 > 
 > 
 > believes_objects( tom, now,
@@ -424,6 +427,7 @@ Ignore = @.
 *** No
 > 
 > %% Next should be FALSE -- wrong type
+> %% ALSO see NOTE 1 in example 0031
 > 
 > 
 > believes_words_objects( tom, now,
@@ -434,6 +438,7 @@ Ignore = @.
 *** No
 > 
 > %% Next should be FALSE -- wrong type
+> %% ALSO see NOTE 1 in example 0031
 > 
 > 
 > believes_words_objects( tom, now,
@@ -490,6 +495,7 @@ Ignore = @.
 *** No
 > 
 > %% Next should be FALSE -- wrong type
+> %% ALSO see NOTE 1 in example 0031
 > 
 > 
 > believes_ideas_objects( tom, now,
@@ -500,6 +506,7 @@ Ignore = @.
 *** No
 > 
 > %% Next should be FALSE -- wrong type
+> %% ALSO see NOTE 1 in example 0031
 > 
 > 
 > believes_ideas_objects( tom, now,

@@ -1,4 +1,4 @@
-1,1039d0
+1,1045d0
 < Ported to Linux and Cygwin December 2022 after many efforts since 1995
 < By Dennis J. Darland dennis.darland@hotmail.com
 < 
@@ -45,6 +45,12 @@
 < > %% ideas_objects
 < > 
 < > %% words_ideas_objects
+< > 
+< > %% This example illustrates talk about "classes" ("plural" talk).
+< > %% Really there are no classes - only talk about them.
+< > %% I am only committed to universals.
+< > %% Talk about "classes" is reduced to talk about universals
+< > %% and what they apply to.
 < > 
 < > %% First membership
 < > 
@@ -111,23 +117,23 @@
 < > realism( Object)?
 < 
 < *** Yes
-< Object = cicero.
-< --1> ;
-< 
-< *** Yes
-< Object = catiline.
-< --1> ;
-< 
-< *** Yes
 < Object = tom.
 < --1> ;
 < 
 < *** Yes
-< Object = quine.
+< Object = flipper.
+< --1> ;
+< 
+< *** Yes
+< Object = sam.
 < --1> ;
 < 
 < *** Yes
 < Object = flipper.
+< --1> ;
+< 
+< *** Yes
+< Object = lassie.
 < --1> 
 < 
 < *** No

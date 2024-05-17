@@ -1,5 +1,5 @@
 
-%% Copyright (C) 2017, 2019, 2021, 2023 Dennis J. Darland
+%% Copyright (C) 2017, 2019, 2021, 2023, 2024 Dennis J. Darland
 load("RULES2/life_0001.lf")?
 load("FACTS2/facts_0031.lf")?
 load("RULES2/rules_0031.lf")?
@@ -222,6 +222,7 @@ believes_objects( tom, now,
       [catiline]])?
 
 %% Next should be FALSE -- there is no (separate) object tully
+%% ALSO see NOTE 1 in example 0031
 
 
 believes_objects( tom, now,
@@ -230,6 +231,7 @@ believes_objects( tom, now,
       [catiline]])?
 
 %% Next should be FALSE -- wrong type
+%% ALSO see NOTE 1 in example 0031
 
 
 believes_objects( tom, now,
@@ -238,6 +240,7 @@ believes_objects( tom, now,
       [catiline]])?
 
 %% Next should be FALSE -- wrong type
+%% ALSO see NOTE 1 in example 0031
 
 
 believes_objects( tom, now,
@@ -346,6 +349,7 @@ believes_words_objects( tom, now,
       [catiline_word, catiline]])?
 
 %% Next should be FALSE -- wrong type
+%% ALSO see NOTE 1 in example 0031
 
 
 believes_words_objects( tom, now,
@@ -354,6 +358,7 @@ believes_words_objects( tom, now,
       [catiline_word, catiline]])?
 
 %% Next should be FALSE -- wrong type
+%% ALSO see NOTE 1 in example 0031
 
 
 believes_words_objects( tom, now,
@@ -396,6 +401,7 @@ believes_ideas_objects( tom, now,
       [tom_catiline_idea, catiline]])?
 
 %% Next should be FALSE -- wrong type
+%% ALSO see NOTE 1 in example 0031
 
 
 believes_ideas_objects( tom, now,
@@ -404,6 +410,7 @@ believes_ideas_objects( tom, now,
       [tom_catiline_idea, catiline]])?
 
 %% Next should be FALSE -- wrong type
+%% ALSO see NOTE 1 in example 0031
 
 
 believes_ideas_objects( tom, now,

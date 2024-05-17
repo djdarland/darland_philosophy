@@ -1,4 +1,4 @@
-%% Copyright (C) 2017, 2019, 2021, 2023 Dennis J. Darland
+%% Copyright (C) 2017, 2019, 2021, 2023, 2024 Dennis J. Darland
 
 load("RULES2/life_0001.lf")?
 % load("FACTS2/facts_0031.lf")?
@@ -51,6 +51,12 @@ write_time(Ignore)?
 %% ideas_objects
 
 %% words_ideas_objects
+
+%% This example illustrates talk about "classes" ("plural" talk).
+%% Really there are no classes - only talk about them.
+%% I am only committed to universals.
+%% Talk about "classes" is reduced to talk about universals
+%% and what they apply to.
 
 %% First membership
 

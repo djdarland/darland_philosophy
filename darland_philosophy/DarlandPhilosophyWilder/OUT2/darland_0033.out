@@ -45,6 +45,12 @@ Ignore = @.
 > 
 > %% words_ideas_objects
 > 
+> %% This example illustrates talk about "classes" ("plural" talk).
+> %% Really there are no classes - only talk about them.
+> %% I am only committed to universals.
+> %% Talk about "classes" is reduced to talk about universals
+> %% and what they apply to.
+> 
 > %% First membership
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -110,23 +116,23 @@ Object = flipper, Universal = dolphin.
 > realism( Object)?
 
 *** Yes
-Object = cicero.
---1> ;
-
-*** Yes
-Object = catiline.
---1> ;
-
-*** Yes
 Object = tom.
 --1> ;
 
 *** Yes
-Object = quine.
+Object = flipper.
+--1> ;
+
+*** Yes
+Object = sam.
 --1> ;
 
 *** Yes
 Object = flipper.
+--1> ;
+
+*** Yes
+Object = lassie.
 --1> 
 
 *** No

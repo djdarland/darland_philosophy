@@ -1,0 +1,394 @@
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+%% 
+%%
+
+%% We need to define existence, equality, and functions of singular terms
+%% (essentially or contingently singular)
+%% 
+%% There are 7 relations of both each
+
+%% The 7 cases are:
+
+%% 1 words
+%% 2 ideas
+%% 3 objects
+
+%% 4 words_ideas
+%% 5 words_objects
+%% 6 ideas_objects
+
+%% 7 words_ideas_objects
+
+%% Modified to add Number to ideas
+%%	- singular
+%%      - or plural
+
+%% 
+%% 1
+%% only guarantees word & idea exist
+
+exists_singular_word(Subject, Time, Word) :-
+	exists_essentially_singular_word(Subject, Time, Word).
+
+exists_singular_word(Subject, Time, Word) :-
+	exists_contingently_singular_word(Subject, Time, Word).
+
+%% 2
+%% only quarantees singular idea exists 
+
+exists_singular_idea(Subject, Time, Idea) :-
+	exists_essentially_singular_idea(Subject, Time, Idea).
+
+exists_singular_idea(Subject, Time, Idea) :-
+	exists_contingently_singular_idea(Subject, Time, Idea).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+%% Guarantees Object with Idea exists
+
+exists_singular_object(Subject, Time, Object) :-
+	exists_essentially_singular_object(Subject, Time, Object).
+
+exists_singular_object(Subject, Time, Object) :-
+	exists_contingently_singular_object(Subject, Time, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+%% guarantees word and idea
+
+exists_singular_word_idea(Subject, Time, Word, Idea) :-
+	exists_essentially_singular_word_idea(Subject, Time, Word, Idea).
+
+exists_singular_word_idea(Subject, Time, Word, Idea) :-
+	exists_contimngently_singular_word_idea(Subject, Time, Word, Idea).
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 5
+%% guarantees word & object
+
+exists_singular_word_object(Subject, Time, Word, Object) :-
+	exists_essentially_singular_word_object(Subject, Time, Word, Object).
+
+exists_singular_word_object(Subject, Time, Word, Object) :-
+	exists_contingently_singular_word_object(Subject, Time, Word, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea & object
+
+exists_singular_idea_object( Subject, Time, Idea, Object) :-
+	exists_essentially_singular_idea_object( Subject, Time, Idea, Object).
+
+exists_singular_idea_object( Subject, Time, Idea, Object) :-
+	exists_contingently_singular_idea_object( Subject, Time, Idea, Object).
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% 
+exists_singular_word_idea_object(Subject, Time, Word, Idea, Object) :-
+	exists_essentially_singular_word_idea_object(Subject, Time, Word, Idea, Object) .
+
+exists_singular_word_idea_object(Subject, Time, Word, Idea, Object) :-
+	exists_contingently_singular_word_idea_object(Subject, Time, Word, Idea, Object).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now equality -- only applies with object specified
+%% 1
+%% NA
+
+%% 2
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+%% Guarantees Object with Idea exists
+
+equal_singular_singular_objects(Subject, Time, Object1, Object2) :-
+	ssss2(Subject, Time, Idea1, Object1),
+	ssss2(Subject, Time, Idea2, Object2),
+	number_idea(Idea1, singular),
+	number_idea(Idea2, singular),
+	Object1 :== Object2.
+
+equal_singular_contingent_objects(Subject, Time, Object1, Object2) :-
+	ssss2(Subject, Time, Idea1, Object1),
+	tttt2(Subject, Time, Idea2, Object2),
+	number_idea(Idea1, singular),
+	number_idea(Idea2, plural),
+	Object1 :== Object2.
+
+equal_contingent_singular_objects(Subject, Time, Object1, Object2) :-
+	tttt2(Subject, Time, Idea1, Object1),
+	ssss2(Subject, Time, Idea2, Object2),
+	number_idea(Idea1, plural),
+	number_idea(Idea2, singular),
+	Object1 :== Object2.
+
+equal_contingent_contingent_objects(Subject, Time, Object1, Object2) :-
+	tttt2(Subject, Time, Idea1, Object1),
+	tttt2(Subject, Time, Idea2, Object2),
+	number_idea(Idea1, plural),
+	number_idea(Idea2, plural),
+	Object1 :== Object2.
+
+equal_singular_objects(Subject, Time, Object1, Object2) :-
+	equal_singular_singular_objects(Subject, Time, Object1, Object2).
+
+equal_singular_objects(Subject, Time, Object1, Object2) :-
+	equal_singular_contingent_objects(Subject, Time, Object1, Object2).
+
+equal_singular_objects(Subject, Time, Object1, Object2) :-
+	equal_contingent_singular_objects(Subject, Time, Object1, Object2).
+
+equal_singular_objects(Subject, Time, Object1, Object2) :-
+	equal_contingent_contingent_objects(Subject, Time, Object1, Object2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+%% NA
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 5
+%% guarantees word & object
+
+equal_singular_singular_words_objects(Subject, Time, Word1, Word2, Object1, Object2) :-
+	rrrr(Subject, Time, Word1, Idea1),
+	rrrr(Subject, Time, Word2, Idea2),
+	number_idea(Idea1, singular),
+	number_idea(Idea2, singular),
+	ssss2(Subject, Time, Idea1, Object1),
+	ssss2(Subject, Time, Idea2, Object2),
+	Object1 :== Object2.
+
+equal_singular_contingent_words_objects(Subject, Time, Word1, Word2, Object1, Object2) :-
+	rrrr(Subject, Time, Word1, Idea1),
+	rrrr(Subject, Time, Word2, Idea2),
+	number_idea(Idea1, singular),
+	number_idea(Idea2, plural),
+	ssss2(Subject, Time, Idea1, Object1),
+	tttt2(Subject, Time, Idea2, Object2),
+	Object1 :== Object2.
+equal_contingent_singular_words_objects(Subject, Time, Word1, Word2, Object1, Object2) :-
+	rrrr(Subject, Time, Word1, Idea1),
+	rrrr(Subject, Time, Word2, Idea2),
+	number_idea(Idea1, plural),
+	number_idea(Idea2, singular),
+	tttt2(Subject, Time, Idea1, Object1),
+	ssss2(Subject, Time, Idea2, Object2),
+	Object1 :== Object2.
+equal_contingent_contingent_words_objects(Subject, Time, Word1, Word2, Object1, Object2) :-
+	rrrr(Subject, Time, Word1, Idea1),
+	rrrr(Subject, Time, Word2, Idea2),
+	number_idea(Idea1, plural),
+	number_idea(Idea2, plural),
+	tttt2(Subject, Time, Idea1, Object1),
+	tttt2(Subject, Time, Idea2, Object2),
+	Object1 :== Object2.
+equal_singular_words_objects(Subject, Time, Word1, Word2, Object1, Object2) :-
+	equal_singular_singular_words_objects(Subject, Time, Word1, Word2, Object1, Object2).
+
+equal_singular_words_objects(Subject, Time, Word1, Word2, Object1, Object2) :-
+	equal_singular_contingent_words_objects(Subject, Time, Word1, Word2, Object1, Object2).
+
+equal_singular_words_objects(Subject, Time, Word1, Word2, Object1, Object2) :-
+	equal_contingent_singular_words_objects(Subject, Time, Word1, Word2, Object1, Object2).
+
+equal_singular_words_objects(Subject, Time, Word1, Word2, Object1, Object2) :-
+	equal_contingent_contingent_words_objects(Subject, Time, Word1, Word2, Object1, Object2).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea & object
+
+equal_singular_singular_ideas_objects( Subject, Time, Idea1, Idea2, Object1, Object2) :-
+	% List of Word Object Pairs.
+	ssss2(Subject, Time, Idea1, Object1),
+	ssss2(Subject, Time, Idea2, Object2),
+	number_idea(Idea1, singular),
+	number_idea(Idea2, singular),
+	Object1 :== Object2.
+	
+equal_singular_contingent_ideas_objects( Subject, Time, Idea1, Idea2, Object1, Object2) :-
+	% List of Word Object Pairs.
+	ssss2(Subject, Time, Idea1, Object1),
+	tttt2(Subject, Time, Idea2, Object2),
+	number_idea(Idea1, singular),
+	number_idea(Idea2, plural),
+	Object1 :== Object2.
+	
+equal_contingent_singular_ideas_objects( Subject, Time, Idea1, Idea2, Object1, Object2) :-
+	% List of Word Object Pairs.
+	tttt2(Subject, Time, Idea1, Object1),
+	ssss2(Subject, Time, Idea2, Object2),
+	number_idea(Idea1, plural),
+	number_idea(Idea2, singular),
+	Object1 :== Object2.
+	
+equal_contingent_contingent_ideas_objects( Subject, Time, Idea1, Idea2, Object1, Object2) :-
+	% List of Word Object Pairs.
+	tttt2(Subject, Time, Idea1, Object2),
+	tttt2(Subject, Time, Idea2, Object2),
+	number_idea(Idea1, singular),
+	number_idea(Idea2, singular),
+	Object1 :== Object2.
+	
+equal_singular_ideas_objects(Subject, Time, Idea1, Idea2, Object1, Object2) :-
+	equal_singular_singular_ideas_objects(Subject, Time, Idea1, Idea2, Object1, Object2).
+
+equal_singular_ideas_objects(Subject, Time, Idea1, Idea2, Object1, Object2) :-
+	equal_singular_contingent_ideas_objects(Subject, Time, Idea1, Idea2, Object1, Object2).
+
+equal_singular_ideas_objects(Subject, Time, Idea1, Idea2, Object1, Object2) :-
+	equal_contingent_singular_ideas_objects(Subject, Time, Idea1, Idea2, Object1, Object2).
+
+equal_singular_ideas_objects(Subject, Time, Idea1, Idea2, Object1, Object2) :-
+	equal_contingent_contingent_ideas_objects(Subject, Time, Idea1, Idea2, Object1, Object2).
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% 
+equal_singular_singular_words_ideas_objects(Subject, Time, Word1, Word2,
+				   Idea1, Idea2,
+				   Object1, Object2) :-
+	% List of Word Idea_Object Triples.
+	rrrr(Subject, Time, Word1, Idea1),
+	rrrr(Subject, Time, Word2, Idea2),
+	number_idea(Idea1, singular),
+	number_idea(Idea2, singular),
+	ssss2(Subject, Time, Idea1, Object1),
+	ssss2(Subject, Time, Idea2, Object2),
+	Object1 :== Object2.
+
+equal_singular_contingent_words_ideas_objects(Subject, Time, Word1, Word2,
+				   Idea1, Idea2,
+				   Object1, Object2) :-
+	% List of Word Idea_Object Triples.
+	rrrr(Subject, Time, Word1, Idea1),
+	rrrr(Subject, Time, Word2, Idea2),
+	number_idea(Idea1, singular),
+	number_idea(Idea2, plural),
+	ssss2(Subject, Time, Idea1, Object1),
+	tttt2(Subject, Time, Idea2, Object2),
+	Object1 :== Object2.
+
+equal_contingent_singular_words_ideas_objects(Subject, Time, Word1, Word2,
+				   Idea1, Idea2,
+				   Object1, Object2) :-
+	% List of Word Idea_Object Triples.
+	rrrr(Subject, Time, Word1, Idea1),
+	rrrr(Subject, Time, Word2, Idea2),
+	number_idea(Idea1, plural),
+	number_idea(Idea2, singular),
+	tttt2(Subject, Time, Idea1, Object1),
+	ssss2(Subject, Time, Idea2, Object2),
+	Object1 :== Object2.
+
+equal_contingent_contingent_words_ideas_objects(Subject, Time, Word1, Word2,
+				   Idea1, Idea2,
+				   Object1, Object2) :-
+	% List of Word Idea_Object Triples.
+	rrrr(Subject, Time, Word1, Idea1),
+	rrrr(Subject, Time, Word2, Idea2),
+	number_idea(Idea1, plural),
+	number_idea(Idea2, plural),
+	tttt2(Subject, Time, Idea1, Object1),
+	tttt2(Subject, Time, Idea2, Object2),
+	Object1 :== Object2.
+
+equal_singular_words_ideas_objects(Subject, Time, Word1, Word2,
+				   Idea1, Idea2,Object1, Object2) :-
+	equal_singular_singular_words_ideas_objects(Subject, Time, Word1, Word2,
+				   Idea1, Idea2,Object1, Object2).
+
+equal_singular_words_ideas_objects(Subject, Time, Word1, Word2,
+				   Idea1, Idea2,Object1, Object2) :-
+	equal_singular_contingent_wotrds_ideas_objects(Subject, Time, Word1, Word2,
+				   Idea1, Idea2,Object1, Object2).
+
+equal_singular_words_ideas_objects(Subject, Time, Word1, Word2,
+				   Idea1, Idea2,Object1, Object2) :-
+	equal_contingent_singular_words_ideas_objects(Subject, Time, Word1, Word2,
+				   Idea1, Idea2,Object1, Object2).
+
+equal_singular_words_ideas_objects(Subject, Time, Object1, Object2) :-
+	equal_contingent_contingent_words_ideas_objects(Subject, Time, Word1, Word2,
+				   Idea1, Idea2,Object1, Object2).
+
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% now functions -- only applies with object specified
+%% 1
+%% NA
+
+%% 2
+%% NA
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%% 3
+%% Guarantees Object exists
+
+function_singular_object(Subject, Time, Function, Object) :-
+	function_essentially_singular_object(Subject, Time, Function, Object).
+
+function_singular_object(Subject, Time, Function, Object) :-
+	function_contingently_singular_object(Subject, Time, Function, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% 4
+%% NA
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 5
+%% guarantees word & object
+
+function_singular_word_object(Subject, Time, Function_Word, Word, Object) :-
+	function_essentially_singular_word_object(Subject, Time, Function_Word, Word, Object).
+
+function_singular_word_object(Subject, Time, Function_Word, Word, Object) :-
+	function_contingently_singular_word_object(Subject, Time, Function_Word, Word, Object).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 6
+%% guarantees idea & object
+
+function_singular_idea_object( Subject, Time, Function_Idea, Idea, Object) :-
+	function_essentially_singular_idea_object( Subject, Time, Function_Idea, Idea, Object).
+
+function_singular_idea_object( Subject, Time, Function_Idea, Idea, Object) :-
+	function_contingently_singular_idea_object( Subject, Time, Function_Idea, Idea, Object).
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 7
+%% 
+function_singular_word_idea_object(Subject, Time,
+				   Function_Word, Word, Idea, Object) :-
+	function_essentially_singular_word_idea_object(Subject, Time,
+						       Function_Word, Word, Idea, Object).
+function_singular_word_idea_object(Subject, Time,
+				   Function_Word, Word, Idea, Object) :-
+	function_contingently_singular_word_idea_object(Subject, Time,
+							Function_Word, Word, Idea, Object).
