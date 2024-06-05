@@ -63,8 +63,8 @@
 %% uniqueness is essential to essentially singular ideas
 %% So it is required even for understanding or belief if ssss is used
 
-believes_means(Subject, Time, uuuu, Word, Object) :-
-	rrss(Subject, Time, Word, Object).
+qqqq(believes_means, Subject, Time, uuuu, Word, Object) :-
+	qqqq(rrss, Subject, Time, Word, Object).
 
-believes_means(Subject, Time, vvvv, Word, Object) :-
-	rrtt(Subject, Time, Word, Object).
+qqqq(believes_means, Subject, Time, vvvv, Word, Object) :-
+	qqqq(rrtt, Subject, Time, Word, Object).
