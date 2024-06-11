@@ -76,40 +76,40 @@
 
 %% 1
 
-conceptual_feeling_words(Subject, Subjective_aim, Time,
+qqqq(conceptual_feeling_words, Subject, Subjective_aim, Time,
 			 [[Relation_Word] | List]) :-
 	Subjective_aim :== believes,
 	%% list of words
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_word(Subject, Subjective_aim, Time, List,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_word, Subject, Subjective_aim, Time, List,
 		      Arity, Type - 1, [Relation_Idea]).
 
-match_sa_word(Subject, Subjective_aim, Time, [], 0, Type,
+qqqq(match_sa_word, Subject, Subjective_aim, Time, [], 0, Type,
 	      Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_word(Subject, Subjective_aim, Time,
+qqqq(match_sa_word, Subject, Subjective_aim, Time,
 	      [], -999, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_word(Subject, Subjective_aim, Time,
+qqqq(match_sa_word, Subject, Subjective_aim, Time,
 	      [[Word] | List],
 	      Arity, Type, Idea_List) :-
 	% List of Word Idea Pair.
-	rrrr(Subject, Time, Word, Idea),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_word(Subject, Subjective_aim, Time,
+	qqqq(match_sa_word, Subject, Subjective_aim, Time,
 		      List,
 		      % if Arity is not Arbitrary sub 1
-		      cond(Arity =\= -999, Arity - 1,
+		      qqqq(cond, Arity =\= -999, Arity - 1,
 			   -999),
 		      Type, Idea_List_Out).
 
@@ -123,71 +123,71 @@ match_sa_word(Subject, Subjective_aim, Time,
 
 %% 3
 
-conceptual_feeling_objects(Subject, Subjective_aim, Time, [[Relation] | List]) :-
+qqqq(conceptual_feeling_objects, Subject, Subjective_aim, Time, [[Relation] | List]) :-
 	Subjective_aim :== believes,
 	%% list of idea object Pairs
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_object(Subject, Subjective_aim,
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_object, Subject, Subjective_aim,
 			Time, List,
 			Arity, Type - 1, [Relation_Idea]).
 
-conceptual_feeling_objects(Subject,
+qqqq(conceptual_feeling_objects, Subject,
 			   Subjective_aim, Time,
 			   [[Relation] | List]) :-
 	%% list of idea object Pairs
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_object(Subject,
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_object, Subject,
 			Subjective_aim, Time, List,
 			Arity, Type - 1, [Relation_Idea]).
 
-match_sa_object(Subject, Subjective_aim,
+qqqq(match_sa_object, Subject, Subjective_aim,
 		Time, [], 0, Type, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_object(Subject, Subjective_aim,
+qqqq(match_sa_object, Subject, Subjective_aim,
 		Time, [], -999, Type, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_object(Subject, Subjective_aim, Time,
+qqqq(match_sa_object, Subject, Subjective_aim, Time,
 		[[Object] | List],
 		Arity, Type, Idea_List) :-
 	% List of Objects.
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_object(Subject,
+	qqqq(match_sa_object, Subject,
 			Subjective_aim, Time,
 			List,
 			% if Arity is not Arbitrary sub 1
-			cond(Arity =\= -999, Arity - 1,
+			qqqq(cond, Arity =\= -999, Arity - 1,
 			     -999),
 			Type, Idea_List_Out).
 
-match_sa_object(Subject, Subjective_aim, Time,
+qqqq(match_sa_object, Subject, Subjective_aim, Time,
 		[[Object] | List],
 		Arity, Type, Idea_List) :-
 	% List of Objects.
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_object(Subject,
+	qqqq(match_sa_object, Subject,
 			Subjective_aim, Time,
 			List,
 			% if Arity is not Arbitrary sub 1
-			cond(Arity =\= -999, Arity - 1,
+			qqqq(cond, Arity =\= -999, Arity - 1,
 			     -999),
 			Type, Idea_List_Out).
 
@@ -195,7 +195,7 @@ match_sa_object(Subject, Subjective_aim, Time,
 
 %% 4
 
-conceptual_feeling_words_ideas(Subject,
+qqqq(conceptual_feeling_words_ideas, Subject,
 			       Subjective_aim,
 			       Time,
 			       [[Relation_Word,
@@ -203,59 +203,59 @@ conceptual_feeling_words_ideas(Subject,
 				PairList]) :-
 	Subjective_aim :== believes,
 	%% list of word, idea pairs
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_word_idea(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_word_idea, Subject,
 			   Subjective_aim, Time, PairList,
 			   Arity, Type - 1,
 			   [Relation_Idea]).
 
-conceptual_feeling_words_ideas(Subject,
+qqqq(conceptual_feeling_words_ideas, Subject,
 			       Subjective_aim,
 			       Time,
 			       [[Relation_Word,
 				 Relation_Idea] |
 				PairList]) :-
 	%% list of word, idea pairs
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_word_idea(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_word_idea, Subject,
 			   Subjective_aim, Time, PairList,
 			   Arity, Type - 1, [Relation_Idea]).
 
-match_sa_word_idea(Subject,
+qqqq(match_sa_word_idea, Subject,
 		   Subjective_aim,
 		   Time, [], 0, Type, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_word_idea(Subject,
+qqqq(match_sa_word_idea, Subject,
 		   Subjective_aim,
 		   Time, [], -999, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_word_idea(Subject, Subjective_aim, Time,
+qqqq(match_sa_word_idea, Subject, Subjective_aim, Time,
 		   [[Word, Idea] | PairList],
 		   Arity, Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_word_idea(Subject,
+	qqqq(match_sa_word_idea, Subject,
 			   Subjective_aim, Time,
 			   PairList,
 			   % if Arity is not Arbitrary sub 1
-			   cond(Arity =\= -999, Arity - 1,
+			   qqqq(cond, Arity =\= -999, Arity - 1,
 				-999),
 			   Type, Idea_List_Out).
 
@@ -263,81 +263,81 @@ match_sa_word_idea(Subject, Subjective_aim, Time,
 
 %% 5
 
-conceptual_feeling_words_objects(Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
+qqqq(conceptual_feeling_words_objects, Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
 	Subjective_aim :== believes,
 	%% list of word, idea object pairs
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_word_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_word_object, Subject,
 			     Subjective_aim,
 			     Time, Pair_List,
 			     Arity, Type - 1,
 			     [Relation_Idea]).
 
-conceptual_feeling_words_objects(Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
+qqqq(conceptual_feeling_words_objects, Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
 	%% list of word, idea object pairs
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_word_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_word_object, Subject,
 			     Subjective_aim,
 			     Time, Pair_List,
 			     Arity, Type - 1,
 			     [Relation_Idea]).
 
-match_sa_word_object(Subject,
+qqqq(match_sa_word_object, Subject,
 		     Subjective_aim,
 		     Time, [], 0, Type, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_word_object(Subject,
+qqqq(match_sa_word_object, Subject,
 		     Subjective_aim,
 		     Time, [], -999, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_word_object(Subject,
+qqqq(match_sa_word_object, Subject,
 		     Subjective_aim,
 		     Time,
 		     [[Word, Object] | Pair_List],
 		     Arity, Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_word_object(Subject,
+	qqqq(match_sa_word_object, Subject,
 			     Subjective_aim, Time,
 			     Pair_List,
 			     % if Arity is not Arbitrary sub 1
-			     cond(Arity =\= -999, Arity - 1,
+			     qqqq(cond, Arity =\= -999, Arity - 1,
 				  -999),
 			     Type, Idea_List_Out).
 
-match_sa_word_object(Subject, Subjective_aim, Time,
+qqqq(match_sa_word_object, Subject, Subjective_aim, Time,
 		     [[Word, Object] | Pair_List],
 		     Arity, Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_word_object(Subject,
+	qqqq(match_sa_word_object, Subject,
 			     Subjective_aim, Time,
 			     Pair_List,
 			     % if Arity is not Arbitrary sub 1
-			     cond(Arity =\= -999, Arity - 1,
+			     qqqq(cond, Arity =\= -999, Arity - 1,
 				  -999),
 			     Type, Idea_List_Out).
 
@@ -345,7 +345,7 @@ match_sa_word_object(Subject, Subjective_aim, Time,
 
 %% 6
 
-conceptual_feeling_ideas_objects(Subject,
+qqqq(conceptual_feeling_ideas_objects, Subject,
 				 Subjective_aim,
 				 Time,
 				 [[Relation_Idea,
@@ -353,84 +353,84 @@ conceptual_feeling_ideas_objects(Subject,
 				  PairList]) :-
 	Subjective_aim :== believes,
 	%% list of word, idea object triples
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_idea_object(Subject,
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_idea_object, Subject,
 			     Subjective_aim,
 			     Time, PairList,
 			     Arity, Type - 1,
 			     [Relation_Idea]).
 
-conceptual_feeling_ideas_objects(Subject,
+qqqq(conceptual_feeling_ideas_objects, Subject,
 				 Subjective_aim,
 				 Time,
 				 [[Relation_Idea,
 				   Relation] |
 				  PairList]) :-
 	%% list of word, idea object triples
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_idea_object(Subject,
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_idea_object, Subject,
 			     Subjective_aim,
 			     Time, PairList,
 			     Arity, Type - 1,
 			     [Relation_Idea]).
 
-match_sa_idea_object(Subject,
+qqqq(match_sa_idea_object, Subject,
 		     Subjective_aim,
 		     Time, [], 0,
 		     Type, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_idea_object(Subject,
+qqqq(match_sa_idea_object, Subject,
 		     Subjective_aim,
 		     Time, [], Arity,
 		     Idea_List) :-
 	Arity =:= -999,
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_idea_object(Subject,
+qqqq(match_sa_idea_object, Subject,
 		     Subjective_aim, Time,
 		     [[Idea, Object] | PairList],
 		     Arity, Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
 	Arity > 0,
-	match_sa_idea_object(Subject,
+	qqqq(match_sa_idea_object, Subject,
 			     Subjective_aim,
 			     Time, PairList,
 			     % if Arity is not Arbitrary sub 1
-			     cond(Arity =\= -999, Arity - 1,
+			     qqqq(cond, Arity =\= -999, Arity - 1,
 				  -999),
 			     Type, Idea_List_Out).
 
-match_sa_idea_object(Subject,
+qqqq(match_sa_idea_object, Subject,
 		     Subjective_aim, Time,
 		     [[Idea, Object] | PairList],
 		     Arity, Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
 	Arity > 0,
-	match_sa_idea_object(Subject,
+	qqqq(match_sa_idea_object, Subject,
 			     Subjective_aim, Time,
 			     PairList,
 			     % if Arity is not Arbitrary sub 1
-			     cond(Arity =\= -999, Arity - 1,
+			     qqqq(cond, Arity =\= -999, Arity - 1,
 				  -999),
 			     Type, Idea_List_Out).
 
@@ -438,7 +438,7 @@ match_sa_idea_object(Subject,
 
 %% 7
 
-conceptual_feeling_words_ideas_objects(Subject,
+qqqq(conceptual_feeling_words_ideas_objects, Subject,
 				       Subjective_aim,
 				       Time,
 				       [[Relation_Word,
@@ -447,12 +447,12 @@ conceptual_feeling_words_ideas_objects(Subject,
 					TripleList]) :-
 	Subjective_aim :== believes,
 	%% list of word, idea object triples
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_triple_word_idea_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_triple_word_idea_object, Subject,
 					 Subjective_aim,
 					 Time,
 					 TripleList,
@@ -460,7 +460,7 @@ conceptual_feeling_words_ideas_objects(Subject,
 					 Type - 1,
 					 [Relation_Idea]).
 
-conceptual_feeling_words_ideas_objects(Subject,
+qqqq(conceptual_feeling_words_ideas_objects, Subject,
 				       Subjective_aim,
 				       Time,
 				       [[Relation_Word,
@@ -468,12 +468,12 @@ conceptual_feeling_words_ideas_objects(Subject,
 					 Relation] |
 					TripleList]) :-
 	%% list of word, idea object triples
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_triple_word_idea_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_triple_word_idea_object, Subject,
 					 Subjective_aim,
 					 Time,
 					 TripleList,
@@ -481,25 +481,25 @@ conceptual_feeling_words_ideas_objects(Subject,
 					 Type - 1,
 					 [Relation_Idea]).
 
-match_sa_triple_word_idea_object(Subject,
+qqqq(match_sa_triple_word_idea_object, Subject,
 				 Subjective_aim, Time,
 				 [], 0, Type,
 				 Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time,
 				    Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_triple_word_idea_object(Subject,
+qqqq(match_sa_triple_word_idea_object, Subject,
 				 Subjective_aim,
 				 Time, [], -999,
 				 Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_triple_word_idea_object(Subject,
+qqqq(match_sa_triple_word_idea_object, Subject,
 				 Subjective_aim,
 				 Time,
 				 [[Word, Idea, Object]
@@ -507,39 +507,39 @@ match_sa_triple_word_idea_object(Subject,
 				 Arity,
 				 Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_triple_word_idea_object(Subject,
+	qqqq(match_sa_triple_word_idea_object, Subject,
 					 Subjective_aim,
 					 Time,
 					 TripleList,
 					 % if Arity is not Arbitrary sub 1
-					 cond(Arity =\= -999, Arity - 1,
+					 qqqq(cond, Arity =\= -999, Arity - 1,
 					      -999),
 					 Type, Idea_List_Out).
 
 
-match_sa_triple_word_idea_object(Subject,
+qqqq(match_sa_triple_word_idea_object, Subject,
 				 Subjective_aim, Time,
 				 [[Word, Idea, Object]
 				 | TripleList],
 				 Arity, Type,
 				 Idea_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_triple_word_idea_object(Subject,
+	qqqq(match_sa_triple_word_idea_object, Subject,
 					 Subjective_aim,
 					 Time,
 					 TripleList,
 					 % if Arity is not Arbitrary sub 1
-					 cond(Arity =\= -999, Arity - 1,
+					 qqqq(cond, Arity =\= -999, Arity - 1,
 					      -999),
 					 Type, Idea_List_Out).
 
@@ -552,35 +552,35 @@ match_sa_triple_word_idea_object(Subject,
 
 %% 1
 
-conceptual_feeling_words(Subject, Subjective_aim, Time, [[Relation_Word] | List]) :-
+qqqq(conceptual_feeling_words, Subject, Subjective_aim, Time, [[Relation_Word] | List]) :-
 	Subjective_aim :== disbelieves,
 	%% list of words
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_word(Subject, Subjective_aim, Time, List,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_word, Subject, Subjective_aim, Time, List,
 		      Arity, Type - 1, [Relation_Idea]).
 
-match_sa_word(Subject, Subjective_aim, Time, [], 0, Type, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+qqqq(match_sa_word, Subject, Subjective_aim, Time, [], 0, Type, Idea_List) :-
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_word(Subject, Subjective_aim, Time,
+qqqq(match_sa_word, Subject, Subjective_aim, Time,
 	      [], -999, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_word(Subject, Subjective_aim, Time,
+qqqq(match_sa_word, Subject, Subjective_aim, Time,
 	      [[Word] | List],
 	      Arity, Type, Idea_List) :-
 	% List of Word Idea Pair.
-	rrrr(Subject, Time, Word, Idea),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_word(Subject, Subjective_aim, Time,
+	qqqq(match_sa_word, Subject, Subjective_aim, Time,
 		      List,
 		      % if Arity is not Arbitrary sub 1
 		      cond(Arity =\= -999, Arity - 1,
@@ -594,71 +594,71 @@ match_sa_word(Subject, Subjective_aim, Time,
 
 %% 3
 
-conceptual_feeling_objects(Subject, Subjective_aim, Time, [[Relation] | List]) :-
+qqqq(conceptual_feeling_objects, Subject, Subjective_aim, Time, [[Relation] | List]) :-
 	Subjective_aim :== disbelieves,
 	%% list of idea object Pairs
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_object(Subject, Subjective_aim,
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_object, Subject, Subjective_aim,
 			Time, List,
 			Arity, Type - 1, [Relation_Idea]).
 
-conceptual_feeling_objects(Subject,
+qqqq(conceptual_feeling_objects, Subject,
 			   Subjective_aim, Time,
 			   [[Relation] | List]) :-
 	%% list of idea object Pairs
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_object(Subject,
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_object, Subject,
 			Subjective_aim, Time, List,
 			Arity, Type - 1, [Relation_Idea]).
 
-match_sa_object(Subject, Subjective_aim,
+qqqq(match_sa_object, Subject, Subjective_aim,
 		Time, [], 0, Type, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_object(Subject, Subjective_aim,
+qqqq(match_sa_object, Subject, Subjective_aim,
 		Time, [], -999, Type, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_object(Subject, Subjective_aim, Time,
+qqqq(match_sa_object, Subject, Subjective_aim, Time,
 		[[Object] | List],
 		Arity, Type, Idea_List) :-
 	% List of Objects.
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_object(Subject,
+	qqqq(match_sa_object, Subject,
 			Subjective_aim, Time,
 			List,
 			% if Arity is not Arbitrary sub 1
-			cond(Arity =\= -999, Arity - 1,
+			qqqq(cond,Arity =\= -999, Arity - 1,
 			     -999),
 			Type, Idea_List_Out).
 
-match_sa_object(Subject, Subjective_aim, Time,
+qqqq(match_sa_object, Subject, Subjective_aim, Time,
 		[[Object] | List],
 		Arity, Type, Idea_List) :-
 	% List of Objects.
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_object(Subject,
+	qqqq(match_sa_object, Subject,
 			Subjective_aim, Time,
 			List,
 			% if Arity is not Arbitrary sub 1
-			cond(Arity =\= -999, Arity - 1,
+			qqqq(cond, Arity =\= -999, Arity - 1,
 			     -999),
 			Type, Idea_List_Out).
 
@@ -666,7 +666,7 @@ match_sa_object(Subject, Subjective_aim, Time,
 
 %% 4
 
-conceptual_feeling_words_ideas(Subject,
+qqqq(conceptual_feeling_words_ideas, Subject,
 			       Subjective_aim,
 			       Time,
 			       [[Relation_Word,
@@ -674,59 +674,59 @@ conceptual_feeling_words_ideas(Subject,
 				PairList]) :-
 	Subjective_aim :== disbelieves,
 	%% list of word, idea pairs
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_word_idea(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_word_idea, Subject,
 			   Subjective_aim, Time, PairList,
 			   Arity, Type - 1,
 			   [Relation_Idea]).
 
-conceptual_feeling_words_ideas(Subject,
+qqqq(conceptual_feeling_words_ideas, Subject,
 			       Subjective_aim,
 			       Time,
 			       [[Relation_Word,
 				 Relation_Idea] |
 				PairList]) :-
 	%% list of word, idea pairs
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_word_idea(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_word_idea, Subject,
 			   Subjective_aim, Time, PairList,
 			   Arity, Type - 1, [Relation_Idea]).
 
-match_sa_word_idea(Subject,
+qqqq(match_sa_word_idea, Subject,
 		   Subjective_aim,
 		   Time, [], 0, Type, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_word_idea(Subject,
+qqqq(match_sa_word_idea, Subject,
 		   Subjective_aim,
 		   Time, [], -999, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_word_idea(Subject, Subjective_aim, Time,
+qqqq(match_sa_word_idea, Subject, Subjective_aim, Time,
 		   [[Word, Idea] | PairList],
 		   Arity, Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_word_idea(Subject,
+	qqqq(match_sa_word_idea, Subject,
 			   Subjective_aim, Time,
 			   PairList,
 			   % if Arity is not Arbitrary sub 1
-			   cond(Arity =\= -999, Arity - 1,
+			   qqqq(cond, Arity =\= -999, Arity - 1,
 				-999),
 			   Type, Idea_List_Out).
 
@@ -734,81 +734,81 @@ match_sa_word_idea(Subject, Subjective_aim, Time,
 
 %% 5
 
-conceptual_feeling_words_objects(Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
+qqqq(conceptual_feeling_words_objects, Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
 	Subjective_aim :== disbelieves,
 	%% list of word, idea object pairs
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_word_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_word_object, Subject,
 			     Subjective_aim,
 			     Time, Pair_List,
 			     Arity, Type - 1,
 			     [Relation_Idea]).
 
-conceptual_feeling_words_objects(Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
+qqqq(conceptual_feeling_words_objects, Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
 	%% list of word, idea object pairs
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_word_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_word_object, Subject,
 			     Subjective_aim,
 			     Time, Pair_List,
 			     Arity, Type - 1,
 			     [Relation_Idea]).
 
-match_sa_word_object(Subject,
+qqqq(match_sa_word_object, Subject,
 		     Subjective_aim,
 		     Time, [], 0, Type, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_word_object(Subject,
+qqqq(match_sa_word_object, Subject,
 		     Subjective_aim,
 		     Time, [], -999, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas,Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_word_object(Subject,
+qqqq(match_sa_word_object, Subject,
 		     Subjective_aim,
 		     Time,
 		     [[Word, Object] | Pair_List],
 		     Arity, Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_word_object(Subject,
+	qqqq(match_sa_word_object, Subject,
 			     Subjective_aim, Time,
 			     Pair_List,
 			     % if Arity is not Arbitrary sub 1
-			     cond(Arity =\= -999, Arity - 1,
+			     qqqq(cond, Arity =\= -999, Arity - 1,
 				  -999),
 			     Type, Idea_List_Out).
 
-match_sa_word_object(Subject, Subjective_aim, Time,
+qqqq(match_sa_word_object, Subject, Subjective_aim, Time,
 		     [[Word, Object] | Pair_List],
 		     Arity, Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_word_object(Subject,
+	qqqq(match_sa_word_object, Subject,
 			     Subjective_aim, Time,
 			     Pair_List,
 			     % if Arity is not Arbitrary sub 1
-			     cond(Arity =\= -999, Arity - 1,
+			     qqqq(cond, Arity =\= -999, Arity - 1,
 				  -999),
 			     Type, Idea_List_Out).
 
@@ -816,7 +816,7 @@ match_sa_word_object(Subject, Subjective_aim, Time,
 
 %% 6
 
-conceptual_feeling_ideas_objects(Subject,
+qqqq(conceptual_feeling_ideas_objects, Subject,
 				 Subjective_aim,
 				 Time,
 				 [[Relation_Idea,
@@ -824,84 +824,84 @@ conceptual_feeling_ideas_objects(Subject,
 				  PairList]) :-
 	Subjective_aim :== disbelieves,
 	%% list of word, idea object triples
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_idea_object(Subject,
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_idea_object, Subject,
 			     Subjective_aim,
 			     Time, PairList,
 			     Arity, Type - 1,
 			     [Relation_Idea]).
 
-conceptual_feeling_ideas_objects(Subject,
+qqqq(conceptual_feeling_ideas_objects, Subject,
 				 Subjective_aim,
 				 Time,
 				 [[Relation_Idea,
 				   Relation] |
 				  PairList]) :-
 	%% list of word, idea object triples
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_idea_object(Subject,
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_idea_object, Subject,
 			     Subjective_aim,
 			     Time, PairList,
 			     Arity, Type - 1,
 			     [Relation_Idea]).
 
-match_sa_idea_object(Subject,
+qqqq(match_sa_idea_object, Subject,
 		     Subjective_aim,
 		     Time, [], 0,
 		     Type, Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_idea_object(Subject,
+qqqq(match_sa_idea_object, Subject,
 		     Subjective_aim,
 		     Time, [], Arity,
 		     Idea_List) :-
 	Arity =:= -999,
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_idea_object(Subject,
+qqqq(match_sa_idea_object, Subject,
 		     Subjective_aim, Time,
 		     [[Idea, Object] | PairList],
 		     Arity, Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
 	Arity > 0,
-	match_sa_idea_object(Subject,
+	qqqq(match_sa_idea_object, Subject,
 			     Subjective_aim,
 			     Time, PairList,
 			     % if Arity is not Arbitrary sub 1
-			     cond(Arity =\= -999, Arity - 1,
+			     qqqq(cond, Arity =\= -999, Arity - 1,
 				  -999),
 			     Type, Idea_List_Out).
 
-match_sa_idea_object(Subject,
+qqqq(match_sa_idea_object, Subject,
 		     Subjective_aim, Time,
 		     [[Idea, Object] | PairList],
 		     Arity, Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
 	Arity > 0,
-	match_sa_idea_object(Subject,
+	qqqq(match_sa_idea_object, Subject,
 			     Subjective_aim, Time,
 			     PairList,
 			     % if Arity is not Arbitrary sub 1
-			     cond(Arity =\= -999, Arity - 1,
+			     qqqq(cond, Arity =\= -999, Arity - 1,
 				  -999),
 			     Type, Idea_List_Out).
 
@@ -909,7 +909,7 @@ match_sa_idea_object(Subject,
 
 %% 7
 
-conceptual_feeling_words_ideas_objects(Subject,
+qqqq(conceptual_feeling_words_ideas_objects, Subject,
 				       Subjective_aim,
 				       Time,
 				       [[Relation_Word,
@@ -918,12 +918,12 @@ conceptual_feeling_words_ideas_objects(Subject,
 					TripleList]) :-
 	Subjective_aim :== disbelieves,
 	%% list of word, idea object triples
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_triple_word_idea_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_triple_word_idea_object, Subject,
 					 Subjective_aim,
 					 Time,
 					 TripleList,
@@ -931,7 +931,7 @@ conceptual_feeling_words_ideas_objects(Subject,
 					 Type - 1,
 					 [Relation_Idea]).
 
-conceptual_feeling_words_ideas_objects(Subject,
+qqqq(conceptual_feeling_words_ideas_objects, Subject,
 				       Subjective_aim,
 				       Time,
 				       [[Relation_Word,
@@ -939,12 +939,12 @@ conceptual_feeling_words_ideas_objects(Subject,
 					 Relation] |
 					TripleList]) :-
 	%% list of word, idea object triples
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_triple_word_idea_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_triple_word_idea_object, Subject,
 					 Subjective_aim,
 					 Time,
 					 TripleList,
@@ -952,25 +952,25 @@ conceptual_feeling_words_ideas_objects(Subject,
 					 Type - 1,
 					 [Relation_Idea]).
 
-match_sa_triple_word_idea_object(Subject,
+qqqq(match_sa_triple_word_idea_object, Subject,
 				 Subjective_aim, Time,
 				 [], 0, Type,
 				 Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time,
 				    Idea_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_triple_word_idea_object(Subject,
+qqqq(match_sa_triple_word_idea_object, Subject,
 				 Subjective_aim,
 				 Time, [], -999,
 				 Idea_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List).
 
-match_sa_triple_word_idea_object(Subject,
+qqqq(match_sa_triple_word_idea_object, Subject,
 				 Subjective_aim,
 				 Time,
 				 [[Word, Idea, Object]
@@ -978,39 +978,39 @@ match_sa_triple_word_idea_object(Subject,
 				 Arity,
 				 Type, Idea_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_triple_word_idea_object(Subject,
+	qqqq(match_sa_triple_word_idea_object, Subject,
 					 Subjective_aim,
 					 Time,
 					 TripleList,
 					 % if Arity is not Arbitrary sub 1
-					 cond(Arity =\= -999, Arity - 1,
+					 qqqq(cond, Arity =\= -999, Arity - 1,
 					      -999),
 					 Type, Idea_List_Out).
 
 
-match_sa_triple_word_idea_object(Subject,
+qqqq(match_sa_triple_word_idea_object, Subject,
 				 Subjective_aim, Time,
 				 [[Word, Idea, Object]
 				 | TripleList],
 				 Arity, Type,
 				 Idea_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_triple_word_idea_object(Subject,
+	qqqq(match_sa_triple_word_idea_object, Subject,
 					 Subjective_aim,
 					 Time,
 					 TripleList,
 					 % if Arity is not Arbitrary sub 1
-					 cond(Arity =\= -999, Arity - 1,
+					 qqqq(cond, Arity =\= -999, Arity - 1,
 					      -999),
 					 Type, Idea_List_Out).
 
@@ -1033,63 +1033,63 @@ match_sa_triple_word_idea_object(Subject,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Now Contradicting beliefs!!
 %% 1
-contradicts_words(Subject, Time, List) :-
-	conceptual_feeling_words(Subject,
+qqqq(contradicts_words, Subject, Time, List) :-
+	qqqq(conceptual_feeling_words, Subject,
 				 believes, Time, List),
-	conceptual_feeling_words(Subject,
+	qqqq(conceptual_feeling_words, Subject,
 				 disbelieves, Time, List).
 
 %% 2
-contradicts_ideas(Subject, Time, List) :-
-	conceptual_feeling_in_ideas(Subject,
+qqqq(contradicts_ideas, Subject, Time, List) :-
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    believes, Time, List),
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    disbelieves,
 				    Time, List).
 
 %% 3
-contradicts_objects(Subject, Time, List) :-
-	conceptual_feeling_objects(Subject,
+qqqq(contradicts_objects, Subject, Time, List) :-
+	qqqq(conceptual_feeling_objects, Subject,
 				   believes, Time, List),
-	conceptual_feeling_objects(Subject,
+	qqqq(conceptual_feeling_objects, Subject,
 				   disbelieves, Time,
 				   List).
 
 %% 4
-contradicts_words_ideas(Subject, Time, Pair_List) :-
-	conceptual_feeling_words_ideas(Subject,
+qqqq(contradicts_words_ideas, Subject, Time, Pair_List) :-
+	qqqq(conceptual_feeling_words_ideas, Subject,
 				       believes, Time,
 				       Pair_List),
-	conceptual_feeling_words_ideas(Subject,
+	qqqq(conceptual_feeling_words_ideas, Subject,
 				       disbelieves,
 				       Time, Pair_List).
 
 %% 5
-contradicts_words_objects(Subject, Time, Pair_List) :-
-	conceptual_feeling_words_objects(Subject,
+qqqq(contradicts_words_objects, Subject, Time, Pair_List) :-
+	qqqq(conceptual_feeling_words_objects, Subject,
 					 believes,
 					 Time, Pair_List),
-	conceptual_feeling_words_objects(Subject,
+	qqqq(conceptual_feeling_words_objects, Subject,
 					 disbelieves,
 					 Time, Pair_List).
 
 %% 6
-contradicts_ideas_objects(Subject, Time, Pair_List) :-
-	conceptual_feeling_ideas_objects(Subject,
+qqqq(contradicts_ideas_objects, Subject, Time, Pair_List) :-
+	qqqq(conceptual_feeling_ideas_objects, Subject,
 					 believes,
 					 Time, Pair_List),
-	conceptual_feeling_ideas_objects(Subject,
+	qqqq(conceptual_feeling_ideas_objects, Subject,
 					 disbelieves,
 					 Time, Pair_List).
 
 %% 7
-contradicts_words_ideas_objects(Subject, Time,
+qqqq(contradicts_words_ideas_objects, Subject, Time,
 				Triple_List) :-
-	conceptual_feeling_words_ideas_objects(Subject,
+	qqqq(conceptual_feeling_words_ideas_objects, Subject,
 					       believes,
 					       Time,
 					       Triple_List),
-	conceptual_feeling_words_ideas_objects(Subject,
+	qqqq(conceptual_feeling_words_ideas_objects, Subject,
 					       disbelieves,
 					       Time,
 					       Triple_List).
@@ -1108,96 +1108,96 @@ contradicts_words_ideas_objects(Subject, Time,
 
 %% 3
 
-conceptual_feeling_objects(Subject, Subjective_aim, Time, [[Relation] | List]) :-
+qqqq(conceptual_feeling_objects, Subject, Subjective_aim, Time, [[Relation] | List]) :-
 	Subjective_aim :== believes_truly,
-	write("cfo truly 00001A"), nl,
+	qqqq(write, "cfo truly 00001A"), nl,
 	%% list of idea object Pairs
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_true_object(Subject, Subjective_aim,
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_true_object, Subject, Subjective_aim,
 			     Time, List,
 			     Arity, Type - 1, [Relation_Idea],
 			     [[Relation] | List]).
 
-conceptual_feeling_objects(Subject,
+qqqq(conceptual_feeling_objects, Subject,
 			   Subjective_aim, Time,
 			   [[Relation] | List]) :-
-	write("cfo truly 00001B"), nl,
+	qqqq(write, "cfo truly 00001B"), nl,
 	Subjective_aim :== believes_truly,
 	%% list of idea object Pairs
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_true_object(Subject,
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_true_object, Subject,
 			     Subjective_aim, Time, List,
 			     Arity, Type - 1, [Relation_Idea],
 			     [[Relation] | List]).
 
-match_sa_true_object(Subject, Subjective_aim,
+qqqq(match_sa_true_object, Subject, Subjective_aim,
 		     Time, [], 0, Type, Idea_List,Objects) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    believes,
 				    Time, Idea_List),
-	qqqq4(Objects).
+	qq_pos(Objects).
 
 %% -999 indicates arbitrary arity.
-match_sa_true_object(Subject, Subjective_aim,
+qqqq(match_sa_true_object, Subject, Subjective_aim,
 		     Time, [], -999, Type, Idea_List,
 		     Objects) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    believes,
 				    Time, Idea_List),
-	qqqq4(Objects).
+	qq_pos(Objects).
 
-match_sa_true_object(Subject, believes_truly, Time,
+qqqq(match_sa_true_object, Subject, believes_truly, Time,
 		     [[Object] | List],
 		     Arity, Type, Idea_List,Objects) :-
 	% List of Objects.
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_true_object(Subject,
+	qqqq(match_sa_true_object, Subject,
 			     believes_truly, Time,
 			     List,
 			     % if Arity is not Arbitrary sub 1
-			     cond(Arity =\= -999, Arity - 1,
+			     qqqq(cond, Arity =\= -999, Arity - 1,
 				  -999),
 			     Type, Idea_List_Out).
 
-match_sa_true_object(Subject, believes_truly, Time,
+qqqq(match_sa_true_object, Subject, believes_truly, Time,
 		     [[Object] | List],
 		     Arity, Type, Idea_List,Objects) :-
 	% List of Objects.
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_true_object(Subject,
+	qqqq(match_sa_true_object, Subject,
 			     believes_truly, Time,
 			     List,
 			     % if Arity is not Arbitrary sub 1
-			     cond(Arity =\= -999, Arity - 1,
+			     qqqq(cond, Arity =\= -999, Arity - 1,
 				  -999),
 			     Type, Idea_List_Out),
-	qqqq4(Objects).
+	qq_pos(Objects).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 5
 
-conceptual_feeling_words_objects(Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
+qqqq(conceptual_feeling_words_objects, Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
 	Subjective_aim :== believes_truly,
 	%% list of word, idea object pairs
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_true_word_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_true_word_object, Subject,
 				  Subjective_aim,
 				  Time, Pair_List,
 				  Arity, Type - 1,
@@ -1205,14 +1205,14 @@ conceptual_feeling_words_objects(Subject, Subjective_aim, Time, [[Relation_Word,
 				  [[Relation_Word, Relation]
 				  | Pair_List]).
 
-conceptual_feeling_words_objects(Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
+qqqq(conceptual_feeling_words_objects, Subject, Subjective_aim, Time, [[Relation_Word, Relation] | Pair_List]) :-
 	%% list of word, idea object pairs
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_true_word_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_true_word_object, Subject,
 				  Subjective_aim,
 				  Time, Pair_List,
 				  Arity, Type - 1,
@@ -1220,62 +1220,62 @@ conceptual_feeling_words_objects(Subject, Subjective_aim, Time, [[Relation_Word,
 				  [[Relation_Word, Relation]
 				  | Pair_List]).
 
-match_sa_true_word_object(Subject,
+qqqq(match_sa_true_word_object, Subject,
 			  Subjective_aim,
 			  Time, [], 0, Type, Idea_List,
 			  Fact_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List),
-	qqqq4(Fact_List).
+	qq_pos(Fact_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_true_word_object(Subject,
+qqqq(match_sa_true_word_object, Subject,
 			  Subjective_aim,
 			  Time, [], -999, Idea_List,
 			  Fact_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas,Subject,
 				    Subjective_aim,
 				    Time, Idea_List),
-	qqqq4(Fact_List).
+	qq_pos(Fact_List).
 
-match_sa_true_word_object(Subject,
+qqqq(match_sa_true_word_object, Subject,
 			  Subjective_aim,
 			  Time,
 			  [[Word, Object] | Pair_List],
 			  Arity, Type, Idea_List,
 			  Fact_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_true_word_object(Subject,
+	qqqq(match_sa_true_word_object, Subject,
 				  Subjective_aim, Time,
 				  Pair_List,
 				  % if Arity is not Arbitrary sub 1
-				  cond(Arity =\= -999,
+				  qqqq(cond, Arity =\= -999,
 				       Arity - 1,
 				       -999),
 				  Type, Idea_List_Out,
 				  Fact_List).
 
-match_sa_true_word_object(Subject, Subjective_aim, Time,
+qqqq(match_sa_true_word_object, Subject, Subjective_aim, Time,
 			  [[Word, Object] | Pair_List],
 			  Arity, Type, Idea_List,
 			  Fact_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
 	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_true_word_object(Subject,
+	qqqq(match_sa_true_word_object, Subject,
 				  Subjective_aim, Time,
 				  Pair_List,
 				  % if Arity is not Arbitrary sub 1
-				  cond(Arity =\= -999,
+				  qqqq(cond, Arity =\= -999,
 				       Arity - 1,
 				       -999),
 				  Type, Idea_List_Out,
@@ -1285,7 +1285,7 @@ match_sa_true_word_object(Subject, Subjective_aim, Time,
 
 %% 6
 
-conceptual_feeling_ideas_objects(Subject,
+qqqq(conceptual_feeling_ideas_objects, Subject,
 				 Subjective_aim,
 				 Time,
 				 [[Relation_Idea,
@@ -1293,11 +1293,11 @@ conceptual_feeling_ideas_objects(Subject,
 				  PairList]) :-
 	Subjective_aim :== believes_truly,
 	%% list of word, idea object triples
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_true_idea_object(Subject,
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_true_idea_object, Subject,
 				  Subjective_aim,
 				  Time, PairList,
 				  Arity, Type - 1,
@@ -1306,18 +1306,18 @@ conceptual_feeling_ideas_objects(Subject,
 				    Relation] |
 				   PairList]).
 
-conceptual_feeling_ideas_objects(Subject,
+qqqq(conceptual_feeling_ideas_objects, Subject,
 				 Subjective_aim,
 				 Time,
 				 [[Relation_Idea,
 				   Relation] |
 				  PairList]) :-
 	%% list of word, idea object triples
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_true_idea_object(Subject,
+	qqqq(number_idea,Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_true_idea_object, Subject,
 				  Subjective_aim,
 				  Time, PairList,
 				  Arity, Type - 1,
@@ -1326,61 +1326,61 @@ conceptual_feeling_ideas_objects(Subject,
 				   Relation] |
 				  PairList]).
 
-match_sa_true_idea_object(Subject,
+qqqq(match_sa_true_idea_object, Subject,
 			  Subjective_aim,
 			  Time, [], 0,
 			  Type, Idea_List, Fact_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List),
-	qqqq4(Fact_List).
+	qq_pos(Fact_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_true_idea_object(Subject,
+qqqq(match_sa_true_idea_object, Subject,
 			  Subjective_aim,
 			  Time, [], Arity,
 			  Idea_List, Fact_List) :-
 	Arity =:= -999,
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas,Subject,
 				    Subjective_aim,
 				    Time, Idea_List),
-	qqqq4(Fact_List).
+	qq_pos(Fact_List).
 
-match_sa_true_idea_object(Subject,
+qqqq(match_sa_true_idea_object, Subject,
 			  Subjective_aim, Time,
 			  [[Idea, Object] | PairList],
 			  Arity, Type, Idea_List,
 			  Fact_List) :-
 	% List of Word Idea Object Triple.
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
-	Idea_List_Out = append(Idea_List, [Idea]),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
+	Idea_List_Out = qqqq(append, Idea_List, [Idea]),
 	Arity > 0,
-	match_sa_true_idea_object(Subject,
+	qqqq(match_sa_true_idea_object, Subject,
 				  Subjective_aim,
 				  Time, PairList,
 				  % if Arity is not Arbitrary sub 1
-				  cond(Arity =\= -999,
+				  qqqq(cond, Arity =\= -999,
 				       Arity - 1,
 				       -999),
 				  Type, Idea_List_Out, Fact_List).
 
-match_sa_true_idea_object(Subject,
+qqqq(match_sa_true_idea_object, Subject,
 			  Subjective_aim, Time,
 			  [[Idea, Object] | PairList],
 			  Arity, Type, Idea_List, Fact_List) :-
 	% List of Word Idea Object Triple.
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
-	Idea_List_Out = append(Idea_List, [Idea]),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
+	Idea_List_Out = qqqq(append, Idea_List, [Idea]),
 	Arity > 0,
-	match_sa_true_idea_object(Subject,
+	qqqq(match_sa_true_idea_object, Subject,
 				  Subjective_aim, Time,
 				  PairList,
 				  % if Arity is not Arbitrary sub 1
-				  cond(Arity =\= -999,
+				  qqqq(cond, Arity =\= -999,
 				       Arity - 1,
 				       -999),
 				  Type, Idea_List_Out,
@@ -1390,7 +1390,7 @@ match_sa_true_idea_object(Subject,
 
 %% 7
 
-conceptual_feeling_words_ideas_objects(Subject,
+qqqq(conceptual_feeling_words_ideas_objects, Subject,
 				       Subjective_aim,
 				       Time,
 				       [[Relation_Word,
@@ -1399,12 +1399,12 @@ conceptual_feeling_words_ideas_objects(Subject,
 					TripleList]) :-
 	Subjective_aim :== believes_truly,
 	%% list of word, idea object triples
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_true_triple_word_idea_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, singular),
+	qqqq(ssss2, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_true_triple_word_idea_object, Subject,
 					      Subjective_aim,
 					      Time,
 					      TripleList,
@@ -1416,7 +1416,7 @@ conceptual_feeling_words_ideas_objects(Subject,
 						Relation] |
 					       TripleList]).
 
-conceptual_feeling_words_ideas_objects(Subject,
+qqqq(conceptual_feeling_words_ideas_objects, Subject,
 				       Subjective_aim,
 				       Time,
 				       [[Relation_Word,
@@ -1424,12 +1424,12 @@ conceptual_feeling_words_ideas_objects(Subject,
 					 Relation] |
 					TripleList]) :-
 	%% list of word, idea object triples
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_sa_true_triple_word_idea_object(Subject,
+	qqqq(rrrr, Subject, Time, Relation_Word, Relation_Idea),
+	qqqq(number_idea, Relation_Idea, plural),
+	qqqq(tttt, Subject, Time, Relation_Idea, Relation),
+	qqqq(arity_idea, Relation_Idea, Arity),
+	qqqq(type_idea, Relation_Idea, Type),
+	qqqq(match_sa_true_triple_word_idea_object, Subject,
 					      Subjective_aim,
 					      Time,
 					      TripleList,
@@ -1441,27 +1441,27 @@ conceptual_feeling_words_ideas_objects(Subject,
 						Relation] |
 					       TripleList]).
 
-match_sa_true_triple_word_idea_object(Subject,
+qqqq(match_sa_true_triple_word_idea_object, Subject,
 				      Subjective_aim, Time,
 				      [], 0, Type,
 				      Idea_List, Fact_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time,
 				    Idea_List),
-	qqqq4(Fact_List).
+	qq_pos(Fact_List).
 
 %% -999 indicates arbitrary arity.
-match_sa_true_triple_word_idea_object(Subject,
+qqqq(match_sa_true_triple_word_idea_object, Subject,
 				      Subjective_aim,
 				      Time, [], -999,
 				      Idea_List, Fact_List) :-
-	conceptual_feeling_in_ideas(Subject,
+	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List),
-	qqqq4(Fact_List).
+	qq_pos(Fact_List).
 
-match_sa_true_triple_word_idea_object(Subject,
+qqqq(match_sa_true_triple_word_idea_object, Subject,
 				      Subjective_aim,
 				      Time,
 				      [[Word, Idea, Object]
@@ -1470,17 +1470,17 @@ match_sa_true_triple_word_idea_object(Subject,
 				      Type, Idea_List,
 				      Fact_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
-	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_true_triple_word_idea_object(Subject,
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, singular),
+	qqqq(ssss2, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
+	Idea_List_Out = qqqq(append, Idea_List, [Idea]),
+	qqqq(match_sa_true_triple_word_idea_object, Subject,
 					      Subjective_aim,
 					      Time,
 					      TripleList,
 					      % if Arity is not Arbitrary sub 1
-					      cond(Arity =\=
+					      qqqq(cond, Arity =\=
 						     -999,
 						   Arity - 1,
 						   -999),
@@ -1489,24 +1489,24 @@ match_sa_true_triple_word_idea_object(Subject,
 					      Fact_List).
 
 
-match_sa_true_triple_word_idea_object(Subject,
+qqqq(match_sa_true_triple_word_idea_object, Subject,
 				      Subjective_aim, Time,
 				      [[Word, Idea, Object]
 				      | TripleList],
 				      Arity, Type,
 				      Idea_List, Fact_List) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
-	Idea_List_Out = append(Idea_List, [Idea]),
-	match_sa_true_triple_word_idea_object(Subject,
+	qqqq(rrrr, Subject, Time, Word, Idea),
+	qqqq(number_idea, Idea, plural),
+	qqqq(tttt, Subject, Time, Idea, Object),
+	qqqq(type_idea, Idea, Type),
+	Idea_List_Out = qqqq(append, Idea_List, [Idea]),
+	qqqq(match_sa_true_triple_word_idea_object, Subject,
 					      Subjective_aim,
 					      Time,
 					      TripleList,
 					      % if Arity is not Arbitrary sub 1
-					      cond(Arity =\=
+					      qqqq(cond, Arity =\=
 						     -999,
 						   Arity - 1,
 						   -999),
