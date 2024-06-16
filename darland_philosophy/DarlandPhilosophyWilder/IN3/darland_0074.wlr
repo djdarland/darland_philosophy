@@ -94,7 +94,7 @@ write_time(Ignore)?
 %% 1
 %% WORDS
 
-quine_opaque_believes_words(tom_dc, now,
+qqqq(quine_opaque_believes_words, tom_dc, now,
 			       [[denounced_word_dc],
 				[cicero_word_dc],
 				[catiline_word_dc]],
@@ -106,7 +106,7 @@ quine_opaque_believes_words(tom_dc, now,
 ;
 
 	
-quine_opaque_believes_words(quine_dc, now,
+qqqq(quine_opaque_believes_words, quine_dc, now,
 			       [[denounced_word_dc],
 				[cicero_word_dc],
 				[catiline_word_dc]],
@@ -120,7 +120,7 @@ quine_opaque_believes_words(quine_dc, now,
 %% 2
 %% IDEAS
 
-quine_opaque_believes_in_ideas(tom_dc, now,
+qqqq(quine_opaque_believes_in_ideas, tom_dc, now,
 			       [tom_denounced_idea_dc,
 				tom_cicero_idea_dc,
 				tom_catiline_idea_dc],
@@ -131,7 +131,7 @@ quine_opaque_believes_in_ideas(tom_dc, now,
 ;
 ;
 
-quine_opaque_believes_in_ideas(quine_dc, now,
+qqqq(quine_opaque_believes_in_ideas, quine_dc, now,
 			       [quine_denounced_idea_dc,
 				quine_cicero_idea_dc,
 				quine_catiline_idea_dc],
@@ -145,7 +145,7 @@ quine_opaque_believes_in_ideas(quine_dc, now,
 %% 3
 %% OBJECTS
 
-quine_opaque_believes_objects(tom_dc, now,
+qqqq(quine_opaque_believes_objects, tom_dc, now,
 			       [[denounced_rel],
 				[tom_cicero_dc],
 				[catiline_dc]],
@@ -157,7 +157,7 @@ quine_opaque_believes_objects(tom_dc, now,
 ;
 
 	
-quine_opaque_believes_objects(quine_dc, now,
+qqqq(quine_opaque_believes_objects, quine_dc, now,
 			       [denounced_rel,
 				cicero_dc,
 				catiline_dc],
@@ -171,7 +171,7 @@ quine_opaque_believes_objects(quine_dc, now,
 %% 4
 %% WORDS_IDEAS
 
-quine_opaque_believes_words_ideas(tom_dc, now,
+qqqq(quine_opaque_believes_words_ideas, tom_dc, now,
 				  [[denounced_word_dc,
 				   tom_denounced_idea_dc],
 				  [cicero_word_dc,
@@ -189,7 +189,7 @@ quine_opaque_believes_words_ideas(tom_dc, now,
 ;
 
 	
-quine_opaque_believes_words_ideas(quine_dc, now,
+qqqq(quine_opaque_believes_words_ideas, quine_dc, now,
 				  [[denounced_word_dc,
 				   quine_denounced_idea_dc],
 				  [cicero_word_dc,
@@ -210,7 +210,7 @@ quine_opaque_believes_words_ideas(quine_dc, now,
 %% 5
 %% WORDS_OBJECTS
 
-quine_opaque_believes_words_objects(tom_dc, now,
+qqqq(quine_opaque_believes_words_objects, tom_dc, now,
 				  [[denounced_word_dc,
 				   denounced_rel],
 				  [cicero_word_dc,
@@ -227,7 +227,7 @@ quine_opaque_believes_words_objects(tom_dc, now,
 ;
 ;
 
-quine_opaque_believes_words_objects(quine_dc, now,
+qqqq(quine_opaque_believes_words_objects, quine_dc, now,
 				  [[denounced_word_dc,
 				   denounced_rel],
 				  [cicero_word_dc,
@@ -247,7 +247,7 @@ quine_opaque_believes_words_objects(quine_dc, now,
 %% 6
 %% IDEAS_OBJECTS
 
-quine_opaque_believes_ideas_objects(tom_dc, now,
+qqqq(quine_opaque_believes_ideas_objects, tom_dc, now,
 				  [[tom_denounced_idea_dc,
 				   denounced_rel],
 				  [tom_cicero_idea_dc,
@@ -264,7 +264,7 @@ quine_opaque_believes_ideas_objects(tom_dc, now,
 ;
 ;
 
-quine_opaque_believes_ideas_objects(quine_dc, now,
+qqqq(quine_opaque_believes_ideas_objects, quine_dc, now,
 				  [[quine_denounced_idea_dc,
 				   denounced_rel],
 				  [quine_cicero_idea_dc,
@@ -284,7 +284,7 @@ quine_opaque_believes_ideas_objects(quine_dc, now,
 %% 7
 %% WORDS_IDEAS_OBJECTS
 
-quine_opaque_believes_words_ideas_objects(tom_dc, now,
+qqqq(quine_opaque_believes_words_ideas_objects, tom_dc, now,
 				    [[denounced_word_dc,
 				      tom_denounced_idea_dc,
 				      denounced_rel],
@@ -307,7 +307,7 @@ quine_opaque_believes_words_ideas_objects(tom_dc, now,
 ;
 ;
 
-quine_opaque_believes_words_ideas_objects(quine_dc, now,
+qqqq(quine_opaque_believes_words_ideas_objects, quine_dc, now,
 				    [[denounced_word_dc,
 				      quine_denounced_idea_dc,
 				      denounced_rel],
@@ -343,7 +343,7 @@ quine_opaque_believes_words_ideas_objects(quine_dc, now,
 
 %% 1 positive
 
-test_sa_words(Subject, now, truly_opaque_believes)?
+qqqq(test_sa_words, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -417,7 +417,7 @@ test_sa_words(Subject, now, truly_opaque_believes)?
 
 %% 1 negative
 	
-test_not_sa_words(Subject, now, truly_opaque_believes)?
+qqqq(test_not_sa_words, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -491,7 +491,7 @@ test_not_sa_words(Subject, now, truly_opaque_believes)?
 
 %% 2 positive
 	
-test_sa_ideas(Subject, now, truly_opaque_believes)?
+qqqq(test_sa_ideas, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -565,7 +565,7 @@ test_sa_ideas(Subject, now, truly_opaque_believes)?
 
 %% 2 negative	
 	
-test_not_sa_ideas(Subject, now, truly_opaque_believes)?
+qqqq(test_not_sa_ideas, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -639,7 +639,7 @@ test_not_sa_ideas(Subject, now, truly_opaque_believes)?
 
 %% 3 positive
 	
-test_sa_objects(Subject, now, truly_opaque_believes)?
+qqqq(test_sa_objects, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -713,7 +713,7 @@ test_sa_objects(Subject, now, truly_opaque_believes)?
 
 %% 3 negative	
 	
-test_not_sa_objects(Subject, now, truly_opaque_believes)?
+qqqq(test_not_sa_objects, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -787,7 +787,7 @@ test_not_sa_objects(Subject, now, truly_opaque_believes)?
 
 %% 4 positive
 	
-test_sa_words_ideas(Subject, now, truly_opaque_believes)?
+qqqq(test_sa_words_ideas, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -861,7 +861,7 @@ test_sa_words_ideas(Subject, now, truly_opaque_believes)?
 
 %% 4 negative	
 	
-test_not_sa_words_ideas(Subject, now, truly_opaque_believes)?
+qqqq(test_not_sa_words_ideas, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -935,7 +935,7 @@ test_not_sa_words_ideas(Subject, now, truly_opaque_believes)?
 
 %% 5 positive
 	
-test_sa_words_objects(Subject, now, truly_opaque_believes)?
+qqqq(test_sa_words_objects, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -1009,7 +1009,7 @@ test_sa_words_objects(Subject, now, truly_opaque_believes)?
 
 %% 5 negative	
 	
-test_not_sa_words_objects(Subject, now, truly_opaque_believes)?
+qqqq(test_not_sa_words_objects, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -1083,7 +1083,7 @@ test_not_sa_words_objects(Subject, now, truly_opaque_believes)?
 
 %% 6 positive
 	
-test_sa_ideas_objects(Subject, now, truly_opaque_believes)?
+qqqq(test_sa_ideas_objects, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -1157,7 +1157,7 @@ test_sa_ideas_objects(Subject, now, truly_opaque_believes)?
 
 %% 6 negative	
 	
-test_not_sa_ideas_objects(Subject, now, truly_opaque_believes)?
+qqqq(test_not_sa_ideas_objects, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -1231,7 +1231,7 @@ test_not_sa_ideas_objects(Subject, now, truly_opaque_believes)?
 
 %% 7 positive
 	
-test_sa_words_ideas_objects(Subject, now, truly_opaque_believes)?
+qqqq(test_sa_words_ideas_objects, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -1305,7 +1305,7 @@ test_sa_words_ideas_objects(Subject, now, truly_opaque_believes)?
 
 %% 7 negative	
 	
-test_not_sa_words_ideas_objects(Subject, now, truly_opaque_believes)?
+qqqq(test_not_sa_words_ideas_objects, Subject, now, truly_opaque_believes)?
 ;
 ;
 ;
@@ -1390,7 +1390,7 @@ test_not_sa_words_ideas_objects(Subject, now, truly_opaque_believes)?
 
 %% 1 positive
 
-test_sa_words(Subject, now, pseudo_opaque_believes)?
+qqqq(test_sa_words, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -1464,7 +1464,7 @@ test_sa_words(Subject, now, pseudo_opaque_believes)?
 
 %% 1 negative
 	
-test_not_sa_words(Subject, now, pseudo_opaque_believes)?
+qqqq(test_not_sa_words, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -1538,7 +1538,7 @@ test_not_sa_words(Subject, now, pseudo_opaque_believes)?
 
 %% 2 positive
 	
-test_sa_ideas(Subject, now, pseudo_opaque_believes)?
+qqqq(test_sa_ideas, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -1612,7 +1612,7 @@ test_sa_ideas(Subject, now, pseudo_opaque_believes)?
 
 %% 2 negative	
 	
-test_not_sa_ideas(Subject, now, pseudo_opaque_believes)?
+qqqq(test_not_sa_ideas, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -1686,7 +1686,7 @@ test_not_sa_ideas(Subject, now, pseudo_opaque_believes)?
 
 %% 3 positive
 	
-test_sa_objects(Subject, now, pseudo_opaque_believes)?
+qqqq(test_sa_objects, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -1760,7 +1760,7 @@ test_sa_objects(Subject, now, pseudo_opaque_believes)?
 
 %% 3 negative	
 	
-test_not_sa_objects(Subject, now, pseudo_opaque_believes)?
+qqqq(test_not_sa_objects, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -1834,7 +1834,7 @@ test_not_sa_objects(Subject, now, pseudo_opaque_believes)?
 
 %% 4 positive
 	
-test_sa_words_ideas(Subject, now, pseudo_opaque_believes)?
+qqqq(test_sa_words_ideas, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -1908,7 +1908,7 @@ test_sa_words_ideas(Subject, now, pseudo_opaque_believes)?
 
 %% 4 negative	
 	
-test_not_sa_words_ideas(Subject, now, pseudo_opaque_believes)?
+qqqq(test_not_sa_words_ideas, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -1982,7 +1982,7 @@ test_not_sa_words_ideas(Subject, now, pseudo_opaque_believes)?
 
 %% 5 positive
 	
-test_sa_words_objects(Subject, now, pseudo_opaque_believes)?
+qqqq(test_sa_words_objects, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -2056,7 +2056,7 @@ test_sa_words_objects(Subject, now, pseudo_opaque_believes)?
 
 %% 5 negative	
 	
-test_not_sa_words_objects(Subject, now, pseudo_opaque_believes)?
+qqqq(test_not_sa_words_objects, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -2130,7 +2130,7 @@ test_not_sa_words_objects(Subject, now, pseudo_opaque_believes)?
 
 %% 6 positive
 	
-test_sa_ideas_objects(Subject, now, pseudo_opaque_believes)?
+qqqq(test_sa_ideas_objects, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -2204,7 +2204,7 @@ test_sa_ideas_objects(Subject, now, pseudo_opaque_believes)?
 
 %% 6 negative	
 	
-test_not_sa_ideas_objects(Subject, now, pseudo_opaque_believes)?
+qqqq(test_not_sa_ideas_objects, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -2278,7 +2278,7 @@ test_not_sa_ideas_objects(Subject, now, pseudo_opaque_believes)?
 
 %% 7 positive
 	
-test_sa_words_ideas_objects(Subject, now, pseudo_opaque_believes)?
+qqqq(test_sa_words_ideas_objects, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -2352,7 +2352,7 @@ test_sa_words_ideas_objects(Subject, now, pseudo_opaque_believes)?
 
 %% 7 negative	
 	
-test_not_sa_words_ideas_objects(Subject, now, pseudo_opaque_believes)?
+qqqq(test_not_sa_words_ideas_objects, Subject, now, pseudo_opaque_believes)?
 ;
 ;
 ;
@@ -2435,7 +2435,7 @@ test_not_sa_words_ideas_objects(Subject, now, pseudo_opaque_believes)?
 
 %% 1 positive
 
-test_sa_words(Subject, now, agnostic)?
+qqqq(test_sa_words, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -2509,7 +2509,7 @@ test_sa_words(Subject, now, agnostic)?
 
 %% 1 negative
 	
-test_not_sa_words(Subject, now, agnostic)?
+qqqq(test_not_sa_words, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -2583,7 +2583,7 @@ test_not_sa_words(Subject, now, agnostic)?
 
 %% 2 positive
 	
-test_sa_ideas(Subject, now, agnostic)?
+qqqq(test_sa_ideas, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -2657,7 +2657,7 @@ test_sa_ideas(Subject, now, agnostic)?
 
 %% 2 negative	
 	
-test_not_sa_ideas(Subject, now, agnostic)?
+qqqq(test_not_sa_ideas, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -2731,7 +2731,7 @@ test_not_sa_ideas(Subject, now, agnostic)?
 
 %% 3 positive
 	
-test_sa_objects(Subject, now, agnostic)?
+qqqq(test_sa_objects, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -2805,7 +2805,7 @@ test_sa_objects(Subject, now, agnostic)?
 
 %% 3 negative	
 	
-test_not_sa_objects(Subject, now, agnostic)?
+qqqq(test_not_sa_objects, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -2879,7 +2879,7 @@ test_not_sa_objects(Subject, now, agnostic)?
 
 %% 4 positive
 	
-test_sa_words_ideas(Subject, now, agnostic)?
+qqqq(test_sa_words_ideas, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -2953,7 +2953,7 @@ test_sa_words_ideas(Subject, now, agnostic)?
 
 %% 4 negative	
 	
-test_not_sa_words_ideas(Subject, now, agnostic)?
+qqqq(test_not_sa_words_ideas, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -3027,7 +3027,7 @@ test_not_sa_words_ideas(Subject, now, agnostic)?
 
 %% 5 positive
 	
-test_sa_words_objects(Subject, now, agnostic)?
+qqqq(test_sa_words_objects, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -3101,7 +3101,7 @@ test_sa_words_objects(Subject, now, agnostic)?
 
 %% 5 negative	
 	
-test_not_sa_words_objects(Subject, now, agnostic)?
+qqqq(test_not_sa_words_objects, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -3175,7 +3175,7 @@ test_not_sa_words_objects(Subject, now, agnostic)?
 
 %% 6 positive
 	
-test_sa_ideas_objects(Subject, now, agnostic)?
+qqqq(test_sa_ideas_objects, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -3249,7 +3249,7 @@ test_sa_ideas_objects(Subject, now, agnostic)?
 
 %% 6 negative	
 	
-test_not_sa_ideas_objects(Subject, now, agnostic)?
+qqqq(test_not_sa_ideas_objects, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -3323,7 +3323,7 @@ test_not_sa_ideas_objects(Subject, now, agnostic)?
 
 %% 7 positive
 	
-test_sa_words_ideas_objects(Subject, now, agnostic)?
+qqqq(test_sa_words_ideas_objects, Subject, now, agnostic)?
 ;
 ;
 ;
@@ -3397,7 +3397,7 @@ test_sa_words_ideas_objects(Subject, now, agnostic)?
 
 %% 7 negative	
 	
-test_not_sa_words_ideas_objects(Subject, now, agnostic)?
+qqqq(test_not_sa_words_ideas_objects, Subject, now, agnostic)?
 ;
 ;
 ;

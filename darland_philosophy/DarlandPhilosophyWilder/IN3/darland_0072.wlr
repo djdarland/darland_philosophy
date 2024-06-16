@@ -86,12 +86,12 @@ write_time(Ignore)?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% BELIEF
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-conceptual_feeling_in_ideas(quine_dc, believes, now,
+qqqq(conceptual_feeling_in_ideas, quine_dc, believes, now,
      [quine_denounced_idea_dc, quine_cicero_idea_dc,
       quine_catiline_idea_dc])?
 
 
-conceptual_feeling_in_ideas(quine_dc, believes, now,
+qqqq(conceptual_feeling_in_ideas, quine_dc, believes, now,
      [quine_denounced_idea_dc, quine_tully_idea_dc,
       quine_catiline_idea_dc])?
 
@@ -100,7 +100,7 @@ conceptual_feeling_in_ideas(quine_dc, believes, now,
 
 %% 1 positive
 
-test_sa_words(Subject, Time, believes)?
+qqqq(test_sa_words, Subject, Time, believes)?
 ;
 ;
 ;
@@ -174,7 +174,7 @@ test_sa_words(Subject, Time, believes)?
 
 %% 1 negative
 	
-test_not_sa_words(Subject, Time, believes)?
+qqqq(test_not_sa_words, Subject, Time, believes)?
 ;
 ;
 ;
@@ -248,7 +248,7 @@ test_not_sa_words(Subject, Time, believes)?
 
 %% 2 positive
 	
-test_sa_ideas(Subject, Time, believes)?
+qqqq(test_sa_ideas, Subject, Time, believes)?
 ;
 ;
 ;
@@ -322,7 +322,7 @@ test_sa_ideas(Subject, Time, believes)?
 
 %% 2 negative	
 	
-test_not_sa_ideas(Subject, Time, believes)?
+qqqq(test_not_sa_ideas, Subject, Time, believes)?
 ;
 ;
 ;
@@ -396,7 +396,7 @@ test_not_sa_ideas(Subject, Time, believes)?
 
 %% 3 positive
 	
-test_sa_objects(Subject, Time, believes)?
+qqqq(test_sa_objects, Subject, Time, believes)?
 ;
 ;
 ;
@@ -470,7 +470,7 @@ test_sa_objects(Subject, Time, believes)?
 
 %% 3 negative	
 	
-test_not_sa_objects(Subject, Time, believes)?
+qqqq(test_not_sa_objects, Subject, Time, believes)?
 ;
 ;
 ;
@@ -544,7 +544,7 @@ test_not_sa_objects(Subject, Time, believes)?
 
 %% 4 positive
 	
-test_sa_words_ideas(Subject, Time, believes)?
+qqqq(test_sa_words_ideas, Subject, Time, believes)?
 ;
 ;
 ;
@@ -618,7 +618,7 @@ test_sa_words_ideas(Subject, Time, believes)?
 
 %% 4 negative	
 	
-test_not_sa_words_ideas(Subject, Time, believes)?
+qqqq(test_not_sa_words_ideas, Subject, Time, believes)?
 ;
 ;
 ;
@@ -692,7 +692,7 @@ test_not_sa_words_ideas(Subject, Time, believes)?
 
 %% 5 positive
 	
-test_sa_words_objects(Subject, Time, believes)?
+qqqq(test_sa_words_objects, Subject, Time, believes)?
 ;
 ;
 ;
@@ -766,7 +766,7 @@ test_sa_words_objects(Subject, Time, believes)?
 
 %% 5 negative	
 	
-test_not_sa_words_objects(Subject, Time, believes)?
+qqqq(test_not_sa_words_objects, Subject, Time, believes)?
 ;
 ;
 ;
@@ -840,7 +840,7 @@ test_not_sa_words_objects(Subject, Time, believes)?
 
 %% 6 positive
 	
-test_sa_ideas_objects(Subject, Time, believes)?
+qqqq(test_sa_ideas_objects, Subject, Time, believes)?
 ;
 ;
 ;
@@ -914,7 +914,7 @@ test_sa_ideas_objects(Subject, Time, believes)?
 
 %% 6 negative	
 	
-test_not_sa_ideas_objects(Subject, Time, believes)?
+qqqq(test_not_sa_ideas_objects, Subject, Time, believes)?
 ;
 ;
 ;
@@ -988,7 +988,7 @@ test_not_sa_ideas_objects(Subject, Time, believes)?
 
 %% 7 positive
 	
-test_sa_words_ideas_objects(Subject, Time, believes)?
+qqqq(test_sa_words_ideas_objects, Subject, Time, believes)?
 ;
 ;
 ;
@@ -1062,7 +1062,7 @@ test_sa_words_ideas_objects(Subject, Time, believes)?
 
 %% 7 negative	
 	
-test_not_sa_words_ideas_objects(Subject, Time, believes)?
+qqqq(test_not_sa_words_ideas_objects, Subject, Time, believes)?
 ;
 ;
 ;
@@ -1138,7 +1138,7 @@ test_not_sa_words_ideas_objects(Subject, Time, believes)?
 
 %% 3 positive
 
-test_sa_objects(Subject, Time, believes_truly)?
+qqqq(test_sa_objects, Subject, Time, believes_truly)?
 ;
 ;
 ;
@@ -1212,7 +1212,7 @@ test_sa_objects(Subject, Time, believes_truly)?
 
 %% 3 negative
 	
-test_not_sa_objects(Subject, Time, believes_truly)?
+qqqq(test_not_sa_objects, Subject, Time, believes_truly)?
 ;
 ;
 ;

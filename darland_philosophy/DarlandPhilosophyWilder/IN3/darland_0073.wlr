@@ -12,7 +12,7 @@ write_time(Ignore)?
 
 % for some reason (maybe because relation is dynamic - does not work).
 % check_relation1(I, R)?
-check_relation2(I, R)?
+qqqq(check_relation2, I, R)?
 ;
 ;
 ;
@@ -46,7 +46,7 @@ check_relation2(I, R)?
 ;
 ;
 
-check_corefer(Item1, Item2)?
+qqqq(check_corefer, Item1, Item2)?
 ;
 ;
 ;
@@ -95,7 +95,7 @@ check_corefer(Item1, Item2)?
 	
 
 
-rrrr_check1(S, T, W, I)?
+qqqq(rrrr_check1, S, T, W, I)?
 ;
 ;
 ;
@@ -129,7 +129,7 @@ rrrr_check1(S, T, W, I)?
 ;
 ;
 	
-rrrr_check2(S, T, W, I)?
+qqqq(rrrr_check2, S, T, W, I)?
 ;
 ;
 ;
@@ -159,7 +159,7 @@ rrrr_check2(S, T, W, I)?
 ;
 ;
 
-ssss_check1(S, T, W, I)?
+qqqq(ssss_check1, S, T, W, I)?
 ;
 ;
 ;
@@ -193,7 +193,7 @@ ssss_check1(S, T, W, I)?
 ;
 ;
 	
-ssss_check2(S, T, W, I)?
+qqqq(ssss_check2, S, T, W, I)?
 ;
 ;
 ;
@@ -223,7 +223,7 @@ ssss_check2(S, T, W, I)?
 ;
 ;
 
-tttt_check1(S, T, W, I)?
+qqqq(tttt_check1, S, T, W, I)?
 ;
 ;
 ;
@@ -257,7 +257,7 @@ tttt_check1(S, T, W, I)?
 ;
 ;
 	
-tttt_check2(S, T, W, I)?
+qqqq(tttt_check2, S, T, W, I)?
 ;
 ;
 ;
@@ -287,7 +287,7 @@ tttt_check2(S, T, W, I)?
 ;
 ;
 
-check_arity(I,A)?
+qqqq(check_arity, I,A)?
 ;
 ;
 ;
@@ -317,7 +317,7 @@ check_arity(I,A)?
 ;
 ;
 
-check_type(I,A)?
+qqqq(check_type, I,A)?
 ;
 ;
 ;
@@ -347,7 +347,7 @@ check_type(I,A)?
 ;
 ;
 
-check_number(I,A)?
+qqqq(check_number, I,A)?
 ;
 ;
 ;
@@ -377,7 +377,7 @@ check_number(I,A)?
 ;
 ;
 
-check_dc1(Dc, Aos)?
+qqqq(check_dc1, Dc, Aos)?
 ;
 ;
 ;
@@ -437,7 +437,7 @@ check_dc1(Dc, Aos)?
 ;
 ;
 
-rrrr_check3(S, T, W, I)?
+qqqq(rrrr_check3, S, T, W, I)?
 ;
 ;
 ;
@@ -471,7 +471,7 @@ rrrr_check3(S, T, W, I)?
 ;
 ;
 
-ssss_check3(S, T, I, O)?
+qqqq(ssss_check3, S, T, I, O)?
 ;
 ;
 ;

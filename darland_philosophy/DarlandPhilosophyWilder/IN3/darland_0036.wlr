@@ -86,24 +86,24 @@ write_time(Ignore)?
 
 %% words_ideas_objects
 
-test_understanding_agrees_words_objects(quine , tom, now, now,
+qqqq(test_understanding_agrees_words_objects, quine , tom, now, now,
 			       [[denounced_word, denounced],
 				[cicero_word, cicero],
 				[catiline_word, catiline]])?
 	
 
-test_understanding_agrees_words_objects(tom, quine, now, now,
+qqqq(test_understanding_agrees_words_objects, tom, quine, now, now,
 			       [[denounced_word, denounced],
 				[tully_word, cicero],
 				[catiline_word, catiline]])?
 	
-test_understanding_agrees_words_objects(tom, quine, now, now,
+qqqq(test_understanding_agrees_words_objects, tom, quine, now, now,
 			       [[denounced_word, denounced],
 				[tully_word, tully],
 				[catiline_word, catiline]])?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-test_understanding_agrees_objects( quine , tom, now, now,
+qqqq(test_understanding_agrees_objects, quine , tom, now, now,
 			       [[denounced],
 				[cicero],
 				[catiline]])?

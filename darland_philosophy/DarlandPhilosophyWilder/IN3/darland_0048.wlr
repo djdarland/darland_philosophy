@@ -62,10 +62,14 @@ trace_input(true)?
 
 write_time(Ignore)?
 
-believes_means(tom, now, uuuu, cicero_word, cicero)?
+qqqq(believes_means, tom, now, uuuu, cicero_word, cicero)?
 
 
-believes_means(tom, now, uuuu, denounced_word, denounced)?
+qqqq(believes_means, tom, now, uuuu, denounced_word, denounced)?
 
 
-believes_means(tom, now, uuuu, catiline_word, catiline)?
+qqqq(believes_means, tom, now, uuuu, catiline_word, catiline)?
+
+write_stats(Ignore)?
+
+halt?

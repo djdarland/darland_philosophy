@@ -62,47 +62,50 @@ trace_input(true)?
 write_time(Ignore)?
 
 %% 1
-conceptual_feeling_words(earther_dc,
+qqqq(conceptual_feeling_words, earther_dc,
 			 understands, at_some_time,
 			 [[wet_word_dc], [water_word_dc]])?
 ;
 ;
 
-conceptual_feeling_words(twin_earther_dc,
+qqqq(conceptual_feeling_words, twin_earther_dc,
 			 understands, at_some_time,
 			 [[wet_word_dc], [water_word_dc]])?
 
 %% 2
 
-conceptual_feeling_in_ideas(earther_dc, understands, at_some_time,
+qqqq(conceptual_feeling_in_ideas, earther_dc, understands, at_some_time,
 			    [[earther_wet_idea_dc],
 			     [earther_water_idea_dc]])?
 
-conceptual_feeling_in_ideas(twin_earther_dc, understands, at_some_time,
+qqqq(conceptual_feeling_in_ideas, twin_earther_dc, understands, at_some_time,
 			    [[twin_earther_wet_idea_dc],
 			     [twin_earther_water_idea_dc]])?
 
 %% 3
 
-conceptual_feeling_objects(earther_dc, understands, at_some_time,
+qqqq(conceptual_feeling_objects, earther_dc, understands, at_some_time,
 			   [[wet_rel], [h2o_dc]])?
-conceptual_feeling_objects(earther_dc, understands, at_some_time,
+
+qqqq(conceptual_feeling_objects, earther_dc, understands, at_some_time,
 			   [[wet_rel], [xyz_dc]])?
-conceptual_feeling_objects(twin_earther_dc, understands, at_some_time,
+
+qqqq(conceptual_feeling_objects, twin_earther_dc, understands, at_some_time,
 			   [[wet_rel], [h2o_dc]])?
-conceptual_feeling_objects(twin_earther_dc, understands, at_some_time,
+
+qqqq(conceptual_feeling_objects, twin_earther_dc, understands, at_some_time,
 			   [[wet_rel], [xyz_dc]])?
 
 %% 4
 	  
-conceptual_feeling_words_ideas(earther_dc,
+qqqq(conceptual_feeling_words_ideas, earther_dc,
 			       understands, at_some_time,
 			       [[wet_word_dc,
 				 earther_wet_idea_dc],
 				[water_word_dc,
 				earther_water_idea_dc]])?
 
-conceptual_feeling_words_ideas(twin_earther_dc,
+qqqq(conceptual_feeling_words_ideas, twin_earther_dc,
 			       understands, at_some_time,
 			       [[wet_word_dc,
 				 twin_earther_wet_idea_dc],
@@ -110,29 +113,29 @@ conceptual_feeling_words_ideas(twin_earther_dc,
 				twin_earther_water_idea_dc]])?
 
 %% 5
-conceptual_feeling_words_objects(earther_dc, understands,
+qqqq(conceptual_feeling_words_objects, earther_dc, understands,
 				 at_some_time,
 				 [[wet_word_dc, wet_rel],
 				  [water_word_dc, h2o_dc]])?
 
-conceptual_feeling_words_objects(earther_dc, understands,
+qqqq(conceptual_feeling_words_objects, earther_dc, understands,
 				 at_some_time,
 				 [[wet_word_dc, wet_rel],
 				  [water_word_dc, xyz_dc]])?
 
-conceptual_feeling_words_objects(twin_earther_dc, understands,
+qqqq(conceptual_feeling_words_objects, twin_earther_dc, understands,
 				 at_some_time,
 				 [[wet_word_dc, wet_rel],
 				  [water_word_dc, h2o_dc]])?
 
-conceptual_feeling_words_objects(twin_earther_dc, understands,
+qqqq(conceptual_feeling_words_objects, twin_earther_dc, understands,
 				 at_some_time,
 				 [[wet_word_dc, wet_rel],
 				  [water_word_dc, xyz_dc]])?
 
 %% 6
 
-conceptual_feeling_ideas_objects( earther_dc,
+qqqq(conceptual_feeling_ideas_objects, earther_dc,
 				  understands,
 				  at_some_time,
 				  [[earther_wet_idea_dc,
@@ -140,7 +143,7 @@ conceptual_feeling_ideas_objects( earther_dc,
 				   [earther_water_idea_dc,
 				    h2o_dc]])?
 
-conceptual_feeling_ideas_objects( twin_earther_dc,
+qqqq(conceptual_feeling_ideas_objects, twin_earther_dc,
 				  understands,
 				  at_some_time,
 				  [[twin_earther_wet_idea_dc,
@@ -150,7 +153,7 @@ conceptual_feeling_ideas_objects( twin_earther_dc,
 
 %% 7
 	  
-conceptual_feeling_words_ideas_objects(earther_dc,
+qqqq(conceptual_feeling_words_ideas_objects, earther_dc,
 				       understands,
 				       at_some_time,
 				       [[wet_word_dc,
@@ -160,7 +163,7 @@ conceptual_feeling_words_ideas_objects(earther_dc,
 					 earther_water_idea_dc,
 					 h2o_dc]])?
 
-conceptual_feeling_words_ideas_objects(twin_earther_dc,
+qqqq(conceptual_feeling_words_ideas_objects, twin_earther_dc,
 				       understands,
 				       at_some_time,
 				       [[wet_word_dc,
@@ -172,11 +175,11 @@ conceptual_feeling_words_ideas_objects(twin_earther_dc,
 
 
 
-corefer([h2o_dc, xyz_dc])?
+qqqq(corefer, [h2o_dc, xyz_dc])?
 	
 %% 1 positive
 
-test_sa_words(Subject, now, understands)?
+qqqq(test_sa_words, Subject, now, understands)?
 ;
 ;
 ;
@@ -250,7 +253,7 @@ test_sa_words(Subject, now, understands)?
 
 %% 1 negative
 	
-test_not_sa_words(Subject, now, understands)?
+qqqq(test_not_sa_words, Subject, now, understands)?
 ;
 ;
 ;
@@ -324,7 +327,7 @@ test_not_sa_words(Subject, now, understands)?
 
 %% 2 positive
 	
-test_sa_ideas(Subject, now, understands)?
+qqqq(test_sa_ideas, Subject, now, understands)?
 ;
 ;
 ;
@@ -398,7 +401,7 @@ test_sa_ideas(Subject, now, understands)?
 
 %% 2 negative	
 	
-test_not_sa_ideas(Subject, now, understands)?
+qqqq(test_not_sa_ideas, Subject, now, understands)?
 ;
 ;
 ;
@@ -472,7 +475,7 @@ test_not_sa_ideas(Subject, now, understands)?
 
 %% 3 positive
 	
-test_sa_objects(Subject, now, understands)?
+qqqq(test_sa_objects, Subject, now, understands)?
 ;
 ;
 ;
@@ -546,7 +549,7 @@ test_sa_objects(Subject, now, understands)?
 
 %% 3 negative	
 	
-test_not_sa_objects(Subject, now, understands)?
+qqqq(test_not_sa_objects, Subject, now, understands)?
 ;
 ;
 ;
@@ -620,7 +623,7 @@ test_not_sa_objects(Subject, now, understands)?
 
 %% 4 positive
 	
-test_sa_words_ideas(Subject, now, understands)?
+qqqq(test_sa_words_ideas, Subject, now, understands)?
 ;
 ;
 ;
@@ -694,7 +697,7 @@ test_sa_words_ideas(Subject, now, understands)?
 
 %% 4 negative	
 	
-test_not_sa_words_ideas(Subject, now, understands)?
+qqqq(test_not_sa_words_ideas, Subject, now, understands)?
 ;
 ;
 ;
@@ -768,7 +771,7 @@ test_not_sa_words_ideas(Subject, now, understands)?
 
 %% 5 positive
 	
-test_sa_words_objects(Subject, now, understands)?
+qqqq(test_sa_words_objects, Subject, now, understands)?
 ;
 ;
 ;
@@ -842,7 +845,7 @@ test_sa_words_objects(Subject, now, understands)?
 
 %% 5 negative	
 	
-test_not_sa_words_objects(Subject, now, understands)?
+qqqq(test_not_sa_words_objects, Subject, now, understands)?
 ;
 ;
 ;
@@ -916,7 +919,7 @@ test_not_sa_words_objects(Subject, now, understands)?
 
 %% 6 positive
 	
-test_sa_ideas_objects(Subject, now, understands)?
+qqqq(test_sa_ideas_objects, Subject, now, understands)?
 ;
 ;
 ;
@@ -990,7 +993,7 @@ test_sa_ideas_objects(Subject, now, understands)?
 
 %% 6 negative	
 	
-test_not_sa_ideas_objects(Subject, now, understands)?
+qqqq(test_not_sa_ideas_objects, Subject, now, understands)?
 ;
 ;
 ;
@@ -1064,7 +1067,7 @@ test_not_sa_ideas_objects(Subject, now, understands)?
 
 %% 7 positive
 	
-test_sa_words_ideas_objects(Subject, now, understands)?
+qqqq(test_sa_words_ideas_objects, Subject, now, understands)?
 ;
 ;
 ;
@@ -1138,7 +1141,7 @@ test_sa_words_ideas_objects(Subject, now, understands)?
 
 %% 7 negative	
 	
-test_not_sa_words_ideas_objects(Subject, now, understands)?
+qqqq(test_not_sa_words_ideas_objects, Subject, now, understands)?
 ;
 ;
 ;
@@ -1210,7 +1213,7 @@ test_not_sa_words_ideas_objects(Subject, now, understands)?
 ;
 ;
 
-corefer([h2o_dc, xyz_dc])?
+qqqq(corefer, [h2o_dc, xyz_dc])?
 	
 write_stats(Ignore)?
 

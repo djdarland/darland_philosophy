@@ -94,13 +94,13 @@ write_time(Ignore)?
 %% only guarantees word & idea exist
 %% TRUE
 
-exists_essentially_singular_word( tom, now, denounced_word)? 
+qqqq(exists_essentially_singular_word, tom, now, denounced_word)? 
 
 %% 2
 %% only quarantees essentially_singular idea exists 
 
 %% TRUE
-exists_essentially_singular_idea( tom, now, tom_denounced_idea)?
+qqqq(exists_essentially_singular_idea, tom, now, tom_denounced_idea)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
@@ -108,7 +108,7 @@ exists_essentially_singular_idea( tom, now, tom_denounced_idea)?
 %% Guarantees Object with Idea exists
 
 %% TRUE
-exists_essentially_singular_object( tom, now, cicero)?
+qqqq(exists_essentially_singular_object, tom, now, cicero)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -116,28 +116,28 @@ exists_essentially_singular_object( tom, now, cicero)?
 %% guarantees word and idea
 
 %% TRUE
-exists_essentially_singular_word_idea( tom, now, cicero_word, tom_cicero_idea)?
+qqqq(exists_essentially_singular_word_idea, tom, now, cicero_word, tom_cicero_idea)?
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5
 %% guarantees word & object
 
 %% TRUE
-exists_essentially_singular_word_object( tom, now, cicero_word, cicero)?
+qqqq(exists_essentially_singular_word_object, tom, now, cicero_word, cicero)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
 %% TRUE
-exists_essentially_singular_idea_object( tom, now, tom_cicero_idea, cicero)?
+qqqq(exists_essentially_singular_idea_object, tom, now, tom_cicero_idea, cicero)?
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %%
 
 %% TRUE
-exists_essentially_singular_word_idea_object( tom, now, cicero_word, tom_cicero_idea,
+qqqq(exists_essentially_singular_word_idea_object, tom, now, cicero_word, tom_cicero_idea,
 				 cicero)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,7 +154,7 @@ exists_essentially_singular_word_idea_object( tom, now, cicero_word, tom_cicero_
 %% Guarantees Object with Idea exists
 
 %% TRUE
-equal_essentially_singular_objects( tom, now, cicero, cicero)?
+qqqq(equal_essentially_singular_objects, tom, now, cicero, cicero)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -166,24 +166,20 @@ equal_essentially_singular_objects( tom, now, cicero, cicero)?
 %% guarantees word & object
 
 %% TRUE
-equal_essentially_singular_words_objects( quine, now, cicero_word, tully_word,
-			     cicero, cicero)?
+qqqq(equal_essentially_singular_words_objects, quine, now, cicero_word, tully_word, cicero, cicero)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
 %% TRUE
-equal_essentially_singular_ideas_objects( quine, now, quine_cicero_idea, quine_tully_idea,
-			      cicero, cicero)?
+qqqq(equal_essentially_singular_ideas_objects( quine, now, quine_cicero_idea, quine_tully_idea, cicero, cicero)?
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %%
 %% TRUE
-equal_essentially_singular_words_ideas_objects( quine, now, cicero_word, tully_word,
-				   quine_cicero_idea, quine_tully_idea,
-				   cicero, cicero)?
+qqqq(equal_essentially_singular_words_ideas_objects, quine, now, cicero_word, tully_word, quine_cicero_idea, quine_tully_idea, cicero, cicero)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now functions -- only applies with object specified
@@ -199,7 +195,7 @@ equal_essentially_singular_words_ideas_objects( quine, now, cicero_word, tully_w
 %% Guarantees Object exists
 
 %% TRUE
-function_essentially_singular_object( tom, now, roman, catiline)?
+qqqq(function_essentially_singular_object, tom, now, roman, catiline)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -211,23 +207,20 @@ function_essentially_singular_object( tom, now, roman, catiline)?
 %% guarantees word & object
 
 %% TRUE
-function_essentially_singular_word_object( tom, now, roman_word, catiline_word, catiline)?
+qqqq(function_essentially_singular_word_object, tom, now, roman_word, catiline_word, catiline)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
 %% TRUE
-function_essentially_singular_idea_object( tom, now, roman_word, tom_catiline_idea,
-			     catiline)?
+qqqq(function_essentially_singular_idea_object( tom, now, roman_word, tom_catiline_idea, catiline)?
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %%
 %% TRUE
-function_essentially_singular_word_idea_object( tom, now,
-				   roman_word, catiline_word,
-				   tom_catiline_idea, catiline)?
+qqqq(function_essentially_singular_word_idea_object( tom, now, roman_word, catiline_word, tom_catiline_idea, catiline)?
 
 write_stats(Ignore)?
 

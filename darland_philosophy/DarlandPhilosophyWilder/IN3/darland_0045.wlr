@@ -63,7 +63,7 @@ trace_input(true)?
 write_time(Ignore)?
 
 
-same_sense_idea(tom, quine, now, now, Idea1, Idea2, Object)?
+qqqq(same_sense_idea, tom, quine, now, now, Idea1, Idea2, Object)?
 ;
 ;	
 ;
@@ -78,7 +78,7 @@ same_sense_idea(tom, quine, now, now, Idea1, Idea2, Object)?
 ;	
 ;
 
-same_sense_word(tom, quine, now, now, Word1, Word2, Object)?
+qqqq(same_sense_word, tom, quine, now, now, Word1, Word2, Object)?
 ;
 ;	
 ;
@@ -93,18 +93,18 @@ same_sense_word(tom, quine, now, now, Word1, Word2, Object)?
 ;	
 ;
 	  
-same_sense_thought(tom, quine, now, now,
+qqqq(same_sense_thought, tom, quine, now, now,
 		    [tom_denounced_idea, tom_cicero_idea, tom_catiline_idea],
 		    [quine_denounced_idea, quine_cicero_idea, quine_catiline_idea] )?
 
 
-same_sense_thought(tom, quine, now, now,
+qqqq(same_sense_thought, tom, quine, now, now,
 		    [tom_denounced_idea, tom_tully_idea, tom_catiline_idea],
 		    [quine_denounced_idea, quine_cicero_idea, quine_catiline_idea] )?
 
 
 
-same_sense_sentence(tom, quine, now, now,
+qqqq(same_sense_sentence, tom, quine, now, now,
 		    [denounced_word, tully_word, catiline_word],
 		    [denounced_word, cicero_word, catiline_word] )?
 
