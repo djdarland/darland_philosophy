@@ -451,8 +451,10 @@ X = catiline.
 > %% TRUE
 > function_plural_word( tom, now, human_word, human_class_word)?
 
+*** Yes
+--1> 
+
 *** No
-> 
 > %% FALSE some humans are not roman
 > function_plural_word( tom, now, roman_word, human_class_word)?
 
@@ -470,8 +472,10 @@ X = catiline.
 > %% TRUE
 > function_plural_idea( tom, now, tom_human_idea, quine_human_class_idea)?
 
+*** Yes
+--1> 
+
 *** No
-> 
 > %% FALSE
 > function_plural_idea( tom, now, tom_roman_idea, quine_human_class_idea)?
 
@@ -490,8 +494,10 @@ X = catiline.
 > function_plural_word_idea( tom, now, human_word, human_class_word,
 |    				 tom_human_class_idea)?
 
+*** Yes
+--1> 
+
 *** No
-> 
 > %% FALSE
 > function_plural_word_idea( tom, now, roman_word, human_class_word,
 |    				 tom_roman_class_idea)?
@@ -520,11 +526,14 @@ X = flipper, Y = tom_flipper_class_idea.
 > ;
 > 
 > inclusion_plural_words_objects( tom, now, human_class_word, american_class_word)?
-
-*** Yes
---1> 	
+Word1 A = human_class_word
+Word2 A = american_class_word
+Word1  = american_class_word
+Word2  = human_class_word
+Object  = cicero
 
 *** No
+> 	
 > inclusion_plural_ideas_objects( tom, now, tom_human_class_idea, tom_american_class_idea)?
 
 *** No

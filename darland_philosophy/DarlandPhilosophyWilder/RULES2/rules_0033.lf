@@ -1,5 +1,5 @@
 
-%% Copyright (C) 2017, 2019, 2020, 2021, 2023 Dennis J. Darland
+%% Copyright (C) 2017, 2019, 2020, 2021, 2023, 2024 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
 
@@ -403,7 +403,7 @@ function_fails(Function, Idea) :-
 
 	tttt(Subject, Time, Idea, Object),
 
-	\+ neg_qq([Function, Object]).
+	\+ pos_qq( [Function, Object]).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
@@ -481,21 +481,20 @@ included_in( Universal_1, Universal_2) :-
 %% Word1 includes all members of Word2
 
 
-inclusion_plural_words_objects(Subject, Time, Word1, Word2) :-
-
-	not_inclusion_plural_words_objects(Subject, Time, Word1, Word2).
-
-
 not_inclusion_plural_words_objects( Subject, Time, Word1, Word2) :-
 
-	member_plural_word_object( Subject, Time, Word2, Object),
+    member_plural_word_object( Subject, Time, Word2, Object),
 
-	not_member_plural_word_object( Subject, Time, Word1, Object).
+    \+ member_plural_word_object( Subject, Time, Word1, Object).
 
 
-not_member_plural_word_object(Subject, Time, Word, Object) :-
 
-	\+ member_plural_word_object(Subject, Time, Word, Object).
+inclusion_plural_words_objects(Subject, Time, Word1, Word2) :-
+
+	\+ not_inclusion_plural_words_objects(Subject, Time, Word2, Word1).
+
+% qqqq(not_member_plural_word_object,Subject, Time, Word, Object) :-
+% 	\+ qqqq(member_plural_word_object,Subject, Time, Word, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
@@ -503,42 +502,39 @@ not_member_plural_word_object(Subject, Time, Word, Object) :-
 %% Idea1 includes all members of Idea2
 
 
-inclusion_plural_ideas_objects( Subject, Time, Idea1, Idea2) :-
-
-	\+ not_inclusion_plural_ideas_objects( Subject, Time, Idea1, Idea2).
-
 
 not_inclusion_plural_ideas_objects( Subject, Time, Idea1, Idea2) :-
 
 	member_plural_idea_object( Subject, Time, Idea2, Object),
 
-	not_member_plural_idea_object( Subject, Time, Idea1, Object).
+	\+ member_plural_idea_object( Subject, Time, Idea1, Object).
 
 
-not_member_plural_idea_object( Subject, Time, Idea, Object) :-
+inclusion_plural_ideas_objects( Subject, Time, Idea1, Idea2) :-
 
-	\+ member_plural_idea_object( Subject, Time, Idea, Object).
+	\+ not_inclusion_plural_ideas_objects( Subject, Time, Idea2, Idea1).
+% qqqq(not_member_plural_idea_object, Subject, Time, Idea, Object) :-
+%	\+ qqqq(member_plural_idea_object, Subject, Time, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
 
 
-inclusion_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2) :-
-
-	\+ not_inclusion_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2).
-
-
 not_inclusion_plural_words_ideas_objects( Subject, Time, Word1, Word2, Idea1, Idea2) :-
 
 	member_plural_word_idea_object( Subject, Time, Word2, Idea2, Object),
 
-	not_member_plural_word_idea_object( Subject, Time, Word1, Idea1, Object).
+	\+ member_plural_word_idea_object( Subject, Time, Word1, Idea1, Object).
 
 
-not_member_plural_word_idea_object(Subject, Time, Word, Idea, Object) :-
+inclusion_plural_words_ideas_objects(Subject, Time, Word2, Word1, Idea2, Idea1) :-
 
-	\+ member_plural_word_idea_object(Subject, Time, Word, Idea, Object).
+	\+ not_inclusion_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea2, Idea1).
+
+
+%qqqq(not_member_plural_word_idea_object,Subject, Time, Word, Idea, Object) :-
+%	\+ qqqq(member_plural_word_idea_object,Subject, Time, Word, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now in_intersection -- only applies with object specified
@@ -711,9 +707,9 @@ in_first_minus_second( Universal_1, Universal_2, X) :-
 
 in_w1_minus_w2_words_objects(Subject, Time, Word1, Word2, Object) :-
 
-	member_plural_word_object(Subject, Time, Word1, Object).
+	member_plural_word_object(Subject, Time, Word1, Object),
 
-	not_member_plural_word_object(Subject, Time, Word2, Object).
+	\+ member_plural_word_object(Subject, Time, Word2, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
@@ -724,7 +720,7 @@ in_i1_minus_i2_ideas_objects( Subject, Time, Idea1, Idea2, Object) :-
 
 	member_plural_idea_object( Subject, Time, Idea1, Object),
 
-	not_member_plural_idea_object( Subject, Time, Idea2, Object).
+	\+ member_plural_idea_object( Subject, Time, Idea2, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
@@ -734,9 +730,15 @@ in_wi1_minus_wi2_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2, 
 
 	member_plural_word_idea_object(Subject, Time, Word1, Idea1, Object),
 
-	not_member_plural_word_idea_object(Subject, Time, Word2, Idea2, Object).
+	\+ member_plural_word_idea_object(Subject, Time, Word2, Idea2, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% I started working on Arithmetic, It is difficult to do in
+%% philosophically satisfactory way in WildLIFE.
+%% Of course Arithmetic is built in to WildLIFE - but not philosophically.
+%% What follows was start of my effort, but not included in tests.
 
 %% now zero
 %% 0
@@ -752,7 +754,7 @@ in_zero( F) :-
 in_zero_plural_word(Subject, Time, Word) :-
 	
 
-	not_member_plural_word(Subject, Time, Word, Object).
+	\+ member_plural_word(Subject, Time, Word, Object).
 
 %% 5
 %% guarantees word 
@@ -760,7 +762,7 @@ in_zero_plural_word(Subject, Time, Word) :-
 
 in_zero_plural_word(Subject, Time, Word) :-
 
-	not_member_plural_word(Subject, Time, Word, Object).
+	\+ member_plural_word(Subject, Time, Word, Object).
 
 %% 6
 %% guarantees idea
@@ -768,7 +770,7 @@ in_zero_plural_word(Subject, Time, Word) :-
 
 in_zero_plural_idea(Subject, Time, Idea) :-
 
-	not_member_plural_idea(Subject, Time, Idea, Object).
+	\+ member_plural_idea(Subject, Time, Idea, Object).
 
 
 %% 7
@@ -777,7 +779,10 @@ in_zero_plural_idea(Subject, Time, Idea) :-
 
 in_zero_plural_word_idea_object(Subject, Time, Word, Idea) :-
 
-	not_member_plural_word_idea_object(Subject, Time, Word, Idea, Object).
+	\+ member_plural_word_idea_object(Subject, Time, Word, Idea, Object).
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now one

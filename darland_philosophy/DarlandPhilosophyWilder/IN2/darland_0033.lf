@@ -492,11 +492,23 @@ included_in( human, dolphin)?
 ;
 ;
 
+%% Inclusion of first in second
+
 
 inclusion_plural_words_objects( tom, now, human_class_word, american_class_word)?
 	
 
+inclusion_plural_words_objects( tom, now, american_class_word, human_class_word)?
+	
+
+inclusion_plural_words_objects( tom, now, human_class_word, human_class_word)?
+	
+
 inclusion_plural_ideas_objects( tom, now, tom_human_class_idea, tom_american_class_idea)?
+
+
+inclusion_plural_ideas_objects( tom, now, tom_american_class_idea, tom_human_class_idea)?
+
 
 
 inclusion_plural_words_ideas_objects( tom, now, human_class_word, tom_human_class_idea, american_class_word, tom_american_class_idea)?
@@ -569,96 +581,6 @@ in_wi1_minus_wi2_words_ideas_objects( tom, now, human_class_word, roman_class_wo
 
 in_wi1_minus_wi2_words_ideas_objects( tom, now, human_class_word, roman_class_word, tom_human_class_idea, tom_roman_class_idea, russell)?
 
-% qqqq(in_zero, )?
-
-
-in_one( intelligent_fish)?
-;
-;
-
-
-in_one( human)?
-;
-;
-
-
-in_two( dolphin)?
-;
-;
-
-
-in_two( human)?
-;
-;
-
-
-in_one_plural_word( tom, now, flipper_class_word)?
-
-
-in_one_plural_word( tom, now, american_class_word)?
-
-
-in_one_plural_idea( tom, now, tom_flipper_class_idea)?
-
-
-in_one_plural_idea( tom, now, tom_american_class_idea)?
-
-
-in_one_plural_word_idea( tom, now, flipper_class_word, tom_flipper_class_idea)?
-
-
-in_one_plural_word_idea( tom, now, american_class_word, tom_american_class_idea)?
-
-
-in_two_plural_word( tom, now, american_class_word)?
-
-
-in_two_plural_word( tom, now, flipper_class_word)?
-
-
-in_two_plural_idea( tom, now, tom_american_class_idea)?
-
-
-in_two_plural_idea( tom, now, tom_flipper_class_idea)?
-
-
-in_two_plural_word_idea( tom, now, american_class_word, tom_american_class_idea)?
-
-
-in_two_plural_word_idea( tom, now, flipper_class_word, tom_flipper_class_idea)?
-
-
-instantiation_of_universal( intelligent_fish)?
-;
-;
-
-
-instantiation_of_universal( dolphin)?
-;
-;
-;
-
-
-instantiation_of_universal( intelligent_dog)?
-;
-;
-;
-
-
-instantiation_of_predecessor_of_instantiation( intelligent_fish, dolphin,[flipper],[flipper,sam])?
-;
-;
-;
-
-
-instantiation_of_predecessor_of_instantiation( dolphin, intelligent_dog,[flipper,sam],[lassie,laddie,fido])?
-;
-;
-
-
-instantiation_of_predecessor_of_instantiation( intelligent_dog, dolphin, [lassie,laddie,fido], [flipper,sam])?
-;
-;
 
 write_stats(Ignore)?
 

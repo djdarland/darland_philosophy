@@ -1,25 +1,7 @@
 1,2d0
 < Ported to Linux and Cygwin December 2022 after many efforts since 1995
 < By Dennis J. Darland dennis.darland@hotmail.com
-453a452,454
-> *** Yes
-> --1> 
-> 
-455d455
-< > 
-472a473,475
-> *** Yes
-> --1> 
-> 
-474d476
-< > 
-492a495,497
-> *** Yes
-> --1> 
-> 
-494d498
-< > 
-506,687d509
+512,696d509
 < > 
 < > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 < > %% Start testing new predicates 9/21/2021 
@@ -37,11 +19,14 @@
 < > ;
 < > 
 < > inclusion_plural_words_objects( tom, now, human_class_word, american_class_word)?
-< 
-< *** Yes
-< --1> 	
+< Word1 A = human_class_word
+< Word2 A = american_class_word
+< Word1  = american_class_word
+< Word2  = human_class_word
+< Object  = cicero
 < 
 < *** No
+< > 	
 < > inclusion_plural_ideas_objects( tom, now, tom_human_class_idea, tom_american_class_idea)?
 < 
 < *** No

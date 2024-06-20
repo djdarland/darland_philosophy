@@ -126,6 +126,7 @@ qqqq(tttt, tom, now, tom_dolphin_class_idea, dolphin).
 qqqq(tttt, tom, now, tom_roman_class_idea, cicero).
 qqqq(tttt, tom, now, tom_roman_class_idea, catiline).
 qqqq(tttt, tom, now, tom_human_class_idea, cicero).
+qqqq(tttt, tom, now, tom_human_class_idea, quine).
 qqqq(tttt, tom, now, tom_human_class_idea, catiline).
 qqqq(tttt, tom, now, tom_human_class_idea, russell).  %% one more to diff roman
 qqqq(tttt, tom, now, tom_american_class_idea, russell).  %% one more to diff roman
@@ -149,6 +150,13 @@ qqqq(tttt, quine, now, quine_featherless_biped_class_idea, russell).
 %% uttered. I only require that there was an relation_idea and
 %% ideas of objects. They never even need to be related or believed.
 %% Only ideas have arities and types.
+%% There could be an idea of an idea, but it would have to have
+%% one type higher.
+%% So if there is any idea, and there is a finite number of ideas,
+%% there must be ideas of which there is no idea.
+%% as ideas are objects, there are objects of which there is no idea,
+%% so idealism is false. [Assuming there cannot be an infinite number
+%% of ideas.]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 qqqq(arity_idea, tom_denounced_idea, 2).
 qqqq(arity_idea, tom_roman_idea, 1).
@@ -305,7 +313,7 @@ pos_qq([american, quine]).
 
 pos_qq([denounced, cicero, catiline]).
 
-%% Negative facts -- indicated by qqqq5
+%% Negative facts -- indicated by neg_qq
 
 neg_qq([denounced, russell, catiline]).
 

@@ -1,4 +1,4 @@
-1,61d0
+1,59d0
 < *** Error: the predicate 'user#member_plural_word_object' may not be changed.
 < *** Error: the predicate 'user#member_plural_idea_object' may not be changed.
 < *** Error: the predicate 'user#member_plural_word_idea_object' may not be changed.
@@ -27,10 +27,8 @@
 < *** Error: the predicate 'user#not_member_plural_word_object' may not be changed.
 < *** Error: the predicate 'user#inclusion_plural_ideas_objects' may not be changed.
 < *** Error: the predicate 'user#not_inclusion_plural_ideas_objects' may not be changed.
-< *** Error: the predicate 'user#not_member_plural_idea_object' may not be changed.
 < *** Error: the predicate 'user#inclusion_plural_words_ideas_objects' may not be changed.
 < *** Error: the predicate 'user#not_inclusion_plural_words_ideas_objects' may not be changed.
-< *** Error: the predicate 'user#not_member_plural_word_idea_object' may not be changed.
 < *** Error: the predicate 'user#in_intersection_plural_words_objects' may not be changed.
 < *** Error: the predicate 'user#in_intersection_plural_ideas_objects' may not be changed.
 < *** Error: the predicate 'user#in_intersection_plural_words_ideas_objects' may not be changed.
