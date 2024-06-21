@@ -1,3 +1,4 @@
+
 %% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
@@ -23,43 +24,55 @@
 %%
 %%
 
-same_sense_idea(Subject1, Subject2, Time1, Time2, Idea1, Idea2, Object) :-
-	ssss(Subject1, Time1, Idea1, Object),
-	ssss(Subject2, Time2, Idea2, Object).
 
-same_sense_word(Subject1, Subject2, Time1, Time2, Word1, Word2, Object) :-
-	rrss(Subject1, Time1, Word1, Object),
-	rrss(Subject2, Time2, Word2, Object).
+same_sense_idea( Subject1, Subject2, Time1, Time2, Idea1, Idea2, Object) :-
 
+	ssss( Subject1, Time1, Idea1, Object),
+
+	ssss( Subject2, Time2, Idea2, Object).
 
 
+same_sense_word( Subject1, Subject2, Time1, Time2, Word1, Word2, Object) :-
+
+	rrss( Subject1, Time1, Word1, Object),
+
+	rrss( Subject2, Time2, Word2, Object).
 
 
+same_sense_thought( Subject1, Subject2, Time1, Time2, List1, List2) :-
 
-same_sense_thought(Subject1, Subject2, Time1, Time2, List1, List2) :-
-	match_thought_lists(Subject1, Subject2, Time1, Time2, List1, List2).
+	match_thought_lists( Subject1, Subject2, Time1, Time2, List1, List2).
 
-match_thought_lists(Subject1, Subject2, Time1, Time2,
+
+match_thought_lists( Subject1, Subject2, Time1, Time2,
 		    [], []).
 
-match_thought_lists(Subject1, Subject2, Time1, Time2,
+
+match_thought_lists( Subject1, Subject2, Time1, Time2,
 		    [Idea1 | List1], [Idea2 |List2]) :-
-	same_sense_idea(Subject1, Subject2, Time1, Time2,
+
+	same_sense_idea( Subject1, Subject2, Time1, Time2,
 			Idea1, Idea2, Object),
-	match_thought_lists(Subject1, Subject2, Time1, Time2,
+
+	match_thought_lists( Subject1, Subject2, Time1, Time2,
 		    List1,List2).
 	
-same_sense_sentence(Subject1, Subject2, Time1, Time2, List1, List2) :-
-	match_sentence_lists(Subject1, Subject2, Time1, Time2, List1, List2).
 
-match_sentence_lists(Subject1, Subject2, Time1, Time2,
+same_sense_sentence( Subject1, Subject2, Time1, Time2, List1, List2) :-
+
+	match_sentence_lists( Subject1, Subject2, Time1, Time2, List1, List2).
+
+
+match_sentence_lists( Subject1, Subject2, Time1, Time2,
 		    [], []).
 
-match_sentence_lists(Subject1, Subject2, Time1, Time2,
+
+match_sentence_lists( Subject1, Subject2, Time1, Time2,
 		    [Word1 | List1], [Word2 |List2]) :-
-	same_sense_word(Subject1, Subject2, Time1, Time2,
+
+	same_sense_word( Subject1, Subject2, Time1, Time2,
 			Word1, Word2, Object),
-	match_sentence_lists(Subject1, Subject2, Time1, Time2,
+
+	match_sentence_lists( Subject1, Subject2, Time1, Time2,
 		    List1,List2).
-	
 	

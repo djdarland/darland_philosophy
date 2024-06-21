@@ -1,3 +1,4 @@
+
 %% Copyright (C) 2017, 2019, 2020, 2021, 2022
 %% Dennis J. Darland
 
@@ -24,38 +25,59 @@
 %%
 %%
 
-actual_entity(X) :- actual_occasion(X).
 
-eternal_object(X) :- defining_characteristic(X).
+actual_entity(
+ X) :- actual_occasion( X).
 
-defining_characteristic(X) :- personal_order(X).
 
-defining_characteristic(X) :- social_order(X).
+eternal_object(
+ X) :- defining_characteristic( X).
 
-god(primordial_nature, EO) :- 
+
+defining_characteristic(
+ X) :- personal_order( X).
+
+
+defining_characteristic(
+ X) :- social_order( X).
+
+
+god( primordial_nature, EO) :- 
 	find_all(X, eternal_object(X), EO).
 
-god(superjective_nature, AO) :-
+
+god( superjective_nature, AO) :-
 	find_all(X, actual_occasion(X), AO).
 
-god(consequent_nature, Novelty) :-
+
+god( consequent_nature, Novelty) :-
 	Novelty = random(10000).
 
-society(Dc, N) :-
-	social_order(Dc),
-	nexus(Dc, N).
 
-person(Dc, N) :-
-	personal_order(Dc),
-	nexus(Dc, N).
+society( Dc, N) :-
+
+	social_order( Dc),
+
+	nexus( Dc, N).
+
+
+person( Dc, N) :-
+
+	personal_order( Dc),
+
+	nexus( Dc, N).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Define sense (close to Frege's Sinn) (useless)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-sense_of_relation(Idea) :- ssss(Subject, Time, Idea, Relation).
 
-sense_of_object(Idea) :- ssss(Subject, Time, Idea, Object).
+sense_of_relation(
+ Idea) :- ssss( Subject, Time, Idea, Relation).
+
+
+sense_of_object(
+ Idea) :- ssss( Subject, Time, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -104,56 +126,85 @@ sense_of_object(Idea) :- ssss(Subject, Time, Idea, Object).
 %% uniqueness is essential to essentially singular ideas
 %% So it is required even for
 %% understanding or belief if ssss is used
-corefer([Head1 | Tail1], [Head2 | Tail2]) :-
-	corefer(Head1, Head2),
-	corefer(Tail1, Tail2).
 
-corefer(Head1, Head2) :-
-	\+ differ_refer(Head1, Head2).
+corefer( [Head1 | Tail1], [Head2 | Tail2]) :-
 
-differ_refer(Head1, Head2) :-
-	refer([Head1, X]),
-	\+ refer([Head2, X]).
+	corefer( Head1, Head2),
+
+	corefer( Tail1, Tail2).
+
+
+corefer( Head1, Head2) :-
+
+	\+ differ_refer( Head1, Head2).
+
+
+differ_refer( Head1, Head2) :-
+
+	refer( [Head1, X]),
+
+	\+ refer( [Head2, X]).
 	
-differ_refer(Head2, Head1) :-
-	refer([Head1, X]),
-	\+ refer([Head2, X]).
+
+differ_refer( Head2, Head1) :-
+
+	refer( [Head1, X]),
+
+	\+ refer( [Head2, X]).
 	
 
-ssss2(Subject, Time, Idea, Object) :-
-	ssss(Subject, Time, Idea, Object),
-	\+ non_unique(Subject, Time, Idea, Object).
 
-non_unique(Subject, Time, Idea, Object1) :-
-	ssss(Subject, Time, Idea, Object2),
-	\+ corefer(Object1, Object2).
+ssss2( Subject, Time, Idea, Object) :-
+
+	ssss( Subject, Time, Idea, Object),
+
+	\+ non_unique( Subject, Time, Idea, Object).
+
+
+non_unique( Subject, Time, Idea, Object1) :-
+
+	ssss( Subject, Time, Idea, Object2),
+
+	\+ corefer( Object1, Object2).
 
 %% tttt2 also requires uniqueness
 %% this uniqueness is for contingently singular ideas
 
-tttt2(Subject, Time, Idea, Object) :-
-	tttt(Subject, Time, Idea, Object),
-	\+ non_unique_t(Subject, Time, Idea, Object).
 
-non_unique_t(Subject, Time, Idea, Object1) :-
-	tttt(Subject, Time, Idea, Object2),
-	\+ corefer(Object1, Object2).
+tttt2( Subject, Time, Idea, Object) :-
 
-%% definition of rrss in terms of rrrr and ssss.
-%% Note: qqqq is a dynamic predicate in WildLIFE
-%% - so it can be extended.
+	tttt( Subject, Time, Idea, Object),
 
-rrss(Subject, Time, Word, Object) :-
-	rrrr(Subject, Time, Word, Idea),
-	ssss2(Subject, Time, Idea, Object).
+	\+ non_unique_t( Subject, Time, Idea, Object).
+
+
+non_unique_t( Subject, Time, Idea, Object1) :-
+
+	tttt( Subject, Time, Idea, Object2),
+
+	\+ corefer( Object1, Object2).
 
 %% definition of rrss in terms of rrrr and ssss.
 %% Note: qqqq is a dynamic predicate in WildLIFE
 %% - so it can be extended.
 
-rrtt(Subject, Time, Word, Object) :-
-	rrrr(Subject, Time, Word, Idea),
-	tttt(Subject, Time, Idea, Object).
+
+rrss( Subject, Time, Word, Object) :-
+
+	rrrr( Subject, Time, Word, Idea),
+
+	ssss2( Subject, Time, Idea, Object).
+
+%% definition of rrss in terms of rrrr and ssss.
+%% Note: qqqq is a dynamic predicate in WildLIFE
+%% - so it can be extended.
+
+
+rrtt( Subject, Time, Word, Object) :-
+
+	rrrr( Subject, Time, Word, Idea),
+
+	tttt( Subject, Time, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% There are 7 relations of understanding.
@@ -243,297 +294,421 @@ rrtt(Subject, Time, Word, Object) :-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 1
-test_sa_words(Subject, Time, Subjective_aim) :-
-	should_sa_words(Subject, Time,
+
+test_sa_words( Subject, Time, Subjective_aim) :-
+
+	should_sa_words( Subject, Time,
 			Subjective_aim, List),
-	conceptual_feeling_words(Subject, Subjective_aim,
+
+	conceptual_feeling_words( Subject, Subjective_aim,
 				 Time, List),
-	write("**1A** ", Subjective_aim,
+
+	write( "**1A** ", Subjective_aim,
 	      " [and should] words ", List).
 
+
 test_sa_words(Subject, Time, Subjective_aim) :-
-	should_sa_words(Subject, Time,
+
+	should_sa_words( Subject, Time,
 			Subjective_aim, List),
-	\+ conceptual_feeling_words(Subject,
+
+	\+ conceptual_feeling_words( Subject,
 				    Subjective_aim,
 				    Time, List),
-	write("**1B** ", Subjective_aim,
+
+	write( "**1B** ", Subjective_aim,
 	      " not [BUT should] words ",
 	      List).
 
-test_not_sa_words(Subject, Time, Subjective_aim) :-
-	should_not_sa_words(Subject, Time,
+
+test_not_sa_words( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_words( Subject, Time,
 			    Subjective_aim, List),
-	\+ conceptual_feeling_words(Subject,
+
+	\+ conceptual_feeling_words( Subject,
 				    Subjective_aim,
 				    Time,
 				    List),
-	write("**1C** ", Subjective_aim,
+
+	write( "**1C** ", Subjective_aim,
 	      " not [and should not] words ", List).
 
-test_not_sa_words(Subject, Time, Subjective_aim) :-
-	should_not_sa_words(Subject,
+
+test_not_sa_words( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_words( Subject,
 			    Time,
 			    Subjective_aim,
 			    List),
-	conceptual_feeling_words(Subject,
+
+	conceptual_feeling_words( Subject,
 				 Subjective_aim,
 				 Time, List),
-	write("**1D** ", Subjective_aim,
+
+	write( "**1D** ", Subjective_aim,
 	      " [BUT should not] words ", List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 2
-ideas_list(Subject, [Ideas_head]) :-
-	idea_of(Subject, Ideas_head).
 
-ideas_list(Subject, [Ideas_head | Ideas_tail]) :-
-	idea_of(Subject, Ideas_head),
-	ideas_list(Subject, Ideas_tail).
+ideas_list( Subject, [Ideas_head]) :-
+
+	idea_of( Subject, Ideas_head).
 
 
-test_sa_ideas(Subject, Time, Subjective_aim) :-
-	should_sa_ideas(Subject, Time,
+ideas_list( Subject, [Ideas_head | Ideas_tail]) :-
+
+	idea_of( Subject, Ideas_head),
+
+	ideas_list( Subject, Ideas_tail).
+
+
+
+test_sa_ideas( Subject, Time, Subjective_aim) :-
+
+	should_sa_ideas( Subject, Time,
 			Subjective_aim, List),
+
 	conceptual_feeling_in_ideas(Subject,
 				    Subjective_aim,
 				    Time, List),
-	ideas_list(Subject, List),
-	write("**2A** ", Subjective_aim,
+
+	ideas_list( Subject, List),
+
+	write( "**2A** ", Subjective_aim,
 	      " [and should] ideas ", List).
 
-test_sa_ideas(Subject, Time, Subjective_aim) :-
-	write("2B", Subject, Time, Subjective_aim),nl,
-	should_sa_ideas(Subject, Time,
+
+test_sa_ideas( Subject, Time, Subjective_aim) :-
+
+	write( "2B", Subject, Time, Subjective_aim),nl,
+
+	should_sa_ideas( Subject, Time,
 			Subjective_aim, List),
+
 	write("2BB", List),nl,
-	\+ conceptual_feeling_in_ideas(Subject,
+
+	\+ conceptual_feeling_in_ideas( Subject,
 				    Subjective_aim,
 				    Time, List),
-	write("2BBB", List),nl,
-	ideas_list(Subject, List),
-	write("**2B** ", Subjective_aim, 
+
+	write( "2BBB", List),nl,
+
+	ideas_list( Subject, List),
+
+	write( "**2B** ", Subjective_aim, 
 	      " not [BUT should] ideas ", List).
 
-test_not_sa_ideas(Subject, Time, Subjective_aim) :-
-	should_not_sa_ideas(Subject, Time,
+
+test_not_sa_ideas( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_ideas( Subject, Time,
 			    Subjective_aim, List),
-	\+ conceptual_feeling_in_ideas(Subject,
+
+	\+ conceptual_feeling_in_ideas( Subject,
 				    Subjective_aim,
 				    Time,
 				    List),
-	ideas_list(Subject, List),
-	write("**2C** ", Subjective_aim,
+
+	ideas_list( Subject, List),
+
+	write( "**2C** ", Subjective_aim,
 	      " not [and should not] ideas ", List).
 
-test_not_sa_ideas(Subject, Time, Subjective_aim) :-
-	should_not_sa_ideas(Subject,
+
+test_not_sa_ideas( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_ideas( Subject,
 			    Time,
 			    Subjective_aim,
 			    List),
-	conceptual_feeling_in_ideas(Subject,
+
+	conceptual_feeling_in_ideas( Subject,
 				 Subjective_aim,
 				 Time, List),
-	ideas_list(Subject, List),
-	write("**2D** ", Subjective_aim,
+
+	ideas_list( Subject, List),
+
+	write( "**2D** ", Subjective_aim,
 	      " [BUT should not] ideas ", List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 3
-test_sa_objects(Subject, Time, Subjective_aim) :-
-	should_sa_objects(Subject, Time,
+
+test_sa_objects( Subject, Time, Subjective_aim) :-
+
+	should_sa_objects( Subject, Time,
 			Subjective_aim, List),
-	conceptual_feeling_objects(Subject, Subjective_aim,
+
+	conceptual_feeling_objects( Subject, Subjective_aim,
 				 Time, List),
-	write("**3A** ", Subjective_aim,
+
+	write( "**3A** ", Subjective_aim,
 	      " [and should] objects ", List).
 
-test_sa_objects(Subject, Time, Subjective_aim) :-
-	should_sa_objects(Subject, Time,
+
+test_sa_objects( Subject, Time, Subjective_aim) :-
+
+	should_sa_objects( Subject, Time,
 			Subjective_aim, List),
-	\+ conceptual_feeling_objects(Subject,
+
+	\+ conceptual_feeling_objects( Subject,
 				    Subjective_aim,
 				    Time, List),
-	write("**3B** ", Subjective_aim,
+
+	write( "**3B** ", Subjective_aim,
 	      " not [BUT should] objects ",List).
 
-test_not_sa_objects(Subject, Time, Subjective_aim) :-
-	should_not_sa_objects(Subject, Time,
+
+test_not_sa_objects( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_objects( Subject, Time,
 			    Subjective_aim, List),
-	\+ conceptual_feeling_objects(Subject,
+
+	\+ conceptual_feeling_objects( Subject,
 				    Subjective_aim,
 				    Time,
 				    List),
-	write("**3C** ", Subjective_aim,
+
+	write( "**3C** ", Subjective_aim,
 	      " not [and should not] objects ", List).
 
-test_not_sa_objects(Subject, Time, Subjective_aim) :-
-	should_not_sa_objects(Subject,
+
+test_not_sa_objects( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_objects( Subject,
 			    Time,
 			    Subjective_aim,
 			    List),
-	conceptual_feeling_objects(Subject,
+
+	conceptual_feeling_objects( Subject,
 				 Subjective_aim,
 				 Time, List),
-	write("**3D** ", Subjective_aim, 
+
+	write( "**3D** ", Subjective_aim, 
 	      " [BUT should not] objects ", List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 4
-test_sa_words_ideas(Subject, Time, Subjective_aim) :-
-	should_sa_words_ideas(Subject, Time,
+
+test_sa_words_ideas( Subject, Time, Subjective_aim) :-
+
+	should_sa_words_ideas( Subject, Time,
 			Subjective_aim, List),
-	conceptual_feeling_words_ideas(Subject, Subjective_aim, Time, List),
-	write("**4A** ", Subjective_aim,
+
+	conceptual_feeling_words_ideas( Subject, Subjective_aim, Time, List),
+
+	write( "**4A** ", Subjective_aim,
 	      " [and should] words_ideas ", List).
 
-test_sa_words_ideas(Subject, Time, Subjective_aim) :-
-	should_sa_words_ideas(Subject, Time,
+
+test_sa_words_ideas( Subject, Time, Subjective_aim) :-
+
+	should_sa_words_ideas( Subject, Time,
 			Subjective_aim, List),
-	\+ conceptual_feeling_words_ideas(Subject,
+
+	\+ conceptual_feeling_words_ideas( Subject,
 				    Subjective_aim,
 				    Time, List),
-	write("**4B** ", Subjective_aim,
+
+	write( "**4B** ", Subjective_aim,
 	      " not [BUT should] words_ideas ",List).
 
-test_not_sa_words_ideas(Subject, Time, Subjective_aim) :-
-	should_not_sa_words_ideas(Subject, Time,
+
+test_not_sa_words_ideas( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_words_ideas( Subject, Time,
 			    Subjective_aim, List),
-	\+ conceptual_feeling_words_ideas(Subject,
+
+	\+ conceptual_feeling_words_ideas( Subject,
 				    Subjective_aim,
 				    Time,
 				    List),
-	write("**4C** ", Subjective_aim,
+
+	write( "**4C** ", Subjective_aim,
 	      " not [and should not] words_ideas ", List).
 
-test_not_sa_words_ideas(Subject, Time, Subjective_aim) :-
-	should_not_sa_words_ideas(Subject,
+
+test_not_sa_words_ideas( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_words_ideas( Subject,
 			    Time,
 			    Subjective_aim,
 			    List),
-	conceptual_feeling_words_ideas(Subject,
+
+	conceptual_feeling_words_ideas( Subject,
 				 Subjective_aim,
 				 Time, List),
-	write("**4D**", Subjective_aim,
+
+	write( "**4D**", Subjective_aim,
 	      " words_ideas [BUT should not] ", List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5
-test_sa_words_objects(Subject, Time, Subjective_aim) :-
-	should_sa_words_objects(Subject, Time,
+
+test_sa_words_objects( Subject, Time, Subjective_aim) :-
+
+	should_sa_words_objects( Subject, Time,
 			Subjective_aim, List),
-	conceptual_feeling_words_objects(Subject, Subjective_aim,
+
+	conceptual_feeling_words_objects( Subject, Subjective_aim,
 				 Time, List),
-	write("**5A** ", Subjective_aim,
+
+	write( "**5A** ", Subjective_aim,
 	      " [and should] words_objects ", List).
 
-test_sa_words_objects(Subject, Time, Subjective_aim) :-
-	should_sa_words_objects(Subject, Time,
+
+test_sa_words_objects( Subject, Time, Subjective_aim) :-
+
+	should_sa_words_objects( Subject, Time,
 			Subjective_aim, List),
+
 	\+ conceptual_feeling_words_objects(Subject,
 				    Subjective_aim,
 				    Time, List),
-	write("**5B** ", Subjective_aim,
+
+	write( "**5B** ", Subjective_aim,
 	      " not [BUT should] words_objects ",List).
 
-test_not_sa_words_objects(Subject, Time, Subjective_aim) :-
-	should_not_sa_words_objects(Subject, Time,
+
+test_not_sa_words_objects( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_words_objects( Subject, Time,
 			    Subjective_aim, List),
-	\+ conceptual_feeling_words_objects(Subject,
+
+	\+ conceptual_feeling_words_objects( Subject,
 				    Subjective_aim,
 				    Time,
 				    List),
-	write("**5C** ", Subjective_aim,
+
+	write( "**5C** ", Subjective_aim,
 	      " not [and should not] words_objects ", List).
 
-test_not_sa_words_objects(Subject, Time, Subjective_aim) :-
-	should_not_sa_words_objects(Subject,
+
+test_not_sa_words_objects( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_words_objects( Subject,
 			    Time,
 			    Subjective_aim,
 			    List),
-	conceptual_feeling_words_objects(Subject,
+
+	conceptual_feeling_words_objects( Subject,
 				 Subjective_aim,
 				 Time, List),
-	write("**5D** ", Subjective_aim,
+
+	write( "**5D** ", Subjective_aim,
 	      " [BUT should not] words_objects ", List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
-test_sa_ideas_objects(Subject, Time, Subjective_aim) :-
-	should_sa_ideas_objects(Subject, Time,
+
+test_sa_ideas_objects( Subject, Time, Subjective_aim) :-
+
+	should_sa_ideas_objects( Subject, Time,
 			Subjective_aim, List),
-	conceptual_feeling_ideas_objects(Subject, Subjective_aim,
+
+	conceptual_feeling_ideas_objects( Subject, Subjective_aim,
 				 Time, List),
-	write("**6A** ", Subjective_aim,
+
+	write( "**6A** ", Subjective_aim,
 	      " [and should] ideas_objects ", List).
 
-test_sa_ideas_objects(Subject, Time, Subjective_aim) :-
-	should_sa_ideas_objects(Subject, Time,
+
+test_sa_ideas_objects( Subject, Time, Subjective_aim) :-
+
+	should_sa_ideas_objects( Subject, Time,
 			Subjective_aim, List),
-	\+ conceptual_feeling_ideas_objects(Subject,
+
+	\+ conceptual_feeling_ideas_objects( Subject,
 				    Subjective_aim,
 				    Time, List),
-	write("**6B** ", Subjective_aim,
+
+	write( "**6B** ", Subjective_aim,
 	      " not [BUT should] ideas_objects ", List).
 
-test_not_sa_ideas_objects(Subject, Time, Subjective_aim) :-
-	should_not_sa_ideas_objects(Subject, Time,
+
+test_not_sa_ideas_objects( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_ideas_objects( Subject, Time,
 			    Subjective_aim, List),
-	\+ conceptual_feeling_ideas_objects(Subject,
+
+	\+ conceptual_feeling_ideas_objects( Subject,
 				    Subjective_aim,
 				    Time,
 				    List),
-	write("**6C** ", Subjective_aim,
+
+	write( "**6C** ", Subjective_aim,
 	      " not [and should not] ideas_objects ", List).
 
-test_not_sa_ideas_objects(Subject, Time, Subjective_aim) :-
-	should_not_sa_ideas_objects(Subject,
+
+test_not_sa_ideas_objects( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_ideas_objects( Subject,
 			    Time,
 			    Subjective_aim,
 			    List),
-	conceptual_feeling_ideas_objects(Subject,
+
+	conceptual_feeling_ideas_objects( Subject,
 				 Subjective_aim,
 				 Time, List),
-	write("**6D** ", Subjective_aim,
+
+	write( "**6D** ", Subjective_aim,
 	      " [BUT should not] ideas_objects ", List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
-test_sa_words_ideas_objects(Subject, Time, Subjective_aim) :-
-	should_sa_words_ideas_objects(Subject, Time,
-			Subjective_aim, List),
-	conceptual_feeling_words_ideas_objects(Subject, Subjective_aim,
-				 Time, List),
-	write("**7A** ", Subjective_aim, " [and should] words_ideas_objects ", List).
 
-test_sa_words_ideas_objects(Subject, Time, Subjective_aim) :-
-	should_sa_words_ideas_objects(Subject, Time,
+test_sa_words_ideas_objects( Subject, Time, Subjective_aim) :-
+
+	should_sa_words_ideas_objects( Subject, Time,
 			Subjective_aim, List),
-	\+ conceptual_feeling_words_ideas_objects(Subject,
+
+	conceptual_feeling_words_ideas_objects( Subject, Subjective_aim,
+				 Time, List),
+
+	write( "**7A** ", Subjective_aim, " [and should] words_ideas_objects ", List).
+
+
+test_sa_words_ideas_objects( Subject, Time, Subjective_aim) :-
+
+	should_sa_words_ideas_objects( Subject, Time,
+			Subjective_aim, List),
+
+	\+ conceptual_feeling_words_ideas_objects( Subject,
 				    Subjective_aim,
 				    Time, List),
-	write("**7B** ", Subjective_aim,
+
+	write( "**7B** ", Subjective_aim,
 	      " not [BUT should] words_ideas_objects ",List).
 
-test_not_sa_words_ideas_objects(Subject, Time, Subjective_aim) :-
-	should_not_sa_words_ideas_objects(Subject, Time,
+
+test_not_sa_words_ideas_objects( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_words_ideas_objects( Subject, Time,
 			    Subjective_aim, List),
-	\+ conceptual_feeling_words_ideas_objects(Subject,
+
+	\+ conceptual_feeling_words_ideas_objects( Subject,
 				    Subjective_aim,
 				    Time,
 				    List),
-	write("**7C** ", Subjective_aim,
+
+	write( "**7C** ", Subjective_aim,
 	      " not and should not words_ideas_objects ", List).
 
-test_not_sa_words_ideas_objects(Subject, Time, Subjective_aim) :-
-	should_not_sa_words_ideas_objects(Subject,
+
+test_not_sa_words_ideas_objects( Subject, Time, Subjective_aim) :-
+
+	should_not_sa_words_ideas_objects( Subject,
 			    Time,
 			    Subjective_aim,
 			    List),
-	conceptual_feeling_words_ideas_objects(Subject,
+
+	conceptual_feeling_words_ideas_objects( Subject,
 				 Subjective_aim,
 				 Time, List),
-	write("**7D** ", Subjective_aim, 
+
+	write( "**7D** ", Subjective_aim, 
 	      " [BUT should not] words_ideas_objects", List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -541,34 +716,47 @@ test_not_sa_words_ideas_objects(Subject, Time, Subjective_aim) :-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 1
-conceptual_feeling_words(Subject,
+
+conceptual_feeling_words( Subject,
 			 Subjective_aim, Time,
 			 [[Relation_Word] | List]) :-
 	Subjective_aim :== understands,
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	person(Subject),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
+
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+
+	person( Subject),
+
+	arity_idea( Relation_Idea, Arity),
+
+	type_idea( Relation_Idea, Type),
 	% List of Words.
 	% Objects should be Type one less than Type of Relation
-	match_word(Subject, Subjective_aim, Time, List, Arity, Type - 1).
+
+	match_word( Subject, Subjective_aim, Time, List, Arity, Type - 1).
 
 %% The following are auxilary predicates.
 %% - they have no ontological significance.
 
-match_word(Subject, Subjective_aim, Time, [], 0, Type).
+
+match_word( Subject, Subjective_aim, Time, [], 0, Type).
 
 %% -999 indicates arbitrary arity.
-match_word(Subject, Subjective_aim, Time, [], -999, Type).
 
-match_word(Subject, Subjective_aim, Time, [[Word] | List],
+match_word( Subject, Subjective_aim, Time, [], -999, Type).
+
+
+match_word( Subject, Subjective_aim, Time, [[Word] | List],
 	   Arity, Type) :-
 	% List of Word Object Pairs.
-	rrrr(Subject, Time, Word, Idea),
-	type_idea(Idea, Type),
-	match_word(Subject, Subjective_aim, Time, List,
+
+	rrrr( Subject, Time, Word, Idea),
+
+	type_idea( Idea, Type),
+
+	match_word( Subject, Subjective_aim, Time, List,
 		   % if Arity is not Arbitrary sub 1
-		   cond(Arity =\= -999, Arity - 1, -999),
+
+		   cond( Arity =\= -999, Arity - 1, -999),
 		   Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -582,49 +770,72 @@ match_word(Subject, Subjective_aim, Time, [[Word] | List],
 
 %% 2
 
-conceptual_feeling_in_ideas(Subject, Subjective_aim, Time, [[Relation_Idea] | List]) :-
-	Subjective_aim :== understands,
-	number_idea(Relation_Idea, singular),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	% List of Ideas.
-	% Objects should be Type one less than Type of Relation
-	match_idea(Subject, Subjective_aim, Time, List, Arity, Type - 1).
 
-conceptual_feeling_in_ideas(Subject, Subjective_aim, Time, [[Relation_Idea] | List]) :-
-	number_idea(Relation_Idea, plural),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
+conceptual_feeling_in_ideas( Subject, Subjective_aim, Time, [[Relation_Idea] | List]) :-
+	Subjective_aim :== understands,
+
+	number_idea( Relation_Idea, singular),
+
+	arity_idea( Relation_Idea, Arity),
+
+	type_idea( Relation_Idea, Type),
 	% List of Ideas.
 	% Objects should be Type one less than Type of Relation
-	match_idea(Subject, Subjective_aim, Time, List, Arity, Type - 1).
+
+	match_idea( Subject, Subjective_aim, Time, List, Arity, Type - 1).
+
+
+conceptual_feeling_in_ideas( Subject, Subjective_aim, Time, [[Relation_Idea] | List]) :-
+
+	number_idea( Relation_Idea, plural),
+
+	arity_idea( Relation_Idea, Arity),
+
+	type_idea( Relation_Idea, Type),
+	% List of Ideas.
+	% Objects should be Type one less than Type of Relation
+
+	match_idea( Subject, Subjective_aim, Time, List, Arity, Type - 1).
 
 %% The following are auxilary predicates - they have no ontological
 %% Significance.
 
-match_idea(Subject, Subjective_aim, Time, [], 0, Type).
+
+match_idea( Subject, Subjective_aim, Time, [], 0, Type).
 
 %% -999 indicates arbitrary arity.
-match_idea(Subject, Subjective_aim, Time, [], -999, Type).
 
-match_idea(Subject, Subjective_aim, Time, [[Idea] | List],
+match_idea( Subject, Subjective_aim, Time, [], -999, Type).
+
+
+match_idea( Subject, Subjective_aim, Time, [[Idea] | List],
 	   Arity, Type) :-
 	% List of Word Object Pairs.
-	number_idea(Idea, singular),
-	type_idea(Idea, Type),
-	match_idea(Subject, Subjective_aim, Time, List,
+
+	number_idea( Idea, singular),
+
+	type_idea( Idea, Type),
+
+	match_idea( Subject, Subjective_aim, Time, List,
 		   % if Arity is not Arbitrary sub 1
-		   cond(Arity =\= -999, Arity - 1, -999),
+
+		   cond( Arity =\= -999, Arity - 1, -999),
 		   Type).
 
-match_idea(Subject, Subjective_aim, Time, [[Idea] | List],
+
+
+match_idea( Subject, Subjective_aim, Time, [[Idea] | List],
 	   Arity, Type) :-
 	% List of Word Object Pairs.
-	number_idea(Idea, plural),
-	type_idea(Idea, Type),
-	match_idea(Subject, Subjective_aim, Time, List,
+
+	number_idea( Idea, plural),
+
+	type_idea( Idea, Type),
+
+	match_idea( Subject, Subjective_aim, Time, List,
 		   % if Arity is not Arbitrary sub 1
-		   cond(Arity =\= -999, Arity - 1, -999),
+
+		   cond( Arity =\= -999, Arity - 1, -999),
 		   Type).
 
 
@@ -632,161 +843,229 @@ match_idea(Subject, Subjective_aim, Time, [[Idea] | List],
 
 %% 3
 
-conceptual_feeling_objects(Subject, Subjective_aim, Time, [[Relation] | List]) :-
-	Subjective_aim :== understands,
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	% List of Ideas.
-	% Objects should be Type one less than
-	% Type of Relation
-	match_object(Subject, Subjective_aim, Time, List, Arity, Type - 1).
 
-conceptual_feeling_objects(Subject, Subjective_aim, Time, [[Relation] | List]) :-
+conceptual_feeling_objects( Subject, Subjective_aim, Time, [[Relation] | List]) :-
 	Subjective_aim :== understands,
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
+
+	number_idea( Relation_Idea, singular),
+
+	ssss2( Subject, Time, Relation_Idea, Relation),
+
+	arity_idea( Relation_Idea, Arity),
+
+	type_idea( Relation_Idea, Type),
 	% List of Ideas.
 	% Objects should be Type one less than
 	% Type of Relation
-	match_object(Subject, Subjective_aim, Time, List, Arity, Type - 1).
+
+	match_object( Subject, Subjective_aim, Time, List, Arity, Type - 1).
+
+
+conceptual_feeling_objects( Subject, Subjective_aim, Time, [[Relation] | List]) :-
+	Subjective_aim :== understands,
+
+	number_idea( Relation_Idea, plural),
+
+	tttt( Subject, Time, Relation_Idea, Relation),
+
+	arity_idea( Relation_Idea, Arity),
+
+	type_idea( Relation_Idea, Type),
+	% List of Ideas.
+	% Objects should be Type one less than
+	% Type of Relation
+
+	match_object( Subject, Subjective_aim, Time, List, Arity, Type - 1).
 
 %% The following are auxilary predicates
 %%- they have no ontological Significance.
 
-match_object(Subject, Subjective_aim, Time, [], 0, Type).
+
+match_object( Subject, Subjective_aim, Time, [], 0, Type).
 
 %% -999 indicates arbitrary arity.
-match_object(Subject, Subjective_aim, Time, [], -999, Type).
 
-match_object(Subject, Subjective_aim, Time, [[Object] | List],
+match_object( Subject, Subjective_aim, Time, [], -999, Type).
+
+
+match_object( Subject, Subjective_aim, Time, [[Object] | List],
 	   Arity, Type) :-
 	% List of Word Object Pairs.
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
-	match_object(Subject, Subjective_aim, Time, List,
+
+	number_idea( Idea, singular),
+
+	ssss2( Subject, Time, Idea, Object),
+
+	type_idea( Idea, Type),
+
+	match_object( Subject, Subjective_aim, Time, List,
 		   % if Arity is not Arbitrary sub 1
-		   cond(Arity =\= -999, Arity - 1, -999),
+
+		   cond( Arity =\= -999, Arity - 1, -999),
 		   Type).
 
-match_object(Subject, Subjective_aim, Time, [[Object] | List],
+
+match_object( Subject, Subjective_aim, Time, [[Object] | List],
 	   Arity, Type) :-
 	% List of Word Object Pairs.
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
-	match_object(Subject, Subjective_aim, Time, List,
+
+	number_idea( Idea, plural),
+
+	tttt( Subject, Time, Idea, Object),
+
+	type_idea( Idea, Type),
+
+	match_object( Subject, Subjective_aim, Time, List,
 		   % if Arity is not Arbitrary sub 1
-		   cond(Arity =\= -999, Arity - 1, -999),
+
+		   cond( Arity =\= -999, Arity - 1, -999),
 		   Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 4
 
-conceptual_feeling_words_ideas(Subject,
+
+conceptual_feeling_words_ideas( Subject,
 			       Subjective_aim, Time,
 			       [[Relation_Word,
 				 Relation_Idea] |
 				PairList]) :-
 	Subjective_aim :== understands,
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
+
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+
+	arity_idea( Relation_Idea, Arity),
+
+	type_idea( Relation_Idea, Type),
 	% List of Word Object Pairs.
 	% Objects should be Type one less than Type of Relation
-	match_pair_word_idea(Subject, Subjective_aim, Time, PairList, Arity, Type - 1).
+
+	match_pair_word_idea( Subject, Subjective_aim, Time, PairList, Arity, Type - 1).
 
 %% The following are auxilary predicates
 %% - they have no ontological Significance.
 
-match_pair_word_idea(Subject, Subjective_aim, Time, [], 0, Type).
+
+match_pair_word_idea( Subject, Subjective_aim, Time, [], 0, Type).
 
 %% -999 indicates arbitrary arity.
-match_pair_word_idea(Subject, Subjective_aim, Time, [], -999, Type).
 
-match_pair_word_idea(Subject, Subjective_aim, Time, [[Word, Idea]
+match_pair_word_idea( Subject, Subjective_aim, Time, [], -999, Type).
+
+
+match_pair_word_idea( Subject, Subjective_aim, Time, [[Word, Idea]
 				    | PairList],
 		     Arity, Type) :-
 	% List of Word Object Pairs.
-	rrrr(Subject, Time, Word, Idea),
-	type_idea(Idea, Type),
-	match_pair_word_idea(Subject, Subjective_aim, Time, PairList,
+
+	rrrr( Subject, Time, Word, Idea),
+
+	type_idea( Idea, Type),
+
+	match_pair_word_idea( Subject, Subjective_aim, Time, PairList,
 			     % if Arity is not
 			     % Arbitrary sub 1
-			     cond(Arity =\= -999,
+
+			     cond( Arity =\= -999,
 				  Arity - 1, -999),
 			       Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5
 
-conceptual_feeling_words_objects(Subject, Subjective_aim, Time, [[Relation_Word, Relation] | PairList]) :-
+
+conceptual_feeling_words_objects( Subject, Subjective_aim, Time, [[Relation_Word, Relation] | PairList]) :-
 	Subjective_aim :== understands,
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
+
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+
+	number_idea( Relation_Idea, singular),
+
+	ssss2( Subject, Time, Relation_Idea, Relation),
+
+	arity_idea( Relation_Idea, Arity),
+
+	type_idea( Relation_Idea, Type),
 	% List of Word Object Pairs.
 	% Objects should be Type one less than
 	% Type of Relation
-	match_pair_word_object(Subject, Subjective_aim, Time, PairList, Arity, Type - 1).
 
-conceptual_feeling_words_objects(Subject, Subjective_aim, Time, [[Relation_Word, Relation] | PairList]) :-
+	match_pair_word_object( Subject, Subjective_aim, Time, PairList, Arity, Type - 1).
+
+
+conceptual_feeling_words_objects( Subject, Subjective_aim, Time, [[Relation_Word, Relation] | PairList]) :-
 	Subjective_aim :== understands,
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
+
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+
+	number_idea( Relation_Idea, plural),
+
+	tttt( Subject, Time, Relation_Idea, Relation),
+
+	arity_idea( Relation_Idea, Arity),
+
+	type_idea( Relation_Idea, Type),
 	% List of Word Object Pairs.
 	% Objects should be Type one less than Type of Relation
-	match_pair_word_object(Subject, Subjective_aim, Time, PairList, Arity, Type - 1).
+
+	match_pair_word_object( Subject, Subjective_aim, Time, PairList, Arity, Type - 1).
 
 %% The following are auxilary predicates
 %% - they have no ontological Significance.
 
-match_pair_word_object(Subject, Subjective_aim, Time, [], 0, Type).
+
+match_pair_word_object( Subject, Subjective_aim, Time, [], 0, Type).
 
 %% -999 indicates arbitrary arity.
-match_pair_word_object(Subject, Subjective_aim, Time, [], -999, Type).
 
-match_pair_word_object(Subject, Subjective_aim, Time, [[Word, Object] | PairList],
-		       Arity, Type) :-
+match_pair_word_object( Subject, Subjective_aim, Time, [], -999, Type).
+
+
+match_pair_word_object( Subject, Subjective_aim, Time, [[Word, Object] | PairList], Arity, Type) :-
 	% List of Word Object Pairs.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
-	match_pair_word_object(Subject, Subjective_aim,
+
+	rrrr( Subject, Time, Word, Idea),
+
+	number_idea( Idea, singular),
+
+	ssss2( Subject, Time, Idea, Object),
+
+	type_idea( Idea, Type),
+
+	match_pair_word_object( Subject, Subjective_aim,
 			       Time, PairList,
 			       % if Arity is
 			       % not Arbitrary sub 1
-			       cond(Arity =\= -999, Arity - 1, -999),
+
+			       cond( Arity =\= -999, Arity - 1, -999),
 			       Type).
 
-match_pair_word_object(Subject, Subjective_aim, Time,
+
+match_pair_word_object( Subject, Subjective_aim, Time,
 		       [[Word, Object] | PairList],
 		       Arity, Type) :-
 	% List of Word Object Pairs.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
-	match_pair_word_object(Subject, Subjective_aim, Time, PairList,
+
+	rrrr( Subject, Time, Word, Idea),
+
+	number_idea( Idea, plural),
+
+	tttt( Subject, Time, Idea, Object),
+
+	type_idea( Idea, Type),
+
+	match_pair_word_object( Subject, Subjective_aim, Time, PairList,
 			       % if Arity is
 			       % not Arbitrary sub 1
-			       cond(Arity =\= -999, Arity - 1, -999),
+
+			       cond( Arity =\= -999, Arity - 1, -999),
 			       Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 6
+
 
 conceptual_feeling_ideas_objects( Subject,
 				  Subjective_aim,
@@ -796,13 +1075,19 @@ conceptual_feeling_ideas_objects( Subject,
 				   PairList]) :-
 	Subjective_aim :== understands,
 	% List of Word Object Pairs.
-	number_idea(Relation_Idea, singular),
+
+	number_idea( Relation_Idea, singular),
+
 	ssss2( Subject, Time, Relation_Idea, Relation),
+
 	arity_idea( Relation_Idea, Arity),
+
 	type_idea( Relation_Idea, Type),
-	match_pair_idea_object_relation(Subject, Subjective_aim,
+
+	match_pair_idea_object_relation( Subject, Subjective_aim,
 					Time, PairList,
 					Arity, Type - 1).
+
 
 conceptual_feeling_ideas_objects( Subject,
 				  Subjective_aim, Time,
@@ -811,47 +1096,66 @@ conceptual_feeling_ideas_objects( Subject,
 				   PairList]) :-
 	Subjective_aim :== understands,
 	% List of Word Object Pairs.
-	number_idea(Relation_Idea, plural),
+
+	number_idea( Relation_Idea, plural),
+
 	tttt( Subject, Time, Relation_Idea, Relation),
+
 	arity_idea( Relation_Idea, Arity),
+
 	type_idea( Relation_Idea, Type),
-	match_pair_idea_object_relation(Subject, Subjective_aim, Time, PairList, Arity, Type - 1).
 
-match_pair_idea_object_relation(Subject, Subjective_aim, Time, [], -999,
+	match_pair_idea_object_relation( Subject, Subjective_aim, Time, PairList, Arity, Type - 1).
+
+
+match_pair_idea_object_relation( Subject, Subjective_aim, Time, [], -999,
 				Type).
 
-match_pair_idea_object_relation(Subject, Subjective_aim, Time, [], 0,
+
+match_pair_idea_object_relation( Subject, Subjective_aim, Time, [], 0,
 				Type).
 
-match_pair_idea_object_relation(Subject, Subjective_aim, Time,
+
+match_pair_idea_object_relation( Subject, Subjective_aim, Time,
 				[[Idea, Object] |
 				 PairList],
 				Arity, Type) :-
 	% List of Word Object Pairs.
-	number_idea(Idea, singular),
+
+	number_idea( Idea, singular),
+
 	ssss2( Subject, Time, Idea, Object),
+
 	type_idea( Idea, Type),
-	match_pair_idea_object_relation(Subject, Subjective_aim, Time,
+
+	match_pair_idea_object_relation( Subject, Subjective_aim, Time,
 					PairList,
 					% if Arity is
 					% not Arbitrary
 					% sub 1
-					cond(Arity =\= -999, Arity - 1, -999),
+
+					cond( Arity =\= -999, Arity - 1, -999),
 					Type).
 
-match_pair_idea_object_relation(Subject, Subjective_aim, Time,
+
+match_pair_idea_object_relation( Subject, Subjective_aim, Time,
 				[[Idea, Object] |
 				 PairList],
 				Arity, Type) :-
 	% List of Word Object Pairs.
-	number_idea(Idea, plural),
+
+	number_idea( Idea, plural),
+
 	tttt( Subject, Time, Idea, Object),
+
 	type_idea( Idea, Type),
-	match_pair_idea_object_relation(Subject, Subjective_aim, Time, PairList,
+
+	match_pair_idea_object_relation( Subject, Subjective_aim, Time, PairList,
 					% if Arity is
 					% not Arbitrary
 					% sub 1
-					cond(Arity =\= -999, Arity - 1, -999),
+
+					cond( Arity =\= -999, Arity - 1, -999),
 					Type).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -859,23 +1163,8 @@ match_pair_idea_object_relation(Subject, Subjective_aim, Time,
 
 %% 7
 
-conceptual_feeling_words_ideas_objects(Subject,
-				       Subjective_aim,
-				       Time,
-				       [[Relation_Word,
-					 Relation_Idea,
-					 Relation] |
-					TripleList]) :-
-	Subjective_aim :== understands,
-	% List of Word Idea_Object Triples.
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, singular),
-	ssss2(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_triple_word_idea_object_relation(Subject, Subjective_aim, Time, TripleList,Arity, Type - 1).
 
-conceptual_feeling_words_ideas_objects(Subject,
+conceptual_feeling_words_ideas_objects( Subject,
 				       Subjective_aim,
 				       Time,
 				       [[Relation_Word,
@@ -884,36 +1173,73 @@ conceptual_feeling_words_ideas_objects(Subject,
 					TripleList]) :-
 	Subjective_aim :== understands,
 	% List of Word Idea_Object Triples.
-	rrrr(Subject, Time, Relation_Word, Relation_Idea),
-	number_idea(Relation_Idea, plural),
-	tttt(Subject, Time, Relation_Idea, Relation),
-	arity_idea(Relation_Idea, Arity),
-	type_idea(Relation_Idea, Type),
-	match_triple_word_idea_object_relation(Subject, Subjective_aim,
+
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+
+	number_idea( Relation_Idea, singular),
+
+	ssss2( Subject, Time, Relation_Idea, Relation),
+
+	arity_idea( Relation_Idea, Arity),
+
+	type_idea( Relation_Idea, Type),
+
+	match_triple_word_idea_object_relation( Subject, Subjective_aim, Time, TripleList,Arity, Type - 1).
+
+
+conceptual_feeling_words_ideas_objects( Subject,
+				       Subjective_aim,
+				       Time,
+				       [[Relation_Word,
+					 Relation_Idea,
+					 Relation] |
+					TripleList]) :-
+	Subjective_aim :== understands,
+	% List of Word Idea_Object Triples.
+
+	rrrr( Subject, Time, Relation_Word, Relation_Idea),
+
+	number_idea( Relation_Idea, plural),
+
+	tttt( Subject, Time, Relation_Idea, Relation),
+
+	arity_idea( Relation_Idea, Arity),
+
+	type_idea( Relation_Idea, Type),
+
+	match_triple_word_idea_object_relation( Subject, Subjective_aim,
 					       Time,
 					       TripleList,
 					       Arity,
 					       Type - 1).
 
-match_triple_word_idea_object_relation(Subject, Subjective_aim,
+
+match_triple_word_idea_object_relation( Subject, Subjective_aim,
 				       Time, [], 0, Type).
 
 %% -999 indicates arbitrary arity.
-match_triple_word_idea_object_relation(Subject, Subjective_aim,
+
+match_triple_word_idea_object_relation( Subject, Subjective_aim,
 				       Time, [], -999,
 				       Type).
 
-match_triple_word_idea_object_relation(Subject, Subjective_aim, Time,
+
+match_triple_word_idea_object_relation( Subject, Subjective_aim, Time,
 				       [[Word, Idea,
 					 Object] |
 					TripleList],
 				       Arity, Type) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, singular),
-	ssss2(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
-	match_triple_word_idea_object_relation(Subject, Subjective_aim, 
+
+	rrrr( Subject, Time, Word, Idea),
+
+	number_idea( Idea, singular),
+
+	ssss2( Subject, Time, Idea, Object),
+
+	type_idea( Idea, Type),
+
+	match_triple_word_idea_object_relation( Subject, Subjective_aim, 
 					       Time,
 					       TripleList,
 					       cond(Arity
@@ -924,18 +1250,24 @@ match_triple_word_idea_object_relation(Subject, Subjective_aim, Time,
 						    -999),
 					       Type).
 
-match_triple_word_idea_object_relation(Subject, Subjective_aim, Time,
+
+match_triple_word_idea_object_relation( Subject, Subjective_aim, Time,
 				       [[Word, Idea,
 					 Object] |
 					TripleList],
 				       Arity,
 				       Type) :-
 	% List of Word Idea Object Triple.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object),
-	type_idea(Idea, Type),
-	match_triple_word_idea_object_relation(Subject, Subjective_aim, Time,
+
+	rrrr( Subject, Time, Word, Idea),
+
+	number_idea( Idea, plural),
+
+	tttt( Subject, Time, Idea, Object),
+
+	type_idea( Idea, Type),
+
+	match_triple_word_idea_object_relation( Subject, Subjective_aim, Time,
 					       TripleList,
 					       cond(Arity
 						      =\=

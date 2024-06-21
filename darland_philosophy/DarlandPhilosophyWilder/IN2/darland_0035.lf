@@ -1,3 +1,4 @@
+
 %% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
 
 load("RULES2/life_0001.lf")?
@@ -87,6 +88,7 @@ write_time(Ignore)?
 %% ideas_objects
 
 %% words_ideas_objects
+
 
 
 test_understands( tom, now,

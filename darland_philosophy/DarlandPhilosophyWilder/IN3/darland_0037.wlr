@@ -173,7 +173,7 @@ qqqq(equal_essentially_singular_words_objects, quine, now, cicero_word, tully_wo
 %% guarantees idea & object
 
 %% TRUE
-qqqq(equal_essentially_singular_ideas_objects( quine, now, quine_cicero_idea, quine_tully_idea, cicero, cicero)?
+qqqq(equal_essentially_singular_ideas_objects, quine, now, quine_cicero_idea, quine_tully_idea, cicero, cicero)?
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
@@ -214,13 +214,13 @@ qqqq(function_essentially_singular_word_object, tom, now, roman_word, catiline_w
 %% guarantees idea & object
 
 %% TRUE
-qqqq(function_essentially_singular_idea_object( tom, now, roman_word, tom_catiline_idea, catiline)?
+qqqq(function_essentially_singular_idea_object, tom, now, roman_word, tom_catiline_idea, catiline)?
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %%
 %% TRUE
-qqqq(function_essentially_singular_word_idea_object( tom, now, roman_word, catiline_word, tom_catiline_idea, catiline)?
+qqqq(function_essentially_singular_word_idea_object, tom, now, roman_word, catiline_word, tom_catiline_idea, catiline)?
 
 write_stats(Ignore)?
 

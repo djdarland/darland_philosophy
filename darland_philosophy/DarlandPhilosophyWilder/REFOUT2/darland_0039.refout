@@ -1,3 +1,5 @@
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
 
 *** Yes
 
@@ -71,6 +73,7 @@ Ignore = @.
 > 
 > 
 > %% ASK
+> 
 > exists_contingently_singular_object( tom, now, O)?
 
 *** Yes
@@ -100,6 +103,7 @@ O = dolphin.
 > %% guarantees word & object
 > 
 > %% TRUE
+> 
 > exists_contingently_singular_word_object( tom, now, W, O)?
 
 *** Yes
@@ -124,6 +128,7 @@ O = flipper, W = intelligent_fish_class_word.
 > %% guarantees idea & object
 > 
 > %% TRUE
+> 
 > exists_contingently_singular_idea_object( tom, now, I, O)?
 
 *** Yes
@@ -148,6 +153,7 @@ I = tom_dolphin_class_idea, O = dolphin.
 > %%
 > 
 > %% TRUE
+> 
 > exists_contingently_singular_word_idea_object( tom, now, W, I, O)?
 
 *** Yes
@@ -184,6 +190,7 @@ W = intelligent_fish_class_word.
 > %% Guarantees Object with Idea exists
 > 
 > %% TRUE
+> 
 > equal_contingently_singular_objects( tom, now, O1, O2)?
 
 *** Yes
@@ -219,6 +226,7 @@ O1 = dolphin, O2 = dolphin.
 > %% guarantees word & object
 > 
 > %% TRUE
+> 
 > equal_contingently_singular_words_objects( tom, now, W1, W2,
 |    			     O1, O2)?
 
@@ -262,6 +270,7 @@ W2 = intelligent_fish_class_word.
 > %% guarantees idea & object
 > 
 > %% TRUE
+> 
 > equal_contingently_singular_ideas_objects( tom, now, I1, I2,
 |    			      O1, O2)?
 
@@ -312,6 +321,7 @@ O2 = dolphin.
 > %% 7
 > %%
 > %% TRUE
+> 
 > equal_contingently_singular_words_ideas_objects( tom, now, W1, W2,
 |    				   I1, I2,
 |         O1, O2)?
@@ -386,6 +396,7 @@ W2 = intelligent_fish_class_word.
 > 
 > %% TRUE
 > 
+> 
 > function_contingently_singular_object( tom, now, F, O)?
 
 *** Yes
@@ -412,6 +423,7 @@ F = dolphin, O = flipper.
 > %% guarantees word & object
 > 
 > %% TRUE
+> 
 > function_contingently_singular_word_object( tom, now, F, W, O)?
 
 *** Yes
@@ -433,6 +445,7 @@ F = dolphin_class_word, O = flipper, W = intelligent_fish_class_word.
 > %% guarantees idea & object
 > 
 > %% TRUE
+> 
 > function_contingently_singular_idea_object( tom, now, F, I, O)?
 
 *** Yes
@@ -453,6 +466,7 @@ F = tom_dolphin_class_idea, I = tom_intelligent_fish_class_idea, O = flipper.
 > %% 7
 > %%
 > %% TRUE
+> 
 > function_contingently_singular_word_idea_object( tom, now,
 |         F,
 |         W,

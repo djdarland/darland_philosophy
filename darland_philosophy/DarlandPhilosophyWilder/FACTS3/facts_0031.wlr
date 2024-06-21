@@ -127,6 +127,7 @@ qqqq(tttt, tom, now, tom_roman_class_idea, cicero).
 qqqq(tttt, tom, now, tom_roman_class_idea, catiline).
 qqqq(tttt, tom, now, tom_human_class_idea, cicero).
 qqqq(tttt, tom, now, tom_human_class_idea, catiline).
+qqqq(tttt, tom, now, tom_human_class_idea, quine).
 qqqq(tttt, tom, now, tom_human_class_idea, russell).  %% one more to diff roman
 qqqq(tttt, tom, now, tom_american_class_idea, russell).  %% one more to diff roman
 qqqq(tttt, tom, now, tom_american_class_idea, quine).  %% one more to diff roman

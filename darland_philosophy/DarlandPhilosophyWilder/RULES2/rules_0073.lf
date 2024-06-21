@@ -1,3 +1,37 @@
+
+%% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can
+%% redistribute it and/or modify
+%% it under the terms of the
+%% GNU General Public License as published by
+%% the Free Software Foundation, either
+%% version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope
+%% that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even
+%% the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%% See the
+%% GNU General Public License for more details.
+
+%% You should have received
+%% a copy of the GNU General Public License
+%% along with darland's philosophy.
+%% If not, see <http://www.gnu.org/licenses/>.
+
+%% Life predicates to simulate
+%% Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+
+%% As this is just correctness of data checking there is no reason to use qqqq
+
+
 rrrr_check1(S, T, W, I) :-
 	rrrr(S,T,W,I),
 	\+ person(S, N),
@@ -14,7 +48,8 @@ rrrr_check2(S, T, W, I) :-
 	      ", ", T,
 	      ", ", W,
 	      ", ", I,
-	      " but not qqqq(idea_of, ",
+
+	      " but not idea_of( ",
 	      S,
 	      ", ", I, ").").
 
@@ -34,7 +69,8 @@ ssss_check2(S, T, W, I) :-
 	      ", ", T,
 	      ", ", I,
 	      ", ", O,
-	      " but not qqqq(idea_of, ",
+
+	      " but not idea_of( ",
 	      S,
 	      ", ", I, ").").
 
@@ -54,7 +90,8 @@ tttt_check2(S, T, W, I) :-
 	      ", ", T,
 	      ", ", I,
 	      ", ", O,
-	      " but not qqqq(idea_of, ",
+
+	      " but not idea_of( ",
 	      S,
 	      ", ", I, ").").
 
@@ -66,7 +103,8 @@ check_arity(I, A) :-
 	T > 0,
 	\+ arity_idea(I, N),
 	write("Error: have idea_of(", S, ",", I, ").",
-	      " but not qqqq(arity_idea, ", I, ", NNNN)").
+
+	      " but not arity_idea( ", I, ", NNNN)").
 
 check_relation1(Idea, Relation) :-
 	idea_of(Subject, Idea),
@@ -84,26 +122,30 @@ check_relation2(Idea, Relation) :-
 	\+ ssss(Subject, Time, Idea, Relation),
 	\+ tttt(Subject, Time, Idea, Relation),
 	write("Warning: have relation(", Relation, ").",
-	      " but not qqqq(ssss, ", Subject, ", ",
+
+	      " but not ssss( ", Subject, ", ",
 	     Time, ", ", Idea, ",", Relation, ").").
 
 check_type(Idea,Type) :-
 	idea_of(Subject, Idea),
 	\+ type_idea(Idea,Type),
 	write("Error: have idea_of(", Subject, ",", Idea, ").",
-	      " but not qqqq(type_idea, ", Idea, ", NNNN)").
+
+	      " but not type_idea( ", Idea, ", NNNN)").
 
 check_number(Idea,N) :-
 	idea_of(Subject, Idea),
 	\+ number_idea(Idea,N),
 	write("Error: have idea_of(", Subject, ",", Idea, ").",
-	      " but not qqqq(number_idea, ", Idea, ", NNNN)").
+
+	      " but not number_idea( ", Idea, ", NNNN)").
 
 rrrr_check3(Word,Idea) :-
 	idea_of(Subject, Idea),
 	\+ rrrr(Subject, Time, Word, Idea),
 	write("Warning: have idea_of(", Subject, ",", Idea, ").",
-	      " but not qqqq(rrrr, ", Subject, ", ", Time,
+
+	      " but not rrrr( ", Subject, ", ", Time,
 	      ", ",  Word, ", ", Idea, ").").
 
 ssss_check3(Word,Idea) :-
@@ -111,7 +153,8 @@ ssss_check3(Word,Idea) :-
 	number_idea(Idea, singular),
 	\+ ssss(Subject, Time, Idea, Object),
 	write("Warning: have idea_of(", Subject, ",", Idea, ").",
-	      " but not qqqq(ssss, ", Subject, ", ", Time,
+
+	      " but not ssss( ", Subject, ", ", Time,
 	      ", ",  Idea, ", ", Object, ").").
 
 tttt_check3(Word,Idea) :-
@@ -119,7 +162,8 @@ tttt_check3(Word,Idea) :-
 	number_idea(Idea, plural),
 	\+ tttt(Subject, Time, Idea, Object),
 	write("Warning: have idea_of(", Subject, ",", Idea, ").",
-	      " but not qqqq(tttt, ", Subject, ", ", Time,
+
+	      " but not tttt( ", Subject, ", ", Time,
 	      ", ",  Idea, ", ", Object, ").").
 
 check_conceptual_feeling_in_ideas1(Subject,Sa,T,L) :-

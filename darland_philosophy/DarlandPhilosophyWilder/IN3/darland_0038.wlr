@@ -4,7 +4,7 @@ load("RULES2/life_0001.lf")?
 load("FACTS2/facts_0031.lf")?
 load("RULES2/rules_0031.lf")?
 load("RULES2/rules_0032.lf")?
-load("RULES2/rules_0033.lf")?
+%% load("RULES2/rules_0033.lf")?
 load("RULES2/rules_0034.lf")?
 load("RULES2/rules_0035.lf")?
 load("RULES2/rules_0036.lf")?
@@ -289,7 +289,7 @@ qqqq(equal_plural_words_objects, quine, now,
 %% FALSE
 
 qqqq(equal_plural_words_objects, quine, now,
-			   human_roman_word, featherless_biped_class_word)?
+			   roman_class_word, featherless_biped_class_word)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
@@ -394,9 +394,15 @@ qqqq(tttt, tom, now, Y, X)?
 
 ;
 
+%% First included in second
+
 qqqq(inclusion_plural_words_objects, tom, now, human_class_word, american_class_word)?
 	
+qqqq(inclusion_plural_words_objects, tom, now, american_class_word, human_class_word)?
+	
 qqqq(inclusion_plural_ideas_objects, tom, now, tom_human_class_idea, tom_american_class_idea)?
+
+qqqq(inclusion_plural_ideas_objects, tom, now, tom_american_class_idea, tom_human_class_idea)?
 
 qqqq(inclusion_plural_words_ideas_objects, tom, now, human_class_word, tom_human_class_idea, american_class_word, tom_american_class_idea)?
 

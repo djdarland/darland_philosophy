@@ -88,6 +88,7 @@ Ignore = @.
 > %% words_ideas_objects
 > 
 > 
+> 
 > test_understands( tom, now,
 |    		 [[denounced_word], [cicero_word], [catiline_word]],
 |    		 [[tom_denounced_idea], [tom_cicero_idea], [tom_catiline_idea]],

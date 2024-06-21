@@ -1,3 +1,5 @@
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
 
 *** Yes
 
@@ -44,10 +46,10 @@
 > %% "Cicero" R Toms_idea_of_Tully
 > %% 
 > %%
-> %% In my program the relation R is represented by the predicate
-> %% rrrr(Subject, Time, Type, Word, Idea)
-> %% In my program the relation S is represented by the predicate
-> %% ssss(Subject, Time, Type, Idea, Object)
+> %% In my program the relation R is represented by the universal
+> %% qqqq(rrrr,Subject, Time, Type, Word, Idea)
+> %% In my program the relation S is represented by the universal
+> %% qqqq(ssss,Subject, Time, Type, Idea, Object)
 > 
 > %% R | S is represented by rrss
 > 
@@ -79,12 +81,14 @@ Ignore = @.
 > %% Theoretically the arguments could be variables - to find ANY cases.
 > %% But there are so many combinations that there is too little memory.
 > 
+> 
 > truly_opaque_believes_words( tom, now, [[denounced_word],
 |    				 [cicero_word],
 |    				 [catiline_word]] )?
 
 *** No
 > ;
+> 
 > 
 > truly_opaque_believes_words( tom, now, [[denounced_word],
 |    				 [tully_word],
@@ -93,6 +97,7 @@ Ignore = @.
 *** No
 > ;
 > 
+> 
 > truly_opaque_believes_in_ideas( tom, now, [tom_denounced_idea,
 |    					 tom_cicero_idea,
 |    					 tom_catiline_idea])?
@@ -100,10 +105,12 @@ Ignore = @.
 *** No
 > ;
 > 
+> 
 > truly_opaque_believes_objects( tom, now,  [[denounced], [cicero], [catiline]])?
 
 *** No
 > ;
+> 
 > 
 > truly_opaque_believes_words_ideas( tom, now,  [[denounced_word, tom_denounced_idea],
 |    				       [cicero_word, tom_cicero_idea],
@@ -112,12 +119,14 @@ Ignore = @.
 *** No
 > ;
 > 
+> 
 > truly_opaque_believes_words_ideas( tom, now,  [[denounced_word, tom_denounced_idea],
 |    				       [tully_word, tom_tully_idea],
 |    				       [catiline_word, tom_catiline_idea]])?
 
 *** No
 > ;
+> 
 > 
 > truly_opaque_believes_words_objects( tom, now,  [[denounced_word, denounced],
 |    					 [cicero_word, cicero],
@@ -126,12 +135,14 @@ Ignore = @.
 *** No
 > ;
 > 
+> 
 > truly_opaque_believes_words_objects( tom, now,  [[denounced_word, denounced],
 |    					 [tully_word, cicero],
 |    					 [catiline_word, catiline]])?
 
 *** No
 > ;
+> 
 > 
 > truly_opaque_believes_ideas_objects( tom, now,  [[tom_denounced_idea, denounced],
 |    					 [tom_cicero_idea, cicero],
@@ -140,12 +151,14 @@ Ignore = @.
 *** No
 > ;
 > 
+> 
 > truly_opaque_believes_ideas_objects( tom, now,  [[tom_denounced_idea, denounced],
 |    					 [tom_tully_idea, cicero],
 |    					 [tom_catiline_idea, catiline]])?
 
 *** No
 > ;
+> 
 > 
 > truly_opaque_believes_words_ideas_objects( tom, now,
 |    				     [[denounced_word, tom_denounced_idea, denounced],
@@ -154,6 +167,7 @@ Ignore = @.
 
 *** No
 > ;
+> 
 > 
 > truly_opaque_believes_words_ideas_objects( tom, now,
 |    				     [[denounced_word, tom_denounced_idea, denounced],
@@ -166,6 +180,7 @@ Ignore = @.
 > %% pseudo_opaque
 > 
 > 	
+> 
 > pseudo_opaque_believes_words( tom, now, [[denounced_word],
 |    				 [cicero_word],
 |    				 [catiline_word]] )?
@@ -173,12 +188,14 @@ Ignore = @.
 *** No
 > ;
 > 
+> 
 > pseudo_opaque_believes_words( tom, now, [[denounced_word],
 |    				 [tully_word],
 |    				 [catiline_word]] )?
 
 *** No
 > ;
+> 
 > 
 > pseudo_opaque_believes_in_ideas( tom, now, [tom_denounced_idea,
 |    					 tom_cicero_idea,
@@ -189,12 +206,14 @@ Ignore = @.
 > 
 > %% THIS is the only PSEUDO_OPAQUE case -- when only OBJECTS are considered.
 > 	
+> 
 > pseudo_opaque_believes_objects( tom, now,  [[denounced], [cicero], [catiline]])?
 
 *** Yes
 --1> ;
 
 *** No
+> 
 > 
 > pseudo_opaque_believes_words_ideas( tom, now,  [[denounced_word, tom_denounced_idea],
 |    				       [cicero_word, tom_cicero_idea],
@@ -203,12 +222,14 @@ Ignore = @.
 *** No
 > ;
 > 
+> 
 > pseudo_opaque_believes_words_ideas( tom, now,  [[denounced_word, tom_denounced_idea],
 |    				       [tully_word, tom_tully_idea],
 |    				       [catiline_word, tom_catiline_idea]])?
 
 *** No
 > ;
+> 
 > 
 > pseudo_opaque_believes_words_objects( tom, now,  [[denounced_word, denounced],
 |    					 [cicero_word, cicero],
@@ -217,12 +238,14 @@ Ignore = @.
 *** No
 > ;
 > 
+> 
 > pseudo_opaque_believes_words_objects( tom, now,  [[denounced_word, denounced],
 |    					 [tully_word, cicero],
 |    					 [catiline_word, catiline]])?
 
 *** No
 > ;
+> 
 > 
 > pseudo_opaque_believes_ideas_objects( tom, now,  [[tom_denounced_idea, denounced],
 |    					 [tom_cicero_idea, cicero],
@@ -231,12 +254,14 @@ Ignore = @.
 *** No
 > ;
 > 
+> 
 > pseudo_opaque_believes_ideas_objects( tom, now,  [[tom_denounced_idea, denounced],
 |    					 [tom_tully_idea, cicero],
 |    					 [tom_catiline_idea, catiline]])?
 
 *** No
 > ;
+> 
 > 
 > pseudo_opaque_believes_words_ideas_objects( tom, now,
 |    				     [[denounced_word, tom_denounced_idea, denounced],
@@ -245,6 +270,7 @@ Ignore = @.
 
 *** No
 > ;
+> 
 > 
 > pseudo_opaque_believes_words_ideas_objects( tom, now,
 |    				     [[denounced_word, tom_denounced_idea, denounced],
@@ -260,18 +286,21 @@ Ignore = @.
 > %% Theoretically the arguments could be variables - to find ANY cases.
 > %% But there are so many combinations that there is too little memory.
 > 
+> 
 > agnostic_words( tom, now,  [[denounced_word],
 |    				 [catiline_word],
 |    				 [cicero_word]] )?
 
 *** Yes
 > ;
+> 
 > agnostic_words( tom, now,  [[denounced_word],
 |    				 [cicero_word],
 |    				 [catiline_word]] )?
 
 *** No
 > ;
+> 
 > 
 > agnostic_words( tom, now,  [[denounced_word],
 |    				 [tully_word],
@@ -280,6 +309,7 @@ Ignore = @.
 *** No
 > ;
 > 
+> 
 > agnostic_in_ideas( tom, now,  [tom_denounced_idea,
 |    					 tom_cicero_idea,
 |    					 tom_catiline_idea])?
@@ -287,10 +317,12 @@ Ignore = @.
 *** No
 > ;
 > 
+> 
 > agnostic_objects( tom, now,  [[denounced], [catiline], [cicero]])?
 
 *** Yes
 > ;
+> 
 > 
 > agnostic_words_ideas( tom, now,  [[denounced_word, tom_denounced_idea],
 |    				       [catiline_word, tom_catiline_idea],
@@ -299,12 +331,14 @@ Ignore = @.
 *** Yes
 > ;
 > 
+> 
 > agnostic_words_ideas( tom, now,  [[denounced_word, tom_denounced_idea],
 |    				       [tully_word, tom_tully_idea],
 |    				       [catiline_word, tom_catiline_idea]])?
 
 *** No
 > ;
+> 
 > 
 > agnostic_words_objects( tom, now,  [[denounced_word, denounced],
 |    					 [catiline_word, catiline],
@@ -313,12 +347,14 @@ Ignore = @.
 *** Yes
 > ;
 > 
+> 
 > agnostic_words_objects( tom, now,  [[denounced_word, denounced],
 |    					 [tully_word, cicero],
 |    					 [catiline_word, catiline]])?
 
 *** No
 > ;
+> 
 > 
 > agnostic_ideas_objects( tom, now,  [[tom_denounced_idea, denounced],
 |    					 [tom_catiline_idea, catiline],
@@ -327,12 +363,14 @@ Ignore = @.
 *** Yes
 > ;
 > 
+> 
 > agnostic_ideas_objects( tom, now,  [[tom_denounced_idea, denounced],
 |    					 [tom_tully_idea, cicero],
 |    					 [tom_catiline_idea, catiline]])?
 
 *** No
 > ;
+> 
 > 
 > agnostic_words_ideas_objects( tom, now,
 |    				     [[denounced_word, tom_denounced_idea, denounced],
@@ -341,6 +379,7 @@ Ignore = @.
 
 *** Yes
 > ;
+> 
 > 
 > agnostic_words_ideas_objects( tom, now,
 |    				     [[denounced_word, tom_denounced_idea, denounced],

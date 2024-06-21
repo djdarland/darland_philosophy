@@ -1,3 +1,4 @@
+
 %% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
 
 load("RULES2/life_0001.lf")?
@@ -108,6 +109,7 @@ write_time(Ignore)?
 
 
 %% ASK
+
 exists_contingently_singular_object( tom, now, O)?
 ;
 ;
@@ -126,6 +128,7 @@ exists_contingently_singular_object( tom, now, O)?
 %% guarantees word & object
 
 %% TRUE
+
 exists_contingently_singular_word_object( tom, now, W, O)?
 ;
 ;
@@ -139,6 +142,7 @@ exists_contingently_singular_word_object( tom, now, W, O)?
 %% guarantees idea & object
 
 %% TRUE
+
 exists_contingently_singular_idea_object( tom, now, I, O)?
 ;	
 ;
@@ -152,6 +156,7 @@ exists_contingently_singular_idea_object( tom, now, I, O)?
 %%
 
 %% TRUE
+
 exists_contingently_singular_word_idea_object( tom, now, W, I, O)?
 ;
 ;
@@ -174,6 +179,7 @@ exists_contingently_singular_word_idea_object( tom, now, W, I, O)?
 %% Guarantees Object with Idea exists
 
 %% TRUE
+
 equal_contingently_singular_objects( tom, now, O1, O2)?
 ;
 ;
@@ -192,6 +198,7 @@ equal_contingently_singular_objects( tom, now, O1, O2)?
 %% guarantees word & object
 
 %% TRUE
+
 equal_contingently_singular_words_objects( tom, now, W1, W2,
 			     O1, O2)?
 ;
@@ -206,6 +213,7 @@ equal_contingently_singular_words_objects( tom, now, W1, W2,
 %% guarantees idea & object
 
 %% TRUE
+
 equal_contingently_singular_ideas_objects( tom, now, I1, I2,
 			      O1, O2)?
 ;	
@@ -219,6 +227,7 @@ equal_contingently_singular_ideas_objects( tom, now, I1, I2,
 %% 7
 %%
 %% TRUE
+
 equal_contingently_singular_words_ideas_objects( tom, now, W1, W2,
 				   I1, I2,
      O1, O2)?
@@ -246,6 +255,7 @@ equal_contingently_singular_words_ideas_objects( tom, now, W1, W2,
 
 %% TRUE
 
+
 function_contingently_singular_object( tom, now, F, O)?
 ;
 ;	
@@ -264,6 +274,7 @@ function_contingently_singular_object( tom, now, F, O)?
 %% guarantees word & object
 
 %% TRUE
+
 function_contingently_singular_word_object( tom, now, F, W, O)?
 ;
 ;
@@ -277,6 +288,7 @@ function_contingently_singular_word_object( tom, now, F, W, O)?
 %% guarantees idea & object
 
 %% TRUE
+
 function_contingently_singular_idea_object( tom, now, F, I, O)?
 ;	
 ;
@@ -289,6 +301,7 @@ function_contingently_singular_idea_object( tom, now, F, I, O)?
 %% 7
 %%
 %% TRUE
+
 function_contingently_singular_word_idea_object( tom, now,
      F,
      W,

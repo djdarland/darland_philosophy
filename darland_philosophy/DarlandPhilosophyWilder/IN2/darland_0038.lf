@@ -1,10 +1,11 @@
+
 %% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
 
 load("RULES2/life_0001.lf")?
 load("FACTS2/facts_0031.lf")?
 load("RULES2/rules_0031.lf")?
 load("RULES2/rules_0032.lf")?
-load("RULES2/rules_0033.lf")?
+%% load("RULES2/rules_0033.lf")?
 load("RULES2/rules_0034.lf")?
 load("RULES2/rules_0035.lf")?
 load("RULES2/rules_0036.lf")?
@@ -120,6 +121,7 @@ write_time(Ignore)?
 %% cicero & catiline
 
 
+
 member_plural_word_object( tom, now, roman_class_word, X)?
 ;
 ;	
@@ -128,6 +130,7 @@ member_plural_word_object( tom, now, roman_class_word, X)?
 
 %% cicero, catiline & russell
 	
+
 member_plural_word_object( quine, now, human_class_word, X)?
 ;
 ;	
@@ -135,6 +138,7 @@ member_plural_word_object( quine, now, human_class_word, X)?
 ;	
 
 %% cicero, catiline & russell
+
 
 member_plural_word_object( quine, now, featherless_biped_class_word, X)?
 ;
@@ -149,11 +153,13 @@ member_plural_word_object( quine, now, featherless_biped_class_word, X)?
 %% cicero & catiline
 	
 	
+
 member_plural_idea_object( tom, now, tom_roman_class_idea, X)?
 ;
 ;	
 
 %% cicero, catiline & russell
+
 
 member_plural_idea_object( quine, now, quine_human_class_idea, X)?
 ;
@@ -163,6 +169,7 @@ member_plural_idea_object( quine, now, quine_human_class_idea, X)?
 
 
 %% cicero, catiline & russell
+
 
 member_plural_idea_object( quine, now, quine_featherless_biped_class_idea, X)?
 ;
@@ -175,6 +182,7 @@ member_plural_idea_object( quine, now, quine_featherless_biped_class_idea, X)?
 %% 
 %% cicero, catiline
 
+
 member_plural_word_idea_object( tom, now, roman_class_word,
 			       tom_roman_class_idea,
 			       X)?
@@ -182,6 +190,7 @@ member_plural_word_idea_object( tom, now, roman_class_word,
 ;
 
 %% cicero, catiline & russell
+
 
 member_plural_word_idea_object( quine, now, human_class_word,
 			       quine_human_class_idea,
@@ -192,6 +201,7 @@ member_plural_word_idea_object( quine, now, human_class_word,
 ;
 
 %% cicero, catiline & russell
+
 
 member_plural_word_idea_object( quine, now, featherless_biped_class_word,
 			       quine_featherless_biped_class_idea,
@@ -209,10 +219,12 @@ member_plural_word_idea_object( quine, now, featherless_biped_class_word,
 %% TRUE
 
 
+
 exists_plural_word( tom, now, roman_class_word)? 
 
 %% 2
 %% TRUE
+
 
 exists_plural_idea( tom, now, tom_roman_class_idea)?
 
@@ -226,6 +238,7 @@ exists_plural_idea( tom, now, tom_roman_class_idea)?
 %% 4
 %% guarantees word and idea
 
+
 exists_plural_word_idea( tom, now, roman_class_word, tom_roman_class_idea)?
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -233,6 +246,7 @@ exists_plural_word_idea( tom, now, roman_class_word, tom_roman_class_idea)?
 %% guarantees word & object
 
 %% cicero & catiline
+
 
 exists_plural_word_object( tom, now, roman_class_word, X)?
 ;
@@ -244,6 +258,7 @@ exists_plural_word_object( tom, now, roman_class_word, X)?
 
 %% cicero & catiline (& tom's ideas of them) 
 	
+
 exists_plural_idea_object( tom, now, tom_roman_class_idea, X)?
 ;
 ;	
@@ -253,6 +268,7 @@ exists_plural_idea_object( tom, now, tom_roman_class_idea, X)?
 %% 
 %% cicero & catiline (& words for them) 
 	
+
 exists_plural_word_idea_object( tom, now, roman_class_word,
 			       tom_roman_class_idea,
 			       X)?
@@ -283,13 +299,15 @@ exists_plural_word_idea_object( tom, now, roman_class_word,
 %%
 %% TRUE
 
+
 equal_plural_words_objects( quine, now,
 			   human_class_word, featherless_biped_class_word)?
 
 %% FALSE
 
+
 equal_plural_words_objects( quine, now,
-			   human_roman_word, featherless_biped_class_word)?
+			   roman_class_word, featherless_biped_class_word)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
@@ -297,10 +315,12 @@ equal_plural_words_objects( quine, now,
 
 %% TRUE
 
+
 equal_plural_ideas_objects( quine, now,
 			  quine_human_class_idea, quine_featherless_biped_class_idea)?
 
 %% FALSE
+
 
 equal_plural_ideas_objects( quine, now,
 			  quine_roman_class_idea, quine_featherless_biped_class_idea)?
@@ -311,11 +331,13 @@ equal_plural_ideas_objects( quine, now,
 
 %% FALSE
 
+
 equal_plural_words_ideas_objects( quine, now,
 				 roman_class_word, featherless_biped_class_word,
 				 quine_roman_class_idea,
 				 quine_featherless_biped_class_idea)?
 %% TRUE
+
 
 equal_plural_words_ideas_objects( quine, now,
 				 human_class_word, featherless_biped_class_word,
@@ -347,12 +369,15 @@ equal_plural_words_ideas_objects( quine, now,
 %% guarantees word & object
 
 %% TRUE
+
 function_plural_word( tom, now, human_word, human_class_word)?
 
 %% FALSE some humans are not roman
+
 function_plural_word( tom, now, roman_word, human_class_word)?
 
 %% FALSE some humans are not dolphins 
+
 function_plural_word( tom, now, dolphin_word, human_class_word)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -360,12 +385,15 @@ function_plural_word( tom, now, dolphin_word, human_class_word)?
 %% guarantees idea & object
 
 %% TRUE
+
 function_plural_idea( tom, now, tom_human_idea, quine_human_class_idea)?
 
 %% FALSE
+
 function_plural_idea( tom, now, tom_roman_idea, quine_human_class_idea)?
 
 %% FALSE
+
 function_plural_idea( tom, now, tom_dolphin_idea, quine_human_class_idea)?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -373,10 +401,12 @@ function_plural_idea( tom, now, tom_dolphin_idea, quine_human_class_idea)?
 %% 
 %% TRUE
 
+
 function_plural_word_idea( tom, now, human_word, human_class_word,
 				 tom_human_class_idea)?
 
 %% FALSE
+
 function_plural_word_idea( tom, now, roman_word, human_class_word,
 				 tom_roman_class_idea)?
 
@@ -388,74 +418,113 @@ function_plural_word_idea( tom, now, dolphin_word, roman_class_word,
 %% Start testing new predicates 9/21/2021 
 
 
+
 tttt( tom, now, Y, X)? 
 
 ;
 
 ;
 
+%% First included in second
+
+
 inclusion_plural_words_objects( tom, now, human_class_word, american_class_word)?
 	
+
+inclusion_plural_words_objects( tom, now, american_class_word, human_class_word)?
+	
+
 inclusion_plural_ideas_objects( tom, now, tom_human_class_idea, tom_american_class_idea)?
+
+
+inclusion_plural_ideas_objects( tom, now, tom_american_class_idea, tom_human_class_idea)?
+
 
 inclusion_plural_words_ideas_objects( tom, now, human_class_word, tom_human_class_idea, american_class_word, tom_american_class_idea)?
 
 
+
 in_intersection_plural_words_objects( tom, now, human_class_word, roman_class_word, cicero)?
+
 
 in_intersection_plural_ideas_objects( tom, now, tom_human_class_idea, tom_roman_class_idea, cicero)?
 
+
 in_intersection_plural_words_ideas_objects( tom, now, human_class_word, roman_class_word, tom_human_class_idea, tom_roman_class_idea, cicero)?
+
 
 in_union_plural_words_objects( tom, now, human_class_word, roman_class_word, russell)?
 
+
 in_union_plural_ideas_objects( tom, now, tom_human_class_idea, tom_roman_class_idea, russell)?
 
+
 in_union_plural_words_ideas_objects( tom, now, human_class_word, roman_class_word, tom_human_class_idea, tom_roman_class_idea, russell)?
+
 
 in_w1_minus_w2_words_objects( tom, now, human_class_word, roman_class_word, cicero)?
 
 
+
 in_w1_minus_w2_words_objects( tom, now, human_class_word, roman_class_word, russell)?
+
 
 in_i1_minus_i2_ideas_objects( tom, now, tom_human_class_idea, tom_roman_class_idea, cicero)?
 
+
 in_i1_minus_i2_ideas_objects( tom, now, tom_human_class_idea, tom_roman_class_idea, russell)?
+
 
 in_wi1_minus_wi2_words_ideas_objects( tom, now, human_class_word, roman_class_word, tom_human_class_idea, tom_roman_class_idea, cicero)?
 
+
 in_wi1_minus_wi2_words_ideas_objects( tom, now, human_class_word, roman_class_word, tom_human_class_idea, tom_roman_class_idea, russell)?
+
 
 in_one_plural_word( tom, now, flipper_class_word)?
 
+
 in_one_plural_word( tom, now, american_class_word)?
+
 
 in_one_plural_idea( tom, now, tom_flipper_class_idea)?
 
+
 in_one_plural_idea( tom, now, tom_american_class_idea)?
+
 
 in_one_plural_word_idea( tom, now, flipper_class_word, tom_flipper_class_idea)?
 
+
 in_one_plural_word_idea( tom, now, american_class_word, tom_american_class_idea)?
+
 
 in_two_plural_word( tom, now, american_class_word)?
 
+
 in_two_plural_word( tom, now, flipper_class_word)?
+
 
 in_two_plural_idea( tom, now, tom_american_class_idea)?
 
+
 in_two_plural_idea( tom, now, tom_flipper_class_idea)?
+
 
 in_two_plural_word_idea( tom, now, american_class_word, tom_american_class_idea)?
 
+
 in_two_plural_word_idea( tom, now, flipper_class_word, tom_flipper_class_idea)?
+
 
 in_successor_plural_idea_object( tom, now, tom_flipper_class_idea, tom_cat_class_idea)?
 
-A = bagof(Objects, ssss(tom, now, tom_cicero_idea, Objects))?
+
+A = bagof( Objects, ssss(tom, now, tom_cicero_idea, Objects))?
 
 
-class_list(B, tom, now, tom_flipper_class_idea)?
+
+class_list( B, tom, now, tom_flipper_class_idea)?
 
 
 

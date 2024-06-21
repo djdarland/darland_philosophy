@@ -353,7 +353,7 @@ qqqq(equal_singular_words_ideas_objects, Subject, Time, Object1, Object2) :-
 qqqq(function_singular_object, Subject, Time, Function, Object) :-
 	qqqq(function_essentially_singular_object, Subject, Time, Function, Object).
 
-qqqq*function_singular_object, Subject, Time, Function, Object) :-
+qqqq(function_singular_object, Subject, Time, Function, Object) :-
 	qqqq(function_contingently_singular_object, Subject, Time, Function, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

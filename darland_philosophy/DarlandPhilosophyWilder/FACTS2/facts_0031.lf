@@ -197,6 +197,8 @@ tttt( tom, now, tom_human_class_idea, cicero).
 
 tttt( tom, now, tom_human_class_idea, catiline).
 
+tttt( tom, now, tom_human_class_idea, quine).
+
 tttt( tom, now, tom_human_class_idea, russell).  %% one more to diff roman
 
 tttt( tom, now, tom_american_class_idea, russell).  %% one more to diff roman

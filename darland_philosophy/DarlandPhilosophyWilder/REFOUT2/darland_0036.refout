@@ -1,3 +1,5 @@
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
 
 *** Yes
 
@@ -46,7 +48,8 @@ Ignore = @.
 > 
 > %% words_ideas_objects
 > 
-> test_understanding_agrees_words_objects(quine , tom, now, now,
+> 
+> test_understanding_agrees_words_objects( quine , tom, now, now,
 |    			       [[denounced_word, denounced],
 |    				[cicero_word, cicero],
 |    				[catiline_word, catiline]])?
@@ -54,14 +57,16 @@ Both quine and tom understand [[denounced_word,denounced],[cicero_word,cicero],[
 *** Yes
 > 	
 > 
-> test_understanding_agrees_words_objects(tom, quine, now, now,
+> 
+> test_understanding_agrees_words_objects( tom, quine, now, now,
 |    			       [[denounced_word, denounced],
 |    				[tully_word, cicero],
 |    				[catiline_word, catiline]])?
 Both tom and quine understand [[denounced_word,denounced],[tully_word,cicero],[catiline_word,catiline]] at times now and now respectively.
 *** Yes
 > 	
-> test_understanding_agrees_words_objects(tom, quine, now, now,
+> 
+> test_understanding_agrees_words_objects( tom, quine, now, now,
 |    			       [[denounced_word, denounced],
 |    				[tully_word, tully],
 |    				[catiline_word, catiline]])?
@@ -69,6 +74,7 @@ Neither tom nor quine understand [[denounced_word,denounced],[tully_word,tully],
 *** Yes
 > 
 > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
 > test_understanding_agrees_objects( quine , tom, now, now,
 |    			       [[denounced],
 |    				[cicero],

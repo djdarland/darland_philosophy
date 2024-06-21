@@ -54,9 +54,9 @@
 %% quine_tom_idea_dc.
 
 %% qqqq is theoretically the only precicate needed.
-%% I also (for speed anc convenience use qqqq4 and qqqq5).
-%% Is used mostly in rules. qqqq4 states positive facts,
-%% and qqqq5 states negative facts.
+%% I also (for speed anc convenience use pos_qq and neg_qq).
+%% Is used mostly in rules. pos_qq states positive facts,
+%% and neg_qq states negative facts.
 
 %% rrrr, ssss, and tttt represent prehensions.
 
@@ -1027,36 +1027,36 @@ qqqq(conceptual_feeling_in_ideas, tom_dc, disbelieves, now,
 
 %% A fact -- indicated by qqqq4
 
-qqqq4([denounced_rel, cicero_dc, catiline_dc]).
+pos_qq([denounced_rel, cicero_dc, catiline_dc]).
 
-qqqq4([roman_rel, cicero_dc]).
+pos_qq([roman_rel, cicero_dc]).
 
-qqqq4([roman_rel, catiline_dc]).
+pos_qq([roman_rel, catiline_dc]).
 
-qqqq4([american_rel, tom_dc]).
+pos_qq([american_rel, tom_dc]).
 
-qqqq4([american_rel, quine_dc]).
+pos_qq([american_rel, quine_dc]).
 
-qqqq4([denounced_rel, cicero_dc, catiline_dc]).
+pos_qq([denounced_rel, cicero_dc, catiline_dc]).
 
-%% Negative facts -- indicated by qqqq5
+%% Negative facts -- indicated by neg_qq
 
-qqqq5([denounced_rel, russell_dc, catiline_dc]).
+neg_qq([denounced_rel, russell_dc, catiline_dc]).
 
-qqqq5([american_rel, russell_dc]).
+neg_qq([american_rel, russell_dc]).
 
-qqqq5([roman_rel, russell_dc]).
+neg_qq([roman_rel, russell_dc]).
 
-qqqq5([denounced_rel, quine_dc, catiline_dc]).
+neg_qq([denounced_rel, quine_dc, catiline_dc]).
 
 %% was a function for experimenting
 %% denounced(cicero, catiline) -> true.
-qqqq4([dolphin_rel, flipper_dc]).
-qqqq4([intelligent_fish_rel, flipper_dc]).
-qqqq4([human_rel, cicero_dc]).
-qqqq4([human_rel, catiline_dc]).
-qqqq4([human_rel, russell_dc]).
-qqqq4([human_rel, quine_dc]).
+pos_qq([dolphin_rel, flipper_dc]).
+pos_qq([intelligent_fish_rel, flipper_dc]).
+pos_qq([human_rel, cicero_dc]).
+pos_qq([human_rel, catiline_dc]).
+pos_qq([human_rel, russell_dc]).
+pos_qq([human_rel, quine_dc]).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SINGULAR CASES
@@ -4376,12 +4376,12 @@ qqqq(should_sa_words_ideas_objects, tom_dc, now, believes,
 				tom_human_class_idea_dc,
 				catiline_dc]]).
 
-qqqq4([roman_rel, catiline_dc]).
-qqqq4([human_rel, catiline_dc]).
-qqqq4([human_rel, tom_dc]).
-qqqq4([human_rel, tom_cicero_dc]).
-qqqq4([human_rel, quine_dc]).
-qqqq4([denounced_rel,
+pos_qq([roman_rel, catiline_dc]).
+pos_qq([human_rel, catiline_dc]).
+pos_qq([human_rel, tom_dc]).
+pos_qq([human_rel, tom_cicero_dc]).
+pos_qq([human_rel, quine_dc]).
+pos_qq([denounced_rel,
       tom_cicero_dc,
       catiline_dc]).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

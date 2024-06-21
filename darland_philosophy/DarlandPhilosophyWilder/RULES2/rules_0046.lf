@@ -1,3 +1,4 @@
+
 %% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
@@ -121,8 +122,10 @@
 %%   It also checks if the Ideas are one less in type than the Relation Idea.
 %%   rrrr sees if the Subject has that relation between the Word and the Idea.
 
-nonsense_words(Subject, Time, Word_List) :-
-	\+ understands_words(Subject, Time, Word_List).
+
+nonsense_words( Subject, Time, Word_List) :-
+
+	\+ understands_words( Subject, Time, Word_List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The following are other forms of nonsense
@@ -133,34 +136,43 @@ nonsense_words(Subject, Time, Word_List) :-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 2
-nonsense_ideas(Subject, Time, Idea_List) :-
-	\+ understands_ideas(Subject, Time, Idea_List).
+
+nonsense_ideas( Subject, Time, Idea_List) :-
+
+	\+ understands_ideas( Subject, Time, Idea_List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
 %% 3
 
-nonsense_objects(Subject, Time, Object_List) :-
+
+nonsense_objects( Subject, Time, Object_List) :-
 	\+ understands_objects(Subject, Time, Object_List).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 4
 
+
 nonsense_words_ideas(Subject, Time, PairList) :-
-	\+ understands_words_ideas(Subject, Time, PairList).
+
+	\+ understands_words_ideas( Subject, Time, PairList).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5
 
-nonsense_words_objects(Subject, Time, PairList) :-
-	\+ understands_words_objects(Subject, Time, PairList).
+
+nonsense_words_objects( Subject, Time, PairList) :-
+
+	\+ understands_words_objects( Subject, Time, PairList).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 6
 
+
 nonsense_ideas_objects( Subject, Time, PairList) :-
+
 	\+ understands_ideas_objects( Subject, Time, PairList).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -168,6 +180,7 @@ nonsense_ideas_objects( Subject, Time, PairList) :-
 
 %% 7
 
-nonsense_words_ideas_objects(Subject, Time, TripleList) :-
+
+nonsense_words_ideas_objects( Subject, Time, TripleList) :-
 	\+ understands_words_ideas_objects(Subject, Time, TripleList).
 

@@ -1141,7 +1141,7 @@ qqqq(match_sa_true_object, Subject, Subjective_aim,
 	qqqq(conceptual_feeling_in_ideas, Subject,
 				    believes,
 				    Time, Idea_List),
-	qq_pos(Objects).
+	pos_qq(Objects).
 
 %% -999 indicates arbitrary arity.
 qqqq(match_sa_true_object, Subject, Subjective_aim,
@@ -1150,7 +1150,7 @@ qqqq(match_sa_true_object, Subject, Subjective_aim,
 	qqqq(conceptual_feeling_in_ideas, Subject,
 				    believes,
 				    Time, Idea_List),
-	qq_pos(Objects).
+	pos_qq(Objects).
 
 qqqq(match_sa_true_object, Subject, believes_truly, Time,
 		     [[Object] | List],
@@ -1183,7 +1183,7 @@ qqqq(match_sa_true_object, Subject, believes_truly, Time,
 			     qqqq(cond, Arity =\= -999, Arity - 1,
 				  -999),
 			     Type, Idea_List_Out),
-	qq_pos(Objects).
+	pos_qq(Objects).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1227,7 +1227,7 @@ qqqq(match_sa_true_word_object, Subject,
 	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List),
-	qq_pos(Fact_List).
+	pos_pos(Fact_List).
 
 %% -999 indicates arbitrary arity.
 qqqq(match_sa_true_word_object, Subject,
@@ -1237,12 +1237,12 @@ qqqq(match_sa_true_word_object, Subject,
 	qqqq(conceptual_feeling_in_ideas,Subject,
 				    Subjective_aim,
 				    Time, Idea_List),
-	qq_pos(Fact_List).
+	pos_qq(Fact_List).
 
 qqqq(match_sa_true_word_object, Subject,
 			  Subjective_aim,
 			  Time,
-			  [[Word, Object] | Pair_List],
+		  [[Word, Object] | Pair_List],
 			  Arity, Type, Idea_List,
 			  Fact_List) :-
 	% List of Word Idea Object Triple.
@@ -1333,7 +1333,7 @@ qqqq(match_sa_true_idea_object, Subject,
 	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List),
-	qq_pos(Fact_List).
+	pos_qq(Fact_List).
 
 %% -999 indicates arbitrary arity.
 qqqq(match_sa_true_idea_object, Subject,
@@ -1344,7 +1344,7 @@ qqqq(match_sa_true_idea_object, Subject,
 	qqqq(conceptual_feeling_in_ideas,Subject,
 				    Subjective_aim,
 				    Time, Idea_List),
-	qq_pos(Fact_List).
+	pos_qq(Fact_List).
 
 qqqq(match_sa_true_idea_object, Subject,
 			  Subjective_aim, Time,
@@ -1449,7 +1449,7 @@ qqqq(match_sa_true_triple_word_idea_object, Subject,
 				    Subjective_aim,
 				    Time,
 				    Idea_List),
-	qq_pos(Fact_List).
+	pos_qq(Fact_List).
 
 %% -999 indicates arbitrary arity.
 qqqq(match_sa_true_triple_word_idea_object, Subject,
@@ -1459,7 +1459,7 @@ qqqq(match_sa_true_triple_word_idea_object, Subject,
 	qqqq(conceptual_feeling_in_ideas, Subject,
 				    Subjective_aim,
 				    Time, Idea_List),
-	qq_pos(Fact_List).
+	pos_qq(Fact_List).
 
 qqqq(match_sa_true_triple_word_idea_object, Subject,
 				      Subjective_aim,

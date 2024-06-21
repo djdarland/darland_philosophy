@@ -1,3 +1,4 @@
+
 %% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
@@ -48,18 +49,25 @@
 %% 5
 %% guarantees word & object
 
-member_plural_word_object(Subject, Time, Word, Object) :-
-	rrrr(Subject, Time, Word, Idea),
-	tttt(Subject, Time, Idea, Object),
-	number_idea(Idea, plural).
+
+member_plural_word_object( Subject, Time, Word, Object) :-
+
+	rrrr( Subject, Time, Word, Idea),
+
+	tttt( Subject, Time, Idea, Object),
+
+	number_idea( Idea, plural).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
+
 member_plural_idea_object( Subject, Time, Idea, Object) :-
 	% List of Word Object Pairs.
-	tttt(Subject, Time, Idea, Object),
-	number_idea(Idea, plural).
+
+	tttt( Subject, Time, Idea, Object),
+
+	number_idea( Idea, plural).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
@@ -75,60 +83,82 @@ member_plural_word_idea_object(Subject, Time, Word, Idea, Object) :-
 %% 1
 %% only guarantees word & idea exist
 
-exists_plural_word(Subject, Time, Word) :-
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural).
+
+exists_plural_word( Subject, Time, Word) :-
+
+	rrrr( Subject, Time, Word, Idea),
+
+	number_idea( Idea, plural).
 
 
 %% 2
 %% only quarantees plural idea exists 
 
-exists_plural_idea(Subject, Time, Idea) :-
-	number_idea(Idea, plural).
+
+exists_plural_idea( Subject, Time, Idea) :-
+
+	number_idea( Idea, plural).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
 %% 3
 %% Guarantees Object with Idea exists
 
-exists_plural_object(Subject, Time, Object) :-
-	tttt(Subject, Time, Idea, Object),
-	number_idea(Idea, plural).
+
+exists_plural_object( Subject, Time, Object) :-
+
+	tttt( Subject, Time, Idea, Object),
+
+	number_idea( Idea, plural).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 4
 %% guarantees word and idea
 
-exists_plural_word_idea(Subject, Time, Word, Idea) :-
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural).
+
+exists_plural_word_idea( Subject, Time, Word, Idea) :-
+
+	rrrr( Subject, Time, Word, Idea),
+
+	number_idea( Idea, plural).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5
 %% guarantees word & object
 
-exists_plural_word_object(Subject, Time, Word, Object) :-
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object).
+
+exists_plural_word_object( Subject, Time, Word, Object) :-
+
+	rrrr( Subject, Time, Word, Idea),
+
+	number_idea( Idea, plural),
+
+	tttt( Subject, Time, Idea, Object).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
+
 exists_plural_idea_object( Subject, Time, Idea, Object) :-
 	% List of Word Object Pairs.
-	tttt(Subject, Time, Idea, Object),
-	number_idea(Idea, plural).
+
+	tttt( Subject, Time, Idea, Object),
+
+	number_idea( Idea, plural).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
-exists_plural_word_idea_object(Subject, Time, Word, Idea, Object) :-
+
+exists_plural_word_idea_object( Subject, Time, Word, Idea, Object) :-
 	% List of Word Idea_Object Triples.
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Idea, plural),
-	tttt(Subject, Time, Idea, Object).
+
+	rrrr( Subject, Time, Word, Idea),
+
+	number_idea( Idea, plural),
+
+	tttt( Subject, Time, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now equality -- only applies with object specified
@@ -156,47 +186,71 @@ exists_plural_word_idea_object(Subject, Time, Word, Idea, Object) :-
 %% 5
 %% guarantees word & object
 
-equal_plural_words_objects(Subject, Time, Word1, Word2) :-
-	\+ differ_plural_words_objects(Subject, Time, Word1, Word2).
 
-differ_plural_words_objects(Subject, Time, Word1, Word2) :- 
-	member_plural_word_object(Subject, Time, Word1, Object),
-	\+ member_plural_word_object(Subject, Time, Word2, Object).
+equal_plural_words_objects( Subject, Time, Word1, Word2) :-
 
-differ_plural_words_objects(Subject, Time, Word1, Word2) :- 
-	member_plural_word_object(Subject, Time, Word2, Object),
-	\+ member_plural_word_object(Subject, Time, Word1, Object).
+	\+ differ_plural_words_objects( Subject, Time, Word1, Word2).
+
+
+differ_plural_words_objects( Subject, Time, Word1, Word2) :- 
+
+	member_plural_word_object( Subject, Time, Word1, Object),
+
+	\+ member_plural_word_object( Subject, Time, Word2, Object).
+
+
+differ_plural_words_objects( Subject, Time, Word1, Word2) :- 
+
+	member_plural_word_object( Subject, Time, Word2, Object),
+
+	\+ member_plural_word_object( Subject, Time, Word1, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
+
 equal_plural_ideas_objects( Subject, Time, Idea1, Idea2) :-
+
 	\+ differ_plural_ideas_objects( Subject, Time, Idea1, Idea2).
 
-differ_plural_ideas_objects( Subject, Time, Idea1, Idea2) :-
-	member_plural_idea_object( Subject, Time, Idea1, Object),
-	  \+ member_plural_idea_object( Subject, Time, Idea2, Object).
 
 differ_plural_ideas_objects( Subject, Time, Idea1, Idea2) :-
+
+    member_plural_idea_object( Subject, Time, Idea1, Object),
+
+    \+ member_plural_idea_object( Subject, Time, Idea2, Object).
+
+
+differ_plural_ideas_objects( Subject, Time, Idea1, Idea2) :-
+
 	member_plural_idea_object( Subject, Time, Idea2, Object),
+
 	\+ member_plural_idea_object( Subject, Time, Idea1, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
-equal_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2) :-
-	\+ differ_plural_words_ideas_objects(Subject, Time, Word1, Word2,
+
+equal_plural_words_ideas_objects( Subject, Time, Word1, Word2, Idea1, Idea2) :-
+
+	\+ differ_plural_words_ideas_objects( Subject, Time, Word1, Word2,
 					     Idea1, Idea2,
 					     Object1, Object2).
 
-differ_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2) :-
-	member_plural_word_idea_object(Subject, Time, Word1, Idea1, Object),
-	\+ member_plural_word_idea_object(Subject, Time, Word2, Idea2, Object).
 
-differ_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2) :-
-	member_plural_word_idea_object(Subject, Time, Word2, Idea2, Object),
-	\+ member_plural_word_idea_object(Subject, Time, Word1, Idea1, Object).
+differ_plural_words_ideas_objects( Subject, Time, Word1, Word2, Idea1, Idea2) :-
+
+	member_plural_word_idea_object( Subject, Time, Word1, Idea1, Object),
+
+	\+ member_plural_word_idea_object( Subject, Time, Word2, Idea2, Object).
+
+
+differ_plural_words_ideas_objects( Subject, Time, Word1, Word2, Idea1, Idea2) :-
+
+	member_plural_word_idea_object( Subject, Time, Word2, Idea2, Object),
+
+	\+ member_plural_word_idea_object( Subject, Time, Word1, Idea1, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now functions -- only applies with object specified
@@ -221,40 +275,61 @@ differ_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2) :-
 %% 5
 %% guarantees word & object
 
-function_plural_word(Subject, Time, Function_Word, Word) :-
-	rrrr(Subject, Time, Function_Word, Function_Idea),
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Function_Idea, singular),
-	number_idea(Idea, plural),
-	ssss2(Subject, Time, Function_Idea, Function),
-	\+ function_fails(Function, Idea).
 
-function_fails(Function, Idea) :-
-	tttt(Subject, Time, Idea, Object),
-	\+ qqqq4([Function, Object]).
+function_plural_word( Subject, Time, Function_Word, Word) :-
+
+	rrrr( Subject, Time, Function_Word, Function_Idea),
+
+	rrrr( Subject, Time, Word, Idea),
+
+	number_idea( Function_Idea, singular),
+
+	number_idea( Idea, plural),
+
+	ssss2( Subject, Time, Function_Idea, Function),
+
+	\+ function_fails( Function, Idea).
+
+
+function_fails( Function, Idea) :-
+
+	tttt( Subject, Time, Idea, Object),
+	\+ pos_qq([Function, Object]).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
+
 function_plural_idea( Subject, Time, Function_Idea, Idea) :-
 	% List of Word Object Pairs.
-	ssss2(Subject, Time, Function_Idea, Function),
-	number_idea(Function_Idea, singular),
-	number_idea(Idea, plural),
-	\+ function_fails(Function, Idea).
+
+	ssss2( Subject, Time, Function_Idea, Function),
+
+	number_idea( Function_Idea, singular),
+
+	number_idea( Idea, plural),
+
+	\+ function_fails( Function, Idea).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
-function_plural_word_idea(Subject, Time,
+
+function_plural_word_idea( Subject, Time,
 				      Function_Word, Word, Idea) :-
 	% List of Word Idea_Object Triples.
-	rrrr(Subject, Time, Function_Word, Function_Idea),
-	rrrr(Subject, Time, Word, Idea),
-	number_idea(Function_Idea, singular),
-	number_idea(Idea, plural),
-	ssss2(Subject, Time, Function_Idea, Function),
-	\+ function_fails(Function, Idea).
+
+	rrrr( Subject, Time, Function_Word, Function_Idea),
+
+	rrrr( Subject, Time, Word, Idea),
+
+	number_idea( Function_Idea, singular),
+
+	number_idea( Idea, plural),
+
+	ssss2( Subject, Time, Function_Idea, Function),
+
+	\+ function_fails( Function, Idea).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -282,46 +357,57 @@ function_plural_word_idea(Subject, Time,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5
 %% guarantees word & object
-%% Word1 includes all members of Word2
+%% First included in second
 
-inclusion_plural_words_objects(Subject, Time, Word1, Word2) :-
-	not_inclusion_plural_words_objects(Subject, Time, Word1, Word2).
 
 not_inclusion_plural_words_objects( Subject, Time, Word1, Word2) :-
-	member_plural_word_object( Subject, Time, Word2, Object),
-	not_member_plural_word_object( Subject, Time, Word1, Object).
+    write("Word1 = ", Word1),nl,
+    write("Word2 = ", Word2),nl,
 
-not_member_plural_word_object(Subject, Time, Word, Object) :-
-	\+ member_plural_word_object(Subject, Time, Word, Object).
+    member_plural_word_object( Subject, Time, Word1, Object),
+    write("Object = ", Object),nl,
+
+	\+ member_plural_word_object( Subject, Time, Word2, Object).
+
+
+inclusion_plural_words_objects( Subject, Time, Word1, Word2) :-
+    write("Word1 B= ", Word1),nl,
+    write("Word2 B= ", Word2),nl,
+
+	\+ not_inclusion_plural_words_objects( Subject, Time, Word1, Word2).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 %% Idea1 includes all members of Idea2
 
-inclusion_plural_ideas_objects( Subject, Time, Idea1, Idea2) :-
-	\+ not_inclusion_plural_ideas_objects( Subject, Time, Idea1, Idea2).
 
 not_inclusion_plural_ideas_objects( Subject, Time, Idea1, Idea2) :-
-	member_plural_idea_object( Subject, Time, Idea2, Object),
-	not_member_plural_idea_object( Subject, Time, Idea1, Object).
 
-not_member_plural_idea_object( Subject, Time, Idea, Object) :-
-	\+ member_plural_idea_object( Subject, Time, Idea, Object).
+	member_plural_idea_object( Subject, Time, Idea1, Object),
+
+	\+ member_plural_idea_object( Subject, Time, Idea2, Object).
+
+
+inclusion_plural_ideas_objects( Subject, Time, Idea1, Idea2) :-
+
+	\+ not_inclusion_plural_ideas_objects( Subject, Time, Idea1, Idea2).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
 
-inclusion_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2) :-
-	\+ not_inclusion_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2).
 
 not_inclusion_plural_words_ideas_objects( Subject, Time, Word1, Word2, Idea1, Idea2) :-
-	member_plural_word_idea_object( Subject, Time, Word2, Idea2, Object),
-	not_member_plural_word_idea_object( Subject, Time, Word1, Idea1, Object).
 
-not_member_plural_word_idea_object(Subject, Time, Word, Idea, Object) :-
-	\+ member_plural_word_idea_object(Subject, Time, Word, Idea, Object).
+	member_plural_word_idea_object( Subject, Time, Word1, Idea1, Object),
+
+	\+ member_plural_word_idea_object( Subject, Time, Word2, Idea2, Object).
+
+
+inclusion_plural_words_ideas_objects( Subject, Time, Word1, Word2, Idea1, Idea2) :-
+
+	\+ not_inclusion_plural_words_ideas_objects( Subject, Time, Word1, Word2, Idea1, Idea2).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now in_intersection -- only applies with object specified
@@ -346,24 +432,33 @@ not_member_plural_word_idea_object(Subject, Time, Word, Idea, Object) :-
 %% 5
 %% guarantees word & object
 
-in_intersection_plural_words_objects(Subject, Time, Word1, Word2, Object) :-
-	member_plural_word_object(Subject, Time, Word1, Object),
-	member_plural_word_object(Subject, Time, Word2, Object).
+
+in_intersection_plural_words_objects( Subject, Time, Word1, Word2, Object) :-
+
+	member_plural_word_object( Subject, Time, Word1, Object),
+
+	member_plural_word_object( Subject, Time, Word2, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
+
 in_intersection_plural_ideas_objects( Subject, Time, Idea1, Idea2, Object) :-
+
 	member_plural_idea_object( Subject, Time, Idea1, Object),
+
 	member_plural_idea_object( Subject, Time, Idea2, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
-in_intersection_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
-	member_plural_word_idea_object(Subject, Time, Word1, Idea1, Object),
-	member_plural_word_idea_object(Subject, Time, Word2, Idea2, Object).
+
+in_intersection_plural_words_ideas_objects( Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
+
+	member_plural_word_idea_object( Subject, Time, Word1, Idea1, Object),
+
+	member_plural_word_idea_object( Subject, Time, Word2, Idea2, Object).
 
 
 
@@ -392,30 +487,42 @@ in_intersection_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, I
 %% 5
 %% guarantees word & object
 
-in_union_plural_words_objects(Subject, Time, Word1, Word2, Word3, Object) :-
-	member_plural_word_object(Subject, Time, Word1, Object).
 
-in_union_plural_words_objects(Subject, Time, Word1, Word2, Word3, Object) :-
-	member_plural_word_object(Subject, Time, Word2, Object).
+in_union_plural_words_objects( Subject, Time, Word1, Word2, Word3, Object) :-
+
+	member_plural_word_object( Subject, Time, Word1, Object).
+
+
+in_union_plural_words_objects( Subject, Time, Word1, Word2, Word3, Object) :-
+
+	member_plural_word_object( Subject, Time, Word2, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
-in_union_plural_ideas_objects( Subject, Time, Idea1, Idea2, Object) :-
-	member_plural_idea_object( Subject, Time, Idea1, Object).
 
 in_union_plural_ideas_objects( Subject, Time, Idea1, Idea2, Object) :-
+
+	member_plural_idea_object( Subject, Time, Idea1, Object).
+
+
+in_union_plural_ideas_objects( Subject, Time, Idea1, Idea2, Object) :-
+
 	member_plural_idea_object( Subject, Time, Idea2, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
-in_union_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
-	member_plural_word_idea_object(Subject, Time, Word1, Idea1, Object).
 
-in_union_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
-	member_plural_word_idea_object(Subject, Time, Word2, Idea2, Object).
+in_union_plural_words_ideas_objects( Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
+
+	member_plural_word_idea_object( Subject, Time, Word1, Idea1, Object).
+
+
+in_union_plural_words_ideas_objects( Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
+
+	member_plural_word_idea_object( Subject, Time, Word2, Idea2, Object).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -442,24 +549,33 @@ in_union_plural_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2, O
 %% 5
 %% guarantees word & object
 
-in_w1_minus_w2_words_objects(Subject, Time, Word1, Word2, Object) :-
-	member_plural_word_object(Subject, Time, Word1, Object).
-	not_member_plural_word_object(Subject, Time, Word2, Object).
 
+in_w1_minus_w2_words_objects( Subject, Time, Word1, Word2, Object) :-
+
+    member_plural_word_object( Subject, Time, Word1, Object),
+
+	\+ member_plural_word_object( Subject, Time, Word2, Object).
+    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
+
 in_i1_minus_i2_ideas_objects( Subject, Time, Idea1, Idea2, Object) :-
-	member_plural_idea_object( Subject, Time, Idea1, Object),
-	not_member_plural_idea_object( Subject, Time, Idea2, Object).
+
+    member_plural_idea_object( Subject, Time, Idea1, Object),
+
+    \+ member_plural_idea_object( Subject, Time, Idea2, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
-in_wi1_minus_wi2_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
-	member_plural_word_idea_object(Subject, Time, Word1, Idea1, Object),
-	not_member_plural_word_idea_object(Subject, Time, Word2, Idea2, Object).
+
+in_wi1_minus_wi2_words_ideas_objects( Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
+
+    member_plural_word_idea_object( Subject, Time, Word1, Idea1, Object),
+
+	\+ member_plural_word_idea_object( Subject, Time, Word2, Idea2, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -468,28 +584,36 @@ in_wi1_minus_wi2_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2, 
 %% 4
 %% guarantees word & idea
 
-in_zero_plural_word(Subject, Time, Word) :-
+
+in_zero_plural_word( Subject, Time, Word) :-
 	
-	not_member_plural_word(Subject, Time, Word, Object).
+
+	not_member_plural_word( Subject, Time, Word, Object).
 
 %% 5
 %% guarantees word 
 
-in_zero_plural_word(Subject, Time, Word) :-
-	not_member_plural_word(Subject, Time, Word, Object).
+
+in_zero_plural_word( Subject, Time, Word) :-
+
+	not_member_plural_word( Subject, Time, Word, Object).
 
 %% 6
 %% guarantees idea
 
-in_zero_plural_idea(Subject, Time, Idea) :-
-	not_member_plural_idea(Subject, Time, Idea, Object).
+
+in_zero_plural_idea( Subject, Time, Idea) :-
+
+	not_member_plural_idea( Subject, Time, Idea, Object).
 
 
 %% 7
 %% guarantees word, idea, object
 
-in_zero_plural_word_idea_object(Subject, Time, Word, Idea) :-
-	not_member_plural_word_idea_object(Subject, Time, Word, Idea, Object).
+
+in_zero_plural_word_idea_object( Subject, Time, Word, Idea) :-
+
+	not_member_plural_word_idea_object( Subject, Time, Word, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now one
@@ -497,35 +621,50 @@ in_zero_plural_word_idea_object(Subject, Time, Word, Idea) :-
 %% guarantees word
 %% 5
 
-in_one_plural_word( Subject, Time, Word) :-
-	member_plural_word_object( Subject, Time, Word, Object),
-	\+ greater_one_word(Subject, Time, Word).
 
-greater_one_word(Subject, Time, Word) :-
-	member_plural_word_object(Subject, Time, Word, Object1),
-	member_plural_word_object(Subject, Time, Word, Object2),
+in_one_plural_word( Subject, Time, Word) :-
+
+	member_plural_word_object( Subject, Time, Word, Object),
+
+	\+ greater_one_word( Subject, Time, Word).
+
+
+greater_one_word( Subject, Time, Word) :-
+
+	member_plural_word_object( Subject, Time, Word, Object1),
+
+	member_plural_word_object( Subject, Time, Word, Object2),
 	Object1 :\== Object2.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea
 
-in_one_plural_idea( Subject, Time, Idea) :-
-	member_plural_idea_object( Subject, Time, Idea, Object),
-	\+ greater_one_idea(Subject, Time, Idea).
 
-greater_one_idea(Subject, Time, Idea) :-
-	member_plural_idea_object(Subject, Time, Idea, Object1),
-	member_plural_idea_object(Subject, Time, Idea, Object2),
+in_one_plural_idea( Subject, Time, Idea) :-
+
+	member_plural_idea_object( Subject, Time, Idea, Object),
+
+	\+ greater_one_idea( Subject, Time, Idea).
+
+
+greater_one_idea( Subject, Time, Idea) :-
+
+	member_plural_idea_object( Subject, Time, Idea, Object1),
+
+	member_plural_idea_object( Subject, Time, Idea, Object2),
 	Object1 :\== Object2.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% guarantees word, idea
 
+
 in_one_plural_word_idea( Subject, Time, Word, Idea) :-
+
 	member_plural_word_idea_object( Subject, Time, Word, Idea, Object),
-	\+ greater_one_word_idea_object(Subject, Time, Word, Idea).
+
+	\+ greater_one_word_idea_object( Subject, Time, Word, Idea).
 
 greater_one_word_idea_object(Subject, Time, Word, Idea) :-
 	member_plural_word_idea_object(Subject, Time, Word, Idea, Object1),
@@ -538,16 +677,24 @@ greater_one_word_idea_object(Subject, Time, Word, Idea) :-
 %% guarantees word
 %% 5
 
+
 in_two_plural_word( Subject, Time, Word) :-
+
 	member_plural_word_object( Subject, Time, Word, Object1),
+
 	member_plural_word_object( Subject, Time, Word, Object2),
 	Object1 :\== Object2,
-	\+ greater_two_word(Subject, Time, Word).
 
-greater_two_word(Subject, Time, Word) :-
-	member_plural_word_object(Subject, Time, Word, Object1),
-	member_plural_word_object(Subject, Time, Word, Object2),
-	member_plural_word_object(Subject, Time, Word, Object3),
+	\+ greater_two_word( Subject, Time, Word).
+
+
+greater_two_word( Subject, Time, Word) :-
+
+	member_plural_word_object( Subject, Time, Word, Object1),
+
+	member_plural_word_object( Subject, Time, Word, Object2),
+
+	member_plural_word_object( Subject, Time, Word, Object3),
 	Object1 :\== Object2,
 	Object2 :\== Object3,
 	Object1 :\== Object3.
@@ -556,16 +703,23 @@ greater_two_word(Subject, Time, Word) :-
 %% guarantees idea
 %% 6
 
+
 in_two_plural_idea( Subject, Time, Idea) :-
+
 	member_plural_idea_object( Subject, Time, Idea, Object1),
+
 	member_plural_idea_object( Subject, Time, Idea, Object2),
 	Object1 :\== Object2,
 	\+ greater_two_idea(Subject, Time, Idea).
 
-greater_two_idea(Subject, Time, Idea) :-
-	member_plural_idea_object(Subject, Time, Idea, Object1),
-	member_plural_idea_object(Subject, Time, Idea, Object2),
-	member_plural_idea_object(Subject, Time, Idea, Object3),
+
+greater_two_idea( Subject, Time, Idea) :-
+
+	member_plural_idea_object( Subject, Time, Idea, Object1),
+
+	member_plural_idea_object( Subject, Time, Idea, Object2),
+
+	member_plural_idea_object( Subject, Time, Idea, Object3),
 	Object1 :\== Object2,
 	Object2 :\== Object3,
 	Object1 :\== Object3.
@@ -574,16 +728,23 @@ greater_two_idea(Subject, Time, Idea) :-
 %% guarantees word, idea
 %% 7
 
+
 in_two_plural_word_idea( Subject, Time, Word, Idea) :-
+
 	member_plural_word_idea_object( Subject, Time, Word, Idea, Object1),
+
 	member_plural_word_idea_object( Subject, Time, Word, Idea, Object2),
 	Object1 :\== Object2,
-	\+ greater_two_idea(Subject, Time, Word, Idea).
+
+	\+ greater_two_idea( Subject, Time, Word, Idea).
 
 greater_two_idea(Subject, Time, Word, Idea) :-
-	member_plural_word_idea_object(Subject, Time, Word, Idea, Object1),
-	member_plural_word_idea_object(Subject, Time, Word, Idea, Object2),
-	member_plural_word_idea_object(Subject, Time, Word, Idea, Object3),
+
+	member_plural_word_idea_object( Subject, Time, Word, Idea, Object1),
+
+	member_plural_word_idea_object( Subject, Time, Word, Idea, Object2),
+
+	member_plural_word_idea_object( Subject, Time, Word, Idea, Object3),
 	Object1 :\== Object2,
 	Object2 :\== Object3,
 	Object1 :\== Object3.
@@ -596,12 +757,17 @@ greater_two_idea(Subject, Time, Word, Idea) :-
 %% guarantees word
 %% 5
 %%
-in_successor_plural_idea_object(Subject, Time, Class_Idea, Succ_Class_Idea) :-
-	class_list(It, Subject, Time, Class_Idea),
-	class_list(Succ_It, Subject, Time, Succ_Class_Idea),
-	one_longer(It, Succ_It).
 
-class_list(A, Subject, Time, Idea) :-
+in_successor_plural_idea_object( Subject, Time, Class_Idea, Succ_Class_Idea) :-
+
+	class_list( It, Subject, Time, Class_Idea),
+
+	class_list( Succ_It, Subject, Time, Succ_Class_Idea),
+
+	one_longer( It, Succ_It).
+
+
+class_list( A, Subject, Time, Idea) :-
 	A = bagof(Objects, member_plural_idea_object( Subject, Time, Idea, Objects)).
 
 one_longer([], [X | []]).

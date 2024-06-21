@@ -171,7 +171,7 @@ qqqq(function_contingently_singular_object, Subject, Time, Function, Object) :-
 	qqqq(tttt2, Subject, Time, Idea, Object),
 	qqqq(number_idea, Function_Idea, plural),
 	qqqq(number_idea, Idea, plural),
-	qq_pos([Function, Object]).
+	pos_qq([Function, Object]).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -189,7 +189,7 @@ qqqq(function_contingently_singular_word_object, Subject, Time, Function_Word, W
 	qqqq(number_idea, Idea, plural),
 	qqqq(tttt2, Subject, Time, Function_Idea, Function),
 	qqqq(tttt2, Subject, Time, Idea, Object),
-	qq_pos([Function, Object]).
+	pos_qq([Function, Object]).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
@@ -200,7 +200,7 @@ qqqq(function_contingently_singular_idea_object, Subject, Time, Function_Idea, I
 	qqqq(tttt2, Subject, Time, Idea, Object),
 	qqqq(number_idea, Function_Idea, plural),
 	qqqq(number_idea, Idea, plural),
-	qq_pos([Function, Object]).
+	pos_qq([Function, Object]).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
@@ -214,6 +214,6 @@ qqqq(function_contingently_singular_word_idea_object, Subject, Time,
 	qqqq(number_idea, Idea, plural),
 	qqqq(tttt2, Subject, Time, Function_Idea, Function),
 	qqqq(tttt2, Subject, Time, Idea, Object),
-	qq_pos([Function, Object]).
+	pos_qq([Function, Object]).
 
 

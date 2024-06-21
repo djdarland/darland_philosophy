@@ -231,7 +231,7 @@ qqqq(function_plural_word, Subject, Time, Function_Word, Word) :-
 
 qqqq(function_fails, Function, Idea) :-
 	qqqq(tttt, Subject, Time, Idea, Object),
-	\+ qq_pos([Function, Object]).
+	\+ pos_qq([Function, Object]).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
@@ -282,46 +282,42 @@ qqqq(function_plural_word_idea, Subject, Time,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 5
 %% guarantees word & object
-%% Word1 includes all members of Word2
-
-qqqq(inclusion_plural_words_objects, Subject, Time, Word1, Word2) :-
-	qqqq(not_inclusion_plural_words_objects, Subject, Time, Word1, Word2).
+%% First included in second
 
 qqqq(not_inclusion_plural_words_objects, Subject, Time, Word1, Word2) :-
-	qqqq(member_plural_word_object, Subject, Time, Word2, Object),
-	qqqq(not_member_plural_word_object, Subject, Time, Word1, Object).
+    write("Word1 = ", Word1),nl,
+    write("Word2 = ", Word2),nl,
+    qqqq(member_plural_word_object, Subject, Time, Word1, Object),
+    write("Object = ", Object),nl,
+	\+ qqqq(member_plural_word_object, Subject, Time, Word2, Object).
 
-qqqq(not_member_plural_word_object, Subject, Time, Word, Object) :-
-	\+ qqqq(member_plural_word_object, Subject, Time, Word, Object).
+qqqq(inclusion_plural_words_objects, Subject, Time, Word1, Word2) :-
+    write("Word1 B= ", Word1),nl,
+    write("Word2 B= ", Word2),nl,
+	\+ qqqq(not_inclusion_plural_words_objects, Subject, Time, Word1, Word2).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 %% Idea1 includes all members of Idea2
 
+qqqq(not_inclusion_plural_ideas_objects, Subject, Time, Idea1, Idea2) :-
+	qqqq(member_plural_idea_object, Subject, Time, Idea1, Object),
+	\+ qqqq(member_plural_idea_object, Subject, Time, Idea2, Object).
+
 qqqq(inclusion_plural_ideas_objects, Subject, Time, Idea1, Idea2) :-
 	\+ qqqq(not_inclusion_plural_ideas_objects, Subject, Time, Idea1, Idea2).
-
-qqqq(not_inclusion_plural_ideas_objects, Subject, Time, Idea1, Idea2) :-
-	qqqq(member_plural_idea_object, Subject, Time, Idea2, Object),
-	qqqq(not_member_plural_idea_object, Subject, Time, Idea1, Object).
-
-qqqq(not_member_plural_idea_object, Subject, Time, Idea, Object) :-
-	\+ qqqq(member_plural_idea_object, Subject, Time, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
 
+qqqq(not_inclusion_plural_words_ideas_objects, Subject, Time, Word1, Word2, Idea1, Idea2) :-
+	qqqq(member_plural_word_idea_object, Subject, Time, Word1, Idea1, Object),
+	\+ qqqq(member_plural_word_idea_object, Subject, Time, Word2, Idea2, Object).
+
 qqqq(inclusion_plural_words_ideas_objects, Subject, Time, Word1, Word2, Idea1, Idea2) :-
 	\+ qqqq(not_inclusion_plural_words_ideas_objects, Subject, Time, Word1, Word2, Idea1, Idea2).
-
-qqqq(not_inclusion_plural_words_ideas_objects, Subject, Time, Word1, Word2, Idea1, Idea2) :-
-	qqqq(member_plural_word_idea_object, Subject, Time, Word2, Idea2, Object),
-	qqqq(not_member_plural_word_idea_object, Subject, Time, Word1, Idea1, Object).
-
-qqqq(not_member_plural_word_idea_object, Subject, Time, Word, Idea, Object) :-
-	\+ qqqq(member_plural_word_idea_object, Subject, Time, Word, Idea, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% now in_intersection -- only applies with object specified
@@ -443,23 +439,23 @@ qqqq(in_union_plural_words_ideas_objects, Subject, Time, Word1, Word2, Idea1, Id
 %% guarantees word & object
 
 qqqq(in_w1_minus_w2_words_objects, Subject, Time, Word1, Word2, Object) :-
-	qqqq(member_plural_word_object, Subject, Time, Word1, Object).
-	qqqq(not_member_plural_word_object, Subject, Time, Word2, Object).
-
+    qqqq(member_plural_word_object, Subject, Time, Word1, Object),
+	\+ qqqq(member_plural_word_object, Subject, Time, Word2, Object).
+    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
 
 qqqq(in_i1_minus_i2_ideas_objects, Subject, Time, Idea1, Idea2, Object) :-
-	qqqq(member_plural_idea_object, Subject, Time, Idea1, Object),
-	qqqq(not_member_plural_idea_object, Subject, Time, Idea2, Object).
+    qqqq(member_plural_idea_object, Subject, Time, Idea1, Object),
+    \+ qqqq(member_plural_idea_object, Subject, Time, Idea2, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
 qqqq(in_wi1_minus_wi2_words_ideas_objects, Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
-	qqqq(member_plural_word_idea_object, Subject, Time, Word1, Idea1, Object),
-	qqqq(not_member_plural_word_idea_object, Subject, Time, Word2, Idea2, Object).
+    qqqq(member_plural_word_idea_object, Subject, Time, Word1, Idea1, Object),
+	\+ qqqq(member_plural_word_idea_object, Subject, Time, Word2, Idea2, Object).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

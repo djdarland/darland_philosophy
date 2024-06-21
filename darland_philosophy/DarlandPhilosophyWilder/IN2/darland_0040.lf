@@ -1,3 +1,4 @@
+
 %% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
 
 load("RULES2/life_0001.lf")?
@@ -107,6 +108,7 @@ write_time(Ignore)?
 %% Guarantees Object with Idea exists
 
 %% 
+
 exists_singular_object( tom, now, O)?
 ;
 ;
@@ -130,6 +132,7 @@ exists_singular_object( tom, now, O)?
 %% guarantees word & object
 
 %% TRUE
+
 exists_singular_word_object( tom, now, W, O)?
 ;
 ;
@@ -146,6 +149,7 @@ exists_singular_word_object( tom, now, W, O)?
 %% guarantees idea & object
 
 %% TRUE
+
 exists_singular_idea_object( tom, now, I, O)?
 ;
 ;
@@ -162,6 +166,7 @@ exists_singular_idea_object( tom, now, I, O)?
 %%
 
 %% TRUE
+
 exists_singular_word_idea_object( tom, now, W, I, O)?
 ;
 ;
@@ -187,6 +192,7 @@ exists_singular_word_idea_object( tom, now, W, I, O)?
 %% Guarantees Object with Idea exists
 
 %% TRUE
+
 equal_singular_objects( tom, now, O1, O2)?
 ;
 ;
@@ -208,6 +214,7 @@ equal_singular_objects( tom, now, O1, O2)?
 %% guarantees word & object
 
 %% TRUE
+
 equal_singular_words_objects( quine, now, W1, W1, O1, O2)?
 ;
 ;
@@ -224,6 +231,7 @@ equal_singular_words_objects( quine, now, W1, W1, O1, O2)?
 %% guarantees idea & object
 
 %% TRUE
+
 equal_singular_ideas_objects( quine, now, I1, I2, O1, O2)?
 ;
 ;
@@ -239,6 +247,7 @@ equal_singular_ideas_objects( quine, now, I1, I2, O1, O2)?
 %% 7
 %%
 %% TRUE
+
 equal_singular_words_ideas_objects( quine, now, W1, W2,
 				   I1, I2,
 				   O1, O2)?
@@ -266,6 +275,7 @@ equal_singular_words_ideas_objects( quine, now, W1, W2,
 %% Guarantees Object exists
 
 %% TRUE
+
 function_singular_object( tom, now, F, O)?
 ;
 ;
@@ -287,6 +297,7 @@ function_singular_object( tom, now, F, O)?
 %% guarantees word & object
 
 %% TRUE
+
 function_singular_word_object( tom, now, F, W, O)?
 ;
 ;
@@ -303,6 +314,7 @@ function_singular_word_object( tom, now, F, W, O)?
 %% guarantees idea & object
 
 %% TRUE
+
 function_singular_idea_object( tom, now, F, I, O)?
 ;
 ;
@@ -318,6 +330,7 @@ function_singular_idea_object( tom, now, F, I, O)?
 %% 7
 %%
 %% TRUE
+
 function_singular_word_idea_object( tom, now,
 				   F, W,
 				   I, O)?

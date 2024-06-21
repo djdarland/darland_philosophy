@@ -1,3 +1,4 @@
+
 %% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
@@ -42,7 +43,8 @@
 %% They are incomplete.
 
 
-test_understands(Subject, Time,
+
+test_understands( Subject, Time,
 		 Word_List,
 		 Idea_List,
 		 Object_List,
@@ -50,85 +52,107 @@ test_understands(Subject, Time,
 		 Word_Object_List,
 		 Idea_Object_List,
 		 Word_Idea_Object_List) :-
-	cond(understands_words(Subject, Time, Word_List),
-	     write(Subject,
+
+	cond( understands_words(Subject, Time, Word_List),
+
+	     write( Subject,
 		   " understands words ",
 		   Word_List,
 		   " at time ",
 		   Time,"\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not understand words ",
 		   Word_List,
 		   " at time ",
 		   Time,"\n\n")), 
-	cond(understands_ideas(Subject, Time, Idea_List),
-	     write(Subject,
+
+	cond( understands_ideas(Subject, Time, Idea_List),
+
+	     write( Subject,
 		   " understands ideas ",
 		   Idea_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not understand ideas ",
 		   Idea_List,
 		   " at time ",
 		   Time, "\n\n")), 
-	cond(understands_objects(Subject, Time, Object_List),
-	     write(Subject,
+
+	cond( understands_objects(Subject, Time, Object_List),
+
+	     write( Subject,
 		   " understands objects ",
 		   Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not understand objects ",
 		   Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(understands_words_ideas(Subject, Time, Word_Idea_List),
-	     write(Subject,
+
+	cond( understands_words_ideas(Subject, Time, Word_Idea_List),
+
+	     write( Subject,
 		   " understands words-ideas ",
 		   Word_Idea_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not understand words-ideas ",
 		   Word_Idea_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(understands_words_objects(Subject, Time, Word_Object_List),
-	     write(Subject,
+
+	cond( understands_words_objects(Subject, Time, Word_Object_List),
+
+	    write( Subject,
 		   " understands words-objects ",
 		   Word_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not understand words-objects ",
 		   Word_Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(understands_ideas_objects(Subject, Time, Idea_Object_List),
-	     write(Subject,
+
+	cond( understands_ideas_objects(Subject, Time, Idea_Object_List),
+
+	     write( Subject,
 		   " understands ideas-objects ",
 		   Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not understand ideas-objects ",
 		   Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(understands_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
-	     write(Subject,
+
+	cond( understands_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
+
+	     write( Subject,
 		   " understands words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not understand words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n")).
 
-test_believes(Subject, Time,
+
+test_believes( Subject, Time,
 		 Word_List,
 		 Idea_List,
 		 Object_List,
@@ -136,85 +160,107 @@ test_believes(Subject, Time,
 		 Word_Object_List,
 		 Idea_Object_List,
 		 Word_Idea_Object_List) :-
-	cond(believes_words(Subject, Time, Word_List),
-	     write(Subject,
+
+	cond( believes_words(Subject, Time, Word_List),
+
+	     write( Subject,
 		   " believes words ",
 		   Word_List,
 		   " at time ",
 		   Time,"\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe words ",
 		   Word_List,
 		   " at time ",
 		   Time,"\n\n")), 
-	cond(believes_in_ideas(Subject, Time, Idea_List),
-	     write(Subject,
+
+	cond( believes_in_ideas(Subject, Time, Idea_List),
+
+	     write( Subject,
 		   " believes ideas ",
 		   Idea_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe ideas ",
 		   Idea_List,
 		   " at time ",
 		   Time, "\n\n")), 
-	cond(believes_objects(Subject, Time, Object_List),
-	     write(Subject,
+
+	cond( believes_objects(Subject, Time, Object_List),
+
+	     write( Subject,
 		   " believes objects ",
 		   Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe objects ",
 		   Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_words_ideas(Subject, Time, Word_Idea_List),
-	     write(Subject,
+
+	cond( believes_words_ideas(Subject, Time, Word_Idea_List),
+
+	     write( Subject,
 		   " believes words-ideas ",
 		   Word_Idea_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe words-ideas ",
 		   Word_Idea_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_words_objects(Subject, Time, Word_Object_List),
-	     write(Subject,
+
+	cond( believes_words_objects(Subject, Time, Word_Object_List),
+
+	     write( Subject,
 		   " believes words-objects ",
 		   Word_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe words-objects ",
 		   Word_Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_ideas_objects(Subject, Time, Idea_Object_List),
-	     write(Subject,
+
+	cond( believes_ideas_objects(Subject, Time, Idea_Object_List),
+
+	     write( Subject,
 		   " believes ideas-objects ",
 		   Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe ideas-objects ",
 		   Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
-	     write(Subject,
+
+	cond( believes_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
+
+	     write( Subject,
 		   " believes words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n")).
 
-test_believes_true(Subject, Time,
+
+test_believes_true( Subject, Time,
 		 Word_List,
 		 Idea_List,
 		 Object_List,
@@ -222,85 +268,107 @@ test_believes_true(Subject, Time,
 		 Word_Object_List,
 		 Idea_Object_List,
 		   Word_Idea_Object_List) :-
-	cond(believes_true_words(Subject, Time, Word_List),
-	     write(Subject,
+
+	cond( believes_true_words(Subject, Time, Word_List),
+
+	     write( Subject,
 		   " believes truly words ",
 		   Word_List,
 		   " at time ",
 		   Time,"\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly words ",
 		   Word_List,
 		   " at time ",
 		   Time,"\n\n")), 
-	cond(believes_true_in_ideas(Subject, Time, Idea_List),
-	     write(Subject,
+
+	cond( believes_true_in_ideas(Subject, Time, Idea_List),
+
+	     write( Subject,
 		   " believes truly ideas ",
 		   Idea_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly ideas ",
 		   Idea_List,
 		   " at time ",
 		   Time, "\n\n")), 
-	cond(believes_true_objects(Subject, Time, Object_List),
-	     write(Subject,
+
+	cond( believes_true_objects(Subject, Time, Object_List),
+
+	     write( Subject,
 		   " believes truly objects ",
 		   Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly objects ",
 		   Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_true_words_ideas(Subject, Time, Word_Idea_List),
-	     write(Subject,
+
+	cond( believes_true_words_ideas(Subject, Time, Word_Idea_List),
+
+	     write( Subject,
 		   " believes truly words-ideas ",
 		   Word_Idea_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly words-ideas ",
 		   Word_Idea_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_true_words_objects(Subject, Time, Word_Object_List),
-	     write(Subject,
+
+	cond( believes_true_words_objects(Subject, Time, Word_Object_List),
+
+	     write( Subject,
 		   " believes truly words-objects ",
 		   Word_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly words-objects ",
 		   Word_Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_true_ideas_objects(Subject, Time, Idea_Object_List),
-	     write(Subject,
+
+	cond( believes_true_ideas_objects(Subject, Time, Idea_Object_List),
+
+	     write( Subject,
 		   " believes truly ideas-objects ",
 		   Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly ideas-objects ",
 		   Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_true_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
-	     write(Subject,
+
+	cond( believes_true_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
+
+	     write( Subject,
 		   " believes truly words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n")).
 
-test_believes_true_not(Subject, Time,
+
+test_believes_true_not( Subject, Time,
 		 Word_List,
 		 Idea_List,
 		 Object_List,
@@ -308,85 +376,101 @@ test_believes_true_not(Subject, Time,
 		 Word_Object_List,
 		 Idea_Object_List,
 		 Word_Idea_Object_List) :-
-	cond(believes_true_not_words(Subject, Time, Word_List),
-	     write(Subject,
+
+	cond( believes_true_not_words(Subject, Time, Word_List),
+
+	     write( Subject,
 		   " believes truly not words ",
 		   Word_List,
 		   " at time ",
 		   Time,"\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly not words ",
 		   Word_List,
 		   " at time ",
 		   Time,"\n\n")), 
-	cond(believes_true_not_in_ideas(Subject, Time, Idea_List),
-	     write(Subject,
+
+	cond( believes_true_not_in_ideas(Subject, Time, Idea_List),
+
+	     write( Subject,
 		   " believes truly not ideas ",
 		   Idea_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly not ideas ",
 		   Idea_List,
 		   " at time ",
 		   Time, "\n\n")), 
-	cond(believes_true_not_objects(Subject, Time, Object_List),
-	     write(Subject,
+
+	cond( believes_true_not_objects(Subject, Time, Object_List),
+
+	     write( Subject,
 		   " believes truly not objects ",
 		   Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly not objects ",
 		   Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_true_not_words_ideas(Subject, Time, Word_Idea_List),
-	     write(Subject,
+
+	cond( believes_true_not_words_ideas(Subject, Time, Word_Idea_List),
+
+	     write( Subject,
 		   " believes truly not words-ideas ",
 		   Word_Idea_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly not words-ideas ",
 		   Word_Idea_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_true_not_words_objects(Subject, Time, Word_Object_List),
-	     write(Subject,
+
+	cond( believes_true_not_words_objects(Subject, Time, Word_Object_List),
+
+	     write( Subject,
 		   " believes truly not words-objects ",
 		   Word_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly not words-objects ",
 		   Word_Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_true_not_ideas_objects(Subject, Time, Idea_Object_List),
-	     write(Subject,
+
+	cond( believes_true_not_ideas_objects(Subject, Time, Idea_Object_List),
+
+	     write( Subject,
 		   " believes truly not ideas-objects ",
 		   Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly not ideas-objects ",
 		   Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n")),
-	cond(believes_true_not_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
-	     write(Subject,
+
+	cond( believes_true_not_words_ideas_objects(Subject, Time, Word_Idea_Object_List),
+
+	     write( Subject,
 		   " believes truly not words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n"), 
-	     write(Subject,
+
+	     write( Subject,
 		   " does not believe truly not words-ideas-objects ",
 		   Word_Idea_Object_List,
 		   " at time ",
 		   Time, "\n\n")).
-
-
-
-
-

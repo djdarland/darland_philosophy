@@ -1,3 +1,4 @@
+
 %% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
@@ -57,28 +58,40 @@
 
 %% 1
 
+
 believes_nonsense_words( Subject, Time, List) :-
+
 	believes_words( Subject, Time, List),
+
 	nonsense_words( Subject, Time, List).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 2
 
+
 believes_nonsense_ideas( Subject, Time, List) :-
+
 	believes_in_ideas( Subject, Time, List),
+
 	list_of_lists(List, [], List_Fin, 0),
+
 	nonsense_ideas( Subject, Time, List_Fin).
 
 
 % Have to convert list to list of lists because believes_in_ideas is different
 
-list_of_lists([], List_Out, List_Out, Num) :-
-	cond(Num > 10 , halt).
 
-list_of_lists([Head | Tail], List_In, List_Fin, Num) :-
-	cond(Num > 10 , halt),
+list_of_lists( [], List_Out, List_Out, Num) :-
+
+	cond( Num > 10 , halt).
+
+
+list_of_lists( [Head | Tail], List_In, List_Fin, Num) :-
+
+	cond( Num > 10 , halt),
 	List_Work = append(List_In, [[Head]]),
-	list_of_lists(Tail, List_Work, List_Fin, Num + 1).
+
+	list_of_lists( Tail, List_Work, List_Fin, Num + 1).
 
 	
 	
@@ -86,32 +99,44 @@ list_of_lists([Head | Tail], List_In, List_Fin, Num) :-
 
 %% 3
 
+
 believes_nonsense_objects( Subject, Time, List) :-
+
 	believes_objects( Subject, Time, List),
+
 	nonsense_objects( Subject, Time, List).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 4
 
+
 believes_nonsense_words_ideas( Subject, Time, List) :-
+
 	believes_words_ideas( Subject, Time, List),
+
 	nonsense_words_ideas( Subject, Time, List).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 5
 
+
 believes_nonsense_words_objects( Subject, Time, List) :-
+
 	believes_words_objects( Subject, Time, List),
+
 	nonsense_words_objects( Subject, Time, List).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 6
 
+
 believes_nonsense_ideas_objects( Subject, Time, List) :-
+
 	believes_ideas_objects( Subject, Time, List),
+
 	nonsense_ideas_objects( Subject, Time, List).
 	
 
@@ -119,8 +144,11 @@ believes_nonsense_ideas_objects( Subject, Time, List) :-
 
 %% 7
 
+
 believes_nonsense_words_ideas_objects( Subject, Time, List) :-
+
 	believes_words_ideas_objects( Subject, Time, List),
+
 	nonsense_words_ideas_objects( Subject, Time, List).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -130,49 +158,68 @@ believes_nonsense_words_ideas_objects( Subject, Time, List) :-
 
 %% 1
 
+
 disbelieves_nonsense_words( Subject, Time, List) :-
+
 	disbelieves_words( Subject, Time, List),
+
 	nonsense_words( Subject, Time, List).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 2
 %% disbelieves_in_ideas is primitive for these purposes
 
+
 disbelieves_nonsense_ideas( Subject, Time, List) :-
+
 	disbelieves_in_ideas( Subject, Time, List),
-	list_of_lists(List, [], List_Fin, 0),
+
+	list_of_lists( List, [], List_Fin, 0),
+
 	nonsense_ideas( Subject, Time, List_Fin).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 3
 
+
 disbelieves_nonsense_objects( Subject, Time, List) :-
+
 	disbelieves_objects( Subject, Time, List),
+
 	nonsense_objects( Subject, Time, List).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 4
 
+
 disbelieves_nonsense_words_ideas( Subject, Time, List) :-
+
 	disbelieves_words_ideas( Subject, Time, List),
+
 	nonsense_words_ideas( Subject, Time, List).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 5
 
+
 disbelieves_nonsense_words_objects( Subject, Time, List) :-
+
 	disbelieves_words_objects( Subject, Time, List),
+
 	nonsense_words_objects( Subject, Time, List).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 6
 
+
 disbelieves_nonsense_ideas_objects( Subject, Time, List) :-
+
 	disbelieves_ideas_objects( Subject, Time, List),
+
 	nonsense_ideas_objects( Subject, Time, List).
 	
 
@@ -180,7 +227,10 @@ disbelieves_nonsense_ideas_objects( Subject, Time, List) :-
 
 %% 7
 
+
 disbelieves_nonsense_words_ideas_objects( Subject, Time, List) :-
+
 	disbelieves_words_ideas_objects( Subject, Time, List),
+
 	nonsense_words_ideas_objects( Subject, Time, List).
 	

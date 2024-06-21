@@ -683,7 +683,6 @@ in_first_minus_second( Universal_1, Universal_2, X) :-
     pos_qq([Universal_1, X]),
     \+ pos_qq([Universal_2, X]).
 
-
 %% 1
 %% NA
 
@@ -725,6 +724,7 @@ in_i1_minus_i2_ideas_objects( Subject, Time, Idea1, Idea2, Object) :-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
 %% 
+
 
 in_wi1_minus_wi2_words_ideas_objects(Subject, Time, Word1, Word2, Idea1, Idea2, Object) :-
 

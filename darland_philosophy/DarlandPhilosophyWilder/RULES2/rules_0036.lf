@@ -1,3 +1,4 @@
+
 %% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
 
 %% This file is part of darland's philosophy.
@@ -40,33 +41,48 @@
 
 %% Checking agreement or disagreenent of two Subjects (word-object)
 
-test_understanding_agrees_words_objects(Subject1, Subject2, Time1, Time2, Word_Object_List) :-
-	cond(understands_words_objects(Subject1, Time1, Word_Object_List),
-	     cond(understands_words_objects(Subject2, Time2, Word_Object_List),
-		  write("Both ", Subject1, " and ", Subject2, " understand ",
+
+test_understanding_agrees_words_objects( Subject1, Subject2, Time1, Time2, Word_Object_List) :-
+
+	cond( understands_words_objects(Subject1, Time1, Word_Object_List),
+
+	     cond( understands_words_objects(Subject2, Time2, Word_Object_List),
+
+		  write( "Both ", Subject1, " and ", Subject2, " understand ",
 			Word_Object_List, " at times ", Time1, " and ", Time2,
 			" respectively."),
-		  write(Subject1, " understands ", Word_Object_List,
+
+		  write( Subject1, " understands ", Word_Object_List,
 			" at time ", Time1, " but ", Subject2, " does not ",
 			" at time ", Time2)),
-	     cond(understands_words_objects(Subject2, Time2, Word_Object_List),			  write(Subject2, " understands ", Word_Object_List,
+
+	     cond( understands_words_objects(Subject2, Time2, Word_Object_List),			  write(Subject2, " understands ", Word_Object_List,
 			" at time ", Time2, " but ", Subject1, " does not ",
 			" at time ", Time1),
-     		  write("Neither ", Subject1, " nor ", Subject2, " understand ",
+
+     		  write( "Neither ", Subject1, " nor ", Subject2, " understand ",
 			Word_Object_List, " at times ", Time1, " and ", Time2,
 			" respectively."))).
-test_understanding_agrees_objects(Subject1, Subject2, Time1, Time2, Object_List) :-
-	cond(understands_objects(Subject1, Time1, Object_List),
-	     cond(understands_objects(Subject2, Time2, Object_List),
-		  write("Both ", Subject1, " and ", Subject2, " understand ",
+
+test_understanding_agrees_objects( Subject1, Subject2, Time1, Time2, Object_List) :-
+
+	cond( understands_objects(Subject1, Time1, Object_List),
+
+	     cond( understands_objects(Subject2, Time2, Object_List),
+
+		  write( "Both ", Subject1, " and ", Subject2, " understand ",
 			Object_List, " at times ", Time1, " and ", Time2,
 			" respectively."),
-		  write(Subject1, " understands ", Object_List,
+
+		  write( Subject1, " understands ", Object_List,
 			" at time ", Time1, " but ", Subject2, " does not ",
 			" at time ", Time2)),
-	     cond(understands_objects(Subject2, Time2, Object_List),			  write(Subject2, " understands ", Object_List,
+
+	     cond(
+ understands_objects(Subject2, Time2, Object_List),			  write( Subject2, " understands ", Object_List,
 			" at time ", Time2, " but ", Subject1, " does not ",
 			" at time ", Time1),
-     		  write("Neither ", Subject1, " nor ", Subject2, " understand ",
+
+     		  write( "Neither ", Subject1, " nor ", Subject2, " understand ",
 			Object_List, " at times ", Time1, " and ", Time2,
 			" respectively."))).

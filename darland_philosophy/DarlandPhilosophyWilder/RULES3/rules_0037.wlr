@@ -78,7 +78,7 @@ qqqq(exists_essentially_singular_word_idea, Subject, Time, Word, Idea) :-
 %% 5
 %% guarantees word & object
 
-qqqq(qexists_essentially_singular_word_object, Subject, Time, Word, Object) :-
+qqqq(exists_essentially_singular_word_object, Subject, Time, Word, Object) :-
 	qqqq(rrrr, Subject, Time, Word, Idea),
 	qqqq(number_idea, Idea, singular),
 	qqqq(ssss2, Subject, Time, Idea, Object).
@@ -182,7 +182,7 @@ qqqq(function_essentially_singular_object, Subject, Time, Function, Object) :-
 	qqqq(ssss2, Subject, Time, Idea, Object),
 	qqqq(number_idea, Function_Idea, singular),
 	qqqq(number_idea, Idea, singular),
-	qq_pos([Function, Object]).
+	pos_qq([Function, Object]).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -200,7 +200,7 @@ qqqq(function_essentially_singular_word_object, Subject, Time, Function_Word, Wo
 	qqqq(number_idea, Idea, singular),
 	qqqq(ssss2, Subject, Time, Function_Idea, Function),
 	qqqq(ssss2, Subject, Time, Idea, Object),
-	qq_pos([Function, Object]).
+	pos_qq([Function, Object]).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 6
 %% guarantees idea & object
@@ -211,7 +211,7 @@ qqqq(function_essentially_singular_idea_object, Subject, Time, Function_Idea, Id
 	qqqq(ssss2, Subject, Time, Idea, Object),
 	qqqq(number_idea, Function_Idea, singular),
 	qqqq(number_idea, Idea, singular),
-	qq_pos([Function, Object]).
+	pos_qq([Function, Object]).
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 7
@@ -225,6 +225,6 @@ qqqq(function_essentially_singular_word_idea_object, Subject, Time,
 	qqqq(number_idea, Idea, singular),
 	qqqq(ssss2, Subject, Time, Function_Idea, Function),
 	qqqq(ssss2, Subject, Time, Idea, Object),
-	qq_pos([Function, Object]).
+	pos_qq([Function, Object]).
 
 
