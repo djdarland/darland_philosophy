@@ -1,3 +1,5 @@
+Ported to Linux and Cygwin December 2022 after many efforts since 1995
+By Dennis J. Darland dennis.darland@hotmail.com
 
 *** Yes
 
@@ -26,15 +28,15 @@ Ignore = @.
 > % for some reason (maybe because relation is dynamic - does not work).
 > % check_relation1(I, R)?
 > check_relation2(I, R)?
-Warning: have relation(unknown_relation001_rel). but not qqqq(ssss, @, @, @,unknown_relation001_rel).
+Warning: have relation(unknown_relation001_rel). but not ssss( @, @, @,unknown_relation001_rel).
 *** Yes
 I = @, R = unknown_relation001_rel.
 --1> ;
-Warning: have relation(unknown_relation002_rel). but not qqqq(ssss, @, @, @,unknown_relation002_rel).
+Warning: have relation(unknown_relation002_rel). but not ssss( @, @, @,unknown_relation002_rel).
 *** Yes
 I = @, R = unknown_relation002_rel.
 --1> ;
-Warning: have relation(unknown_relation003_rel). but not qqqq(ssss, @, @, @,unknown_relation003_rel).
+Warning: have relation(unknown_relation003_rel). but not ssss( @, @, @,unknown_relation003_rel).
 *** Yes
 I = @, R = unknown_relation003_rel.
 --1> ;
@@ -658,11 +660,11 @@ Item1 = tom_catiline_idea_dc, Item2 = tom_catiline_idea_dc.
 > ;
 > 
 > ssss_check3(S, T, I, O)?
-Warning: have idea_of(tom_dc,tom_santa_idea_dc). but not qqqq(ssss, tom_dc, @, tom_santa_idea_dc, @).
+Warning: have idea_of(tom_dc,tom_santa_idea_dc). but not ssss( tom_dc, @, tom_santa_idea_dc, @).
 *** Yes
 I = @, O = @, S = @, T = tom_santa_idea_dc.
 --1> ;
-Warning: have idea_of(quine_dc,quine_santa_idea_dc). but not qqqq(ssss, quine_dc, @, quine_santa_idea_dc, @).
+Warning: have idea_of(quine_dc,quine_santa_idea_dc). but not ssss( quine_dc, @, quine_santa_idea_dc, @).
 *** Yes
 I = @, O = @, S = @, T = quine_santa_idea_dc.
 --1> ;
