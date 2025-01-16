@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \NeedsTeXFormat{LaTeX2e}
-\usepackage{principia} 
+\usepackage{../../../../principia-master/principia} 
 \usepackage{fullpage}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -31,6 +31,11 @@ Version with parentheses
 $\pmast 401 \pmcdot 1 \pmthm  (  \pmall{f, x, y, z} \pmpf{F}{[f,x,y,z]} \pmiff \pmpf{G}{[f,x,y,z]}  ) \pmimp (  \pmpf{qqqq}{[ID,F,G]} )$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 401 \pmcdot 1 \pmthm  C    E   \pmall{f,   x,   y,   z}   \pmpf{F}{[f,x,y,z]}   \pmpf{G}{[f,x,y,z]}    \pmpf{qqqq}{[ID,F,G]}  $
+
+
 This is true because there is only one possible value for both F and G. namely qqqq. So, there is no reason to have equality for predicates. Also note that I use a universal ID for identity rather than an equal sign.
 
 To do pure logic, all that is required as primitives are 'qqqq', natural universals, universals (including the universal ID), 'nand', and 'there exists'.  
@@ -44,6 +49,11 @@ $\pmast 401 \pmcdot 2 \pmthm \pmdot \pmall{x} \pmpf{qqqq}{[f, x]} \pmiff \pmpf{q
 Version with parentheses
 
 $\pmast 401 \pmcdot 2 \pmthm  (  \pmall{x}\pmpf{qqqq}{[f, x]} \pmiff \pmpf{qqqq}{[g, x]}  ) \pmimp (  \pmpf{qqqq}{[ID, f, g]} )$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 401 \pmcdot 2 \pmthm  C    E   \pmall{x}\pmpf{qqqq}{[f,   x]}   \pmpf{qqqq}{[g,   x]}    \pmpf{qqqq}{[ID,   f,   g]}  $
 
 
 -----------------------------------------------------------
@@ -137,6 +147,11 @@ Version with parentheses
 $\pmast 402 \pmcdot 001 \pmthm  (  \pmpf{qqqq}{[F,a]} \pmor \pmpf{qqqq}{[F,a]}  ) \pmimp (  \pmpf{qqqq}{[F,a]})$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 001 \pmthm  C    A   \pmpf{qqqq}{[F,a]}   \pmpf{qqqq}{[F,a]}    \pmpf{qqqq}{[F,a]} $
+
+
 $\pmast 402 \pmcdot 002 \pmthm \pmdot \pmpf {qqqq}{[G,a,b]} \pmor \pmpf{qqqq}{[G,a,b]} \pmdot \pmimp \pmdot \pmpf{qqqq}{[G,a,b]}$     
  
  
@@ -144,6 +159,11 @@ $\pmast 402 \pmcdot 002 \pmthm \pmdot \pmpf {qqqq}{[G,a,b]} \pmor \pmpf{qqqq}{[G
 Version with parentheses
 
 $\pmast 402 \pmcdot 002 \pmthm  (  \pmpf {qqqq}{[G,a,b]} \pmor \pmpf{qqqq}{[G,a,b]}  ) \pmimp (  \pmpf{qqqq}{[G,a,b]}     )$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 002 \pmthm  C    A   \pmpf   {qqqq}{[G,a,b]}   \pmpf{qqqq}{[G,a,b]}    \pmpf{qqqq}{[G,a,b]}      $
 
 
 Similarly for PM *1.3-*1.6
@@ -199,6 +219,11 @@ Version with parentheses
 $\pmast 402 \pmcdot 4 \pmthm  (  \pmall{y}\pmsome{x}\pmpf{qqqq}{[ssss, person, time, x, y]} )$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 4 \pmthm \pmall{y}\pmsome{x}\pmpf{qqqq}{[ssss,   person,   time,   x,   y]}  $
+
+
 would correspond to 
 
 $\pmast 402 \pmcdot 5 \pmthm \pmdot \pmall{y} \pmsome{F} \pmpf{qqqq}{[Acq, person,time,F]} \pmand \pmpf{qqqq}{[F, y]} \pmand \pmall{z} \pmpf{F}{[z]} \pmiff \pmpf{qqqq}{[ID,z,y]} $
@@ -208,6 +233,11 @@ $\pmast 402 \pmcdot 5 \pmthm \pmdot \pmall{y} \pmsome{F} \pmpf{qqqq}{[Acq, perso
 Version with parentheses
 
 $\pmast 402 \pmcdot 5 \pmthm  (  \pmall{y}\pmsome{F} \pmpf{qqqq}{[Acq, person,time,F]} ) \land ( \pmpf{qqqq}{[F, y]} ) \land ( \pmall{z}\pmpf{F}{[z]} \pmiff \pmpf{qqqq}{[ID,z,y]} )$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 5 \pmthm  K    K   \pmall{y}\pmsome{F}   \pmpf{qqqq  cq,   cq,   person,time,F]}   \pmpf{qqqq}{[F,   y]}    E   \pmall{z}\pmpf{F}{[z]}   \pmpf{qqqq}{[ID,z,y]}  $
 
 
 in a theory using Russell's theory of definite descriptions.
@@ -223,6 +253,11 @@ Version with parentheses
 $\pmast 402 \pmcdot 6 \pmthm  (  \pmall{y}\pmsome{x}\pmpf{qqqq}{[tttt, person, time, x, y]} )$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 6 \pmthm \pmall{y}\pmsome{x}\pmpf{qqqq}{[tttt,   person,   time,   x,   y]}  $
+
+
 would correspond to
 
 $\pmast 402 \pmcdot 7 \pmthm \pmdot \pmall{y} \pmsome{F} \pmpf{qqqq}{[Acq, person,time,F]} \pmand \pmpf{F}{[y]} $
@@ -232,6 +267,11 @@ $\pmast 402 \pmcdot 7 \pmthm \pmdot \pmall{y} \pmsome{F} \pmpf{qqqq}{[Acq, perso
 Version with parentheses
 
 $\pmast 402 \pmcdot 7 \pmthm  (  \pmall{y}\pmsome{F} \pmpf{qqqq}{[Acq, person,time,F]} ) \land ( \pmpf{F}{[y]} )$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 7 \pmthm  K   \pmall{y}\pmsome{F}   \pmpf{qqqq  cq,   cq,   person,time,F]}   \pmpf{F}{[y]}  $
 
 
 in Russell's theory of classes.
@@ -274,6 +314,11 @@ Version with parentheses
 $\pmast 402 \pmcdot 13 \pmthm \pmpf{qqqq}{[rrss, p, t, w, o]} \pmiddf  (  \pmpf{qqqq}{[rrrr, p, t, w, i]} ) \land ( \pmpf{qqqq}{[ssss, p, t, i, o]} )$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 13 \pmthm \pmpf{qqqq}{[rrss,   p,   t,   w,   o]}   \pmiddf     K   \pmpf{qqqq}{[rrrr,   p,   t,   w,   i]}   \pmpf{qqqq}{[ssss,   p,   t,   i,   o]}  $
+
+
 $\pmast 402 \pmcdot 14 \pmthm \pmpf{qqqq}{[rrtt, p, t, w, o]} \pmiddf \pmdot \pmpf{qqqq}{[rrrr, p, t, w, i]} \pmand \pmpf{qqqq}{[tttt, p, t, i, o]} $
  
  
@@ -281,6 +326,11 @@ $\pmast 402 \pmcdot 14 \pmthm \pmpf{qqqq}{[rrtt, p, t, w, o]} \pmiddf \pmdot \pm
 Version with parentheses
 
 $\pmast 402 \pmcdot 14 \pmthm \pmpf{qqqq}{[rrtt, p, t, w, o]} \pmiddf  (  \pmpf{qqqq}{[rrrr, p, t, w, i]} ) \land ( \pmpf{qqqq}{[tttt, p, t, i, o]} )$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 14 \pmthm \pmpf{qqqq}{[rrtt,   p,   t,   w,   o]}   \pmiddf     K   \pmpf{qqqq}{[rrrr,   p,   t,   w,   i]}   \pmpf{qqqq}{[tttt,   p,   t,   i,   o]}  $
 
 
 $\pmast 402 \pmcdot 15 \pmthm \pmpf{qqqq}{[cnvrrrr, p, t, i, w]} \pmiddf \pmdot \pmpf{qqqq}{[rrrr, p, t, w, i]} $
@@ -292,6 +342,11 @@ Version with parentheses
 $\pmast 402 \pmcdot 15 \pmthm \pmpf{qqqq}{[cnvrrrr, p, t, i, w]} \pmiddf  (  \pmpf{qqqq}{[rrrr, p, t, w, i]} )$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 15 \pmthm \pmpf{qqqq}{[cnvrrrr,   p,   t,   i,   w]}   \pmiddf    \pmpf{qqqq}{[rrrr,   p,   t,   w,   i]}  $
+
+
 $\pmast 402 \pmcdot 16 \pmthm \pmpf{qqqq}{[cnvssss, p, t, o, i]} \pmiddf \pmdot \pmpf{qqqq}{[ssss, p, t, i, o]} $
  
  
@@ -299,6 +354,11 @@ $\pmast 402 \pmcdot 16 \pmthm \pmpf{qqqq}{[cnvssss, p, t, o, i]} \pmiddf \pmdot 
 Version with parentheses
 
 $\pmast 402 \pmcdot 16 \pmthm \pmpf{qqqq}{[cnvssss, p, t, o, i]} \pmiddf  (  \pmpf{qqqq}{[ssss, p, t, i, o]} )$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 16 \pmthm \pmpf{qqqq}{[cnvssss,   p,   t,   o,   i]}   \pmiddf    \pmpf{qqqq}{[ssss,   p,   t,   i,   o]}  $
 
 
 $\pmast 402 \pmcdot 17 \pmthm \pmpf{qqqq}{[cnvtttt, p, t, o, i]} \pmiddf \pmdot \pmpf{qqqq}{[tttt, p, t, i, o]} $
@@ -310,6 +370,11 @@ Version with parentheses
 $\pmast 402 \pmcdot 17 \pmthm \pmpf{qqqq}{[cnvtttt, p, t, o, i]} \pmiddf  (  \pmpf{qqqq}{[tttt, p, t, i, o]} )$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 17 \pmthm \pmpf{qqqq}{[cnvtttt,   p,   t,   o,   i]}   \pmiddf    \pmpf{qqqq}{[tttt,   p,   t,   i,   o]}  $
+
+
 $\pmast 402 \pmcdot 18 \pmthm \pmpf{qqqq}{[cnvrrss, p, t, o, w]} \pmiddf \pmdot \pmpf{qqqq}{[cnvssss, p, t, o, i]} \pmand \pmpf{qqqq}{[cnvrrrr, p, t, i, w]} $
  
  
@@ -319,6 +384,11 @@ Version with parentheses
 $\pmast 402 \pmcdot 18 \pmthm \pmpf{qqqq}{[cnvrrss, p, t, o, w]} \pmiddf  (  \pmpf{qqqq}{[cnvssss, p, t, o, i]} ) \land ( \pmpf{qqqq}{[cnvrrrr, p, t, i, w]} )$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 18 \pmthm \pmpf{qqqq}{[cnvrrss,   p,   t,   o,   w]}   \pmiddf     K   \pmpf{qqqq}{[cnvssss,   p,   t,   o,   i]}   \pmpf{qqqq}{[cnvrrrr,   p,   t,   i,   w]}  $
+
+
 $\pmast 402 \pmcdot 19 \pmthm \pmpf{qqqq}{[cnvrrtt, p, t, o, w]} \pmiddf \pmdot \pmpf{qqqq}{[cnvtttt, p, t, o, i]} \pmand \pmpf{qqqq}{[cnvrrrr, p, t, i, w]} $
  
  
@@ -326,6 +396,11 @@ $\pmast 402 \pmcdot 19 \pmthm \pmpf{qqqq}{[cnvrrtt, p, t, o, w]} \pmiddf \pmdot 
 Version with parentheses
 
 $\pmast 402 \pmcdot 19 \pmthm \pmpf{qqqq}{[cnvrrtt, p, t, o, w]} \pmiddf  (  \pmpf{qqqq}{[cnvtttt, p, t, o, i]} ) \land ( \pmpf{qqqq}{[cnvrrrr, p, t, i, w]} )$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 402 \pmcdot 19 \pmthm \pmpf{qqqq}{[cnvrrtt,   p,   t,   o,   w]}   \pmiddf     K   \pmpf{qqqq}{[cnvtttt,   p,   t,   o,   i]}   \pmpf{qqqq}{[cnvrrrr,   p,   t,   i,   w]}  $
 
 
 -------------------------------------------------------------------------
@@ -385,6 +460,11 @@ Version with parentheses
 $\pmast 403 \pmcdot 2 \pmthm  (  \pmsome{x,y} \pmpf{qqqq}{[bbbb, russell, now, x, y]} ) \land ( \pmpf{qqqq}{[pob, x]} ) \land ( \pmpf{qqqq}{[pos, y]} ) \land ( \pmall{w}\pmpf{qqqq}{[pob, w]} \pmimp \pmpf{qqqq}{[ID, w, x]} ) \land ( \pmall{z}\pmpf{qqqq}{[pos, z]} \pmimp \pmpf{qqqq}{[ID, z, y]} )$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 403 \pmcdot 2 \pmthm  K    K    K    K   \pmsome{x,y}   \pmpf{qqqq}{[bbbb,   russell,   now,   x,   y]}   \pmpf{qqqq}{[pob,   x]}   \pmpf{qqqq}{[pos,   y]}    C   \pmall{w}\pmpf{qqqq}{[pob,   w]}   \pmpf{qqqq}{[ID,   w,   x]}    C   \pmall{z}\pmpf{qqqq}{[pos,   z]}   \pmpf{qqqq}{[ID,   z,   y]}  $
+
+
 But this is not sufficient. Russell could not believe in the case of (hypothetically) the sun not existing. The other (inner) scope is beyond this paper.
 
 One possibility would be to use Polish notation and use Quine's method of eliminating variables. Gregory Landini Has done this in his Repairing Russell's 1913 Theory of Knowledge. And to handle some cases, that would also be possible for my theory. 
@@ -424,6 +504,11 @@ Version with parentheses
 $\pmast 404 \pmcdot 3 \pmthm \pmsome{w,z}  (  \pmpf{qqqq}{[w, z]} \pmimp \pmsome{y}\pmpf{qqqq}{[ssss,p,t,y,z]})$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 404 \pmcdot 3 \pmthm \pmsome{w,z}     C   \pmpf{qqqq}{[w,   z]}   \pmsome{y}\pmpf{qqqq}{[ssss,p,t,y,z]} $
+
+
 or necessary that:
 
 $\pmast 404 \pmcdot 4 \pmthm \pmsome{w,z} \pmdot \pmpf{qqqq}{[w, z]} \pmimp \pmsome{y} \pmpf{qqqq}{[tttt,p,t,y,z]}$
@@ -433,6 +518,11 @@ $\pmast 404 \pmcdot 4 \pmthm \pmsome{w,z} \pmdot \pmpf{qqqq}{[w, z]} \pmimp \pms
 Version with parentheses
 
 $\pmast 404 \pmcdot 4 \pmthm \pmsome{w,z}  (  \pmpf{qqqq}{[w, z]} \pmimp \pmsome{y}\pmpf{qqqq}{[tttt,p,t,y,z]})$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 404 \pmcdot 4 \pmthm \pmsome{w,z}     C   \pmpf{qqqq}{[w,   z]}   \pmsome{y}\pmpf{qqqq}{[tttt,p,t,y,z]} $
 
 
 i.e., there can be individuals of which there are no ideas.
@@ -461,6 +551,11 @@ Version with parentheses
 $\pmast 404 \pmcdot 7 \pmthm  (  \pmpf{qqqq}{[bbbb,tom,now,tiob,tios]} ) \land ( \pmsome{x}\pmpf{qqqq}{[ssss,tom,now,tiob,x]} ) \land ( \pmsome{y}\pmpf{qqqq}{[ssss,tom,now,tios,y]} ) \land ( \pmpf{qqqq}{[x,y]})$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 404 \pmcdot 7 \pmthm  K    K    K   \pmpf{qqqq}{[bbbb,tom,now,tiob,tios]}   \pmsome{x}\pmpf{qqqq}{[ssss,tom,now,tiob,x]}   \pmsome{y}\pmpf{qqqq}{[ssss,tom,now,tios,y]}   \pmpf{qqqq}{[x,y]} $
+
+
 
 Notice, there are no names here for the brightness or the sun. There are only the variables x and y. 
 
@@ -477,6 +572,11 @@ Version with parentheses
 $\pmast 404 \pmcdot 8 \pmthm  (  \pmpf{qqqq}{[bbbb, tom, now, tiob, tios]} ) \land ( \pmsome{x}\pmpf{qqqq}{[cnvrrrr, tom, now, tiob, x]} ) \land ( \pmsome{y}\pmpf{qqqq}{[cnvrrrr, tom, now, tios, y]} ) \land ( \pmpf{qqqq}{[says, tom, now, x, y]})$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 404 \pmcdot 8 \pmthm  K    K    K   \pmpf{qqqq}{[bbbb,   tom,   now,   tiob,   tios]}   \pmsome{x}\pmpf{qqqq}{[cnvrrrr,   tom,   now,   tiob,   x]}   \pmsome{y}\pmpf{qqqq}{[cnvrrrr,   tom,   now,   tios,   y]}   \pmpf{qqqq}{[says,   tom,   now,   x,   y]} $
+
+
 Tom's assertion of his belief “that the sun is bright”  is true if
 
 $\pmast 404 \pmcdot 9 \pmthm \pmdot \pmpf{qqqq}{[bbbb, tom, now, tiob, tios]} \pmand \pmsome{w} \pmpf{qqqq}{[cnvrrrr, tom, now, tiob, w]}\pmand \pmsome{x} \pmpf{qqqq}{[cnvrrrr, tom, now, tios, x]}\pmand \pmpf{qqqq}{[says, tom, now, x, y]} \pmand \pmsome{y} \pmpf{qqqq}{[ssss, tom, now, tiob, y]} \pmand \pmsome{z} \pmpf{qqqq}{[ssss, tom, now, tios, z]} \pmand \pmpf{qqqq}{[y,z]}$
@@ -486,6 +586,11 @@ $\pmast 404 \pmcdot 9 \pmthm \pmdot \pmpf{qqqq}{[bbbb, tom, now, tiob, tios]} \p
 Version with parentheses
 
 $\pmast 404 \pmcdot 9 \pmthm  (  \pmpf{qqqq}{[bbbb, tom, now, tiob, tios]} ) \land ( \pmsome{w}\pmpf{qqqq}{[cnvrrrr, tom, now, tiob, w]}) \land ( \pmsome{x}\pmpf{qqqq}{[cnvrrrr, tom, now, tios, x]}) \land ( \pmpf{qqqq}{[says, tom, now, x, y]} ) \land ( \pmsome{y}\pmpf{qqqq}{[ssss, tom, now, tiob, y]} ) \land ( \pmsome{z}\pmpf{qqqq}{[ssss, tom, now, tios, z]} ) \land ( \pmpf{qqqq}{[y,z]})$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 404 \pmcdot 9 \pmthm  K    K    K    K    K    K   \pmpf{qqqq}{[bbbb,   tom,   now,   tiob,   tios]}   \pmsome{w}\pmpf{qqqq}{[cnvrrrr,   tom,   now,   tiob,   w]}  \pmsome{x}\pmpf{qqqq}{[cnvrrrr,   tom,   now,   tios,   x]}  \pmpf{qqqq}{[says,   tom,   now,   x,   y]}   \pmsome{y}\pmpf{qqqq}{[ssss,   tom,   now,   tiob,   y]}   \pmsome{z}\pmpf{qqqq}{[ssss,   tom,   now,   tios,   z]}   \pmpf{qqqq}{[y,z]} $
 
 
 Note in these examples, I do not actually use names for bright, the sun, the name of bright or the name of the sun. We do not actually know these exist. They could only have proper names if we knew they existed. We only have relations that we believe to exist between our ideas and these objects. So, we must use quantifiers and variables.
@@ -519,6 +624,11 @@ Version with parentheses
 $\pmast 405 \pmcdot 1 \pmthm \pmsome{u} \pmall{v}  (  \pmpf{qqqq}{[u,v]} \pmiff a)$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 405 \pmcdot 1 \pmthm \pmsome{u}   \pmall{v}     E   \pmpf{qqqq}{[u,v]}   a $
+
+
 when for v we substitute for any variable of type n, for u one of type n + 1, and for a any formula [containing only universals hypothesized to exist] that does not contain u free. Frege to Goedel, p 601. I am not sure this is all that Russell intended by the axiom of reducibility. From his examples (all properties of great generals), I have wondered if it had to do with  greatest lower bounds or least upper bounds. Anyway, with this, my theory would no longer first order. I will illustrate what is lacking if one tries to do without it.
 
 I believe that it is also needed in PM, because of the use of incomplete symbols for [extensional] classes and relations in PM. $\pmast 20 \pmcdot 01$ and $\pmast 21 \pmcdot 02$ depend upon the existence of intensional functions. Thus $\pmast 12 \pmcdot 1$ and $\pmast 12 \pmcdot 11$ are needed. E.g. $\pmast 20 \pmcdot 112$,
@@ -550,6 +660,11 @@ Version with parentheses
 $\pmast 406 \pmcdot 4 \pmthm \pmpf{qqqq}{[inintersection,z, X, Y]} \pmiddf  (  \pmpf{qqqq}{[X,z]} ) \land ( \pmpf{qqqq}{[Y,z]} )$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 406 \pmcdot 4 \pmthm \pmpf{qqqq}{[inintersection,z,   X,   Y]}   \pmiddf     K   \pmpf{qqqq}{[X,z]}   \pmpf{qqqq}{[Y,z]}  $
+
+
 z is in intersection if in both x and y
 
 $\pmast 406 \pmcdot 5 \pmthm \pmpf{qqqq}{[inunion,z, X, Y]} \pmiddf \pmpf{qqqq}{[X,z]} \pmor \pmpf{qqqq}{[Y,z]} $
@@ -571,6 +686,11 @@ $\pmast 407 \pmcdot 2 \pmthm \pmdot \pmpf{qqqq}{[instantiatesone, X]} \pmiddf \p
 Version with parentheses
 
 $\pmast 407 \pmcdot 2 \pmthm  (  \pmpf{qqqq}{[instantiatesone, X]} \pmiddf \pmsome{z}\pmpf{qqqq}{[X, z]} ) \land ( \pmall{w}\pmpf{qqqq}{[X, w]}  ) \pmimp (  \pmpf{[ID, z, w]} )$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 407 \pmcdot 2 \pmthm  C    K   \pmpf{qqqq}{[instantiatesone,   X]}   \pmiddf   \pmsome{z}\pmpf{qqqq}{[X,   z]}   \pmall{w}\pmpf{qqqq}{[X,   w]}    \pmpf{[ID,   z,   w]}  $
 
 
 If this is true, x will be a universal true of exactly one thing.
@@ -616,6 +736,11 @@ Version with parentheses
 $\pmast 407 \pmcdot 10 \pmthm  ((  \pmall{W,X,Y,Z} \pmpf{qqqq}{[instnatural,W]} ) \land ( \pmpf{qqqq}{[instnatural,X]} ) \land ( \pmpf{qqqq}{[instssum,Y,W,X]} ) \land ( \pmpf{qqqq}{[instsum,Z,X,W]}  )) \pmimp ((  \pmpf{qqqq}{[instssamenatural, Y, Z]}))$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 407 \pmcdot 10 \pmthm  C    K    K    K   \pmall{W,X,Y,Z}   \pmpf{qqqq}{[instnatural,W]}   \pmpf{qqqq}{[instnatural,X]}   \pmpf{qqqq}{[instssum,Y,W,X]}   \pmpf{qqqq}{[instsum,Z,X,W]}    \pmpf{qqqq}{[instssamenatural,   Y,   Z]} $
+
+
 I think I can define all these with only qqqq, nand and quantification over individuals (universals or particulars).
 
 Now what do I need to suppose to exist?
@@ -633,6 +758,11 @@ Version with parentheses
 $\pmast 407 \pmcdot 11 \pmthm \pmpf{function}{[R]} \pmiddf  ((  \pmall{u,v,w} \pmpf{qqqq}{[R, u, v]} ) \land ( \pmpf{qqqq}{[R, u, w]}  )) \pmimp (  \pmpf{qqqq}{[ID, v, w]} )$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 407 \pmcdot 11 \pmthm \pmpf{function}{[R]}   \pmiddf     C    K   \pmall{u,v,w}   \pmpf{qqqq}{[R,   u,   v]}   \pmpf{qqqq}{[R,   u,   w]}    \pmpf{qqqq}{[ID,   v,   w]}  $
+
+
 Next defining one to many:
 
 $\pmast 407 \pmcdot 12 \pmthm \pmpf{lfunction}{[R]} \pmiddf \pmdot \pmall{u,v,w} \pmpf{qqqq}{[R, v, u]} \pmand \pmpf{qqqq}{[R, w, u]} \pmdott \pmimp \pmdot \pmpf{qqqq}{[ID, v, w]} $
@@ -644,6 +774,11 @@ Version with parentheses
 $\pmast 407 \pmcdot 12 \pmthm \pmpf{lfunction}{[R]} \pmiddf  ((  \pmall{u,v,w} \pmpf{qqqq}{[R, v, u]} ) \land ( \pmpf{qqqq}{[R, w, u]}  )) \pmimp (  \pmpf{qqqq}{[ID, v, w]} )$
 
 
+Polish Lukasiewicz notation
+
+$\pmast 407 \pmcdot 12 \pmthm \pmpf{lfunction}{[R]}   \pmiddf     C    K   \pmall{u,v,w}   \pmpf{qqqq}{[R,   v,   u]}   \pmpf{qqqq}{[R,   w,   u]}    \pmpf{qqqq}{[ID,   v,   w]}  $
+
+
 Next I define there being a relation that holds between two relations, if there is one-to-one mapping from one to the other.
 
 $\pmast 407 \pmcdot 13 \pmthm \pmpf{qqqq}{[onetoone,R]} \pmiddf \pmdot \pmpf{qqqq}{[function, R]} \pmand \pmpf{qqqq}{[lfunction, R]} \pmandd \pmall{x} \pmsome{y} \pmpf{qqqq}{[R,x,y]} \pmand \pmall{x} \pmsome{y} \pmpf{qqqq}{[R,y,x]} \pmdott \pmor \pmdot \pmall{x,y} \pmnot \pmpf{qqqq}{[R,x,y]}$
@@ -653,6 +788,11 @@ $\pmast 407 \pmcdot 13 \pmthm \pmpf{qqqq}{[onetoone,R]} \pmiddf \pmdot \pmpf{qqq
 Version with parentheses
 
 $\pmast 407 \pmcdot 13 \pmthm \pmpf{qqqq}{[onetoone,R]} \pmiddf  ((  \pmpf{qqqq}{[function, R]} ) \land ( \pmpf{qqqq}{[lfunction, R]} )) \land (( \pmall{x}\pmsome{y}\pmpf{qqqq}{[R,x,y]} ) \land ( \pmall{x}\pmsome{y}\pmpf{qqqq}{[R,y,x]}  )) \pmor (  \pmall{x,y} \pmnot \pmpf{qqqq}{[R,x,y]})$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 407 \pmcdot 13 \pmthm \pmpf{qqqq}{[onetoone,R]}   \pmiddf     A    K    K   \pmpf{qqqq}{[function,   R]}   \pmpf{qqqq}{[lfunction,   R]}    K   \pmall{x}\pmsome{y}\pmpf{qqqq}{[R,x,y]}   \pmall{x}\pmsome{y}\pmpf{qqqq}{[R,y,x]}    \pmall{x,y}    N   \pmpf{qqqq}{[R,x,y]} $
 
 
 Define successor. (another abbreviation)
@@ -678,6 +818,11 @@ Version with parentheses
 $\pmast 407 \pmcdot 14 \pmthm \pmpf{qqqq}{[instssucc, Y, X]} \pmiddf  ((  \pmsome{Z}\pmpf{qqqq}{[onetoone, Z, X]} ) \land ( \pmall{w}\pmpf{qqqq}{[Z,w]} \pmimp \pmpf{qqqq}{[X, w]} )) \land (( \pmsome{t}\pmall{u}\pmpf{qqqq}{[Y,t]} ) \land ( \pmnot \pmpf {qqqq}{[X, u]}  )) \pmimp  pmpf{qqqq}{[ID, u, t]} $
 
 
+Polish Lukasiewicz notation
+
+$\pmast 407 \pmcdot 14 \pmthm \pmpf{qqqq}{[instssucc,   Y,   X]}   \pmiddf     C    K    K   \pmsome{Z}\pmpf{qqqq}{[onetoone,   Z,   X]}    C   \pmall{w}\pmpf{qqqq}{[Z,w]}   \pmpf{qqqq}{[X,   w]}    K   \pmsome{t}\pmall{u}\pmpf{qqqq}{[Y,t]}    N   \pmpf   {qqqq}{[X,   u]}    pmpf{qqqq}{[ID,   u,   t]}  $
+
+
 The axiom of infinity below can be adduced.
 
 
@@ -688,6 +833,11 @@ $\pmast 407 \pmcdot 15 \pmthm infaxiom \pmiddf \pmdot \pmsome{X} \pmpf{qqqq}{[in
 Version with parentheses
 
 $\pmast 407 \pmcdot 15 \pmthm infaxiom \pmiddf  (  \pmsome{X}\pmpf{qqqq}{[instantiatesone, X]} ) \land ( \pmall{Y}\pmsome{Z}\pmpf{qqqq}{[instssucc, Y, Z]})$
+
+
+Polish Lukasiewicz notation
+
+$\pmast 407 \pmcdot 15 \pmthm infaxiom   \pmiddf     K   \pmsome{X}\pmpf{qqqq}{[instantiatesone,   X]}   \pmall{Y}\pmsome{Z}\pmpf{qqqq}{[instssucc,   Y,   Z]} $
 
 
   

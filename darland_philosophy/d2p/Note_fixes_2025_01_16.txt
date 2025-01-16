@@ -1,0 +1,3 @@
+Renamed _tex.txt files to .tex
+Renamed _sh.txt files to .sh
+Corrected path of .principia in beginning .tex files

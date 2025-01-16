@@ -1,0 +1,12 @@
+trying to keep principia directory original 
+sudo apt install texlive-latex-base
+sudo apt install perl-tk
+sudo apt install xzdec
+sudo apt install texlive-latex-base-doc
+sudo apt install texlive-fonts-recommended
+sudo apt install texlive-fonts-recommended-doc
+sudo apt install tipa-doc
+sudo apt install texlive-xetex
+sudo apt install dot2tex
+sudo apt install texlive-pictures-doc
+sudo apt install graphviz-doc
