@@ -7,18 +7,18 @@ echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
 echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; type 501 for details."
 echo "-----------"
-
-echo "1 Run wilder_life interactively"
-echo "-----------"
 echo "111 Edit Darland Philosophy Queries"
+echo "112 Edit Darland Philosophy Queries - Whitehead"
 echo "120 Run and View Darland WilderLife Philosophy- All Queries"
-echo "121 Edit Darland Philosophy WilderLife Facts"
-echo "122 Edit Darland Philosophy WilderLife Rules"
-echo "123 Edit Darland Philosophy WilderLife Logs"
-echo "125 Run and View a Particular WilderLife Query"
-echo "126 Clear WildererLife Reference Files"
-echo "127 Clear WilderLife HTML Files"
-echo "128 Copy WilfdLIFE HTML Files"
+echo "122 Edit Darland Philosophy WilderLife Facts"
+echo "123 Edit Darland Philosophy WilderLife Facts - Whitehead"
+echo "124 Edit Darland Philosophy WilderLife Rules"
+echo "125 Edit Darland Philosophy WilderLife Rules - Whitehead"
+echo "128 Run and View a Particular WilderLife Query"
+echo "129 Run and View a Particular WilderLife Query - Whitehead"
+echo "130 Clear WildererLife Reference Files"
+echo "131 Clear WilderLife HTML Files"
+echo "132 Copy WilfdLIFE HTML Files"
 
 echo "-----------"
 echo "500 NO_WARANTY.txt"
@@ -33,16 +33,20 @@ read select
 while [ $select -ne 999 ]
 do 
 case $select in
-1)   wilder_life -memory=209715200;;
 111) ./eee1;;
+112) ./eee3;;
 120) ./tsda_lf2.sh 1;;
-121) ./da_fa_lf2.sh 1;;
-122) ./da_ru_lf2.sh 1;;
-123) ./da_lg_lf2.sh 1;;
-125) ./da_par_lf2.sh;;
-126) ./da_clr_lf2.sh;;
-127) ./clrhtml.sh;;
-128) ./cphtml.sh;;
+122) ./da_fa_lf2.sh 1;;
+123) ./da_fa_lf3.sh 1;;
+124) ./da_ru_lf2.sh 1;;
+125) ./da_ru_lf3.sh 1;;
+126) ./da_lg_lf2.sh 1;;
+127) ./da_lg_lf3.sh 1;;
+128) ./da_par_lf2.sh;;
+129) ./da_par_lf3.sh;;
+130) ./da_clr_lf2.sh;;
+131) ./clrhtml.sh;;
+132) ./cphtml.sh;;
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
 666) $EDITOR eee ;;
@@ -58,17 +62,20 @@ echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; type 501 for details."
 
 echo "-----------"
-echo "1 Run wilder_life interactively"
-echo "-----------"
 echo "111 Edit Darland Philosophy Queries"
-echo "120 Run and View Darland WilderLife Philosophy"
-echo "121 Edit Darland Philosophy WilderLife Facts"
-echo "122 Edit Darland Philosophy WilderLife Rules"
-echo "123 Edit Darland Philosophy WilderLife Logs"
-echo "125 Run and View a Particular WilderLife Query"
-echo "126 Clear WilderLife Reference Files"
-echo "127 Clear WilderLife HTML Files"
-echo "128 Copy WilderLIFE HTML Files"
+echo "112 Edit Darland Philosophy Queries"
+echo "120 Run and View Darland WilderLife Philosophy- All Queries"
+echo "122 Edit Darland Philosophy WilderLife Facts part1"
+echo "123 Edit Darland Philosophy WilderLife Facts part2"
+echo "124 Edit Darland Philosophy WilderLife Rules part1"
+echo "125 Edit Darland Philosophy WilderLife Rules part2"
+echo "126 Edit Darland Philosophy WilderLife Logs part1"
+echo "127 Edit Darland Philosophy WilderLife Logs part2"
+echo "128 Run and View a Particular WilderLife Query part1"
+echo "129 Run and View a Particular WilderLife Query part2"
+echo "130 Clear WildererLife Reference Files"
+echo "131 Clear WilderLife HTML Files"
+echo "132 Copy WilfdLIFE HTML Files"
 
 echo "-----------"
 echo "500 NO_WARANTY.txt"

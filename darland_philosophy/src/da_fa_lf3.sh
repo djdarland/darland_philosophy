@@ -23,13 +23,9 @@ echo "-----------"
 echo "Philosophy Facts Files"
 echo "-----------"
 
-echo "31 facts_0031.wlr data for Everything with Number added for Ideas"
-echo "33 facts_0033.wlr data Idealism, Private Language, and Replacing Classes"
-echo "71 facts_0071.wlr data for Whitehead phil"
-echo "81 facts_0081.wlr data for Whitehead Metaphysics"
-echo "for n > 100 preprocessed m = n + 100"
-echo "131 facts_0031.lf data for Everything with Number added for Ideas"
-echo "133 facts_0133.lf data Idealism, Private Language, and Replacing Classes"
+echo "171 facts_0071.lf data for Whitehead phil"
+echo "181 facts_0081.lf data for Whitehead Metaphysics"
+
 echo "-----------"
 if test -f da_fa_lf2.sh
 then
@@ -60,7 +56,9 @@ case $select in
 106) $EDITOR ../DarlandPhilosophyWilder/FACTS2/facts_0006.lf;;
 131) $EDITOR ../DarlandPhilosophyWilder/FACTS2/facts_0031.lf;;
 133) $EDITOR ../DarlandPhilosophyWilder/FACTS2/facts_0033.lf;;
-666) $EDITOR da_fa_lf2.sh;;
+171) $EDITOR ../DarlandPhilosophyWilder/FACTS2/facts_0071.lf;;
+181) $EDITOR ../DarlandPhilosophyWilder/FACTS2/facts_0081.lf;;
+666) $EDITOR da_fa_lf3.sh;;
 777) $EDITOR NOTES_DJD.txt;;
 
 esac
