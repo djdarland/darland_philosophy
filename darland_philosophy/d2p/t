@@ -1,0 +1,2 @@
+pdflatex demo.tex
+evince demo.pdf
