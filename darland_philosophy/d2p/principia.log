@@ -1,0 +1,13 @@
+This is TeX, Version 3.141592653 (TeX Live 2023/Debian) (preloaded format=tex 2025.10.5)  5 OCT 2025 21:56
+**principia
+(./principia.tex
+! Undefined control sequence.
+l.1 \documentclass
+                  [12pt]{article}
+? 
+! Emergency stop.
+l.1 
+    
+End of file on the terminal!
+
+No pages of output.
