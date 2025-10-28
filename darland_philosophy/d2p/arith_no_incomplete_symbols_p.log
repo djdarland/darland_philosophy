@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.5)  5 OCT 2025 22:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.16)  16 OCT 2025 18:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -364,13 +364,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (0.92326pt too wide) in paragraph at lines 63--67
+Overfull \hbox (0.92326pt too wide) in paragraph at lines 53--57
 []\OT1/cmr/m/n/12 Here is a back-ground for my the-ory. It does not ex-actly re
 p-re-sent Bertrand
  []
 
 [2] [3]
-Overfull \hbox (14.23143pt too wide) in paragraph at lines 229--230
+Overfull \hbox (14.23143pt too wide) in paragraph at lines 204--205
 []$[]\OT1/cmr/m/n/12 402[]5[] [] (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )([]\OML/cm
 m/m/it/12 F\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it
 /12 Acq; person; time; F\OT1/cmr/m/n/12 ] [] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/
@@ -380,26 +380,15 @@ ML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ID; z; y\OT1/cmr/m/n/12 ]$
  
  []
 
-
-Overfull \hbox (31.8548pt too wide) in paragraph at lines 240--241
-[]$[]\OT1/cmr/m/n/12 402[]5[] \OML/cmm/m/it/12 KK\OT1/cmr/m/n/12 (\OML/cmm/m/it
-/12 y\OT1/cmr/m/n/12 )([]\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qq
-qqcq; cq; person; time; F\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 
-[\OML/cmm/m/it/12 F; y\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/
-cmm/m/it/12 z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 [\OML/cmm/m/it/
-12 z\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ID;
- z; y\OT1/cmr/m/n/12 ]$ 
- []
-
 [4]
-Overfull \hbox (7.81305pt too wide) in paragraph at lines 291--292
+Overfull \hbox (7.81305pt too wide) in paragraph at lines 251--252
 []$[]\OT1/cmr/m/n/12 402[]10\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it
 /12 naturaluniversal; x\OT1/cmr/m/n/12 ]$ - Nat-u-ral Uni-ver-sals (Pos-si-bly 
 e.g. green,
  []
 
 [5]
-Overfull \hbox (26.79324pt too wide) in paragraph at lines 378--379
+Overfull \hbox (26.79324pt too wide) in paragraph at lines 313--314
 []$[]\OT1/cmr/m/n/12 402[]18[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
 /it/12 cnvrrss; p; t; o; w\OT1/cmr/m/n/12 ] [] [] \OML/cmm/m/it/12 qqqq\OT1/cmr
 /m/n/12 [\OML/cmm/m/it/12 cnvssss; p; t; o; i\OT1/cmr/m/n/12 ] [] \OML/cmm/m/it
@@ -408,7 +397,7 @@ Overfull \hbox (26.79324pt too wide) in paragraph at lines 378--379
  []
 
 
-Overfull \hbox (47.97087pt too wide) in paragraph at lines 384--385
+Overfull \hbox (47.97087pt too wide) in paragraph at lines 319--320
 []$[]\OT1/cmr/m/n/12 402[]18[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
 /it/12 cnvrrss; p; t; o; w\OT1/cmr/m/n/12 ] [] (\OML/cmm/m/it/12 qqqq\OT1/cmr/m
 /n/12 [\OML/cmm/m/it/12 cnvssss; p; t; o; i\OT1/cmr/m/n/12 ]) \OMS/cmsy/m/n/12 
@@ -417,15 +406,7 @@ rr; p; t; i; w\OT1/cmr/m/n/12 ])$
  []
 
 
-Overfull \hbox (32.55151pt too wide) in paragraph at lines 389--390
-[]$[]\OT1/cmr/m/n/12 402[]18[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
-/it/12 cnvrrss; p; t; o; w\OT1/cmr/m/n/12 ] [] \OML/cmm/m/it/12 Kqqqq\OT1/cmr/m
-/n/12 [\OML/cmm/m/it/12 cnvssss; p; t; o; i\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qq
-qq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 cnvrrrr; p; t; i; w\OT1/cmr/m/n/12 ]$ 
- []
-
-
-Overfull \hbox (19.04321pt too wide) in paragraph at lines 392--393
+Overfull \hbox (19.04321pt too wide) in paragraph at lines 322--323
 []$[]\OT1/cmr/m/n/12 402[]19[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
 /it/12 cnvrrtt; p; t; o; w\OT1/cmr/m/n/12 ] [] [] \OML/cmm/m/it/12 qqqq\OT1/cmr
 /m/n/12 [\OML/cmm/m/it/12 cnvtttt; p; t; o; i\OT1/cmr/m/n/12 ] [] \OML/cmm/m/it
@@ -434,7 +415,7 @@ Overfull \hbox (19.04321pt too wide) in paragraph at lines 392--393
  []
 
 
-Overfull \hbox (40.22084pt too wide) in paragraph at lines 398--399
+Overfull \hbox (40.22084pt too wide) in paragraph at lines 328--329
 []$[]\OT1/cmr/m/n/12 402[]19[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
 /it/12 cnvrrtt; p; t; o; w\OT1/cmr/m/n/12 ] [] (\OML/cmm/m/it/12 qqqq\OT1/cmr/m
 /n/12 [\OML/cmm/m/it/12 cnvtttt; p; t; o; i\OT1/cmr/m/n/12 ]) \OMS/cmsy/m/n/12 
@@ -442,16 +423,8 @@ Overfull \hbox (40.22084pt too wide) in paragraph at lines 398--399
 rr; p; t; i; w\OT1/cmr/m/n/12 ])$ 
  []
 
-
-Overfull \hbox (24.80148pt too wide) in paragraph at lines 403--404
-[]$[]\OT1/cmr/m/n/12 402[]19[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
-/it/12 cnvrrtt; p; t; o; w\OT1/cmr/m/n/12 ] [] \OML/cmm/m/it/12 Kqqqq\OT1/cmr/m
-/n/12 [\OML/cmm/m/it/12 cnvtttt; p; t; o; i\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qq
-qq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 cnvrrrr; p; t; i; w\OT1/cmr/m/n/12 ]$ 
- []
-
-[6] [7]
-Overfull \hbox (56.61371pt too wide) in paragraph at lines 454--455
+[6]
+Overfull \hbox (56.61371pt too wide) in paragraph at lines 379--380
 []$[]\OT1/cmr/m/n/12 403[]2[] [] ([]\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )\OML/
 cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 bbbb; russell; now; x; y\OT1/
 cmr/m/n/12 ] [] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 pob; x\O
@@ -461,7 +434,7 @@ y\OT1/cmr/m/n/12 ] [] (\OML/cmm/m/it/12 w\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq
  []
 
 
-Overfull \hbox (11.61993pt too wide) in paragraph at lines 460--461
+Overfull \hbox (11.61993pt too wide) in paragraph at lines 385--386
 []$[]\OT1/cmr/m/n/12 403[]2[] (([]\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )\OML/cm
 m/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 bbbb; russell; now; x; y\OT1/cm
 r/m/n/12 ]) \OMS/cmsy/m/n/12 ^ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 qqqq\OT1/cmr/m
@@ -470,23 +443,8 @@ n/12 (\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 pos; y\OT1/cmr/m/n
 /12 ]) \OMS/cmsy/m/n/12 ^
  []
 
-
-Overfull \hbox (311.40746pt too wide) in paragraph at lines 465--466
-[]$[]\OT1/cmr/m/n/12 403[]2[] \OML/cmm/m/it/12 KKKK\OT1/cmr/m/n/12 ([]\OML/cmm/
-m/it/12 x; y\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/i
-t/12 bbbb; russell; now; x; y\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n
-/12 [\OML/cmm/m/it/12 pob; x\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/
-12 [\OML/cmm/m/it/12 pos; y\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 (
-\OML/cmm/m/it/12 w\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/c
-mm/m/it/12 pob; w\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cm
-m/m/it/12 ID; w; x\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 (\OML/cmm/
-m/it/12 z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/1
-2 pos; z\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12
- ID; z; y\OT1/cmr/m/n/12 ]$ 
- []
-
-[8] [9]
-Overfull \hbox (16.61435pt too wide) in paragraph at lines 551--552
+[7] [8]
+Overfull \hbox (16.61435pt too wide) in paragraph at lines 461--462
 []$[]\OT1/cmr/m/n/12 404[]7[] (\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
 /it/12 bbbb; tom; now; tiob; tios\OT1/cmr/m/n/12 ]) \OMS/cmsy/m/n/12 ^ \OT1/cmr
 /m/n/12 (([]\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/
@@ -495,18 +453,7 @@ n/12 [\OML/cmm/m/it/12 ssss; tom; now; tiob; x\OT1/cmr/m/n/12 ]) \OMS/cmsy/m/n/
  []
 
 
-Overfull \hbox (225.69077pt too wide) in paragraph at lines 556--557
-[]$[]\OT1/cmr/m/n/12 404[]7[] \OML/cmm/m/it/12 KKKqqqq\OT1/cmr/m/n/12 [\OML/cmm
-/m/it/12 bbbb; tom; now; tiob; tios\OT1/cmr/m/n/12 ]([]\OML/cmm/m/it/12 x\OT1/c
-mr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ssss; tom; no
-w; tiob; x\OT1/cmr/m/n/12 ]([]\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )\OML/cmm/m/it/
-12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ssss; tom; now; tios; y\OT1/cmr/m/n/12
- ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ]$
- 
- []
-
-
-Overfull \hbox (6.86282pt too wide) in paragraph at lines 566--567
+Overfull \hbox (6.86282pt too wide) in paragraph at lines 471--472
 []$[]\OT1/cmr/m/n/12 404[]8[] [] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm
 /m/it/12 bbbb; tom; now; tiob; tios\OT1/cmr/m/n/12 ] [] ([]\OML/cmm/m/it/12 x\O
 T1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 cnvrrrr; 
@@ -514,7 +461,7 @@ tom; now; tiob; x\OT1/cmr/m/n/12 ] []
  []
 
 
-Overfull \hbox (34.49046pt too wide) in paragraph at lines 572--573
+Overfull \hbox (34.49046pt too wide) in paragraph at lines 477--478
 []$[]\OT1/cmr/m/n/12 404[]8[] (\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
 /it/12 bbbb; tom; now; tiob; tios\OT1/cmr/m/n/12 ]) \OMS/cmsy/m/n/12 ^ \OT1/cmr
 /m/n/12 (([]\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/
@@ -523,18 +470,7 @@ n/12 [\OML/cmm/m/it/12 cnvrrrr; tom; now; tiob; x\OT1/cmr/m/n/12 ]) \OMS/cmsy/m
  []
 
 
-Overfull \hbox (342.18513pt too wide) in paragraph at lines 577--578
-[]$[]\OT1/cmr/m/n/12 404[]8[] \OML/cmm/m/it/12 KKKqqqq\OT1/cmr/m/n/12 [\OML/cmm
-/m/it/12 bbbb; tom; now; tiob; tios\OT1/cmr/m/n/12 ]([]\OML/cmm/m/it/12 x\OT1/c
-mr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 cnvrrrr; tom;
- now; tiob; x\OT1/cmr/m/n/12 ]([]\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )\OML/cmm/m/
-it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 cnvrrrr; tom; now; tios; y\OT1/cmr/
-m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 says; tom; now; 
-x; y\OT1/cmr/m/n/12 ]$ 
- []
-
-
-Overfull \hbox (10.953pt too wide) in paragraph at lines 582--583
+Overfull \hbox (10.953pt too wide) in paragraph at lines 482--483
 []$[]\OT1/cmr/m/n/12 404[]9[] [] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm
 /m/it/12 bbbb; tom; now; tiob; tios\OT1/cmr/m/n/12 ] [] ([]\OML/cmm/m/it/12 w\O
 T1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 cnvrrrr; 
@@ -542,7 +478,7 @@ tom; now; tiob; w\OT1/cmr/m/n/12 ] []
  []
 
 
-Overfull \hbox (88.13356pt too wide) in paragraph at lines 582--583
+Overfull \hbox (88.13356pt too wide) in paragraph at lines 482--483
 \OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1
 /cmr/m/n/12 [\OML/cmm/m/it/12 cnvrrrr; tom; now; tios; x\OT1/cmr/m/n/12 ] [] \O
 ML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 says; tom; now; x; y\OT1/c
@@ -551,7 +487,7 @@ cmr/m/n/12 [\OML/cmm/m/it/12 ssss; tom; now; tiob; y\OT1/cmr/m/n/12 ] []
  []
 
 
-Overfull \hbox (38.58064pt too wide) in paragraph at lines 588--589
+Overfull \hbox (38.58064pt too wide) in paragraph at lines 488--489
 []$[]\OT1/cmr/m/n/12 404[]9[] (\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
 /it/12 bbbb; tom; now; tiob; tios\OT1/cmr/m/n/12 ]) \OMS/cmsy/m/n/12 ^ \OT1/cmr
 /m/n/12 (([]\OML/cmm/m/it/12 w\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/
@@ -560,7 +496,7 @@ n/12 [\OML/cmm/m/it/12 cnvrrrr; tom; now; tiob; w\OT1/cmr/m/n/12 ]) \OMS/cmsy/m
  []
 
 
-Overfull \hbox (134.89998pt too wide) in paragraph at lines 588--589
+Overfull \hbox (134.89998pt too wide) in paragraph at lines 488--489
 \OT1/cmr/m/n/12 (([]\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT
 1/cmr/m/n/12 [\OML/cmm/m/it/12 cnvrrrr; tom; now; tios; x\OT1/cmr/m/n/12 ]) \OM
 S/cmsy/m/n/12 ^ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm
@@ -570,23 +506,8 @@ S/cmsy/m/n/12 ^ \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm
 
  []
 
-[10]
-Overfull \hbox (752.698pt too wide) in paragraph at lines 593--594
-[]$[]\OT1/cmr/m/n/12 404[]9[] \OML/cmm/m/it/12 KKKKKKqqqq\OT1/cmr/m/n/12 [\OML/
-cmm/m/it/12 bbbb; tom; now; tiob; tios\OT1/cmr/m/n/12 ]([]\OML/cmm/m/it/12 w\OT
-1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 cnvrrrr; t
-om; now; tiob; w\OT1/cmr/m/n/12 ]([]\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )\OML/cmm
-/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 cnvrrrr; tom; now; tios; x\OT1/c
-mr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 says; tom; no
-w; x; y\OT1/cmr/m/n/12 ]([]\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 
-qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 ssss; tom; now; tiob; y\OT1/cmr/m/n/12 ](
-[]\OML/cmm/m/it/12 z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML
-/cmm/m/it/12 ssss; tom; now; tios; z\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/
-cmr/m/n/12 [\OML/cmm/m/it/12 y; z\OT1/cmr/m/n/12 ]$ 
- []
-
-[11] [12]
-Overfull \hbox (20.42865pt too wide) in paragraph at lines 682--683
+[9] [10]
+Overfull \hbox (20.42865pt too wide) in paragraph at lines 567--568
 []$[]\OT1/cmr/m/n/12 407[]2[] [] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm
 /m/it/12 instantiatesone; X\OT1/cmr/m/n/12 ] [] ([]\OML/cmm/m/it/12 z\OT1/cmr/m
 /n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 X; z\OT1/cmr/m/n/
@@ -595,18 +516,8 @@ Overfull \hbox (20.42865pt too wide) in paragraph at lines 682--683
 T1/cmr/m/n/12 ]$ 
  []
 
-
-Overfull \hbox (17.62193pt too wide) in paragraph at lines 693--694
-[]$[]\OT1/cmr/m/n/12 407[]2[] \OML/cmm/m/it/12 CKqqqq\OT1/cmr/m/n/12 [\OML/cmm/
-m/it/12 instantiatesone; X\OT1/cmr/m/n/12 ] [] ([]\OML/cmm/m/it/12 z\OT1/cmr/m/
-n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 X; z\OT1/cmr/m/n/1
-2 ](\OML/cmm/m/it/12 w\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\O
-ML/cmm/m/it/12 X; w\OT1/cmr/m/n/12 ][\OML/cmm/m/it/12 ID; z; w\OT1/cmr/m/n/12 ]
-$ 
- []
-
-
-Overfull \hbox (80.12984pt too wide) in paragraph at lines 730--731
+[11]
+Overfull \hbox (80.12984pt too wide) in paragraph at lines 610--611
 []$[]\OT1/cmr/m/n/12 407[]10[] [] (\OML/cmm/m/it/12 W; X; Y; Z\OT1/cmr/m/n/12 )
 \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 instnatural; W\OT1/cmr/m
 /n/12 ] [] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 instnatural; 
@@ -615,7 +526,7 @@ stssum; Y; W; X\OT1/cmr/m/n/12 ] []
  []
 
 
-Overfull \hbox (61.11893pt too wide) in paragraph at lines 736--737
+Overfull \hbox (61.11893pt too wide) in paragraph at lines 616--617
 \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 instssu
 m; Y; W; X\OT1/cmr/m/n/12 ]) \OMS/cmsy/m/n/12 ^ \OT1/cmr/m/n/12 (\OML/cmm/m/it/
 12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 instsum; Z; X; W\OT1/cmr/m/n/12 ])) []
@@ -624,19 +535,7 @@ Z\OT1/cmr/m/n/12 ]))$
  []
 
 
-Overfull \hbox (382.38776pt too wide) in paragraph at lines 741--742
-[]$[]\OT1/cmr/m/n/12 407[]10[] \OML/cmm/m/it/12 CKKK\OT1/cmr/m/n/12 (\OML/cmm/m
-/it/12 W; X; Y; Z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cm
-m/m/it/12 instnatural; W\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [
-\OML/cmm/m/it/12 instnatural; X\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m
-/n/12 [\OML/cmm/m/it/12 instssum; Y; W; X\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq
-\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 instsum; Z; X; W\OT1/cmr/m/n/12 ]\OML/cmm/m/i
-t/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 instssamenatural; Y; Z\OT1/cmr/m/n/1
-2 ]$ 
- []
-
-[13]
-Overfull \hbox (5.87083pt too wide) in paragraph at lines 752--753
+Overfull \hbox (5.87083pt too wide) in paragraph at lines 627--628
 []$[]\OT1/cmr/m/n/12 407[]11[] \OML/cmm/m/it/12 function\OT1/cmr/m/n/12 [\OML/c
 mm/m/it/12 R\OT1/cmr/m/n/12 ] [] [] (\OML/cmm/m/it/12 u; v; w\OT1/cmr/m/n/12 )\
 OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 R; u; v\OT1/cmr/m/n/12 ] 
@@ -646,7 +545,7 @@ OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 R; u; v\OT1/cmr/m/n/12 ]
  []
 
 
-Overfull \hbox (38.2261pt too wide) in paragraph at lines 758--759
+Overfull \hbox (38.2261pt too wide) in paragraph at lines 633--634
 []$[]\OT1/cmr/m/n/12 407[]11[] \OML/cmm/m/it/12 function\OT1/cmr/m/n/12 [\OML/c
 mm/m/it/12 R\OT1/cmr/m/n/12 ] [] (((\OML/cmm/m/it/12 u; v; w\OT1/cmr/m/n/12 )\O
 ML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 R; u; v\OT1/cmr/m/n/12 ]) 
@@ -656,17 +555,7 @@ cmm/m/it/12 R; u; w\OT1/cmr/m/n/12 ])) [] (\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12
  []
 
 
-Overfull \hbox (3.06412pt too wide) in paragraph at lines 763--764
-[]$[]\OT1/cmr/m/n/12 407[]11[] \OML/cmm/m/it/12 function\OT1/cmr/m/n/12 [\OML/c
-mm/m/it/12 R\OT1/cmr/m/n/12 ] [] \OML/cmm/m/it/12 CK\OT1/cmr/m/n/12 (\OML/cmm/m
-/it/12 u; v; w\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
-/it/12 R; u; v\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
-/it/12 R; u; w\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
-/it/12 ID; v; w\OT1/cmr/m/n/12 ]$ 
- []
-
-
-Overfull \hbox (9.6347pt too wide) in paragraph at lines 768--769
+Overfull \hbox (9.6347pt too wide) in paragraph at lines 638--639
 []$[]\OT1/cmr/m/n/12 407[]12[] \OML/cmm/m/it/12 lfunction\OT1/cmr/m/n/12 [\OML/
 cmm/m/it/12 R\OT1/cmr/m/n/12 ] [] [] (\OML/cmm/m/it/12 u; v; w\OT1/cmr/m/n/12 )
 \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 R; v; u\OT1/cmr/m/n/12 ]
@@ -676,7 +565,7 @@ T1/cmr/m/n/12 ]$
  []
 
 
-Overfull \hbox (41.98997pt too wide) in paragraph at lines 774--775
+Overfull \hbox (41.98997pt too wide) in paragraph at lines 644--645
 []$[]\OT1/cmr/m/n/12 407[]12[] \OML/cmm/m/it/12 lfunction\OT1/cmr/m/n/12 [\OML/
 cmm/m/it/12 R\OT1/cmr/m/n/12 ] [] (((\OML/cmm/m/it/12 u; v; w\OT1/cmr/m/n/12 )\
 OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 R; v; u\OT1/cmr/m/n/12 ])
@@ -685,18 +574,8 @@ OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 R; v; u\OT1/cmr/m/n/12 ])
 2 [\OML/cmm/m/it/12 ID; v; w\OT1/cmr/m/n/12 ])$ 
  []
 
-
-Overfull \hbox (6.82799pt too wide) in paragraph at lines 779--780
-[]$[]\OT1/cmr/m/n/12 407[]12[] \OML/cmm/m/it/12 lfunction\OT1/cmr/m/n/12 [\OML/
-cmm/m/it/12 R\OT1/cmr/m/n/12 ] [] \OML/cmm/m/it/12 CK\OT1/cmr/m/n/12 (\OML/cmm/
-m/it/12 u; v; w\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/
-m/it/12 R; v; u\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/
-m/it/12 R; w; u\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/
-m/it/12 ID; v; w\OT1/cmr/m/n/12 ]$ 
- []
-
-
-Overfull \hbox (66.46947pt too wide) in paragraph at lines 784--785
+[12]
+Overfull \hbox (66.46947pt too wide) in paragraph at lines 649--650
 []$[]\OT1/cmr/m/n/12 407[]13[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
 /it/12 onetoone; R\OT1/cmr/m/n/12 ] [] [] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 
 [\OML/cmm/m/it/12 function; R\OT1/cmr/m/n/12 ] [] \OML/cmm/m/it/12 qqqq\OT1/cmr
@@ -706,7 +585,7 @@ OT1/cmr/m/n/12 )([]\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1
  []
 
 
-Overfull \hbox (0.21526pt too wide) in paragraph at lines 790--791
+Overfull \hbox (0.21526pt too wide) in paragraph at lines 655--656
 []$[]\OT1/cmr/m/n/12 407[]13[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
 /it/12 onetoone; R\OT1/cmr/m/n/12 ] [] ((\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [
 \OML/cmm/m/it/12 function; R\OT1/cmr/m/n/12 ]) \OMS/cmsy/m/n/12 ^ \OT1/cmr/m/n/
@@ -715,21 +594,7 @@ Overfull \hbox (0.21526pt too wide) in paragraph at lines 790--791
  []
 
 
-Overfull \hbox (300.52011pt too wide) in paragraph at lines 795--796
-[]$[]\OT1/cmr/m/n/12 407[]13[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
-/it/12 onetoone; R\OT1/cmr/m/n/12 ] [] \OML/cmm/m/it/12 AKKqqqq\OT1/cmr/m/n/12 
-[\OML/cmm/m/it/12 function; R\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n
-/12 [\OML/cmm/m/it/12 lfunction; R\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 K\OT1/cmr/m
-/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )([]\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 
-)\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 R; x; y\OT1/cmr/m/n/12 
-](\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )([]\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )\OML
-/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 R; y; x\OT1/cmr/m/n/12 ](\OM
-L/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 Nqqqq\OT1/cmr/m/n/12 [\OML/
-cmm/m/it/12 R; x; y\OT1/cmr/m/n/12 ]$ 
- []
-
-
-Overfull \hbox (6.2998pt too wide) in paragraph at lines 812--813
+Overfull \hbox (6.2998pt too wide) in paragraph at lines 672--673
 []$[]\OT1/cmr/m/n/12 407[]14[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
 /it/12 instssucc; Y; X\OT1/cmr/m/n/12 ] [] [] ([]\OML/cmm/m/it/12 Z\OT1/cmr/m/n
 /12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 onetoone; Z; X\OT1/
@@ -738,7 +603,7 @@ mr/m/n/12 [\OML/cmm/m/it/12 Z; w\OT1/cmr/m/n/12 ] []
  []
 
 
-Overfull \hbox (27.47743pt too wide) in paragraph at lines 818--819
+Overfull \hbox (27.47743pt too wide) in paragraph at lines 678--679
 []$[]\OT1/cmr/m/n/12 407[]14[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
 /it/12 instssucc; Y; X\OT1/cmr/m/n/12 ] [] ((([]\OML/cmm/m/it/12 Z\OT1/cmr/m/n/
 12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 onetoone; Z; X\OT1/c
@@ -747,23 +612,8 @@ n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Z; w\OT1/cmr/m/n/1
 2 ] []
  []
 
-[14]
-Overfull \hbox (336.47324pt too wide) in paragraph at lines 823--824
-[]$[]\OT1/cmr/m/n/12 407[]14[] \OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm/m
-/it/12 instssucc; Y; X\OT1/cmr/m/n/12 ] [] \OML/cmm/m/it/12 CKK\OT1/cmr/m/n/12 
-([]\OML/cmm/m/it/12 Z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OM
-L/cmm/m/it/12 onetoone; Z; X\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 C\OT1/cmr/m/n/12 
-(\OML/cmm/m/it/12 w\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/
-cmm/m/it/12 Z; w\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/cmm
-/m/it/12 X; w\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 K\OT1/cmr/m/n/12 ([]\OML/cmm/m/i
-t/12 t\OT1/cmr/m/n/12 )(\OML/cmm/m/it/12 u\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqq
-q\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Y; t\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 Nqqqq\
-OT1/cmr/m/n/12 [\OML/cmm/m/it/12 X; u\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 pmpf[][]
-$ 
- []
 
-
-Overfull \hbox (44.83537pt too wide) in paragraph at lines 829--830
+Overfull \hbox (44.83537pt too wide) in paragraph at lines 684--685
 []$[]\OT1/cmr/m/n/12 407[]15[] \OML/cmm/m/it/12 infaxiom [] [] \OT1/cmr/m/n/12 
 ([]\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OM
 L/cmm/m/it/12 instantiatesone; X\OT1/cmr/m/n/12 ] [] (\OML/cmm/m/it/12 Y\OT1/cm
@@ -772,7 +622,7 @@ r/m/n/12 )([]\OML/cmm/m/it/12 Z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m
  []
 
 
-Overfull \hbox (66.013pt too wide) in paragraph at lines 835--836
+Overfull \hbox (66.013pt too wide) in paragraph at lines 690--691
 []$[]\OT1/cmr/m/n/12 407[]15[] \OML/cmm/m/it/12 infaxiom [] \OT1/cmr/m/n/12 (([
 ]\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/
 cmm/m/it/12 instantiatesone; X\OT1/cmr/m/n/12 ]) \OMS/cmsy/m/n/12 ^ \OT1/cmr/m/
@@ -781,16 +631,7 @@ n/12 ((\OML/cmm/m/it/12 Y\OT1/cmr/m/n/12 )([]\OML/cmm/m/it/12 Z\OT1/cmr/m/n/12
 /m/n/12 ])$ 
  []
 
-
-Overfull \hbox (50.59364pt too wide) in paragraph at lines 840--841
-[]$[]\OT1/cmr/m/n/12 407[]15[] \OML/cmm/m/it/12 infaxiom [] K\OT1/cmr/m/n/12 ([
-]\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 [\OML/
-cmm/m/it/12 instantiatesone; X\OT1/cmr/m/n/12 ](\OML/cmm/m/it/12 Y\OT1/cmr/m/n/
-12 )([]\OML/cmm/m/it/12 Z\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 qqqq\OT1/cmr/m/n/12 
-[\OML/cmm/m/it/12 instssucc; Y; Z\OT1/cmr/m/n/12 ]$ 
- []
-
-[15] [16] (./arith_no_incomplete_symbols_p.aux)
+[13] [14] (./arith_no_incomplete_symbols_p.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -800,9 +641,9 @@ hanged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10316 strings out of 476182
- 151496 string characters out of 5795595
- 1948975 words of memory out of 5000000
+ 10314 strings out of 476182
+ 151482 string characters out of 5795594
+ 1946975 words of memory out of 5000000
  32164 multiletter control sequences out of 15000+600000
  571352 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -814,10 +655,10 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/zapfding/uzdr.pfb>
-Output written on arith_no_incomplete_symbols_p.pdf (16 pages, 127481 bytes).
+Output written on arith_no_incomplete_symbols_p.pdf (14 pages, 121693 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
+ 107 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
