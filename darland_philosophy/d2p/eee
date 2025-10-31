@@ -1,0 +1,52 @@
+echo "-----------"
+echo "Darland Philosophy Options"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2019, 2020, 2021, 2025  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+
+echo "01 Edit dot_to_paren.icn"
+echo "02 Edit fix_too_long.icn"
+echo "03 Edit newdemo.tex"
+echo "04 Edit arith_no_incomplete_symbols.tex"
+echo "05 Run d2p.sh on newdemo.tex"
+echo "06 Run d2pl.sh on arith_no_incomplete_symbols.tex"
+echo "07 Edit d2p.sh"
+echo "08 Edit d2pl.sh"
+
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f eee
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+while [ $select -ne 999 ]
+do 
+case $select in
+01) $EDITOR dot_to_paren.icn;;
+02) $EDITOR fix_too_long.icn;;
+03) $EDITOR newdemo.tex;;
+04) $EDITOR arith_no_incomplete_symbols.tex;;
+05) ./t4;;
+06) ./t3;;
+07) $EDITOR d2p.sh;;
+08) $EDITOR d2pl.sh;;
+esac
+echo "01 Edit dot_to_paren.icn"
+echo "02 Edit fix_too_long.icn"
+echo "03 Edit newdemo.tex"
+echo "04 Edit arith_no_incomplete_symbols.tex"
+echo "05 Run d2p.sh on newdemo.tex"
+echo "06 Run d2pl.sh on arith_no_incomplete_symbols.tex"
+echo "07 Edit d2p.sh"
+echo "08 Edit d2pl.sh"
+echo "select"
+read select
+done
