@@ -7,12 +7,11 @@ echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
 echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; type 501 for details."
 echo "-----------"
-
-echo "01 Darland WildLIFE Philosophy"
-echo "02 Darland WilderLIFE Philosophy"
-echo "03 Dot to Parentheses or Polish"
-echo "04 General comprehension"
-echo "05 Impredicative comprehension"
+echo "1 Darland WildLIFE Philosophy [& Satisfiability]"
+echo "2 Darland WilderLIFE Philosophy"
+echo "3 Principia Mathematica Dot to Parentheses or Polish Notation"
+echo "4 Impredicative comprehension"
+echo "5 Maple Calculations"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"
@@ -26,12 +25,20 @@ read select
 while [ $select -ne 999 ]
 do 
 case $select in
-01) ./eee1;;
-02) ./eee2;;
-03) ./eee3;;
-04) ./eee4;;
-05) ./eee5;;
+1) ./eee1;;
+2) ./eee2;;
+3) ./eee3;;
+4) ./eee4;;
+5) ./eee5;;
 esac
+echo "-----------"
+echo "1 Darland WildLIFE Philosophy [& Satisfiability]"
+echo "2 Darland WilderLIFE Philosophy"
+echo "3 Principia Mathematica Dot to Parentheses or Polish Notation"
+echo "4 Impredicative comprehension"
+echo "5 Maple Calculations"
+
+echo "-----------"
 echo "select"
 read select
 done
