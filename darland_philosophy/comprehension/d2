@@ -1,0 +1,2 @@
+diff general/facts_pred.lf impredicative/facts_pred.lf >d2.out
+

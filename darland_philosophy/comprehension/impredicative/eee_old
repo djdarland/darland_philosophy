@@ -1,0 +1,65 @@
+echo "-----------"
+echo "Darland Analysis of Comprehension Options"
+echo "-----------"
+
+echo "Copyright (C) 2024  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+
+echo "-----------"
+echo "1 Edit Impredicative Comprehension Facts"
+echo "2 Edit Impredicative Comprehension Rules"
+echo "3 Edit Impredicative Comprehension Rules"
+echo "4 Run wild_life"
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f eee
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+while [ $select -ne 999 ]
+do 
+case $select in
+1) $EDITOR facts_impred.lf;;
+2) $EDITOR rules_impred.lf;;
+3) $EDITOR comp_impred.lf;;
+4) wild_life -memory=209715200;;
+500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
+501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
+666) $EDITOR eee ;;
+777) $EDITOR NOTES_DJD.txt & ;;
+esac
+echo "-----------"
+echo "Darland Analysis of Comprehension Options"
+echo "-----------"
+
+echo "Copyright (C) 2024  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+
+echo "-----------"
+echo "-----------"
+echo "1 Edit Impredicative Comprehension Facts"
+echo "2 Edit Impredicative Comprehension Rules"
+echo "3 Edit Impredicative Comprehension Body"
+echo "4 Run wild_life"
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f eee
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+
+done

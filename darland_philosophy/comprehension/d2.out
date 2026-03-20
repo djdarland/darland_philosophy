@@ -1,0 +1,78 @@
+18c18
+< dynamic(natural_universal_ok)?
+---
+> dynamic(monadic_natural_universal_ok)?
+20c20,22
+< natural_universal_ok(nat, "f1^x0", ["x0"], 1).
+---
+> dynamic(dyadic_natural_universal_ok)?
+>        
+> monadic_natural_universal_ok("f1^x0", "x0", 1).
+22c24
+< natural_universal_ok(nat, "f1^y0", ["y0"], 1).
+---
+> monadic_natural_universal_ok("f1^y0", "y0", 1).
+24c26
+< natural_universal_ok(nat, "f1^z0", ["z0"], 1).
+---
+> monadic_natural_universal_ok("f1^z0", "z0", 1).
+26c28
+< natural_universal_ok(nat, "g1^x0", ["x0"], 1).
+---
+> monadic_natural_universal_ok("g1^x0", "x0", 1).
+28c30
+< natural_universal_ok(nat, "g1^y0", ["y0"], 1).
+---
+> monadic_natural_universal_ok("g1^y0", "y0", 1).
+30c32
+< natural_universal_ok(nat, "g1^z0", ["z0"], 1).
+---
+> monadic_natural_universal_ok("g1^z0", "z0", 1).
+32c34
+< natural_universal_ok(nat, "f2^x1", ["x1"], 2).
+---
+> monadic_natural_universal_ok("f2^x1", "x1", 2).
+34c36
+< natural_universal_ok(nat, "f2^y1", ["y1"], 2).
+---
+> monadic_natural_universal_ok("f2^y1", "y1", 2).
+36c38
+< natural_universal_ok(nat, "f2^z1", ["z1"], 2).
+---
+> monadic_natural_universal_ok("f2^z1", "z1", 2).
+38c40
+< natural_universal_ok(nat, "g2^x1", ["x1"], 2).
+---
+> monadic_natural_universal_ok("g2^x1", "x1", 2).
+40c42
+< natural_universal_ok(nat, "g2^y1", ["y1"], 2).
+---
+> monadic_natural_universal_ok("g2^y1", "y1", 2).
+42c44
+< natural_universal_ok(nat, "g2^z1", ["z1"], 2).
+---
+> monadic_natural_universal_ok("g2^z1", "z1", 2).
+44c46
+< natural_universal_ok(nat, "h1^x0^y0", ["x0", "y0"], 1).
+---
+> dyadic_natural_universal_ok("h1^x0^y0", "x0", "y0", 1).
+46c48
+< natural_universal_ok(nat, "h1^y0^x0", ["y0", "x0"], 1).
+---
+> dyadic_natural_universal_ok("h1^y0^x0", "y0", "x0", 1).
+48c50
+< natural_universal_ok(nat, "h1^z0^x0", ["z0", "x0"], 1).
+---
+> dyadic_natural_universal_ok("h1^z0^x0", "z0", "x0", 1).
+50c52
+< natural_universal_ok(nat, "k1^y0^z0", ["y0", "z0"], 1).
+---
+> dyadic_natural_universal_ok("k1^y0^z0", "y0", "z0", 1).
+52c54
+< natural_universal_ok(nat, "h2^x1^y1", ["x1", "y1"], 2).
+---
+> dyadic_natural_universal_ok("h2^x1^y1", "x1", "y1", 2).
+54c56
+< natural_universal_ok(nat, "h2^y1^x1", ["y1", "x1"], 2).
+---
+> dyadic_natural_universal_ok("h2^y1^x1", "y1", "x1", 2).

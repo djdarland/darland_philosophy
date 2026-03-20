@@ -1,0 +1,44 @@
+echo "-----------"
+echo "Darland Philosophy Options"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2019, 2020, 2021, 2025  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+echo "1 Darland WildLIFE Philosophy [& Satisfiability]"
+echo "2 Darland WilderLIFE Philosophy"
+echo "3 Principia Mathematica Dot to Parentheses or Polish Notation"
+echo "4 Impredicative comprehension"
+echo "5 Maple Calculations"
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f eee
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+while [ $select -ne 999 ]
+do 
+case $select in
+1) ./eee1;;
+2) ./eee2;;
+3) ./eee3;;
+4) ./eee4;;
+5) ./eee5;;
+esac
+echo "-----------"
+echo "1 Darland WildLIFE Philosophy [& Satisfiability]"
+echo "2 Darland WilderLIFE Philosophy"
+echo "3 Principia Mathematica Dot to Parentheses or Polish Notation"
+echo "4 Impredicative comprehension"
+echo "5 Maple Calculations"
+
+echo "-----------"
+echo "select"
+read select
+done

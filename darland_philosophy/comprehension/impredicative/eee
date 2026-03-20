@@ -9,10 +9,22 @@ echo "under certain conditions; type 501 for details."
 echo "-----------"
 
 echo "-----------"
-echo "1 Edit Impredicative Comprehension Facts"
-echo "2 Edit Impredicative Comprehension Rules"
-echo "3 Edit Impredicative Comprehension Rules"
-echo "4 Run wild_life"
+echo "1) $EDITOR facts_pred.lf;;"
+echo "2) $EDITOR facts_impred.lf;;"
+echo "3) $EDITOR facts_napoleon.lf;;"
+echo "4) $EDITOR rules_pred.lf;;"
+echo "5) $EDITOR rules_impred.lf;;"
+echo "6) $EDITOR comp_pred.lf;;"
+echo "7) $EDITOR comp_impred.lf;;"
+echo "8) $EDITOR ti01.lf;;"
+echo "10) $EDITOR ti01.lf;;"
+echo "11) $EDITOR ti02.lf;;"
+echo "12) $EDITOR ti03.lf;;"
+echo "13) wild_life <ti01.lf;;"
+echo "14) wild_life <ti02.lf;;"
+echo "15) wild_life <ti03.lf;;"
+echo "16) wild_life <tinap.lf;;"
+echo "17) wild_life -memory=209715200;;"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"
@@ -26,10 +38,22 @@ read select
 while [ $select -ne 999 ]
 do 
 case $select in
-1) $EDITOR facts_impred.lf;;
-2) $EDITOR rules_impred.lf;;
-3) $EDITOR comp_impred.lf;;
-4) wild_life -memory=209715200;;
+1) $EDITOR facts_pred.lf;;
+2) $EDITOR facts_impred.lf;;
+3) $EDITOR facts_napoleon.lf;;
+4) $EDITOR rules_pred.lf;;
+5) $EDITOR rules_impred.lf;;
+6) $EDITOR comp_pred.lf;;
+7) $EDITOR comp_impred.lf;;
+8) $EDITOR ti01.lf;;
+10) $EDITOR ti01.lf;;
+11) $EDITOR ti02.lf;;
+12) $EDITOR ti03.lf;;
+13) wild_life <ti01.lf;;
+14) wild_life <ti02.lf;;
+15) wild_life <ti03.lf;;
+16) wild_life <tinap.lf;;
+17) wild_life -memory=209715200;;
 500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
 501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
 666) $EDITOR eee ;;
@@ -47,10 +71,22 @@ echo "-----------"
 
 echo "-----------"
 echo "-----------"
-echo "1 Edit Impredicative Comprehension Facts"
-echo "2 Edit Impredicative Comprehension Rules"
-echo "3 Edit Impredicative Comprehension Body"
-echo "4 Run wild_life"
+echo "1) $EDITOR facts_pred.lf;;"
+echo "2) $EDITOR facts_impred.lf;;"
+echo "3) $EDITOR facts_napoleon.lf;;"
+echo "4) $EDITOR rules_pred.lf;;"
+echo "5) $EDITOR rules_impred.lf;;"
+echo "6) $EDITOR comp_pred.lf;;"
+echo "7) $EDITOR comp_impred.lf;;"
+echo "8) $EDITOR ti01.lf;;"
+echo "10) $EDITOR ti01.lf;;"
+echo "11) $EDITOR ti02.lf;;"
+echo "12) $EDITOR ti03.lf;;"
+echo "13) wild_life <ti01.lf;;"
+echo "14) wild_life <ti02.lf;;"
+echo "15) wild_life <ti03.lf;;"
+echo "16) wild_life <tinap.lf;;"
+echo "17) wild_life -memory=209715200;;"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"
