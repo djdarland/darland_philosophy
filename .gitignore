@@ -4,6 +4,12 @@
 *.tmp
 *djd*
 *djd
+*.log
+*.aux
+*.out
+*dot_to_paren
+*dot_to_paren_no_polish
+*fix_too_long
 *~
 darland_philosophy/DarlandPhilosophyWilder/editdiffs2.sh
 darland_philosophy/DarlandPhilosophyWilder/LFTMP2/
