@@ -16,6 +16,9 @@ echo "05 Run d2p.sh on newdemo.tex"
 echo "06 Run d2pl.sh on arith_no_incomplete_symbols.tex"
 echo "07 Edit d2p.sh"
 echo "08 Edit d2pl.sh"
+echo "11 Edit pm_phil_of_logic.tex"
+echo "22 Run d2p.sh on pm_phil_of_logic.tex"
+echo "33 Run d2p_short.sh on pm_phil_of_logic.tex"
 
 echo "-----------"
 echo "500 NO_WARANTY.txt"
@@ -38,6 +41,10 @@ case $select in
 06) ./t3;;
 07) $EDITOR d2p.sh;;
 08) $EDITOR d2pl.sh;;
+11) $EDITOR pm_phil_logic.tex;;
+22) ./d2p.sh pm_phil_logic ;;
+33) ./d2p_short.sh pm_phil_logic ;;
+
 esac
 echo "01 Edit dot_to_paren.icn"
 echo "02 Edit fix_too_long.icn"
@@ -47,6 +54,10 @@ echo "05 Run d2p.sh on newdemo.tex"
 echo "06 Run d2pl.sh on arith_no_incomplete_symbols.tex"
 echo "07 Edit d2p.sh"
 echo "08 Edit d2pl.sh"
+echo "11 Edit pm_phil_logic.sh"
+echo "22 Run d2p.sh on pm_phil_of_logic.tex"
+echo "33 Run d2p_short.sh on pm_phil_of_logic.tex"
+
 echo "select"
 read select
 done

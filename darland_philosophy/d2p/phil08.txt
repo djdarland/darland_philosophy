@@ -1,0 +1,123 @@
+Propositions - What they are and how they mean.
+
+By Dennis J. Darland
+
+Note I use upper case for variables, and lower case for constants. (except R, S, and RS or tried to.)
+
+Now a first question is what is there?
+
+I am inclined to say events. Both Russell and Whitehead said this at times.
+
+I also believe there are universals (including relations). Sometimes these are called predicates, but I prefer the term "universal", as, to me, "predicate", 
+has linguistic connotations.
+
+I would think all events would be of lowest PM type and there is a hierarchy of higher types. I am also inclined to believe there are only a finite number 
+of entities in any type.
+
+Now, is there a universal for being an event? If there is and all there is are events, wouldn't this universal be equivalent to "exists". 
+I always believed "existence is not a predicate (or universal)". And even if not everything is an event, if there is some other universal true of everything, 
+wouldn't the same question arise? What about fx =df (x = x)?
+
+Now lets say a is a universal true of all the sub events of plato.
+So we can (even though there are not really classes in PM) use Russell's
+definition to define the class of all events in plato.
+
+Also suppose f is true of all mortal beings.
+
+Then it could be that m applied to the class of events so defined by a. (plato)
+One is inclined to say it is true. I no longer think it true. It just IS.
+
+Now Dennis has an idea i_a of a and an idea i_f of m.
+This I represent as S(dennis, i_a, a) and S(dennis, i_f, f)
+Now I represent dennis believes plato is mortal as:
+bb(dennis, i_f, i_a) & S(dennis, i_f, f) & S(dennis, i_a, a)
+i_f, and i_a being events or relations of events in dennis' brain.
+bb would be for believing.
+
+Now consider the relation such that
+^f^a (E P,F,A) S(P, F, f) & S(P, A, a)
+This is the proposition that plato is mortal.
+
+Dennis understands plato is mortal is:
+(E F,A) S(dennis, F, f) & S(dennis, A, a)
+
+Dennis believes plato is mortal is:
+(E F,A) bb(dennis, F, A) & S(dennis, F, f) & S(dennis, A, a)
+
+Now if one adds words with
+R(dennis, "Plato", i_p)  
+R(dennis, "Mortal", i_m)
+
+and defines the "relativish" product
+ RS(P, X, Z) =df ^X^Z (E Y) R(P, X, Y) & S(P, Y, Z) 
+one can have sentences
+
+So
+the relation of
+understands_sentence(P, f, x) =Df ^P^F^X (E F,X) RS(P, F, f) & RS(P, X, x)
+
+says(p, F, X) =Df ^P^F^X (E f, x) (RS(P, F, f) & RS(P, X, x) & expresses(p, F, X)
+
+sentence(F, X) =df (E P) says(P, F, X)
+
+is the relation of all sentences expressing that plato is mortal.
+
+Now, with PM *20.07, *20.071, *21.07, and *21.071
+we can quantify over both classes and relations.
+
+I believe Russell said somewhere in PM that propositions were
+incomplete symbols, which both classes and relations are.
+
+Now what about truth?
+
+One wants to say:
+
+bb_true(P,F,A) =df bb(P,F,A) & S(P,F,f) & S(P, A, a) & f(a)
+
+But f(a) just IS. It is inexpressible.
+
+What about truth functions?
+
+Propositions would be anything understood.
+
+With monadic universals elem_1(f,a) =df
+^F^A (E P,F,A) RS(P, F, f) & RS(P, A, a)
+
+With dyadic universals elem_2(f,a,b) =df
+^F^A^B (E P, F,A, B) RS(P, F, f) & RS(P, A, a) & RS(P, B, b)
+
+For any limiting arity of relations we can take the union of those understanding relations elem1 union elem2, ....
+
+Let this union be elem.
+
+So this would be all "elementary" propositions.
+
+Then one adds ~ and v for not and or.
+
+then: (Note P and p are used for a person at times and p for a proposition - this was an oversight.)
+
+*1.2 (p) elem(p) > ((p v p) > p)
+
+*1.3 (p,q) (elem(p) & elem(q)) > (q > (p v q))
+
+*1.4 (p,q) (elem(p) & elem(q)) > (p v q) > (q v p)
+
+*1.5 (p,q,r) (elem(p) & elem(q) & elem(r)) > (p v (q v r)) > (q v (p v r))
+
+*1.6 (p,q,r) (elem(p) & elem(q) & elem(r)) > ((q > r) > ((p v q) > (p v r)))
+
+*1.7 (p) (elem(p) > (E q) (elem(q) & q = ~p)
+
+*1.71 (p,q) (elem(p) & elem(q)) > (E r) (elem(r) & (r =  (p v q))
+
+Below f is a universal (another Sample Pp)
+And  using X, Y and Z as a name of a variables x, y and z.
+
+More Primitive Propositions
+
+*9.1 (f,x,z) (E P,F,X,Z) (RS(P, F, f) & RS(P, X, x) & RS(P, Z, z)) > ((x) f(x)) > ((Ez) f(z))
+
+*9.11 (f,x,y,z) (E P,F,X,Y,Z) (RS(P, F, f) & RS(P, X, x) & RS(P, Y, y) & RS(P, Z, z)) > ((x,y) (f(x) v f(y))) > ((E z) f(z)) 
+
+The Above Primitive Propositions apply whenever there is a person P, universal f named by F for P, variable x named by X for P, etc.
+
