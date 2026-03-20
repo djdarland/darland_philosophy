@@ -1,0 +1,343 @@
+\documentclass[12pt]{article}
+\NeedsTeXFormat{LaTeX2e}
+\usepackage{/home/dennis/src/principia/principia-master/principia}
+
+\title{Demonstration of Tests of Conversion of PM Dot Notation to Parentheses}
+\author{Dennis J. Darland}
+\begin{document}
+\maketitle
+-------------------------------------------------------
+
+SECTION 0. VERIFICATION TESTS (of dot to paren dot icn)
+
+For each proposition is given:
+
+1: the PM notation with dots.
+
+2: the notation with parentheses 
+
+3: the Polish (with Lukasiewicz symbols) notation
+
+---------------------------------------------------------------
+
+$\pmast 2 \pmcdot 06 \pmthm \pmdottt p \pmimp q \pmdot \pmimp \pmdott q \pmimp r \pmdot \pmimp \pmdot p \pmimp r $
+ 
+ 
+
+Version with parentheses
+
+$\pmast 2 \pmcdot 06 \pmthm  (  p \pmimp q  ) \pmimp ((  q \pmimp r  ) \pmimp (  p \pmimp r ))$
+
+
+$\pmast 3 \pmcdot 47 \pmthm \pmdottt p \pmimp r \pmand q \pmimp s \pmdot \pmimp \pmdott p \pmand q \pmdot \pmimp \pmdot r \pmand s $
+ 
+ 
+
+Version with parentheses
+
+$\pmast 3 \pmcdot 47 \pmthm  (  p \pmimp r ) \land ( q \pmimp s  ) \pmimp ((  p ) \land ( q  ) \pmimp (  r ) \land ( s ))$
+
+
+$\pmast 4 \pmcdot 22 \pmthm \pmdott p \pmiff q \pmand q \pmiff r \pmdot \pmimp \pmdot p \pmiff r$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 4 \pmcdot 22 \pmthm  (  p \pmiff q ) \land ( q \pmiff r  ) \pmimp (  p \pmiff r)$
+
+
+$\pmast 4 \pmcdot 41 \pmthm \pmdottt p \pmdot \pmor \pmdot q \pmand r \pmdott \pmiff \pmdot p \pmor q \pmand p \pmor r$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 4 \pmcdot 41 \pmthm  ((  p  ) \pmor (  q ) \land ( r  )) \pmiff (  p \pmor q ) \land ( p \pmor r)$
+
+
+$\pmast 4 \pmcdot 43 \pmthm \pmdottt p \pmdot \pmiff \pmdott p \pmor q \pmand p \pmor \pmnot q$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 4 \pmcdot 43 \pmthm  (  p  ) \pmiff ((  p \pmor q ) \land ( p \pmor \pmnot q))$
+
+
+$\pmast 4 \pmcdot 44 \pmthm \pmdottt p \pmdot \pmiff \pmdott p \pmdot \pmor \pmdot p \pmand q$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 4 \pmcdot 44 \pmthm  (  p  ) \pmiff ((  p  ) \pmor (  p ) \land ( q))$
+
+
+$\pmast 4 \pmcdot 87 \pmthm \pmdottt p \pmand q \pmdot \pmimp \pmdot r \pmdott \pmiff \pmdott p \pmdot \pmimp \pmdot q \pmimp r \pmdott \pmiff \pmdott q \pmdot \pmimp \pmdot p \pmimp r \pmdott \pmiff \pmdott q \pmand p \pmdot \pmimp \pmdot r$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 4 \pmcdot 87 \pmthm  ((  p ) \land ( q  ) \pmimp (  r  )) \pmiff ((  p  ) \pmimp (  q \pmimp r  )) \pmiff ((  q  ) \pmimp (  p $
+
+$\pmimp r  )) \pmiff ((  q ) \land ( p  ) \pmimp (  r))$
+
+
+$\pmast 4 \pmcdot 88 \pmthm \pmdottt p \pmand q \pmdot \pmimp \pmdot r \pmdot \pmiff \pmdott p \pmdot \pmimp \pmdot q \pmimp r \pmdott \pmiff \pmdott q \pmdot \pmimp \pmdot p \pmimp r \pmdott \pmiff \pmdott q \pmand p \pmdot \pmimp \pmdot r$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 4 \pmcdot 88 \pmthm  (  p ) \land ( q  ) \pmimp (  r  ) \pmiff ((  p  ) \pmimp (  q \pmimp r  )) \pmiff ((  q  ) \pmimp (  p \pmimp r  )) $
+
+$\pmiff ((  q ) \land ( p  ) \pmimp (  r))$
+
+
+$\pmast 5 \pmcdot 33 \pmthm \pmdottt p \pmand q \pmimp r \pmdot \pmiff \pmdott p \pmandd p \pmand q \pmdot \pmimp \pmdot r$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 5 \pmcdot 33 \pmthm  (  p ) \land ( q \pmimp r  ) \pmiff (  p ) \land (( p ) \land ( q  ) \pmimp (  r))$
+
+
+From Landon D. C. Elkind's Paper in Russell: Vol. 43, no. 1, page 44
+
+$\pmast 431 \pmcdot 441 \pmthm \pmdot p \pmor q \pmdot \pmiff \pmdot r \pmimp s$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 431 \pmcdot 441 \pmthm  (  p \pmor q  ) \pmiff (  r \pmimp s)$
+
+
+$\pmast 431 \pmcdot 442 \pmthm \pmdott p \pmdot \pmor \pmdot q \pmiff r \pmdott \pmimp \pmdott s$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 431 \pmcdot 442 \pmthm  ((  p  ) \pmor (  q \pmiff r  )) \pmimp ((  s))$
+
+
+$\pmast 431 \pmcdot 443 \pmthm \pmdott p \pmor q \pmdot \pmiff \pmdot r \pmdott \pmimp \pmdott s$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 431 \pmcdot 443 \pmthm  ((  p \pmor q  ) \pmiff (  r  )) \pmimp ((  s))$
+
+
+$\pmast 431 \pmcdot 444 \pmthm \pmdott p \pmdott \pmor \pmdott q \pmiff r \pmdot \pmimp \pmdot s$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 431 \pmcdot 444 \pmthm  (  p  ) \pmor ((  q \pmiff r  ) \pmimp (  s))$
+
+
+$\pmast 431 \pmcdot 445 \pmthm \pmdott p \pmdott \pmor \pmdott q \pmdot \pmiff \pmdot r \pmimp s$
+ 
+ 
+
+Version with parentheses
+
+$\pmast 431 \pmcdot 445 \pmthm  (  p  ) \pmor ((  q  ) \pmiff (  r \pmimp s))$
+
+
+From same, page 54
+
+$\pmast 431 \pmcdot 54 \pmthm \pmdott p \pmand q \pmandd r \pmand s \pmdott \pmimp \pmdott p \pmand s \pmandd r \pmand q $
+ 
+ 
+
+Version with parentheses
+
+$\pmast 431 \pmcdot 54 \pmthm  ((  p ) \land ( q )) \land (( r ) \land ( s  )) \pmimp ((  p ) \land ( s )) \land (( r ) \land ( q  ))$
+
+
+check longer prop name
+
+ 
+ 
+
+Version with parentheses
+
+
+
+Propositions involving quantifiers
+
+Prefix \psi} unknown. Line 175
+Prefix \psi} unknown. Line 175
+$\pmast 9 \pmcdot 2 \pmthm \pmdott \pmall{x} \pmdot \pmpf{x{x{\psi}{x} \pmdot \pmimp \pmdot \pmpf{x{x{\psi}{y} $
+ 
+ 
+
+Version with parentheses
+
+Prefix \psi} unknown. Line 181
+Prefix \psi} unknown. Line 181
+$\pmast 9 \pmcdot 2 \pmthm  ((  \pmall{x} )  \pmpf{x{x{\psi}{x}  ) \pmimp (  \pmpf{x{x{\psi}{y} )$
+
+
+Prefix \psi} unknown. Line 184
+Prefix \phi} unknown. Line 184
+Prefix \psi} unknown. Line 184
+Prefix \phi} unknown. Line 184
+$\pmast 9 \pmcdot 21 \pmthm \pmdottt \pmall{x} \pmdot \pmpf{x{x{\psi}{x} \pmimp \pmpf{x{x{\phi}{x} \pmdot \pmimp \pmdott \pmall{x} \pmdot \pmpf{x{x{\psi}{x} \pmdot \pmimp \pmdot \pmall{x} \pmdot \pmpf{x{x{\phi}{x} $
+ 
+ 
+
+Version with parentheses
+
+Prefix \psi} unknown. Line 190
+Prefix \phi} unknown. Line 190
+Prefix \psi} unknown. Line 190
+Prefix \phi} unknown. Line 190
+$\pmast 9 \pmcdot 21 \pmthm  ((  \pmall{x} )  \pmpf{x{x{\psi}{x} \pmimp \pmpf{x{x{\phi}{x}  ) \pmimp ((  \pmall{x} )  \pmpf{x{x{\psi}{x}  ) \pmimp (  \pmall{x} )  $
+
+$\pmpf{x{x{\phi}{x} $
+
+
+Prefix \psi} unknown. Line 193
+Prefix \phi} unknown. Line 193
+Prefix \psi} unknown. Line 193
+Prefix \phi} unknown. Line 193
+$\pmast 9 \pmcdot 22 \pmthm \pmdottt \pmall{x} \pmdot \pmpf{x{x{\psi}{x} \pmimp \pmpf{x{x{\phi}{x} \pmdot \pmimp \pmdott \pmsome{x} \pmdot \pmpf{x{x{\psi}{x} \pmdot \pmimp \pmdot \pmsome{x} \pmdot \pmpf{x{x{\phi}{x} $
+ 
+ 
+
+Version with parentheses
+
+Prefix \psi} unknown. Line 199
+Prefix \phi} unknown. Line 199
+Prefix \psi} unknown. Line 199
+Prefix \phi} unknown. Line 199
+$\pmast 9 \pmcdot 22 \pmthm  ((  \pmall{x} )  \pmpf{x{x{\psi}{x} \pmimp \pmpf{x{x{\phi}{x}  ) \pmimp ((  \pmsome{x} )  \pmpf{x{x{\psi}{x}  ) \pmimp (  \pmsome{x} )  $
+
+$\pmpf{x{x{\phi}{x} $
+
+
+Prefix \phi} unknown. Line 202
+Prefix \phi} unknown. Line 202
+Prefix \phi} unknown. Line 202
+$\pmast 9 \pmcdot 31 \pmthm \pmdottt \pmsome{x} \pmdot \pmpf{x{x{\phi}{x} \pmdot \pmor \pmdot \pmsome{x} \pmdot \pmpf{x{x{\phi}{x} \pmdott \pmimp \pmdot \pmsome{x} \pmdot \pmpf{x{x{\phi}{x}$
+ 
+ 
+
+Version with parentheses
+
+Prefix \phi} unknown. Line 208
+Prefix \phi} unknown. Line 208
+Prefix \phi} unknown. Line 208
+$\pmast 9 \pmcdot 31 \pmthm  ((((  \pmsome{x} )  \pmpf{x{x{\phi}{x}  ) \pmor (  \pmsome{x} )  \pmpf{x{x{\phi}{x}  )) \pmimp (  \pmsome{x} )  \pmpf{x{x{\phi}{x}$
+
+
+Prefix \psi} unknown. Line 211
+Prefix \psi} unknown. Line 211
+$\pmast 9 \pmcdot 401 \pmthm \pmdotttt p \pmdott \pmor \pmdott q \pmdot \pmor \pmdot \pmsome{x} \pmdot \pmpf{x{x{\psi}{x} \pmdottt \pmimp \pmdottt q \pmdott \pmor \pmdott p \pmdot \pmor \pmdot \pmsome{x} \pmdot \pmpf{x{x{\psi}{x} $
+ 
+ 
+
+Version with parentheses
+
+Prefix \psi} unknown. Line 217
+Prefix \psi} unknown. Line 217
+$\pmast 9 \pmcdot 401 \pmthm  (((  p  ) \pmor ((  q  ) \pmor (  \pmsome{x} )  \pmpf{x{x{\psi}{x}  ))) \pmimp ((  q  ) \pmor ((  p  ) \pmor (  $
+
+$\pmsome{x} )  \pmpf{x{x{\psi}{x} ))$
+
+
+Prefix \psi} unknown. Line 220
+Prefix \psi} unknown. Line 220
+$\pmast 10 \pmcdot 35 \pmthm \pmdottt \pmsome{x} \pmdot p \pmand \pmpf{x{x{\psi}{x} \pmdot \pmiff \pmdott p \pmandd \pmsome{x} \pmdot  \pmpf{x{x{\psi}{x} $
+ 
+ 
+
+Version with parentheses
+
+Prefix \psi} unknown. Line 226
+Prefix \psi} unknown. Line 226
+$\pmast 10 \pmcdot 35 \pmthm  ((  \pmsome{x} )  p ) \land ( \pmpf{x{x{\psi}{x}  ) \pmiff (  p ) \land (( \pmsome{x} )   \pmpf{x{x{\psi}{x}  )$
+
+
+Prefix \phi} unknown. Line 229
+Prefix \phi} unknown. Line 229
+$\pmast 11 \pmcdot 2 \pmthm \pmdott \pmall{x,y} \pmdot \pmpf{x,y{x,y{\phi}{[x,y]} \pmdot \pmiff \pmdot \pmall{y,x} \pmdot \pmpf{y,x{y,x{\phi}{[x,y]}$
+ 
+ 
+
+Version with parentheses
+
+Prefix \phi} unknown. Line 235
+Prefix \phi} unknown. Line 235
+$\pmast 11 \pmcdot 2 \pmthm  (  \pmall{x,y} \pmdot \pmpf{x,y{x,y{\phi}{[x,y]}  ) \pmiff (  \pmall{y,x} \pmdot \pmpf{y,x{y,x{\phi}{[x,y]})$
+
+
+One Step in proof of 11.55
+I wanted example of 2 adjacent quantifiers - hard to find.
+
+Prefix \psi} unknown. Line 241
+Prefix \phi} unknown. Line 241
+Prefix \psi} unknown. Line 241
+Prefix \phi} unknown. Line 241
+$\pmast 11 \pmcdot 551 \pmthm \pmdottt \pmall{x} \pmdottt \pmsome{y} \pmdot \pmpf{y{y{\psi}{x} \pmand \pmpf{y{y{\phi}{[x,y]} \pmdot \pmiff \pmdott \pmpf{y{y{\psi}{x} \pmandd \pmsome{y} \pmdot \pmpf{y{y{\phi}{[x,y]} $
+ 
+ 
+
+Version with parentheses
+
+Prefix \psi} unknown. Line 247
+Prefix \phi} unknown. Line 247
+Prefix \psi} unknown. Line 247
+Prefix \phi} unknown. Line 247
+$\pmast 11 \pmcdot 551 \pmthm  (((  \pmall{x} )  \pmsome{y} )  \pmpf{y{y{\psi}{x} ) \land ( \pmpf{y{y{\phi}{[x,y]}  ) \pmiff (  \pmpf{y{y{\psi}{x} ) \land (( $
+
+$\pmsome{y} )  \pmpf{y{y{\phi}{[x,y]} )$
+
+
+From same, page 46
+
+
+Prefix \pmcdot46 unknown. Line 253
+Prefix \psi} unknown. Line 253
+Prefix \phi} unknown. Line 253
+Prefix \psi} unknown. Line 253
+$\pmast 431 \pmcdot46 \pmthm \pmdott \pmall{x} \pmdot \pmpf{x{x{\psi}{x} \pmand \pmpf{x{x{\phi}{x} \pmdot \pmimp \pmdot \pmall{x} \pmdot \pmpf{x{x{\psi}{x}$
+ 
+ 
+
+Version with parentheses
+
+Prefix \pmcdot46 unknown. Line 259
+Prefix \psi} unknown. Line 259
+Prefix \phi} unknown. Line 259
+Prefix \psi} unknown. Line 259
+$\pmast 431 \pmcdot46 \pmthm  ((  \pmall{x} )  \pmpf{x{x{\psi}{x} ) \land ( \pmpf{x{x{\phi}{x}  ) \pmimp (  \pmall{x} )  \pmpf{x{x{\psi}{x}$
+
+
+Other Tests
+
+Prefix \psi} unknown. Line 264
+Prefix \psi} unknown. Line 264
+$\pmast 99 \pmcdot 99 \pmthm \pmdottt \pmnot \pmsome{x} \pmdott \pmnot \pmpf{x{x{\psi}{x} \pmdot \pmimp \pmdot \pmall{x} \pmdot \pmnot \pmpf{x{x{\psi}{x} $
+ 
+ 
+
+Version with parentheses
+
+Prefix \psi} unknown. Line 270
+Prefix \psi} unknown. Line 270
+$\pmast 99 \pmcdot 99 \pmthm  ((  \pmnot \pmsome{x} )  \pmnot \pmpf{x{x{\psi}{x}  ) \pmimp (  \pmall{x} )  \pmnot \pmpf{x{x{\psi}{x} $
+
+
+
+\end{document}
+

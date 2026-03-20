@@ -16,11 +16,13 @@
 ## along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
 
 $define NO_PRECEDENCE 0
+$define CONJUNCTION_LOW_PRECEDENCE 2
 $define CONJUNCTION_HIGH_PRECEDENCE 1
-$define MAX_LOOP 50000000
+$define MAX_LOOP 5000000
 $define PM 0
 $define LUK 1
 $define POLISH_INCLUDED 1
+$define BEGIN "\\begin{document}"
 
 
 global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, delim_q2, delim_l2, loc, prefix_stk, reverse_polish, head, max_iter, stk
@@ -96,6 +98,11 @@ procedure init()
    val_s[14] := "\\pmpf"
    sno_tmp := "@SNOTEMP@" # Not expected in linein - may be changed if conflict
    val_tmp := "TEMP"
+   while line := read() do {
+      write(line)
+      if line == BEGIN then break
+         }
+
 end
 
 procedure finish()
@@ -195,12 +202,13 @@ procedure process()
 
          # Next change dots associated with conjunction to ";"
          # Group III on page 9 to *56
-         linein := sub_dot(linein, andddddd, ";;;;;; \\land ::::::")
-         linein := sub_dot(linein, anddddd,  ";;;;; \\land :::::")
-         linein := sub_dot(linein, andddd,   ";;;; \\land ::::")
-         linein := sub_dot(linein, anddd,    ";;; \\land ::;")
-         linein := sub_dot(linein, andd,     ";; \\land ::")
-         linein := sub_dot(linein, and,      "; \\land :")
+#         linein := sub_dot(linein, andddddd, ";;;;;;; \\land ::::::")
+         linein := sub_dot(linein, andddddd,  ";;;;;; \\land :::::")
+         linein := sub_dot(linein, anddddd,   ";;;;; \\land ::::")
+         linein := sub_dot(linein, andddd,    ";;;; \\land ::;")
+         linein := sub_dot(linein, anddd,     ";;; \\land ::")
+         linein := sub_dot(linein, andd,      ";;; \\land :")
+         linein := sub_dot(linein, and,      ";; \\land :")
 
          linein := front || linein
          # next compute number of left parens to start with
@@ -225,11 +233,13 @@ procedure process()
 #         write(lineout)
 #         write("")
          lineout_sav := lineout
-        lineout3 := elim_extra_paren(lineout2)
+#        lineout3 := elim_extra_paren(lineout2)
 #         write_note("Version with some parentheses removed")
-         write(lineout3)
+#         write(lineout3)
+         write(lineout2)
          write("")
          if (POLISH_INCLUDED = 1) then
+#            to_Polish(lineout_sav)
             to_Polish(lineout_sav)
          }
       else write(linein)      
@@ -617,18 +627,24 @@ procedure to_Polish(infix)
          stmt := reverse(rest)
          
 #         write_note("Polish No Precedence") 
-         polish := infixToPolish(stmt, NO_PRECEDENCE, PM)
+#         polish := infixToPolish(stmt, NO_PRECEDENCE, PM)
 #         write(head || polish || reverse(tail2 || tail1))
+#         write_note("Polish Conjunction Low Precedence") 
+#         polish := infixToPolish(stmt, CONJUNCTION_LOW_PRECEDENCE, PM)
+#         write(head || polish || reverse(tail2 || tail1))
+         write_note("Polish Notation") 
+         polish := infixToPolish(stmt, CONJUNCTION_LOW_PRECEDENCE, LUK)
+         write(head || polish || reverse(tail2 || tail1))
 #         write_note("Polish Conjunction High Precedence") 
-         polish := infixToPolish(stmt, CONJUNCTION_HIGH_PRECEDENCE, PM)
+#         polish := infixToPolish(stmt, CONJUNCTION_HIGH_PRECEDENCE, PM)
 #         write(head || polish || reverse(tail2 || tail1))
 #         write_note("Polish No Precedence Lukasiewicz notation") 
-         polish := infixToPolish(stmt, NO_PRECEDENCE, LUK)
+#         polish := infixToPolish(stmt, NO_PRECEDENCE, LUK)
 #         write(head || polish || reverse(tail2 || tail1))
 #         write_note("Polish Conjunction High Precedence Lukasiewicz notation") 
-         write_note("Polish Lukasiewicz notation") 
-         polish := infixToPolish(stmt, CONJUNCTION_HIGH_PRECEDENCE, LUK)
-         write(head || polish || reverse(tail2 || tail1))
+#         write_note("Polish Lukasiewicz notation") 
+#         polish := infixToPolish(stmt, CONJUNCTION_HIGH_PRECEDENCE, LUK)
+#         write(head || polish || reverse(tail2 || tail1))
          write("")
          }
       }
@@ -674,6 +690,11 @@ procedure precedence(operator, precedence_flag)
       CONJUNCTION_HIGH_PRECEDENCE:
          case operator of {
             "dnal\\": return 5
+            default: return 1
+            }
+      CONJUNCTION_LOW_PRECEDENCE:
+         case operator of {
+            "dnal\\": return 0
             default: return 1
             }
       }

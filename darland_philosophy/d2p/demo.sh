@@ -1,1 +1,1 @@
-./d2p.sh demo
+./d2pl.sh demo

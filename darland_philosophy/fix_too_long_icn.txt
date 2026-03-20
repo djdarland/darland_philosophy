@@ -1,0 +1,269 @@
+## Copyright (C) 2024 Dennis J. Darland
+
+## This file is part of darland's philosophy.
+
+## darland's philosophy is free software: you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation, either version 3 of the License, or
+## (at your option) any later version.
+
+## darland's philosophy is distributed in the hope that it will be useful, 
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+## GNU General Public License for more details.
+
+## You should have received a copy of the GNU General Public License
+## along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+$define MAX_LINE 80
+$define BREAK_ITEM '$\\'
+$define BREAK_ARG '}'
+$define BREAK_PREFIX ' \t{'
+$define END_CHAR '}'
+
+global max_exe, left_item, lineno, lookup_typ, lookup_cnt, lookup_sz
+
+class item(prefix, arguments, text, type)
+   method size_item()
+      ret := lookup_sz[self.type]
+      write(&errout, "SZ A ret = ", ret)
+      i := 1
+      while i <= *arguments do {
+         ret +:= *(arguments[i])
+         write(&errout, "SZ B ret[",i,"]= ", ret)
+         i +:= 1
+         }
+      ret +:= *text
+      write(&errout, "SZ C ret = ", ret)
+      return ret
+   end
+   method to_str()
+      i := 1
+      out := prefix
+      while i <= *arguments do {
+         out ||:= arguments[i]
+         i +:= 1
+         }
+      if \out & *text > 0 then
+         out ||:= text
+      return out
+   end
+end
+
+class line(item_count, items)
+   method add_item(it)
+      items |||:= [it]
+      item_count +:= 1
+   end
+   method to_str()
+      i := 1
+      out := ""
+      while i <= item_count do {
+         out ||:= items[i].to_str()
+         i +:= 1
+         }
+      return out
+   end
+
+end
+
+procedure main()
+   &trace := 100000
+   lineno := 0
+   max_exe := 100000
+
+   init()
+
+   while linein := read() do {
+      lineno +:= 1
+      line_current := line(0,[])
+      max_exe -:= 1
+      if max_exe <= 0 then exit()
+      if find("$", linein) then { 
+         start := 1
+         linein := rm_xs_blanks(linein)
+         line_current := line(0, [])
+         while linein ? (((item_start := tab(any(BREAK_ITEM))) & item_end := tab(upto(BREAK_ITEM))) & rest := tab(0)) do {
+            item_in := item_start || item_end
+            if item_in == "$" & start ~= 1 then {
+               start := 0
+#               break
+                  }
+            max_exe -:= 1
+            if max_exe <= 0 then exit()
+            write(&errout, "A00001 item_in = ",item_in)
+            if item_in ? (prefix_in := (tab(upto(BREAK_PREFIX))) & rest3 := tab(0)) 
+                          then {}
+                          else prefix_in :=  item_in
+            if prefix_in[1] == "\\" then {
+               typ := lookup_typ[prefix_in]
+               if typ = 0 then {
+                  write("Prefix ", prefix_in, " unknown. Line ", lineno )
+                  }
+               write(&errout, "A00002 typ = ",typ)
+               cnt := lookup_cnt[prefix_in]
+               write(&errout, "A00003 cnt = ",cnt)
+               i := 1
+               arg := []
+               rest2 := rest3
+               while i <= cnt do {
+                  write(&errout, "A00004 i = ",i)
+                  rest2 ? (it := tab(upto(BREAK_ARG)) & (rest2 := tab(0)))
+                  write(&errout, "A00005 it = ",it)
+                  arg |||:= [it]
+                  i +:= 1
+                  }
+               txt := rest2
+#               rest2 ? (txt := tab(upto(BREAK_ITEM))) # & (rest := tab(0)))
+               thing := item(prefix_in, arg, txt, typ) 
+               line_current.add_item(thing)
+               }
+            linein := rest
+            write(&errout, "A00006 linein = ",linein)
+            }
+         iii := 1
+         lineout := "$"
+         sz_out := 0
+         while iii <= line_current.item_count do {
+            max_exe -:= 1
+            if max_exe <= 0 then exit()
+            write(&errout, "B00001 iii = ",iii)
+            write(&errout, "B00002 lineout = ",lineout)
+            sz_it := line_current.items[iii].size_item()
+            write(&errout, "B00004 sz_it = ",sz_it)
+            if ((sz_out + sz_it)  > MAX_LINE) & (iii <= line_current.item_count) then
+               {
+                  sz_out := 0
+                  write(lineout || "$")
+                  write("")
+                  lineout := "$"
+                  continue
+                  }
+            else {
+               lineout ||:= line_current.items[iii].to_str()
+               write(&errout, "B00005 lineout = ",lineout)
+               sz_out +:= sz_it
+               iii +:= 1
+               sz_it := line_current.items[iii].size_item()
+               }
+            }
+         if lineout ~== "$" then {
+            write(lineout || "$")
+            iii +:= 1
+            }
+         }
+      else
+         write(linein)
+      }
+end
+
+procedure init()
+   lookup_typ := table(0)
+   lookup_cnt := table(0)
+   lookup_sz := table(0)
+
+   lookup_typ["\\pmast"] := 1
+   lookup_typ["\\pmcdot"] := 2
+   lookup_typ["\\pmthm"] := 3
+   lookup_typ["\\pmdot"] := 4
+   lookup_typ["\\pmall"] := 5
+   lookup_typ["\\pmpf"] := 6
+   lookup_typ["\\pmiff"] := 7
+   lookup_typ["\\pmimp"] := 8
+   lookup_typ["$"] := 9
+   lookup_typ["\\pmsome"] := 10
+   lookup_typ["\\pmor"] := 11
+   lookup_typ["\\pmand"] := 12
+   lookup_typ["\\land"] := 13
+   lookup_typ["\\pmiddf"] := 14
+   lookup_typ["\\pmdott"] := 15
+   lookup_typ["\\pmdottt"] := 16
+   lookup_typ["\\pmdotttt"] := 17
+   lookup_typ["\\pmdottttt"] := 18
+   lookup_typ["\\pmdotttttt"] := 19
+   lookup_typ["\\pmandd"] := 20
+   lookup_typ["\\pmanddd"] := 21
+   lookup_typ["\\pmandddd"] := 22
+   lookup_typ["\\pmanddddd"] := 23
+   lookup_typ["\\pmandddddd"] := 24
+   lookup_typ["\\pmnot"] := 25
+   lookup_typ["\\psi"] := 26
+   lookup_typ["\\phi"] := 27
+
+   lookup_sz["\\pmast"] := 1
+   lookup_sz["\\pmcdot"] := 1
+   lookup_sz["\\pmthm"] := 1
+   lookup_sz["\\pmdot"] := 1
+   lookup_sz["\\pmall"] := 2
+   lookup_sz["\\pmpf"] := 1
+   lookup_sz["\\pmiff"] := 1
+   lookup_sz["\\pmimp"] := 1
+   lookup_sz["$"] := 1
+   lookup_sz["\\pmsome"] := 3
+   lookup_sz["\\pmor"] := 1
+   lookup_sz["\\pmand"] := 1
+   lookup_sz["\\land"] := 1
+   lookup_sz["\\pmiddf"] := 2
+   lookup_sz["\\pmdott"] := 1
+   lookup_sz["\\pmdottt"] := 2
+   lookup_sz["\\pmdotttt"] := 2
+   lookup_sz["\\pmdottttt"] := 3
+   lookup_sz["\\pmdotttttt"] := 3
+   lookup_sz["\\pmandd"] := 1
+   lookup_sz["\\pmanddd"] := 2
+   lookup_sz["\\pmandddd"] := 2
+   lookup_sz["\\pmanddddd"] := 3
+   lookup_sz["\\pmandddddd"] := 3
+   lookup_sz["\\pmnot"] := 1
+   lookup_sz["\\psi"] := 1
+   lookup_sz["\\phi"] := 1
+
+   lookup_cnt["\\pmast"] := 0
+   lookup_cnt["\\pmcdot"] := 0
+   lookup_cnt["\\pmthm"] := 0
+   lookup_cnt["\\pmdot"] := 0
+   lookup_cnt["\\pmall"] := 1
+   lookup_cnt["\\pmpf"] := 2
+   lookup_cnt["\\pmiff"] := 0
+   lookup_cnt["\\pmimp"] := 0
+   lookup_cnt["$"] := 0
+   lookup_cnt["\\pmsome"] := 1
+   lookup_cnt["\\pmor"] := 0
+   lookup_cnt["\\pmand"] := 0
+   lookup_cnt["\\land"] := 0
+   lookup_cnt["\\pmiddf"] := 0
+   lookup_cnt["\\pmdott"] := 0
+   lookup_cnt["\\pmdottt"] := 0
+   lookup_cnt["\\pmdotttt"] := 0
+   lookup_cnt["\\pmdottttt"] := 0
+   lookup_cnt["\\pmdotttttt"] := 0
+   lookup_cnt["\\pmandd"] := 0
+   lookup_cnt["\\pmanddd"] := 0
+   lookup_cnt["\\pmandddd"] := 0
+   lookup_cnt["\\pmanddddd"] := 0
+   lookup_cnt["\\pmandddddd"] := 0
+   lookup_cnt["\\pmnot"] := 0
+   lookup_cnt["\\psi"] := 0
+   lookup_cnt["\\phi"] := 0
+end
+
+procedure contains_something(line)
+   if *line > 0 then
+      return 1
+   else 
+      fail
+end  
+
+procedure rm_xs_blanks(linein)
+   while linein ? (pt1 := tab(find(" {")) & tab(match(" {")) & pt2 := tab(0)) do
+      linein := pt1 || "{" || pt2
+   while linein ? (pt1 := tab(find("}\\")) & tab(match("}\\")) & pt2 := tab(0)) do
+      linein := pt1 || "} \\" || pt2
+   return linein
+end
+
+procedure rm_xs_dol(linein)
+   while linein ? (pt1 := tab(find("$$")) & tab(match("$$")) & pt2 := tab(0)) do
+      linein := pt1 || "$" || pt2
+   return linein
+end
