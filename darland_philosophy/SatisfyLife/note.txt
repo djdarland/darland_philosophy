@@ -1,0 +1,11 @@
+If nand(a,b) is satisfiable then is not nand(a,b) a tautology?
+
+nand a    b     
+T    F    T
+T    T    F
+T    F    T
+F    T    T
+
+
+
+
