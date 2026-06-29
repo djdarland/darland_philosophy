@@ -1,0 +1,167 @@
+echo "-----------"
+echo "Darland Philosophy Query Edits"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2019, 2021  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+
+echo "NOTE: 0 thru 26 are OUT OF DATE"
+echo "Note 31 forward are My Main Theory"
+echo "31 Edit darland_0031.lf Cases with Understanding Using Number"
+echo "32 Edit darland_0032.lf Cases with Atomic Belief Using Number"
+echo "33 Edit darland_0033.lf Idealism, Private Language and Replacing Classes"
+echo "34 Edit darland_0034.lf Cases with Opacity Using Number"
+echo "35 Edit darland_0035.lf Multi Tests Using Number"
+echo "36 Edit darland_0036.lf Agreement Using Number"
+echo "37 Edit darland_0037.lf Essentially Singular terms"
+echo "38 Edit darland_0038.lf Plural terms"
+echo "39 Edit darland_0039.lf Contingently Singular terms"
+echo "40 Edit darland_0040.lf Singular terms"
+# echo "42 Edit darland_0042.lf True NAND Beliefs using Number"
+# echo "45 Edit darland_0045.lf Same sense"
+echo "46 Edit darland_0046.lf Nonsense"
+echo "47 Edit darland_0047.lf Believing Nonsense"
+echo "48 Edit darland_0048.lf Natural Meaning Beliefs"
+# echo "61 Edit darland_0061.lf - Tests for Atomic and Molecular Facts"
+echo "71 Edit darland_0071.lf Cases with Understanding Using Number - For Whitehead"
+echo "72 Edit darland_0072.lf Cases with Atomic Belief Using Number - For Whitehead"
+echo "73 Edit darland_0073.lf Cases for checking database of facts - For Whitehead"
+echo "74 Edit darland_0074.lf Cases with Opacity Using Number - For Whitehead"
+# echo "75 Edit darland_0075.lf Essentially Singular terms"
+# echo "76 Edit darland_0076.lf Plural terms"
+# echo "77 Edit darland_0077.lf Contingently Singular terms"
+# echo "78 Edit darland_0078.lf Singular terms"
+# echo "81 Edit darland_0081.lf Cases with Metaphysics - For Whitehead"
+echo "<cr> To continue"
+read select
+
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f eee1
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+while [ $select -ne 999 ]
+do 
+case $select in
+0) $EDITOR ../IN2/append.lf;;
+1) $EDITOR ../IN2/darland_0001.lf;;
+2) $EDITOR ../IN2/darland_0002.lf;;
+3) $EDITOR ../IN2/darland_0003.lf;;
+4) $EDITOR ../IN2/darland_0004.lf;;
+5) $EDITOR ../IN2/darland_0005.lf;;
+6) $EDITOR ../IN2/darland_0006.lf;;
+7) $EDITOR ../IN2/darland_0007.lf;;
+8) $EDITOR ../IN2/darland_0008.lf;;
+9) $EDITOR ../IN2/darland_0009.lf;;
+10) $EDITOR ../IN2/darland_0010.lf;;
+11) $EDITOR ../IN2/darland_0011.lf;;
+21) $EDITOR ../IN2/darland_0021.lf;;
+22) $EDITOR ../IN2/darland_0022.lf;;
+23) $EDITOR ../IN2/darland_0023.lf;;
+24) $EDITOR ../IN2/darland_0024.lf;;
+25) $EDITOR ../IN2/darland_0025.lf;;
+26) $EDITOR ../IN2/darland_0026.lf;;
+27) $EDITOR ../IN2/darland_0027.lf;;
+28) $EDITOR ../IN2/darland_0028.lf;;
+29) $EDITOR ../IN2/darland_0029.lf;;
+31) $EDITOR ../IN2/darland_0031.lf;;
+32) $EDITOR ../IN2/darland_0032.lf;;
+33) $EDITOR ../IN2/darland_0033.lf;;
+34) $EDITOR ../IN2/darland_0034.lf;;
+35) $EDITOR ../IN2/darland_0035.lf;;
+36) $EDITOR ../IN2/darland_0036.lf;;
+37) $EDITOR ../IN2/darland_0037.lf;;
+38) $EDITOR ../IN2/darland_0038.lf;;
+39) $EDITOR ../IN2/darland_0039.lf;;
+40) $EDITOR ../IN2/darland_0040.lf;;
+41) $EDITOR ../IN2/darland_0041.lf;;
+42) $EDITOR ../IN2/darland_0042.lf;;
+45) $EDITOR ../IN2/darland_0045.lf;;
+46) $EDITOR ../IN2/darland_0046.lf;;
+47) $EDITOR ../IN2/darland_0047.lf;;
+48) $EDITOR ../IN2/darland_0048.lf;;
+61) $EDITOR ../IN2/darland_0061.lf;;
+62) $EDITOR ../IN2/darland_0062.lf;;
+63) $EDITOR ../IN2/darland_0063.lf;;
+64) $EDITOR ../IN2/darland_0064.lf;;
+65) $EDITOR ../IN2/darland_0065.lf;;
+68) $EDITOR ../IN2/darland_0068.lf;;
+69) $EDITOR ../IN2/darland_0069.lf;;
+55) $EDITOR ../IN2/darland_0000.lf;;
+71) $EDITOR ../IN2/darland_0071.lf;;
+72) $EDITOR ../IN2/darland_0072.lf;;
+73) $EDITOR ../IN2/darland_0073.lf;;
+74) $EDITOR ../IN2/darland_0074.lf;;
+75) $EDITOR ../IN2/darland_0075.lf;;
+76) $EDITOR ../IN2/darland_0076.lf;;
+77) $EDITOR ../IN2/darland_0077.lf;;
+78) $EDITOR ../IN2/darland_0078.lf;;
+81) $EDITOR ../IN2/darland_0081.lf;;
+91) $EDITOR ../IN2/darland_0091.lf;;
+92) $EDITOR ../IN2/darland_0092.lf;;
+94) $EDITOR ../IN2/darland_0094.lf;;
+500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
+501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
+666) $EDITOR eee1 ;;
+777) $EDITOR NOTES_DJD.txt & ;;
+esac
+echo "-----------"
+echo "Darland Philosophy Query Edits"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2019  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+
+echo "Note 31 forward are Current Versions - Still in Progress"
+echo "31 Edit darland_0031.lf Cases with Understanding Using Number"
+echo "32 Edit darland_0032.lf Cases with Atomic Belief Using Number"
+echo "33 Edit darland_0033.lf Idealism, Private Language and Replacing Classes"
+echo "34 Edit darland_0033.lf Cases with Opacity Using Number"
+echo "35 Edit darland_0034.lf Multi Tests Using Number"
+echo "36 Edit darland_0035.lf Agreement Using Number"
+echo "37 Edit darland_0037.lf Essentially Singular terms"
+echo "38 Edit darland_0038.lf Plural terms"
+echo "39 Edit darland_0039.lf Contingently Singular terms"
+echo "40 Edit darland_0040.lf Singular terms"
+# echo "41 Was for belief with NAND - cannot be done"
+# echo "42 Edit darland_0042.lf True NAND Beliefs using Number"
+# echo "43 was for disbelieves NAND - cannot be done"
+# echo "44 was for agnostic NAND - cannoot be done"
+echo "45 Edit darland_0045.lf Same sense"
+echo "46 Edit darland_0046.lf Nonsense"
+echo "47 Edit darland_0047.lf Believing Nonsense"
+echo "48 Edit darland_0048.lf Natural Meaning Beliefs"
+echo "61 Edit darland_0061.lf - Tests for Atomic and Molecular Facts"
+echo "62 Edit darland_0062.lf - Tests for Satisfiability"
+echo "63 Edit darland_0063.lf - Tests for Satisfiability with Statistics"
+echo "71 Edit darland_0071.lf Cases with Understanding in singular - For Whitehead"
+echo "72 Edit darland_0072.lf Cases with Atomic Belief in singular - For Whitehead"
+echo "73 Edit darland_0073.lf Cases for checking database of facts - For Whitehead"
+echo "74 Edit darland_0074.lf Cases with Opacity Using singular - For Whitehead"
+echo "75 Edit darland_0075.lf Essentially Singular terms"
+echo "76 Edit darland_0076.lf Plural terms"
+echo "77 Edit darland_0077.lf Contingently Singular terms"
+echo "78 Edit darland_0078.lf Singular terms"
+# echo "81 Edit darland_0081.lf Cases with Metaphysics - For Whitehead"
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f eee1
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+done

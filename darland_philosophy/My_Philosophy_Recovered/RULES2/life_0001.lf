@@ -1,0 +1,58 @@
+%% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+persistent(clock_start)?
+
+write_time(Ignore) :- write("Time Skipped for Test Suite"), nl.
+
+% write_time(Ignore) :- write(system("date")),
+%	clock_start <<- real_time.
+
+write_stats(Ignore) :- write("Stats Skipped for Test Suite"), nl.
+
+
+% write_stats(Ignore) :- write("CPU Time ", cpu_time, " Seconds"),nl,
+%	write("Clock Time ", real_time - clock_start, " Seconds"),nl,
+%	statistics.
+
+call_goal(Goal) :- write('AA001 Goal = ', Goal), Goal = [H | T], write('AA002 H = ', H, 'T = ', T), call_sub_1(H, T, 0).
+call_sub_1(H, T, N) :- write('BB001 H = ', H, 'T = ', T, 'N = ', N), T = [T1 | T2], H.N = T1, call_sub_1(H, T2, N + 1).
+call_sub_1(H, [], N) :- write('CC001 H = ', H), H.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% find_all from Prolog Programming in Depth
+%% by Michael A. Covington, Donald Nute, Andre Vellino
+%% page 164 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% find_all(X, Goal, List)
+%% X contains one or more uninstantiated variables that can also occur in Goal.
+%% (X can be a single uninstantiated variable.)
+%% List is a list of all of the instantiations 
+%% of X with which Goal will succeed.
+%% Modified (djd 2/2017) to remove explicit 'call'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+find_all(X, Goal, _) :- asserta(find_item('*MARK*')), Goal, asserta(find_item(X)), fail.
+
+find_all(_, _, List) :- find_collect([], L), !, List = L.
+
+find_collect(List1, List2) :- find_next(X), !, find_collect([X | List1], List2).
+
+find_collect(List, List).
+
+find_next(X) :- retract(find_item(X)), !, X :\== '*MARK*'.
+

@@ -1,0 +1,165 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Fri Feb 17 22:16:11 CST 2017
+
+*** Yes
+> 
+*** Yes
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> remark(8001, Remark)?
+
+*** Yes
+Remark = 'Test Set 8 - about opacity & synonymity.'.
+--1> 
+
+*** No
+> remark(8002, Remark)?
+
+*** Yes
+Remark = 'Synonymity is a relation of symbols - not of things.'.
+--1> 
+
+*** No
+> quote_note(wvoq0001, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+*** Yes
+Article_Title = none, 
+Article_Year = none, 
+Author = 'Willard Van Orman Quine', 
+Author_Article = none, 
+Author_Book = 'Willard Van Orman Quine', 
+Book_Title = 'Word and Object', 
+Book_Year = '1960', 
+Note1 = 'Note: Whitehead and Russell used the term [referential] transparent in Principia Mathematica, 2nd ed., p. 665. Quine mostly calls non-referential position `opaque`.', 
+Notes_Article = none, 
+Notes_Book = none, 
+Pages = '142', 
+Quotation = 'When a singular term is used in a sentence purely to specify its object, and the sentence is true of the object, then certainly the sentence will stay true when any other singular term is substituted that designates the same object. Here we have a criterion for what may be called purely referential position: the position must be subject to substituitivity of identity.'.
+
+--1> 
+
+*** No
+> quote_note(lw0001, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+*** Yes
+Article_Title = none, 
+Article_Year = none, 
+Author = 'Ludwig Wittgenstein', 
+Author_Article = none, 
+Author_Book = 'Ludwig Wittgenstein', 
+Book_Title = 'Tractatus Logico-Philosophicus', 
+Book_Year = '1921', 
+Note1 = none, 
+Notes_Article = none, 
+Notes_Book = none, 
+Pages = '5.53', 
+Quotation = 'Identity of object I express by identity of sign, and not by using a sign for identity. Difference of objects I express by difference of signs.'.
+
+--1> 
+
+*** No
+> quote_note(lw0002, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book)?
+
+*** Yes
+Article_Title = none, 
+Article_Year = none, 
+Author = 'Ludwig Wittgenstein', 
+Author_Article = none, 
+Author_Book = 'Ludwig Wittgenstein', 
+Book_Title = 'Tractatus Logico-Philosophicus', 
+Book_Year = '1921', 
+Note1 = 'But with incomplete human knowledge, we may have two signs (internal symbols) for the same object. (e.g. Cicero & Tully)', 
+Notes_Article = none, 
+Notes_Book = none, 
+Pages = '5.53', 
+Quotation = 'Roughly speaking, to say of two things that they are identical is nonsense, and to say of one thing that it is identical with itself is to say nothing at all.'.
+
+--1> 
+
+*** No
+> philosophical_quotation(8001, Author_1, Author_2, Article, Book_or_journal, Year, Page_range, Quotation, Note1, Note2, Note3)?
+
+*** No
+> 
+> philosophical_quotation(8002, Author_1, Author_2, Article, Book_or_journal, Year, Page_range, Quotation, Note1, Note2, Note3)?
+
+*** No
+> 
+> philosophical_quotation(8003, Author_1, Author_2, Article, Book_or_journal, Year, Page_range, Quotation, Note1, Note2, Note3)?
+
+*** No
+> 
+> opaque_believes_object(Subject, Time, Logical_Form_1, Logical_Form_2, 0, Arity, Relation, A_object, B_object, C_object)?
+
+*** Yes
+A_object = cicero, 
+Arity = 2, 
+B_object = cataline, 
+C_object = nop, 
+Logical_Form_1 = pos_pos, 
+Logical_Form_2 = pos_neg, 
+Relation = denounced, 
+Subject = tom, 
+Time = now.
+
+--1> 
+
+*** No
+> 
+> opaque_believes_external_internal_object(Subject, Time, Logical_Form_1, Logical_Form_2, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, Relation, A_External_Symbol, A_Object, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, B_Object, C_External_Symbol, C_Internal_Symbol, C_Object)?
+
+*** No
+>  
+> 
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> opaque_believes_external_object(Subject, Time, Logical_Form_1, Logical_Form_2, 0, Arity, External_Relation_Symbol, Relation, A_External_Symbol, A_Object, B_External_Symbol, B_Object, C_External_Symbol, C_Object)?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> opaque_believes_external_internal(Subject, Time, Logical_Form_1, Logical_Form_2, 0, Arity, External_Relation_Symbol, Internal_Relation_Symbol, A_External_Symbol, A_Internal_Symbol, B_External_Symbol, B_Internal_Symbol, C_External_Symbol, C_Internal_Symbol)?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> opaque_believes_internal_object(Subject, Time, Logical_Form_1, Logical_Form_2, 0, Arity, Internal_Relation_symbol, Relation, A_Internal_Symbol, A_Object, B_Internal_Symbol, B_Object, C_Internal_Symbol, C_Object)?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> opaque_believes_internal(Subject, Time, Logical_Form_1, Logical_Form_2, 0, Arity, Internal_Relation_symbol, A_Internal_Symbol, B_Internal_Symbol, C_Internal_Symbol)?
+
+*** No
+> 
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.48739 Seconds
+CPU Time 316.667 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+>  
+> 
+> halt?
+

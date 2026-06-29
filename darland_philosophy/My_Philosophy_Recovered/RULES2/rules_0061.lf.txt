@@ -1,0 +1,54 @@
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+
+%% This will be a representation of atomic and molecular facts.
+%% Only qqqq, qqqq4, qqqq5 and qqqq6 will be uses.
+%% Theoretically they can all be considered to represent
+%% the same (and only) predicate Q in my philosophy.
+%% qqqq4 is for positive atomic facts.
+%% qqqq5 is for negative atomic facts.
+%% qqqq6 is for positive molecular (including atomic) facts.
+%% nand indicates "not and"
+%% existential quantification is achieved by using variables.
+%% universal quantification can be achieved with "not exists not"
+
+%% I need to determine when to use negation by failure "\+" vs qqqq5.
+%% This is a polish notation using nand.
+
+
+qqqq6([nand, Prop_1, Prop_2]) :-
+	qqqq5(Prop_1).
+
+qqqq6([nand, Prop_1, Prop_2]) :-
+	qqqq5(Prop_2).
+	
+qqqq6([nand, [nand, Prop_1, Prop_2], Prop_3]) :-
+	\+ qqqq6([nand, Prop_1, Prop_2]).
+	
+qqqq6([nand, [nand, Prop_1, Prop_2], Prop_3]) :-
+	qqqq5([Prop_2]).
+
+qqqq6([nand, [Prop_1], [nand, Prop_2, Prop_3]]) :-
+	qqqq5([Prop_1]).
+	
+qqqq6([nand, [nand, Prop_1, Prop_2], Prop_3]) :-
+	\+ qqqq6([nand, Prop_2, Prop_3]).
+
+	

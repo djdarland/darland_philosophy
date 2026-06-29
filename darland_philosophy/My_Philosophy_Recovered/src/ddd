@@ -1,0 +1,8 @@
+$EDITOR clrhtmlmapl.sh
+$EDITOR cphtmlmapl.sh
+$EDITOR da_clr_mapl.sh
+$EDITOR da_fa_mapl.sh
+$EDITOR da_lg_mapl.sh
+$EDITOR da_par_mapl.sh
+$EDITOR da_ru_mapl.sh
+$EDITOR tsda_mapl.sh

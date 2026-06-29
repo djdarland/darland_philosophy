@@ -1,0 +1,417 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> 
+*** Yes
+> 
+> %% I figured TRUE and FALSE by starting simple & copying expressions into
+> %% other expressions.
+> 
+> write_time(Ignore)?
+Time Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> % TRUE
+> sat_cmp(P)?
+> ;
+> ;
+> 
+> % FALSE
+> sat_cmp([nand, P,P])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 2 max_depth = 1
+
+*** Yes
+P = [top,0].
+--1> ;
+
+*** No
+> ;
+> 
+> % TRUE	
+> sat_cmp([nand, P,Q])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 2 max_depth = 1
+
+*** Yes
+P = [top,0], Q = [top,0].
+--1> ;
+
+*** No
+> ;
+> 
+> % TRUE	
+> sat_cmp([nand, P, [nand, P, P]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 3 max_depth = 2
+
+*** Yes
+P = [top,0].
+--1> ;
+
+*** No
+> ;
+> ;
+> 
+> % TRUE
+> sat_cmp([nand, P, [nand, Q, P]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 3 max_depth = 2
+
+*** Yes
+P = [top,0], Q = @.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> 
+> % TRUE
+> sat_cmp([nand, P, [nand, Q, R]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 3 max_depth = 2
+
+*** Yes
+P = [top,0], Q = @, R = @.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> 	
+> sat_cmp([nand, [nand, P, Q],   [nand, Q, R]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Branch Left = 1 Right = 0
+Branch Left = 0 Right = 1
+Branch Left = 1 Right = 0
+Branch Left = 0 Right = 1
+Rules 63 Failed visits = 8 max_depth = 2
+Rules 65 Succeeded visits = 17 max_depth = 2
+
+*** Yes
+P = [top,1], Q = [top,1], R = @.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> 	
+> sat_cmp([nand, [nand, [nand, P, Q], Q],   [nand, Q, R]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Branch Left = 1 Right = 0
+Branch Left = 0 Right = 1
+Branch Left = 1 Right = 0
+Branch Left = 0 Right = 1
+Rules 63 Failed visits = 8 max_depth = 2
+Rules 65 Succeeded visits = 19 max_depth = 2
+
+*** Yes
+P = @, Q = @, R = [top,1].
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> 	
+> sat_cmp([nand, P, [nand, Q, R]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 3 max_depth = 2
+
+*** Yes
+P = [top,0], Q = @, R = @.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> ;
+> 	
+> %% TRUE
+> sat_cmp([top, 1])?
+> 
+> %% FALSE
+> sat_cmp([top, 0])?
+> 
+> %% TRUE
+> sat_cmp([nand, [top, 1], [top, 0]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 2 max_depth = 1
+
+*** Yes
+> 
+> %% TRUE
+> sat_cmp([nand, [top, 0], [top, 1]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 2 max_depth = 1
+
+*** Yes
+> 
+> %% TRUE
+> sat_cmp([nand, [top, 0], [top, 0]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 2 max_depth = 1
+
+*** Yes
+> 
+> %% FALSE
+> sat_cmp([nand, [top, 1], [top, 1]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Failed visits = 0 max_depth = 0
+Rules 65 Failed visits = 1 max_depth = 1
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%
+> 
+> %% TRUE
+> sat_cmp([nand, [nand, [top, 0], [top, 1]], [top, 0]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 6 max_depth = 2
+
+*** Yes
+> 
+> %% FALSE
+> sat_cmp([nand, [nand, [top, 0], [top, 0]], [top, 1]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Branch Left = 1 Right = 0
+Branch Left = 0 Right = 1
+Rules 63 Failed visits = 4 max_depth = 2
+Rules 65 Failed visits = 6 max_depth = 2
+
+*** No
+> 
+> %% TRUE
+> sat_cmp([nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 2 max_depth = 2
+
+*** Yes
+> 
+> %% TRUE
+> sat_cmp([nand, [nand, [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]], [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]]], [nand, [nand, [top, 0], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]]], [top, 0]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 2 max_depth = 2
+
+*** Yes
+> 
+> sat_cmp([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], A19])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 2 max_depth = 2
+
+*** Yes
+A1 = @, 
+A10 = @, 
+A11 = @, 
+A12 = @, 
+A13 = @, 
+A14 = @, 
+A15 = @, 
+A16 = @, 
+A17 = @, 
+A18 = @, 
+A19 = [top,0], 
+A2 = @, 
+A3 = @, 
+A4 = @, 
+A5 = @, 
+A6 = @, 
+A7 = @, 
+A8 = @, 
+A9 = @.
+
+--1> 
+
+*** No
+> sat_cmp([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A1], A6]], [nand, [nand, [nand, [nand, A2, A8], A3], [nand, [nand, A10, A5], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], A19])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Rules 63 Succeeded visits = 1 max_depth = 1
+Rules 65 Succeeded visits = 2 max_depth = 2
+
+*** Yes
+A1 = @, 
+A10 = @, 
+A12 = @, 
+A13 = @, 
+A14 = @, 
+A15 = @, 
+A16 = @, 
+A17 = @, 
+A18 = @, 
+A19 = [top,0], 
+A2 = @, 
+A3 = @, 
+A4 = @, 
+A5 = @, 
+A6 = @, 
+A8 = @.
+
+--1> 
+
+*** No
+> sat_cmp([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A1], A6]], [nand, [nand, [nand, [nand, A2, A8], A3], [nand, [nand, A10, A5], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], [top, 1]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Branch Left = 1 Right = 0
+Branch Left = 2 Right = 0
+Branch Left = 3 Right = 0
+Branch Left = 4 Right = 0
+Branch Left = 3 Right = 1
+Branch Left = 4 Right = 0
+Branch Left = 3 Right = 1
+Branch Left = 1 Right = 1
+Branch Left = 2 Right = 1
+Branch Left = 1 Right = 2
+Branch Left = 2 Right = 1
+Branch Left = 1 Right = 2
+Branch Left = 0 Right = 1
+Rules 63 Failed visits = 22 max_depth = 5
+Rules 65 Failed visits = 2 max_depth = 2
+
+*** No
+> 
+> sat_cmp([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], [top, 1]])?
+trav_visits = 1
+trav_max_depth = 1
+end_nodes = 0
+props = 0
+nands = 0
+Branch Left = 1 Right = 0
+Branch Left = 2 Right = 0
+Branch Left = 3 Right = 0
+Branch Left = 4 Right = 0
+Branch Left = 3 Right = 1
+Branch Left = 4 Right = 0
+Branch Left = 3 Right = 1
+Branch Left = 1 Right = 1
+Branch Left = 2 Right = 1
+Branch Left = 1 Right = 2
+Branch Left = 2 Right = 1
+Branch Left = 1 Right = 2
+Branch Left = 0 Right = 1
+Rules 63 Failed visits = 22 max_depth = 5
+Rules 65 Failed visits = 2 max_depth = 2
+
+*** No
+> 
+> 
+> write_stats(Ignore)?
+Stats Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+

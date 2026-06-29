@@ -1,0 +1,60 @@
+echo "-----------"
+echo "Whitehead Philosophy Query Edits"
+echo "-----------"
+
+echo "Copyright (C) 2017, 2019, 2021, 2022  Dennis J. Darland"
+echo "This program comes with ABSOLUTELY NO WARRANTY; for details type 500."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions; type 501 for details."
+echo "-----------"
+
+echo "101 Edit whitehead0101.lf Basic One"
+echo "201 Edit whitehead0201.lf Basic Two"
+echo "301 Edit whitehead0301.lf Basic Three"
+echo "401 Edit whitehead0401.lf Basic Four"
+echo "901 Edit whitehead0901.lf Experiments with Game of Life in WildLIFE"
+
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f www1
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+echo "select"
+read select
+while [ $select -ne 999 ]
+do 
+case $select in
+101) $EDITOR ../WhiteheadPhilosophyLife/IN2/whitehead_0101.lf;;
+201) $EDITOR ../WhiteheadPhilosophyLife/IN2/whitehead_0201.lf;;
+301) $EDITOR ../WhiteheadPhilosophyLife/IN2/whitehead_0301.lf;;
+401) $EDITOR ../WhiteheadPhilosophyLife/IN2/whitehead_0401.lf;;
+901) $EDITOR ../WhiteheadPhilosophyLife/IN2/whitehead_0901.lf;;
+
+500) more NO_WARRANTY.txt;echo "strike <ret> to continue";read select2;;
+501) more COPYING.txt;echo "strike <ret> to continue";read select2;;
+666) $EDITOR www1 ;;
+777) $EDITOR NOTES_DJD.txt & ;;
+esac
+echo "-----------"
+echo "Whitehead Philosophy Query Edits"
+echo "-----------"
+echo "select"
+read select
+echo "101 Edit whitehead0101.lf Basic One"
+echo "201 Edit whitehead0201.lf Basic Two"
+echo "301 Edit whitehead0301.lf Basic Three"
+echo "401 Edit whitehead0401.lf Basic Four"
+echo "901 Edit whitehead0901.lf Experiments with Game of Life in WildLIFE"
+
+echo "-----------"
+echo "500 NO_WARANTY.txt"
+echo "501 COPYING.txt"
+if test -f www1
+then echo "666 Edit this file"
+fi
+echo "777 NOTES_DJD.txt"
+echo "999 quit"
+done

@@ -1,0 +1,104 @@
+%% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+load("RULES2/life_0001.lf")?
+load("RULES2/rules_0062.lf")?
+trace_input(true)?
+
+%% I figured TRUE and FALSE by starting simple & copying expressions into
+%% other expressions.
+
+write_time(Ignore)?
+
+% TRUE
+satisfiable(P)?
+;
+;
+
+% FALSE
+satisfiable([nand, P,P])?
+;
+;
+
+% TRUE	
+satisfiable([nand, P,Q])?
+;
+;
+
+% TRUE	
+satisfiable([nand, P, [nand, P, P]])?
+;
+;
+;
+
+% TRUE
+satisfiable([nand, P, [nand, Q, P]])?
+;
+;
+;
+;
+;
+;
+
+% TRUE
+satisfiable([nand, P, [nand, Q, R]])?
+;
+;
+;
+;
+;
+;
+	
+%% TRUE
+satisfiable([top, 1])?
+
+%% FALSE
+satisfiable([top, 0])?
+
+%% TRUE
+satisfiable([nand, [top, 1], [top, 0]])?
+
+%% TRUE
+satisfiable([nand, [top, 0], [top, 1]])?
+
+%% TRUE
+satisfiable([nand, [top, 0], [top, 0]])?
+
+%% FALSE
+satisfiable([nand, [top, 1], [top, 1]])?
+
+%%%%%%%%%%%%%%%%%%%%
+
+%% TRUE
+satisfiable([nand, [nand, [top, 0], [top, 1]], [top, 0]])?
+
+%% FALSE
+satisfiable([nand, [nand, [top, 0], [top, 0]], [top, 1]])?
+
+%% TRUE
+satisfiable([nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]])?
+
+%% TRUE
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]], [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]]], [nand, [nand, [top, 0], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]]], [top, 0]])?
+
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], A19])?
+
+satisfiable([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], [top, 1]])?
+
+
+write_stats(Ignore)?
+
+halt?

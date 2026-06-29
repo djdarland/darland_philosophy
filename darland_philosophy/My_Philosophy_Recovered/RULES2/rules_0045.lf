@@ -1,0 +1,65 @@
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+%% 
+%%
+%% I have made the propositional attitude relatons support arbitrary arity.
+%%
+%%
+
+same_sense_idea(Subject1, Subject2, Time1, Time2, Idea1, Idea2, Object) :-
+	ssss(Subject1, Time1, Idea1, Object),
+	ssss(Subject2, Time2, Idea2, Object).
+
+same_sense_word(Subject1, Subject2, Time1, Time2, Word1, Word2, Object) :-
+	rrss(Subject1, Time1, Word1, Object),
+	rrss(Subject2, Time2, Word2, Object).
+
+
+
+
+
+
+same_sense_thought(Subject1, Subject2, Time1, Time2, List1, List2) :-
+	match_thought_lists(Subject1, Subject2, Time1, Time2, List1, List2).
+
+match_thought_lists(Subject1, Subject2, Time1, Time2,
+		    [], []).
+
+match_thought_lists(Subject1, Subject2, Time1, Time2,
+		    [Idea1 | List1], [Idea2 |List2]) :-
+	same_sense_idea(Subject1, Subject2, Time1, Time2,
+			Idea1, Idea2, Object),
+	match_thought_lists(Subject1, Subject2, Time1, Time2,
+		    List1,List2).
+	
+same_sense_sentence(Subject1, Subject2, Time1, Time2, List1, List2) :-
+	match_sentence_lists(Subject1, Subject2, Time1, Time2, List1, List2).
+
+match_sentence_lists(Subject1, Subject2, Time1, Time2,
+		    [], []).
+
+match_sentence_lists(Subject1, Subject2, Time1, Time2,
+		    [Word1 | List1], [Word2 |List2]) :-
+	same_sense_word(Subject1, Subject2, Time1, Time2,
+			Word1, Word2, Object),
+	match_sentence_lists(Subject1, Subject2, Time1, Time2,
+		    List1,List2).
+	
+	

@@ -1,0 +1,687 @@
+true.
+
+%%%use_module(library(statistics)).
+['facts/common_facts_2017_0001'].
+% facts/common_facts_2017_0001 compiled 0.00 sec, 100 clauses
+true.
+
+['facts/common_facts_2017_0002'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/facts/common_facts_2017_0002.pl:275:
+	Clauses of book/5 are not together in the source-file
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/facts/common_facts_2017_0002.pl:408:
+	Clauses of philosophical_quotation/7 are not together in the source-file
+% facts/common_facts_2017_0002 compiled 0.00 sec, 180 clauses
+true.
+
+['rules/common_2017_0001'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:43:
+	Singleton variables: [Subject,Time,Type,Arity,Relation]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:45:
+	Singleton variables: [Subject,Time,Type,A_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:57:
+	Singleton variables: [Type_p1,Relation,A_Object,B_Object,C_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:61:
+	Singleton variables: [Internal_Relation_symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:65:
+	Singleton variables: [Type_p1]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:79:
+	Singleton variables: [External_Relation_Symbol_2]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:91:
+	Singleton variables: [Internal_Relation_Symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:95:
+	Singleton variables: [Relation,A_Object,B_Object,C_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:99:
+	Singleton variables: [Internal_Relation_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:103:
+	Singleton variables: [Internal_Relation_symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:136:
+	Singleton variables: [Logical_Form]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:166:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:168:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:176:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:178:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:223:
+	Singleton variables: [Relation2]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:223:
+	Singleton variable in \+: Logical_Form_2
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:247:
+	Singleton variables: [Number1A,Number1B,External_Term_2,NumberA,NumberB]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:253:
+	Singleton variables: [Quote_1A,Quote_2A,Quote_3A,Quote_4A,Quote_1B,Quote_2B,Quote_3B,Quote_4B]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:259:
+	Singleton variables: [Quote_1A,Quote_2A,Quote_3A,Quote_4A,Quote_1B,Quote_2B,Quote_3B,Quote_4B]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:289:
+	Singleton variables: [Author_Book_Abbreviation]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:291:
+	Singleton variables: [Author_Article_Abbreviation]
+% rules/common_2017_0001 compiled 0.01 sec, 49 clauses
+true.
+
+['rules/prolog_2017_0001'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:27:
+	Singleton variables: [Type,Arity]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:36:
+	Singleton variables: [Ignore]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:39:
+	Singleton variables: [Ignore]
+% rules/prolog_2017_0001 compiled 0.00 sec, 13 clauses
+true.
+
+
+ 
+ 
+ 
+ 
+ 
+
+write_time(Ignore).
+will be time someday
+true.
+
+
+listing(internal_symbol).
+internal_symbol(tom, now, 0, tom_cicero_int, cicero).
+internal_symbol(tom, now, 0, tom_tully_int, cicero).
+internal_symbol(tom, now, 0, tom_cataline_int, cataline).
+internal_symbol(tom, now, 0, tom_tom_int, tom).
+internal_symbol(tom, now, 0, nop, nop).
+internal_symbol(quine, now, 0, quine_cicero_int, cicero).
+internal_symbol(quine, now, 0, quine_tully_int, cicero).
+internal_symbol(quine, now, 0, quine_cataline_int, cataline).
+internal_symbol(quine, now, 0, quine_tom_int, tom).
+internal_symbol(quine, now, 0, nop, nop).
+
+true.
+
+listing(internal_relation_symbol).
+internal_relation_symbol(tom, now, 1, 2, tom_denounced_int, denounced).
+internal_relation_symbol(tom, now, 1, 1, tom_human_int, human).
+internal_relation_symbol(tom, now, 1, 1, tom_featherless_biped_int, featherless_biped).
+internal_relation_symbol(tom, now, 1, 1, tom_american_int, american).
+internal_relation_symbol(tom, now, 1, 1, tom_roman_int, roman).
+internal_relation_symbol(quine, now, 1, 2, quine_denounced_int, denounced).
+internal_relation_symbol(quine, now, 1, 1, quine_human_int, human).
+internal_relation_symbol(quine, now, 1, 1, quine_featherless_biped_int, featherless_biped).
+internal_relation_symbol(quine, now, 1, 1, quine_american_int, american).
+internal_relation_symbol(quine, now, 1, 1, quine_roman_int, roman).
+
+true.
+
+listing(external_symbol).
+external_symbol(tom, now, 2, cicero_ext, tom_cicero_int).
+external_symbol(tom, now, 2, cataline_ext, tom_cataline_int).
+external_symbol(tom, now, 2, tully_ext, tom_tully_int).
+external_symbol(tom, now, 2, tom_ext, tom_tom_int).
+external_symbol(tom, now, 2, nop, nop).
+external_symbol(quine, now, 2, cicero_ext, quine_cicero_int).
+external_symbol(quine, now, 2, cataline_ext, quine_cataline_int).
+external_symbol(quine, now, 2, tully_ext, quine_tully_int).
+external_symbol(quine, now, 2, tom_ext, quine_tom_int).
+external_symbol(quine, now, 2, nop, nop).
+
+true.
+
+listing(internal_synonym).
+internal_synonym(quine, now, 0, quine_tully_int, quine_cicero_int).
+internal_synonym(quine, now, 1, quine_bachelor_int, quine_unmarried_male_int).
+internal_synonym(tom, now, 1, tom_bachelor_int, tom_unmarried_male_int).
+
+true.
+
+listing(external_relation_symbol).
+external_relation_symbol(tom, now, 3, 2, denounced_ext, tom_denounced_int).
+external_relation_symbol(tom, now, 3, 1, human_ext, tom_human_int).
+external_relation_symbol(tom, now, 3, 1, featherless_biped_ext, tom_featherless_biped_int).
+external_relation_symbol(tom, now, 3, 1, american_ext, tom_american_int).
+external_relation_symbol(tom, now, 3, 1, roman_ext, tom_roman_int).
+external_relation_symbol(quine, now, 3, 2, denounced_ext, quine_denounced_int).
+external_relation_symbol(quine, now, 3, 1, human_ext, quine_human_int).
+external_relation_symbol(quine, now, 3, 1, featherless_biped_ext, quine_featherless_biped_int).
+external_relation_symbol(quine, now, 3, 1, american_ext, quine_american_int).
+external_relation_symbol(quine, now, 3, 1, roman_ext, quine_roman_int).
+
+true.
+
+listing(believes_internal).
+believes_internal(tom, now, pos_pos, 0, 2, tom_denounced_int, tom_cicero_int, tom_cataline_int, nop).
+believes_internal(tom, now, pos_neg, 0, 2, tom_denounced_int, tom_tully_int, tom_cataline_int, nop).
+believes_internal(tom, now, pos_pos, 0, 1, tom_human_int, tom_tully_int, nop, nop).
+believes_internal(quine, now, pos_pos, 0, 2, quine_denounced_int, quine_cicero_int, quine_cataline_int, nop).
+believes_internal(quine, now, pos_pos, 0, 2, quine_denounced_int, quine_tully_int, quine_cataline_int, nop).
+
+true.
+
+listing(believes_there_is_internal_symbol_of_internal_relation_symbol).
+believes_there_is_internal_symbol_of_internal_relation_symbol(quine, now, pos_pos, tom, now, 1, 2, quine_denounced_int, tom_denounced_int).
+
+true.
+
+listing(believes_there_is_internal_symbol_of_internal_symbol).
+believes_there_is_internal_symbol_of_internal_symbol(quine, now, pos_pos, tom, now, 0, quine_cicero_int, tom_cicero_int).
+believes_there_is_internal_symbol_of_internal_symbol(quine, now, pos_pos, tom, now, 0, quine_cataline_int, tom_cataline_int).
+believes_there_is_internal_symbol_of_internal_symbol(quine, now, pos_pos, tom, now, 0, nop, nop).
+
+true.
+
+listing(believes_there_is_internal_symbol_of_external_relation_symbol).
+believes_there_is_internal_symbol_of_external_relation_symbol(quine, now, pos_pos, tom, now, 1, 2, quine_denounced_int, tom_denounced_ext).
+
+true.
+
+listing(believes_believes_internal).
+believes_believes_internal(quine, now, pos_pos, tom, now, pos_pos, 0, 2, tom_denounced_int, tom_cicero_int, tom_cataline_int, nop).
+believes_believes_internal(quine, now, pos_pos, tom, now, pos_neg, 0, 2, tom_denounced_int, tom_tully_int, tom_cataline_int, nop).
+believes_believes_internal(quine, now, pos_pos, tom, now, pos_pos, 0, 1, tom_human_int, tom_tully_int, nop, nop).
+
+true.
+
+listing(human).
+human(pos_pos, tom, nop, nop).
+human(pos_pos, cicero, nop, nop).
+human(pos_pos, cataline, nop, nop).
+
+true.
+
+listing(human_ext).
+human_ext(pos_pos, tom_ext, nop, nop).
+human_ext(pos_pos, cicero_ext, nop, nop).
+human_ext(pos_pos, cataline_ext, nop, nop).
+
+true.
+
+listing(featherless_biped).
+featherless_biped(pos_pos, tom, nop, nop).
+featherless_biped(pos_pos, cicero, nop, nop).
+featherless_biped(pos_pos, cataline, nop, nop).
+
+true.
+
+listing(featherless_biped_ext).
+featherless_biped_ext(pos_pos, tom_ext, nop, nop).
+featherless_biped_ext(pos_pos, cicero_ext, nop, nop).
+featherless_biped_ext(pos_pos, cataline_ext, nop, nop).
+
+true.
+
+listing(american).
+american(pos_pos, tom, nop, nop).
+
+true.
+
+listing(american_int).
+american_int(pos_pos, nop, nop, nop).
+
+true.
+
+listing(american_ext).
+american_ext(pos_pos, tom_ext, nop, nop).
+
+true.
+
+listing(roman).
+roman(pos_pos, cicero, nop, nop).
+roman(pos_pos, cataline, nop, nop).
+
+true.
+
+listing(roman_int).
+roman_int(pos_pos, nop, nop, nop).
+
+true.
+
+listing(roman_ext).
+roman_ext(pos_pos, cicero_ext, nop, nop).
+roman_ext(pos_pos, cataline_ext, nop, nop).
+
+true.
+
+listing(roman_ext_int).
+roman_ext_int(pos_pos, nop, nop, nop).
+
+true.
+
+listing(arity).
+arity(human, 1).
+arity(featherless_biped, 1).
+
+true.
+
+listing(type).
+type(human, 0).
+type(featherless_biped, 0).
+
+true.
+
+listing(denounced).
+denounced(pos_pos, cicero, cataline, nop).
+denounced(pos_neg, tom, cataline, nop).
+
+true.
+
+listing(denounced_int).
+denounced_int(pos_pos, nop, nop, nop).
+denounced_int(pos_neg, nop, nop, nop).
+
+true.
+
+listing(quine_denounced_int).
+quine_denounced_int(pos_pos, nop, nop, nop).
+quine_denounced_int(pos_neg, nop, nop, nop).
+
+true.
+
+listing(denounced_int_ext).
+denounced_int_ext(pos_pos, nop, nop, nop).
+
+true.
+
+listing(quine_human_int).
+quine_human_int(pos_pos, nop, nop, nop).
+
+true.
+
+listing(quine_featherless_biped_int).
+quine_featherless_biped_int(pos, nop, nop, nop).
+
+true.
+
+listing(remark).
+remark(1001, 'Test Set 1 - Introductory remarks and echo some facts.').
+remark(1002, 'Remarks and quotations for a set of query set `n` all start with `n` thousand.').
+remark(1003, 'Differences between SwiProlog and WildLife. WildLife queries end in a question mark; SwiProlog queries end in a period. Both give the next answer with a semi-colon. WildLife permits one more semi-colon after a query. I am debugging mainly in WildLife. WildLife s trace_input does not show comments - that is the reason for the remark predicate!').
+remark(1004, 'Lines starting with %%LIFE = are passed through to Wildlife with the prefix removed - the whole line is a blank line in SwiProlog. Vica Versa for SwiProlog & %%PROLOG =. These are only processed the the .bs query files - they are translated into prolog & life versions.').
+remark(1005, 'I have used atoms instead of strings due to how the older version of SwiProlog prints strings.').
+remark(1006, 'I have used back quotes instead of single or double quotes within remarks and quotatons to avoid conflicts with their other meanings.').
+remark(1007, 'In debugging I have been confused about what the values of Types should be. I have decided to try the following (1/20/2017) after some thought. The lowest level of internal symbols for objects will be 0. The lowest level of internal symbols of relations of objects will be 1. All external symbols (both objects and relations) will be type 2 higher than the internal object it is a symbol of. Objects (internal or extenal) are even numbers. Relations odd numbers.').
+remark(1008, 'The amount of Prolog or WildLife I use is small and can be understood easily by anyone with some knowledge of symbolic logic. Other than preprocessing the query file, there are special rules files for prolog & life, but almost all rules are in a common file. All facts are in one file. The idential files are linked with the linux `ln` command (they have different suffixes & are in different directories. BTW: For this reason when extracting from the archive one must use `tar -xhzvf darland_philosophy-mm.nn.tar.gz. The `h` preserves the links').
+remark(1009, 'The symbol `:-` corresponds to `if`.').
+remark(1010, 'Facts are expressed predicate(atom1, atom2).').
+remark(1011, 'A rule might be `grandfather(A, C) :- father(A, B), father(B, C)`. Where father(X, Y) means X is the father of Y, and grandfather(X, Y) means X is the grandfather of Y. Variables are capitalized.').
+remark(1012, 'If we had the facts `father(john, richard)` and `father(richard, dennis)` and the rule `grandfather(A, C) :- father(A, B), father(B, C)` then in prolog you could ask `grandfather(john, dennis)` and you would get an affimative answer.You could also ask `grandfather(X, Y)` and you would get all answers for cases wher there were the correct facts. You would need, however to enter a `;` after each one in order to get the next.').
+remark(1013, 'The `, ` thus stands for `and` as well as separating arguments or parameters. `or` is implemented by having more than one rule.').
+remark(1014, 'Thus `parent(X, Y).` could be defined by two rules: `parent(X, Y) :- father(X, Y).` and `parent(X, Y) :- mother(X, Y).`').
+remark(1015, 'All facts or rules for a given predicate must be grouped together.').
+remark(1016, 'I am not asserting that the relations or objects I describe are fundamental. They almost certainly need futher analysis. Mostly I am arguing that there in nothing inherently wrong with `folk psychology`.').
+remark(2001, 'Test Set 2 - about understanding.').
+remark(2002, 'A person (Subject) understands any propositon resulting from symbols he has.').
+remark(3001, 'Test Set 3 - about belief.').
+remark(3002, 'A person can have contradictory beliefs. This can because he does not know of all facts. Thus for `believes` so defined - it fails of substituitivity of identity. It is not referentially transparent - it is referentially opaque. But this `believes` is defined in terms which themselves are referentially transparent. There is no need to flee intension. We must analyze it when needed. There is no logical problem when `believes` is analyzed. I use one kind of belief in my `database` of facts - `belives_internal`. I define 5 more kinds of belief.(`believes_external_internal_object`, `believes_external_object`, `believes_external_internal`, `believes_internal_object`, and `believes_object`. All are reverentially transparent except `believes_object` - it is reverentially opaque.').
+remark(3003, 'Tom believes both `Cicero denounced Cataline.` and `Cicero did not denounced Cataline.` He has two different internal symbols for Cicero (`cicero` and `tully` - but both refer to the same object - there is only one object! And (also) in Prolog or Life two atoms cannot be equal.').
+remark(3004, 'In SwiProlog I use `is` for the arithmetic with types. It requires `Type` be instantiated. So multiple queries are needed. With WildLife I could have placed, e.g. `Type + 1` where I used `Type_p1`, and not needed the predicate `type_p1` at all.').
+remark(3005, '`believes_internal` is a (here primative) psychological relation between internal symbols. Usually these internal symbols relate to external objects (not always). The relation to the objects is usually learned from interaction with other people. However this is mostly coordinated via the external objects and external symbols. The internal symbols may vary from person to person. I thought about calling the internal symbols `neural centers` - but that is stretching my knowledge. They are referentially transparent - even though `cicero = tully`, `cicero_int != tully_int`.').
+remark(3006, '`believes_object` is a (defined) relation between a person and (usually) external objects medeated by symbolic relations. It is referentially opaque. I do not regard that as a problem as the relations it is defined in terms of are referentially transparent.').
+remark(3007, 'Beliefs that go all the way to the objects can be opaque. Because we can never have complete knowledge - or, at least, if we do, then opacity never occurs.').
+remark(3008, 'Beliefs involving symbols (external or internal) can never be opaque as the symbols themselves are different - whether or not they stand for the same object. Only `believes_object` does not involve symbols. (Althogh symbols are used in its definition, they `cancel out`.').
+remark(3009, 'There is a Logical_Form for belief - it is either `pos_pos`, `pos_neg`, `neg_pos` or `neg_neg`. The first neg indicates not believing the second would indicate believing not. For simple beliefs `pos` & `neg` would have been sufficient. They would indicate belief or disbelief. However for those I use `pos_pos` and `pos_neg`. This simplifies things. A logical form of `neg_pos` indicates the person has no belief that something is true. (They might either believe it false or have no belief regarding it. Similarly for `neg_neg`.').
+remark(4001, 'Test Set 4 - about understanding obout understanding. Also understanding about belief').
+remark(4002, 'I have not checked this out thorougly - other things were prerequisites.').
+remark(5001, 'Test Set 5 - about belief understanding and belief about belief.').
+remark(5002, 'I have not checked this out thorougly - other things were prerequisites.').
+remark(6001, 'Test Set 6 - about propositions.').
+remark(7001, 'Test Set 7 - about truth.').
+remark(8001, 'Test Set 8 - about opacity & synonymity.').
+remark(8002, 'Synonymity is a relation of symbols - not of things.').
+remark(9001, 'Test Set 9 - about intensionality & extensionality.').
+
+true.
+
+
+
+
+remark(1001, Remark).
+Remark = 'Test Set 1 - Introductory remarks and echo some facts.'.
+
+
+remark(1002, Remark).
+Remark = 'Remarks and quotations for a set of query set `n` all start with `n` thousand.'.
+
+
+remark(1008, Remark).
+Remark = 'The amount of Prolog or WildLife I use is small and can be understood easily by anyone with some knowledge of symbolic logic. Other than preprocessing the query file, there are special rules files for prolog & life, but almost all rules are in a common file. All facts are in one file. The idential files are linked with the linux `ln` command (they have different suffixes & are in different directories. BTW: For this reason when extracting from the archive one must use `tar -xhzvf darland_philosophy-mm.nn.tar.gz. The `h` preserves the links'.
+
+
+remark(1009, Remark).
+Remark = 'The symbol `:-` corresponds to `if`.'.
+
+
+remark(1010, Remark).
+Remark = 'Facts are expressed predicate(atom1, atom2).'.
+
+
+remark(1011, Remark).
+Remark = 'A rule might be `grandfather(A, C) :- father(A, B), father(B, C)`. Where father(X, Y) means X is the father of Y, and grandfather(X, Y) means X is the grandfather of Y. Variables are capitalized.'.
+
+
+remark(1012, Remark).
+Remark = 'If we had the facts `father(john, richard)` and `father(richard, dennis)` and the rule `grandfather(A, C) :- father(A, B), father(B, C)` then in prolog you could ask `grandfather(john, dennis)` and you would get an affimative answer.You could also ask `grandfather(X, Y)` and you would get all answers for cases wher there were the correct facts. You would need, however to enter a `;` after each one in order to get the next.'.
+
+
+remark(1013, Remark).
+Remark = 'The `, ` thus stands for `and` as well as separating arguments or parameters. `or` is implemented by having more than one rule.'.
+
+
+remark(1014, Remark).
+Remark = 'Thus `parent(X, Y).` could be defined by two rules: `parent(X, Y) :- father(X, Y).` and `parent(X, Y) :- mother(X, Y).`'.
+
+
+remark(1015, Remark).
+Remark = 'All facts or rules for a given predicate must be grouped together.'.
+
+
+remark(1005, Remark).
+Remark = 'I have used atoms instead of strings due to how the older version of SwiProlog prints strings.'.
+
+
+remark(1006, Remark).
+Remark = 'I have used back quotes instead of single or double quotes within remarks and quotatons to avoid conflicts with their other meanings.'.
+
+
+remark(1007, Remark).
+Remark = 'In debugging I have been confused about what the values of Types should be. I have decided to try the following (1/20/2017) after some thought. The lowest level of internal symbols for objects will be 0. The lowest level of internal symbols of relations of objects will be 1. All external symbols (both objects and relations) will be type 2 higher than the internal object it is a symbol of. Objects (internal or extenal) are even numbers. Relations odd numbers.'.
+
+
+remark(1003, Remark).
+Remark = 'Differences between SwiProlog and WildLife. WildLife queries end in a question mark; SwiProlog queries end in a period. Both give the next answer with a semi-colon. WildLife permits one more semi-colon after a query. I am debugging mainly in WildLife. WildLife s trace_input does not show comments - that is the reason for the remark predicate!'.
+
+
+remark(1004, Remark).
+Remark = 'Lines starting with %%LIFE = are passed through to Wildlife with the prefix removed - the whole line is a blank line in SwiProlog. Vica Versa for SwiProlog & %%PROLOG =. These are only processed the the .bs query files - they are translated into prolog & life versions.'.
+
+
+remark(1016, Remark).
+Remark = 'I am not asserting that the relations or objects I describe are fundamental. They almost certainly need futher analysis. Mostly I am arguing that there in nothing inherently wrong with `folk psychology`.'.
+
+
+quote_note(br0001, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book).
+Author = Author_Article, Author_Article = Author_Book, Author_Book = 'Bertrand Russell',
+Article_Title = 'The Philosophy of Logical Atomism',
+Book_Title = 'CPBR 08: The Philosophy of Logical Atomism',
+Pages = '166',
+Quotation = 'A proposition is just a symbol. It is a complex symbol in the sense that it has parts which are also symbols: a symbol may be defined as complex when it has parts that are symbols.',
+Article_Year = '1918',
+Book_Year = '1914-1919',
+Note1 = Notes_Article, Notes_Article = Notes_Book, Notes_Book = none 
+
+quote_note(br0002, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book).
+Author = Author_Article, Author_Article = Author_Book, Author_Book = 'Bertrand Russell',
+Article_Title = 'The Philosophy of Logical Atomism',
+Book_Title = 'CPBR 08: The Philosophy of Logical Atomism',
+Pages = '166',
+Quotation = 'There is a good deal of importance to philosophy in the theory of symbolism, a good deal more than at one time I thought. I think the importance is almost entirely negative, i.e. the importance lies in the fact that unless you are fairly self-conscioius about symbols, unless you are fairly aware of the relation of symbol to what it symbolizes, you will find yourself attributing to the thing properties which only belong to the symbol. That, of course, is especially likely in very abstract studies such as philosophical logic, because the subject-matter that you are supposed to be thinking of is so exceedingly difficult and elusive that any person who has ever tried to think about it knows you do not think about it except perhaps once in six months for half a minute. The rest of the time you think abut the symbols, because they are tangible, but the thing you are supposed to be thinking about is fearfully difficult and one does not often manage to think about it. The really good philosopher is the one who does once in six months think about it for a minute. Bad philosophers never do.',
+Article_Year = '1918',
+Book_Year = '1914-1919',
+Note1 = Notes_Article, Notes_Article = Notes_Book, Notes_Book = none 
+
+quote_note(br0003, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book).
+Author = Author_Article, Author_Article = Author_Book, Author_Book = 'Bertrand Russell',
+Article_Title = 'On Denoting',
+Book_Title = 'CPBR 04: Foundations of Logic',
+Pages = '423',
+Quotation = 'According to the view which I advocate, a denoting phrase is essentially part of a sentence, and does not, like most single words, have any significance on its own account. If I say `Scott was a man`, that is a statement of the form `x was a man`, and it has `Scott` for its subject. But if I say `the author of Waverly was a man`, that is not a statement of the form `x was a man`, and does not have `the author of Waverly` for its subject. ..., we may put, in place of `the author of Waverly was a man` the following: `One and only one entity wrote Waverly, and that one was a man`.',
+Article_Year = '1905',
+Book_Year = '1903-1905',
+Note1 = Notes_Article, Notes_Article = Notes_Book, Notes_Book = none 
+
+quote_note(br0004, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book).
+Author = Author_Article, Author_Article = Author_Book, Author_Book = 'Bertrand Russell',
+Article_Title = 'On Denoting',
+Book_Title = 'CPBR 04: Foundations of Logic',
+Pages = '423',
+Quotation = '... speaking generally, suppose we wish to say that the author of Waverly had the property F, what we wish to say is equivalent to `One and only one entity wrote Waverly, and that one had the property F.`',
+Article_Year = '1905',
+Book_Year = '1903-1905',
+Note1 = Notes_Article, Notes_Article = Notes_Book, Notes_Book = none 
+
+quote_note(br0005, Author, Author_Article, Author_Book, Article_Title, Book_Title, Pages, Quotation, Article_Year, Book_Year, Note1, Notes_Article, Notes_Book).
+Author = Author_Article, Author_Article = Author_Book, Author_Book = 'Bertrand Russell',
+Article_Title = 'On Denoting',
+Book_Title = 'CPBR 04: Foundations of Logic',
+Pages = '423',
+Quotation = '... `Scott was the author of Waverly` (i.e. `Scott was identical with the author of Waverly`) becomes `One and only one entity wrote Waverly, and Scott was identical with that one`; or reverting to the wholly explicit form: `It is not always false of x that x wrote Waverly, that it is always true of y that if y wrote Waverly y is identical with x, and that Scott is identical with x.`',
+Article_Year = '1905',
+Book_Year = '1903-1905',
+Note1 = Notes_Article, Notes_Article = Notes_Book, Notes_Book = none 
+
+internal_relation_symbol(Subject, Time, Type, Arity, Symbol, Relation).
+Subject = tom,
+Time = now,
+Type = 1,
+Arity = 2,
+Symbol = tom_denounced_int,
+Relation = denounced ;
+Subject = tom,
+Time = now,
+Type = Arity, Arity = 1,
+Symbol = tom_human_int,
+Relation = human ;
+Subject = tom,
+Time = now,
+Type = Arity, Arity = 1,
+Symbol = tom_featherless_biped_int,
+Relation = featherless_biped ;
+Subject = tom,
+Time = now,
+Type = Arity, Arity = 1,
+Symbol = tom_american_int,
+Relation = american ;
+Subject = tom,
+Time = now,
+Type = Arity, Arity = 1,
+Symbol = tom_roman_int,
+Relation = roman ;
+Subject = quine,
+Time = now,
+Type = 1,
+Arity = 2,
+Symbol = quine_denounced_int,
+Relation = denounced ;
+Subject = quine,
+Time = now,
+Type = Arity, Arity = 1,
+Symbol = quine_human_int,
+Relation = human ;
+Subject = quine,
+Time = now,
+Type = Arity, Arity = 1,
+Symbol = quine_featherless_biped_int,
+Relation = featherless_biped ;
+Subject = quine,
+Time = now,
+Type = Arity, Arity = 1,
+Symbol = quine_american_int,
+Relation = american ;
+Subject = quine,
+Time = now,
+Type = Arity, Arity = 1,
+Symbol = quine_roman_int,
+Relation = roman.
+
+ 
+
+internal_symbol(Subject, Time, Type, Symbol, Object).
+Subject = tom,
+Time = now,
+Type = 0,
+Symbol = tom_cicero_int,
+Object = cicero ;
+Subject = tom,
+Time = now,
+Type = 0,
+Symbol = tom_tully_int,
+Object = cicero ;
+Subject = tom,
+Time = now,
+Type = 0,
+Symbol = tom_cataline_int,
+Object = cataline ;
+Subject = Object, Object = tom,
+Time = now,
+Type = 0,
+Symbol = tom_tom_int ;
+Subject = tom,
+Time = now,
+Type = 0,
+Symbol = Object, Object = nop ;
+Subject = quine,
+Time = now,
+Type = 0,
+Symbol = quine_cicero_int,
+Object = cicero ;
+Subject = quine,
+Time = now,
+Type = 0,
+Symbol = quine_tully_int,
+Object = cicero ;
+Subject = quine,
+Time = now,
+Type = 0,
+Symbol = quine_cataline_int,
+Object = cataline ;
+Subject = quine,
+Time = now,
+Type = 0,
+Symbol = quine_tom_int,
+Object = tom ;
+Subject = quine,
+Time = now,
+Type = 0,
+Symbol = Object, Object = nop.
+
+ 
+
+external_relation_symbol(Subject, Time, Type, Arity, External_Relation_Symbol, Internal_Relation_Symbol).
+Subject = tom,
+Time = now,
+Type = 3,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Internal_Relation_Symbol = tom_denounced_int ;
+Subject = tom,
+Time = now,
+Type = 3,
+Arity = 1,
+External_Relation_Symbol = human_ext,
+Internal_Relation_Symbol = tom_human_int ;
+Subject = tom,
+Time = now,
+Type = 3,
+Arity = 1,
+External_Relation_Symbol = featherless_biped_ext,
+Internal_Relation_Symbol = tom_featherless_biped_int ;
+Subject = tom,
+Time = now,
+Type = 3,
+Arity = 1,
+External_Relation_Symbol = american_ext,
+Internal_Relation_Symbol = tom_american_int ;
+Subject = tom,
+Time = now,
+Type = 3,
+Arity = 1,
+External_Relation_Symbol = roman_ext,
+Internal_Relation_Symbol = tom_roman_int ;
+Subject = quine,
+Time = now,
+Type = 3,
+Arity = 2,
+External_Relation_Symbol = denounced_ext,
+Internal_Relation_Symbol = quine_denounced_int ;
+Subject = quine,
+Time = now,
+Type = 3,
+Arity = 1,
+External_Relation_Symbol = human_ext,
+Internal_Relation_Symbol = quine_human_int ;
+Subject = quine,
+Time = now,
+Type = 3,
+Arity = 1,
+External_Relation_Symbol = featherless_biped_ext,
+Internal_Relation_Symbol = quine_featherless_biped_int  
+
+
+external_symbol(Subject, Time, Type, External_Symbol, Internal_Symbol).
+Subject = tom,
+Time = now,
+Type = 2,
+External_Symbol = cicero_ext,
+Internal_Symbol = tom_cicero_int ;
+Subject = tom,
+Time = now,
+Type = 2,
+External_Symbol = cataline_ext,
+Internal_Symbol = tom_cataline_int ;
+Subject = tom,
+Time = now,
+Type = 2,
+External_Symbol = tully_ext,
+Internal_Symbol = tom_tully_int ;
+Subject = tom,
+Time = now,
+Type = 2,
+External_Symbol = tom_ext,
+Internal_Symbol = tom_tom_int ;
+Subject = tom,
+Time = now,
+Type = 2,
+External_Symbol = Internal_Symbol, Internal_Symbol = nop ;
+Subject = quine,
+Time = now,
+Type = 2,
+External_Symbol = cicero_ext,
+Internal_Symbol = quine_cicero_int ;
+Subject = quine,
+Time = now,
+Type = 2,
+External_Symbol = cataline_ext,
+Internal_Symbol = quine_cataline_int ;
+Subject = quine,
+Time = now,
+Type = 2,
+External_Symbol = tully_ext,
+Internal_Symbol = quine_tully_int ;
+Subject = quine,
+Time = now,
+Type = 2,
+External_Symbol = tom_ext,
+Internal_Symbol = quine_tom_int ;
+Subject = quine,
+Time = now,
+Type = 2,
+External_Symbol = Internal_Symbol, Internal_Symbol = nop.
+
+ 
+
+believes_internal(Subject, Time, Logical_Form, Type, Arity, Internal_relation_symbol, A_internal_symbol, B_internal_symbol, C_internal_symbol).
+Subject = tom,
+Time = now,
+Logical_Form = pos_pos,
+Type = 0,
+Arity = 2,
+Internal_relation_symbol = tom_denounced_int,
+A_internal_symbol = tom_cicero_int,
+B_internal_symbol = tom_cataline_int,
+C_internal_symbol = nop ;
+Subject = tom,
+Time = now,
+Logical_Form = pos_neg,
+Type = 0,
+Arity = 2,
+Internal_relation_symbol = tom_denounced_int,
+A_internal_symbol = tom_tully_int,
+B_internal_symbol = tom_cataline_int,
+C_internal_symbol = nop  
+
+
+write_stats(IGNORE).
+will be stats someday
+true.
+
+
+
+
+ noprotocol.

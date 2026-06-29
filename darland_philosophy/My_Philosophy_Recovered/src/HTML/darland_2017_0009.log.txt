@@ -1,0 +1,123 @@
+true.
+
+['facts/common_facts_2017_0001'].
+% facts/common_facts_2017_0001 compiled 0.00 sec, 100 clauses
+true.
+
+['facts/common_facts_2017_0002'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/facts/common_facts_2017_0002.pl:275:
+	Clauses of book/5 are not together in the source-file
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/facts/common_facts_2017_0002.pl:408:
+	Clauses of philosophical_quotation/7 are not together in the source-file
+% facts/common_facts_2017_0002 compiled 0.00 sec, 180 clauses
+true.
+
+['rules/common_2017_0001'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:43:
+	Singleton variables: [Subject,Time,Type,Arity,Relation]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:45:
+	Singleton variables: [Subject,Time,Type,A_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:57:
+	Singleton variables: [Type_p1,Relation,A_Object,B_Object,C_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:61:
+	Singleton variables: [Internal_Relation_symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:65:
+	Singleton variables: [Type_p1]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:79:
+	Singleton variables: [External_Relation_Symbol_2]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:91:
+	Singleton variables: [Internal_Relation_Symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:95:
+	Singleton variables: [Relation,A_Object,B_Object,C_Object]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:99:
+	Singleton variables: [Internal_Relation_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:103:
+	Singleton variables: [Internal_Relation_symbol,A_Internal_Symbol,B_Internal_Symbol,C_Internal_Symbol]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:136:
+	Singleton variables: [Logical_Form]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:166:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:168:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:176:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:178:
+	Singleton variables: [Subject,Time]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:223:
+	Singleton variables: [Relation2]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:223:
+	Singleton variable in \+: Logical_Form_2
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:247:
+	Singleton variables: [Number1A,Number1B,External_Term_2,NumberA,NumberB]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:253:
+	Singleton variables: [Quote_1A,Quote_2A,Quote_3A,Quote_4A,Quote_1B,Quote_2B,Quote_3B,Quote_4B]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:259:
+	Singleton variables: [Quote_1A,Quote_2A,Quote_3A,Quote_4A,Quote_1B,Quote_2B,Quote_3B,Quote_4B]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:289:
+	Singleton variables: [Author_Book_Abbreviation]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/common_2017_0001.pl:291:
+	Singleton variables: [Author_Article_Abbreviation]
+% rules/common_2017_0001 compiled 0.00 sec, 49 clauses
+true.
+
+['rules/prolog_2017_0001'].
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:27:
+	Singleton variables: [Type,Arity]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:36:
+	Singleton variables: [Ignore]
+Warning: /home/dennis/darland_philosophy-01.23/darland_philosophy-01.23/DarlandPhilosophySwi/rules/prolog_2017_0001.pl:39:
+	Singleton variables: [Ignore]
+% rules/prolog_2017_0001 compiled 0.00 sec, 13 clauses
+true.
+
+
+ 
+ 
+ 
+ 
+ 
+
+write_time(Ignore).
+will be time someday
+true.
+
+
+remark(9001, Remark).
+Remark = 'Test Set 9 - about intensionality & extensionality.'.
+
+
+not_formally_equivalent(0, 1, human, featherless_biped).
+false.
+
+
+formally_equivalent(0, 1, human, featherless_biped).
+true.
+
+
+not_formally_equivalent( 0, 1, human, human).
+false.
+
+
+formally_equivalent( 0, 1, human, human).
+true.
+
+
+internal_synonym(Subject, Time, Type, Term_1, Term_2).
+Subject = quine,
+Time = now,
+Type = 0,
+Term_1 = quine_tully_int,
+Term_2 = quine_cicero_int ;
+Subject = quine,
+Time = now,
+Type = 1,
+Term_1 = quine_bachelor_int,
+Term_2 = quine_unmarried_male_int  
+
+
+write_stats(Ignore).
+will be stats someday
+true.
+
+
+ noprotocol.

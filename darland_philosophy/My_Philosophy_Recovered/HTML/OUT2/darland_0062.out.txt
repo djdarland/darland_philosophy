@@ -1,0 +1,229 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+> 
+*** Yes
+> 
+> %% I figured TRUE and FALSE by starting simple & copying expressions into
+> %% other expressions.
+> 
+> write_time(Ignore)?
+Time Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> % TRUE
+> satisfiable(P)?
+
+*** Yes
+P = [top,1].
+--1> ;
+
+*** Yes
+P = [nand,[top,0],[top,0]].
+--1> ;
+
+*** Yes
+P = [nand,[top,1],[top,0]].
+--1> 
+
+*** No
+> % FALSE
+> satisfiable([nand, P,P])?
+
+*** Yes
+P = [top,0].
+--1> ;
+
+*** Yes
+P = [top,0].
+--1> ;
+
+*** Yes
+P = [top,0].
+--1> 
+
+*** No
+> % TRUE	
+> satisfiable([nand, P,Q])?
+
+*** Yes
+P = [top,0], Q = [top,0].
+--1> ;
+
+*** Yes
+P = [top,1], Q = [top,0].
+--1> ;
+
+*** Yes
+P = [top,0], Q = [top,1].
+--1> 
+
+*** No
+> % TRUE	
+> satisfiable([nand, P, [nand, P, P]])?
+
+*** Yes
+P = [top,0].
+--1> ;
+
+*** Yes
+P = [top,0].
+--1> ;
+
+*** Yes
+P = [nand,@,@].
+--1> ;
+
+*** Yes
+P = [nand,@,@].
+--1> 
+
+*** No
+> % TRUE
+> satisfiable([nand, P, [nand, Q, P]])?
+
+*** Yes
+P = [top,0], Q = @.
+--1> ;
+
+*** Yes
+P = [top,0], Q = @.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> 
+> % TRUE
+> satisfiable([nand, P, [nand, Q, R]])?
+
+*** Yes
+P = [top,0], Q = @, R = @.
+--1> ;
+
+*** Yes
+P = [top,0], Q = @, R = @.
+--1> ;
+
+*** No
+> ;
+> ;
+> ;
+> ;
+> 	
+> %% TRUE
+> satisfiable([top, 1])?
+
+*** Yes
+--1> 
+
+*** No
+> %% FALSE
+> satisfiable([top, 0])?
+
+*** No
+> 
+> %% TRUE
+> satisfiable([nand, [top, 1], [top, 0]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% TRUE
+> satisfiable([nand, [top, 0], [top, 1]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% TRUE
+> satisfiable([nand, [top, 0], [top, 0]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% FALSE
+> satisfiable([nand, [top, 1], [top, 1]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%
+> 
+> %% TRUE
+> satisfiable([nand, [nand, [top, 0], [top, 1]], [top, 0]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% FALSE
+> satisfiable([nand, [nand, [top, 0], [top, 0]], [top, 1]])?
+
+*** No
+> 
+> %% TRUE
+> satisfiable([nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% TRUE
+> satisfiable([nand, [nand, [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]], [nand, [nand, [nand, [nand, [top, 0], [top, 0]], [top, 1]], [nand, [nand, [top, 0], [top, 1]], [top, 0]]], [top, 0]]], [nand, [nand, [top, 0], [top, 1]], [nand, [nand, [top, 0], [top, 0]], [top, 1]]]], [top, 0]])?
+
+*** Yes
+--1> 
+
+*** No
+> satisfiable([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], A19])?
+
+*** Yes
+A1 = @, 
+A10 = @, 
+A11 = @, 
+A12 = @, 
+A13 = @, 
+A14 = @, 
+A15 = @, 
+A16 = @, 
+A17 = @, 
+A18 = @, 
+A19 = [top,0], 
+A2 = @, 
+A3 = @, 
+A4 = @, 
+A5 = @, 
+A6 = @, 
+A7 = @, 
+A8 = @, 
+A9 = @.
+
+--1> 
+
+*** No
+> satisfiable([nand, [nand, [nand, [nand, [nand, [nand, A1, A2], A3], [nand, [nand, A4, A5], A6]], [nand, [nand, [nand, [nand, A7, A8], A9], [nand, [nand, A10, A11], A12]], A13]], [nand, [nand, A14, A15], [nand, [nand, A16, A17], A18]]], [top, 1]])?
+
+*** No
+> 
+> 
+> write_stats(Ignore)?
+Stats Skipped for Test Suite
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+

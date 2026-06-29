@@ -1,0 +1,110 @@
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+
+%% This is to experiment with Satisfiability.
+%% It is an NP-complete problem
+%% See pages 320-331 in
+%% _Introduction to Automata Theory, Languages and Computation_
+%% By John E. Hopcroft
+%% and
+%% Jefferey D. Ullman
+
+%% First convert a boolean expression to nand using Polish notation.
+%% It looks to me like a binary search. So should be polynomial time!!!
+
+
+boolean([top, 0]) :-
+	visits <<- visits + 1.
+
+boolean([top, 1]) :-
+	visits <<- visits + 1.
+
+boolean([top, P]) :-
+	var(P),
+	visits <<- visits + 1.
+
+persistent(visits)?
+
+persistent(max_depth)?
+
+satisfiable(List) :-
+	visits <<- 0,
+	max_depth <<- 0,
+	cond(sat(List, 1, 0, 0),
+	     (write("Rules 63 Succeeded visits = ", visits),
+	      write(" max_depth = ", max_depth),nl),
+	     (write("Rules 63 Failed visits = ", visits),
+	      write(" max_depth = ", max_depth),nl,fail)).
+
+note_branch_left(Left, Right) :-
+	write("Branch Left = ", Left + 1, " Right = ", Right), nl.
+
+note_branch_right(Left, Right) :-
+	write("Branch Left = ", Left, " Right = ", Right + 1), nl.
+
+sat([top, P], Depth, Left, Right) :-
+	visits <<- visits + 1,
+	cond(Depth > max_depth,
+	     max_depth <<- Depth),
+	P = 1.
+
+%% A
+sat([nand, [top, 0], Prop_2], Depth, Left, Right) :-
+	cond(Depth > max_depth,
+	     max_depth <<- Depth, succeed),
+	visits <<- visits + 1.
+
+%% B
+sat([nand, Prop_1, [top, 0]], Depth, Left, Right) :-
+	cond(Depth > max_depth,
+	     max_depth <<- Depth, succeed),
+	visits <<- visits + 1.
+
+%% C
+sat([nand, [nand, Prop_1, Prop_2], Prop_3], Depth, Left, Right) :-
+	cond(Depth > max_depth,
+	     max_depth <<- Depth, succeed),
+	visits <<- visits + 1,
+	note_branch_left(Left, Right),
+	\+ sat([nand, Prop_1, Prop_2], Depth + 1, Left + 1, Right).
+
+%% D
+sat([nand, [nand, Prop_1, Prop_2], Prop_3], Depth, Left, Right) :-
+	cond(Depth > max_depth,
+	     max_depth <<- Depth, succeed),
+	visits <<- visits + 1,
+	note_branch_right(Left, Right),
+	\+ sat(Prop_3, Depth + 1, Left, Right + 1).
+
+%% E
+sat([nand, Prop_1, [nand, Prop2, Prop_3]], Depth, Left, Right) :-
+	cond(Depth > max_depth,
+	     max_depth <<- Depth, succeed),
+	visits <<- visits + 1,
+	note_branch_left(Left, Right),
+	\+ sat(Prop_1, Depth + 1, Left + 1, Right).
+
+%% F	
+sat([nand, Prop_1, [nand, Prop2, Prop_3]], Depth, Left, Right) :-
+	cond(Depth > max_depth,
+	     max_depth <<- Depth, succeed),
+	visits <<- visits + 1,
+	note_branch_right(Left, Right),
+	\+ sat([nand, Prop_2, Prop_3], Depth + 1, Left , Right + 1).

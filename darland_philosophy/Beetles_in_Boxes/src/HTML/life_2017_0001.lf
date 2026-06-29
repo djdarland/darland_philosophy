@@ -1,0 +1,38 @@
+%%  Copyright (C) 2017 Dennis J. Darland
+
+%%  This file is part of darland's philosophy.
+
+%%  darland's philosophy is free software: you can redistribute it and/or modify
+%%  it under the terms of the GNU General Public License as published by
+%%  the Free Software Foundation, either version 3 of the License, or
+%%  (at your option) any later version.
+
+%%  darland's philosophy is distributed in the hope that it will be useful,
+%%  but WITHOUT ANY WARRANTY; without even the implied warranty of
+%%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%%  GNU General Public License for more details.
+
+%%  You should have received a copy of the GNU General Public License
+%%  along with darland's philosophy.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+check_arity(1,A,nop,nop) :- A :\== nop.
+
+check_arity(2,A,B,nop) :- A :\== nop, B :\== nop.
+
+check_arity(3,A,B,C) :- A :\== nop, B :\== nop, C :\== nop.
+
+apply_predicate(Type,Arity,Relation,A_object,B_object,C_object) :- write("APPRED",Relation,A_object,B_object,C_object), A_object :\== nop, P = Relation, P.1 = A_object, P.2 = B_object, P.3 = C_object, P.
+
+not_formally_equivalent(Type,Arity,Relation1,Relation2) :- apply_predicate(Type,Arity,Relation1,A_object,B_object,C_object),  \+ apply_predicate(Type,Arity,Relation1,A_object,B_object,C_object).
+
+formally_equivalent(Type,Arity,Relation1,Relation2) :- \+ not_formally_equivalent(Type,Arity,Relation1,Relation2).
+
+intensionally_not_equal(Relation1,Relation2) :- Relation1 :\== Relation2.
+
+type_p1(Type,Type_p1) :- Type_p1 = Type + 1.
+type_p2(Type,Type_p2) :- Type_p2 = Type + 2.
+type_p3(Type,Type_p2) :- Type_p2 = Type + 3.
+
+write_type(Loc,Type) :- write(Loc,"Type = ", Type, "|").

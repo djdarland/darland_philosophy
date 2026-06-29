@@ -1,0 +1,55 @@
+%% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software:
+%% you can redistribute it and/or modify
+%% it under the terms of the
+%% GNU General Public License as published by
+%% the Free Software Foundation,
+%% either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed
+%% in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY;
+%% without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%% See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the
+%% GNU General Public License
+%% along with darland's philosophy.
+%% If not, see <http://www.gnu.org/licenses/>.
+
+
+%% Common Prolog & Life predicates
+%% to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started
+%%% about 10 years ago.
+%% 
+%% December Started adapting to Alfred North Whitehead's
+%% Metaphysics
+%%
+
+sum([X1,Y1,Z1,T1], [X2,Y2,Z2,T2]) ->
+		 [X1 + X2,
+		  Y1 + Y2,
+		  Z1 + Z2,
+		  T1 + T2].
+% resultant(
+
+
+dot([X3,Y3,Z3], [X4,Y4,Z4] ) ->
+	(X3 * X4 + Y3 * Y4 + Z3 * Z4).
+
+cross([X5,Y5,Z5], [X6,Y6,Z6] ) ->
+	[Y5 * Z6 - Z5 * Y6,
+	 -X5 * Z6 + Z5 * X6,
+	 X5 * Y6 - Y5 * X6].
+
+
+	       
+
