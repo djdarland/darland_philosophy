@@ -41,7 +41,7 @@ foreach I ($*)
    (echo 'load("dummy.lf")?' | tr -d ' ' ;echo "" ; \
 	cat IN2/$I:r.lf  ; echo "halt?") | \
 	($WLIFE |  \
-egrep -v '(Loading|already loaded|Version|customizing|Copyright|Garbage|Exiting|X interface)' > OUT2/$I:r.out \
+egrep -v '(Loading|already loaded|Version|customizing|Copyright|Garbage|Exiting|Ported|Dennis|X interface)' > OUT2/$I:r.out \
         ) |& \
         sed "s/.......s cpu (.*)//" > ERR2/$I:r.err
 
