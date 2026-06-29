@@ -1,0 +1,22 @@
+procedure main()
+   while line := read() do {
+      lineout := convert(line)
+      write(lineout)
+      }
+end
+
+procedure convert(linein)
+   if linein ? (part1 := tab(find("qqqq(")) &
+                   tab(match("qqqq(")) &
+                   part2 := tab(find(",")) &
+                   tab(match(",")) &
+                   part3 := tab(0))
+
+   then
+      lineout := part1 || part2 || "(" || part3
+   else
+      lineout := linein
+   return lineout
+end
+
+

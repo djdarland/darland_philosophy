@@ -1,0 +1,64 @@
+%% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
+load("RULES2/life_0001.lf")?
+load("FACTS2/facts_0071.lf")?
+load("FACTS2/facts_0081.lf")?
+load("RULES2/rules_0071.lf")?
+load("RULES2/rules_0072.lf")?
+load("RULES2/rules_0081.lf")?
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% This file only checks rules (relating to propositions). 
+
+trace_input(true)?
+
+AAA = [1,2,3]?
+BBB = [4,5,6]?
+AAA = list?
+AAA = int_list?
+
+CCC = int_list?
+
+
+A = [1, 2, 3, 4]?
+B = [5, 6, 7, 8]?
+A2 = [1, 2, 3]?
+B2 = [5, 6, 7]?
+C = sum(A, B)?
+D = dot(A2, B2)?
+E = cross(A2, B2)?
+F = cross(B2, A2)?
+G = [A2, B2]?
+F = real_list?
+% G = vector_list?
+
+% [[1.0, 2.0], [3.0, 4.0]] = vector_list?
+
+% E1 = particle(mass => MM:real,
+%	      charge => QQ:real,
+%	      location => LOC:vector,
+%	      velocity => VEL:vector,
+%	      acceleration => ACC: vector,
+%	      e_field => EE: 
+% )?
+
+E1 = particle(mass => 2.5, charge => 4.8)?
+
+
+
+write_stats(Ignore)?
+
+halt?
+

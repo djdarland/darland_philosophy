@@ -1,0 +1,1197 @@
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+
+*** Yes
+Sun 28 Feb 2021 03:36:42 PM CST
+
+*** Yes
+> > > > > > > > > > > > > > > > > > 
+*** Yes
+> 
+> %% This file uses queries to demonstrate my points about true belief
+> 
+> %% This is an example with a mini universe for queries of high complexity.
+> 
+> %% I use an example from Quine's Word & Object. (pp.144-151).
+> 
+> %% The Story of Cicero and Catiline is given
+> %% in _Caesar and Christ_, by Will Durant, pp. 140-147.
+> 
+> %% "Tully" is not in the index of that work (or "De Senectute").
+> 
+> %% Wikipedia gives the full name as "Marcus Tullius Cicero"
+> %% and notes "The name is infrequently anglicized as Tully."
+> %% It also does not mention "De Senectute".
+> 
+> %% "De Senectute" is in Wikipedia under "Writings of Cicero"
+> 
+> %% Tom believes that Cicero denounced Catiline.
+> %% Tom does not know Cicero = Tully.
+> 
+> %% In my philosophy, for Tom at that time,
+> %% "Cicero" R Toms_idea_of_Cicero
+> %% and
+> %% Toms_idea of_Cicero S Cicero
+> %%
+> %%
+> %% but not 
+> %% "Cicero" R Toms_idea_of_Tully
+> %% 
+> %%
+> %% In my program the relation R is represented by the predicate
+> %% rrrr(Subject, Time, Type, Word, Idea)
+> %% In my program the relation S is represented by the predicate
+> %% ssss(Subject, Time, Type, Idea, Object)
+> 
+> %% R | S is represented by rrss
+> 
+> 
+> write_time(Ignore)?
+0
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> %% I indicate for each query whether the immediate response should be
+> %% TRUE = Yes or FALSE = No
+> 
+> %% There may be subsequient No responses - as I may have asked for additional answers with semicolons.
+> 
+> %% There are 7 relations of both understanding and belief.
+> %% Those of understanding are defined in terms of rrrr and ssss
+> %% Those of belief require also a belief_in_ideas relation.
+> 
+> %% The 7 cases are:
+> 
+> %% words
+> %% ideas
+> %% objects
+> 
+> %% words_ideas
+> %% words_objects
+> %% ideas_objects
+> 
+> %% words_ideas_objects
+> 
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %%% TRUE BELIEF
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Checks on True Belief follow.
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% WORDS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be TRUE
+> 
+> believes_true_words( tom, now,
+|         [[denounced_word],
+|          [cicero_word],
+|          [catiline_word]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE
+> 
+> believes_true_words( tom, now,
+|         [[roman_word],
+|          [catiline_word]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE - I have tom believing it but it is FALSE
+> 
+> believes_true_words( tom, now,
+|         [[denounced_word],
+|          [quine_word],
+|          [catiline_word]])?
+
+*** No
+> 
+> %% Next should be FALSE
+> 
+> believes_true_words( tom, now,
+|         [[denounced_word],
+|          [tully_word],
+|          [catiline_word]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_words( tom, now,
+|         [[tully_word],
+|          [tully_word],
+|          [catiline_word]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_words( tom, now,
+|         [[denounced_word],
+|          [tully_word],
+|          [denounced_word]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> believes_true_words( tom, now,
+|         [[denounced_word],
+|          [cicero_word]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% IDEAS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be TRUE
+> 
+> %% Note here are just lists of ideas - not lists of lists
+> 
+> %% Next should be TRUE
+> 
+> believes_true_in_ideas( tom, now,
+|         [tom_denounced_idea,
+|          tom_cicero_idea,
+|          tom_catiline_idea])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE
+> 
+> believes_true_in_ideas( tom, now,
+|         [tom_roman_idea,
+|          tom_catiline_idea])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE - I have tom believing it but it is false
+> 
+> believes_true_in_ideas( tom, now,
+|         [tom_denounced_idea,
+|          tom_quine_idea,
+|          tom_catiline_idea])?
+
+*** No
+> 
+> %% Next should be FALSE -- not a belief
+> 
+> believes_true_in_ideas( tom, now,
+|         [tom_denounced_idea,
+|          tom_tully_idea,
+|          tom_catiline_idea])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_in_ideas( tom, now,
+|         [tom_tully_idea,
+|          tom_tully_idea,
+|          tom_catiline_idea])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_in_ideas( tom, now,
+|         [tom_denounced_idea,
+|          tom_tully_idea,
+|          tom_denounced_idea])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> believes_true_in_ideas( tom, now,
+|         [tom_denounced_idea,
+|          tom_cicero_idea])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% OBJECTS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be TRUE
+> 
+> believes_true_objects( tom, now,
+|         [[denounced],
+|          [cicero],
+|          [catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE
+> 
+> believes_true_objects( tom, now,
+|         [[roman],
+|          [catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE - I have tom believing it but it is FALSE
+> 
+> believes_true_objects( tom, now,
+|         [[denounced],
+|          [quine],
+|          [catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- there is no (separate) object tully
+> 
+> believes_true_objects( tom, now,
+|         [[denounced],
+|          [tully],
+|          [catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_objects( tom, now,
+|         [[tully],
+|          [tully],
+|          [catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_objects( tom, now,
+|         [[denounced],
+|          [tully],
+|          [denounced]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> believes_true_objects( tom, now,
+|         [[denounced],
+|          [cicero]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% WORDS_IDEAS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be TRUE
+> 
+> believes_true_words_ideas( tom, now,
+|         [[roman_word, tom_roman_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE - I have tom believing it but it as false
+> 
+> believes_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [quine_word, tom_quine_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- not a belief
+> 
+> believes_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [tully_word, tom_tully_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_words_ideas( tom, now,
+|         [[tully_word, tom_tully_idea],
+|          [tully_word, tom_tully_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [tully_word, tom_tully_word],
+|          [denounced_word, tom_denounced_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> believes_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [cicero_word, tom_cicero_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong rrrr relation for tully_word
+> 
+> believes_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [tully_word, tom_cicero_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong rrrr relation for cicero_word
+> 
+> believes_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [cicero_word, tom_tully_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% WORDS_OBJECTS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be TRUE
+> 
+> believes_true_words_objects( tom, now,
+|         [[denounced_word, denounced],
+|          [cicero_word, cicero],
+|          [catiline_word, catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE
+> 
+> believes_true_words_objects( tom, now,
+|         [[roman_word, roman],
+|          [catiline_word, catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE - tom believes - but it is FALSE
+> 
+> believes_true_words_objects( tom, now,
+|         [[denounced_word, denounced],
+|          [quine_word, quine],
+|          [catiline_word, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- not a belief
+> 
+> believes_true_words_objects( tom, now,
+|         [[denounced_word, denounced],
+|          [tully_word, cicero],
+|          [catiline_word, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_words_objects( tom, now,
+|         [[tully_word, tully],
+|          [tully_word, tully],
+|          [catiline_word, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_words_objects( tom, now,
+|         [[denounced_word, denounced],
+|          [tully_word, tully],
+|          [denounced_word, denounced]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> believes_true_words_objects( tom, now,
+|         [[denounced_word, denounced],
+|          [cicero_word, cicero]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% IDEAS_OBJECTS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be TRUE
+> 
+> believes_true_ideas_objects( tom, now,
+|         [[tom_denounced_idea, denounced],
+|          [tom_cicero_idea, cicero],
+|          [tom_catiline_idea, catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE
+> 
+> believes_true_ideas_objects( tom, now,
+|         [[tom_roman_idea, roman],
+|          [tom_catiline_idea, catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE
+> 
+> believes_true_ideas_objects( tom, now,
+|         [[tom_denounced_idea, denounced],
+|          [tom_quine_idea, quine],
+|          [tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- not a belief
+> 
+> believes_true_ideas_objects( tom, now,
+|         [[tom_denounced_idea, denounced],
+|          [tom_tully_idea, cicero],
+|          [tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_ideas_objects( tom, now,
+|         [[tom_tully_idea, tully],
+|          [tom_tully_idea, tully],
+|          [tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_ideas_objects( tom, now,
+|         [[tom_denounced_idea, denounced],
+|          [tom_tully_idea, tully],
+|          [tom_denounced_idea, denounced]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> believes_true_ideas_objects( tom, now,
+|         [[tom_denounced_idea, denounced],
+|          [tom_cicero_idea, cicero]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% WORDS_IDEAS_OBJECTS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be TRUE
+> 
+> believes_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [cicero_word, tom_cicero_idea, cicero],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE
+> 
+> believes_true_words_ideas_objects( tom, now,
+|         [[roman_word, tom_roman_idea, roman],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE - tom believes but it is FALSE
+> 
+> believes_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [quine_word, tom_quine_idea, quine],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- not believed
+> 
+> believes_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [tully_word, tom_tully_idea, cicero],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_words_ideas_objects( tom, now,
+|         [[tully_word, tom_tully_idea, cicero],
+|          [tully_word, tom_tully_idea, cicero],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> believes_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [tully_word, tom_tully_word, cicero],
+|          [denounced_word, tom_denounced_idea, denounced]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> believes_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [cicero_word, tom_cicero_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong rrrr relation for tully_word
+> 
+> believes_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [tully_word, tom_cicero_idea, cicero],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong rrrr relation for cicero_word
+> 
+> believes_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [cicero_word, tom_tully_idea, cicero],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% BELIEVES_TRUE_NOT
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> %%% TRUE DISBELIEF
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Checks on Disbelief follow.
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% WORDS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be FALSE
+> 
+> disbelieves_true_words( tom, now,
+|         [[denounced_word],
+|          [cicero_word],
+|          [catiline_word]])?
+
+*** No
+> 
+> %% Next should be FALSE
+> 
+> disbelieves_true_words( tom, now,
+|         [[roman_word],
+|          [catiline_word]])?
+
+*** No
+> 
+> %% Next should be TRUE - tom believes it is NOT TRUE and it is NOT TRUE
+> 
+> disbelieves_true_words( tom, now,
+|         [[denounced_word],
+|          [russell_word],
+|          [catiline_word]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE - tom believes it is NOT TRUE and it is NOT TRUE
+> 
+> disbelieves_true_words( tom, now,
+|         [[roman_word],
+|          [russell_word]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE
+> 
+> disbelieves_true_words( tom, now,
+|         [[denounced_word],
+|          [tully_word],
+|          [catiline_word]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_words( tom, now,
+|         [[tully_word],
+|          [tully_word],
+|          [catiline_word]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_words( tom, now,
+|         [[denounced_word],
+|          [tully_word],
+|          [denounced_word]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> disbelieves_true_words( tom, now,
+|         [[denounced_word],
+|          [cicero_word]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% IDEAS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Note here are just lists of ideas - not lists of lists
+> 
+> %% Next should be FALSE - tom does not believe false
+> 
+> disbelieves_true_in_ideas( tom, now,
+|         [tom_denounced_idea,
+|          tom_cicero_idea,
+|          tom_catiline_idea])?
+
+*** No
+> 
+> %% Next should be FALSE -- tom believes FALSE - but it is not FALSE
+> 
+> disbelieves_true_in_ideas( tom, now,
+|         [tom_denounced_idea,
+|          tom_tully_idea,
+|          tom_catiline_idea])?
+
+*** No
+> 
+> %% Next should be FALSE -- tom does believes true - and it is FALSE
+> 
+> disbelieves_true_in_ideas( tom, now,
+|         [tom_denounced_idea,
+|          tom_quine_idea,
+|          tom_catiline_idea])?
+
+*** No
+> 
+> %% Next should be TRUE -- tom does believes false - and it is FALSE
+> 
+> disbelieves_true_in_ideas( tom, now,
+|         [tom_denounced_idea,
+|          tom_russell_idea,
+|          tom_catiline_idea])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE -- tom does believes false - and it is FALSE
+> 
+> disbelieves_true_in_ideas( tom, now,
+|         [tom_roman_idea,
+|          tom_russell_idea])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_in_ideas( tom, now,
+|         [tom_tully_idea,
+|          tom_tully_idea,
+|          tom_catiline_idea])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_in_ideas( tom, now,
+|         [tom_denounced_idea,
+|          tom_tully_idea,
+|          tom_denounced_idea])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> disbelieves_true_in_ideas( tom, now,
+|         [tom_denounced_idea,
+|          tom_cicero_idea])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% OBJECTS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be FALSE -- Tom believes it TRUE
+> 
+> disbelieves_true_objects( tom, now,
+|         [[denounced],
+|          [cicero],
+|          [catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- Tom believes it TRUE
+> 
+> disbelieves_true_objects( tom, now,
+|         [[american],
+|          [russell]])?
+
+*** No
+> 
+> %% Next should be TRUE -- Tom believes it FALSE and it is FALSE
+> 
+> disbelieves_true_objects( tom, now,
+|         [[denounced],
+|          [russell],
+|          [catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE -- Tom believes it FALSE and it is FALSE
+> 
+> disbelieves_true_objects( tom, now,
+|         [[roman],
+|          [russell]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE -- there is no (separate) object tully
+> 
+> disbelieves_true_objects( tom, now,
+|         [[denounced],
+|          [tully],
+|          [catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_objects( tom, now,
+|         [[tully],
+|          [tully],
+|          [catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_objects( tom, now,
+|         [[denounced],
+|          [tully],
+|          [denounced]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> disbelieves_true_objects( tom, now,
+|         [[denounced],
+|          [cicero]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% WORDS_IDEAS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be FALSE -- tom believes TRUE
+> 
+> disbelieves_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [cicero_word, tom_cicero_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- tom believes TRUE
+> 
+> disbelieves_true_words_ideas( tom, now,
+|         [[american_word, tom_american_idea],
+|          [russell_word, tom_russell_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- tom believes it FALSE but it is not FALSE
+> 
+> disbelieves_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [tully_word, tom_tully_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** No
+> 
+> %% Next should be TRUE -- tom believes it FALSE and it is FALSE
+> 
+> disbelieves_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [russell_word, tom_russell_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE -- tom believes it FALSE and it is FALSE
+> 
+> disbelieves_true_words_ideas( tom, now,
+|         [[roman_word, tom_roman_idea],
+|          [russell_word, tom_russell_idea]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_words_ideas( tom, now,
+|         [[tully_word, tom_tully_idea],
+|          [tully_word, tom_tully_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [tully_word, tom_tully_word],
+|          [denounced_word, tom_denounced_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> disbelieves_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [cicero_word, tom_cicero_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong rrrr relation for tully_word
+> 
+> disbelieves_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [tully_word, tom_cicero_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong rrrr relation for cicero_word
+> 
+> disbelieves_true_words_ideas( tom, now,
+|         [[denounced_word, tom_denounced_idea],
+|          [cicero_word, tom_tully_idea],
+|          [catiline_word, tom_catiline_idea]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% WORDS_OBJECTS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be FALSE -- tom believes it is true
+> 
+> disbelieves_true_words_objects( tom, now,
+|         [[denounced_word, denounced],
+|          [cicero_word, cicero],
+|          [catiline_word, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- tom believes TRUE but it is FALSE
+> 
+> disbelieves_true_words_objects( tom, now,
+|         [[denounced_word, denounced],
+|          [tully_word, cicero],
+|          [catiline_word, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- tom believes TRUE but it is FALSE
+> 
+> disbelieves_true_words_objects( tom, now,
+|         [[american_word, american],
+|          [russell_word, russell]])?
+
+*** No
+> 
+> %% Next should be TRUE -- tom believes FALSE and it is FALSE
+> 
+> disbelieves_true_words_objects( tom, now,
+|         [[denounced_word, denounced],
+|          [russell_word, russell],
+|          [catiline_word, catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE -- tom believes FALSE and it is FALSE
+> 
+> disbelieves_true_words_objects( tom, now,
+|         [[roman_word, roman],
+|          [russell_word, russell]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_words_objects( tom, now,
+|         [[tully_word, tully],
+|          [tully_word, tully],
+|          [catiline_word, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_words_objects( tom, now,
+|         [[denounced_word, denounced],
+|          [tully_word, tully],
+|          [denounced_word, denounced]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> disbelieves_true_words_objects( tom, now,
+|         [[denounced_word, denounced],
+|          [cicero_word, cicero]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% IDEAS_OBJECTS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be FALSE -- tom believes it TRUE
+> 
+> disbelieves_true_ideas_objects( tom, now,
+|         [[tom_denounced_idea, denounced],
+|          [tom_cicero_idea, cicero],
+|          [tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- tom believes it TRUE
+> 
+> disbelieves_true_ideas_objects( tom, now,
+|         [[tom_american_idea, american],
+|          [tom_russell_idea, russell]])?
+
+*** No
+> 
+> %% Next should be FALSE -- not a belief
+> 
+> disbelieves_true_ideas_objects( tom, now,
+|         [[tom_denounced_idea, denounced],
+|          [tom_tully_idea, cicero],
+|          [tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be TRUE -- tom believes FALSE and it is FALSE
+> 
+> disbelieves_true_ideas_objects( tom, now,
+|         [[tom_denounced_idea, denounced],
+|          [tom_russell_idea, russell],
+|          [tom_catiline_idea, catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE -- tom believes FALSE and it is FALSE
+> 
+> disbelieves_true_ideas_objects( tom, now,
+|         [[tom_roman_idea, roman],
+|          [tom_russell_idea, russell]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_ideas_objects( tom, now,
+|         [[tom_tully_idea, tully],
+|          [tom_tully_idea, tully],
+|          [tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_ideas_objects( tom, now,
+|         [[tom_denounced_idea, denounced],
+|          [tom_tully_idea, tully],
+|          [tom_denounced_idea, denounced]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> disbelieves_true_ideas_objects( tom, now,
+|         [[tom_denounced_idea, denounced],
+|          [tom_cicero_idea, cicero]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> %% WORDS_IDEAS_OBJECTS
+> %%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> %% Next should be FALSE -- tom does not believe FALSE
+> 
+> disbelieves_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [cicero_word, tom_cicero_idea, cicero],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- not believed FALSE
+> 
+> disbelieves_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [tully_word, tom_tully_idea, cicero],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be TRUE -- tom believes FALSE and it is FALSE
+> 
+> disbelieves_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [russell_word, tom_russell_idea, russell],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be TRUE -- tom believes FALSE and it is FALSE
+> 
+> disbelieves_true_words_ideas_objects( tom, now,
+|         [[roman_word, tom_roman_idea, roman],
+|          [russell_word, tom_russell_idea, russell]])?
+
+*** Yes
+--1> 
+
+*** No
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_words_ideas_objects( tom, now,
+|         [[tully_word, tom_tully_idea, cicero],
+|          [tully_word, tom_tully_idea, cicero],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong type
+> 
+> disbelieves_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [tully_word, tom_tully_word, cicero],
+|          [denounced_word, tom_denounced_idea, denounced]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong arity
+> 
+> disbelieves_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [cicero_word, tom_cicero_idea]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong rrrr relation for tully_word
+> 
+> disbelieves_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [tully_word, tom_cicero_idea, cicero],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %% Next should be FALSE -- wrong rrrr relation for cicero_word
+> 
+> disbelieves_true_words_ideas_objects( tom, now,
+|         [[denounced_word, tom_denounced_idea, denounced],
+|          [cicero_word, tom_tully_idea, cicero],
+|          [catiline_word, tom_catiline_idea, catiline]])?
+
+*** No
+> 
+> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+> 
+> 	
+> 
+> write_stats(Ignore)?
+I am not sure of units here
+Clock Time 1.61455 Seconds
+CPU Time 266.667 Milliseconds
+
+*** Yes
+Ignore = @.
+--1> 
+
+*** No
+> halt?
+

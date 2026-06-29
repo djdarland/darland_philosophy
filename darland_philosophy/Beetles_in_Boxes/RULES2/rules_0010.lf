@@ -1,0 +1,9 @@
+tryit1(F, A, B) :-
+	qqqq1(F, A, B).
+
+tryit2(F, A, B) :-
+	F(A, B).
+
+%	F = denounced,
+%	A = cicero,
+%	B = catiline,

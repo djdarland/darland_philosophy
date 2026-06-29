@@ -1,0 +1,37 @@
+*** Error: 'different(none,none)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'different(none,none)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'different(none,none)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'opaque_believes_object(@,@,@,@,0,@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'opaque_believes_external_internal_object(@,@,@,@,0,@,@,@,@,@,@,@,@,@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'opaque_believes_external_object(@,@,@,@,0,@,@,@,@,@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'opaque_believes_external_internal(@,@,@,@,0,@,@,@,@,@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'opaque_believes_internal_object(@,@,@,@,0,@,@,@,@,@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'opaque_believes_internal(@,@,@,@,0,@,@,@,@,@)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort

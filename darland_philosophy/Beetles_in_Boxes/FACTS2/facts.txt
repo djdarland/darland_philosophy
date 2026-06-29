@@ -1,0 +1,11 @@
+facts_0000.lf
+facts_0001.lf
+facts_0002.lf
+facts_0003.lf
+facts_0004.lf
+facts_0005.lf
+facts_0006.lf
+facts_0031.lf
+facts_0071.lf
+facts_0081.lf
+facts.txt

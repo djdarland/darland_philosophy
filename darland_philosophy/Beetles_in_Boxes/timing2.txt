@@ -1,0 +1,27 @@
+
+# of nodes = 2^limit
+a = 0.00000128852143
+c = 2.170852216
+		
+		All Nodes Diifferent	All Nodes Same		Sum 10 Tests		a * (c ^ (2 * limit))
+		    	  		    	       		Rand Vars 50%		
+limit		CPU Time
+2		0 Milliseconds
+3		0 Milliseconds
+4		0 Milliseconds
+5		0 Milliseconds
+6		0 Milliseconds
+7		0 Milliseconds					0 Milliseconds
+8		0 Milliseconds					33.3333 Milliseconds	
+9		0 Milliseconds		0 Milliseconds		33.3333 Milliseconds	
+10		16.6667 Milliseconds	16.6667 Milliseconds	66.6667 Milliseconds	6.96
+11		16.6667 Milliseconds	16.6667 Milliseconds	133.333 Milliseconds	32.80
+12		50 Milliseconds		50 Milliseconds		350 Milliseconds	154.59
+13		83.3333 Milliseconds	100 Milliseconds	900 Milliseconds	728.54
+14		383.333 Milliseconds	350 Milliseconds	3433.33 Milliseconds	3433.33
+15		1233.33 Milliseconds	1200 Milliseconds	12133.3 Milliseconds	16179
+16		5066.67 Milliseconds	4850 Milliseconds	50216.7 Milliseconds	76249
+17		35800 Milliseconds	35083.3 Milliseconds	359333 Milliseconds	359333
+18		223700 Milliseconds	223767 Milliseconds	2.35093e+06 Milliseconds 1693392
+19		1.12378e+06 Milliseconds 1.15917e+06 Milliseconds	    		 
+

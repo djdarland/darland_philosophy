@@ -1,0 +1,67 @@
+global count
+procedure main()
+   local i
+   init()
+#   &trace := -1
+   number := 1
+   while number < 2 do {
+      count := 1
+      write("%% BEGIN number = ", number)
+      write(&errout, "number = ", number)
+      limit := 18
+      sat_test :=  satgen(limit)
+      sat_test := "satisfiable(" || sat_test || ")\?"
+      write(sat_test)
+      write(";")
+      write(";")
+      write(";")
+      write(" ")
+      write(" ")
+      write("%% END number = ", number)
+      number +:= 1
+      }
+   
+   fin()
+end
+
+procedure init()
+   infile := open("satgen.top","r")
+   while line := read(infile) do {
+      write(line)
+      }
+   close(infile)
+end
+procedure fin()
+   infile := open("satgen.bot","r")
+   while line := read(infile) do {
+      write(line)
+      }
+   close(infile)
+end
+
+procedure satgen(limit)
+   local part1, part2, part3, part4, i, conn
+   if limit < 2 then {
+      limit -:= 1
+      part1 := "var" || count
+#      count := count + 1
+      write(&errout, "AAA part1 = ", part1)
+      return "[top, " ||  part1 ||  "]"
+      }
+   else {
+      conn := 200
+      if conn < 50 then {
+         part1 := ?"ABCDEFGHIJKL"
+         write(&errout, "BBB part1 = ", part1)
+         return "[top, " ||  part1 ||  "]"
+         }            
+      else {
+         write(&errout, "limit = ", limit)
+         part1 := "[nand, "
+         part2 := satgen(limit - 1) || "," 
+         part3 := satgen(limit - 1) 
+         part4 := "]"
+         return (part1 || part2 || part3 || part4)
+         }
+      }
+end

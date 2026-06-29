@@ -1,0 +1,81 @@
+% Copyright (C) 2017, 2019, 2020, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+%% Modified December 2021 for Whitehead's
+%% Process and Reality 
+%% darland's philosophy is free software:
+%% you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License
+%% as published by
+%% the Free Software Foundation, either version 3 of
+%% the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope
+%% that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the
+%% implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%% See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of
+%% the GNU General Public License
+%% along with darland's philosophy.
+%% If not, see <http://www.gnu.org/licenses/>.
+
+
+%% Life database for use with predicates 
+%% to simulate Dennis J. Darlands philosophy.
+%% Within a Whiteheadian Context
+%% Started Writing 1/4/2017
+%% Major re-write starting 8/19/2019
+%%
+%% Total rewite of what I started about 2007.
+%%
+%% Modified for Whitehead December 2021 
+%% common_facts_2017_0001.lf    %% Facts primarily about understanding
+
+
+
+inner <| vector.
+
+outer <| vector.
+
+% int_list is list of ints
+
+int_list <| list.
+int_cons <| cons.
+int_nil <| nil.
+
+:: int_cons(int, int_list).
+% int_cons <| int_list.
+% int_nil <| int_list.
+:: int_cons(int_list).
+:: int_nil(int_list).
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+real_list <| list.
+real_cons <| cons.
+real_nil <| nil.
+:: real_cons(real, real_list).
+real_cons <| real_list.
+real_nil <| real_list.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% vector_list is list of vectors
+
+vector_list <| list.
+vector_list_cons <| cons.
+vector_List_nil <| nil.
+
+:: vector_list_cons(vector, vector_list).
+vector_list_cons <| vector_list.
+vector_list_nil <| vector_list.
+
+
+%%%%%%%%%%%%%%%%%%%
