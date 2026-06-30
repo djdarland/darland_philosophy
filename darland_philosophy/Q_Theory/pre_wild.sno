@@ -1,0 +1,30 @@
+	&STLIMIT = 50000
+	&DUMP = 0
+	&TRACE = 0
+	trace('line')
+	trace('line_out')
+	trace('part1')
+	trace('part2')
+	trace('universal')
+* LOOP1   line_out = line
+* LOOP2	OUTPUT = line_out
+*	line_out = ''
+*	OUTPUT = ''
+LOOP5	OUTPUT = line_out
+	line_out = ''
+LOOP4	line = INPUT :f(END)
+LOOP6	line FENCE (SPAN(' \t') | '') ('%' REM) . line_out = :s(loop5)
+LOOP3	line BREAK('q') . part1 'qqqq' (SPAN(' \t') | '') BREAK('(') '(' BREAK(',).?[:|') . universal = :s(addit)f(finishit)
+addit
+	OUTPUT = line_out
+	
+	line_out = part1 universal '('
+	line LEN(1) = :(LOOP3) 
+finishit
+*	OUTPUT = GT(SIZE(line),0) ''
+	OUTPUT = line_out line
+	line_out = ''
+	line = ''
+*	OUTPUT = ' '
+	:(loop4)
+END

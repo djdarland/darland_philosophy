@@ -1,0 +1,13 @@
+*** Error: 'qqqq2(qqqq4,denounced,cicero,catiline)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'qqqq3([qqqq4,denounced,cicero,catiline])' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'qqqq1(denounced,cicero,catiline)' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: argument is not a function in apply(cicero,catiline,functor => denounced).

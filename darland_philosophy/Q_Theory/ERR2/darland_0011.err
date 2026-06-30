@@ -1,0 +1,22 @@
+*** Syntax error: ',' expected in argument list (near line 20)
+*** Error: the predicate 'user#believes_not_in_ideas' may not be changed.
+*** Error: the predicate 'user#believes_not_in_ideas' may not be changed.
+*** Error: the predicate 'user#believes_not_in_ideas' may not be changed.
+*** Error: the predicate 'user#believes_not_in_ideas' may not be changed.
+*** Error: 'different('*MARK*','*MARK*')' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'different('*MARK*','*MARK*')' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'not_pred(find_all([dennis,now,1,1,[@,[A_Object]]],believes_not_in_words(dennis,now,1,1,[human,A_Object]),@))' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort*** Error: 'not_pred(find_all([dennis,now,1,1,[@,[A_Object]]],believes_not_in_words(dennis,now,1,1,[human,A_Object]),@))' is not a predicate or a function.
+
+*** Abort
+
+*** END Abort

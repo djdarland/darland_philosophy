@@ -10,6 +10,7 @@ echo "-----------"
 echo "1 My Philosophy Recovered"
 echo "2 Beetles in Boxes Philosophy"
 echo "3 Principia Mathematica Dot to Parentheses or Polish Notation"
+echo "4 My Q Theory Recovered"
 echo "-----------"
 echo "500 NO_WARANTY.txt"
 echo "501 COPYING.txt"
@@ -26,6 +27,7 @@ case $select in
 1) ./eee1;;
 2) ./eee2;;
 3) ./eee3;;
+4) cd Q_Theory/src; ./eee;; 
 # 4) ./eee4;;
 # 5) ./eee5;;
 esac
@@ -33,6 +35,7 @@ echo "-----------"
 echo "1 My Philosophy Recovered"
 echo "2 Beetles in Boxes Philosophy"
 echo "3 Principia Mathematica Dot to Parentheses or Polish Notation"
+echo "4 My Q Theory Recovered"
 
 echo "-----------"
 echo "select"

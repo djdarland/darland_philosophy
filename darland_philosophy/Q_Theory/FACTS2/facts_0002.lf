@@ -1,0 +1,461 @@
+%% Copyright (C) 2017, 2019 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+
+%% Common Prolog and Life database for use with predicates 
+%% to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%%
+%% Total rewite of what I started about 10 years ago.
+%% Now using only WildLIFE.
+%%
+%% and common_facts_2017_0002.lf for Life
+%% Facts about philosophers terminology.
+%% Not very good at this point,
+%% I've learned much more since writing this.
+%% Now, (8/25/2019) I am focused on other parts of these programs.
+%%
+%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This file contains mostly facts representing various philosopher's terminology
+
+%% Here are various remarks - By Dennis J. Darland
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+remark(1001, 'Test Set 1 - Introductory remarks and echo some facts.').
+
+remark(1002, 'Remarks and quotations for a set of query set `n` all start with `n` thousand.').
+
+remark(1003, 'Differences between SwiProlog and WildLife. WildLife queries end in a question mark; SwiProlog queries end in a period. Both give the next answer with a semi-colon. WildLife permits one more semi-colon after a query. I am debugging mainly in WildLife. WildLife s trace_input does not show comments - that is the reason for the remark predicate!').
+
+remark(1004, 'Lines starting with %%LIFE = are passed through to Wildlife with the prefix removed - the whole line is a blank line in SwiProlog. Vica Versa for SwiProlog & %%PROLOG =. These are only processed the the .bs query files - they are translated into prolog & life versions.').
+
+remark(1005, 'I have used atoms instead of strings due to how the older version of SwiProlog prints strings.').
+
+remark(1006, 'I have used back quotes instead of single or double quotes within remarks and quotatons to avoid conflicts with their other meanings.').
+
+remark(1007, 'In debugging I have been confused about what the values of Types should be. I have decided to try the following (1/20/2017) after some thought. The lowest level of internal symbols for objects will be 0. The lowest level of internal symbols of relations of objects will be 1. All external symbols (both objects and relations) will be type 2 higher than the internal object it is a symbol of. Objects (internal or extenal) are even numbers. Relations odd numbers.').
+
+remark(1008, 'The amount of Prolog or WildLife I use is small and can be understood easily by anyone with some knowledge of symbolic logic. Other than preprocessing the query file, there are special rules files for prolog & life, but almost all rules are in a common file. All facts are in one file. The idential files are linked with the linux `ln` command (they have different suffixes & are in different directories. BTW: For this reason when extracting from the archive one must use `tar -xhzvf darland_philosophy-mm.nn.tar.gz. The `h` preserves the links').
+remark(1009, 'The symbol `:-` corresponds to `if`.').
+
+remark(1010, 'Facts are expressed predicate(atom1, atom2).').
+
+remark(1011, 'A rule might be `grandfather(A, C) :- father(A, B), father(B, C)`. Where father(X, Y) means X is the father of Y, and grandfather(X, Y) means X is the grandfather of Y. Variables are capitalized.').
+
+remark(1012, 'If we had the facts `father(john, richard)` and `father(richard, dennis)` and the rule `grandfather(A, C) :- father(A, B), father(B, C)` then in prolog you could ask `grandfather(john, dennis)` and you would get an affimative answer.You could also ask `grandfather(X, Y)` and you would get all answers for cases wher there were the correct facts. You would need, however to enter a `;` after each one in order to get the next.').
+
+remark(1013, 'The `, ` thus stands for `and` as well as separating arguments or parameters. `or` is implemented by having more than one rule.').
+
+remark(1014, 'Thus `parent(X, Y).` could be defined by two rules: `parent(X, Y) :- father(X, Y).` and `parent(X, Y) :- mother(X, Y).`').
+
+remark(1015, 'All facts or rules for a given predicate must be grouped together.').
+
+remark(1016, 'I am not asserting that the relations or objects I describe are fundamental. They almost certainly need futher analysis. Mostly I am arguing that there in nothing inherently wrong with `folk psychology`.').
+
+remark(2001, 'Test Set 2 - about understanding.').
+
+remark(2002, 'A person (Subject) understands any propositon resulting from symbols he has.').
+
+remark(3001, 'Test Set 3 - about belief.').
+
+remark(3002, 'A person can have contradictory beliefs. This can because he does not know of all facts. Thus for `believes` so defined - it fails of substituitivity of identity. It is not referentially transparent - it is referentially opaque. But this `believes` is defined in terms which themselves are referentially transparent. There is no need to flee intension. We must analyze it when needed. There is no logical problem when `believes` is analyzed. I use one kind of belief in my `database` of facts - `belives_internal`. I define 5 more kinds of belief.(`believes_external_internal_object`, `believes_external_object`, `believes_external_internal`, `believes_internal_object`, and `believes_object`. All are reverentially transparent except `believes_object` - it is reverentially opaque.').
+
+remark(3003, 'Tom believes both `Cicero denounced Cataline.` and `Cicero did not denounced Cataline.` He has two different internal symbols for Cicero (`cicero` and `tully` - but both refer to the same object - there is only one object! And (also) in Prolog or Life two atoms cannot be equal.').
+
+remark(3004, 'In SwiProlog I use `is` for the arithmetic with types. It requires `Type` be instantiated. So multiple queries are needed. With WildLife I could have placed, e.g. `Type + 1` where I used `Type_p1`, and not needed the predicate `type_p1` at all.').
+
+remark(3005, '`believes_internal` is a (here primative) psychological relation between internal symbols. Usually these internal symbols relate to external objects (not always). The relation to the objects is usually learned from interaction with other people. However this is mostly coordinated via the external objects and external symbols. The internal symbols may vary from person to person. I thought about calling the internal symbols `neural centers` - but that is stretching my knowledge. They are referentially transparent - even though `cicero = tully`, `cicero_int != tully_int`.').
+
+remark(3006, '`believes_object` is a (defined) relation between a person and (usually) external objects medeated by symbolic relations. It is referentially opaque. I do not regard that as a problem as the relations it is defined in terms of are referentially transparent.').
+
+remark(3007, 'Beliefs that go all the way to the objects can be opaque. Because we can never have complete knowledge - or, at least, if we do, then opacity never occurs.'). 
+
+remark(3008, 'Beliefs involving symbols (external or internal) can never be opaque as the symbols themselves are different - whether or not they stand for the same object. Only `believes_object` does not involve symbols. (Althogh symbols are used in its definition, they `cancel out`.').
+
+remark(3009, 'There is a Logical_Form for belief - it is either `pos_pos`, `pos_neg`, `neg_pos` or `neg_neg`. The first neg indicates not believing the second would indicate believing not. For simple beliefs `pos` & `neg` would have been sufficient. They would indicate belief or disbelief. However for those I use `pos_pos` and `pos_neg`. This simplifies things. A logical form of `neg_pos` indicates the person has no belief that something is true. (They might either believe it false or have no belief regarding it. Similarly for `neg_neg`.').
+
+remark(4001, 'Test Set 4 - about understanding obout understanding. Also understanding about belief').
+
+remark(4002, 'I have not checked this out thorougly - other things were prerequisites.').
+
+remark(5001, 'Test Set 5 - about belief understanding and belief about belief.').
+
+remark(5002, 'I have not checked this out thoroughly - other things were prerequisites.').
+
+remark(6001, 'Test Set 6 - about propositions.').
+
+remark(7001, 'Test Set 7 - about truth.').
+
+remark(8001, 'Test Set 8 - about opacity & synonymity.').
+
+remark(8002, 'Synonymity is a relation of symbols - not of things.').
+
+remark(9001, 'Test Set 9 - about intensionality & extensionality.').
+
+remark(9002, ' ').
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% pl_external_synonym(Number, Philosopher_1, Philosopher_2, Type, External_Term_1, External_Term_2, Abbreviation_for Book, Abbreviation_for_Article, Pages, Quotation, Note).
+
+%% Note in Prolog and WildLife I cannot use capitals here.
+%% none means no equivalent so far
+%% pl_external_synonym(Number, Philosopher_1, Philosopher_2, Type, External_Term_1, External_Term_2, Quote_1, Quote_2, Quote_3, Quote_4)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Here are some philosophical terms
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+term(object_ext).
+
+term(gegenstand_ext).
+
+term(sentence_ext).
+
+term(satz_ext).
+
+term(external_symbol_ext).
+
+term(sign_ext).
+
+term(internal_symbol_ext).
+
+term(sinn_ext).
+
+term(relation_ext).
+
+term(begriff_ext).
+
+term(function_ext).
+
+term(variable_ext).
+
+term(argument_ext).
+
+term(truth_value_ext).
+
+term(true_ext).
+
+term(false_ext).
+
+term(the_true_ext).
+
+term(the_false_ext).
+
+term(test1_ext).
+
+term(test2A_ext).
+
+term(test2B_ext).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% pl_external_synonym(Number, Philosopher_1, Philosopher_2, External_Term_1, External_Term_2, Quote_1, Quote_2, Quote_3, Quote_4)
+%% Number - reference number
+%% Philosopher_1 - A philosopher who uses External_Term_1 (just me so far).
+%% Philosopher_2 - A philosopher who uses External_Term_2 as Philosopher_1 uses External_Term_1
+%% There can be up to 4 supporting Quotations.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+pl_external_synonym(syn00001, djd, gf, object, gegenstand, gf0001, none, none, none).
+
+pl_external_synonym(syn00002, djd, gf, external_proposition, satz, gf0002, none, none, none).
+
+pl_external_synonym(syn00003, djd, gf, internal_proposition, satz, gf0003, none, none, none).
+
+pl_external_synonym(syn00004, djd, gf, external_symbol, sign, gf0004, none, none, none).
+
+pl_external_synonym(syn00005, djd, gf, internal_symbol, vorstellung, gf0006, none, none, none).
+
+pl_external_synonym(syn00006, djd, gf, relation, begriff, gf0006, none, none, none).
+
+pl_external_synonym(syn00007, djd, gf, function, function, gf0003, gf0006, none, none).
+
+pl_external_synonym(syn00008, djd, gf, variable, argument, gf0003, gf0005, none, none).
+
+pl_external_synonym(syn00009, djd, gf, truth_value, truth_value, gf0010, none, none, none).
+
+pl_external_synonym(syn00010, djd, gf, true, the_true, gf0010, none, none, none).
+
+pl_external_synonym(syn00011, djd, gf, false, the_false, gf0011, none, none, none).
+
+pl_external_synonym(syn00012, djd, wvoq, object, object, none, none, none, none).
+
+pl_external_synonym(syn00013, djd, br, s_believes_internal, s_believes, br0008, none, none, none).
+
+pl_external_synonym(syn00014, djd, br, s_believes_object, s_believes, br0010, none, none, none).
+
+pl_external_synonym(syn00015, djd, br, test_1_ext, test2A_ext, none, none, none, none).
+
+pl_external_synonym(syn00016, djd, br, test_1_ext, test2B_ext, none, none, none, none).
+
+pl_external_synonym(syn00017, djd, gf, sense_of_object, sinn, gf0006, none, none, none).
+
+pl_external_synonym(syn00018, djd, gf, sense_of_relation, concept, gf0006, none, none, none).
+
+
+
+
+
+
+%% Following missing argument
+
+%% pl_external_synonym(12, djd, gf, sameness_of_object_ext, gf0012, none, none, none).
+%% pl_external_synonym(13, djd, gf, sameness_of_relation_ext, gf0013, none, none, none).
+%% pl_external_synonym(14, djd, gf, sameness_of_object_int_ext, gf0014, none, none, none).
+%% pl_external_synonym(15, djd, gf, sameness_of_relation_int_ext, gf0015, none, none, none).
+%% pl_external_synonym(16, djd, gf, sameness_of_proposition_ext, gf0016, none, none, none).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Reference Books
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% book(Book_Abbreviation, Author_Abbreviation, Book_Title, Book_Year, Notes).
+
+book(tpwgf, gf, 'Translations from the Philosophical Writings of Gottlog Frege', '1879', none).
+
+book(cpbr01, br, 'CPBR 01: Cambridge Essays', '1888-1899', none).
+
+book(cpbr02, br, 'CPBR 02: Philosophical Papers', '1896-1899', none).
+
+book(cpbr03, br, 'CPBR 03: Toward the `Principles of Mathematics`', '1900-1902', none).
+
+book(cpbr04, br, 'CPBR 04: Foundations of Logic', '1903-1905', none). 
+
+book(cpbr05, br, 'CPBR 05: Toward `Principia Mathematica`', '1905-1908', none).
+
+book(cpbr06, br, 'CPBR 06: Logical and Philosophical Papers', '1909-1913', none).
+
+book(cpbr07, br, 'CPBR 07: Theory of Knowledge, The 1913 Manuscript', '1913', none).
+
+book(cpbr08, br, 'CPBR 08: The Philosophy of Logical Atomism', '1914-1919', none).
+
+book(cpbr09, br, 'CPBR 09: Essays on Language, Mind, and Matter', '1919-1926', none).
+
+book(cpbr10, br, 'CPBR 10: Fresh Look at Empiricism', '1927-1942', none). 
+
+book(cpbr11, br, 'CPBR 11: Last Philosophical Testament', '1943-1968', 'I, Dennis Darland, am in the Acknowledgements, p. xxxi.').
+
+book(pm, br, 'Principia Mathematica to *56', '1910-1927', 'co author anw - but philosophical parts primarily br.').
+
+book(pe, br, 'Philosophical Essays', '1910', none).
+
+book(tlp, lw, 'Tractatus Logico-Philosophicus', '1921', none).
+
+book(amind, br, 'The Analysis of Mind', '1921', none).
+
+book(amatter, br, 'The Anaylysis of Matter', '1927', none).
+
+book(sym, anw, 'Symbolism: Its Meaning and Effect', '1927', none).
+
+book(imt, br, 'An Inquiry into Meaning and Truth', '1940', none).
+
+book(mn, rc, 'Meaning and Necessity', '1947-1956', none).
+
+book(pi, lw, 'Philosophical Investigations', '1953', 'My most worn out book.').
+
+book(wo, wvoq, 'Word and Object', '1960', none).
+
+book(cc, dcd, 'Content and Consciousness', '1969', none).
+
+book(mnsk, nn, 'Naming and Necessity', '1972', '1972', none).
+
+book(lot, jf, 'The Language of Thought', '1975', none).
+
+book(rep, jf, 'Representations: Philosophical Essays on the Foundations of Cognitive Science', '1981', none).
+
+book(fpcs, sps, 'From Folk Psychology to Cognitive Science: A Case Against Belief', '1983', none).
+
+book(is, dcd, 'The Intentional Stance', '1987', none).
+
+book(toc, jf, 'A Theory of Content and Other Essays', '1990', none).
+
+book(dm, sps, 'Deconstructing the Mind', '1996', none).
+
+book(lot2, ss, 'The Language of Thought', '2011', none).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% philosopher(Philosopher_Abbeviation, Philosopher_Name).
+%% For Name conversion from Abbreviated Form.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+philosopher(gf, 'Gottlob Frege').
+
+philosopher(br, 'Bertrand Russell').
+
+philosopher(lw, 'Ludwig Wittgenstein').
+
+philosopher(anw, 'Alfred North Whitehead').
+
+philosopher(rc, 'Rudolf Carnap').
+
+philosopher(wvoq, 'Willard Van Orman Quine').
+
+philosopher(dcd, 'Daniel C. Dennett').
+
+philosopher(sk, 'Saul Kripke').
+
+philosopher(jf, 'Jerry A. Fodor').
+
+philosopher(sps, 'Stephen P. Stich').
+
+philosopher(ss, 'Susan Schneider').
+
+philosopher(eds, 'Editors').
+
+philosopher(djd, 'Dennis J. Darland').
+
+philosopher(none, none).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Just verifies is a philosopher.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+a_philosopher(gf).
+
+a_philosopher(br).
+
+a_philosopher(lw).
+
+a_philosopher(anw).
+
+a_philosopher(rc).
+
+a_philosopher(wvoq).
+
+a_philosopher(dcd).
+
+a_philosopher(sk).
+
+a_philosopher(jf).
+
+a_philosopher(sps).
+
+a_philosopher(ss).
+
+a_philosopher(eds).
+
+a_philosopher(djd).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% article(Article_Abbreviation, Book_Abbreviation, Author_Article_Abbreviation, Article_Title, Article_Year, Notes_Article)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+article(gl, tpwgf, eds, 'Glossary', '1980', none).
+
+article(fc, tpwgf, gf, 'Function and Concept', '1891', none).
+
+article(co, tpwgf, gf, 'On Concept and Object', 1892, none).
+
+article(pla, cpbr08, br, 'The Philosophy of Logical Atomism', '1918', none).
+
+article(od, cpbr04, br, 'On Denoting', '1905', none).
+
+article(ont1, cpbr05, br, 'On the Nature of Truth [1]', '1907', none).
+
+article(ont2, pe, br, 'On the Nature of Truth [2]', '1910', none).
+
+article(none, none, none, none, none, none).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% philosophical_quotation(Id_Number, Author_Abbreviation, Article_Abbreviation, Book_Abbreviation, Pages, Quotation, Note1)
+
+%% Use none if there is not a book or article.
+%% If article is in a journal use book for that info.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+philosophical_quotation(br0001, br, pla, cpbr08, '166', 'A proposition is just a symbol. It is a complex symbol in the sense that it has parts which are also symbols: a symbol may be defined as complex when it has parts that are symbols.', none).
+
+philosophical_quotation(br0002, br, pla, cpbr08, '166', 'There is a good deal of importance to philosophy in the theory of symbolism, a good deal more than at one time I thought. I think the importance is almost entirely negative, i.e. the importance lies in the fact that unless you are fairly self-conscioius about symbols, unless you are fairly aware of the relation of symbol to what it symbolizes, you will find yourself attributing to the thing properties which only belong to the symbol. That, of course, is especially likely in very abstract studies such as philosophical logic, because the subject-matter that you are supposed to be thinking of is so exceedingly difficult and elusive that any person who has ever tried to think about it knows you do not think about it except perhaps once in six months for half a minute. The rest of the time you think abut the symbols, because they are tangible, but the thing you are supposed to be thinking about is fearfully difficult and one does not often manage to think about it. The really good philosopher is the one who does once in six months think about it for a minute. Bad philosophers never do.', none).
+
+philosophical_quotation(br0003, br, od, cpbr04, '423', 'According to the view which I advocate, a denoting phrase is essentially part of a sentence, and does not, like most single words, have any significance on its own account. If I say `Scott was a man`, that is a statement of the form `x was a man`, and it has `Scott` for its subject. But if I say `the author of Waverly was a man`, that is not a statement of the form `x was a man`, and does not have `the author of Waverly` for its subject. ..., we may put, in place of `the author of Waverly was a man` the following: `One and only one entity wrote Waverly, and that one was a man`.', none).
+
+philosophical_quotation(br0004, br, od, cpbr04, '423', '... speaking generally, suppose we wish to say that the author of Waverly had the property F, what we wish to say is equivalent to `One and only one entity wrote Waverly, and that one had the property F.`', none).
+
+philosophical_quotation(br0005, br, od, cpbr04, '423', '... `Scott was the author of Waverly` (i.e. `Scott was identical with the author of Waverly`) becomes `One and only one entity wrote Waverly, and Scott was identical with that one`; or reverting to the wholly explicit form: `It is not always false of x that x wrote Waverly, that it is always true of y that if y wrote Waverly y is identical with x, and that Scott is identical with x.`', none).
+
+philosophical_quotation(br0006, br, none, cpbr07, '108', 'TBD', none).
+
+philosophical_quotation(br0007, br, none, cpbr07, '115', 'TBD', none).
+
+philosophical_quotation(br0008, br, ont1, cpbr05, '451-452', 'Thus a belief, if this view [a belief is not a single thing related to a fact] is adopted, will not consist of one idea with a complex object, but will consist of several related ideas. That is, if we believe (say) that A is B, we shall have the ideas of A and of B, and these ideas will be related in a certain manner; but we shall not have a sinle complex idea which can be described as the idea of `A is B`. A belief will then differ from an idea or presentation by the fact that it will consist of several interrelated ideas. Certain ideas standing in certain relations will be called the belief that so-and-so. In the event of the objects standing in he corresponding relation, we shall say that the belief is true, or that it is belief in a fact. In the event of the objects not standing in the corresponding relation, there will be no objective complex corresponding to the belief, and the belief is belief in nothing, though it is not `thinking of nothing`, because it is thinking of the objects of the ideas which constitute the belief. Thus it would seem that the argument that false beliefs must be beliefs in something is not conclusive in favour of objective falsehood.', 'This belief relation of Russell`s is my `believes_internal` relation. Russell`s ideas are my `internal_symbols` or `internal_relation_symbols`. What Russell`s ideas are of is what my `internal_symbols` or `internal_relation_symbols` are related to. [see my remark 8]').
+
+philosophical_quotation(br0009, br, ont2, pe, '155', 'The theory of judgment [belief] which I am advocating is, that judgment is not a dual relation of mind to a single objective, but a multiple relation of the mind to the various other terms with which the judgment is concerned. Thus if I judge that A loves B, that is not a relation of me to `A`s love for B`, but a relation between me and A and love and B. If it were a relation of me to `A`s love for B`, it would be impossible unless there were such a thing s `A`s love for B`, i.e. unless A loved B, i.e. unless the judgment were true; but in fact false judgments are possible. When the judgment is taken as a relation between me and A and love and B, the mere fact that the the judgement occurs does not involve any relation between its objects A and love and B; thus the possibility of false judgments is fully allowed for.', 'This relation of Russell`s corresponds to my `believes` relation defined in `common_2017_0001.pl` for prolog or `common_2017_0001.lf` for WildLife. It is defined in terms of the `believes_internal`, `internal_symbol` and `internal_relation_symbol` relations. [see my remark 9]').
+
+philosophical_quotation(br0010, br, none, cpbr07, '109-110', 'TBD', none).
+
+philosophical_quotation(wvoq0001, wvoq, none, wo, '142', 'When a singular term is used in a sentence purely to specify its object, and the sentence is true of the object, then certainly the sentence will stay true when any other singular term is substituted that designates the same object. Here we have a criterion for what may be called purely referential position: the position must be subject to substituitivity of identity.', 'Note: Whitehead and Russell used the term [referential] transparent in Principia Mathematica, 2nd ed., p. 665. Quine mostly calls non-referential position `opaque`.').
+
+philosophical_quotation(lw0001, lw, none, tlp, '5.53', 'Identity of object I express by identity of sign, and not by using a sign for identity. Difference of objects I express by difference of signs.', none).
+
+philosophical_quotation(lw0002, lw, none, tlp, '5.53', 'Roughly speaking, to say of two things that they are identical is nonsense, and to say of one thing that it is identical with itself is to say nothing at all.', 'But with incomplete human knowledge, we may have two signs (internal symbols) for the same object. (e.g. Cicero & Tully)', none).
+
+philosophical_quotation(gf0001, gf, fc, tpwgf, '22', 'This view is grounded in the same confusion of form and content, sign and thing signified... Difference of sign cannot by itself be a sufficient ground for difference of the thing signified.', 'Compare Wittgenstein of the Tractatus.').
+
+philosophical_quotation(gf0002, gf, fc, tpwgf, '22-23', '...; but no definition is creative in the sense of being able to endow a thing with properties that it has not already got -- apart from the one property of expressing and signifying something in virtue of the definition.', note).
+
+philosophical_quotation(gf0003, gf, fc, tpwgf, '24', 'I am concerned to show that the argument does not belong with a function, but goes together with the function to make up a complete whole; for a function by itself must be incomplete, in need of supplementationm or `unsaturated`.', note).
+
+philosophical_quotation(gf0004, gf, fc, tpwgf, '29', 'We must distinguish between sense and meaning.', 'For Frege `meaning` is what is referred to (in the case of propositions the corresponding truth value). For his `sense`, I have no equivalent - my closest thing is `internal symbols`. But my `internal symbols` vary from person to person - like Frege`s ideas - that is why Frege rejects ideas for this purpose - but I try to show my `internal symbols` can do the job.').
+
+philosophical_quotation(gf0005, gf, fc, tpwgf, '30', '..., we may say at once: a concept is a function whose value is always a truth-value.', 'For me, relations play the role of Frege`s concepts.'). 
+
+philosophical_quotation(gf0006, gf, fc, tpwgf, '31', 'Statements in general, just like equations or inequalities or expressions in analysis, can be imagined split up into two parts; one complete in itself, and the other in need of supplementation, or `unsaturated`.', note).
+
+philosophical_quotation(gf0007, gf, fc, tpwgf, '32', 'When we have thus admitted objects without restriction as arguments and values of functions, the question ariss what it is that we are here calling an object. I regard a regular definition as impossible, since we have here something too simple to admit of logical analysis.', note).
+
+philosophical_quotation(gf0008, gf, fc, tpwgf, '32', 'A statement contains no empty space, and therefore we must take what it means to be an object. But what a statement means is a truth value. Thus the two truth-values are objects.', note).
+
+philosophical_quotation(gf0009, gf, fc, tpwgf, '32', 'It seems to be demanded by scientific rigour that we should have provisos against an expression`s possibly coming to have no meaning; we must see to it that we never perform calculations with empty signs in the belief that we are dealing with objects.', note).
+
+philosophical_quotation(gf0010, gf, fc, tpwgf, '33', 'This involves the requirement as regards concepts, that, for any argument, they shall have a truth-value as their value; that it shall be determinate, for any object, whether iit falls under the concept or not.', note).
+
+philosophical_quotation(gf0011, gf, co, tpwgf, '42-43', 'One cannot require that everything shall be defined, any more than one can require that a chemist shall decompose every substance. What is simple cannot be decomposed, and what is logically simple cannot have a proper definition. Now something logically simple is no more given us at the outset than most of the chemical elements are; it is reached only by means of scientific work. If something has been discovered that is simple, or at least must count as simple fot the time being, we shall have to coin a term for it, since language will not originally contain an expression that exactly answers. On the introducion o a name for something logically simple, a definition is not possible; there is nothing for it but to lead the reader or hearer, by means of hints, to understand the words as is intended.', note).
+
+philosophical_quotation(gf0012, gf, co, tpwgf, '43', 'A concept (as I understand the word) is predicative. On the other hand, a name of an object, a proper name, is quite incapable of being used as a grammatical predicate.', note).
+
+philosophical_quotation(gf0013, gf, co, tpwgf, '44', 'An equation is reversible; an object`s falling under a concept is an irreversible relation.', note).
+
+philosophical_quotation(gf0014, gf, co, tpwgf, '45', '... that the singular definite article always indicates an object, whereas the indefnite article accompanies a concept-word.', note).
+
+philosophical_quotation(gf0015, gf, co, tpwgf, '46', 'In logical discussions, one quite often needs to say something about a concept, and to express this in the form usual for such predications -- viz. to make what is said about the concept into the content of the grammatical predicate. Consequently, one would expect that what is meant by the grammatical subject would be the concept; but the concept as such cannot play this part, in view of its predicative nature; it must first be converted into an object, or, more precisely an object must go proxy for it.', note).
+
+philosophical_quotation(gf0016, gf, co, tpwgf, '47-48', 'A concept is what is meant by a predicate; an object is something that can never be the total meaning of a predicate, but can be what a subject means. It must here be remarked that the words `all`, `any`, `no`, `some`,  are prefixed to concept words.', note).
+
+philosophical_quotation(gf0017, gf, co, tpwgf, '53', 'The definite article in front of `result` is here logically justified only if it is known (i) that there is such a result; (ii) that there is not more than one. In that case, the phrase designates an object, and is to be regarded as a proper name.', 'Anticipation of `On Denoting`.').
+
+philosophical_quotation(gf0018, gf, sm, tpwgf, '56', 'Equality gives rise to challenging questions which are not altogether easy to answer. Is it a relation? A relation between objects, or between names or signs of objects?', note).
+
+philosophical_quotation(gf0019, gf, sm, tpwgf, '56', 'What we apparently want to state by a=b is that the signs or names `a` and `b` designate the same thing, so that those signs themselves would br under discussion; a relation between them would be asserted.', note).
+
+philosophical_quotation(gf0020, gf, sm, tpwgf, '57', 'It is natural, now, to think of there being connected with a sign (name, combination of words, written mark), besides that which the sign designates, which may be called the meaning of the sign, also what I should like to call the sense of the sign, wherein the mode of presentation is contained.... The meaning of `evening star` would be the same as that of `morning star`, but not the sense', note).
+
+philosophical_quotation(gf0021, gf, sm, tpwgf, '58', 'The regular connexion between a sign, its sense, and what it means is of such a kind that to the sign there corresponds a definite sense and to that in turn a definite thing meant, while to a given thing meant (an object) there does not belong only a single sign.', note).
+
+philosophical_quotation(gf0022, gf, sm, tpwgf, '59', 'The same sense is not always connected, even in the same man, with the same idea.', note).
+
+philosophical_quotation(gf0023, gf, sm, tpwgf, '60', 'In light of this, one need have no scrupples in speaking of the sense, whereas in the cases of an idea one must, strictly speaking, add whom it belongs to and at what time.', note).
+
+philosophical_quotation(gf0024, gf, sm, tpwgf, '60', 'The meaning of a proper name is the object itself which we designate bu using it; the idea which we have in that case is wholly subjective; in between lies the sense, which is indeed no longer subjective like the idea, but is yet not the object itself.', note).
+
+philosophical_quotation(gf0025, gf, sm, tpwgf, '61', 'A proper name (word, sign, sign combination, expression) expresses its sense, means or designates its meaning. By employing a sign we express its sense and designate its meaning.', note).

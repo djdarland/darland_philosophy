@@ -1,0 +1,112 @@
+%% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+
+persistent(clock_start)?
+
+write_time :- write(system("date")),
+	clock_start <<- real_time.
+
+write_stats :- write("CPU Time ", cpu_time, " Seconds"),nl,
+	write("Clock Time ", real_time - clock_start, " Seconds"),nl,
+	statistics.
+
+load("RULES2/rules_0063.lf")?
+
+write_time?
+%% BEGIN number = 1
+satisfiable([nand, [nand, [top, var1],[top, var1]],[nand, [top, var2],[top, var1]]])?
+;
+;
+;
+ 
+ 
+%% END number = 1
+%% BEGIN number = 2
+satisfiable([nand, [nand, [top, var1],[top, var2]],[nand, [top, var1],[top, var2]]])?
+;
+;
+;
+ 
+ 
+%% END number = 2
+%% BEGIN number = 3
+satisfiable([nand, [nand, [top, var1],[top, var2]],[nand, [top, var2],[top, var2]]])?
+;
+;
+;
+ 
+ 
+%% END number = 3
+%% BEGIN number = 4
+satisfiable([nand, [nand, [top, var1],[top, var2]],[nand, [top, var2],[top, var2]]])?
+;
+;
+;
+ 
+ 
+%% END number = 4
+%% BEGIN number = 5
+satisfiable([nand, [nand, [top, var1],[top, var1]],[nand, [top, var3],[top, var3]]])?
+;
+;
+;
+ 
+ 
+%% END number = 5
+%% BEGIN number = 6
+satisfiable([nand, [nand, [top, var2],[top, var3]],[nand, [top, var3],[top, var3]]])?
+;
+;
+;
+ 
+ 
+%% END number = 6
+%% BEGIN number = 7
+satisfiable([nand, [nand, [top, var1],[top, var1]],[nand, [top, var1],[top, var2]]])?
+;
+;
+;
+ 
+ 
+%% END number = 7
+%% BEGIN number = 8
+satisfiable([nand, [nand, [top, var3],[top, var3]],[nand, [top, var3],[top, var3]]])?
+;
+;
+;
+ 
+ 
+%% END number = 8
+%% BEGIN number = 9
+satisfiable([nand, [nand, [top, var3],[top, var2]],[nand, [top, var1],[top, var2]]])?
+;
+;
+;
+ 
+ 
+%% END number = 9
+%% BEGIN number = 10
+satisfiable([nand, [nand, [top, var2],[top, var2]],[nand, [top, var2],[top, var1]]])?
+;
+;
+;
+ 
+ 
+%% END number = 10
+write_stats?
+
+halt?

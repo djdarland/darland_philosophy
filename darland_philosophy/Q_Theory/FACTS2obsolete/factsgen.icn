@@ -1,0 +1,249 @@
+global    conclusions, premisses
+
+procedure main()
+   init()
+   process()
+   fin()
+end
+
+procedure put_list(str)
+   # output list for debug purposes 
+   local i
+   i := 0
+   while \str[i] do {
+      write("i = ", i, str[i])
+      i +:= 1
+      }
+end
+
+
+procedure rem_word(str)
+   # remove "_word" from end of word 
+   return str[1:-5]
+end
+
+procedure idea_from_word(subject, time_it, word)
+   return subject || "_" || time_it || "_" || rem_word(word) || "_idea"
+end
+
+
+
+procedure remove_blanks(line)
+   # remove blanks from anywhere in line
+   local line2
+   if /line then return ""
+   line2 := ""
+   line ? {
+      while (line2 ||:= (tab(upto(' ')))) do
+         tab(many(' '))
+      line2 ||:= tab(0)
+      }
+   return line2
+end
+
+
+procedure make_token_list(str)
+   # separate tokens in str into a list
+   local list2
+   if /str then return []
+   list2 := []
+   str ? {
+      while (list2 |||:= [(tab(upto('()[]?,')))]) do
+         list2 |||:= [tab(any('()[]?,'))]
+      list2 |||:= [tab(0)]
+      }
+   return list2
+end
+
+class token(str)
+
+end
+
+class results(fname_in, fd_in)
+   local line_in
+   method get_next()
+      # read in line
+      if line_in := read(fd_in)
+      then {
+         write("# " || line_in)
+         premisses.put_next("% " || line_in)
+         return line_in
+         }
+      else fail
+   end
+   method process_results()
+      # process results
+      local str, limit, token_list
+      limit := 0
+      str := remove_blanks(trim(conclusions.get_next()))
+      # combine lines of query into one line
+      until /str | str[-1] == "?" do {
+         limit +:= 1
+         if limit > 100 then fail
+         if str ||:= remove_blanks(trim(conclusions.get_next()))
+         then next
+         else fail
+         }
+      if /str | *str == 0 then fail
+      write("# " || str)
+      # echo
+      premisses.put_next("% " || str)
+      # separate into token list
+      token_list := make_token_list(str)
+      put_list(token_list)
+      # put needed premisses to satisfy query
+      premisses.put_premisses(token_list)
+      return str
+   end
+   method close_results()
+      close(fd_in)
+   end
+   initially
+       if not (fd_in := open(fname_in,"r")) 
+       then stop("cannot open " || fname_in)
+end
+
+class facts(fname_out, fd_out)
+   method put_next(line_out)
+      write(fd_out, line_out)
+   end
+   # determine and write premisses needed to get result 
+   method put_premisses(str)
+      local iii, arity, premiss
+      # str[1] is predicate (or verb)
+      case str[1] of {
+         "understands_words"  : {
+            write("% worked")
+            write("% " ||  str[1])
+            iii := 11
+            arity := 0
+            type_it := 1
+            type_it := 0
+            put_list(str)
+            while \str[iii + 6] do {
+               # str[3] is subject
+               # str[5] is time
+               # str[iii] is argument
+               premiss := rrrr(str[3], str[5], str[iii])  
+               premiss.put_rrrr()
+               arity +:= 1
+               if iii = 11 then
+                  type_it := 1
+               else 
+                  type_it := 0
+               premiss_ti := type_idea(idea_from_word(str[3], str[5], str[iii]) , type_it)
+               premiss_ti.put_type_idea()
+               iii +:= 6
+               }
+            premiss := arity_idea(idea_from_word(str[3], str[5], str[11]), arity - 1)
+            premiss.put_arity_idea()
+            }
+         
+         default : {
+            write("case missing")
+            write(str[1])
+            }
+         }
+   end
+   method close_facts()
+      close(fd_out)
+   end
+   initially
+       if not (fd_out := open(fname_out,"w"))
+       then stop("cannot open " || fname_out)
+end
+
+class result()
+   method results_tokens()
+      local token_list, line
+      line := next_result()
+      token_list := []
+      line ? {
+         while token_list |||:= (tab(upto(','))) do
+            tab(many(','))
+         token_list |||:= tab(-1)
+         }
+   end
+end
+
+
+
+
+class rrrr(subject, time, word, idea)
+   method put_rrrr()
+      write("rrrr(", subject, ", ", time, ", ", word, ", ", subject || "_" || rem_word(word) || "_idea", ")")
+      premisses.put_next("rrrr(" || subject || ", " || time || ", " || word || ", " || idea_from_word(subject, time, word) || ")")
+   end
+end
+
+class ssss(subject, time, idea, object)
+
+end
+
+class tttt(subject, time, class_idea, object)
+
+end
+
+class arity_idea(idea, arity)
+   method put_arity_idea()
+      premisses.put_next("arity_idea(" || idea || ", " || arity || ")")
+   end
+
+end
+
+class type_idea(idea, type_it)
+   method put_type_idea()
+      premisses.put_next("type_idea(" || idea || ", " || type_it || ")")
+   end
+end
+
+class number_idea(idea, number)
+
+end
+
+class believes_in_ideas(subject, time, idea_list)
+
+end
+
+class qqqq4(object_list)
+
+end
+
+class qqqq5(object_list)
+
+end
+
+
+
+
+
+procedure init()
+   write("% top init")
+   &dump := 1
+   &trace := -1
+   conclusions := results("result.in")
+   premisses := facts("facts.out")
+#   tok := token
+   write("% bottom init")
+end
+
+procedure fin()
+   write("% top fin")
+   conclusions.close_results()
+   premisses.close_facts()
+   write("% bottom fin")
+end
+
+procedure process()
+   local count
+   write("% top process")
+   count := 0
+   while conclusions.process_results() do {
+      count +:= 1
+      if count > 100 then break
+#      write(it)
+#      premisses.put_next(it)
+      }
+   write("% bot process")
+end
+

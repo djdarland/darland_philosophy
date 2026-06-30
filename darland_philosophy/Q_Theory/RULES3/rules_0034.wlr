@@ -1,0 +1,161 @@
+%% Copyright (C) 2017, 2019, 2021, 2023 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can redistribute it and/or modify
+%% it under the terms of the GNU General Public License as published by
+%% the Free Software Foundation, either version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+%% GNU General Public License for more details.
+
+%% You should have received a copy of the GNU General Public License
+%% along with darland's philosophy. If not, see <http://www.gnu.org/licenses/>.
+%% Common Prolog & Life predicates to simulate Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% I take a belief as opaque if the Subject believes and
+%% disbelieves the same arguments in a belief.
+
+%% truly_opaque is belief in exact contraries - this never occurrs!
+
+%% It turns out this only occurs in the pseudo_opaque_believes_objects case
+%% This is not an ontological problem, because although it is pseudo_opaque,
+%% it is defined in terms of universals none of which are opaque.
+%% belief and disbelief are not really contraries.
+
+%% 1
+
+qqqq(truly_opaque_believes_words,Subject, Time, List) :-
+    qqqq(believes_words,Subject, Time, List),
+    \+ qqqq(believes_words,Subject, Time, List).
+
+%% 2
+
+qqqq(truly_opaque_believes_in_ideas,Subject, Time, List) :-
+    qqqq(believes_in_ideas,Subject, Time, List),
+    \+ qqqq(believes_in_ideas,Subject, Time, List).
+
+%% 3
+
+qqqq(truly_opaque_believes_objects,Subject, Time, List) :-
+    qqqq(believes_objects,Subject, Time, List),
+    \+ qqqq(believes_objects,Subject, Time, List).
+
+%% 4
+
+qqqq(truly_opaque_believes_words_ideas,Subject, Time, List) :-
+    qqqq(believes_words_ideas,Subject, Time, List),
+    \+ qqqq(believes_words_ideas,Subject, Time, List).
+
+%% 5
+
+qqqq(truly_opaque_believes_words_objects,Subject, Time, List) :-
+    qqqq(believes_words_objects,Subject, Time, List),
+    \+ qqqq(believes_words_objects,Subject, Time, List).
+
+%% 6
+
+qqqq(truly_opaque_believes_ideas_objects,Subject, Time, List) :-
+    qqqq(believes_ideas_objects,Subject, Time, List),
+    \+ qqqq(believes_ideas_objects,Subject, Time, List).
+
+%% 7
+
+qqqq(truly_opaque_believes_words_ideas_objects,Subject, Time, List) :-
+    qqqq(believes_words_ideas_objects,Subject, Time, List),
+    \+ qqqq(believes_words_ideas_objects,Subject, Time, List).
+
+%% pseudo_opaque
+
+%% 1
+
+qqqq(pseudo_opaque_believes_words,Subject, Time, List) :-
+    qqqq(believes_words,Subject, Time, List),
+    qqqq(disbelieves_words,Subject, Time, List).
+
+%% 2
+
+qqqq(pseudo_opaque_believes_in_ideas,Subject, Time, List) :-
+    qqqq(believes_in_ideas,Subject, Time, List),
+    qqqq(disbelieves_in_ideas,Subject, Time, List).
+
+%% 3
+
+qqqq(pseudo_opaque_believes_objects,Subject, Time, List) :-
+    qqqq(believes_objects,Subject, Time, List),
+    qqqq(disbelieves_objects,Subject, Time, List).
+
+%% 4
+
+qqqq(pseudo_opaque_believes_words_ideas,Subject, Time, List) :-
+    qqqq(believes_words_ideas,Subject, Time, List),
+    qqqq(disbelieves_words_ideas,Subject, Time, List).
+
+%% 5
+
+qqqq(pseudo_opaque_believes_words_objects,Subject, Time, List) :-
+    qqqq(believes_words_objects,Subject, Time, List),
+    qqqq(disbelieves_words_objects,Subject, Time, List).
+
+%% 6
+
+qqqq(pseudo_opaque_believes_ideas_objects,Subject, Time, List) :-
+    qqqq(believes_ideas_objects,Subject, Time, List),
+    qqqq(disbelieves_ideas_objects,Subject, Time, List).
+
+%% 7
+
+qqqq(pseudo_opaque_believes_words_ideas_objects,Subject, Time, List) :-
+    qqqq(believes_words_ideas_objects,Subject, Time, List),
+    qqqq(disbelieves_words_ideas_objects,Subject, Time, List).
+
+%% AGOSTICISM
+
+%% 1
+
+qqqq(agnostic_words,Subject, Time, List) :-
+    \+ qqqq(believes_words,Subject, Time, List),
+    \+ qqqq(disbelieves_words,Subject, Time, List).
+
+%% 2
+
+qqqq(agnostic_in_ideas,Subject, Time, List) :-
+    \+ qqqq(believes_in_ideas,Subject, Time, List),
+    \+ qqqq(disbelieves_in_ideas,Subject, Time, List).
+
+%% 3
+
+qqqq(agnostic_objects,Subject, Time, List) :-
+    \+ qqqq(believes_objects,Subject, Time, List),
+    \+ qqqq(disbelieves_objects,Subject, Time, List).
+
+%% 4
+
+qqqq(agnostic_words_ideas,Subject, Time, List) :-
+    \+ qqqq(believes_words_ideas,Subject, Time, List),
+    \+ qqqq(disbelieves_words_ideas,Subject, Time, List).
+
+%% 5
+
+qqqq(agnostic_words_objects,Subject, Time, List) :-
+    \+ qqqq(believes_words_objects,Subject, Time, List),
+    \+ qqqq(disbelieves_words_objects,Subject, Time, List).
+
+%% 6
+
+qqqq(agnostic_ideas_objects,Subject, Time, List) :-
+    \+ qqqq(believes_ideas_objects,Subject, Time, List),
+    \+ qqqq(disbelieves_ideas_objects,Subject, Time, List).
+
+%% 7
+
+qqqq(agnostic_words_ideas_objects,Subject, Time, List) :-
+    \+ qqqq(believes_words_ideas_objects,Subject, Time, List),
+    \+ qqqq(disbelieves_words_ideas_objects,Subject, Time, List).

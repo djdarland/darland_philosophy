@@ -1,0 +1,198 @@
+%% Copyright (C) 2017, 2019, 2021 Dennis J. Darland
+
+%% This file is part of darland's philosophy.
+
+%% darland's philosophy is free software: you can
+%% redistribute it and/or modify
+%% it under the terms of the
+%% GNU General Public License as published by
+%% the Free Software Foundation, either
+%% version 3 of the License, or
+%% (at your option) any later version.
+
+%% darland's philosophy is distributed in the hope
+%% that it will be useful, 
+%% but WITHOUT ANY WARRANTY; without even
+%% the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%% See the
+%% GNU General Public License for more details.
+
+%% You should have received
+%% a copy of the GNU General Public License
+%% along with darland's philosophy.
+%% If not, see <http://www.gnu.org/licenses/>.
+
+%% Life predicates to simulate
+%% Dennis J. Darlands philosophy. 
+%% Started Writing 1/4/2017 
+%% This is a total rewrite of what I started about 10 years ago.
+
+%% As this is just correctness of data checking there is no reason to use qqqq
+
+
+rrrr_check1(S, T, W, I) :-
+	rrrr(S,T,W,I),
+	\+ person(S, N),
+	write("Error: have rrrr(", S,
+	      ", ", T,
+	      ", ", W,
+	      ", ", I, " but not person(", S,
+	      ",", N, ")").
+
+rrrr_check2(S, T, W, I) :-
+	rrrr(S,T,W,I),
+	\+ idea_of(S, I),
+	write("Error: have rrrr(", S,
+	      ", ", T,
+	      ", ", W,
+	      ", ", I,
+	      " but not qqqq(idea_of, ",
+	      S,
+	      ", ", I, ").").
+
+ssss_check1(S, T, W, I) :-
+	ssss(S,T,I,O),
+	\+ person(S, N),
+	write("Error: have ssss(", S,
+	      ", ", T,
+	      ", ", I,
+	      ", ", O, " but not person(", S,
+	      ",", N, ")").
+
+ssss_check2(S, T, W, I) :-
+	ssss(S,T,I,O),
+	\+ idea_of(S, I),
+	write("Error: have ssss(", S,
+	      ", ", T,
+	      ", ", I,
+	      ", ", O,
+	      " but not qqqq(idea_of, ",
+	      S,
+	      ", ", I, ").").
+
+tttt_check1(S, T, W, I) :-
+	tttt(S,T,I,O),
+	\+ person(S, N),
+	write("Error: have tttt(", S,
+	      ", ", T,
+	      ", ", I,
+	      ", ", O, " but not person(", S,
+	      ",", N, ")").
+
+tttt_check2(S, T, W, I) :-
+	tttt(S,T,I,O),
+	\+ idea_of(S, I),
+	write("Error: have tttt(", S,
+	      ", ", T,
+	      ", ", I,
+	      ", ", O,
+	      " but not qqqq(idea_of, ",
+	      S,
+	      ", ", I, ").").
+
+check_arity(I, A) :-
+	idea_of(S, I),
+%	write("arity S = ", S, " I = ", I),nl,
+	type_idea(I,T),
+%	write("type I = ", I, " T = ", T),nl,
+	T > 0,
+	\+ arity_idea(I, N),
+	write("Error: have idea_of(", S, ",", I, ").",
+	      " but not qqqq(arity_idea, ", I, ", NNNN)").
+
+check_relation1(Idea, Relation) :-
+	idea_of(Subject, Idea),
+	ssss(Subject, Time, Idea, Relation),
+	type_idea(Idea, Type),
+	write("Idea = ", Idea, " Type = ", Type),nl,
+	Type > 0,
+	\+ relation(Idea, Relation),
+	write("Error: have ssss(", Subject,
+	      ",", Time, ",", Idea, ",", Relation, ").",
+	      " but not relation(", Relation, ").").
+
+check_relation2(Idea, Relation) :-
+	relation(Relation),
+	\+ ssss(Subject, Time, Idea, Relation),
+	\+ tttt(Subject, Time, Idea, Relation),
+	write("Warning: have relation(", Relation, ").",
+	      " but not qqqq(ssss, ", Subject, ", ",
+	     Time, ", ", Idea, ",", Relation, ").").
+
+check_type(Idea,Type) :-
+	idea_of(Subject, Idea),
+	\+ type_idea(Idea,Type),
+	write("Error: have idea_of(", Subject, ",", Idea, ").",
+	      " but not qqqq(type_idea, ", Idea, ", NNNN)").
+
+check_number(Idea,N) :-
+	idea_of(Subject, Idea),
+	\+ number_idea(Idea,N),
+	write("Error: have idea_of(", Subject, ",", Idea, ").",
+	      " but not qqqq(number_idea, ", Idea, ", NNNN)").
+
+rrrr_check3(Word,Idea) :-
+	idea_of(Subject, Idea),
+	\+ rrrr(Subject, Time, Word, Idea),
+	write("Warning: have idea_of(", Subject, ",", Idea, ").",
+	      " but not qqqq(rrrr, ", Subject, ", ", Time,
+	      ", ",  Word, ", ", Idea, ").").
+
+ssss_check3(Word,Idea) :-
+	idea_of(Subject, Idea),
+	number_idea(Idea, singular),
+	\+ ssss(Subject, Time, Idea, Object),
+	write("Warning: have idea_of(", Subject, ",", Idea, ").",
+	      " but not qqqq(ssss, ", Subject, ", ", Time,
+	      ", ",  Idea, ", ", Object, ").").
+
+tttt_check3(Word,Idea) :-
+	idea_of(Subject, Idea),
+	number_idea(Idea, plural),
+	\+ tttt(Subject, Time, Idea, Object),
+	write("Warning: have idea_of(", Subject, ",", Idea, ").",
+	      " but not qqqq(tttt, ", Subject, ", ", Time,
+	      ", ",  Idea, ", ", Object, ").").
+
+check_conceptual_feeling_in_ideas1(Subject,Sa,T,L) :-
+	conceptual_feeling_in_ideas(Subject,Sa,T,L),
+	\+ person(Subject, N),
+	write("Error: have conceptual_feeling_in_ideas(",
+	      Subject, ", ",
+	      Sa, 
+	      ", ", T,
+	      ", ", L,
+	      " but not person(", S,
+	      ",", N, ")").
+
+
+check_dc1(Dc, Aos) :-
+	defining_characteristic(Dc),
+	\+ refer([Dc, Aos]),
+	write("Warning: Have defining_characteristic(",
+	      Dc, ") but not refer([", Dc, ", ", Aos,
+	      "]).").
+
+check_idea_of_1(Subject, Idea) :-
+	idea_of(Subject, Idea),
+	\+ rrrr(Subject, T, W, Idea),
+	write("Warning: Have idea_of(",
+	      Subject, ",", Idea, ") but not",
+	      "rrrr(", Subject, "and that idea").
+	
+check_idea_of_2(Subject, Idea) :-
+	idea_of(Subject, Idea),
+	\+ ssss(Subject, T, Idea, Object),
+	\+ tttt(Subject, T, Idea, Object),
+	write("Warning: Have idea_of(",
+	      Subject, ",", Idea, ") but not",
+	      "ssss(", Subject, "and that idea",
+	      "nor tttt(", Subject, "and that idea").
+	
+check_corefer(Item1, Item2) :-
+	defining_characteristic(Item1),
+%	write("Hello1",Item1),nl,
+	defining_characteristic(Item2),
+%	write("Hello2",Item2),nl,
+	corefer(Item1, Item2, []).
