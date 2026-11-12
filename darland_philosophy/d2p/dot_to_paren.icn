@@ -100,7 +100,19 @@ procedure process()
          if echo = 1 then {
             write(linein)
             write(" ")
+            process2(linein)
             }
+         }
+      else {
+         if echo = 1 then {
+            write(linein)
+            write(" ")
+            next
+               }
+         }
+      }
+end
+procedure process2(linein)
          a := find(dot, linein)
 #         b := find(and, linein)
           linein ? ((front := tab(a)) & (linein := tab(0)))  
@@ -222,7 +234,7 @@ procedure process()
          if (POLISH_INCLUDED = 1) then {
             to_Polish(lineout_sav)
             }
-         }
+         
    #         else { 
    #           linein_sav := linein
    #           write(linein)               
@@ -230,7 +242,7 @@ procedure process()
    #              to_Polish(linein)
    #              }
    #           }
-      }
+      
 end
 
 procedure avoid(linein,sno,val) # avoid should not occur in line

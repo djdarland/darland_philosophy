@@ -10,9 +10,9 @@ echo "-----------"
 
 echo "01 Edit dot_to_paren.icn"
 echo "02 Edit fix_too_long.icn"
-echo "03 Edit newdemo.tex"
+echo "03 Edit pmdemo.tex"
 echo "04 Edit arith_no_incomplete_symbols.tex"
-echo "05 Run d2p.sh on newdemo.tex"
+echo "05 Run d2p.sh on pmdemo.tex"
 echo "06 Run d2pl.sh on arith_no_incomplete_symbols.tex"
 echo "07 Edit d2p.sh"
 echo "08 Edit d2pl.sh"
@@ -35,7 +35,7 @@ do
 case $select in
 01) $EDITOR dot_to_paren.icn;;
 02) $EDITOR fix_too_long.icn;;
-03) $EDITOR newdemo.tex;;
+03) $EDITOR pmdemo.tex;;
 04) $EDITOR arith_no_incomplete_symbols.tex;;
 05) ./t4;;
 06) ./t3;;
@@ -48,9 +48,9 @@ case $select in
 esac
 echo "01 Edit dot_to_paren.icn"
 echo "02 Edit fix_too_long.icn"
-echo "03 Edit newdemo.tex"
+echo "03 Edit pmdemo.tex"
 echo "04 Edit arith_no_incomplete_symbols.tex"
-echo "05 Run d2p.sh on newdemo.tex"
+echo "05 Run d2p.sh on pmdemo.tex"
 echo "06 Run d2pl.sh on arith_no_incomplete_symbols.tex"
 echo "07 Edit d2p.sh"
 echo "08 Edit d2pl.sh"

@@ -10,3 +10,15 @@ sudo apt install texlive-xetex
 sudo apt install dot2tex
 sudo apt install texlive-pictures-doc
 sudo apt install graphviz-doc
+
+11/7/2026 added below as suggested from above
+debhelper
+texlive-binaries-sse2
+hintview
+wp2latex
+texlive-latex-extra-doc
+texlive-science
+gsfonts
+gnu-standards
+gfortran
+gfortran-doc
