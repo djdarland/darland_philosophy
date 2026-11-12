@@ -558,7 +558,8 @@ procedure analyze(first_dots, linein)
    # write("% Original = ", linein)
    write(" ")
    lineout := ""
-   ddd := find("^", linein)
+   ddd := find("^", linein) 
+#   if /ddd then ddd := 1
    linein ? ((front  := tab(ddd)) & (linework := tab(0)))  
    linein := linework
 
