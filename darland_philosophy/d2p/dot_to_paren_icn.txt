@@ -8,7 +8,7 @@ $define LUK 1
 $define POLISH_INCLUDED 1
 $define BEGIN "%begin"
 
-global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, max_exe, delim_q2, delim_l2, max_iter, stk, reverse_polish, head
+global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, max_exe, delim_q2, delim_l2, max_iter, stk, reverse_polish, head, qiddf
 
 procedure main()
 # next 2 lines used to get debugging from unicon
@@ -46,6 +46,7 @@ procedure init()
    qall :=   "\\pmall{"
    qdsc :=   "\\dsc{"
    qor := "\\pmor"
+   qiddf := "\\pmiddf"
    qimp := "\\pmimp"
    qiff := "\\pmiff"
 
@@ -169,6 +170,16 @@ procedure process2(linein)
          # Next change dots associated with truth functions 
          # other than conjunction to "." before - "^" after
          # Group I on page 9 to *56         
+         linein := sub_ldot(linein, qiddf, dotttttt,   (" " || repl(".", 6 + lextra) || " "))
+         linein := sub_ldot(linein, qiddf, dottttt,   (" " || repl(".", 5 + lextra) || " "))
+         linein := sub_ldot(linein, qiddf, dotttt,   (" " || repl(".", 4 + lextra) || " "))
+         linein := sub_ldot(linein, qiddf, dottt,   (" " || repl(".", 3 + lextra) || " "))
+         linein := sub_ldot(linein, qiddf, dott,   (" " || repl(".", 2 + lextra) || " "))
+         linein := sub_ldot(linein, qiddf, dot,   (" " || repl(".", 1 + lextra) || " "))
+         linein := sub_ldot(linein, qiddf, " ",   (" " || repl(".", lextra) || " "))
+         # Next change "TEMP" back to or symbol
+#         # write("% POST03 linein = after or", linein)
+         linein := sub_temp(linein, qiddf)
          linein := sub_ldot(linein, qor, dotttttt,   (" " || repl(".", 6 + lextra) || " "))
          linein := sub_ldot(linein, qor, dottttt,   (" " || repl(".", 5 + lextra) || " "))
          linein := sub_ldot(linein, qor, dotttt,   (" " || repl(".", 4 + lextra) || " "))
@@ -547,7 +558,8 @@ procedure analyze(first_dots, linein)
    # write("% Original = ", linein)
    write(" ")
    lineout := ""
-   ddd := find("^", linein)
+   ddd := find("^", linein) 
+#   if /ddd then ddd := 1
    linein ? ((front  := tab(ddd)) & (linework := tab(0)))  
    linein := linework
 
@@ -635,9 +647,10 @@ procedure op_symbol(symbol, pm_or_luk)
       LUK:
          case stripped(symbol) of {
             "pmimp\\" : return " C "
-            "dnal\\" : return " K "
+            "dnamp\\" : return " K "
             "ffimp\\" : return " E "
             "romp\\" : return " A "
+            "fddimp\\" : return " = "
             "tonmp\\" : return " N "
             default: return symbol
             }
@@ -762,6 +775,9 @@ procedure get_operator(infix)
                (it2 := tab(match("pmimp\\")))) then
       return it1 || it2
    if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("fddimp\\")))) then
+      return it1 || it2
+   if infix ? (it1 := (tab(many(' ')) | "") & 
                (it2 := tab(match("romp\\")))) then
       return it1 || it2
    if infix ? (it1 := (tab(many(' ')) | "") & 
@@ -795,6 +811,9 @@ end
 procedure is_operator(infix)
    if infix ? (it1 := (tab(many(' ')) | "") & 
                (it2 := tab(match("pmimp\\")))) then
+      return it1 || it2
+   if infix ? (it1 := (tab(many(' ')) | "") & 
+               (it2 := tab(match("ffdimp\\")))) then
       return it1 || it2
    if infix ? (it1 := (tab(many(' ')) | "") & 
                (it2 := tab(match("romp\\")))) then

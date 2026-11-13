@@ -724,26 +724,30 @@ According to PM to *56, page 9.
 ``The use of dots. Dots on the line of the symbols have two uses, one to bracket off propositions, the other to indicate the logical product of two propositions. Dots immediately preceded or followed by ``$\pmor$'' or ``$\pmimp$'' or ``$\pmiff$'' or ``$\pmthm$'' or by ``$\pmall{x}$'', ``$\pmall{x,y},'' ``\pmall{x,y,z}$'' ... or ``$\pmsome{x},''$
 $``\pmsome{x,y},'' ``\pmsome{x,y,z}$''... or ``[$\pmdsc{x}(\pmpf{\phi}{x})$]'' or ``[$\pmdscf{R}{y}$]'' or analogous expressions , serve to bracket off a proposition ; dots occurring otherwise serve to mark a logical product. The general principle is that a larger number of dots indicates an outside bracket, a smaller number indicates an inside bracket. The exact rule as to the scope of the bracket indicated by dots is arrived at by dividing the occurrences of dots into three groups which we will name I, II, and III. Group I consists of dots adjoining a sign of implication ($\pmimp$) or of equivalence ($\pmiff$) or of disjunction ($\pmor$) or of equality by definition ($\pmiddf\pmdf$). Group II consists of dots following brackets indicative of an apparent variable such as $\pmall{x}$ or $\pmall{x,y}$ or $\pmsome{x}$ or $\pmsome{x,y}$ or [$\pmdsc{x}(\pmpf{\phi}{x})$]. Group III consists of dots which stand between propositions in order to indicate a logical product. The scope of the bracket indicated by any collection of dots extends backwards or forwards beyond any smaller number of dots, or any equal number from a group of less force, until we reach either the end of the asserted proposition or a  greater number of dots or an equal number belonging to a group of equal or superior force. Dots indicating a logical product have a scope which works both backwards and forwards; other dots only work away from the adjacent sign of disjunction, implication, or equivalence, or forward from the adjacent symbol of one of the other kinds enumerated in Group II.''
 
+I intend to approach this as analogous to compiler design. I believe what I already did is OK so far as lexical analysis. I need to write a Chomsky grammar for PM (so far as concerns dots).
+
+Let A be dots of type I, B be dots of type II, and C be dots of type III.
+
+First (without quantifiers)
+
+Let P be a proposition, and O be any truth function other than conjunction.
+
+T be a Term, and F be a factor.
+
+P1 -> P2 A1 O A2 T1,
+where the dots in A1 exceeds those in P2 and those in A2 exceed those in T1
+
+P1 -> T1
+
+T1 -> T2 C F1,
+where the dots in C exceed those in T2 or F1
+
+T1 -> F1
 
 $\pmast 1 \pmcdot 01 \pmthm p \pmimp q \pmdot \pmiddf \pmdot \pmnot p \pmor q $
 
 *1.01 Cpq=ANpq
 
-$\pmast 1 \pmcdot 011 \pmthm p \pmimp q \pmiddf \pmdot \pmnot p \pmor q $
-
-*1.011 Cpq=ANpq
-
-$\pmast 1 \pmcdot 012 \pmthm p \pmimp \pmdot \pmiff \pmdot \pmnot p \pmor q $
-
-*1.012 CpqEANpq
-
-$\pmast 1 \pmcdot 013 \pmthm p \pmimp q \pmiff \pmdot \pmnot p \pmor q $
-
-*1.013 CpqEANpq
-
-$\pmast 1 \pmcdot 014 \pmthm p \pmdot \pmimp q \pmiff \pmdot \pmnot p \pmor q $
-
-*1.014 CpqEANpq
 
 $\pmast 1 \pmcdot 2 \pmthm \pmdott p \pmor p \pmdot \pmimp \pmdot p $
 
