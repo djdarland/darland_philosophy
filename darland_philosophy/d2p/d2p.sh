@@ -13,8 +13,10 @@ if [ $? -eq 0 ]; then
 else
     echo "Dot to paren error"
     $EDITOR djd2
+    $EDITOR djd_dbg.txt
     exit
 fi
+$EDITOR djd2
 # $EDITOR $1_p.djd.tex
 pdflatex $1.tex
 pdflatex $1_p.djd.tex

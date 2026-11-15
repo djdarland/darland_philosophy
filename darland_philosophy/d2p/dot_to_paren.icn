@@ -1,17 +1,14 @@
 # Copyright (c) 2023, 2025 Dennis J. Darland - All Rights Reserved
-$define NO_PRECEDENCE 0
-$define CONJUNCTION_LOW_PRECEDENCE 2
-$define CONJUNCTION_HIGH_PRECEDENCE 1
 $define MAX_LOOP 50000000000
 $define PM 0
 $define LUK 1
 $define POLISH_INCLUDED 1
 $define BEGIN "%begin"
 
-global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, max_exe, delim_q2, delim_l2, max_iter, stk, reverse_polish, head, qiddf
+global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, max_exe, delim_q2, delim_l2, max_iter, stk, reverse_polish, head, qiddf, dots_grp, dbg
 
 procedure main()
-# next 2 lines used to get debugging from unicon
+   # next 2 lines used to get debugging from unicon
    &trace := 100000  # how many function calls to trace
    &dump := 1 # nonzero turns on termination dump
    init() 
@@ -19,6 +16,14 @@ procedure main()
    finish()
 end
 procedure init()
+   dbg := open("djd_dbg.txt", "w")
+   # ? For leading dot.
+   # . For dot before truth function (other than conjunction)
+   # ^ for dot after  truth function (other than conjunction)
+   # ! For dot before quantifier
+   # % For dot after quantifier
+   # ; For dots as conjunction
+   
    max_iter := MAX_LOOP
    max_exe := 10000000
    lextra := 2
@@ -49,10 +54,18 @@ procedure init()
    qiddf := "\\pmiddf"
    qimp := "\\pmimp"
    qiff := "\\pmiff"
-
+   
+   rqexist :=   "{emosmp\\"
+   rqall :=   "{llamp\\"
+   rqdsc :=   "{csd\\"
+   rqor := "romp\\"
+   rqiddf := "fddimp\\"
+   rqimp := "pmimp\\"
+   rqiff := "ffimp\\"
+   
    sno_s := table(0)
    val_s := table(0)
-
+   
    val_s[1] := "."
    sno_s[1] := "@SNO.@" # Not expected in linein - may be changed if conflict
    val_s[2] := "^"
@@ -84,12 +97,14 @@ procedure init()
    while line := read() do {
       write(line)
       if line == BEGIN then break
-      }
+         }
 end
 
 procedure finish()
+   close(dbg)
    write("\\end{document}")
 end
+
 procedure process()
    while linein := read() do { # read from standard in
       lineno +:= 1
@@ -114,138 +129,144 @@ procedure process()
       }
 end
 procedure process2(linein)
-         a := find(dot, linein)
-#         b := find(and, linein)
-          linein ? ((front := tab(a)) & (linein := tab(0)))  
-         # avoid any conflicts 
-         av := 1
-         while av <= *sno_s do {
-            linein := avoid(linein,sno_s[av],val_s[av])
-            av +:= 1
-            }
-         # write("%% HERE linein = ", linein)
-         ## Next change possible leading dots
-         if lineout := sub_dot_leading(linein, dotttttt, " ^^^^^^ ")
-         then linein := lineout
-         else if lineout := sub_dot_leading(linein, dottttt,  " ^^^^^")
-         then linein := lineout
-         else if lineout := sub_dot_leading(linein, dotttt,   " ^^^^ ")
-         then linein := lineout
-         else if lineout := sub_dot_leading(linein, dottt,    " ^^^ ")
-         then linein := lineout
-         else if lineout := sub_dot_leading(linein, dott,     " ^^ ")
-         then linein := lineout
-         else if lineout := sub_dot_leading(linein, dot,      " ^ ") 
-         then linein := lineout
-         # first change dots associated with quantifiers with to "!"
-         # quantifiers must come first 
-         # if not first they would already be changed to wrong value
-         # also changes quantifier symbol to "TEMP" - to avoid getting stuck
-         # would be better to find someting other than "TEMP"
-         # longer number of dots done first
-             # this is Group  II on page 9 of to *56
-             # ! before quantifier % after
-             linein := sub_qdot(linein, qexist, dotttttt,   (" " || repl("!", 6 + qextra) || " "))
-         linein := sub_qdot(linein, qexist, dottttt,   (" " || repl("!", 5 + qextra) || " "))
-         linein := sub_qdot(linein, qexist, dotttt,   (" " || repl("!", 4 + qextra) || " "))
-         linein := sub_qdot(linein, qexist, dottt,   (" " || repl("!", 3 + qextra) || " "))
-         linein := sub_qdot(linein, qexist, dott,   (" " || repl("!", 2 + qextra) || " "))
-         linein := sub_qdot(linein, qexist, dot,   (" " || repl("!", 1 + qextra) || " "))
-         linein := sub_qdot(linein, qexist, " ",   (" " || repl("!", qextra) || " "))
-         # Next change "TEMP" back to quantifier symbol
-         linein := sub_temp(linein, qexist)
+   write(dbg, "top process2 linein = ", linein)
+
+   a := find(dot, linein)
+   #         b := find(and, linein)
+   linein ? ((front := tab(a)) & (linein := tab(0))) 
+   write(dbg, "AAAA01 front = ", front)
+   write(dbg, "AAAA01 linein = ", linein) 
+   # avoid any conflicts 
+   av := 1
+   while av <= *sno_s do {
+      linein := avoid(linein,sno_s[av],val_s[av])
+      av +:= 1
+      }
+   # write("%% HERE linein = ", linein)
+   ## Next change possible leading dots
+   if lineout := sub_dot_leading(linein, dotttttt, " ?????? ")
+   then linein := lineout
+   else if lineout := sub_dot_leading(linein, dottttt,  " ????? ")
+   then linein := lineout
+   else if lineout := sub_dot_leading(linein, dotttt,   " ???? ")
+   then linein := lineout
+   else if lineout := sub_dot_leading(linein, dottt,    " ??? ")
+   then linein := lineout
+   else if lineout := sub_dot_leading(linein, dott,     " ?? ")
+   then linein := lineout
+         else if lineout := sub_dot_leading(linein, dot,      " ? ") 
+   then linein := lineout
+
+   write(dbg, "after sub ? for leading dots linein = ", linein)
+   # first change dots associated with quantifiers with to "!"
+   # quantifiers must come first 
+   # if not first they would already be changed to wrong value
+   # also changes quantifier symbol to "TEMP" - to avoid getting stuck
+   # would be better to find someting other than "TEMP"
+   # longer number of dots done first
+   # this is Group  II on page 9 of to *56
+   # ! before quantifier % after
+   linein := sub_qdot(linein, qexist, dotttttt,   (" " || repl("!", 6 + qextra) || " "))
+   linein := sub_qdot(linein, qexist, dottttt,   (" " || repl("!", 5 + qextra) || " "))
+   linein := sub_qdot(linein, qexist, dotttt,   (" " || repl("!", 4 + qextra) || " "))
+   linein := sub_qdot(linein, qexist, dottt,   (" " || repl("!", 3 + qextra) || " "))
+   linein := sub_qdot(linein, qexist, dott,   (" " || repl("!", 2 + qextra) || " "))
+   linein := sub_qdot(linein, qexist, dot,   (" " || repl("!", 1 + qextra) || " "))
+   linein := sub_qdot(linein, qexist, " ",   (" " || repl("!", qextra) || " "))
+   # Next change "TEMP" back to quantifier symbol
+   linein := sub_temp(linein, qexist)
 #         # write("% POST01 linein after exist = ", linein)
-
-         linein := sub_qdot(linein, qall, dotttttt,   (" " || repl("!",6 + qextra) || " "))
-         linein := sub_qdot(linein, qall, dottttt,   (" " || repl("!",5 + qextra) || " "))
-         linein := sub_qdot(linein, qall, dotttt,   (" " || repl("!",4 + qextra) || " "))
-         linein := sub_qdot(linein, qall, dottt,   (" " || repl("!",3 + qextra) || " "))
-         linein := sub_qdot(linein, qall, dott,   (" " || repl("!",2 + qextra) || " "))
-         linein := sub_qdot(linein, qall, dot,   (" " || repl("!",1 + qextra) || " "))
-         linein := sub_qdot(linein, qall, " ",   (" " || repl("!", qextra) || " "))
-         # Next change "TEMP" back to quantifier symbol
-         linein := sub_temp(linein, qall)
-#         # write("% POST02 linein after all  = ", linein)
-
-         # Next change dots associated with truth functions 
+   
+   linein := sub_qdot(linein, qall, dotttttt,   (" " || repl("!",6 + qextra) || " "))
+   linein := sub_qdot(linein, qall, dottttt,   (" " || repl("!",5 + qextra) || " "))
+   linein := sub_qdot(linein, qall, dotttt,   (" " || repl("!",4 + qextra) || " "))
+   linein := sub_qdot(linein, qall, dottt,   (" " || repl("!",3 + qextra) || " "))
+   linein := sub_qdot(linein, qall, dott,   (" " || repl("!",2 + qextra) || " "))
+   linein := sub_qdot(linein, qall, dot,   (" " || repl("!",1 + qextra) || " "))
+   linein := sub_qdot(linein, qall, " ",   (" " || repl("!", qextra) || " "))
+   # Next change "TEMP" back to quantifier symbol
+   linein := sub_temp(linein, qall)
+   #         # write("% POST02 linein after all  = ", linein)
+   
+   # Next change dots associated with truth functions 
          # other than conjunction to "." before - "^" after
-         # Group I on page 9 to *56         
-         linein := sub_ldot(linein, qiddf, dotttttt,   (" " || repl(".", 6 + lextra) || " "))
-         linein := sub_ldot(linein, qiddf, dottttt,   (" " || repl(".", 5 + lextra) || " "))
-         linein := sub_ldot(linein, qiddf, dotttt,   (" " || repl(".", 4 + lextra) || " "))
-         linein := sub_ldot(linein, qiddf, dottt,   (" " || repl(".", 3 + lextra) || " "))
-         linein := sub_ldot(linein, qiddf, dott,   (" " || repl(".", 2 + lextra) || " "))
-         linein := sub_ldot(linein, qiddf, dot,   (" " || repl(".", 1 + lextra) || " "))
-         linein := sub_ldot(linein, qiddf, " ",   (" " || repl(".", lextra) || " "))
-         # Next change "TEMP" back to or symbol
-#         # write("% POST03 linein = after or", linein)
-         linein := sub_temp(linein, qiddf)
-         linein := sub_ldot(linein, qor, dotttttt,   (" " || repl(".", 6 + lextra) || " "))
-         linein := sub_ldot(linein, qor, dottttt,   (" " || repl(".", 5 + lextra) || " "))
-         linein := sub_ldot(linein, qor, dotttt,   (" " || repl(".", 4 + lextra) || " "))
-         linein := sub_ldot(linein, qor, dottt,   (" " || repl(".", 3 + lextra) || " "))
-         linein := sub_ldot(linein, qor, dott,   (" " || repl(".", 2 + lextra) || " "))
-         linein := sub_ldot(linein, qor, dot,   (" " || repl(".", 1 + lextra) || " "))
-         linein := sub_ldot(linein, qor, " ",   (" " || repl(".", lextra) || " "))
-         # Next change "TEMP" back to or symbol
-#         # write("% POST03 linein = after or", linein)
-         linein := sub_temp(linein, qor)
-         linein := sub_ldot(linein, qimp, dotttttt,   (" " || repl(".", 6 + lextra)  || " "))
-         linein := sub_ldot(linein, qimp, dottttt,   (" " || repl(".", 5 + lextra) || " "))
-         linein := sub_ldot(linein, qimp, dotttt,   (" " || repl(".", 4 + lextra) || " "))
-         linein := sub_ldot(linein, qimp, dottt,   (" " || repl(".", 3 + lextra) || " "))
-         linein := sub_ldot(linein, qimp, dott,   (" " || repl(".", 2 + lextra) || " "))
-         linein := sub_ldot(linein, qimp, dot,   (" " || repl(".", 1 + lextra) || " "))
-         linein := sub_ldot(linein, qimp, " ",   (" " || repl(".", lextra) || " "))
-         # Next change "TEMP" back to imp symbol
-         linein := sub_temp(linein, qimp)
-#         # write("% POST04 linein after imp = ", linein)
-         linein := sub_ldot(linein, qiff, dotttttt,   (" " || repl(".", 6 + lextra) || " "))
-         linein := sub_ldot(linein, qiff, dottttt,   (" " || repl(".", 5 + lextra) || " "))
-         linein := sub_ldot(linein, qiff, dotttt,   (" " || repl(".", 4 + lextra) || " "))
-         linein := sub_ldot(linein, qiff, dottt,   (" " || repl(".", 3 + lextra) || " "))
-         linein := sub_ldot(linein, qiff, dott,   (" " || repl(".", 2 + lextra) || " "))
-         linein := sub_ldot(linein, qiff, dot,   (" " || repl(".", 1 + lextra) || " "))
-         linein := sub_ldot(linein, qiff, " ",   (" " || repl(".", lextra) || " "))
-         # Next change "TEMP" back to quantifier symbol
-         linein := sub_temp(linein, qiff)
-#         # write("% POST05 linein after iff = ", linein)
+   # Group I on page 9 to *56         
+   linein := sub_ldot(linein, qiddf, dotttttt,   (" " || repl(".", 6 + lextra) || " "))
+   linein := sub_ldot(linein, qiddf, dottttt,   (" " || repl(".", 5 + lextra) || " "))
+   linein := sub_ldot(linein, qiddf, dotttt,   (" " || repl(".", 4 + lextra) || " "))
+   linein := sub_ldot(linein, qiddf, dottt,   (" " || repl(".", 3 + lextra) || " "))
+   linein := sub_ldot(linein, qiddf, dott,   (" " || repl(".", 2 + lextra) || " "))
+   linein := sub_ldot(linein, qiddf, dot,   (" " || repl(".", 1 + lextra) || " "))
+   linein := sub_ldot(linein, qiddf, " ",   (" " || repl(".", lextra) || " "))
+   # Next change "TEMP" back to or symbol
+   #         # write("% POST03 linein = after or", linein)
+   linein := sub_temp(linein, qiddf)
+   linein := sub_ldot(linein, qor, dotttttt,   (" " || repl(".", 6 + lextra) || " "))
+   linein := sub_ldot(linein, qor, dottttt,   (" " || repl(".", 5 + lextra) || " "))
+   linein := sub_ldot(linein, qor, dotttt,   (" " || repl(".", 4 + lextra) || " "))
+   linein := sub_ldot(linein, qor, dottt,   (" " || repl(".", 3 + lextra) || " "))
+   linein := sub_ldot(linein, qor, dott,   (" " || repl(".", 2 + lextra) || " "))
+   linein := sub_ldot(linein, qor, dot,   (" " || repl(".", 1 + lextra) || " "))
+   linein := sub_ldot(linein, qor, " ",   (" " || repl(".", lextra) || " "))
+   # Next change "TEMP" back to or symbol
+   #         # write("% POST03 linein = after or", linein)
+   linein := sub_temp(linein, qor)
+   linein := sub_ldot(linein, qimp, dotttttt,   (" " || repl(".", 6 + lextra)  || " "))
+   linein := sub_ldot(linein, qimp, dottttt,   (" " || repl(".", 5 + lextra) || " "))
+   linein := sub_ldot(linein, qimp, dotttt,   (" " || repl(".", 4 + lextra) || " "))
+   linein := sub_ldot(linein, qimp, dottt,   (" " || repl(".", 3 + lextra) || " "))
+   linein := sub_ldot(linein, qimp, dott,   (" " || repl(".", 2 + lextra) || " "))
+   linein := sub_ldot(linein, qimp, dot,   (" " || repl(".", 1 + lextra) || " "))
+   linein := sub_ldot(linein, qimp, " ",   (" " || repl(".", lextra) || " "))
+   # Next change "TEMP" back to imp symbol
+   linein := sub_temp(linein, qimp)
+   #         # write("% POST04 linein after imp = ", linein)
+   linein := sub_ldot(linein, qiff, dotttttt,   (" " || repl(".", 6 + lextra) || " "))
+   linein := sub_ldot(linein, qiff, dottttt,   (" " || repl(".", 5 + lextra) || " "))
+   linein := sub_ldot(linein, qiff, dotttt,   (" " || repl(".", 4 + lextra) || " "))
+   linein := sub_ldot(linein, qiff, dottt,   (" " || repl(".", 3 + lextra) || " "))
+   linein := sub_ldot(linein, qiff, dott,   (" " || repl(".", 2 + lextra) || " "))
+   linein := sub_ldot(linein, qiff, dot,   (" " || repl(".", 1 + lextra) || " "))
+   linein := sub_ldot(linein, qiff, " ",   (" " || repl(".", lextra) || " "))
+   # Next change "TEMP" back to quantifier symbol
+   linein := sub_temp(linein, qiff)
+   #         # write("% POST05 linein after iff = ", linein)
+   
 
-
-         # Next change dots associated with conjunction to ";"
-         # Group III on page 9 to *56
-         linein := sub_dot(linein, andddddd, ";;;;;; \\land ::::::")
-         linein := sub_dot(linein, anddddd,  ";;;;; \\land :::::")
-         linein := sub_dot(linein, andddd,   ";;;; \\land ::::")
-         linein := sub_dot(linein, anddd,    ";;; \\land :::")
-         linein := sub_dot(linein, andd,     ";; \\land ::")
-         linein := sub_dot(linein, and,      "; \\land :")
-#         # write("% POST06 linein after and = ", linein)
-         linein := front || linein
-         # next compute number of left parens to start with
+   # Next change dots associated with conjunction to ";"
+   # Group III on page 9 to *56
+   linein := sub_dot(linein, andddddd, ";;;;;; \\land ::::::")
+   linein := sub_dot(linein, anddddd,  ";;;;; \\land :::::")
+   linein := sub_dot(linein, andddd,   ";;;; \\land ::::")
+   linein := sub_dot(linein, anddd,    ";;; \\land :::")
+   linein := sub_dot(linein, andd,     ";; \\land ::")
+   linein := sub_dot(linein, and,      "; \\land :")
+   #         # write("% POST06 linein after and = ", linein)
+   linein := front || linein
+   # next compute number of left parens to start with
          # total number of "!" or "."
-         # ";" is neutral - produces same number of right or left paren
-         # Later as analyze keep track of open and close paren
-         # and add enough close paren to balance
-         first_dots := scan(linein)
-         # write("% before analyze linein = ", linein)
-         # see comments within analyze
-         lineout := analyze(first_dots, linein)
-         # finally remove as many paren from left and right as possibe
-         # we will have started with more opening paren than needed
-         lineout := trim_excess(lineout)
-         av := 1
-         while av <= *sno_s do {
-            restore_avoided(linein,sno_s[av],val_s[av]) # avoid should not occur in line
-            av +:= 1
-            }
-         lineout_sav := lineout
-         write(lineout)
-         write("")
-         if (POLISH_INCLUDED = 1) then {
-            to_Polish(lineout_sav)
-            }
-         
+   # ";" is neutral - produces same number of right or left paren
+   # Later as analyze keep track of open and close paren
+   # and add enough close paren to balance
+   first_dots := scan(linein)
+   # write("% before analyze linein = ", linein)
+   # see comments within analyze
+   lineout := analyze(first_dots, linein)
+   # finally remove as many paren from left and right as possibe
+   # we will have started with more opening paren than needed
+   lineout := trim_excess(lineout)
+   av := 1
+   while av <= *sno_s do {
+      restore_avoided(linein,sno_s[av],val_s[av]) # avoid should not occur in line
+      av +:= 1
+      }
+   lineout_sav := lineout
+   write(lineout)
+   write("")
+   if (POLISH_INCLUDED = 1) then {
+      to_Polish(lineout_sav)
+      }
+   
    #         else { 
    #           linein_sav := linein
    #           write(linein)               
@@ -253,7 +274,7 @@ procedure process2(linein)
    #              to_Polish(linein)
    #              }
    #           }
-      
+   
 end
 
 procedure avoid(linein,sno,val) # avoid should not occur in line
@@ -851,3 +872,28 @@ procedure stripped(in)
    return out
 end
 
+procedure max_dots(linein)
+#   linein ? 
+
+
+end
+
+procedure type_group_max(linein, location) 
+end
+
+procedure location_first_max_dots(linein)
+
+
+end
+
+# location_
+
+procedure prior_ge_dots(linein, location, count)
+
+
+end
+
+procedure subequent_ge_dots(linein, location, count)
+
+
+end

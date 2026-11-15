@@ -19,6 +19,10 @@ echo "08 Edit d2pl.sh"
 echo "11 Edit pm_phil_of_logic.tex"
 echo "22 Run d2p.sh on pm_phil_of_logic.tex"
 echo "33 Run d2p_short.sh on pm_phil_of_logic.tex"
+echo "91 Edit dot_to_paren_old.icn"
+echo "95 Run d2p_old.sh on pmdemo.tex"
+echo "97 Edit d2p_old.sh"
+
 
 echo "-----------"
 echo "500 NO_WARANTY.txt"
@@ -44,6 +48,10 @@ case $select in
 11) $EDITOR pm_phil_logic.tex;;
 22) ./d2p.sh pm_phil_logic ;;
 33) ./d2p_short.sh pm_phil_logic ;;
+91) $EDITOR dot_to_paren_old.icn;;
+95) ./t4_old;;
+97) $EDITOR d2p_old.sh;;
+98) $EDITOR pmdemo_sav.tex;;
 
 esac
 echo "01 Edit dot_to_paren.icn"
@@ -57,6 +65,9 @@ echo "08 Edit d2pl.sh"
 echo "11 Edit pm_phil_logic.sh"
 echo "22 Run d2p.sh on pm_phil_of_logic.tex"
 echo "33 Run d2p_short.sh on pm_phil_of_logic.tex"
+echo "91 Edit dot_to_paren_old.icn"
+echo "95 Run d2p_old.sh on pmdemo.tex"
+echo "97 Edit d2p_old.sh"
 
 echo "select"
 read select
