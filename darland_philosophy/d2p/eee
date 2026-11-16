@@ -8,20 +8,20 @@ echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions; type 501 for details."
 echo "-----------"
 
-echo "01 Edit dot_to_paren.icn"
+echo "01 Edit dot_to_paren_old.icn"
 echo "02 Edit fix_too_long.icn"
 echo "03 Edit pmdemo.tex"
 echo "04 Edit arith_no_incomplete_symbols.tex"
-echo "05 Run d2p.sh on pmdemo.tex"
+echo "05 Run d2p_old.sh on pmdemo.tex"
 echo "06 Run d2pl.sh on arith_no_incomplete_symbols.tex"
-echo "07 Edit d2p.sh"
+echo "07 Edit d2p_old.sh"
 echo "08 Edit d2pl.sh"
 echo "11 Edit pm_phil_of_logic.tex"
 echo "22 Run d2p.sh on pm_phil_of_logic.tex"
 echo "33 Run d2p_short.sh on pm_phil_of_logic.tex"
-echo "91 Edit dot_to_paren_old.icn"
-echo "95 Run d2p_old.sh on pmdemo.tex"
-echo "97 Edit d2p_old.sh"
+echo "91 Edit dot_to_paren.icn"
+echo "95 Run d2p.sh on pmdemo.tex"
+echo "97 Edit d2p.sh"
 
 
 echo "-----------"
@@ -37,37 +37,37 @@ read select
 while [ $select -ne 999 ]
 do 
 case $select in
-01) $EDITOR dot_to_paren.icn;;
+01) $EDITOR dot_to_paren_old.icn;;
 02) $EDITOR fix_too_long.icn;;
 03) $EDITOR pmdemo.tex;;
 04) $EDITOR arith_no_incomplete_symbols.tex;;
-05) ./t4;;
+05) ./t4_old;;
 06) ./t3;;
-07) $EDITOR d2p.sh;;
+07) $EDITOR d2p_old.sh;;
 08) $EDITOR d2pl.sh;;
 11) $EDITOR pm_phil_logic.tex;;
 22) ./d2p.sh pm_phil_logic ;;
 33) ./d2p_short.sh pm_phil_logic ;;
-91) $EDITOR dot_to_paren_old.icn;;
-95) ./t4_old;;
-97) $EDITOR d2p_old.sh;;
+91) $EDITOR dot_to_paren.icn;;
+95) ./t4;;
+97) $EDITOR d2p.sh;;
 98) $EDITOR pmdemo_sav.tex;;
 
 esac
-echo "01 Edit dot_to_paren.icn"
+echo "01 Edit dot_to_paren_old.icn"
 echo "02 Edit fix_too_long.icn"
 echo "03 Edit pmdemo.tex"
 echo "04 Edit arith_no_incomplete_symbols.tex"
-echo "05 Run d2p.sh on pmdemo.tex"
+echo "05 Run d2p_old.sh on pmdemo.tex"
 echo "06 Run d2pl.sh on arith_no_incomplete_symbols.tex"
-echo "07 Edit d2p.sh"
+echo "07 Edit d2p_old.sh"
 echo "08 Edit d2pl.sh"
-echo "11 Edit pm_phil_logic.sh"
+echo "11 Edit pm_phil_of_logic.tex"
 echo "22 Run d2p.sh on pm_phil_of_logic.tex"
 echo "33 Run d2p_short.sh on pm_phil_of_logic.tex"
-echo "91 Edit dot_to_paren_old.icn"
-echo "95 Run d2p_old.sh on pmdemo.tex"
-echo "97 Edit d2p_old.sh"
+echo "91 Edit dot_to_paren.icn"
+echo "95 Run d2p.sh on pmdemo.tex"
+echo "97 Edit d2p.sh"
 
 echo "select"
 read select
