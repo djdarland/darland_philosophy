@@ -674,7 +674,7 @@ procedure op_symbol(symbol, pm_or_luk)
       LUK:
          case stripped(symbol) of {
             "pmimp\\" : return " C "
-            "dnamp\\" : return " K "
+            "dnal\\" : return " K "
             "ffimp\\" : return " E "
             "romp\\" : return " A "
             "fddimp\\" : return " = "

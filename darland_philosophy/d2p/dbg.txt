@@ -3753,6 +3753,581 @@ C0015 infix =
 Exit to_Polish stmt below
   (  p \pmimp p )
 Enter to_Polish infix below
+$\pmast 2 \pmcdot 1 \pmthm  (  \pmnot p \pmor p )$
+A0001 head1 = $\pmast 2 \pmcdot 1 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 1 \pmthm
+A0004 stmt =   (  \pmnot p \pmor p )$
+A0005 reverse stmt = $) p romp\ p tonmp\  (  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ) p romp\ p tonmp\  (  
+infixToPolish B0001
+B002 infix =   (  \pmnot p \pmor p )
+B003 reverse infix = ) p romp\ p tonmp\  (  
+B004 iii = 1 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 2 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 3 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 4 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 5 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 6 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 7 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 8 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 9 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 10 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 11 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 12 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 13 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 14 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 15 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 16 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 17 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 18 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 19 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 20 *infix = 23
+B005 infix = ( p romp\ p tonmp\  (  
+B004 iii = 21 *infix = 23
+B005 infix = ( p romp\ p tonmp\  )  
+B004 iii = 22 *infix = 23
+B005 infix = ( p romp\ p tonmp\  )  
+B004 iii = 23 *infix = 23
+B005 infix = ( p romp\ p tonmp\  )  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ( p romp\ p tonmp\  )  
+C0002 *infix = 23
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( p romp\ p tonmp\  )  
+C0015 infix =  p romp\ p tonmp\  )  
+C0002 *infix = 22
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p romp\ p tonmp\  )  
+C0015 infix =  romp\ p tonmp\  )  
+C0002 *infix = 20
+C0003 nxt =  romp\
+C0008 *stk = 1
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p tonmp\  )  
+C0015 infix =  p tonmp\  )  
+C0002 *infix = 14
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p tonmp\  )  
+C0015 infix =  tonmp\  )  
+C0002 *infix = 12
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\  )  
+C0015 infix =   )  
+C0002 *infix = 5
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 2
+C0007 top_stack = romp\
+C0014 infix =   )  
+C0015 infix =   
+Exit to_Polish stmt below
+  (  \pmnot p \pmor p )
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 11 \pmthm  (  p \pmor \pmnot p )$
+A0001 head1 = $\pmast 2 \pmcdot 11 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 11 \pmthm
+A0004 stmt =   (  p \pmor \pmnot p )$
+A0005 reverse stmt = $) p tonmp\ romp\ p  (  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ) p tonmp\ romp\ p  (  
+infixToPolish B0001
+B002 infix =   (  p \pmor \pmnot p )
+B003 reverse infix = ) p tonmp\ romp\ p  (  
+B004 iii = 1 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 2 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 3 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 4 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 5 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 6 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 7 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 8 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 9 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 10 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 11 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 12 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 13 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 14 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 15 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 16 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 17 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 18 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 19 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 20 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  (  
+B004 iii = 21 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  )  
+B004 iii = 22 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  )  
+B004 iii = 23 *infix = 23
+B005 infix = ( p tonmp\ romp\ p  )  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ( p tonmp\ romp\ p  )  
+C0002 *infix = 23
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( p tonmp\ romp\ p  )  
+C0015 infix =  p tonmp\ romp\ p  )  
+C0002 *infix = 22
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p tonmp\ romp\ p  )  
+C0015 infix =  tonmp\ romp\ p  )  
+C0002 *infix = 20
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\ romp\ p  )  
+C0015 infix =  romp\ p  )  
+C0002 *infix = 13
+C0003 nxt =  romp\
+C0008 *stk = 1
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  )  
+C0015 infix =  p  )  
+C0002 *infix = 7
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  )  
+C0015 infix =   )  
+C0002 *infix = 5
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 2
+C0007 top_stack = romp\
+C0014 infix =   )  
+C0015 infix =   
+Exit to_Polish stmt below
+  (  p \pmor \pmnot p )
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 12 \pmthm  (  p \pmimp \pmnot \pmnot p )$
+A0001 head1 = $\pmast 2 \pmcdot 12 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 12 \pmthm
+A0004 stmt =   (  p \pmimp \pmnot \pmnot p )$
+A0005 reverse stmt = $) p tonmp\ tonmp\ pmimp\ p  (  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ) p tonmp\ tonmp\ pmimp\ p  (  
+infixToPolish B0001
+B002 infix =   (  p \pmimp \pmnot \pmnot p )
+B003 reverse infix = ) p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 1 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 2 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 3 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 4 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 5 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 6 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 7 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 8 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 9 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 10 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 11 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 12 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 13 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 14 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 15 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 16 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 17 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 18 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 19 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 20 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 21 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 22 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 23 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 24 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 25 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 26 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 27 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 28 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  (  
+B004 iii = 29 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  )  
+B004 iii = 30 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  )  
+B004 iii = 31 *infix = 31
+B005 infix = ( p tonmp\ tonmp\ pmimp\ p  )  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ( p tonmp\ tonmp\ pmimp\ p  )  
+C0002 *infix = 31
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( p tonmp\ tonmp\ pmimp\ p  )  
+C0015 infix =  p tonmp\ tonmp\ pmimp\ p  )  
+C0002 *infix = 30
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p tonmp\ tonmp\ pmimp\ p  )  
+C0015 infix =  tonmp\ tonmp\ pmimp\ p  )  
+C0002 *infix = 28
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\ tonmp\ pmimp\ p  )  
+C0015 infix =  tonmp\ pmimp\ p  )  
+C0002 *infix = 21
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\ pmimp\ p  )  
+C0015 infix =  pmimp\ p  )  
+C0002 *infix = 14
+C0003 nxt =  pmimp\
+C0008 *stk = 1
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ p  )  
+C0015 infix =  p  )  
+C0002 *infix = 7
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  )  
+C0015 infix =   )  
+C0002 *infix = 5
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 2
+C0007 top_stack = pmimp\
+C0014 infix =   )  
+C0015 infix =   
+Exit to_Polish stmt below
+  (  p \pmimp \pmnot \pmnot p )
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 13 \pmthm  (  p \pmor \pmnot \pmnot \pmnot p )$
+A0001 head1 = $\pmast 2 \pmcdot 13 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 13 \pmthm
+A0004 stmt =   (  p \pmor \pmnot \pmnot \pmnot p )$
+A0005 reverse stmt = $) p tonmp\ tonmp\ tonmp\ romp\ p  (  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ) p tonmp\ tonmp\ tonmp\ romp\ p  (  
+infixToPolish B0001
+B002 infix =   (  p \pmor \pmnot \pmnot \pmnot p )
+B003 reverse infix = ) p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 1 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 2 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 3 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 4 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 5 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 6 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 7 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 8 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 9 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 10 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 11 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 12 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 13 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 14 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 15 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 16 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 17 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 18 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 19 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 20 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 21 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 22 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 23 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 24 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 25 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 26 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 27 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 28 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 29 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 30 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 31 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 32 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 33 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 34 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  (  
+B004 iii = 35 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  )  
+B004 iii = 36 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  )  
+B004 iii = 37 *infix = 37
+B005 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  )  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  )  
+C0002 *infix = 37
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( p tonmp\ tonmp\ tonmp\ romp\ p  )  
+C0015 infix =  p tonmp\ tonmp\ tonmp\ romp\ p  )  
+C0002 *infix = 36
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p tonmp\ tonmp\ tonmp\ romp\ p  )  
+C0015 infix =  tonmp\ tonmp\ tonmp\ romp\ p  )  
+C0002 *infix = 34
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\ tonmp\ tonmp\ romp\ p  )  
+C0015 infix =  tonmp\ tonmp\ romp\ p  )  
+C0002 *infix = 27
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\ tonmp\ romp\ p  )  
+C0015 infix =  tonmp\ romp\ p  )  
+C0002 *infix = 20
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\ romp\ p  )  
+C0015 infix =  romp\ p  )  
+C0002 *infix = 13
+C0003 nxt =  romp\
+C0008 *stk = 1
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  )  
+C0015 infix =  p  )  
+C0002 *infix = 7
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  )  
+C0015 infix =   )  
+C0002 *infix = 5
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 2
+C0007 top_stack = romp\
+C0014 infix =   )  
+C0015 infix =   
+Exit to_Polish stmt below
+  (  p \pmor \pmnot \pmnot \pmnot p )
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 14 \pmthm  (  \pmnot \pmnot p \pmimp p )$
+A0001 head1 = $\pmast 2 \pmcdot 14 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 14 \pmthm
+A0004 stmt =   (  \pmnot \pmnot p \pmimp p )$
+A0005 reverse stmt = $) p pmimp\ p tonmp\ tonmp\  (  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ) p pmimp\ p tonmp\ tonmp\  (  
+infixToPolish B0001
+B002 infix =   (  \pmnot \pmnot p \pmimp p )
+B003 reverse infix = ) p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 1 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 2 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 3 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 4 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 5 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 6 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 7 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 8 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 9 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 10 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 11 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 12 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 13 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 14 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 15 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 16 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 17 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 18 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 19 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 20 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 21 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 22 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 23 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 24 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 25 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 26 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 27 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 28 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  (  
+B004 iii = 29 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  )  
+B004 iii = 30 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  )  
+B004 iii = 31 *infix = 31
+B005 infix = ( p pmimp\ p tonmp\ tonmp\  )  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ( p pmimp\ p tonmp\ tonmp\  )  
+C0002 *infix = 31
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( p pmimp\ p tonmp\ tonmp\  )  
+C0015 infix =  p pmimp\ p tonmp\ tonmp\  )  
+C0002 *infix = 30
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p pmimp\ p tonmp\ tonmp\  )  
+C0015 infix =  pmimp\ p tonmp\ tonmp\  )  
+C0002 *infix = 28
+C0003 nxt =  pmimp\
+C0008 *stk = 1
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ p tonmp\ tonmp\  )  
+C0015 infix =  p tonmp\ tonmp\  )  
+C0002 *infix = 21
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p tonmp\ tonmp\  )  
+C0015 infix =  tonmp\ tonmp\  )  
+C0002 *infix = 19
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\ tonmp\  )  
+C0015 infix =  tonmp\  )  
+C0002 *infix = 12
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\  )  
+C0015 infix =   )  
+C0002 *infix = 5
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 2
+C0007 top_stack = pmimp\
+C0014 infix =   )  
+C0015 infix =   
+Exit to_Polish stmt below
+  (  \pmnot \pmnot p \pmimp p )
+Enter to_Polish infix below
 $\pmast 2 \pmcdot 15 \pmthm  (((  \pmnot p \pmimp q  ))) \pmimp (((  \pmnot q \pmimp p )))$
 A0001 head1 = $\pmast 2 \pmcdot 15 \
 A0002 head2 = pmthm
@@ -4016,6 +4591,270 @@ C0016 *stk = 1
 C0017 top_stack() = pmimp\
 Exit to_Polish stmt below
   (((  \pmnot p \pmimp q  ))) \pmimp (((  \pmnot q \pmimp p )))
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 16 \pmthm  (((  p \pmimp q  ))) \pmimp (((  \pmnot q \pmimp \pmnot p )))$
+A0001 head1 = $\pmast 2 \pmcdot 16 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 16 \pmthm
+A0004 stmt =   (((  p \pmimp q  ))) \pmimp (((  \pmnot q \pmimp \pmnot p )))$
+A0005 reverse stmt = $))) p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ))) p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+infixToPolish B0001
+B002 infix =   (((  p \pmimp q  ))) \pmimp (((  \pmnot q \pmimp \pmnot p )))
+B003 reverse infix = ))) p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 1 *infix = 63
+B005 infix = ()) p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 2 *infix = 63
+B005 infix = (() p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 3 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 4 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 5 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 6 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 7 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 8 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 9 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 10 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 11 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 12 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 13 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 14 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 15 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 16 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 17 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 18 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 19 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 20 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 21 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 22 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 23 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 24 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 25 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 26 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 27 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 28 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 29 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 30 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ((( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 31 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  )(( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 32 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))( pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 33 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 34 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 35 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 36 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 37 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 38 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 39 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 40 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 41 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ )))  q pmimp\ p  (((  
+B004 iii = 42 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ ())  q pmimp\ p  (((  
+B004 iii = 43 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (()  q pmimp\ p  (((  
+B004 iii = 44 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 45 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 46 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 47 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 48 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 49 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 50 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 51 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 52 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 53 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 54 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 55 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 56 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 57 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 58 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  (((  
+B004 iii = 59 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )((  
+B004 iii = 60 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  ))(  
+B004 iii = 61 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+B004 iii = 62 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+B004 iii = 63 *infix = 63
+B005 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 63
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0015 infix = (( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 62
+C0003 nxt = (
+C0005 is (
+C0014 infix = (( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0015 infix = ( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 61
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0015 infix =  p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 60
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0015 infix =  tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 58
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\ pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0015 infix =  pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 51
+C0003 nxt =  pmimp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0015 infix =  q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 44
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0015 infix =  tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 42
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\  ))) pmimp\ (((  q pmimp\ p  )))  
+C0015 infix =   ))) pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 35
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = pmimp\
+C0014 infix =   ))) pmimp\ (((  q pmimp\ p  )))  
+C0015 infix = )) pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 32
+C0003 nxt = )
+C0006 is )
+C0014 infix = )) pmimp\ (((  q pmimp\ p  )))  
+C0015 infix = ) pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 31
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ (((  q pmimp\ p  )))  
+C0015 infix =  pmimp\ (((  q pmimp\ p  )))  
+C0002 *infix = 30
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ (((  q pmimp\ p  )))  
+C0015 infix =  (((  q pmimp\ p  )))  
+C0002 *infix = 23
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  (((  q pmimp\ p  )))  
+C0015 infix = ((  q pmimp\ p  )))  
+C0002 *infix = 21
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((  q pmimp\ p  )))  
+C0015 infix = (  q pmimp\ p  )))  
+C0002 *infix = 20
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  q pmimp\ p  )))  
+C0015 infix =   q pmimp\ p  )))  
+C0002 *infix = 19
+C0003 nxt =   q
+C0004 is operand
+C0014 infix =   q pmimp\ p  )))  
+C0015 infix =  pmimp\ p  )))  
+C0002 *infix = 16
+C0003 nxt =  pmimp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ p  )))  
+C0015 infix =  p  )))  
+C0002 *infix = 9
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  )))  
+C0015 infix =   )))  
+C0002 *infix = 7
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = pmimp\
+C0014 infix =   )))  
+C0015 infix = ))  
+C0002 *infix = 4
+C0003 nxt = )
+C0006 is )
+C0014 infix = ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Exit to_Polish stmt below
+  (((  p \pmimp q  ))) \pmimp (((  \pmnot q \pmimp \pmnot p )))
 Enter to_Polish infix below
 $\pmast 3 \pmcdot 47 \pmthm  (((  p \pmimp r ) \land ( q \pmimp s  ))) \pmimp ((((  p ) \land ( q  ))) \pmimp (((  r ) \land ( s ))))$
 A0001 head1 = $\pmast 3 \pmcdot 47 \
