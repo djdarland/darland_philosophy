@@ -747,7 +747,7 @@ procedure infixToReverse_Polish(infix, precedence_flag, pm_or_luk)
          write(dbg, "C0010 precedence(top_stack()) = ", precedence(top_stack()))
          write(dbg, "C0011 precedence(top_stack()) = ", precedence(nxt))
          write(dbg, "C0012 nxt = ", nxt)
-
+         
          while (*stk > 0 & (top_stack() ~== "(") & precedence(top_stack() >= precedence(nxt))) do {
             max_iter -:= 1
             if max_iter < 0 then exit()

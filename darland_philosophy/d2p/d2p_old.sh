@@ -12,10 +12,10 @@ if [ $? -eq 0 ]; then
     echo "Dot to paren worked"
 else
     echo "Dot to paren error"
+    $EDITOR djd2
+    $EDITOR dbg.txt
     exit
 fi
-$EDITOR djd2
-$EDITOR dbg.txt
 # $EDITOR $1_p.djd.tex
 pdflatex $1.tex
 pdflatex $1_p.djd.tex
