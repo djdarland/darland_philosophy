@@ -45,6 +45,7 @@ case $select in
 06) ./t3;;
 07) $EDITOR d2p_old.sh;;
 08) $EDITOR d2pl.sh;;
+09) $EDITOR dbg.txt;;
 11) $EDITOR pm_phil_logic.tex;;
 22) ./d2p.sh pm_phil_logic ;;
 33) ./d2p_short.sh pm_phil_logic ;;

@@ -23,7 +23,7 @@ procedure init()
    write(dbg, "Started Debugging")
    max_iter := MAX_LOOP
    max_exe := 10000000
-   lextra := 2
+   lextra := 1
    qextra := 1
    delim_l2 := ' abcdefghijklmnopqrstuvwxyz$\\'
    delim_q2 := ' abcdefghijklmnopqrstuvwxyz$\\'
@@ -223,12 +223,12 @@ procedure process2(linein)
    
    # Next change dots associated with conjunction to ";"
    # Group III on page 9 to *56
-   linein := sub_dot(linein, andddddd, ";;;;;; \\land ::::::")
-   linein := sub_dot(linein, anddddd,  ";;;;; \\land :::::")
-   linein := sub_dot(linein, andddd,   ";;;; \\land ::::")
-   linein := sub_dot(linein, anddd,    ";;; \\land :::")
-   linein := sub_dot(linein, andd,     ";; \\land ::")
-   linein := sub_dot(linein, and,      "; \\land :")
+   linein := sub_dot(linein, andddddd, ";;;;;; \\land :::::::")
+   linein := sub_dot(linein, anddddd,  ";;;;; \\land ::::::")
+   linein := sub_dot(linein, andddd,   ";;;; \\land :::::")
+   linein := sub_dot(linein, anddd,    ";;; \\land ::::")
+   linein := sub_dot(linein, andd,     ";; \\land :::")
+   linein := sub_dot(linein, and,      "; \\land ::")
    #         # write("% POST06 linein after and = ", linein)
    linein := front || linein
    # next compute number of left parens to start with
@@ -239,7 +239,10 @@ procedure process2(linein)
    first_dots := scan(linein)
    # write("% before analyze linein = ", linein)
    # see comments within analyze
+   write(dbg, "HERE BA li = ", linein)
    lineout := analyze(first_dots, linein)
+   write(dbg, "HERE AA li = ", lineout)
+   
    # finally remove as many paren from left and right as possibe
    # we will have started with more opening paren than needed
    lineout := trim_excess(lineout)

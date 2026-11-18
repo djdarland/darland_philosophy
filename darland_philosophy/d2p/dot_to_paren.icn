@@ -235,12 +235,12 @@ procedure process2(linein)
 
    # Next change dots associated with conjunction to ";"
    # Group III on page 9 to *56
-   linein := sub_dot(linein, andddddd, ";;;;;; \\land ::::::")
-   linein := sub_dot(linein, anddddd,  ";;;;; \\land :::::")
-   linein := sub_dot(linein, andddd,   ";;;; \\land ::::")
-   linein := sub_dot(linein, anddd,    ";;; \\land :::")
-   linein := sub_dot(linein, andd,     ";; \\land ::")
-   linein := sub_dot(linein, and,      "; \\land :")
+   linein := sub_dot(linein, andddddd, ";;;;;; \\land :::::::")
+   linein := sub_dot(linein, anddddd,  ";;;;; \\land ::::::")
+   linein := sub_dot(linein, andddd,   ";;;; \\land :::::")
+   linein := sub_dot(linein, anddd,    ";;; \\land ::::")
+   linein := sub_dot(linein, andd,     ";; \\land :::")
+   linein := sub_dot(linein, and,      "; \\land ::")
    #         # write("% POST06 linein after and = ", linein)
    linein := front || linein
    # next compute number of left parens to start with
