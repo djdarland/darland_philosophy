@@ -8,7 +8,7 @@ $define LUK 1
 $define POLISH_INCLUDED 1
 $define BEGIN "%begin"
 
-global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, max_exe, delim_q2, delim_l2, max_iter, stk, reverse_polish, head, qiddf, dbg
+global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, qneg, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, max_exe, delim_q2, delim_l2, max_iter, stk, reverse_polish, head, qiddf, dbg
 
 procedure main()
    # next 2 lines used to get debugging from unicon
@@ -27,6 +27,7 @@ procedure init()
    qextra := 1
    delim_l2 := ' abcdefghijklmnopqrstuvwxyz$\\'
    delim_q2 := ' abcdefghijklmnopqrstuvwxyz$\\'
+   delim_n2 := ' abcdefghijklmnopqrstuvwxyz$\\'
    # initialize globals
    echo := 1 # show original line with dots next to one with parens  
    lineno := 0 # global as may be useful if error messages etc.
@@ -45,6 +46,7 @@ procedure init()
    andddddd := "\\pmandddddd"
    
    qexist :=   "\\pmsome{"
+   qneg :=   "\\pmnot"
    qall :=   "\\pmall{"
    qdsc :=   "\\dsc{"
    qor := "\\pmor"
@@ -174,6 +176,19 @@ procedure process2(linein)
    linein := sub_qdot(linein, qall, " ",   (" " || repl("!", qextra) || " "))
    # Next change "TEMP" back to quantifier symbol
    linein := sub_temp(linein, qall)
+   #         # write("% POST02 linein after all  = ", linein) 
+   linein := sub_ndot(linein, qneg, dotttttt,   (" " || repl("!",6 + qextra) || " "))
+   linein := sub_ndot(linein, qneg, dottttt,   (" " || repl("!",5 + qextra) || " "))
+   linein := sub_ndot(linein, qneg, dotttt,   (" " || repl("!",4 + qextra) || " "))
+   linein := sub_ndot(linein, qneg, dottt,   (" " || repl("!",3 + qextra) || " "))
+   linein := sub_ndot(linein, qneg, dott,   (" " || repl("!",2 + qextra) || " "))
+   linein := sub_ndot(linein, qneg, dot,   (" " || repl("!",1 + qextra) || " "))
+   linein := sub_ndot(linein, qneg, " ",   (" " || repl("!", qextra) || " "))
+   # Next change "TEMP" back to quantifier symbol
+   linein := sub_temp(linein, qneg)
+   #         # write("% POST02 linein after all  = ", linein)
+  
+   
    #         # write("% POST02 linein after all  = ", linein)
    
    # Next change dots associated with truth functions 
@@ -239,6 +254,12 @@ procedure process2(linein)
    first_dots := scan(linein)
    # write("% before analyze linein = ", linein)
    # see comments within analyze
+   linein := sub_dot(linein, dotttttt, "!!!!!!")
+   linein := sub_dot(linein, dottttt, "!!!!!")
+   linein := sub_dot(linein, dotttt, "!!!!")
+   linein := sub_dot(linein, dottt, "!!!")
+   linein := sub_dot(linein, dott, "!!")
+   linein := sub_dot(linein, dot, "!")
    write(dbg, "HERE BA li = ", linein)
    lineout := analyze(first_dots, linein)
    write(dbg, "HERE AA li = ", lineout)
@@ -297,12 +318,20 @@ end
 
 # for groups I and III 
 procedure sub_dot(linein, dot_str, dots_out)
-   while linein ? ((part1 := tab(find(dot_str))) & 
+   write(dbg, "HEREHERE linein = ", linein)
+   write(dbg, "HEREHERE dot_str = ", dot_str)
+   write(dbg, "HEREHERE dots_out = ", dots_out)
+   lineout := linein
+   while \lineout ? ((part1 := tab(find(dot_str))) & 
                    tab(match(dot_str)) & 
                    (part2 := tab(0))) do {
+                      write(dbg,"HEREAGAIN part1 = ",part1)
+                      write(dbg,"HEREAGAIN part2 = ",part2)
                       linein := part1 || dots_out || part2
+                      if \linein then lineout := linein
+
                       }
-   lineout := linein
+   write(dbg, "HEREHEREHERE ", lineout)
    return lineout 
 end 
 
@@ -385,16 +414,16 @@ procedure sub_qdot2(part, dot_str, dots_out)
                      part := part0 || dots_out || part2
                      return part
                      }
+      
+      else if (part ? (part0 := (tab(many(' ')) | tab(match("")))  &
+                       part1 := tab(any(delim_q2)) &
+                       part2 := tab(0))) then {
+                          part := part0 || part1 || part2
+                          return part
+                          }
       }
-   else if (part ? (part0 := (tab(many(' ')) | tab(match("")))  &
-                    part1 := tab(any(delim_q2)) &
-                    part2 := tab(0))) then {
-                       part := part0 || part1 || part2
-                       return part
-                       }
    fail
 end
-
 # for group II
 procedure sub_ldot(linein, log_conn , dot_str, dots_out)
    write(&errout, " SUB_LDOT")
@@ -543,7 +572,7 @@ end
 
 procedure quantifier_next(linein, i)
    temp := linein[i:0]
-   if temp ? (tab(many('.') & (tab(match(qexist)) | tab(match(qall))) | tab(match(qdsc)))) then {
+   if temp ? (tab(many('.') & (tab(match(qexist)) | tab(match(qall)) | tab(match(qneg)) | tab(match(qdsc))))) then {
       write(&errout, QUANTIFIER_NEXT = 1)
       return 1
       }
@@ -904,5 +933,78 @@ procedure stripped(in)
       iii +:= 1
       }
    return out
+end
+
+# for Negation
+procedure sub_ndot(linein, neg , dot_str, dots_out)
+   write(&errout, "SUB_NDOT")
+   write(&errout, "linein = ",linein)
+   write(&errout, "symbol = ", neg)
+   write(&errout, "dot_str = ", dot_str)
+   write(&errout, "dots_out = ", dots_out)
+   # immediately before quantifier
+   while linein ? (
+                   #                   (part0 := tab(many(' ')) | tab(match(""))) & 
+                   part0 := tab(find(neg)) &
+                   write(&errout, "PART0 blank = ", part0) &
+                   part1 := tab(match(neg)) &
+                   write(&errout, "PART1 (NEG) = ", part1) &
+                   part2 := (tab(many(' ')) | tab(match(""))) & 
+                   part3 := tab(many('abcdefghijklmnopqrstuvwxyzABCDERGHIJKLMNOPQRSTUVWXYZ\\')) &
+                   write(&errout, "part3 (negated) = ", part3) &
+                   part4 := tab(match("\\")) &
+                   write(&errout, "part4 \\ = ", part4) &
+                   (tab(many(' ')) | tab(match(""))) &
+                   part5 := tab(0) &
+                   write(&errout, "part5 = ", part5)) do {
+                      write(&errout, "PART5 = ", part5)
+                      max_exe -:= 1
+                      if max_exe <= 0 then exit()
+                      if part6 := sub_ndot2(part5, dotttttt, (" " || repl("!", 6 + qextra) || " "))  then
+                         linein := part0 || part2 || "TEMP" || part3 || part4 || part6
+                      else if part6 := sub_ndot2(part5, dottttt,  (" " || repl("!", 5 + qextra) || " " )) then
+                         linein := part0 || part2 || "TEMP" || part3 || part4 ||  part6
+                      
+                      else if part6 := sub_ndot2(part5, dotttt, (" " || repl("!", 4 + qextra) || " ")) then
+                         linein := "part0 || part2 || TEMP" || part3 || part4 ||  part6
+                      else if  part6 := sub_ndot2(part5, dottt, (" " || repl("!", 3 + qextra) || " ")) then
+                         linein := part0 || part2 || "TEMP" || part3 || part4 ||  part6
+                      
+                      else if part6 := sub_ndot2(part5, dott,  (" " || repl("!",2 + qextra) || " ")) then
+                         linein := part0 || part2 ||  "TEMP" || part3 ||part4 ||  part6
+                      
+                      else if part6 := sub_ndot2(part5, dot,  (" " || repl("!", 1 + qextra) || " " )) then
+                         linein := part0 || part2 || "TEMP" || part3 || part4 ||  part6
+                      else if part6 := sub_ndot2(part5, " ",  (" " || repl("!", qextra) || " " )) then
+                         linein := part0 || part2 || "TEMP" || part3 || part4 ||  part6
+                      write(&errout, "BOTTOM linein = ", linein)
+                      }
+   write(&errout, "linein = ", lineout)
+   return linein
+end 
+
+procedure sub_ndot2(part, dot_str, dots_out)
+   write(&errout, "SUB_NDOT2")
+   write(&errout, "SUB_NDOT2 part = ", part)
+   write(&errout, "SUB_NDOT2 dot_str = ", dot_str)
+   write(&errout, "SUB_NDOT2 dots_out = ", dots_out)
+   
+   if dot_str ~== " " then {
+      if (part ? (part0 := (tab(many(' ')) | tab(match("")))  &
+                  
+                  (part1 := tab(match(dot_str))) &
+                  (part2 := tab(0)))) then {
+                     part := part0 || dots_out || part2
+                     return part
+                     }
+      
+      else if (part ? (part0 := (tab(many(' ')) | tab(match("")))  &
+                       part1 := tab(any(delim_n2)) &
+                       part2 := tab(0))) then {
+                          part := part0 || part1 || part2
+                          return part
+                          }
+      }
+   fail
 end
 
