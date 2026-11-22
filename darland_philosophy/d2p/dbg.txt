@@ -34871,6 +34871,1998 @@ C0016 *stk = 1
 C0017 top_stack() = pmimp\
 Exit to_Polish stmt below
   ((  r \pmimp \pmnot q )) \land ((( p  )) \pmiff ((  q \pmor r  ))) \pmimp (((  p ) \land (( \pmnot q  )) \pmiff ((  r       ))))
+HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HERE BA li = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HERE AA li = $\pmast 9 \pmcdot 1 \pmthm  ((((((((((  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     ))))))))$
+Enter to_Polish infix below
+$\pmast 9 \pmcdot 1 \pmthm  ((  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     $
+A0001 head1 = $\pmast 9 \pmcdot 1 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 9 \pmcdot 1 \pmthm
+A0004 stmt =   ((  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     $
+A0005 reverse stmt = $     }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+infixToPolish B0001
+B002 infix =   ((  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     
+B003 reverse infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 1 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 2 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 3 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 4 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 5 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 6 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 7 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 8 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 9 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 10 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 11 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 12 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 13 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 14 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 15 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 16 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 17 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 18 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 19 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 20 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 21 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 22 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  () }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 23 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 24 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 25 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 26 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 27 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 28 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 29 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 30 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 31 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 32 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 33 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 34 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 35 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 36 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 37 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )( pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 38 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 39 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 40 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 41 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 42 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 43 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 44 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 45 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 46 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
+B004 iii = 47 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ()  }x{}ihp\{fpmp\  ((  
+B004 iii = 48 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 49 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 50 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 51 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 52 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 53 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 54 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 55 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 56 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 57 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 58 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 59 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 60 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 61 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 62 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 63 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 64 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 65 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 66 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
+B004 iii = 67 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )(  
+B004 iii = 68 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+B004 iii = 69 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+B004 iii = 70 *infix = 70
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0002 *infix = 70
+C0003 nxt =      }x{}ihp\{fpmp\
+C0004 is operand
+C0014 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0015 infix =   (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0002 *infix = 51
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0015 infix = ( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0002 *infix = 48
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0015 infix =  }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0002 *infix = 47
+C0003 nxt =  }x{emosmp\
+C0004 is operand
+C0014 infix =  }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0015 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0002 *infix = 36
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0015 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0002 *infix = 33
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0015 infix =  pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0002 *infix = 32
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  }x{}ihp\{fpmp\  ))  
+C0015 infix =  ((  }x{}ihp\{fpmp\  ))  
+C0002 *infix = 25
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  }x{}ihp\{fpmp\  ))  
+C0015 infix = (  }x{}ihp\{fpmp\  ))  
+C0002 *infix = 23
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  }x{}ihp\{fpmp\  ))  
+C0015 infix =   }x{}ihp\{fpmp\  ))  
+C0002 *infix = 22
+C0003 nxt =   }x{}ihp\{fpmp\
+C0004 is operand
+C0014 infix =   }x{}ihp\{fpmp\  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Exit to_Polish stmt below
+  ((  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     
+HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HERE BA li = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
+HERE AA li = $\pmast 9 \pmcdot 11 \pmthm  ((((((((((  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     ))))))))$
+Enter to_Polish infix below
+$\pmast 9 \pmcdot 11 \pmthm  ((  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     $
+A0001 head1 = $\pmast 9 \pmcdot 11 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 9 \pmcdot 11 \pmthm
+A0004 stmt =   ((  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     $
+A0005 reverse stmt = $     }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+infixToPolish B0001
+B002 infix =   ((  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     
+B003 reverse infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 1 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 2 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 3 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 4 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 5 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 6 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 7 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 8 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 9 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 10 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 11 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 12 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 13 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 14 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 15 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 16 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 17 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 18 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 19 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 20 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 21 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 22 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  () }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 23 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 24 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 25 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 26 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 27 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 28 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 29 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 30 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 31 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 32 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 33 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 34 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 35 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 36 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 37 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 38 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 39 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 40 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 41 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 42 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 43 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 44 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 45 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 46 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 47 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ()  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 48 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 49 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 50 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 51 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 52 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 53 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 54 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 55 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 56 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 57 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 58 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 59 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 60 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 61 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 62 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 63 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 64 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 65 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 66 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 67 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 68 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 69 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 70 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 71 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 72 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 73 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 74 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 75 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 76 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 77 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 78 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 79 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 80 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 81 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 82 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 83 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 84 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 85 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 86 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 87 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
+B004 iii = 88 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  )(  
+B004 iii = 89 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+B004 iii = 90 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+B004 iii = 91 *infix = 91
+B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0002 *infix = 91
+C0003 nxt =      }x{}ihp\{fpmp\
+C0004 is operand
+C0014 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0015 infix =   (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0002 *infix = 72
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0015 infix = ( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0002 *infix = 69
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0015 infix =  }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0002 *infix = 68
+C0003 nxt =  }x{emosmp\
+C0004 is operand
+C0014 infix =  }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0015 infix =   )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0002 *infix = 57
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0015 infix = ) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0002 *infix = 54
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0015 infix =  pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0002 *infix = 53
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0015 infix =  ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0002 *infix = 46
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0015 infix = (  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0002 *infix = 44
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0015 infix =   }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0002 *infix = 43
+C0003 nxt =   }y{}ihp\{fpmp\
+C0004 is operand
+C0014 infix =   }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
+C0015 infix =  romp\ }x{}ihp\{fpmp\  ))  
+C0002 *infix = 27
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ }x{}ihp\{fpmp\  ))  
+C0015 infix =  }x{}ihp\{fpmp\  ))  
+C0002 *infix = 21
+C0003 nxt =  }x{}ihp\{fpmp\
+C0004 is operand
+C0014 infix =  }x{}ihp\{fpmp\  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Exit to_Polish stmt below
+  ((  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     
+HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HERE BA li = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
+HERE AA li = $\pmast 9 \pmcdot 2 \pmthm  ((((((((((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmpf{\phi}{y}     ))))))))$
+Enter to_Polish infix below
+$\pmast 9 \pmcdot 2 \pmthm  ((((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmpf{\phi}{y}     ))$
+A0001 head1 = $\pmast 9 \pmcdot 2 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 9 \pmcdot 2 \pmthm
+A0004 stmt =   ((((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmpf{\phi}{y}     ))$
+A0005 reverse stmt = $))     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ))     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+infixToPolish B0001
+B002 infix =   ((((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmpf{\phi}{y}     ))
+B003 reverse infix = ))     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 1 *infix = 73
+B005 infix = ()     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 2 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 3 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 4 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 5 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 6 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 7 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 8 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 9 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 10 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 11 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 12 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 13 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 14 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 15 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 16 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 17 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 18 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 19 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 20 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 21 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 22 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 23 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 24 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 25 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 26 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 27 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 28 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 29 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 30 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 31 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 32 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 33 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 34 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ()  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 35 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 36 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 37 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 38 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 39 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 40 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 41 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 42 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 43 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 44 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 45 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 46 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 47 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 48 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 49 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 50 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 51 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 52 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 53 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
+B004 iii = 54 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  () }x{llamp\  ((((  
+B004 iii = 55 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 56 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 57 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 58 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 59 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 60 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 61 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 62 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 63 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 64 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 65 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 66 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 67 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
+B004 iii = 68 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  )(((  
+B004 iii = 69 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))((  
+B004 iii = 70 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  )))(  
+B004 iii = 71 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+B004 iii = 72 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+B004 iii = 73 *infix = 73
+B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0002 *infix = 73
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0015 infix = (     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0002 *infix = 72
+C0003 nxt = (
+C0005 is (
+C0014 infix = (     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0015 infix =      }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0002 *infix = 71
+C0003 nxt =      }y{}ihp\{fpmp\
+C0004 is operand
+C0014 infix =      }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0015 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0002 *infix = 52
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0015 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0002 *infix = 49
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0015 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0002 *infix = 48
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0015 infix =  ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0002 *infix = 41
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0015 infix = (  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0002 *infix = 39
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0015 infix =   }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0002 *infix = 38
+C0003 nxt =   }x{}ihp\{fpmp\
+C0004 is operand
+C0014 infix =   }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
+C0015 infix =   (( }x{llamp\  ))))  
+C0002 *infix = 22
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   (( }x{llamp\  ))))  
+C0015 infix = ( }x{llamp\  ))))  
+C0002 *infix = 19
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( }x{llamp\  ))))  
+C0015 infix =  }x{llamp\  ))))  
+C0002 *infix = 18
+C0003 nxt =  }x{llamp\
+C0004 is operand
+C0014 infix =  }x{llamp\  ))))  
+C0015 infix =   ))))  
+C0002 *infix = 8
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   ))))  
+C0015 infix = )))  
+C0002 *infix = 5
+C0003 nxt = )
+C0006 is )
+C0014 infix = )))  
+C0015 infix = ))  
+C0002 *infix = 4
+C0003 nxt = )
+C0006 is )
+C0014 infix = ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Exit to_Polish stmt below
+  ((((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmpf{\phi}{y}     ))
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HERE BA li = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
+HERE AA li = $\pmast 9 \pmcdot 21 \pmthm  (((((((((((((((((((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmall{x} ))  \pmpf{\psi}{x}       ))))))))))))))))$
+Enter to_Polish infix below
+$\pmast 9 \pmcdot 21 \pmthm  (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmall{x} ))  \pmpf{\psi}{x}       $
+A0001 head1 = $\pmast 9 \pmcdot 21 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 9 \pmcdot 21 \pmthm
+A0004 stmt =   (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmall{x} ))  \pmpf{\psi}{x}       $
+A0005 reverse stmt = $       }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+infixToPolish B0001
+B002 infix =   (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmall{x} ))  \pmpf{\psi}{x}       
+B003 reverse infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 1 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 2 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 3 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 4 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 5 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 6 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 7 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 8 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 9 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 10 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 11 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 12 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 13 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 14 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 15 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 16 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 17 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 18 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 19 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 20 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 21 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 22 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 23 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 24 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  () }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 25 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 26 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 27 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 28 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 29 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 30 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 31 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 32 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 33 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 34 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 35 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 36 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 37 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 38 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 39 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 40 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 41 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 42 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 43 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 44 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 45 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 46 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 47 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 48 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ()  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 49 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 50 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 51 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 52 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 53 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 54 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 55 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 56 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 57 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 58 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 59 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 60 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 61 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 62 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 63 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 64 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 65 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 66 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 67 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 68 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  () }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 69 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 70 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 71 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 72 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 73 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 74 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 75 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 76 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 77 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 78 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 79 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 80 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 81 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 82 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  )(( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 83 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 84 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 85 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 86 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 87 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 88 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 89 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 90 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 91 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 92 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 93 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ()  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 94 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 95 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 96 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 97 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 98 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 99 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 100 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 101 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 102 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 103 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 104 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 105 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 106 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 107 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 108 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 109 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 110 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 111 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 112 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 113 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 114 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 115 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 116 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 117 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 118 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 119 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 120 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 121 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 122 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 123 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 124 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 125 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 126 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 127 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 128 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 129 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 130 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 131 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 132 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 133 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 134 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 135 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  () }x{llamp\  (((((  
+B004 iii = 136 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 137 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 138 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 139 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 140 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 141 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 142 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 143 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 144 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 145 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 146 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 147 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 148 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 149 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )((((  
+B004 iii = 150 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  ))(((  
+B004 iii = 151 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))((  
+B004 iii = 152 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  ))))(  
+B004 iii = 153 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+B004 iii = 154 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+B004 iii = 155 *infix = 155
+B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 155
+C0003 nxt =        }x{}isp\{fpmp\
+C0004 is operand
+C0014 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 134
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = ( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 131
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 130
+C0003 nxt =  }x{llamp\
+C0004 is operand
+C0014 infix =  }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 120
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 117
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 116
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 109
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = (  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 107
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 106
+C0003 nxt =   }x{}ihp\{fpmp\
+C0004 is operand
+C0014 infix =   }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 90
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = ( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 87
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 86
+C0003 nxt =  }x{llamp\
+C0004 is operand
+C0014 infix =  }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 76
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = )) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 73
+C0003 nxt = )
+C0006 is )
+C0014 infix = )) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = ) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 72
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 71
+C0003 nxt =  pmimp\
+C0008 *stk = 2
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 64
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = (  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 62
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 61
+C0003 nxt =   }x{}isp\{fpmp\
+C0004 is operand
+C0014 infix =   }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 45
+C0003 nxt =  pmimp\
+C0008 *stk = 5
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 38
+C0003 nxt =  }x{}ihp\{fpmp\
+C0004 is operand
+C0014 infix =  }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   (( }x{llamp\  )))))  
+C0002 *infix = 23
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   (( }x{llamp\  )))))  
+C0015 infix = ( }x{llamp\  )))))  
+C0002 *infix = 20
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( }x{llamp\  )))))  
+C0015 infix =  }x{llamp\  )))))  
+C0002 *infix = 19
+C0003 nxt =  }x{llamp\
+C0004 is operand
+C0014 infix =  }x{llamp\  )))))  
+C0015 infix =   )))))  
+C0002 *infix = 9
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )))))  
+C0015 infix = ))))  
+C0002 *infix = 6
+C0003 nxt = )
+C0006 is )
+C0014 infix = ))))  
+C0015 infix = )))  
+C0002 *infix = 5
+C0003 nxt = )
+C0006 is )
+C0007 *stk = 6
+C0007 top_stack = pmimp\
+C0014 infix = )))  
+C0015 infix = ))  
+C0002 *infix = 4
+C0003 nxt = )
+C0006 is )
+C0014 infix = ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0007 *stk = 3
+C0007 top_stack = pmimp\
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Exit to_Polish stmt below
+  (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmall{x} ))  \pmpf{\psi}{x}       
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HERE BA li = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
+HERE AA li = $\pmast 9 \pmcdot 22 \pmthm  (((((((((((((((((((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmsome{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\psi}{x}       ))))))))))))))))$
+Enter to_Polish infix below
+$\pmast 9 \pmcdot 22 \pmthm  (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmsome{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\psi}{x}       $
+A0001 head1 = $\pmast 9 \pmcdot 22 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 9 \pmcdot 22 \pmthm
+A0004 stmt =   (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmsome{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\psi}{x}       $
+A0005 reverse stmt = $       }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+infixToPolish B0001
+B002 infix =   (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmsome{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\psi}{x}       
+B003 reverse infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 1 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 2 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 3 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 4 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 5 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 6 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 7 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 8 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 9 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 10 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 11 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 12 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 13 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 14 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 15 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 16 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 17 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 18 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 19 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 20 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 21 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 22 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 23 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 24 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  () }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 25 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 26 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 27 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 28 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 29 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 30 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 31 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 32 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 33 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 34 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 35 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 36 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 37 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 38 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 39 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 40 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 41 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 42 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 43 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 44 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 45 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 46 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 47 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 48 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 49 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ()  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 50 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 51 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 52 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 53 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 54 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 55 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 56 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 57 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 58 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 59 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 60 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 61 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 62 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 63 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 64 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 65 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 66 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 67 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 68 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 69 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  () }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 70 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 71 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 72 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 73 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 74 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 75 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 76 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 77 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 78 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 79 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 80 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 81 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 82 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 83 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 84 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  )(( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 85 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 86 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 87 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 88 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 89 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 90 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 91 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 92 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 93 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 94 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 95 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ()  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 96 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 97 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 98 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 99 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 100 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 101 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 102 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 103 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 104 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 105 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 106 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 107 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 108 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 109 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 110 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 111 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 112 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 113 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 114 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 115 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 116 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 117 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 118 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 119 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 120 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 121 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 122 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 123 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 124 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 125 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 126 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 127 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 128 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 129 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 130 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 131 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 132 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 133 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 134 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 135 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 136 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
+B004 iii = 137 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  () }x{llamp\  (((((  
+B004 iii = 138 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 139 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 140 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 141 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 142 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 143 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 144 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 145 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 146 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 147 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 148 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 149 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 150 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
+B004 iii = 151 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )((((  
+B004 iii = 152 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  ))(((  
+B004 iii = 153 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))((  
+B004 iii = 154 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  ))))(  
+B004 iii = 155 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+B004 iii = 156 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+B004 iii = 157 *infix = 157
+B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 157
+C0003 nxt =        }x{}isp\{fpmp\
+C0004 is operand
+C0014 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 136
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = ( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 133
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 132
+C0003 nxt =  }x{emosmp\
+C0004 is operand
+C0014 infix =  }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 121
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 118
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 117
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 110
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = (  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 108
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 107
+C0003 nxt =   }x{}ihp\{fpmp\
+C0004 is operand
+C0014 infix =   }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 91
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = ( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 88
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 87
+C0003 nxt =  }x{emosmp\
+C0004 is operand
+C0014 infix =  }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 76
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = )) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 73
+C0003 nxt = )
+C0006 is )
+C0014 infix = )) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = ) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 72
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 71
+C0003 nxt =  pmimp\
+C0008 *stk = 2
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 64
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix = (  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 62
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 61
+C0003 nxt =   }x{}isp\{fpmp\
+C0004 is operand
+C0014 infix =   }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 45
+C0003 nxt =  pmimp\
+C0008 *stk = 5
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =  }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0002 *infix = 38
+C0003 nxt =  }x{}ihp\{fpmp\
+C0004 is operand
+C0014 infix =  }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
+C0015 infix =   (( }x{llamp\  )))))  
+C0002 *infix = 23
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   (( }x{llamp\  )))))  
+C0015 infix = ( }x{llamp\  )))))  
+C0002 *infix = 20
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( }x{llamp\  )))))  
+C0015 infix =  }x{llamp\  )))))  
+C0002 *infix = 19
+C0003 nxt =  }x{llamp\
+C0004 is operand
+C0014 infix =  }x{llamp\  )))))  
+C0015 infix =   )))))  
+C0002 *infix = 9
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )))))  
+C0015 infix = ))))  
+C0002 *infix = 6
+C0003 nxt = )
+C0006 is )
+C0014 infix = ))))  
+C0015 infix = )))  
+C0002 *infix = 5
+C0003 nxt = )
+C0006 is )
+C0007 *stk = 6
+C0007 top_stack = pmimp\
+C0014 infix = )))  
+C0015 infix = ))  
+C0002 *infix = 4
+C0003 nxt = )
+C0006 is )
+C0014 infix = ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0007 *stk = 3
+C0007 top_stack = pmimp\
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Exit to_Polish stmt below
+  (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmsome{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\psi}{x}       
 HEREHERE linein =  ^  p \pmor q  .. \pmiff ^^  r \pmimp s$
 HEREHERE dot_str = \pmandddddd
 HEREHERE dots_out = ;;;;;; \land :::::::
