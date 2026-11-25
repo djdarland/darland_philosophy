@@ -1,302 +1,4 @@
 Started Debugging
-HEREHERE linein =  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmandddddd
-HEREHERE dots_out = ;;;;;; \land :::::::
-HEREHEREHERE  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE linein =  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmanddddd
-HEREHERE dots_out = ;;;;; \land ::::::
-HEREHEREHERE  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE linein =  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmandddd
-HEREHERE dots_out = ;;;; \land :::::
-HEREHEREHERE  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE linein =  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmanddd
-HEREHERE dots_out = ;;; \land ::::
-HEREHEREHERE  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE linein =  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmandd
-HEREHERE dots_out = ;; \land :::
-HEREHEREHERE  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE linein =  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmand
-HEREHERE dots_out = ; \land ::
-HEREHEREHERE  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE linein = $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmdotttttt
-HEREHERE dots_out = !!!!!!
-HEREHEREHERE $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE linein = $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmdottttt
-HEREHERE dots_out = !!!!!
-HEREHEREHERE $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE linein = $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmdotttt
-HEREHERE dots_out = !!!!
-HEREHEREHERE $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE linein = $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmdottt
-HEREHERE dots_out = !!!
-HEREHEREHERE $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE linein = $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmdott
-HEREHERE dots_out = !!
-HEREHEREHERE $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE linein = $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HEREHERE dot_str = \pmdot
-HEREHERE dots_out = !
-HEREHEREHERE $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HERE BA li = $\pmast 1 \pmcdot 01 \pmthm  ^  p  .. \pmimp ^^  q  .. \pmiddf ^^  \pmnot p \pmor q $
-HERE AA li = $\pmast 1 \pmcdot 01 \pmthm  ((((((((((  p  )) \pmimp ((  q  )) \pmiddf ((  \pmnot p \pmor q ))))))))))$
-Enter to_Polish infix below
-$\pmast 1 \pmcdot 01 \pmthm  ((  p  )) \pmimp ((  q  )) \pmiddf ((  \pmnot p \pmor q ))$
-A0001 head1 = $\pmast 1 \pmcdot 01 \
-A0002 head2 = pmthm
-A0003 head = $\pmast 1 \pmcdot 01 \pmthm
-A0004 stmt =   ((  p  )) \pmimp ((  q  )) \pmiddf ((  \pmnot p \pmor q ))$
-A0005 reverse stmt = $)) q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-A0006 tail1 = 
-A0007 tail2 = $
-A0008 rest = )) q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-infixToPolish B0001
-B002 infix =   ((  p  )) \pmimp ((  q  )) \pmiddf ((  \pmnot p \pmor q ))
-B003 reverse infix = )) q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 1 *infix = 60
-B005 infix = () q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 2 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 3 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 4 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 5 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 6 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 7 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 8 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 9 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 10 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 11 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 12 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 13 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 14 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 15 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 16 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 17 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 18 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 19 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 20 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 21 *infix = 60
-B005 infix = (( q romp\ p tonmp\  (( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 22 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )( fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 23 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 24 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 25 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 26 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 27 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 28 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 29 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 30 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 31 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 32 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ))  q  (( pmimp\ ))  p  ((  
-B004 iii = 33 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ()  q  (( pmimp\ ))  p  ((  
-B004 iii = 34 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  (( pmimp\ ))  p  ((  
-B004 iii = 35 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  (( pmimp\ ))  p  ((  
-B004 iii = 36 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  (( pmimp\ ))  p  ((  
-B004 iii = 37 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  (( pmimp\ ))  p  ((  
-B004 iii = 38 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  (( pmimp\ ))  p  ((  
-B004 iii = 39 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  (( pmimp\ ))  p  ((  
-B004 iii = 40 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )( pmimp\ ))  p  ((  
-B004 iii = 41 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ))  p  ((  
-B004 iii = 42 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ))  p  ((  
-B004 iii = 43 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ))  p  ((  
-B004 iii = 44 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ))  p  ((  
-B004 iii = 45 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ))  p  ((  
-B004 iii = 46 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ))  p  ((  
-B004 iii = 47 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ))  p  ((  
-B004 iii = 48 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ))  p  ((  
-B004 iii = 49 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ))  p  ((  
-B004 iii = 50 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ()  p  ((  
-B004 iii = 51 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ((  
-B004 iii = 52 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ((  
-B004 iii = 53 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ((  
-B004 iii = 54 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ((  
-B004 iii = 55 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ((  
-B004 iii = 56 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ((  
-B004 iii = 57 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  )(  
-B004 iii = 58 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-B004 iii = 59 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-B004 iii = 60 *infix = 60
-B005 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-before infixToReverse_Polish
-Enter infixToReverse_Polish
-C0001 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0002 *infix = 60
-C0003 nxt = (
-C0005 is (
-C0014 infix = (( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0015 infix = ( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0002 *infix = 59
-C0003 nxt = (
-C0005 is (
-C0014 infix = ( q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0015 infix =  q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0002 *infix = 58
-C0003 nxt =  q
-C0004 is operand
-C0014 infix =  q romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0015 infix =  romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0002 *infix = 56
-C0003 nxt =  romp\
-C0008 *stk = 2
-C0009 top_stack() = (
-C0012 nxt =  romp\
-C0013 nxt =  romp\
-C0014 infix =  romp\ p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0015 infix =  p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0002 *infix = 50
-C0003 nxt =  p
-C0004 is operand
-C0014 infix =  p tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0015 infix =  tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0002 *infix = 48
-C0003 nxt =  tonmp\
-C0004 is operand
-C0014 infix =  tonmp\  )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0015 infix =   )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0002 *infix = 41
-C0003 nxt =   )
-C0006 is )
-C0007 *stk = 3
-C0007 top_stack = romp\
-C0014 infix =   )) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0015 infix = ) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0002 *infix = 38
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0015 infix =  fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0002 *infix = 37
-C0003 nxt =  fddimp\
-C0004 is operand
-C0014 infix =  fddimp\ ((  q  )) pmimp\ ((  p  ))  
-C0015 infix =  ((  q  )) pmimp\ ((  p  ))  
-C0002 *infix = 29
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ((  q  )) pmimp\ ((  p  ))  
-C0015 infix = (  q  )) pmimp\ ((  p  ))  
-C0002 *infix = 27
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  q  )) pmimp\ ((  p  ))  
-C0015 infix =   q  )) pmimp\ ((  p  ))  
-C0002 *infix = 26
-C0003 nxt =   q
-C0004 is operand
-C0014 infix =   q  )) pmimp\ ((  p  ))  
-C0015 infix =   )) pmimp\ ((  p  ))  
-C0002 *infix = 23
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   )) pmimp\ ((  p  ))  
-C0015 infix = ) pmimp\ ((  p  ))  
-C0002 *infix = 20
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) pmimp\ ((  p  ))  
-C0015 infix =  pmimp\ ((  p  ))  
-C0002 *infix = 19
-C0003 nxt =  pmimp\
-C0008 *stk = 0
-C0009 top_stack() = 
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ ((  p  ))  
-C0015 infix =  ((  p  ))  
-C0002 *infix = 12
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ((  p  ))  
-C0015 infix = (  p  ))  
-C0002 *infix = 10
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  p  ))  
-C0015 infix =   p  ))  
-C0002 *infix = 9
-C0003 nxt =   p
-C0004 is operand
-C0014 infix =   p  ))  
-C0015 infix =   ))  
-C0002 *infix = 6
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   ))  
-C0015 infix = )  
-C0002 *infix = 3
-C0003 nxt = )
-C0006 is )
-C0014 infix = )  
-C0015 infix =   
-C0016 *stk = 1
-C0017 top_stack() = pmimp\
-Exit to_Polish stmt below
-  ((  p  )) \pmimp ((  q  )) \pmiddf ((  \pmnot p \pmor q ))
 HEREHERE linein =  ^^  p \pmor p  .. \pmimp ^^  p $
 HEREHERE dot_str = \pmandddddd
 HEREHERE dots_out = ;;;;;; \land :::::::
@@ -508,6 +210,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    A   p   p    p  
+Dennis2$\pmast 1 \pmcdot 2 \pmthm((p \pmor p) \pmimp p)$
 Exit to_Polish stmt below
   ((  p \pmor p  )) \pmimp ((  p ))
 HEREHERE linein =  ^^  q  .. \pmimp ^^  p \pmor q $
@@ -721,6 +425,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C   q     A   p   q  
+Dennis2$\pmast 1 \pmcdot 3 \pmthm(q \pmimp (p \pmor q))$
 Exit to_Polish stmt below
   ((  q  )) \pmimp ((  p \pmor q ))
 HEREHERE linein =  ^^  p \pmor q  .. \pmimp ^^  q \pmor p $
@@ -965,6 +671,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    A   p   q     A   q   p  
+Dennis2$\pmast 1 \pmcdot 4 \pmthm((p \pmor q) \pmimp (q \pmor p))$
 Exit to_Polish stmt below
   ((  p \pmor q  )) \pmimp ((  q \pmor p ))
 HEREHERE linein =  ^^^  p  ... \pmor ^^  q \pmor r  .. \pmimp ^^^  q  .. \pmor ^^  p \pmor r $
@@ -1371,6 +1079,8 @@ C0016 *stk = 2
 C0017 top_stack() = romp\
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    A   p     A   q   r     A   q     A   p   r  
+Dennis2$\pmast 1 \pmcdot 5 \pmthm((p \pmor (q \pmor r)) \pmimp (q \pmor (p \pmor r)))$
 Exit to_Polish stmt below
   (((  p  ))) \pmor ((  q \pmor r  )) \pmimp (((  q  )) \pmor ((  p \pmor r )))
 HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  p \pmor r  $
@@ -1733,6 +1443,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    C   q   r     C    A   p   q     A   p   r   
+Dennis2$\pmast 1 \pmcdot 6 \pmthm((q \pmimp r) \pmimp ((p \pmor q) \pmimp (p \pmor r)))$
 Exit to_Polish stmt below
   ((  q \pmimp r  )) \pmimp (((  p \pmor q  )) \pmimp ((  p \pmor r  )))
 HEREHERE linein =  ^^  p \pmimp \pmnot p  .. \pmimp ^^  \pmnot p $
@@ -1986,6 +1698,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    C   p    N   p     N   p  
+Dennis2$\pmast 2 \pmcdot 01 \pmthm((p \pmimp ( \pmnot p)) \pmimp ( \pmnot p))$
 Exit to_Polish stmt below
   ((  p \pmimp \pmnot p  )) \pmimp ((  \pmnot p ))
 HEREHERE linein =  ^^  q  .. \pmimp ^^  p \pmimp q $
@@ -2201,6 +1915,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C   q     C   p   q  
+Dennis2$\pmast 2 \pmcdot 02 \pmthm(q \pmimp (p \pmimp q))$
 Exit to_Polish stmt below
   ((  q  )) \pmimp ((  p \pmimp q ))
 HEREHERE linein =  ^^  p \pmimp \pmnot q  .. \pmimp ^^  q \pmimp \pmnot p $
@@ -2487,6 +2203,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    C   p    N   q     C   q    N   p  
+Dennis2$\pmast 2 \pmcdot 03 \pmthm((p \pmimp ( \pmnot q)) \pmimp (q \pmimp ( \pmnot p)))$
 Exit to_Polish stmt below
   ((  p \pmimp \pmnot q  )) \pmimp ((  q \pmimp \pmnot p ))
 HEREHERE linein =  ^^^  p  .. \pmimp ^^  q \pmimp r  ... \pmimp ^^^  q  .. \pmimp ^^  p \pmimp r $
@@ -2901,6 +2619,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    C   p     C   q   r     C   q     C   p   r  
+Dennis2$\pmast 2 \pmcdot 04 \pmthm((p \pmimp (q \pmimp r)) \pmimp (q \pmimp (p \pmimp r)))$
 Exit to_Polish stmt below
   (((  p  )) \pmimp ((  q \pmimp r  ))) \pmimp (((  q  )) \pmimp ((  p \pmimp r )))
 HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  p \pmimp r $
@@ -3265,6 +2985,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    C   q   r     C    C   p   q     C   p   r  
+Dennis2$\pmast 2 \pmcdot 05 \pmthm((q \pmimp r) \pmimp ((p \pmimp q) \pmimp (p \pmimp r)))$
 Exit to_Polish stmt below
   ((  q \pmimp r  )) \pmimp (((  p \pmimp q  )) \pmimp ((  p \pmimp r )))
 HEREHERE linein =  ^^^  p \pmimp q  .. \pmimp ^^^  q \pmimp r  .. \pmimp ^^  p \pmimp r $
@@ -3629,6 +3351,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    C   p   q     C    C   q   r     C   p   r  
+Dennis2$\pmast 2 \pmcdot 06 \pmthm((p \pmimp q) \pmimp ((q \pmimp r) \pmimp (p \pmimp r)))$
 Exit to_Polish stmt below
   ((  p \pmimp q  )) \pmimp (((  q \pmimp r  )) \pmimp ((  p \pmimp r )))
 HEREHERE linein =  ^^  p  .. \pmimp ^^  p \pmor p $
@@ -3842,6 +3566,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C   p     A   p   p  
+Dennis2$\pmast 2 \pmcdot 07 \pmthm(p \pmimp (p \pmor p))$
 Exit to_Polish stmt below
   ((  p  )) \pmimp ((  p \pmor p ))
 HEREHERE linein =  ^  p \pmimp p $
@@ -3974,6 +3700,8 @@ C0007 *stk = 2
 C0007 top_stack = pmimp\
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  C   p   p  
+Dennis2$\pmast 2 \pmcdot 08 \pmthm(p \pmimp p)$
 Exit to_Polish stmt below
   (  p \pmimp p )
 HEREHERE linein =  ^  \pmnot p \pmor p $
@@ -4123,6 +3851,8 @@ C0007 *stk = 2
 C0007 top_stack = romp\
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  A    N   p   p  
+Dennis2$\pmast 2 \pmcdot 1 \pmthm(( \pmnot p) \pmor p)$
 Exit to_Polish stmt below
   (  \pmnot p \pmor p )
 HEREHERE linein =  ^  p \pmor \pmnot p $
@@ -4272,6 +4002,8 @@ C0007 *stk = 2
 C0007 top_stack = romp\
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  A   p    N   p  
+Dennis2$\pmast 2 \pmcdot 11 \pmthm(p \pmor ( \pmnot p))$
 Exit to_Polish stmt below
   (  p \pmor \pmnot p )
 HEREHERE linein =  ^  p \pmimp \pmnot \pmnot p $
@@ -4442,6 +4174,8 @@ C0007 *stk = 2
 C0007 top_stack = pmimp\
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  C   p    N    N   p  
+Dennis2$\pmast 2 \pmcdot 12 \pmthm(p \pmimp ( \pmnot ( \pmnot p)))$
 Exit to_Polish stmt below
   (  p \pmimp \pmnot \pmnot p )
 HEREHERE linein =  ^  p \pmor \pmnot \pmnot \pmnot p $
@@ -4629,6 +4363,8 @@ C0007 *stk = 2
 C0007 top_stack = romp\
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  A   p    N    N    N   p  
+Dennis2$\pmast 2 \pmcdot 13 \pmthm(p \pmor ( \pmnot ( \pmnot ( \pmnot p))))$
 Exit to_Polish stmt below
   (  p \pmor \pmnot \pmnot \pmnot p )
 HEREHERE linein =  ^  \pmnot \pmnot p \pmimp p $
@@ -4799,6 +4535,8 @@ C0007 *stk = 2
 C0007 top_stack = pmimp\
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  C    N    N   p   p  
+Dennis2$\pmast 2 \pmcdot 14 \pmthm(( \pmnot ( \pmnot p)) \pmimp p)$
 Exit to_Polish stmt below
   (  \pmnot \pmnot p \pmimp p )
 HEREHERE linein =  ^^  \pmnot p \pmimp q  .. \pmimp ^^  \pmnot q \pmimp p $
@@ -5085,6 +4823,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    C    N   p   q     C    N   q   p  
+Dennis2$\pmast 2 \pmcdot 15 \pmthm((( \pmnot p) \pmimp q) \pmimp (( \pmnot q) \pmimp p))$
 Exit to_Polish stmt below
   ((  \pmnot p \pmimp q  )) \pmimp ((  \pmnot q \pmimp p ))
 HEREHERE linein =  ^^  p \pmimp q  .. \pmimp ^^  \pmnot q \pmimp \pmnot p $
@@ -5371,6 +5111,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    C   p   q     C    N   q    N   p  
+Dennis2$\pmast 2 \pmcdot 16 \pmthm((p \pmimp q) \pmimp (( \pmnot q) \pmimp ( \pmnot p)))$
 Exit to_Polish stmt below
   ((  p \pmimp q  )) \pmimp ((  \pmnot q \pmimp \pmnot p ))
 HEREHERE linein =  ^^^  p \pmimp r \pmand q \pmimp s  .. \pmimp ^^^  p \pmand q  .. \pmimp ^^  r \pmand s $
@@ -5883,6 +5625,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    K    C   p   r    C   q   s     C    K   p   q     K   r   s  
+Dennis2$\pmast 3 \pmcdot 47 \pmthm(((p \pmimp r) \land (q \pmimp s)) \pmimp ((p \land q) \pmimp (r \land s)))$
 Exit to_Polish stmt below
   (  p \pmimp r ) \land (( q \pmimp s  )) \pmimp (((  p ) \land (( q  )) \pmimp ((  r ) \land (( s )))))
 HEREHERE linein =  ^^  p \pmiff q \pmand q \pmiff r  .. \pmimp ^^  p \pmiff r$
@@ -6213,6 +5957,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    K    E   p   q    E   q   r     E   p   r 
+Dennis2$\pmast 4 \pmcdot 22 \pmthm(((p \pmiff q) \land (q \pmiff r)) \pmimp (p \pmiff r))$
 Exit to_Polish stmt below
   (  p \pmiff q ) \land (( q \pmiff r  )) \pmimp ((  p \pmiff r))
 HEREHERE linein =  ^^^  p  .. \pmor ^^  q \pmand r  ... \pmiff ^^  p \pmor q \pmand p \pmor r$
@@ -6652,6 +6398,8 @@ C0016 *stk = 2
 C0017 top_stack() = romp\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    A   p     K   q   r     K    A   p   q    A   p   r 
+Dennis2$\pmast 4 \pmcdot 41 \pmthm((p \pmor (q \land r)) \pmiff ((p \pmor q) \land (p \pmor r)))$
 Exit to_Polish stmt below
   ((  p  )) \pmor ((  q ) \land (( r  ))) \pmiff ((  p \pmor q ) \land (( p \pmor r)))
 HEREHERE linein =  ^^^  p  .. \pmiff ^^^  p \pmor q \pmand p \pmor \pmnot q$
@@ -6992,6 +6740,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E   p     K    A   p   q    A   p    N   q 
+Dennis2$\pmast 4 \pmcdot 43 \pmthm(p \pmiff ((p \pmor q) \land (p \pmor ( \pmnot q))))$
 Exit to_Polish stmt below
   ((  p  )) \pmiff (((  p \pmor q ) \land (( p \pmor \pmnot q))))
 HEREHERE linein =  ^^^  p  .. \pmiff ^^^  p  .. \pmor ^^  p \pmand q$
@@ -7318,6 +7068,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E   p     A   p     K   p   q 
+Dennis2$\pmast 4 \pmcdot 44 \pmthm(p \pmiff (p \pmor (p \land q)))$
 Exit to_Polish stmt below
   ((  p  )) \pmiff (((  p  )) \pmor ((  p ) \land (( q))))
 HEREHERE linein =  ^^  p  .. \pmiff ^^  p \pmand p \pmor q$
@@ -7594,6 +7346,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E   p     K   p    A   p   q 
+Dennis2$\pmast 4 \pmcdot 45 \pmthm(p \pmiff (p \land (p \pmor q)))$
 Exit to_Polish stmt below
   ((  p  )) \pmiff ((  p ) \land (( p \pmor q)))
 HEREHERE linein =  ^^  p \pmand q  .. \pmiff ^^^  \pmnot \pmdot \pmnot p \pmor \pmnot q    $
@@ -7953,6 +7707,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K   p   q     N    A    N   p    N   q     
+Dennis2$\pmast 4 \pmcdot 5 \pmthm((p \land q) \pmiff ( \pmnot (( \pmnot p) \pmor ( \pmnot q))))$
 Exit to_Polish stmt below
   (  p ) \land (( q  )) \pmiff (((  \pmnot ( \pmnot p \pmor \pmnot q    ))))
 HEREHERE linein =  ^^  \pmnot \pmdott p \pmand q  ... \pmiff ^^  \pmnot p \pmor \pmnot q   $
@@ -8310,6 +8066,8 @@ C0007 *stk = 2
 C0007 top_stack = ffimp\
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  E    N    K   p   q     A    N   p    N   q    
+Dennis2$\pmast 4 \pmcdot 51 \pmthm(( \pmnot (p \land q)) \pmiff (( \pmnot p) \pmor ( \pmnot q)))$
 Exit to_Polish stmt below
   (  \pmnot (( p ) \land (( q  ))) \pmiff ((  \pmnot p \pmor \pmnot q   )))
 HEREHERE linein =  ^^  p \pmand \pmnot q  .. \pmiff ^^  \pmnot \pmdott \pmnot p \pmor q   $
@@ -8667,6 +8425,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K   p    N   q     N    A    N   p   q    
+Dennis2$\pmast 4 \pmcdot 52 \pmthm((p \land ( \pmnot q)) \pmiff ( \pmnot (( \pmnot p) \pmor q)))$
 Exit to_Polish stmt below
   (  p ) \land (( \pmnot q  )) \pmiff ((  \pmnot (( \pmnot p \pmor q   ))))
 HEREHERE linein =  ^^^  \pmnot \pmdott p \pmand \pmnot q  ... \pmiff ^^  \pmnot p \pmor q   $
@@ -9024,6 +8784,8 @@ C0007 *stk = 2
 C0007 top_stack = ffimp\
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  E    N    K   p    N   q     A    N   p   q    
+Dennis2$\pmast 4 \pmcdot 53 \pmthm(( \pmnot (p \land ( \pmnot q))) \pmiff (( \pmnot p) \pmor q))$
 Exit to_Polish stmt below
   (  \pmnot (( p ) \land (( \pmnot q  ))) \pmiff ((  \pmnot p \pmor q   )))
 HEREHERE linein =  ^^  \pmnot p \pmand q  .. \pmiff ^^  \pmnot \pmdot p \pmor \pmnot q   $
@@ -9367,6 +9129,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K    N   p   q     N    A   p    N   q    
+Dennis2$\pmast 4 \pmcdot 54 \pmthm((( \pmnot p) \land q) \pmiff ( \pmnot (p \pmor ( \pmnot q))))$
 Exit to_Polish stmt below
   (  \pmnot p ) \land (( q  )) \pmiff ((  \pmnot ( p \pmor \pmnot q   )))
 HEREHERE linein =  ^^^  \pmnot \pmdott \pmnot p \pmand q  ... \pmiff ^^  p \pmor \pmnot q   $
@@ -9724,6 +9488,8 @@ C0007 *stk = 2
 C0007 top_stack = ffimp\
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  E    N    K    N   p   q     A   p    N   q    
+Dennis2$\pmast 4 \pmcdot 55 \pmthm(( \pmnot (( \pmnot p) \land q)) \pmiff (p \pmor ( \pmnot q)))$
 Exit to_Polish stmt below
   (  \pmnot (( \pmnot p ) \land (( q  ))) \pmiff ((  p \pmor \pmnot q   )))
 HEREHERE linein =  ^^  \pmnot p \pmand \pmnot q  ... \pmiff ^^^  \pmnot \pmdot p \pmor q   $
@@ -10095,6 +9861,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K    N   p    N   q     N    A   p   q    
+Dennis2$\pmast 4 \pmcdot 56 \pmthm((( \pmnot p) \land ( \pmnot q)) \pmiff ( \pmnot (p \pmor q)))$
 Exit to_Polish stmt below
   ((  \pmnot p ) \land (( \pmnot q  ))) \pmiff (((  \pmnot ( p \pmor q   ))))
 HEREHERE linein =  ^^^  \pmnot \pmdott \pmnot p \pmand \pmnot q  .... \pmiff ^^  \pmdot p \pmor q   $
@@ -10470,6 +10238,8 @@ C0014 infix =   )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    N    K    N   p    N   q     A   p   q    
+Dennis2$\pmast 4 \pmcdot 57 \pmthm(( \pmnot (( \pmnot p) \land ( \pmnot q))) \pmiff (p \pmor q))$
 Exit to_Polish stmt below
   (  \pmnot (( \pmnot p ) \land (( \pmnot q  )))) \pmiff ((  ( p \pmor q   )))
 HEREHERE linein =  ^^  p \pmimp q  .. \pmiff ^^  \pmnot p \pmor q   $
@@ -10739,6 +10509,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C   p   q     A    N   p   q    
+Dennis2$\pmast 4 \pmcdot 6 \pmthm((p \pmimp q) \pmiff (( \pmnot p) \pmor q))$
 Exit to_Polish stmt below
   ((  p \pmimp q  )) \pmiff ((  \pmnot p \pmor q   ))
 HEREHERE linein =  ^^^  \pmnot \pmdot p \pmimp q  .. \pmiff ^^  p \pmand \pmnot q   $
@@ -11065,6 +10837,8 @@ C0014 infix =   )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    N    C   p   q     K   p    N   q    
+Dennis2$\pmast 4 \pmcdot 61 \pmthm(( \pmnot (p \pmimp q)) \pmiff (p \land ( \pmnot q)))$
 Exit to_Polish stmt below
   (  \pmnot ( p \pmimp q  )) \pmiff ((  p ) \land (( \pmnot q   )))
 HEREHERE linein =  ^^   p \pmimp \pmnot q  .. \pmiff ^^  \pmnot p \pmor \pmnot q   $
@@ -11374,6 +11148,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C   p    N   q     A    N   p    N   q    
+Dennis2$\pmast 4 \pmcdot 62 \pmthm((p \pmimp ( \pmnot q)) \pmiff (( \pmnot p) \pmor ( \pmnot q)))$
 Exit to_Polish stmt below
   ((   p \pmimp \pmnot q  )) \pmiff ((  \pmnot p \pmor \pmnot q   ))
 HEREHERE linein =  ^^   \pmnot \pmdot p \pmimp \pmnot q  .. \pmiff ^^  p \pmand q   $
@@ -11702,6 +11478,8 @@ C0014 infix =    )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    N    C   p    N   q     K   p   q    
+Dennis2$\pmast 4 \pmcdot 63 \pmthm(( \pmnot (p \pmimp ( \pmnot q))) \pmiff (p \land q))$
 Exit to_Polish stmt below
   (   \pmnot ( p \pmimp \pmnot q  )) \pmiff ((  p ) \land (( q   )))
 HEREHERE linein =  ^^   \pmnot p \pmimp q  .. \pmiff ^^  p \pmor q   $
@@ -11973,6 +11751,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C    N   p   q     A   p   q    
+Dennis2$\pmast 4 \pmcdot 64 \pmthm((( \pmnot p) \pmimp q) \pmiff (p \pmor q))$
 Exit to_Polish stmt below
   ((   \pmnot p \pmimp q  )) \pmiff ((  p \pmor q   ))
 HEREHERE linein =  ^^   \pmnot \pmdot \pmnot p \pmimp q  .. \pmiff ^^  \pmnot p \pmand \pmnot q   $
@@ -12339,6 +12119,8 @@ C0014 infix =    )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    N    C    N   p   q     K    N   p    N   q    
+Dennis2$\pmast 4 \pmcdot 65 \pmthm(( \pmnot (( \pmnot p) \pmimp q)) \pmiff (( \pmnot p) \land ( \pmnot q)))$
 Exit to_Polish stmt below
   (   \pmnot ( \pmnot p \pmimp q  )) \pmiff ((  \pmnot p ) \land (( \pmnot q   )))
 HEREHERE linein =  ^^   \pmnot p \pmimp \pmnot q  .. \pmiff ^^  p \pmor \pmnot q   $
@@ -12648,6 +12430,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C    N   p    N   q     A   p    N   q    
+Dennis2$\pmast 4 \pmcdot 66 \pmthm((( \pmnot p) \pmimp ( \pmnot q)) \pmiff (p \pmor ( \pmnot q)))$
 Exit to_Polish stmt below
   ((   \pmnot p \pmimp \pmnot q  )) \pmiff ((  p \pmor \pmnot q   ))
 HEREHERE linein =  ^^^   \pmnot \pmdott \pmnot p \pmimp \pmnot q  ... \pmiff ^^  \pmnot p \pmand q   $
@@ -13028,6 +12812,8 @@ C0014 infix =    )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    N    C    N   p    N   q     K    N   p   q    
+Dennis2$\pmast 4 \pmcdot 67 \pmthm(( \pmnot (( \pmnot p) \pmimp ( \pmnot q))) \pmiff (( \pmnot p) \land q))$
 Exit to_Polish stmt below
   (   \pmnot (( \pmnot p \pmimp \pmnot q  ))) \pmiff ((  \pmnot p ) \land (( q   )))
 HEREHERE linein =  ^^^  p \pmimp q  .. \pmiff ^^^  p  .. \pmimp ^^  p \pmand q   $
@@ -13395,6 +13181,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C   p   q     C   p     K   p   q    
+Dennis2$\pmast 4 \pmcdot 7 \pmthm((p \pmimp q) \pmiff (p \pmimp (p \land q)))$
 Exit to_Polish stmt below
   ((  p \pmimp q  )) \pmiff (((  p  )) \pmimp ((  p ) \land (( q   ))))
 HEREHERE linein =  ^^^  p \pmimp q  .. \pmiff ^^^  p  .. \pmiff ^^  p \pmand q   $
@@ -13762,6 +13550,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C   p   q     E   p     K   p   q    
+Dennis2$\pmast 4 \pmcdot 71 \pmthm((p \pmimp q) \pmiff (p \pmiff (p \land q)))$
 Exit to_Polish stmt below
   ((  p \pmimp q  )) \pmiff (((  p  )) \pmiff ((  p ) \land (( q   ))))
 HEREHERE linein =  ^^^  p \pmimp q  .. \pmiff ^^^  q  .. \pmiff ^^  p \pmor q   $
@@ -14095,6 +13885,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C   p   q     E   q     A   p   q    
+Dennis2$\pmast 4 \pmcdot 72 \pmthm((p \pmimp q) \pmiff (q \pmiff (p \pmor q)))$
 Exit to_Polish stmt below
   ((  p \pmimp q  )) \pmiff (((  q  )) \pmiff ((  p \pmor q   )))
 HEREHERE linein =  ^^^  q  .. \pmimp ^^^  p  .. \pmiff ^^  p \pmand q   $
@@ -14429,6 +14221,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C   q     E   p     K   p   q    
+Dennis2$\pmast 4 \pmcdot 73 \pmthm(q \pmimp (p \pmiff (p \land q)))$
 Exit to_Polish stmt below
   ((  q  )) \pmimp (((  p  )) \pmiff ((  p ) \land (( q   ))))
 HEREHERE linein =  ^^^   \pmnot p  .. \pmimp ^^^  q  .. \pmiff ^^  p \pmor q   $
@@ -14750,6 +14544,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    N   p     E   q     A   p   q    
+Dennis2$\pmast 4 \pmcdot 74 \pmthm(( \pmnot p) \pmimp (q \pmiff (p \pmor q)))$
 Exit to_Polish stmt below
   ((   \pmnot p  )) \pmimp (((  q  )) \pmiff ((  p \pmor q   )))
 HEREHERE linein =  ^^^  p \pmimp q \pmand p \pmimp r  .. \pmiff ^^^  p  .. \pmimp ^^  q \pmand r   $
@@ -15201,6 +14997,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K    C   p   q    C   p   r     C   p     K   q   r    
+Dennis2$\pmast 4 \pmcdot 76 \pmthm(((p \pmimp q) \land (p \pmimp r)) \pmiff (p \pmimp (q \land r)))$
 Exit to_Polish stmt below
   (  p \pmimp q ) \land (( p \pmimp r  )) \pmiff (((  p  )) \pmimp ((  q ) \land (( r   ))))
 HEREHERE linein =  ^^^  q \pmimp p \pmand r \pmimp p  .. \pmiff ^^^  q \pmor r  .. \pmimp ^^  p   $
@@ -15618,6 +15416,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K    C   q   p    C   r   p     C    A   q   r    p    
+Dennis2$\pmast 4 \pmcdot 77 \pmthm(((q \pmimp p) \land (r \pmimp p)) \pmiff ((q \pmor r) \pmimp p))$
 Exit to_Polish stmt below
   (  q \pmimp p ) \land (( r \pmimp p  )) \pmiff (((  q \pmor r  )) \pmimp ((  p   )))
 HEREHERE linein =  ^^^  p \pmimp q  .. \pmor ^^  p \pmimp r  ... \pmiff ^^^  p  .. \pmimp ^^  q \pmor r   $
@@ -16065,6 +15865,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    A    C   p   q     C   p   r     C   p     A   q   r    
+Dennis2$\pmast 4 \pmcdot 78 \pmthm(((p \pmimp q) \pmor (p \pmimp r)) \pmiff (p \pmimp (q \pmor r)))$
 Exit to_Polish stmt below
   (((  p \pmimp q  )) \pmor ((  p \pmimp r  ))) \pmiff (((  p  )) \pmimp ((  q \pmor r   )))
 HEREHERE linein =  ^^^  q \pmimp p  .. \pmor ^^  r \pmimp p  ... \pmiff ^^^  q \pmand r  .. \pmimp ^^  p $
@@ -16542,6 +16344,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    A    C   q   p     C   r   p     C    K   q   r    p  
+Dennis2$\pmast 4 \pmcdot 79 \pmthm(((q \pmimp p) \pmor (r \pmimp p)) \pmiff ((q \land r) \pmimp p))$
 Exit to_Polish stmt below
   (((  q \pmimp p  )) \pmor ((  r \pmimp p  ))) \pmiff (((  q ) \land (( r  )) \pmimp ((  p ))))
 HEREHERE linein =  ^^  p \pmimp \pmnot p  .. \pmiff ^^  \pmnot p $
@@ -16795,6 +16599,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C   p    N   p     N   p  
+Dennis2$\pmast 4 \pmcdot 8 \pmthm((p \pmimp ( \pmnot p)) \pmiff ( \pmnot p))$
 Exit to_Polish stmt below
   ((  p \pmimp \pmnot p  )) \pmiff ((  \pmnot p ))
 HEREHERE linein =  ^^  \pmnot p \pmimp p  .. \pmiff ^^  p $
@@ -17029,6 +16835,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C    N   p   p    p  
+Dennis2$\pmast 4 \pmcdot 81 \pmthm((( \pmnot p) \pmimp p) \pmiff p)$
 Exit to_Polish stmt below
   ((  \pmnot p \pmimp p  )) \pmiff ((  p ))
 HEREHERE linein =  ^^  p \pmimp q \pmand p \pmimp \pmnot q  .. \pmiff ^^  \pmnot p $
@@ -17366,6 +17174,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K    C   p   q    C   p    N   q     N   p  
+Dennis2$\pmast 4 \pmcdot 82 \pmthm(((p \pmimp q) \land (p \pmimp ( \pmnot q))) \pmiff ( \pmnot p))$
 Exit to_Polish stmt below
   (  p \pmimp q ) \land (( p \pmimp \pmnot q  )) \pmiff ((  \pmnot p ))
 HEREHERE linein =  ^^  p \pmimp q \pmand \pmnot p \pmimp q  .. \pmiff ^^  q $
@@ -17684,6 +17494,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K    C   p   q    C    N   p   q    q  
+Dennis2$\pmast 4 \pmcdot 83 \pmthm(((p \pmimp q) \land (( \pmnot p) \pmimp q)) \pmiff q)$
 Exit to_Polish stmt below
   (  p \pmimp q ) \land (( \pmnot p \pmimp q  )) \pmiff ((  q ))
 HEREHERE linein =  ^^^  p \pmiff q  .. \pmimp ^^^  p \pmimp r  .. \pmiff ^^  q \pmimp r $
@@ -18048,6 +17860,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    E   p   q     E    C   p   r     C   q   r  
+Dennis2$\pmast 4 \pmcdot 84 \pmthm((p \pmiff q) \pmimp ((p \pmimp r) \pmiff (q \pmimp r)))$
 Exit to_Polish stmt below
   ((  p \pmiff q  )) \pmimp (((  p \pmimp r  )) \pmiff ((  q \pmimp r )))
 HEREHERE linein =  ^^^  p \pmiff q  .. \pmimp ^^^  r \pmimp p  .. \pmiff ^^  r \pmimp q $
@@ -18412,6 +18226,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    E   p   q     E    C   r   p     C   r   q  
+Dennis2$\pmast 4 \pmcdot 85 \pmthm((p \pmiff q) \pmimp ((r \pmimp p) \pmiff (r \pmimp q)))$
 Exit to_Polish stmt below
   ((  p \pmiff q  )) \pmimp (((  r \pmimp p  )) \pmiff ((  r \pmimp q )))
 HEREHERE linein =  ^^^  p \pmiff q  .. \pmimp ^^^  p \pmiff r  .. \pmiff ^^  q \pmiff r $
@@ -18776,6 +18592,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    E   p   q     E    E   p   r     E   q   r  
+Dennis2$\pmast 4 \pmcdot 86 \pmthm((p \pmiff q) \pmimp ((p \pmiff r) \pmiff (q \pmiff r)))$
 Exit to_Polish stmt below
   ((  p \pmiff q  )) \pmimp (((  p \pmiff r  )) \pmiff ((  q \pmiff r )))
 HEREHERE linein =  ^^^  p \pmand q  .. \pmimp ^^  r  ... \pmiff ^^^  p  .. \pmimp ^^  q \pmimp r  ... \pmiff ^^^  q  .. \pmimp ^^  p \pmimp r  ... \pmiff ^^^  q \pmand p  .. \pmimp ^^  r$
@@ -19608,6 +19426,8 @@ C0016 *stk = 2
 C0017 top_stack() = ffimp\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    E    E    C    K   p   q    r     C   p     C   q   r     C   q     C   p   r     C    K   q   p    r 
+Dennis2$\pmast 4 \pmcdot 87 \pmthm(((((p \land q) \pmimp r) \pmiff (p \pmimp (q \pmimp r))) \pmiff (q \pmimp (p \pmimp r))) \pmiff ((q \land p) \pmimp r))$
 Exit to_Polish stmt below
   ((  p ) \land (( q  )) \pmimp ((  r  ))) \pmiff (((  p  )) \pmimp ((  q \pmimp r  ))) \pmiff (((  q  )) \pmimp ((  p \pmimp r  ))) \pmiff (((  q ) \land (( p  )) \pmimp ((  r))))
 HEREHERE linein =  ^^  p \pmand q  .. \pmimp ^^  p \pmiff q $
@@ -19874,6 +19694,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    K   p   q     E   p   q  
+Dennis2$\pmast 5 \pmcdot 1 \pmthm((p \land q) \pmimp (p \pmiff q))$
 Exit to_Polish stmt below
   (  p ) \land (( q  )) \pmimp ((  p \pmiff q ))
 HEREHERE linein =  ^^  p \pmimp q  .. \pmor ^^  \pmnot p \pmimp q $
@@ -20139,6 +19961,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = romp\
+Dennis1  A    C   p   q     C    N   p   q  
+Dennis2$\pmast 5 \pmcdot 11 \pmthm((p \pmimp q) \pmor (( \pmnot p) \pmimp q))$
 Exit to_Polish stmt below
   ((  p \pmimp q  )) \pmor ((  \pmnot p \pmimp q ))
 HEREHERE linein =  ^^  p \pmimp q  .. \pmor ^^  p \pmimp \pmnot q $
@@ -20404,6 +20228,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = romp\
+Dennis1  A    C   p   q     C   p    N   q  
+Dennis2$\pmast 5 \pmcdot 12 \pmthm((p \pmimp q) \pmor (p \pmimp ( \pmnot q)))$
 Exit to_Polish stmt below
   ((  p \pmimp q  )) \pmor ((  p \pmimp \pmnot q ))
 HEREHERE linein =  ^^  p \pmimp q  .. \pmor ^^  q \pmimp p $
@@ -20650,6 +20476,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = romp\
+Dennis1  A    C   p   q     C   q   p  
+Dennis2$\pmast 5 \pmcdot 13 \pmthm((p \pmimp q) \pmor (q \pmimp p))$
 Exit to_Polish stmt below
   ((  p \pmimp q  )) \pmor ((  q \pmimp p ))
 HEREHERE linein =  ^^  p \pmimp q  .. \pmor ^^  q \pmimp r $
@@ -20896,6 +20724,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = romp\
+Dennis1  A    C   p   q     C   q   r  
+Dennis2$\pmast 5 \pmcdot 14 \pmthm((p \pmimp q) \pmor (q \pmimp r))$
 Exit to_Polish stmt below
   ((  p \pmimp q  )) \pmor ((  q \pmimp r ))
 HEREHERE linein =  ^^  p \pmiff q  .. \pmor ^^  p \pmiff \pmnot q $
@@ -21161,6 +20991,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = romp\
+Dennis1  A    E   p   q     E   p    N   q  
+Dennis2$\pmast 5 \pmcdot 15 \pmthm((p \pmiff q) \pmor (p \pmiff ( \pmnot q)))$
 Exit to_Polish stmt below
   ((  p \pmiff q  )) \pmor ((  p \pmiff \pmnot q ))
 HEREHERE linein =  ^^^  \pmnot \pmdott p \pmiff q \pmand p \pmiff \pmnot q $
@@ -21461,6 +21293,8 @@ C0003 nxt =   )
 C0006 is )
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  N    K    E   p   q    E   p    N   q  
+Dennis2$\pmast 5 \pmcdot 16 \pmthm( \pmnot ((p \pmiff q) \land (p \pmiff ( \pmnot q))))$
 Exit to_Polish stmt below
   (  \pmnot (( p \pmiff q ) \land (( p \pmiff \pmnot q ))))
 HEREHERE linein =  ^  p \pmor q \pmand \pmnot \pmdott p \pmand q  ..... \pmiff ^^  p \pmiff \pmnot q  $
@@ -21895,6 +21729,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K    A   p   q    N    K   p   q     E   p    N   q   
+Dennis2$\pmast 5 \pmcdot 17 \pmthm(((p \pmor q) \land ( \pmnot (p \land q))) \pmiff (p \pmiff ( \pmnot q)))$
 Exit to_Polish stmt below
   (  p \pmor q ) \land (( \pmnot (( p ) \land (( q  ))))) \pmiff ((  p \pmiff \pmnot q  ))
 HEREHERE linein =  ^^  p \pmiff q  .. \pmiff ^^  \pmnot \pmdot p \pmiff \pmnot q  $
@@ -22201,6 +22037,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    E   p   q     N    E   p    N   q   
+Dennis2$\pmast 5 \pmcdot 18 \pmthm((p \pmiff q) \pmiff ( \pmnot (p \pmiff ( \pmnot q))))$
 Exit to_Polish stmt below
   ((  p \pmiff q  )) \pmiff ((  \pmnot ( p \pmiff \pmnot q  )))
 HEREHERE linein =  ^^  \pmnot \pmdot p \pmiff \pmnot p  $
@@ -22391,6 +22229,8 @@ C0003 nxt =   )
 C0006 is )
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  N    E   p    N   p   
+Dennis2$\pmast 5 \pmcdot 19 \pmthm( \pmnot (p \pmiff ( \pmnot p)))$
 Exit to_Polish stmt below
   (  \pmnot ( p \pmiff \pmnot p  ))
 HEREHERE linein =  ^^  \pmnot p \pmand \pmnot q  .. \pmimp ^^  p \pmiff q $
@@ -22695,6 +22535,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    K    N   p    N   q     E   p   q  
+Dennis2$\pmast 5 \pmcdot 21 \pmthm((( \pmnot p) \land ( \pmnot q)) \pmimp (p \pmiff q))$
 Exit to_Polish stmt below
   (  \pmnot p ) \land (( \pmnot q  )) \pmimp ((  p \pmiff q ))
 HEREHERE linein =  ^^^  \pmnot \pmdot p \pmiff q  .. \pmiff ^^^  p \pmand \pmnot q  .. \pmor ^^  q \pmand \pmnot p $
@@ -23182,6 +23024,8 @@ C0014 infix =   )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    N    E   p   q     A    K   p    N   q     K   q    N   p  
+Dennis2$\pmast 5 \pmcdot 22 \pmthm(( \pmnot (p \pmiff q)) \pmiff ((p \land ( \pmnot q)) \pmor (q \land ( \pmnot p))))$
 Exit to_Polish stmt below
   (  \pmnot ( p \pmiff q  )) \pmiff (((  p ) \land (( \pmnot q  )) \pmor ((  q ) \land (( \pmnot p )))))
 HEREHERE linein =  ^^^  p \pmiff q  .. \pmiff ^^^  p \pmand q   .. \pmor ^^  \pmnot p \pmand \pmnot q $
@@ -23648,6 +23492,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    E   p   q     A    K   p   q      K    N   p    N   q  
+Dennis2$\pmast 5 \pmcdot 23 \pmthm((p \pmiff q) \pmiff ((p \land q) \pmor (( \pmnot p) \land ( \pmnot q))))$
 Exit to_Polish stmt below
   ((  p \pmiff q  )) \pmiff (((  p ) \land (( q   )) \pmor ((  \pmnot p ) \land (( \pmnot q )))))
 HEREHERE linein =  ^^^^  \pmnot \pmdott p \pmand q  .. \pmor ^^  \pmnot p \pmand \pmnot q  .... \pmiff ^^^  p \pmand \pmnot q  .. \pmor ^^  q \pmand \pmnot p  $
@@ -24353,6 +24199,8 @@ C0007 *stk = 2
 C0007 top_stack = ffimp\
 C0014 infix =   )  
 C0015 infix =   
+Dennis1  E    N    A    K   p   q     K    N   p    N   q     A    K   p    N   q     K   q    N   p   
+Dennis2$\pmast 5 \pmcdot 24 \pmthm(( \pmnot ((p \land q) \pmor (( \pmnot p) \land ( \pmnot q)))) \pmiff ((p \land ( \pmnot q)) \pmor (q \land ( \pmnot p))))$
 Exit to_Polish stmt below
   (  \pmnot (( p ) \land (( q  )) \pmor ((  \pmnot p ) \land (( \pmnot q  )))) \pmiff (((  p ) \land (( \pmnot q  )) \pmor ((  q ) \land (( \pmnot p  ))))))
 HEREHERE linein =  ^^^  p \pmor q  .. \pmiff ^^^  p \pmimp q  .. \pmimp ^^  q  $ 
@@ -24686,6 +24534,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    A   p   q     C    C   p   q    q    
+Dennis2$\pmast 5 \pmcdot 25 \pmthm((p \pmor q) \pmiff ((p \pmimp q) \pmimp q))$
 Exit to_Polish stmt below
   ((  p \pmor q  )) \pmiff (((  p \pmimp q  )) \pmimp ((  q   )))
 HEREHERE linein =  ^^^  p \pmand q  .. \pmimp ^^  r  ... \pmiff ^^^  p \pmand q  .. \pmimp ^^  p \pmand r   $
@@ -25219,6 +25069,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C    K   p   q    r     C    K   p   q     K   p   r    
+Dennis2$\pmast 5 \pmcdot 3 \pmthm(((p \land q) \pmimp r) \pmiff ((p \land q) \pmimp (p \land r)))$
 Exit to_Polish stmt below
   ((  p ) \land (( q  )) \pmimp ((  r  ))) \pmiff (((  p ) \land (( q  )) \pmimp ((  p ) \land (( r   )))))
 HEREHERE linein =  ^^^  r \pmand p \pmimp q  ... \pmimp ^^^  p  .. \pmimp ^^  q \pmand r   $
@@ -25651,6 +25503,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    K   r    C   p   q     C   p     K   q   r    
+Dennis2$\pmast 5 \pmcdot 31 \pmthm((r \land (p \pmimp q)) \pmimp (p \pmimp (q \land r)))$
 Exit to_Polish stmt below
   ((  r ) \land (( p \pmimp q  ))) \pmimp (((  p  )) \pmimp ((  q ) \land (( r   ))))
 HEREHERE linein =  ^^^  p  .. \pmimp ^^  q \pmiff r  ... \pmiff ^^^  p \pmand q  .. \pmiff ^^  p \pmand r $
@@ -26162,6 +26016,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C   p     E   q   r     E    K   p   q     K   p   r  
+Dennis2$\pmast 5 \pmcdot 32 \pmthm((p \pmimp (q \pmiff r)) \pmiff ((p \land q) \pmiff (p \land r)))$
 Exit to_Polish stmt below
   (((  p  )) \pmimp ((  q \pmiff r  ))) \pmiff (((  p ) \land (( q  )) \pmiff ((  p ) \land (( r )))))
 HEREHERE linein =  ^^^  p \pmand q \pmimp r  .. \pmiff ^^^  p \pmandd p \pmand q  .. \pmimp ^^  r$
@@ -26653,6 +26509,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K   p    C   q   r     K   p    C    K   p   q    r 
+Dennis2$\pmast 5 \pmcdot 33 \pmthm((p \land (q \pmimp r)) \pmiff (p \land ((p \land q) \pmimp r)))$
 Exit to_Polish stmt below
   (  p ) \land (( q \pmimp r  )) \pmiff (((  p )) \land ((( p ) \land (( q  )) \pmimp ((  r)))))
 HEREHERE linein =  ^^^  p \pmimp q \pmand p \pmimp r  .. \pmimp ^^^  p  .. \pmimp ^^  q \pmiff r    $
@@ -27074,6 +26932,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    K    C   p   q    C   p   r     C   p     E   q   r     
+Dennis2$\pmast 5 \pmcdot 35 \pmthm(((p \pmimp q) \land (p \pmimp r)) \pmimp (p \pmimp (q \pmiff r)))$
 Exit to_Polish stmt below
   (  p \pmimp q ) \land (( p \pmimp r  )) \pmimp (((  p  )) \pmimp ((  q \pmiff r    )))
 HEREHERE linein =  ^^  p \pmand p \pmiff q  .. \pmiff ^^  q \pmand p \pmiff q  $
@@ -27440,6 +27300,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K   p    E   p   q     K   q    E   p   q   
+Dennis2$\pmast 5 \pmcdot 36 \pmthm((p \land (p \pmiff q)) \pmiff (q \land (p \pmiff q)))$
 Exit to_Polish stmt below
   (  p ) \land (( p \pmiff q  )) \pmiff ((  q ) \land (( p \pmiff q  )))
 HEREHERE linein =  ^^  p  .. \pmimp ^^  p \pmimp q  ... \pmiff ^^  p \pmimp q    $
@@ -27777,6 +27639,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C   p     C   p   q     C   p   q     
+Dennis2$\pmast 5 \pmcdot 4 \pmthm((p \pmimp (p \pmimp q)) \pmiff (p \pmimp q))$
 Exit to_Polish stmt below
   (((  p  )) \pmimp ((  p \pmimp q  ))) \pmiff ((  p \pmimp q    ))
 HEREHERE linein =  ^^^  p \pmimp q  .. \pmimp ^^  p \pmimp r  ... \pmiff ^^^  p  .. \pmimp ^^  q \pmimp r     $
@@ -28232,6 +28096,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C    C   p   q     C   p   r     C   p     C   q   r      
+Dennis2$\pmast 5 \pmcdot 41 \pmthm(((p \pmimp q) \pmimp (p \pmimp r)) \pmiff (p \pmimp (q \pmimp r)))$
 Exit to_Polish stmt below
   (((  p \pmimp q  )) \pmimp ((  p \pmimp r  ))) \pmiff (((  p  )) \pmimp ((  q \pmimp r     )))
 HEREHERE linein =  ^^^^  p  .. \pmimp ^^  q \pmimp r  ... \pmiff ^^^^  p  .. \pmimp ^^^  q  .. \pmimp ^^  p \pmand r $
@@ -28775,6 +28641,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C   p     C   q   r     C   p     C   q     K   p   r  
+Dennis2$\pmast 5 \pmcdot 42 \pmthm((p \pmimp (q \pmimp r)) \pmiff (p \pmimp (q \pmimp (p \land r))))$
 Exit to_Polish stmt below
   (((  p  )) \pmimp ((  q \pmimp r  ))) \pmiff ((((  p  )) \pmimp (((  q  )) \pmimp ((  p ) \land (( r ))))))
 HEREHERE linein =  ^^^^  p \pmimp q  .. \pmimp ^^^^  p \pmimp r  .. \pmiff ^^^  p  .. \pmimp ^^  q \pmand r  $
@@ -29270,6 +29138,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    C   p   q     E    C   p   r     C   p     K   q   r   
+Dennis2$\pmast 5 \pmcdot 44 \pmthm((p \pmimp q) \pmimp ((p \pmimp r) \pmiff (p \pmimp (q \land r))))$
 Exit to_Polish stmt below
   ((  p \pmimp q  )) \pmimp ((((  p \pmimp r  )) \pmiff (((  p  )) \pmimp ((  q ) \land (( r  ))))))
 HEREHERE linein =  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmiff ^^  q $
@@ -29568,6 +29438,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C   p     E    C   p   q    q  
+Dennis2$\pmast 5 \pmcdot 5 \pmthm(p \pmimp ((p \pmimp q) \pmiff q))$
 Exit to_Polish stmt below
   ((  p  )) \pmimp (((  p \pmimp q  )) \pmiff ((  q )))
 HEREHERE linein =  ^^^  p  .. \pmimp ^^^  q  .. \pmiff ^^  p \pmiff q $
@@ -29866,6 +29738,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C   p     E   q     E   p   q  
+Dennis2$\pmast 5 \pmcdot 501 \pmthm(p \pmimp (q \pmiff (p \pmiff q)))$
 Exit to_Polish stmt below
   ((  p  )) \pmimp (((  q  )) \pmiff ((  p \pmiff q )))
 HEREHERE linein =  ^^^  p \pmor q \pmor r  .. \pmimp ^^  s  ... \pmiff ^^^  p \pmimp s \pmand q \pmimp s \pmand r \pmimp s $
@@ -30436,6 +30310,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C    A    A   p   q   r    s     K    C   p   s    K    C   q   s    C   r   s  
+Dennis2$\pmast 5 \pmcdot 53 \pmthm((((p \pmor q) \pmor r) \pmimp s) \pmiff ((p \pmimp s) \land ((q \pmimp s) \land (r \pmimp s))))$
 Exit to_Polish stmt below
   (((  p \pmor q \pmor r  )) \pmimp ((  s  ))) \pmiff (((  p \pmimp s ) \land (( q \pmimp s ) \land (( r \pmimp s )))))
 HEREHERE linein =  ^^^  p \pmand q  .. \pmiff ^^  p  ... \pmor ^^^  p \pmand q  .. \pmiff ^^  q  $
@@ -30900,6 +30776,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = romp\
+Dennis1  A    E    K   p   q    p     E    K   p   q    q   
+Dennis2$\pmast 5 \pmcdot 54 \pmthm(((p \land q) \pmiff p) \pmor ((p \land q) \pmiff q))$
 Exit to_Polish stmt below
   ((  p ) \land (( q  )) \pmiff ((  p  ))) \pmor (((  p ) \land (( q  )) \pmiff ((  q  ))))
 HEREHERE linein =  ^^^  p \pmor q  .. \pmiff ^^  p  ... \pmor ^^^  p \pmor q  .. \pmiff ^^  q    $
@@ -31314,6 +31192,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = romp\
+Dennis1  A    E    A   p   q    p     E    A   p   q    q     
+Dennis2$\pmast 5 \pmcdot 55 \pmthm(((p \pmor q) \pmiff p) \pmor ((p \pmor q) \pmiff q))$
 Exit to_Polish stmt below
   (((  p \pmor q  )) \pmiff ((  p  ))) \pmor (((  p \pmor q  )) \pmiff ((  q    )))
 HEREHERE linein =  ^^^  p \pmand \pmnot q  .. \pmimp ^^  r  ... \pmiff ^^^  p  .. \pmimp ^^  q \pmor r     $
@@ -31771,6 +31651,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C    K   p    N   q    r     C   p     A   q   r      
+Dennis2$\pmast 5 \pmcdot 6 \pmthm(((p \land ( \pmnot q)) \pmimp r) \pmiff (p \pmimp (q \pmor r)))$
 Exit to_Polish stmt below
   ((  p ) \land (( \pmnot q  )) \pmimp ((  r  ))) \pmiff (((  p  )) \pmimp ((  q \pmor r     )))
 HEREHERE linein =  ^^  p \pmor q \pmand \pmnot q  .. \pmiff ^^  p \pmand \pmnot q $
@@ -32138,6 +32020,8 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    K    A   p   q    N   q     K   p    N   q  
+Dennis2$\pmast 5 \pmcdot 61 \pmthm(((p \pmor q) \land ( \pmnot q)) \pmiff (p \land ( \pmnot q)))$
 Exit to_Polish stmt below
   (  p \pmor q ) \land (( \pmnot q  )) \pmiff ((  p ) \land (( \pmnot q )))
 HEREHERE linein =  ^^^  p \pmand q  .. \pmor ^^  \pmnot q  ... \pmiff ^^  p \pmor \pmnot q $
@@ -32521,6 +32405,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    A    K   p   q     N   q     A   p    N   q  
+Dennis2$\pmast 5 \pmcdot 62 \pmthm(((p \land q) \pmor ( \pmnot q)) \pmiff (p \pmor ( \pmnot q)))$
 Exit to_Polish stmt below
   ((  p ) \land (( q  )) \pmor ((  \pmnot q  ))) \pmiff ((  p \pmor \pmnot q ))
 HEREHERE linein =  ^^^  p \pmor q  .. \pmiff ^^^  p  .. \pmor ^^  \pmnot p \pmand q   $
@@ -32903,6 +32789,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    A   p   q     A   p     K    N   p   q    
+Dennis2$\pmast 5 \pmcdot 63 \pmthm((p \pmor q) \pmiff (p \pmor (( \pmnot p) \land q)))$
 Exit to_Polish stmt below
   ((  p \pmor q  )) \pmiff (((  p  )) \pmor ((  \pmnot p ) \land (( q   ))))
 HEREHERE linein =  ^^^  p \pmor r  .. \pmiff ^^  q \pmor r  ... \pmiff ^^^  r  .. \pmor ^^  p \pmiff q   $
@@ -33348,6 +33236,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    E    A   p   r     A   q   r     A   r     E   p   q    
+Dennis2$\pmast 5 \pmcdot 7 \pmthm(((p \pmor r) \pmiff (q \pmor r)) \pmiff (r \pmor (p \pmiff q)))$
 Exit to_Polish stmt below
   (((  p \pmor r  )) \pmiff ((  q \pmor r  ))) \pmiff (((  r  )) \pmor ((  p \pmiff q   )))
 HEREHERE linein =  ^^^  q \pmimp \pmnot r  .. \pmimp ^^^  p \pmor q \pmand r  .. \pmiff ^^  p \pmand r   $
@@ -33830,6 +33720,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    C   q    N   r     E    K    A   p   q   r     K   p   r    
+Dennis2$\pmast 5 \pmcdot 71 \pmthm((q \pmimp ( \pmnot r)) \pmimp (((p \pmor q) \land r) \pmiff (p \land r)))$
 Exit to_Polish stmt below
   ((  q \pmimp \pmnot r  )) \pmimp (((  p \pmor q ) \land (( r  )) \pmiff ((  p ) \land (( r   )))))
 HEREHERE linein =  ^^^  p  .. \pmimp ^^  q \pmiff r  ... \pmiff ^^^  p \pmimp q  .. \pmiff ^^  p \pmimp r $
@@ -34277,6 +34169,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    C   p     E   q   r     E    C   p   q     C   p   r  
+Dennis2$\pmast 5 \pmcdot 74 \pmthm((p \pmimp (q \pmiff r)) \pmiff ((p \pmimp q) \pmiff (p \pmimp r)))$
 Exit to_Polish stmt below
   (((  p  )) \pmimp ((  q \pmiff r  ))) \pmiff (((  p \pmimp q  )) \pmiff ((  p \pmimp r )))
 HEREHERE linein =  ^^^  r \pmimp \pmnot q \pmandd p  .. \pmiff ^^  q \pmor r  ... \pmimp ^^^  p \pmand \pmnot q  .. \pmiff ^^  r       $
@@ -34869,2000 +34763,10 @@ C0016 *stk = 2
 C0017 top_stack() = dnal\
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    K    C   r    N   q    E   p     A   q   r     E    K   p    N   q    r        
+Dennis2$\pmast 5 \pmcdot 75 \pmthm(((r \pmimp ( \pmnot q)) \land (p \pmiff (q \pmor r))) \pmimp ((p \land ( \pmnot q)) \pmiff r))$
 Exit to_Polish stmt below
   ((  r \pmimp \pmnot q )) \land ((( p  )) \pmiff ((  q \pmor r  ))) \pmimp (((  p ) \land (( \pmnot q  )) \pmiff ((  r       ))))
-HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmandddddd
-HEREHERE dots_out = ;;;;;; \land :::::::
-HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmanddddd
-HEREHERE dots_out = ;;;;; \land ::::::
-HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmandddd
-HEREHERE dots_out = ;;;; \land :::::
-HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmanddd
-HEREHERE dots_out = ;;; \land ::::
-HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmandd
-HEREHERE dots_out = ;; \land :::
-HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein =  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmand
-HEREHERE dots_out = ; \land ::
-HEREHEREHERE  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdotttttt
-HEREHERE dots_out = !!!!!!
-HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdottttt
-HEREHERE dots_out = !!!!!
-HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdotttt
-HEREHERE dots_out = !!!!
-HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdottt
-HEREHERE dots_out = !!!
-HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdott
-HEREHERE dots_out = !!
-HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdot
-HEREHERE dots_out = !
-HEREHEREHERE $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HERE BA li = $\pmast 9 \pmcdot 1 \pmthm  ^^  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HERE AA li = $\pmast 9 \pmcdot 1 \pmthm  ((((((((((  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     ))))))))$
-Enter to_Polish infix below
-$\pmast 9 \pmcdot 1 \pmthm  ((  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     $
-A0001 head1 = $\pmast 9 \pmcdot 1 \
-A0002 head2 = pmthm
-A0003 head = $\pmast 9 \pmcdot 1 \pmthm
-A0004 stmt =   ((  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     $
-A0005 reverse stmt = $     }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-A0006 tail1 = 
-A0007 tail2 = $
-A0008 rest =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-infixToPolish B0001
-B002 infix =   ((  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     
-B003 reverse infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 1 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 2 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 3 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 4 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 5 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 6 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 7 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 8 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 9 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 10 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 11 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 12 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 13 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 14 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 15 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 16 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 17 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 18 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 19 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 20 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 21 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 22 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  () }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 23 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 24 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 25 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 26 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 27 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 28 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 29 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 30 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 31 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 32 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 33 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 34 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 35 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 36 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 37 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )( pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 38 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 39 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 40 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 41 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 42 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 43 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 44 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 45 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 46 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  ((  
-B004 iii = 47 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ()  }x{}ihp\{fpmp\  ((  
-B004 iii = 48 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 49 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 50 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 51 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 52 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 53 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 54 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 55 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 56 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 57 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 58 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 59 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 60 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 61 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 62 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 63 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 64 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 65 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 66 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ((  
-B004 iii = 67 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )(  
-B004 iii = 68 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-B004 iii = 69 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-B004 iii = 70 *infix = 70
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-before infixToReverse_Polish
-Enter infixToReverse_Polish
-C0001 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0002 *infix = 70
-C0003 nxt =      }x{}ihp\{fpmp\
-C0004 is operand
-C0014 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0015 infix =   (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0002 *infix = 51
-C0003 nxt =   (
-C0005 is (
-C0014 infix =   (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0015 infix = ( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0002 *infix = 48
-C0003 nxt = (
-C0005 is (
-C0014 infix = ( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0015 infix =  }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0002 *infix = 47
-C0003 nxt =  }x{emosmp\
-C0004 is operand
-C0014 infix =  }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0015 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0002 *infix = 36
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0015 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0002 *infix = 33
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0015 infix =  pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0002 *infix = 32
-C0003 nxt =  pmimp\
-C0008 *stk = 0
-C0009 top_stack() = 
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ ((  }x{}ihp\{fpmp\  ))  
-C0015 infix =  ((  }x{}ihp\{fpmp\  ))  
-C0002 *infix = 25
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ((  }x{}ihp\{fpmp\  ))  
-C0015 infix = (  }x{}ihp\{fpmp\  ))  
-C0002 *infix = 23
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  }x{}ihp\{fpmp\  ))  
-C0015 infix =   }x{}ihp\{fpmp\  ))  
-C0002 *infix = 22
-C0003 nxt =   }x{}ihp\{fpmp\
-C0004 is operand
-C0014 infix =   }x{}ihp\{fpmp\  ))  
-C0015 infix =   ))  
-C0002 *infix = 6
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   ))  
-C0015 infix = )  
-C0002 *infix = 3
-C0003 nxt = )
-C0006 is )
-C0014 infix = )  
-C0015 infix =   
-C0016 *stk = 1
-C0017 top_stack() = pmimp\
-Exit to_Polish stmt below
-  ((  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     
-HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmandddddd
-HEREHERE dots_out = ;;;;;; \land :::::::
-HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmanddddd
-HEREHERE dots_out = ;;;;; \land ::::::
-HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmandddd
-HEREHERE dots_out = ;;;; \land :::::
-HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmanddd
-HEREHERE dots_out = ;;; \land ::::
-HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmandd
-HEREHERE dots_out = ;; \land :::
-HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein =  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmand
-HEREHERE dots_out = ; \land ::
-HEREHEREHERE  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdotttttt
-HEREHERE dots_out = !!!!!!
-HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdottttt
-HEREHERE dots_out = !!!!!
-HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdotttt
-HEREHERE dots_out = !!!!
-HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdottt
-HEREHERE dots_out = !!!
-HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdott
-HEREHERE dots_out = !!
-HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE linein = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HEREHERE dot_str = \pmdot
-HEREHERE dots_out = !
-HEREHEREHERE $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HERE BA li = $\pmast 9 \pmcdot 11 \pmthm  ^^  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\phi}{x}     $
-HERE AA li = $\pmast 9 \pmcdot 11 \pmthm  ((((((((((  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     ))))))))$
-Enter to_Polish infix below
-$\pmast 9 \pmcdot 11 \pmthm  ((  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     $
-A0001 head1 = $\pmast 9 \pmcdot 11 \
-A0002 head2 = pmthm
-A0003 head = $\pmast 9 \pmcdot 11 \pmthm
-A0004 stmt =   ((  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     $
-A0005 reverse stmt = $     }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-A0006 tail1 = 
-A0007 tail2 = $
-A0008 rest =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-infixToPolish B0001
-B002 infix =   ((  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     
-B003 reverse infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 1 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 2 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 3 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 4 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 5 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 6 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 7 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 8 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 9 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 10 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 11 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 12 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 13 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 14 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 15 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 16 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 17 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 18 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 19 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 20 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 21 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 22 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  () }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 23 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 24 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 25 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 26 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 27 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 28 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 29 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 30 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 31 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 32 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 33 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 34 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 35 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 36 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 37 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )( pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 38 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 39 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 40 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 41 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 42 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 43 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 44 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 45 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 46 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 47 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ()  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 48 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 49 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 50 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 51 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 52 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 53 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 54 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 55 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 56 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 57 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 58 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 59 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 60 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 61 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 62 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 63 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 64 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 65 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 66 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 67 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 68 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 69 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 70 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 71 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 72 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 73 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 74 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 75 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 76 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 77 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 78 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 79 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 80 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 81 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 82 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 83 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 84 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 85 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 86 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 87 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ((  
-B004 iii = 88 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  )(  
-B004 iii = 89 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-B004 iii = 90 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-B004 iii = 91 *infix = 91
-B005 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-before infixToReverse_Polish
-Enter infixToReverse_Polish
-C0001 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0002 *infix = 91
-C0003 nxt =      }x{}ihp\{fpmp\
-C0004 is operand
-C0014 infix =      }x{}ihp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0015 infix =   (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0002 *infix = 72
-C0003 nxt =   (
-C0005 is (
-C0014 infix =   (( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0015 infix = ( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0002 *infix = 69
-C0003 nxt = (
-C0005 is (
-C0014 infix = ( }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0015 infix =  }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0002 *infix = 68
-C0003 nxt =  }x{emosmp\
-C0004 is operand
-C0014 infix =  }x{emosmp\  )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0015 infix =   )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0002 *infix = 57
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   )) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0015 infix = ) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0002 *infix = 54
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0015 infix =  pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0002 *infix = 53
-C0003 nxt =  pmimp\
-C0008 *stk = 0
-C0009 top_stack() = 
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0015 infix =  ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0002 *infix = 46
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ((  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0015 infix = (  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0002 *infix = 44
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0015 infix =   }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0002 *infix = 43
-C0003 nxt =   }y{}ihp\{fpmp\
-C0004 is operand
-C0014 infix =   }y{}ihp\{fpmp\ romp\ }x{}ihp\{fpmp\  ))  
-C0015 infix =  romp\ }x{}ihp\{fpmp\  ))  
-C0002 *infix = 27
-C0003 nxt =  romp\
-C0008 *stk = 3
-C0009 top_stack() = (
-C0012 nxt =  romp\
-C0013 nxt =  romp\
-C0014 infix =  romp\ }x{}ihp\{fpmp\  ))  
-C0015 infix =  }x{}ihp\{fpmp\  ))  
-C0002 *infix = 21
-C0003 nxt =  }x{}ihp\{fpmp\
-C0004 is operand
-C0014 infix =  }x{}ihp\{fpmp\  ))  
-C0015 infix =   ))  
-C0002 *infix = 6
-C0003 nxt =   )
-C0006 is )
-C0007 *stk = 4
-C0007 top_stack = romp\
-C0014 infix =   ))  
-C0015 infix = )  
-C0002 *infix = 3
-C0003 nxt = )
-C0006 is )
-C0014 infix = )  
-C0015 infix =   
-C0016 *stk = 1
-C0017 top_stack() = pmimp\
-Exit to_Polish stmt below
-  ((  \pmpf{\phi}{x} \pmor \pmpf{\phi}{y}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\phi}{x}     
-HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmandddddd
-HEREHERE dots_out = ;;;;;; \land :::::::
-HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmanddddd
-HEREHERE dots_out = ;;;;; \land ::::::
-HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmandddd
-HEREHERE dots_out = ;;;; \land :::::
-HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmanddd
-HEREHERE dots_out = ;;; \land ::::
-HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmandd
-HEREHERE dots_out = ;; \land :::
-HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE linein =  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmand
-HEREHERE dots_out = ; \land ::
-HEREHEREHERE  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmdotttttt
-HEREHERE dots_out = !!!!!!
-HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmdottttt
-HEREHERE dots_out = !!!!!
-HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmdotttt
-HEREHERE dots_out = !!!!
-HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmdottt
-HEREHERE dots_out = !!!
-HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmdott
-HEREHERE dots_out = !!
-HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE linein = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HEREHERE dot_str = \pmdot
-HEREHERE dots_out = !
-HEREHEREHERE $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HERE BA li = $\pmast 9 \pmcdot 2 \pmthm  ^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmpf{\phi}{y}     $
-HERE AA li = $\pmast 9 \pmcdot 2 \pmthm  ((((((((((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmpf{\phi}{y}     ))))))))$
-Enter to_Polish infix below
-$\pmast 9 \pmcdot 2 \pmthm  ((((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmpf{\phi}{y}     ))$
-A0001 head1 = $\pmast 9 \pmcdot 2 \
-A0002 head2 = pmthm
-A0003 head = $\pmast 9 \pmcdot 2 \pmthm
-A0004 stmt =   ((((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmpf{\phi}{y}     ))$
-A0005 reverse stmt = $))     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-A0006 tail1 = 
-A0007 tail2 = $
-A0008 rest = ))     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-infixToPolish B0001
-B002 infix =   ((((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmpf{\phi}{y}     ))
-B003 reverse infix = ))     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 1 *infix = 73
-B005 infix = ()     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 2 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 3 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 4 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 5 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 6 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 7 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 8 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 9 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 10 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 11 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 12 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 13 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 14 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 15 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 16 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 17 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 18 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 19 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 20 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 21 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 22 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 23 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 24 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 25 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 26 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 27 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 28 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 29 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 30 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 31 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 32 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 33 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 34 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ()  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 35 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 36 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 37 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 38 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 39 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 40 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 41 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 42 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 43 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 44 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 45 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 46 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 47 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 48 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 49 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 50 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 51 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 52 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 53 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((((  
-B004 iii = 54 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  () }x{llamp\  ((((  
-B004 iii = 55 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 56 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 57 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 58 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 59 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 60 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 61 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 62 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 63 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 64 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 65 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 66 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 67 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((((  
-B004 iii = 68 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  )(((  
-B004 iii = 69 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))((  
-B004 iii = 70 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  )))(  
-B004 iii = 71 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-B004 iii = 72 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-B004 iii = 73 *infix = 73
-B005 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-before infixToReverse_Polish
-Enter infixToReverse_Polish
-C0001 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0002 *infix = 73
-C0003 nxt = (
-C0005 is (
-C0014 infix = ((     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0015 infix = (     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0002 *infix = 72
-C0003 nxt = (
-C0005 is (
-C0014 infix = (     }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0015 infix =      }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0002 *infix = 71
-C0003 nxt =      }y{}ihp\{fpmp\
-C0004 is operand
-C0014 infix =      }y{}ihp\{fpmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0015 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0002 *infix = 52
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0015 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0002 *infix = 49
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0015 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0002 *infix = 48
-C0003 nxt =  pmimp\
-C0008 *stk = 0
-C0009 top_stack() = 
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0015 infix =  ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0002 *infix = 41
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0015 infix = (  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0002 *infix = 39
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0015 infix =   }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0002 *infix = 38
-C0003 nxt =   }x{}ihp\{fpmp\
-C0004 is operand
-C0014 infix =   }x{}ihp\{fpmp\  (( }x{llamp\  ))))  
-C0015 infix =   (( }x{llamp\  ))))  
-C0002 *infix = 22
-C0003 nxt =   (
-C0005 is (
-C0014 infix =   (( }x{llamp\  ))))  
-C0015 infix = ( }x{llamp\  ))))  
-C0002 *infix = 19
-C0003 nxt = (
-C0005 is (
-C0014 infix = ( }x{llamp\  ))))  
-C0015 infix =  }x{llamp\  ))))  
-C0002 *infix = 18
-C0003 nxt =  }x{llamp\
-C0004 is operand
-C0014 infix =  }x{llamp\  ))))  
-C0015 infix =   ))))  
-C0002 *infix = 8
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   ))))  
-C0015 infix = )))  
-C0002 *infix = 5
-C0003 nxt = )
-C0006 is )
-C0014 infix = )))  
-C0015 infix = ))  
-C0002 *infix = 4
-C0003 nxt = )
-C0006 is )
-C0014 infix = ))  
-C0015 infix = )  
-C0002 *infix = 3
-C0003 nxt = )
-C0006 is )
-C0014 infix = )  
-C0015 infix =   
-C0016 *stk = 1
-C0017 top_stack() = pmimp\
-Exit to_Polish stmt below
-  ((((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmpf{\phi}{y}     ))
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmandddddd
-HEREHERE dots_out = ;;;;;; \land :::::::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmanddddd
-HEREHERE dots_out = ;;;;; \land ::::::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmandddd
-HEREHERE dots_out = ;;;; \land :::::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmanddd
-HEREHERE dots_out = ;;; \land ::::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmandd
-HEREHERE dots_out = ;; \land :::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmand
-HEREHERE dots_out = ; \land ::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdotttttt
-HEREHERE dots_out = !!!!!!
-HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdottttt
-HEREHERE dots_out = !!!!!
-HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdotttt
-HEREHERE dots_out = !!!!
-HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdottt
-HEREHERE dots_out = !!!
-HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdott
-HEREHERE dots_out = !!
-HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdot
-HEREHERE dots_out = !
-HEREHEREHERE $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HERE BA li = $\pmast 9 \pmcdot 21 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmall{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmall{x} %%  \pmpf{\psi}{x}       $
-HERE AA li = $\pmast 9 \pmcdot 21 \pmthm  (((((((((((((((((((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmall{x} ))  \pmpf{\psi}{x}       ))))))))))))))))$
-Enter to_Polish infix below
-$\pmast 9 \pmcdot 21 \pmthm  (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmall{x} ))  \pmpf{\psi}{x}       $
-A0001 head1 = $\pmast 9 \pmcdot 21 \
-A0002 head2 = pmthm
-A0003 head = $\pmast 9 \pmcdot 21 \pmthm
-A0004 stmt =   (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmall{x} ))  \pmpf{\psi}{x}       $
-A0005 reverse stmt = $       }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-A0006 tail1 = 
-A0007 tail2 = $
-A0008 rest =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-infixToPolish B0001
-B002 infix =   (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmall{x} ))  \pmpf{\psi}{x}       
-B003 reverse infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 1 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 2 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 3 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 4 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 5 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 6 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 7 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 8 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 9 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 10 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 11 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 12 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 13 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 14 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 15 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 16 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 17 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 18 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 19 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 20 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 21 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 22 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 23 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  )) }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 24 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  () }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 25 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 26 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 27 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 28 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 29 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 30 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 31 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 32 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 33 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 34 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 35 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 36 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 37 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 38 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 39 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 40 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 41 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 42 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 43 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 44 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 45 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 46 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 47 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 48 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ()  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 49 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 50 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 51 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 52 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 53 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 54 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 55 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 56 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 57 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 58 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 59 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 60 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 61 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 62 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 63 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 64 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 65 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 66 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 67 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 68 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  () }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 69 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 70 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 71 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 72 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 73 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 74 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 75 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 76 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 77 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 78 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 79 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 80 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 81 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 82 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  )(( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 83 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 84 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 85 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 86 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 87 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 88 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 89 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 90 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 91 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 92 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 93 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ()  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 94 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 95 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 96 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 97 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 98 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 99 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 100 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 101 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 102 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 103 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 104 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 105 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 106 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 107 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 108 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 109 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 110 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 111 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 112 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 113 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 114 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 115 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 116 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 117 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 118 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 119 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 120 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 121 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 122 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 123 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 124 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 125 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 126 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 127 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 128 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 129 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 130 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 131 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 132 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 133 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 134 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 135 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  () }x{llamp\  (((((  
-B004 iii = 136 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 137 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 138 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 139 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 140 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 141 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 142 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 143 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 144 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 145 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 146 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 147 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 148 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 149 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )((((  
-B004 iii = 150 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  ))(((  
-B004 iii = 151 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))((  
-B004 iii = 152 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  ))))(  
-B004 iii = 153 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-B004 iii = 154 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-B004 iii = 155 *infix = 155
-B005 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-before infixToReverse_Polish
-Enter infixToReverse_Polish
-C0001 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 155
-C0003 nxt =        }x{}isp\{fpmp\
-C0004 is operand
-C0014 infix =        }x{}isp\{fpmp\  (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 134
-C0003 nxt =   (
-C0005 is (
-C0014 infix =   (( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = ( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 131
-C0003 nxt = (
-C0005 is (
-C0014 infix = ( }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 130
-C0003 nxt =  }x{llamp\
-C0004 is operand
-C0014 infix =  }x{llamp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 120
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 117
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 116
-C0003 nxt =  pmimp\
-C0008 *stk = 0
-C0009 top_stack() = 
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 109
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ((  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = (  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 107
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 106
-C0003 nxt =   }x{}ihp\{fpmp\
-C0004 is operand
-C0014 infix =   }x{}ihp\{fpmp\  (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 90
-C0003 nxt =   (
-C0005 is (
-C0014 infix =   (( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = ( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 87
-C0003 nxt = (
-C0005 is (
-C0014 infix = ( }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 86
-C0003 nxt =  }x{llamp\
-C0004 is operand
-C0014 infix =  }x{llamp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 76
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = )) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 73
-C0003 nxt = )
-C0006 is )
-C0014 infix = )) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = ) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 72
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 71
-C0003 nxt =  pmimp\
-C0008 *stk = 2
-C0009 top_stack() = (
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 64
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = (  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 62
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 61
-C0003 nxt =   }x{}isp\{fpmp\
-C0004 is operand
-C0014 infix =   }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 45
-C0003 nxt =  pmimp\
-C0008 *stk = 5
-C0009 top_stack() = (
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 38
-C0003 nxt =  }x{}ihp\{fpmp\
-C0004 is operand
-C0014 infix =  }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   (( }x{llamp\  )))))  
-C0002 *infix = 23
-C0003 nxt =   (
-C0005 is (
-C0014 infix =   (( }x{llamp\  )))))  
-C0015 infix = ( }x{llamp\  )))))  
-C0002 *infix = 20
-C0003 nxt = (
-C0005 is (
-C0014 infix = ( }x{llamp\  )))))  
-C0015 infix =  }x{llamp\  )))))  
-C0002 *infix = 19
-C0003 nxt =  }x{llamp\
-C0004 is operand
-C0014 infix =  }x{llamp\  )))))  
-C0015 infix =   )))))  
-C0002 *infix = 9
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   )))))  
-C0015 infix = ))))  
-C0002 *infix = 6
-C0003 nxt = )
-C0006 is )
-C0014 infix = ))))  
-C0015 infix = )))  
-C0002 *infix = 5
-C0003 nxt = )
-C0006 is )
-C0007 *stk = 6
-C0007 top_stack = pmimp\
-C0014 infix = )))  
-C0015 infix = ))  
-C0002 *infix = 4
-C0003 nxt = )
-C0006 is )
-C0014 infix = ))  
-C0015 infix = )  
-C0002 *infix = 3
-C0003 nxt = )
-C0006 is )
-C0007 *stk = 3
-C0007 top_stack = pmimp\
-C0014 infix = )  
-C0015 infix =   
-C0016 *stk = 1
-C0017 top_stack() = pmimp\
-Exit to_Polish stmt below
-  (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmall{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmall{x} ))  \pmpf{\psi}{x}       
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmandddddd
-HEREHERE dots_out = ;;;;;; \land :::::::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmanddddd
-HEREHERE dots_out = ;;;;; \land ::::::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmandddd
-HEREHERE dots_out = ;;;; \land :::::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmanddd
-HEREHERE dots_out = ;;; \land ::::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmandd
-HEREHERE dots_out = ;; \land :::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein =  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmand
-HEREHERE dots_out = ; \land ::
-HEREHEREHERE  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdotttttt
-HEREHERE dots_out = !!!!!!
-HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdottttt
-HEREHERE dots_out = !!!!!
-HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdotttt
-HEREHERE dots_out = !!!!
-HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdottt
-HEREHERE dots_out = !!!
-HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdott
-HEREHERE dots_out = !!
-HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE linein = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HEREHERE dot_str = \pmdot
-HEREHERE dots_out = !
-HEREHEREHERE $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HERE BA li = $\pmast 9 \pmcdot 22 \pmthm  ^^^  \pmall{x} %%  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  .. \pmimp ^^^  \pmsome{x} %%  \pmpf{\phi}{x}  .. \pmimp ^^  \pmsome{x} %%  \pmpf{\psi}{x}       $
-HERE AA li = $\pmast 9 \pmcdot 22 \pmthm  (((((((((((((((((((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmsome{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\psi}{x}       ))))))))))))))))$
-Enter to_Polish infix below
-$\pmast 9 \pmcdot 22 \pmthm  (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmsome{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\psi}{x}       $
-A0001 head1 = $\pmast 9 \pmcdot 22 \
-A0002 head2 = pmthm
-A0003 head = $\pmast 9 \pmcdot 22 \pmthm
-A0004 stmt =   (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmsome{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\psi}{x}       $
-A0005 reverse stmt = $       }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-A0006 tail1 = 
-A0007 tail2 = $
-A0008 rest =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-infixToPolish B0001
-B002 infix =   (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmsome{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\psi}{x}       
-B003 reverse infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 1 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 2 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 3 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 4 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 5 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 6 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 7 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 8 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 9 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 10 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 11 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 12 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 13 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 14 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 15 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 16 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 17 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 18 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 19 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 20 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 21 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 22 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 23 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  )) }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 24 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  () }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 25 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 26 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 27 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 28 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 29 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 30 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 31 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 32 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 33 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 34 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 35 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 36 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 37 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 38 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  (( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 39 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )( pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 40 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 41 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 42 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 43 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 44 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 45 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 46 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 47 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 48 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ))  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 49 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ()  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 50 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 51 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 52 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 53 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 54 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 55 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 56 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 57 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 58 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 59 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 60 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 61 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 62 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 63 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 64 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 65 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 66 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 67 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 68 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  )) }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 69 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  () }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 70 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 71 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 72 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 73 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 74 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 75 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 76 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 77 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 78 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 79 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 80 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 81 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 82 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 83 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ((( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 84 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  )(( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 85 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))( pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 86 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 87 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 88 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 89 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 90 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 91 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 92 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 93 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 94 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ))  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 95 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ()  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 96 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 97 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 98 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 99 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 100 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 101 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 102 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 103 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 104 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 105 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 106 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 107 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 108 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 109 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 110 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 111 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 112 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 113 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 114 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 115 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 116 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 117 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 118 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 119 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 120 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 121 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 122 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 123 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 124 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 125 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 126 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 127 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 128 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 129 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 130 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 131 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 132 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 133 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 134 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 135 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 136 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  )) }x{llamp\  (((((  
-B004 iii = 137 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  () }x{llamp\  (((((  
-B004 iii = 138 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 139 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 140 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 141 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 142 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 143 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 144 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 145 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 146 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 147 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 148 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 149 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 150 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  (((((  
-B004 iii = 151 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )((((  
-B004 iii = 152 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  ))(((  
-B004 iii = 153 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))((  
-B004 iii = 154 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  ))))(  
-B004 iii = 155 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-B004 iii = 156 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-B004 iii = 157 *infix = 157
-B005 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-before infixToReverse_Polish
-Enter infixToReverse_Polish
-C0001 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 157
-C0003 nxt =        }x{}isp\{fpmp\
-C0004 is operand
-C0014 infix =        }x{}isp\{fpmp\  (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 136
-C0003 nxt =   (
-C0005 is (
-C0014 infix =   (( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = ( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 133
-C0003 nxt = (
-C0005 is (
-C0014 infix = ( }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 132
-C0003 nxt =  }x{emosmp\
-C0004 is operand
-C0014 infix =  }x{emosmp\  )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 121
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   )) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 118
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 117
-C0003 nxt =  pmimp\
-C0008 *stk = 0
-C0009 top_stack() = 
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 110
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ((  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = (  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 108
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 107
-C0003 nxt =   }x{}ihp\{fpmp\
-C0004 is operand
-C0014 infix =   }x{}ihp\{fpmp\  (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 91
-C0003 nxt =   (
-C0005 is (
-C0014 infix =   (( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = ( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 88
-C0003 nxt = (
-C0005 is (
-C0014 infix = ( }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 87
-C0003 nxt =  }x{emosmp\
-C0004 is operand
-C0014 infix =  }x{emosmp\  ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 76
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   ))) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = )) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 73
-C0003 nxt = )
-C0006 is )
-C0014 infix = )) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = ) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 72
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 71
-C0003 nxt =  pmimp\
-C0008 *stk = 2
-C0009 top_stack() = (
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 64
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ((  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix = (  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 62
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 61
-C0003 nxt =   }x{}isp\{fpmp\
-C0004 is operand
-C0014 infix =   }x{}isp\{fpmp\ pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 45
-C0003 nxt =  pmimp\
-C0008 *stk = 5
-C0009 top_stack() = (
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =  }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0002 *infix = 38
-C0003 nxt =  }x{}ihp\{fpmp\
-C0004 is operand
-C0014 infix =  }x{}ihp\{fpmp\  (( }x{llamp\  )))))  
-C0015 infix =   (( }x{llamp\  )))))  
-C0002 *infix = 23
-C0003 nxt =   (
-C0005 is (
-C0014 infix =   (( }x{llamp\  )))))  
-C0015 infix = ( }x{llamp\  )))))  
-C0002 *infix = 20
-C0003 nxt = (
-C0005 is (
-C0014 infix = ( }x{llamp\  )))))  
-C0015 infix =  }x{llamp\  )))))  
-C0002 *infix = 19
-C0003 nxt =  }x{llamp\
-C0004 is operand
-C0014 infix =  }x{llamp\  )))))  
-C0015 infix =   )))))  
-C0002 *infix = 9
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   )))))  
-C0015 infix = ))))  
-C0002 *infix = 6
-C0003 nxt = )
-C0006 is )
-C0014 infix = ))))  
-C0015 infix = )))  
-C0002 *infix = 5
-C0003 nxt = )
-C0006 is )
-C0007 *stk = 6
-C0007 top_stack = pmimp\
-C0014 infix = )))  
-C0015 infix = ))  
-C0002 *infix = 4
-C0003 nxt = )
-C0006 is )
-C0014 infix = ))  
-C0015 infix = )  
-C0002 *infix = 3
-C0003 nxt = )
-C0006 is )
-C0007 *stk = 3
-C0007 top_stack = pmimp\
-C0014 infix = )  
-C0015 infix =   
-C0016 *stk = 1
-C0017 top_stack() = pmimp\
-Exit to_Polish stmt below
-  (((((  \pmall{x} ))  \pmpf{\phi}{x} \pmimp \pmpf{\psi}{x}  )) \pmimp (((  \pmsome{x} ))  \pmpf{\phi}{x}  )) \pmimp ((  \pmsome{x} ))  \pmpf{\psi}{x}       
 HEREHERE linein =  ^  p \pmor q  .. \pmiff ^^  r \pmimp s$
 HEREHERE dot_str = \pmandddddd
 HEREHERE dots_out = ;;;;;; \land :::::::
@@ -37105,6 +35009,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
+Dennis1  E    A   p   q     C   r   s 
+Dennis2$\pmast 431 \pmcdot 441 \pmthm((p \pmor q) \pmiff (r \pmimp s))$
 Exit to_Polish stmt below
   ((  p \pmor q  )) \pmiff ((  r \pmimp s))
 HEREHERE linein =  ^^  p  .. \pmor ^^  q \pmiff r  ... \pmimp ^^^  s$
@@ -37413,6 +35319,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    A   p     E   q   r    s 
+Dennis2$\pmast 431 \pmcdot 442 \pmthm((p \pmor (q \pmiff r)) \pmimp s)$
 Exit to_Polish stmt below
   (((  p  )) \pmor ((  q \pmiff r  ))) \pmimp (((  s)))
 HEREHERE linein =  ^^  p \pmor q  .. \pmiff ^^  r  ... \pmimp ^^^  s$
@@ -37721,6 +35629,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = pmimp\
+Dennis1  C    E    A   p   q    r    s 
+Dennis2$\pmast 431 \pmcdot 443 \pmthm(((p \pmor q) \pmiff r) \pmimp s)$
 Exit to_Polish stmt below
   (((  p \pmor q  )) \pmiff ((  r  ))) \pmimp (((  s)))
 HEREHERE linein =  ^^  p  ... \pmor ^^^  q \pmiff r  .. \pmimp ^^  s$
@@ -38029,6 +35939,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = romp\
+Dennis1  A   p     C    E   q   r    s 
+Dennis2$\pmast 431 \pmcdot 444 \pmthm(p \pmor ((q \pmiff r) \pmimp s))$
 Exit to_Polish stmt below
   (((  p  ))) \pmor (((  q \pmiff r  )) \pmimp ((  s)))
 HEREHERE linein =  ^^  p  ... \pmor ^^^  q  .. \pmiff ^^  r \pmimp s$
@@ -38337,6 +36249,8 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = romp\
+Dennis1  A   p     E   q     C   r   s 
+Dennis2$\pmast 431 \pmcdot 445 \pmthm(p \pmor (q \pmiff (r \pmimp s)))$
 Exit to_Polish stmt below
   (((  p  ))) \pmor (((  q  )) \pmiff ((  r \pmimp s)))
 HEREHERE linein =  ^^  p \pmand q \pmand r \pmand s  ... \pmimp ^^^  p \pmand s \pmandd r \pmand q $ 
@@ -38925,6 +36839,8 @@ C0014 infix =   )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = dnal\
+Dennis1  K   p    C    K   q    K   r   s     K    K   p   s    K   r   q   
+Dennis2$\pmast 431 \pmcdot 54 \pmthm(p \land ((q \land (r \land s)) \pmimp ((p \land s) \land (r \land q))))$
 Exit to_Polish stmt below
   (  p ) \land (( q ) \land (( r ) \land (( s  ))) \pmimp (((  p ) \land (( s )) \land ((( r ) \land (( q  )))))))
 Stopping debugging

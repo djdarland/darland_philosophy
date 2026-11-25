@@ -8,7 +8,7 @@ $define LUK 1
 $define POLISH_INCLUDED 1
 $define BEGIN "%begin"
 
-global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, qneg, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, max_exe, delim_q2, delim_l2, max_iter, stk, reverse_polish, head, qiddf, dbg
+global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, qneg, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, max_exe, delim_q2, delim_l2, max_iter, stk, reverse_polish, head, qiddf, dbg, stack
 
 procedure main()
    # next 2 lines used to get debugging from unicon
@@ -273,7 +273,7 @@ procedure process2(linein)
       av +:= 1
       }
    lineout_sav := lineout
-   write(lineout)
+#   write(lineout)
    write("")
    if (POLISH_INCLUDED = 1) then {
       to_Polish(lineout_sav)
@@ -659,7 +659,15 @@ procedure to_Polish(infix)
          #         write(head || polish || reverse(tail2 || tail1))
          #         write_note("Polish Notation") 
          polish := infixToPolish(stmt, CONJUNCTION_LOW_PRECEDENCE, LUK)
-         write(head || polish || reverse(tail2 || tail1))
+         polish2 := (head || polish || reverse(tail2 || tail1))
+         write(" ")
+         fixed_par := (head || preToInfix(polish) || reverse(tail2 || tail1))
+         write(dbg, "Dennis1", polish)
+         write(dbg, "Dennis2", fixed_par)
+         write(fixed_par)
+         write(" ")
+         write(polish2)
+         
          #         write_note("Polish Conjunction High Precedence") 
          #         polish := infixToPolish(stmt, CONJUNCTION_HIGH_PRECEDENCE, PM)
          #         write(head || polish || reverse(tail2 || tail1))
@@ -1006,5 +1014,113 @@ procedure sub_ndot2(part, dot_str, dots_out)
                           }
       }
    fail
+end
+
+# function to check if character is operator or not
+procedure is_1_Operator(x)
+   case x of {
+      "N":
+         return
+      default:
+         fail
+      }
+end
+procedure is_2_Operator(x)
+   case x of {
+      "A":
+         return
+      "K":
+         return
+      "C":
+         return
+      "E":
+         return
+      "=":
+         return
+      default:
+         fail
+      }
+end
+
+# Convert prefix to Infix expression
+procedure preToInfix(s)
+   # length of expression
+   length := *s
+   stack := []
+   
+   # reading from right to left
+   s := reverse(s)
+   i := 1
+   while i <= length do {
+      if s[i] == " " 
+      then {
+         i +:= 1
+         next
+            }
+      #    for (int i = length - 1; i >= 0; i--)
+      #    {
+      # check if symbol is unary operator
+      if (is_1_Operator(s[i])) 
+      then {
+         # pop one operand from stack
+         op1 := stack[1]
+         pop(stack)
+         
+         # concat the operands and operator
+         temp := "(" || s[i] || op1 || ")"
+         # Push string temp back to stack
+         push(stack, temp)
+         }
+      # check if symbol is binarty operator
+      else if (is_2_Operator(s[i])) 
+      then {
+         # pop two operands from stack
+         op1 := stack[1]
+         pop(stack)
+         op2 := stack[1]
+         pop(stack)
+         
+         # concat the operands and operator
+         temp := "(" || op1 || s[i] || op2 || ")"
+         
+         # Push string temp back to stack
+         push(stack, temp)
+         }
+      
+      # if symbol is an operand
+      else
+         {
+            # push the operand to the stack
+            #            push(string(1, s[i]));
+            push(stack, s[i])
+            }
+      i +:= 1
+      }
+   
+   # Stack now contains the Infix expression
+   return tran(stack[1])
+end
+
+procedure tran(in)
+   out := ""
+   i := 1
+   l := *in
+   while i <= l do {
+      if in[i] == "C" 
+      then out ||:= " \\pmimp "
+      else if in[i] == "A"
+      then out ||:= " \\pmor "
+      else if in[i] == "K"
+      then out ||:= " \\land "
+      else if in[i] == "E"
+      then out ||:= " \\pmiff "
+      else if in[i] == " = "
+      then out ||:= " \\pmiddf "
+      else if in[i] == "N"
+      then out ||:= " \\pmnot "
+      else out ||:= in[i]
+      i +:= 1
+      }
+   return out
 end
 
