@@ -863,6 +863,74 @@ $\pmast 2 \pmcdot 2 \pmthm \pmdott p \pmdot \pmimp \pmdot p \pmor q $
 
 *2.2 CpApq
 
+$\pmast 2 \pmcdot 21 \pmthm \pmdott \pmnot p \pmdot \pmimp \pmdot p \pmimp q $
+
+*2.21 CNpCpq
+
+$\pmast 2 \pmcdot 24 \pmthm \pmdott p \pmdot \pmimp \pmdot \pmnot p \pmimp q   $
+
+*2.24 CpCNpq
+
+$\pmast 2 \pmcdot 25 \pmthm \pmdottt p \pmdott \pmor \pmdott p \pmor q \pmdot \pmimp \pmdot q   $
+
+*2.25 ApCApqq
+
+$\pmast 2 \pmcdot 26 \pmthm \pmdottt \pmnot p \pmdott \pmor \pmdott p \pmimp q \pmdot \pmimp \pmdot q   $
+
+*2.26 ANpCCpqq
+
+$\pmast 2 \pmcdot 27 \pmthm \pmdottt p \pmdot \pmimp \pmdott p \pmimp q \pmdot \pmimp \pmdot q   $
+
+*2.27 CpCCpqq
+
+PM version with parentheses
+
+$\pmast 2 \pmcdot 3 \pmthm \pmdott p \pmor ( q \pmor r ) \pmdot \pmimp \pmdot p \pmor ( r \pmor q )  $
+
+*2.3 CApAqrApArq
+
+
+My version with dots 
+
+$\pmast 2 \pmcdot 3 \pmthm \pmdottt p \pmor \pmdot q \pmor r \pmdott \pmimp \pmdott p \pmor \pmdot r \pmor q   $
+
+*2.3 CApAqrApArq
+
+PM version with parentheses
+
+$\pmast 2 \pmcdot 31 \pmthm \pmdott p \pmor ( q \pmor r ) \pmdot \pmimp \pmdot ( p \pmor q ) \pmor r  $
+
+*2.31 CApAqrAApqr
+
+My version with dots 
+
+$\pmast 2 \pmcdot 31 \pmthm \pmdottt p \pmor \pmdot q \pmor r \pmdott \pmimp \pmdottt p \pmor q \pmdott \pmor \pmdot r   $
+
+*2.31 CApAqrAApqr
+
+PM version with parentheses
+
+$\pmast 2 \pmcdot 32 \pmthm \pmdott ( p \pmor q ) \pmor r \pmdot \pmimp \pmdot p \pmor ( q \pmor r ) $
+
+*2.32 CAApqrApAqr
+
+My version with dots 
+
+$\pmast 2 \pmcdot 32 \pmthm \pmdott p \pmor  q \pmdot \pmor \pmdot r \pmdott \pmimp \pmdott p \pmor \pmdot q \pmor r   $
+
+*2.32 CAApqrApAqr
+
+$\pmast 2 \pmcdot 36 \pmthm \pmdottt q \pmimp r \pmdot \pmimp \pmdott p \pmor q \pmdot \pmimp \pmdot r \pmor p     $
+
+*2.36 CCqrCApqArp
+
+$\pmast 2 \pmcdot 37 \pmthm \pmdottt q \pmimp r \pmdot \pmimp \pmdott q \pmor p \pmdot \pmimp \pmdot p \pmor r     $
+
+*2.37 CCqrCAqpApr
+
+
+
+
 
 
 
@@ -1136,22 +1204,22 @@ $\pmast 5 \pmcdot 5 \pmthm \pmdottt p \pmdot \pmimp \pmdott p \pmimp q \pmdot \p
 
 $\pmast 5 \pmcdot 501 \pmthm \pmdottt p \pmdot \pmimp \pmdott q \pmdot \pmiff \pmdot p \pmiff q $
 
-*5.01 CpEqEpq
+*5.501 CpEqEpq
 
-I think order of evaluation under PM rules ambiguous.
-But My and Dan's interpretations of *5.53 equivalant although different. 
+The order of evaluation under PM rules ambiguous without the definitions
+*2.33 and *4.34 (which Greg Landini pointed out to me), which my program doesn't account for. The two interpretations of *5.53 are equivalent although different. 
 
 $\pmast 5 \pmcdot 53 \pmthm \pmdottt p \pmor q \pmor r \pmdot \pmimp \pmdot s \pmdott \pmiff \pmdott p \pmimp s \pmand q \pmimp s \pmand r \pmimp s $
 
 *5.53 ECAApqrsKKCpsCqsCrs
 
-Dan's interpretation of *5.54 differs from mine. I favor mine as the disjunction is separated by more dots.
+Dan's interpretation of *5.54 differs from mine. I favor mine as the disjunction is separated by more dots. Dan has now communicated his agreement with my programs output.
 
 $\pmast 5 \pmcdot 54 \pmthm \pmdottt p \pmand q \pmdot \pmiff \pmdot p \pmdott \pmor \pmdott p \pmand q \pmdot \pmiff \pmdot q  $
 
 *5.54 EKpqApEKpqq
 
-Dan's interpretation of *5.55 differs from mine. I favor mine as the disjunction is separated by more dots.
+Dan's interpretation of *5.55 differs from mine. I favor mine as the disjunction is separated by more dots.  Dan has now communicated his agreement with my programs output.
 
 $\pmast 5 \pmcdot 55 \pmthm \pmdottt p \pmor q \pmdot \pmiff \pmdot p \pmdott \pmor \pmdott p \pmor q \pmdot \pmiff \pmdot q    $
 
@@ -1177,7 +1245,7 @@ $\pmast 5 \pmcdot 7 \pmthm \pmdottt p \pmor r \pmdot \pmiff \pmdot q \pmor r \pm
 
 *5.7 EEAprAqrArEpq
 
-Dan's interpretation of *5.71 differs from my program's. My program looks to me to be correct.
+Dan's interpretation of *5.71 differs from my program's. My program looks to me to be correct.  Dan has now communicated his agreement with my programs output.
 
 $\pmast 5 \pmcdot 71 \pmthm \pmdottt q \pmimp \pmnot r \pmdot \pmimp \pmdott p \pmor q \pmand r \pmdot \pmiff \pmdot p \pmand r   $
 

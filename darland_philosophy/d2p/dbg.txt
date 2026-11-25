@@ -7091,6 +7091,4363 @@ Dennis1  C   p     A   p   q
 Dennis2$\pmast 2 \pmcdot 2 \pmthm(p \pmimp (p \pmor q))$
 Exit to_Polish stmt below
   ((  p  )) \pmimp ((  p \pmor q ))
+HEREHERE linein =  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE linein =  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE linein =  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE linein =  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE linein =  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE linein =  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE linein = $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE linein = $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE linein = $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE linein = $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE linein = $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE linein = $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HERE BA li = $\pmast 2 \pmcdot 21 \pmthm  ^^  \pmnot p  .. \pmimp ^^  p \pmimp q $
+HERE AA li = $\pmast 2 \pmcdot 21 \pmthm  ((((((((  \pmnot p  )) \pmimp ((  p \pmimp q ))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 21 \pmthm  ((  \pmnot p  )) \pmimp ((  p \pmimp q ))$
+A0001 head1 = $\pmast 2 \pmcdot 21 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 21 \pmthm
+A0004 stmt =   ((  \pmnot p  )) \pmimp ((  p \pmimp q ))$
+A0005 reverse stmt = $)) q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = )) q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+infixToPolish B0001
+B002 infix =   ((  \pmnot p  )) \pmimp ((  p \pmimp q ))
+B003 reverse infix = )) q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 1 *infix = 43
+B005 infix = () q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 2 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 3 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 4 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 5 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 6 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 7 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 8 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 9 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 10 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 11 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 12 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 13 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 14 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 15 *infix = 43
+B005 infix = (( q pmimp\ p  (( pmimp\ ))  p tonmp\  ((  
+B004 iii = 16 *infix = 43
+B005 infix = (( q pmimp\ p  )( pmimp\ ))  p tonmp\  ((  
+B004 iii = 17 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ))  p tonmp\  ((  
+B004 iii = 18 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ))  p tonmp\  ((  
+B004 iii = 19 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ))  p tonmp\  ((  
+B004 iii = 20 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ))  p tonmp\  ((  
+B004 iii = 21 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ))  p tonmp\  ((  
+B004 iii = 22 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ))  p tonmp\  ((  
+B004 iii = 23 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ))  p tonmp\  ((  
+B004 iii = 24 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ))  p tonmp\  ((  
+B004 iii = 25 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ))  p tonmp\  ((  
+B004 iii = 26 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ()  p tonmp\  ((  
+B004 iii = 27 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 28 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 29 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 30 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 31 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 32 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 33 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 34 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 35 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 36 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 37 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 38 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 39 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ((  
+B004 iii = 40 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  )(  
+B004 iii = 41 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ))  
+B004 iii = 42 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ))  
+B004 iii = 43 *infix = 43
+B005 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ))  
+C0002 *infix = 43
+C0003 nxt = (
+C0005 is (
+C0014 infix = (( q pmimp\ p  )) pmimp\ ((  p tonmp\  ))  
+C0015 infix = ( q pmimp\ p  )) pmimp\ ((  p tonmp\  ))  
+C0002 *infix = 42
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( q pmimp\ p  )) pmimp\ ((  p tonmp\  ))  
+C0015 infix =  q pmimp\ p  )) pmimp\ ((  p tonmp\  ))  
+C0002 *infix = 41
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q pmimp\ p  )) pmimp\ ((  p tonmp\  ))  
+C0015 infix =  pmimp\ p  )) pmimp\ ((  p tonmp\  ))  
+C0002 *infix = 39
+C0003 nxt =  pmimp\
+C0008 *stk = 2
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ p  )) pmimp\ ((  p tonmp\  ))  
+C0015 infix =  p  )) pmimp\ ((  p tonmp\  ))  
+C0002 *infix = 32
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  )) pmimp\ ((  p tonmp\  ))  
+C0015 infix =   )) pmimp\ ((  p tonmp\  ))  
+C0002 *infix = 30
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 3
+C0007 top_stack = pmimp\
+C0014 infix =   )) pmimp\ ((  p tonmp\  ))  
+C0015 infix = ) pmimp\ ((  p tonmp\  ))  
+C0002 *infix = 27
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  p tonmp\  ))  
+C0015 infix =  pmimp\ ((  p tonmp\  ))  
+C0002 *infix = 26
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  p tonmp\  ))  
+C0015 infix =  ((  p tonmp\  ))  
+C0002 *infix = 19
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  p tonmp\  ))  
+C0015 infix = (  p tonmp\  ))  
+C0002 *infix = 17
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  p tonmp\  ))  
+C0015 infix =   p tonmp\  ))  
+C0002 *infix = 16
+C0003 nxt =   p
+C0004 is operand
+C0014 infix =   p tonmp\  ))  
+C0015 infix =  tonmp\  ))  
+C0002 *infix = 13
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Dennis1  C    N   p     C   p   q  
+Dennis2$\pmast 2 \pmcdot 21 \pmthm(( \pmnot p) \pmimp (p \pmimp q))$
+Exit to_Polish stmt below
+  ((  \pmnot p  )) \pmimp ((  p \pmimp q ))
+HEREHERE linein =  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE linein =  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE linein =  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE linein =  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE linein =  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE linein =  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE linein = $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE linein = $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE linein = $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE linein = $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE linein = $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE linein = $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HERE BA li = $\pmast 2 \pmcdot 24 \pmthm  ^^  p  .. \pmimp ^^  \pmnot p \pmimp q   $
+HERE AA li = $\pmast 2 \pmcdot 24 \pmthm  ((((((((  p  )) \pmimp ((  \pmnot p \pmimp q   ))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 24 \pmthm  ((  p  )) \pmimp ((  \pmnot p \pmimp q   ))$
+A0001 head1 = $\pmast 2 \pmcdot 24 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 24 \pmthm
+A0004 stmt =   ((  p  )) \pmimp ((  \pmnot p \pmimp q   ))$
+A0005 reverse stmt = $))   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ))   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+infixToPolish B0001
+B002 infix =   ((  p  )) \pmimp ((  \pmnot p \pmimp q   ))
+B003 reverse infix = ))   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 1 *infix = 45
+B005 infix = ()   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 2 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 3 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 4 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 5 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 6 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 7 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 8 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 9 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 10 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 11 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 12 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 13 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 14 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 15 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 16 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 17 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 18 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 19 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 20 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 21 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 22 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 23 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 24 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  (( pmimp\ ))  p  ((  
+B004 iii = 25 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )( pmimp\ ))  p  ((  
+B004 iii = 26 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ))  p  ((  
+B004 iii = 27 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ))  p  ((  
+B004 iii = 28 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ))  p  ((  
+B004 iii = 29 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ))  p  ((  
+B004 iii = 30 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ))  p  ((  
+B004 iii = 31 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ))  p  ((  
+B004 iii = 32 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ))  p  ((  
+B004 iii = 33 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ))  p  ((  
+B004 iii = 34 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ))  p  ((  
+B004 iii = 35 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ()  p  ((  
+B004 iii = 36 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  ((  
+B004 iii = 37 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  ((  
+B004 iii = 38 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  ((  
+B004 iii = 39 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  ((  
+B004 iii = 40 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  ((  
+B004 iii = 41 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  ((  
+B004 iii = 42 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  )(  
+B004 iii = 43 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  ))  
+B004 iii = 44 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  ))  
+B004 iii = 45 *infix = 45
+B005 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  ))  
+C0002 *infix = 45
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((   q pmimp\ p tonmp\  )) pmimp\ ((  p  ))  
+C0015 infix = (   q pmimp\ p tonmp\  )) pmimp\ ((  p  ))  
+C0002 *infix = 44
+C0003 nxt = (
+C0005 is (
+C0014 infix = (   q pmimp\ p tonmp\  )) pmimp\ ((  p  ))  
+C0015 infix =    q pmimp\ p tonmp\  )) pmimp\ ((  p  ))  
+C0002 *infix = 43
+C0003 nxt =    q
+C0004 is operand
+C0014 infix =    q pmimp\ p tonmp\  )) pmimp\ ((  p  ))  
+C0015 infix =  pmimp\ p tonmp\  )) pmimp\ ((  p  ))  
+C0002 *infix = 39
+C0003 nxt =  pmimp\
+C0008 *stk = 2
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ p tonmp\  )) pmimp\ ((  p  ))  
+C0015 infix =  p tonmp\  )) pmimp\ ((  p  ))  
+C0002 *infix = 32
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p tonmp\  )) pmimp\ ((  p  ))  
+C0015 infix =  tonmp\  )) pmimp\ ((  p  ))  
+C0002 *infix = 30
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\  )) pmimp\ ((  p  ))  
+C0015 infix =   )) pmimp\ ((  p  ))  
+C0002 *infix = 23
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 3
+C0007 top_stack = pmimp\
+C0014 infix =   )) pmimp\ ((  p  ))  
+C0015 infix = ) pmimp\ ((  p  ))  
+C0002 *infix = 20
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  p  ))  
+C0015 infix =  pmimp\ ((  p  ))  
+C0002 *infix = 19
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  p  ))  
+C0015 infix =  ((  p  ))  
+C0002 *infix = 12
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  p  ))  
+C0015 infix = (  p  ))  
+C0002 *infix = 10
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  p  ))  
+C0015 infix =   p  ))  
+C0002 *infix = 9
+C0003 nxt =   p
+C0004 is operand
+C0014 infix =   p  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Dennis1  C   p     C    N   p   q    
+Dennis2$\pmast 2 \pmcdot 24 \pmthm(p \pmimp (( \pmnot p) \pmimp q))$
+Exit to_Polish stmt below
+  ((  p  )) \pmimp ((  \pmnot p \pmimp q   ))
+HEREHERE linein =  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HERE BA li = $\pmast 2 \pmcdot 25 \pmthm  ^^^  p  ... \pmor ^^^  p \pmor q  .. \pmimp ^^  q   $
+HERE AA li = $\pmast 2 \pmcdot 25 \pmthm  ((((((((((((((((  p  ))) \pmor (((  p \pmor q  )) \pmimp ((  q   ))))))))))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 25 \pmthm  (((  p  ))) \pmor (((  p \pmor q  )) \pmimp ((  q   )))$
+A0001 head1 = $\pmast 2 \pmcdot 25 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 25 \pmthm
+A0004 stmt =   (((  p  ))) \pmor (((  p \pmor q  )) \pmimp ((  q   )))$
+A0005 reverse stmt = $)))   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = )))   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+infixToPolish B0001
+B002 infix =   (((  p  ))) \pmor (((  p \pmor q  )) \pmimp ((  q   )))
+B003 reverse infix = )))   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 1 *infix = 57
+B005 infix = ())   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 2 *infix = 57
+B005 infix = (()   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 3 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 4 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 5 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 6 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 7 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 8 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 9 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 10 *infix = 57
+B005 infix = (((   q  )( pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 11 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 12 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 13 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 14 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 15 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 16 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 17 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 18 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 19 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 20 *infix = 57
+B005 infix = (((   q  )) pmimp\ ()  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 21 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 22 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 23 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 24 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 25 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 26 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 27 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 28 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 29 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 30 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 31 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 32 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 33 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 34 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ((( romp\ )))  p  (((  
+B004 iii = 35 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  )(( romp\ )))  p  (((  
+B004 iii = 36 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))( romp\ )))  p  (((  
+B004 iii = 37 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ )))  p  (((  
+B004 iii = 38 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ )))  p  (((  
+B004 iii = 39 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ )))  p  (((  
+B004 iii = 40 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ )))  p  (((  
+B004 iii = 41 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ )))  p  (((  
+B004 iii = 42 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ )))  p  (((  
+B004 iii = 43 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ )))  p  (((  
+B004 iii = 44 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ )))  p  (((  
+B004 iii = 45 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ ())  p  (((  
+B004 iii = 46 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (()  p  (((  
+B004 iii = 47 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  (((  
+B004 iii = 48 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  (((  
+B004 iii = 49 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  (((  
+B004 iii = 50 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  (((  
+B004 iii = 51 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  (((  
+B004 iii = 52 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  (((  
+B004 iii = 53 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )((  
+B004 iii = 54 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  ))(  
+B004 iii = 55 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+B004 iii = 56 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+B004 iii = 57 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0002 *infix = 57
+C0003 nxt = (
+C0005 is (
+C0014 infix = (((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0015 infix = ((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0002 *infix = 56
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0015 infix = (   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0002 *infix = 55
+C0003 nxt = (
+C0005 is (
+C0014 infix = (   q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0015 infix =    q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0002 *infix = 54
+C0003 nxt =    q
+C0004 is operand
+C0014 infix =    q  )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0015 infix =   )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0002 *infix = 50
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0015 infix = ) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0002 *infix = 47
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0015 infix =  pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0002 *infix = 46
+C0003 nxt =  pmimp\
+C0008 *stk = 1
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  q romp\ p  ))) romp\ (((  p  )))  
+C0015 infix =  ((  q romp\ p  ))) romp\ (((  p  )))  
+C0002 *infix = 39
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  q romp\ p  ))) romp\ (((  p  )))  
+C0015 infix = (  q romp\ p  ))) romp\ (((  p  )))  
+C0002 *infix = 37
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  q romp\ p  ))) romp\ (((  p  )))  
+C0015 infix =   q romp\ p  ))) romp\ (((  p  )))  
+C0002 *infix = 36
+C0003 nxt =   q
+C0004 is operand
+C0014 infix =   q romp\ p  ))) romp\ (((  p  )))  
+C0015 infix =  romp\ p  ))) romp\ (((  p  )))  
+C0002 *infix = 33
+C0003 nxt =  romp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  ))) romp\ (((  p  )))  
+C0015 infix =  p  ))) romp\ (((  p  )))  
+C0002 *infix = 27
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  ))) romp\ (((  p  )))  
+C0015 infix =   ))) romp\ (((  p  )))  
+C0002 *infix = 25
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = romp\
+C0014 infix =   ))) romp\ (((  p  )))  
+C0015 infix = )) romp\ (((  p  )))  
+C0002 *infix = 22
+C0003 nxt = )
+C0006 is )
+C0014 infix = )) romp\ (((  p  )))  
+C0015 infix = ) romp\ (((  p  )))  
+C0002 *infix = 21
+C0003 nxt = )
+C0006 is )
+C0007 *stk = 2
+C0007 top_stack = pmimp\
+C0014 infix = ) romp\ (((  p  )))  
+C0015 infix =  romp\ (((  p  )))  
+C0002 *infix = 20
+C0003 nxt =  romp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ (((  p  )))  
+C0015 infix =  (((  p  )))  
+C0002 *infix = 14
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  (((  p  )))  
+C0015 infix = ((  p  )))  
+C0002 *infix = 12
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((  p  )))  
+C0015 infix = (  p  )))  
+C0002 *infix = 11
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  p  )))  
+C0015 infix =   p  )))  
+C0002 *infix = 10
+C0003 nxt =   p
+C0004 is operand
+C0014 infix =   p  )))  
+C0015 infix =   )))  
+C0002 *infix = 7
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )))  
+C0015 infix = ))  
+C0002 *infix = 4
+C0003 nxt = )
+C0006 is )
+C0014 infix = ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = romp\
+Dennis1  A   p     C    A   p   q    q    
+Dennis2$\pmast 2 \pmcdot 25 \pmthm(p \pmor ((p \pmor q) \pmimp q))$
+Exit to_Polish stmt below
+  (((  p  ))) \pmor (((  p \pmor q  )) \pmimp ((  q   )))
+HEREHERE linein =  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HERE BA li = $\pmast 2 \pmcdot 26 \pmthm  ^^^  \pmnot p  ... \pmor ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HERE AA li = $\pmast 2 \pmcdot 26 \pmthm  ((((((((((((((((  \pmnot p  ))) \pmor (((  p \pmimp q  )) \pmimp ((  q   ))))))))))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 26 \pmthm  (((  \pmnot p  ))) \pmor (((  p \pmimp q  )) \pmimp ((  q   )))$
+A0001 head1 = $\pmast 2 \pmcdot 26 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 26 \pmthm
+A0004 stmt =   (((  \pmnot p  ))) \pmor (((  p \pmimp q  )) \pmimp ((  q   )))$
+A0005 reverse stmt = $)))   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = )))   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+infixToPolish B0001
+B002 infix =   (((  \pmnot p  ))) \pmor (((  p \pmimp q  )) \pmimp ((  q   )))
+B003 reverse infix = )))   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 1 *infix = 65
+B005 infix = ())   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 2 *infix = 65
+B005 infix = (()   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 3 *infix = 65
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 4 *infix = 65
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 5 *infix = 65
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 6 *infix = 65
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 7 *infix = 65
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 8 *infix = 65
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 9 *infix = 65
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 10 *infix = 65
+B005 infix = (((   q  )( pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 11 *infix = 65
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 12 *infix = 65
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 13 *infix = 65
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 14 *infix = 65
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 15 *infix = 65
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 16 *infix = 65
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 17 *infix = 65
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 18 *infix = 65
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 19 *infix = 65
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 20 *infix = 65
+B005 infix = (((   q  )) pmimp\ ()  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 21 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 22 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 23 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 24 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 25 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 26 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 27 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 28 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 29 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 30 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 31 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 32 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 33 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 34 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 35 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( romp\ )))  p tonmp\  (((  
+B004 iii = 36 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  )(( romp\ )))  p tonmp\  (((  
+B004 iii = 37 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))( romp\ )))  p tonmp\  (((  
+B004 iii = 38 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ )))  p tonmp\  (((  
+B004 iii = 39 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ )))  p tonmp\  (((  
+B004 iii = 40 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ )))  p tonmp\  (((  
+B004 iii = 41 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ )))  p tonmp\  (((  
+B004 iii = 42 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ )))  p tonmp\  (((  
+B004 iii = 43 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ )))  p tonmp\  (((  
+B004 iii = 44 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ )))  p tonmp\  (((  
+B004 iii = 45 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ )))  p tonmp\  (((  
+B004 iii = 46 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ ())  p tonmp\  (((  
+B004 iii = 47 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (()  p tonmp\  (((  
+B004 iii = 48 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 49 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 50 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 51 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 52 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 53 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 54 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 55 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 56 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 57 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 58 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 59 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 60 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  (((  
+B004 iii = 61 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )((  
+B004 iii = 62 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  ))(  
+B004 iii = 63 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+B004 iii = 64 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+B004 iii = 65 *infix = 65
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 65
+C0003 nxt = (
+C0005 is (
+C0014 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix = ((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 64
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix = (   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 63
+C0003 nxt = (
+C0005 is (
+C0014 infix = (   q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix =    q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 62
+C0003 nxt =    q
+C0004 is operand
+C0014 infix =    q  )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix =   )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 58
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix = ) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 55
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix =  pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 54
+C0003 nxt =  pmimp\
+C0008 *stk = 1
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix =  ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 47
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix = (  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 45
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix =   q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 44
+C0003 nxt =   q
+C0004 is operand
+C0014 infix =   q pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix =  pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 41
+C0003 nxt =  pmimp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix =  p  ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 34
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  ))) romp\ (((  p tonmp\  )))  
+C0015 infix =   ))) romp\ (((  p tonmp\  )))  
+C0002 *infix = 32
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = pmimp\
+C0014 infix =   ))) romp\ (((  p tonmp\  )))  
+C0015 infix = )) romp\ (((  p tonmp\  )))  
+C0002 *infix = 29
+C0003 nxt = )
+C0006 is )
+C0014 infix = )) romp\ (((  p tonmp\  )))  
+C0015 infix = ) romp\ (((  p tonmp\  )))  
+C0002 *infix = 28
+C0003 nxt = )
+C0006 is )
+C0007 *stk = 2
+C0007 top_stack = pmimp\
+C0014 infix = ) romp\ (((  p tonmp\  )))  
+C0015 infix =  romp\ (((  p tonmp\  )))  
+C0002 *infix = 27
+C0003 nxt =  romp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ (((  p tonmp\  )))  
+C0015 infix =  (((  p tonmp\  )))  
+C0002 *infix = 21
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  (((  p tonmp\  )))  
+C0015 infix = ((  p tonmp\  )))  
+C0002 *infix = 19
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((  p tonmp\  )))  
+C0015 infix = (  p tonmp\  )))  
+C0002 *infix = 18
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  p tonmp\  )))  
+C0015 infix =   p tonmp\  )))  
+C0002 *infix = 17
+C0003 nxt =   p
+C0004 is operand
+C0014 infix =   p tonmp\  )))  
+C0015 infix =  tonmp\  )))  
+C0002 *infix = 14
+C0003 nxt =  tonmp\
+C0004 is operand
+C0014 infix =  tonmp\  )))  
+C0015 infix =   )))  
+C0002 *infix = 7
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )))  
+C0015 infix = ))  
+C0002 *infix = 4
+C0003 nxt = )
+C0006 is )
+C0014 infix = ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = romp\
+Dennis1  A    N   p     C    C   p   q    q    
+Dennis2$\pmast 2 \pmcdot 26 \pmthm(( \pmnot p) \pmor ((p \pmimp q) \pmimp q))$
+Exit to_Polish stmt below
+  (((  \pmnot p  ))) \pmor (((  p \pmimp q  )) \pmimp ((  q   )))
+HEREHERE linein =  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein =  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE linein = $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HERE BA li = $\pmast 2 \pmcdot 27 \pmthm  ^^^  p  .. \pmimp ^^^  p \pmimp q  .. \pmimp ^^  q   $
+HERE AA li = $\pmast 2 \pmcdot 27 \pmthm  (((((((((((((((  p  )) \pmimp (((  p \pmimp q  )) \pmimp ((  q   ))))))))))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 27 \pmthm  ((  p  )) \pmimp (((  p \pmimp q  )) \pmimp ((  q   )))$
+A0001 head1 = $\pmast 2 \pmcdot 27 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 27 \pmthm
+A0004 stmt =   ((  p  )) \pmimp (((  p \pmimp q  )) \pmimp ((  q   )))$
+A0005 reverse stmt = $)))   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = )))   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+infixToPolish B0001
+B002 infix =   ((  p  )) \pmimp (((  p \pmimp q  )) \pmimp ((  q   )))
+B003 reverse infix = )))   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 1 *infix = 57
+B005 infix = ())   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 2 *infix = 57
+B005 infix = (()   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 3 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 4 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 5 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 6 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 7 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 8 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 9 *infix = 57
+B005 infix = (((   q  (( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 10 *infix = 57
+B005 infix = (((   q  )( pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 11 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 12 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 13 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 14 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 15 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 16 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 17 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 18 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 19 *infix = 57
+B005 infix = (((   q  )) pmimp\ ))  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 20 *infix = 57
+B005 infix = (((   q  )) pmimp\ ()  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 21 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 22 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 23 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 24 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 25 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 26 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 27 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 28 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 29 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 30 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 31 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 32 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 33 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 34 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 35 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ((( pmimp\ ))  p  ((  
+B004 iii = 36 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  )(( pmimp\ ))  p  ((  
+B004 iii = 37 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))( pmimp\ ))  p  ((  
+B004 iii = 38 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ))  p  ((  
+B004 iii = 39 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ))  p  ((  
+B004 iii = 40 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ))  p  ((  
+B004 iii = 41 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ))  p  ((  
+B004 iii = 42 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ))  p  ((  
+B004 iii = 43 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ))  p  ((  
+B004 iii = 44 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ))  p  ((  
+B004 iii = 45 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ))  p  ((  
+B004 iii = 46 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ))  p  ((  
+B004 iii = 47 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ()  p  ((  
+B004 iii = 48 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ((  
+B004 iii = 49 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ((  
+B004 iii = 50 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ((  
+B004 iii = 51 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ((  
+B004 iii = 52 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ((  
+B004 iii = 53 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ((  
+B004 iii = 54 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  )(  
+B004 iii = 55 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+B004 iii = 56 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+B004 iii = 57 *infix = 57
+B005 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 57
+C0003 nxt = (
+C0005 is (
+C0014 infix = (((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0015 infix = ((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 56
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0015 infix = (   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 55
+C0003 nxt = (
+C0005 is (
+C0014 infix = (   q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0015 infix =    q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 54
+C0003 nxt =    q
+C0004 is operand
+C0014 infix =    q  )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0015 infix =   )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 50
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0015 infix = ) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 47
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0015 infix =  pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 46
+C0003 nxt =  pmimp\
+C0008 *stk = 1
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0015 infix =  ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 39
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0015 infix = (  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 37
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0015 infix =   q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 36
+C0003 nxt =   q
+C0004 is operand
+C0014 infix =   q pmimp\ p  ))) pmimp\ ((  p  ))  
+C0015 infix =  pmimp\ p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 33
+C0003 nxt =  pmimp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ p  ))) pmimp\ ((  p  ))  
+C0015 infix =  p  ))) pmimp\ ((  p  ))  
+C0002 *infix = 26
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  ))) pmimp\ ((  p  ))  
+C0015 infix =   ))) pmimp\ ((  p  ))  
+C0002 *infix = 24
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = pmimp\
+C0014 infix =   ))) pmimp\ ((  p  ))  
+C0015 infix = )) pmimp\ ((  p  ))  
+C0002 *infix = 21
+C0003 nxt = )
+C0006 is )
+C0014 infix = )) pmimp\ ((  p  ))  
+C0015 infix = ) pmimp\ ((  p  ))  
+C0002 *infix = 20
+C0003 nxt = )
+C0006 is )
+C0007 *stk = 2
+C0007 top_stack = pmimp\
+C0014 infix = ) pmimp\ ((  p  ))  
+C0015 infix =  pmimp\ ((  p  ))  
+C0002 *infix = 19
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  p  ))  
+C0015 infix =  ((  p  ))  
+C0002 *infix = 12
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  p  ))  
+C0015 infix = (  p  ))  
+C0002 *infix = 10
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  p  ))  
+C0015 infix =   p  ))  
+C0002 *infix = 9
+C0003 nxt =   p
+C0004 is operand
+C0014 infix =   p  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Dennis1  C   p     C    C   p   q    q    
+Dennis2$\pmast 2 \pmcdot 27 \pmthm(p \pmimp ((p \pmimp q) \pmimp q))$
+Exit to_Polish stmt below
+  ((  p  )) \pmimp (((  p \pmimp q  )) \pmimp ((  q   )))
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HERE BA li = $\pmast 2 \pmcdot 3 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  p \pmor ( r \pmor q )  $
+HERE AA li = $\pmast 2 \pmcdot 3 \pmthm  ((((((((  p \pmor ( q \pmor r )  )) \pmimp ((  p \pmor ( r \pmor q )  ))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 3 \pmthm  ((  p \pmor ( q \pmor r )  )) \pmimp ((  p \pmor ( r \pmor q )  ))$
+A0001 head1 = $\pmast 2 \pmcdot 3 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 3 \pmthm
+A0004 stmt =   ((  p \pmor ( q \pmor r )  )) \pmimp ((  p \pmor ( r \pmor q )  ))$
+A0005 reverse stmt = $))  ) q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ))  ) q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+infixToPolish B0001
+B002 infix =   ((  p \pmor ( q \pmor r )  )) \pmimp ((  p \pmor ( r \pmor q )  ))
+B003 reverse infix = ))  ) q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 1 *infix = 68
+B005 infix = ()  ) q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 2 *infix = 68
+B005 infix = ((  ) q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 3 *infix = 68
+B005 infix = ((  ) q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 4 *infix = 68
+B005 infix = ((  ) q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 5 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 6 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 7 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 8 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 9 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 10 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 11 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 12 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 13 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 14 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 15 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 16 *infix = 68
+B005 infix = ((  ( q romp\ r ( romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 17 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 18 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 19 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 20 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 21 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 22 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 23 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 24 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 25 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 26 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 27 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 28 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 29 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 30 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 31 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 32 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 33 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 34 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 35 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 36 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 37 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 38 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ()  ) r romp\ q ( romp\ p  ((  
+B004 iii = 39 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ) r romp\ q ( romp\ p  ((  
+B004 iii = 40 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ) r romp\ q ( romp\ p  ((  
+B004 iii = 41 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ) r romp\ q ( romp\ p  ((  
+B004 iii = 42 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 43 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 44 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 45 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 46 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 47 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 48 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 49 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 50 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 51 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 52 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 53 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 54 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 55 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 56 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 57 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 58 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 59 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 60 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 61 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 62 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 63 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 64 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 65 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  )(  
+B004 iii = 66 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+B004 iii = 67 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+B004 iii = 68 *infix = 68
+B005 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 68
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix = (  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 67
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =   ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 66
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   ( q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 63
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 61
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 55
+C0003 nxt =  r
+C0004 is operand
+C0014 infix =  r ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 53
+C0003 nxt =  )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =  ) romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 51
+C0003 nxt =  romp\
+C0008 *stk = 2
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 45
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =   )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 43
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 3
+C0007 top_stack = romp\
+C0014 infix =   )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix = ) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 40
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 39
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 32
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix = (  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 30
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  ( r romp\ q ) romp\ p  ))  
+C0015 infix =   ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 29
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   ( r romp\ q ) romp\ p  ))  
+C0015 infix =  r romp\ q ) romp\ p  ))  
+C0002 *infix = 26
+C0003 nxt =  r
+C0004 is operand
+C0014 infix =  r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ q ) romp\ p  ))  
+C0002 *infix = 24
+C0003 nxt =  romp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ q ) romp\ p  ))  
+C0015 infix =  q ) romp\ p  ))  
+C0002 *infix = 18
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q ) romp\ p  ))  
+C0015 infix =  ) romp\ p  ))  
+C0002 *infix = 16
+C0003 nxt =  )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = romp\
+C0014 infix =  ) romp\ p  ))  
+C0015 infix =  romp\ p  ))  
+C0002 *infix = 14
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  ))  
+C0015 infix =  p  ))  
+C0002 *infix = 8
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Dennis1  C    A   p    A   q   r    A   p    A   r   q  
+Dennis2$\pmast 2 \pmcdot 3 \pmthm((p \pmor (q \pmor r)) \pmimp (p \pmor (r \pmor q)))$
+Exit to_Polish stmt below
+  ((  p \pmor ( q \pmor r )  )) \pmimp ((  p \pmor ( r \pmor q )  ))
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE linein = $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREAGAIN part1 = $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor 
+HEREAGAIN part2 =  q \pmor r  ... \pmimp ^^^  p \pmor \pmdot r \pmor q   $
+HEREAGAIN part1 = $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor ! q \pmor r  ... \pmimp ^^^  p \pmor 
+HEREAGAIN part2 =  r \pmor q   $
+HEREHEREHERE $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor ! q \pmor r  ... \pmimp ^^^  p \pmor ! r \pmor q   $
+HERE BA li = $\pmast 2 \pmcdot 3 \pmthm  ^^^  p \pmor ! q \pmor r  ... \pmimp ^^^  p \pmor ! r \pmor q   $
+HERE AA li = $\pmast 2 \pmcdot 3 \pmthm  ((((((((((((  p \pmor ( q \pmor r  ))) \pmimp (((  p \pmor ( r \pmor q   ))))))))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 3 \pmthm  ((  p \pmor ( q \pmor r  ))) \pmimp (((  p \pmor ( r \pmor q   ))))$
+A0001 head1 = $\pmast 2 \pmcdot 3 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 3 \pmthm
+A0004 stmt =   ((  p \pmor ( q \pmor r  ))) \pmimp (((  p \pmor ( r \pmor q   ))))$
+A0005 reverse stmt = $))))   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ))))   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+infixToPolish B0001
+B002 infix =   ((  p \pmor ( q \pmor r  ))) \pmimp (((  p \pmor ( r \pmor q   ))))
+B003 reverse infix = ))))   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 1 *infix = 69
+B005 infix = ()))   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 2 *infix = 69
+B005 infix = (())   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 3 *infix = 69
+B005 infix = ((()   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 4 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 5 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 6 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 7 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 8 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 9 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 10 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 11 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 12 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 13 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 14 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 15 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 16 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 17 *infix = 69
+B005 infix = ((((   q romp\ r ( romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 18 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 19 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 20 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 21 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 22 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 23 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 24 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 25 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 26 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 27 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 28 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 29 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  )(( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 30 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 31 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 32 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 33 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 34 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 35 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 36 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 37 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 38 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 39 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 40 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ ())  r romp\ q ( romp\ p  ((  
+B004 iii = 41 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (()  r romp\ q ( romp\ p  ((  
+B004 iii = 42 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 43 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 44 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 45 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 46 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 47 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 48 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 49 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 50 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 51 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 52 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 53 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 54 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 55 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 56 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 57 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 58 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 59 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 60 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 61 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 62 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 63 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 64 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 65 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 66 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  )(  
+B004 iii = 67 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+B004 iii = 68 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+B004 iii = 69 *infix = 69
+B005 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 69
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = (((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 68
+C0003 nxt = (
+C0005 is (
+C0014 infix = (((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = ((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 67
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = (   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 66
+C0003 nxt = (
+C0005 is (
+C0014 infix = (   q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =    q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 65
+C0003 nxt =    q
+C0004 is operand
+C0014 infix =    q romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 61
+C0003 nxt =  romp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 55
+C0003 nxt =  r
+C0004 is operand
+C0014 infix =  r ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 53
+C0003 nxt =  )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = romp\
+C0014 infix =  ) romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 51
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 45
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =   ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 43
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =   ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = )) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 40
+C0003 nxt = )
+C0006 is )
+C0014 infix = )) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = ) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 39
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 38
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 31
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  (((  r romp\ q ) romp\ p  ))  
+C0015 infix = ((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 29
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((  r romp\ q ) romp\ p  ))  
+C0015 infix = (  r romp\ q ) romp\ p  ))  
+C0002 *infix = 28
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  r romp\ q ) romp\ p  ))  
+C0015 infix =   r romp\ q ) romp\ p  ))  
+C0002 *infix = 27
+C0003 nxt =   r
+C0004 is operand
+C0014 infix =   r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ q ) romp\ p  ))  
+C0002 *infix = 24
+C0003 nxt =  romp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ q ) romp\ p  ))  
+C0015 infix =  q ) romp\ p  ))  
+C0002 *infix = 18
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q ) romp\ p  ))  
+C0015 infix =  ) romp\ p  ))  
+C0002 *infix = 16
+C0003 nxt =  )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = romp\
+C0014 infix =  ) romp\ p  ))  
+C0015 infix =  romp\ p  ))  
+C0002 *infix = 14
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  ))  
+C0015 infix =  p  ))  
+C0002 *infix = 8
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Dennis1  C    A   p    A   q   r     A   p    A   r   q    
+Dennis2$\pmast 2 \pmcdot 3 \pmthm((p \pmor (q \pmor r)) \pmimp (p \pmor (r \pmor q)))$
+Exit to_Polish stmt below
+  ((  p \pmor ( q \pmor r  ))) \pmimp (((  p \pmor ( r \pmor q   ))))
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE linein =  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HERE BA li = $\pmast 2 \pmcdot 31 \pmthm  ^^  p \pmor ( q \pmor r )  .. \pmimp ^^  ( p \pmor q ) \pmor r  $
+HERE AA li = $\pmast 2 \pmcdot 31 \pmthm  ((((((((  p \pmor ( q \pmor r )  )) \pmimp ((  ( p \pmor q ) \pmor r  ))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 31 \pmthm  ((  p \pmor ( q \pmor r )  )) \pmimp ((  ( p \pmor q ) \pmor r  ))$
+A0001 head1 = $\pmast 2 \pmcdot 31 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 31 \pmthm
+A0004 stmt =   ((  p \pmor ( q \pmor r )  )) \pmimp ((  ( p \pmor q ) \pmor r  ))$
+A0005 reverse stmt = $))  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ))  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+infixToPolish B0001
+B002 infix =   ((  p \pmor ( q \pmor r )  )) \pmimp ((  ( p \pmor q ) \pmor r  ))
+B003 reverse infix = ))  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 1 *infix = 68
+B005 infix = ()  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 2 *infix = 68
+B005 infix = ((  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 3 *infix = 68
+B005 infix = ((  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 4 *infix = 68
+B005 infix = ((  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 5 *infix = 68
+B005 infix = ((  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 6 *infix = 68
+B005 infix = ((  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 7 *infix = 68
+B005 infix = ((  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 8 *infix = 68
+B005 infix = ((  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 9 *infix = 68
+B005 infix = ((  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 10 *infix = 68
+B005 infix = ((  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 11 *infix = 68
+B005 infix = ((  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 12 *infix = 68
+B005 infix = ((  r romp\ ) q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 13 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 14 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 15 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 16 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 17 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 18 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 19 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 20 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 21 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 22 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 23 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 24 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p (  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 25 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 26 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 27 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  (( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 28 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )( pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 29 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 30 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 31 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 32 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 33 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 34 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 35 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 36 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 37 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ))  ) r romp\ q ( romp\ p  ((  
+B004 iii = 38 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ()  ) r romp\ q ( romp\ p  ((  
+B004 iii = 39 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ) r romp\ q ( romp\ p  ((  
+B004 iii = 40 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ) r romp\ q ( romp\ p  ((  
+B004 iii = 41 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ) r romp\ q ( romp\ p  ((  
+B004 iii = 42 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 43 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 44 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 45 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 46 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 47 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 48 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 49 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 50 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 51 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 52 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 53 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ( romp\ p  ((  
+B004 iii = 54 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 55 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 56 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 57 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 58 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 59 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 60 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 61 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 62 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 63 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 64 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ((  
+B004 iii = 65 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  )(  
+B004 iii = 66 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+B004 iii = 67 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+B004 iii = 68 *infix = 68
+B005 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 68
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix = (  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 67
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =   r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 66
+C0003 nxt =   r
+C0004 is operand
+C0014 infix =   r romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 63
+C0003 nxt =  romp\
+C0008 *stk = 2
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 57
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ( q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 55
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 53
+C0003 nxt =  romp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 47
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 45
+C0003 nxt =  )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = romp\
+C0014 infix =  )  )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =   )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 43
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 3
+C0007 top_stack = romp\
+C0014 infix =   )) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix = ) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 40
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 39
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix =  ((  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 32
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  ( r romp\ q ) romp\ p  ))  
+C0015 infix = (  ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 30
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  ( r romp\ q ) romp\ p  ))  
+C0015 infix =   ( r romp\ q ) romp\ p  ))  
+C0002 *infix = 29
+C0003 nxt =   (
+C0005 is (
+C0014 infix =   ( r romp\ q ) romp\ p  ))  
+C0015 infix =  r romp\ q ) romp\ p  ))  
+C0002 *infix = 26
+C0003 nxt =  r
+C0004 is operand
+C0014 infix =  r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ q ) romp\ p  ))  
+C0002 *infix = 24
+C0003 nxt =  romp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ q ) romp\ p  ))  
+C0015 infix =  q ) romp\ p  ))  
+C0002 *infix = 18
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q ) romp\ p  ))  
+C0015 infix =  ) romp\ p  ))  
+C0002 *infix = 16
+C0003 nxt =  )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = romp\
+C0014 infix =  ) romp\ p  ))  
+C0015 infix =  romp\ p  ))  
+C0002 *infix = 14
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  ))  
+C0015 infix =  p  ))  
+C0002 *infix = 8
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Dennis1  C    A   p    A   q   r    A    A   p   q   r   
+Dennis2$\pmast 2 \pmcdot 31 \pmthm((p \pmor (q \pmor r)) \pmimp ((p \pmor q) \pmor r))$
+Exit to_Polish stmt below
+  ((  p \pmor ( q \pmor r )  )) \pmimp ((  ( p \pmor q ) \pmor r  ))
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE linein =  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE linein = $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor \pmdot q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREAGAIN part1 = $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor 
+HEREAGAIN part2 =  q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HEREHEREHERE $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor ! q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HERE BA li = $\pmast 2 \pmcdot 31 \pmthm  ^^^  p \pmor ! q \pmor r  ... \pmimp ^^^^  p \pmor q  ... \pmor ^^  r   $
+HERE AA li = $\pmast 2 \pmcdot 31 \pmthm  ((((((((((((((((((  p \pmor ( q \pmor r  ))) \pmimp ((((  p \pmor q  ))) \pmor ((  r   )))))))))))))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 31 \pmthm  ((  p \pmor ( q \pmor r  ))) \pmimp ((((  p \pmor q  ))) \pmor ((  r   )))$
+A0001 head1 = $\pmast 2 \pmcdot 31 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 31 \pmthm
+A0004 stmt =   ((  p \pmor ( q \pmor r  ))) \pmimp ((((  p \pmor q  ))) \pmor ((  r   )))$
+A0005 reverse stmt = $)))   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = )))   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+infixToPolish B0001
+B002 infix =   ((  p \pmor ( q \pmor r  ))) \pmimp ((((  p \pmor q  ))) \pmor ((  r   )))
+B003 reverse infix = )))   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 1 *infix = 76
+B005 infix = ())   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 2 *infix = 76
+B005 infix = (()   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 3 *infix = 76
+B005 infix = (((   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 4 *infix = 76
+B005 infix = (((   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 5 *infix = 76
+B005 infix = (((   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 6 *infix = 76
+B005 infix = (((   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 7 *infix = 76
+B005 infix = (((   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 8 *infix = 76
+B005 infix = (((   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 9 *infix = 76
+B005 infix = (((   r  (( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 10 *infix = 76
+B005 infix = (((   r  )( romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 11 *infix = 76
+B005 infix = (((   r  )) romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 12 *infix = 76
+B005 infix = (((   r  )) romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 13 *infix = 76
+B005 infix = (((   r  )) romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 14 *infix = 76
+B005 infix = (((   r  )) romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 15 *infix = 76
+B005 infix = (((   r  )) romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 16 *infix = 76
+B005 infix = (((   r  )) romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 17 *infix = 76
+B005 infix = (((   r  )) romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 18 *infix = 76
+B005 infix = (((   r  )) romp\ )))  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 19 *infix = 76
+B005 infix = (((   r  )) romp\ ())  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 20 *infix = 76
+B005 infix = (((   r  )) romp\ (()  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 21 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 22 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 23 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 24 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 25 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 26 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 27 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 28 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 29 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 30 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 31 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 32 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 33 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 34 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  (((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 35 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )((( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 36 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  ))(( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 37 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))( pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 38 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 39 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 40 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 41 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 42 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 43 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 44 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 45 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 46 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ )))  r romp\ q ( romp\ p  ((  
+B004 iii = 47 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ ())  r romp\ q ( romp\ p  ((  
+B004 iii = 48 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (()  r romp\ q ( romp\ p  ((  
+B004 iii = 49 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 50 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 51 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 52 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 53 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 54 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 55 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 56 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 57 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 58 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 59 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 60 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 61 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ( romp\ p  ((  
+B004 iii = 62 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 63 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 64 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 65 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 66 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 67 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 68 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 69 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 70 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 71 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 72 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ((  
+B004 iii = 73 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  )(  
+B004 iii = 74 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+B004 iii = 75 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+B004 iii = 76 *infix = 76
+B005 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 76
+C0003 nxt = (
+C0005 is (
+C0014 infix = (((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = ((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 75
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = (   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 74
+C0003 nxt = (
+C0005 is (
+C0014 infix = (   r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =    r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 73
+C0003 nxt =    r
+C0004 is operand
+C0014 infix =    r  )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =   )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 69
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = ) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 66
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 65
+C0003 nxt =  romp\
+C0008 *stk = 1
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 59
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  (((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = ((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 57
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = (  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 56
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =   q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 55
+C0003 nxt =   q
+C0004 is operand
+C0014 infix =   q romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 52
+C0003 nxt =  romp\
+C0008 *stk = 5
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 46
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =   )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 44
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 6
+C0007 top_stack = romp\
+C0014 infix =   )))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 41
+C0003 nxt = )
+C0006 is )
+C0014 infix = ))) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = )) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 40
+C0003 nxt = )
+C0006 is )
+C0014 infix = )) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix = ) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 39
+C0003 nxt = )
+C0006 is )
+C0007 *stk = 2
+C0007 top_stack = romp\
+C0014 infix = ) pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 38
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ (((  r romp\ q ) romp\ p  ))  
+C0015 infix =  (((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 31
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  (((  r romp\ q ) romp\ p  ))  
+C0015 infix = ((  r romp\ q ) romp\ p  ))  
+C0002 *infix = 29
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((  r romp\ q ) romp\ p  ))  
+C0015 infix = (  r romp\ q ) romp\ p  ))  
+C0002 *infix = 28
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  r romp\ q ) romp\ p  ))  
+C0015 infix =   r romp\ q ) romp\ p  ))  
+C0002 *infix = 27
+C0003 nxt =   r
+C0004 is operand
+C0014 infix =   r romp\ q ) romp\ p  ))  
+C0015 infix =  romp\ q ) romp\ p  ))  
+C0002 *infix = 24
+C0003 nxt =  romp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ q ) romp\ p  ))  
+C0015 infix =  q ) romp\ p  ))  
+C0002 *infix = 18
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q ) romp\ p  ))  
+C0015 infix =  ) romp\ p  ))  
+C0002 *infix = 16
+C0003 nxt =  )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = romp\
+C0014 infix =  ) romp\ p  ))  
+C0015 infix =  romp\ p  ))  
+C0002 *infix = 14
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  ))  
+C0015 infix =  p  ))  
+C0002 *infix = 8
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Dennis1  C    A   p    A   q   r     A    A   p   q    r    
+Dennis2$\pmast 2 \pmcdot 31 \pmthm((p \pmor (q \pmor r)) \pmimp ((p \pmor q) \pmor r))$
+Exit to_Polish stmt below
+  ((  p \pmor ( q \pmor r  ))) \pmimp ((((  p \pmor q  ))) \pmor ((  r   )))
+HEREHERE linein =  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE linein =  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE linein =  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE linein =  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE linein =  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE linein =  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HERE BA li = $\pmast 2 \pmcdot 32 \pmthm  ^^  ( p \pmor q ) \pmor r  .. \pmimp ^^  p \pmor ( q \pmor r ) $
+HERE AA li = $\pmast 2 \pmcdot 32 \pmthm  ((((((((  ( p \pmor q ) \pmor r  )) \pmimp ((  p \pmor ( q \pmor r ) ))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 32 \pmthm  ((  ( p \pmor q ) \pmor r  )) \pmimp ((  p \pmor ( q \pmor r ) ))$
+A0001 head1 = $\pmast 2 \pmcdot 32 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 32 \pmthm
+A0004 stmt =   ((  ( p \pmor q ) \pmor r  )) \pmimp ((  p \pmor ( q \pmor r ) ))$
+A0005 reverse stmt = $)) ) r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = )) ) r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+infixToPolish B0001
+B002 infix =   ((  ( p \pmor q ) \pmor r  )) \pmimp ((  p \pmor ( q \pmor r ) ))
+B003 reverse infix = )) ) r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 1 *infix = 67
+B005 infix = () ) r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 2 *infix = 67
+B005 infix = (( ) r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 3 *infix = 67
+B005 infix = (( ) r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 4 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 5 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 6 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 7 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 8 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 9 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 10 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 11 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 12 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 13 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 14 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 15 *infix = 67
+B005 infix = (( ( r romp\ q ( romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 16 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 17 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 18 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 19 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 20 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 21 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 22 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 23 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 24 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 25 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 26 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  (( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 27 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )( pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 28 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 29 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 30 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 31 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 32 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 33 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 34 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 35 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 36 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ))  r romp\ ) q romp\ p (  ((  
+B004 iii = 37 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ()  r romp\ ) q romp\ p (  ((  
+B004 iii = 38 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ) q romp\ p (  ((  
+B004 iii = 39 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ) q romp\ p (  ((  
+B004 iii = 40 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ) q romp\ p (  ((  
+B004 iii = 41 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ) q romp\ p (  ((  
+B004 iii = 42 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ) q romp\ p (  ((  
+B004 iii = 43 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ) q romp\ p (  ((  
+B004 iii = 44 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ) q romp\ p (  ((  
+B004 iii = 45 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ) q romp\ p (  ((  
+B004 iii = 46 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ) q romp\ p (  ((  
+B004 iii = 47 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ) q romp\ p (  ((  
+B004 iii = 48 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ) q romp\ p (  ((  
+B004 iii = 49 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 50 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 51 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 52 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 53 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 54 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 55 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 56 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 57 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 58 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 59 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 60 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p (  ((  
+B004 iii = 61 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ((  
+B004 iii = 62 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ((  
+B004 iii = 63 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ((  
+B004 iii = 64 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  )(  
+B004 iii = 65 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+B004 iii = 66 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+B004 iii = 67 *infix = 67
+B005 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 67
+C0003 nxt = (
+C0005 is (
+C0014 infix = (( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix = ( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 66
+C0003 nxt = (
+C0005 is (
+C0014 infix = ( ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix =  ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 65
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ( r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix =  r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 63
+C0003 nxt =  r
+C0004 is operand
+C0014 infix =  r romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix =  romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 61
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix =  q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 55
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix =  ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 53
+C0003 nxt =  )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =  ) romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix =  romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 51
+C0003 nxt =  romp\
+C0008 *stk = 2
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix =  p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 45
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix =   )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 43
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 3
+C0007 top_stack = romp\
+C0014 infix =   )) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix = ) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 40
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix =  pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 39
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  r romp\ ( q romp\ p )  ))  
+C0015 infix =  ((  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 32
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  r romp\ ( q romp\ p )  ))  
+C0015 infix = (  r romp\ ( q romp\ p )  ))  
+C0002 *infix = 30
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  r romp\ ( q romp\ p )  ))  
+C0015 infix =   r romp\ ( q romp\ p )  ))  
+C0002 *infix = 29
+C0003 nxt =   r
+C0004 is operand
+C0014 infix =   r romp\ ( q romp\ p )  ))  
+C0015 infix =  romp\ ( q romp\ p )  ))  
+C0002 *infix = 26
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ ( q romp\ p )  ))  
+C0015 infix =  ( q romp\ p )  ))  
+C0002 *infix = 20
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ( q romp\ p )  ))  
+C0015 infix =  q romp\ p )  ))  
+C0002 *infix = 18
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q romp\ p )  ))  
+C0015 infix =  romp\ p )  ))  
+C0002 *infix = 16
+C0003 nxt =  romp\
+C0008 *stk = 5
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p )  ))  
+C0015 infix =  p )  ))  
+C0002 *infix = 10
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p )  ))  
+C0015 infix =  )  ))  
+C0002 *infix = 8
+C0003 nxt =  )
+C0006 is )
+C0007 *stk = 6
+C0007 top_stack = romp\
+C0014 infix =  )  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Dennis1  C    A    A   p   q   r     A   p    A   q   r  
+Dennis2$\pmast 2 \pmcdot 32 \pmthm(((p \pmor q) \pmor r) \pmimp (p \pmor (q \pmor r)))$
+Exit to_Polish stmt below
+  ((  ( p \pmor q ) \pmor r  )) \pmimp ((  p \pmor ( q \pmor r ) ))
+HEREHERE linein =  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE linein =  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE linein =  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE linein =  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE linein =  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE linein =  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE linein = $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor \pmdot q \pmor r   $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREAGAIN part1 = $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor 
+HEREAGAIN part2 =  q \pmor r   $
+HEREHEREHERE $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor ! q \pmor r   $
+HERE BA li = $\pmast 2 \pmcdot 32 \pmthm  ^^  p \pmor  q  .. \pmor ^^  r  ... \pmimp ^^^  p \pmor ! q \pmor r   $
+HERE AA li = $\pmast 2 \pmcdot 32 \pmthm  ((((((((((((((  p \pmor  q  )) \pmor ((  r  ))) \pmimp (((  p \pmor ( q \pmor r   )))))))))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 32 \pmthm  (((  p \pmor  q  )) \pmor ((  r  ))) \pmimp (((  p \pmor ( q \pmor r   ))))$
+A0001 head1 = $\pmast 2 \pmcdot 32 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 32 \pmthm
+A0004 stmt =   (((  p \pmor  q  )) \pmor ((  r  ))) \pmimp (((  p \pmor ( q \pmor r   ))))$
+A0005 reverse stmt = $))))   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = ))))   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+infixToPolish B0001
+B002 infix =   (((  p \pmor  q  )) \pmor ((  r  ))) \pmimp (((  p \pmor ( q \pmor r   ))))
+B003 reverse infix = ))))   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 1 *infix = 77
+B005 infix = ()))   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 2 *infix = 77
+B005 infix = (())   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 3 *infix = 77
+B005 infix = ((()   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 4 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 5 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 6 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 7 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 8 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 9 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 10 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 11 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 12 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 13 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 14 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 15 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 16 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 17 *infix = 77
+B005 infix = ((((   r romp\ q ( romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 18 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 19 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 20 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 21 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 22 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 23 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 24 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 25 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 26 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 27 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 28 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ((( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 29 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  )(( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 30 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))( pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 31 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 32 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 33 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 34 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 35 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 36 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 37 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 38 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 39 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ )))  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 40 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ ())  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 41 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (()  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 42 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 43 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 44 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 45 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 46 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 47 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  (( romp\ ))  q  romp\ p  (((  
+B004 iii = 48 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )( romp\ ))  q  romp\ p  (((  
+B004 iii = 49 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ))  q  romp\ p  (((  
+B004 iii = 50 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ))  q  romp\ p  (((  
+B004 iii = 51 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ))  q  romp\ p  (((  
+B004 iii = 52 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ))  q  romp\ p  (((  
+B004 iii = 53 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ))  q  romp\ p  (((  
+B004 iii = 54 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ))  q  romp\ p  (((  
+B004 iii = 55 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ))  q  romp\ p  (((  
+B004 iii = 56 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ))  q  romp\ p  (((  
+B004 iii = 57 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ()  q  romp\ p  (((  
+B004 iii = 58 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 59 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 60 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 61 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 62 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 63 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 64 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 65 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 66 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 67 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 68 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 69 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 70 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 71 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 72 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  (((  
+B004 iii = 73 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )((  
+B004 iii = 74 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  ))(  
+B004 iii = 75 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+B004 iii = 76 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+B004 iii = 77 *infix = 77
+B005 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 77
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix = (((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 76
+C0003 nxt = (
+C0005 is (
+C0014 infix = (((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix = ((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 75
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix = (   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 74
+C0003 nxt = (
+C0005 is (
+C0014 infix = (   r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix =    r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 73
+C0003 nxt =    r
+C0004 is operand
+C0014 infix =    r romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix =  romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 69
+C0003 nxt =  romp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix =  q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 63
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix =  ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 61
+C0003 nxt =  )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = romp\
+C0014 infix =  ) romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix =  romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 59
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix =  p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 53
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix =   ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 51
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =   ))) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix = )) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 48
+C0003 nxt = )
+C0006 is )
+C0014 infix = )) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix = ) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 47
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix =  pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 46
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix =  (((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 39
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  (((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix = ((  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 37
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix = (  r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 36
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix =   r  )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 35
+C0003 nxt =   r
+C0004 is operand
+C0014 infix =   r  )) romp\ ((  q  romp\ p  )))  
+C0015 infix =   )) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 32
+C0003 nxt =   )
+C0006 is )
+C0014 infix =   )) romp\ ((  q  romp\ p  )))  
+C0015 infix = ) romp\ ((  q  romp\ p  )))  
+C0002 *infix = 29
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) romp\ ((  q  romp\ p  )))  
+C0015 infix =  romp\ ((  q  romp\ p  )))  
+C0002 *infix = 28
+C0003 nxt =  romp\
+C0008 *stk = 2
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ ((  q  romp\ p  )))  
+C0015 infix =  ((  q  romp\ p  )))  
+C0002 *infix = 22
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  q  romp\ p  )))  
+C0015 infix = (  q  romp\ p  )))  
+C0002 *infix = 20
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  q  romp\ p  )))  
+C0015 infix =   q  romp\ p  )))  
+C0002 *infix = 19
+C0003 nxt =   q
+C0004 is operand
+C0014 infix =   q  romp\ p  )))  
+C0015 infix =   romp\ p  )))  
+C0002 *infix = 16
+C0003 nxt =   romp\
+C0008 *stk = 5
+C0009 top_stack() = (
+C0012 nxt =   romp\
+C0013 nxt =   romp\
+C0014 infix =   romp\ p  )))  
+C0015 infix =  p  )))  
+C0002 *infix = 9
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  )))  
+C0015 infix =   )))  
+C0002 *infix = 7
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 6
+C0007 top_stack = romp\
+C0014 infix =   )))  
+C0015 infix = ))  
+C0002 *infix = 4
+C0003 nxt = )
+C0006 is )
+C0014 infix = ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0007 *stk = 3
+C0007 top_stack = romp\
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Dennis1  C    A    A   p   q    r     A   p    A   q   r    
+Dennis2$\pmast 2 \pmcdot 32 \pmthm(((p \pmor q) \pmor r) \pmimp (p \pmor (q \pmor r)))$
+Exit to_Polish stmt below
+  (((  p \pmor  q  )) \pmor ((  r  ))) \pmimp (((  p \pmor ( q \pmor r   ))))
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE linein = $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE linein = $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE linein = $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE linein = $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE linein = $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE linein = $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HERE BA li = $\pmast 2 \pmcdot 36 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  p \pmor q  .. \pmimp ^^  r \pmor p     $
+HERE AA li = $\pmast 2 \pmcdot 36 \pmthm  (((((((((((((((  q \pmimp r  )) \pmimp (((  p \pmor q  )) \pmimp ((  r \pmor p     ))))))))))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 36 \pmthm  ((  q \pmimp r  )) \pmimp (((  p \pmor q  )) \pmimp ((  r \pmor p     )))$
+A0001 head1 = $\pmast 2 \pmcdot 36 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 36 \pmthm
+A0004 stmt =   ((  q \pmimp r  )) \pmimp (((  p \pmor q  )) \pmimp ((  r \pmor p     )))$
+A0005 reverse stmt = $)))     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = )))     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+infixToPolish B0001
+B002 infix =   ((  q \pmimp r  )) \pmimp (((  p \pmor q  )) \pmimp ((  r \pmor p     )))
+B003 reverse infix = )))     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 1 *infix = 75
+B005 infix = ())     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 2 *infix = 75
+B005 infix = (()     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 3 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 4 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 5 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 6 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 7 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 8 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 9 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 10 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 11 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 12 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 13 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 14 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 15 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 16 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 17 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 18 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 19 *infix = 75
+B005 infix = (((     p romp\ r  (( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 20 *infix = 75
+B005 infix = (((     p romp\ r  )( pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 21 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 22 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 23 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 24 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 25 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 26 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 27 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 28 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 29 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ))  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 30 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ()  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 31 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 32 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 33 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 34 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 35 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 36 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 37 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 38 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 39 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 40 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 41 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 42 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 43 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 44 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 45 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  )(( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 46 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 47 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 48 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 49 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 50 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 51 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 52 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 53 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 54 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 55 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 56 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ()  r pmimp\ q  ((  
+B004 iii = 57 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 58 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 59 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 60 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 61 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 62 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 63 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 64 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 65 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 66 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 67 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 68 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 69 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 70 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 71 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 72 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  )(  
+B004 iii = 73 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+B004 iii = 74 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+B004 iii = 75 *infix = 75
+B005 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 75
+C0003 nxt = (
+C0005 is (
+C0014 infix = (((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = ((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 74
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = (     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 73
+C0003 nxt = (
+C0005 is (
+C0014 infix = (     p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =      p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 72
+C0003 nxt =      p
+C0004 is operand
+C0014 infix =      p romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 66
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 60
+C0003 nxt =  r
+C0004 is operand
+C0014 infix =  r  )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =   )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 58
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =   )) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = ) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 55
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 54
+C0003 nxt =  pmimp\
+C0008 *stk = 1
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 47
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = (  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 45
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =   q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 44
+C0003 nxt =   q
+C0004 is operand
+C0014 infix =   q romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 41
+C0003 nxt =  romp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 35
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =   ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 33
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = romp\
+C0014 infix =   ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = )) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 30
+C0003 nxt = )
+C0006 is )
+C0014 infix = )) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = ) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 29
+C0003 nxt = )
+C0006 is )
+C0007 *stk = 2
+C0007 top_stack = pmimp\
+C0014 infix = ) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 28
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  ((  r pmimp\ q  ))  
+C0002 *infix = 21
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  r pmimp\ q  ))  
+C0015 infix = (  r pmimp\ q  ))  
+C0002 *infix = 19
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  r pmimp\ q  ))  
+C0015 infix =   r pmimp\ q  ))  
+C0002 *infix = 18
+C0003 nxt =   r
+C0004 is operand
+C0014 infix =   r pmimp\ q  ))  
+C0015 infix =  pmimp\ q  ))  
+C0002 *infix = 15
+C0003 nxt =  pmimp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ q  ))  
+C0015 infix =  q  ))  
+C0002 *infix = 8
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = pmimp\
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Dennis1  C    C   q   r     C    A   p   q     A   r   p      
+Dennis2$\pmast 2 \pmcdot 36 \pmthm((q \pmimp r) \pmimp ((p \pmor q) \pmimp (r \pmor p)))$
+Exit to_Polish stmt below
+  ((  q \pmimp r  )) \pmimp (((  p \pmor q  )) \pmimp ((  r \pmor p     )))
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmandddddd
+HEREHERE dots_out = ;;;;;; \land :::::::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmanddddd
+HEREHERE dots_out = ;;;;; \land ::::::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmandddd
+HEREHERE dots_out = ;;;; \land :::::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmanddd
+HEREHERE dots_out = ;;; \land ::::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmandd
+HEREHERE dots_out = ;; \land :::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE linein =  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmand
+HEREHERE dots_out = ; \land ::
+HEREHEREHERE  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE linein = $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmdotttttt
+HEREHERE dots_out = !!!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE linein = $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmdottttt
+HEREHERE dots_out = !!!!!
+HEREHEREHERE $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE linein = $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmdotttt
+HEREHERE dots_out = !!!!
+HEREHEREHERE $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE linein = $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmdottt
+HEREHERE dots_out = !!!
+HEREHEREHERE $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE linein = $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmdott
+HEREHERE dots_out = !!
+HEREHEREHERE $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE linein = $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HEREHERE dot_str = \pmdot
+HEREHERE dots_out = !
+HEREHEREHERE $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HERE BA li = $\pmast 2 \pmcdot 37 \pmthm  ^^^  q \pmimp r  .. \pmimp ^^^  q \pmor p  .. \pmimp ^^  p \pmor r     $
+HERE AA li = $\pmast 2 \pmcdot 37 \pmthm  (((((((((((((((  q \pmimp r  )) \pmimp (((  q \pmor p  )) \pmimp ((  p \pmor r     ))))))))))))))))$
+Enter to_Polish infix below
+$\pmast 2 \pmcdot 37 \pmthm  ((  q \pmimp r  )) \pmimp (((  q \pmor p  )) \pmimp ((  p \pmor r     )))$
+A0001 head1 = $\pmast 2 \pmcdot 37 \
+A0002 head2 = pmthm
+A0003 head = $\pmast 2 \pmcdot 37 \pmthm
+A0004 stmt =   ((  q \pmimp r  )) \pmimp (((  q \pmor p  )) \pmimp ((  p \pmor r     )))$
+A0005 reverse stmt = $)))     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+A0006 tail1 = 
+A0007 tail2 = $
+A0008 rest = )))     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+infixToPolish B0001
+B002 infix =   ((  q \pmimp r  )) \pmimp (((  q \pmor p  )) \pmimp ((  p \pmor r     )))
+B003 reverse infix = )))     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 1 *infix = 75
+B005 infix = ())     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 2 *infix = 75
+B005 infix = (()     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 3 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 4 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 5 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 6 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 7 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 8 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 9 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 10 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 11 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 12 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 13 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 14 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 15 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 16 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 17 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 18 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 19 *infix = 75
+B005 infix = (((     r romp\ p  (( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 20 *infix = 75
+B005 infix = (((     r romp\ p  )( pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 21 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 22 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 23 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 24 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 25 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 26 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 27 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 28 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 29 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ))  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 30 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ()  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 31 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 32 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 33 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 34 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 35 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 36 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 37 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 38 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 39 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 40 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 41 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 42 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 43 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 44 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ((( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 45 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  )(( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 46 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))( pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 47 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 48 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 49 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 50 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 51 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 52 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 53 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 54 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 55 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ))  r pmimp\ q  ((  
+B004 iii = 56 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ()  r pmimp\ q  ((  
+B004 iii = 57 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 58 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 59 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 60 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 61 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 62 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 63 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 64 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 65 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 66 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 67 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 68 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 69 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 70 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 71 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ((  
+B004 iii = 72 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  )(  
+B004 iii = 73 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+B004 iii = 74 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+B004 iii = 75 *infix = 75
+B005 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+before infixToReverse_Polish
+Enter infixToReverse_Polish
+C0001 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 75
+C0003 nxt = (
+C0005 is (
+C0014 infix = (((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = ((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 74
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = (     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 73
+C0003 nxt = (
+C0005 is (
+C0014 infix = (     r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =      r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 72
+C0003 nxt =      r
+C0004 is operand
+C0014 infix =      r romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 66
+C0003 nxt =  romp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 60
+C0003 nxt =  p
+C0004 is operand
+C0014 infix =  p  )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =   )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 58
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = romp\
+C0014 infix =   )) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = ) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 55
+C0003 nxt = )
+C0006 is )
+C0014 infix = ) pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 54
+C0003 nxt =  pmimp\
+C0008 *stk = 1
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 47
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = (  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 45
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =   p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 44
+C0003 nxt =   p
+C0004 is operand
+C0014 infix =   p romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 41
+C0003 nxt =  romp\
+C0008 *stk = 4
+C0009 top_stack() = (
+C0012 nxt =  romp\
+C0013 nxt =  romp\
+C0014 infix =  romp\ q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 35
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q  ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =   ))) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 33
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 5
+C0007 top_stack = romp\
+C0014 infix =   ))) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = )) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 30
+C0003 nxt = )
+C0006 is )
+C0014 infix = )) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix = ) pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 29
+C0003 nxt = )
+C0006 is )
+C0007 *stk = 2
+C0007 top_stack = pmimp\
+C0014 infix = ) pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  pmimp\ ((  r pmimp\ q  ))  
+C0002 *infix = 28
+C0003 nxt =  pmimp\
+C0008 *stk = 0
+C0009 top_stack() = 
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ ((  r pmimp\ q  ))  
+C0015 infix =  ((  r pmimp\ q  ))  
+C0002 *infix = 21
+C0003 nxt =  (
+C0005 is (
+C0014 infix =  ((  r pmimp\ q  ))  
+C0015 infix = (  r pmimp\ q  ))  
+C0002 *infix = 19
+C0003 nxt = (
+C0005 is (
+C0014 infix = (  r pmimp\ q  ))  
+C0015 infix =   r pmimp\ q  ))  
+C0002 *infix = 18
+C0003 nxt =   r
+C0004 is operand
+C0014 infix =   r pmimp\ q  ))  
+C0015 infix =  pmimp\ q  ))  
+C0002 *infix = 15
+C0003 nxt =  pmimp\
+C0008 *stk = 3
+C0009 top_stack() = (
+C0012 nxt =  pmimp\
+C0013 nxt =  pmimp\
+C0014 infix =  pmimp\ q  ))  
+C0015 infix =  q  ))  
+C0002 *infix = 8
+C0003 nxt =  q
+C0004 is operand
+C0014 infix =  q  ))  
+C0015 infix =   ))  
+C0002 *infix = 6
+C0003 nxt =   )
+C0006 is )
+C0007 *stk = 4
+C0007 top_stack = pmimp\
+C0014 infix =   ))  
+C0015 infix = )  
+C0002 *infix = 3
+C0003 nxt = )
+C0006 is )
+C0014 infix = )  
+C0015 infix =   
+C0016 *stk = 1
+C0017 top_stack() = pmimp\
+Dennis1  C    C   q   r     C    A   q   p     A   p   r      
+Dennis2$\pmast 2 \pmcdot 37 \pmthm((q \pmimp r) \pmimp ((q \pmor p) \pmimp (p \pmor r)))$
+Exit to_Polish stmt below
+  ((  q \pmimp r  )) \pmimp (((  q \pmor p  )) \pmimp ((  p \pmor r     )))
 HEREHERE linein =  ^^^  p \pmimp r \pmand q \pmimp s  .. \pmimp ^^^  p \pmand q  .. \pmimp ^^  r \pmand s $
 HEREHERE dot_str = \pmandddddd
 HEREHERE dots_out = ;;;;;; \land :::::::
