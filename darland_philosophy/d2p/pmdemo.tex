@@ -724,6 +724,8 @@ According to PM to *56, page 9.
 ``The use of dots. Dots on the line of the symbols have two uses, one to bracket off propositions, the other to indicate the logical product of two propositions. Dots immediately preceded or followed by ``$\pmor$'' or ``$\pmimp$'' or ``$\pmiff$'' or ``$\pmthm$'' or by ``$\pmall{x}$'', ``$\pmall{x,y},'' ``\pmall{x,y,z}$'' ... or ``$\pmsome{x},''$
 $``\pmsome{x,y},'' ``\pmsome{x,y,z}$''... or ``[$\pmdsc{x}(\pmpf{\phi}{x})$]'' or ``[$\pmdscf{R}{y}$]'' or analogous expressions , serve to bracket off a proposition ; dots occurring otherwise serve to mark a logical product. The general principle is that a larger number of dots indicates an outside bracket, a smaller number indicates an inside bracket. The exact rule as to the scope of the bracket indicated by dots is arrived at by dividing the occurrences of dots into three groups which we will name I, II, and III. Group I consists of dots adjoining a sign of implication ($\pmimp$) or of equivalence ($\pmiff$) or of disjunction ($\pmor$) or of equality by definition ($\pmiddf\pmdf$). Group II consists of dots following brackets indicative of an apparent variable such as $\pmall{x}$ or $\pmall{x,y}$ or $\pmsome{x}$ or $\pmsome{x,y}$ or [$\pmdsc{x}(\pmpf{\phi}{x})$]. Group III consists of dots which stand between propositions in order to indicate a logical product. The scope of the bracket indicated by any collection of dots extends backwards or forwards beyond any smaller number of dots, or any equal number from a group of less force, until we reach either the end of the asserted proposition or a  greater number of dots or an equal number belonging to a group of equal or superior force. Dots indicating a logical product have a scope which works both backwards and forwards; other dots only work away from the adjacent sign of disjunction, implication, or equivalence, or forward from the adjacent symbol of one of the other kinds enumerated in Group II.''
 
+I've added a rule for dots following a negation. The scope of the negation goes until an equal or greater number of dots is reached.
+
 % $\pmast 1 \pmcdot 01 \pmthm \pmdot p \pmdot \pmimp \pmdot q \pmdott \pmiddf \pmdott \pmnot p \pmor q $
 
 % *1.01 Cpq=ANpq
@@ -928,11 +930,168 @@ $\pmast 2 \pmcdot 37 \pmthm \pmdottt q \pmimp r \pmdot \pmimp \pmdott q \pmor p 
 
 *2.37 CCqrCAqpApr
 
+$\pmast 2 \pmcdot 38 \pmthm \pmdottt q \pmimp r \pmdot \pmimp \pmdott q \pmor p \pmdot \pmimp \pmdot r \pmor p     $
+
+*2.38 CCqrCAqpArp
+
+$\pmast 2 \pmcdot 4 \pmthm \pmdottt p \pmdot \pmor \pmdot p \pmor q \pmdott \pmimp \pmdot p \pmor q   $
+
+*2.4 CApApqApq
+
+$\pmast 2 \pmcdot 41 \pmthm \pmdottt q \pmdot \pmor \pmdot p \pmor q \pmdott \pmimp \pmdot p \pmor q      $
+
+*2.41 CAqApqApq
+
+$\pmast 2 \pmcdot 42 \pmthm \pmdottt \pmnot p \pmdot \pmor \pmdot p \pmimp q \pmdott \pmimp \pmdot p \pmimp q            $
+
+*2.42 CANpCpqCpq
+
+$\pmast 2 \pmcdot 43 \pmthm \pmdottt p \pmdot \pmimp \pmdot p \pmimp q \pmdott \pmimp \pmdot p \pmimp q     $
+
+*2.43 CCpCpqCpq
+
+PM Version with parentheses
+
+$\pmast 2 \pmcdot 45 \pmthm \pmdott \pmnot ( p \pmor q ) \pmdot \pmimp \pmdot \pmnot p      $
+
+*2.45 CNApqNp
+
+My Version with dots
+
+$\pmast 2 \pmcdot 45 \pmthm \pmdottt \pmnot \pmdot p \pmor q  \pmdott \pmimp \pmdot \pmnot p      $
+
+*2.45 CNApqNp
+
+PM Version with parentheses
+
+$\pmast 2 \pmcdot 46 \pmthm \pmdott \pmnot ( p \pmor q ) \pmdot \pmimp \pmdot \pmnot q      $
+
+*2.46 CNApqNq
+
+My Version with dots
+
+$\pmast 2 \pmcdot 46 \pmthm \pmdottt \pmnot \pmdot p \pmor q  \pmdott \pmimp \pmdot \pmnot q      $
+
+*2.46 CNApqNq
+
+PM Version with parentheses
+
+$\pmast 2 \pmcdot 47 \pmthm \pmdott \pmnot ( p \pmor q ) \pmdot \pmimp \pmdot \pmnot p \pmor q      $
+
+*2.47 CNApqANpq
+
+My Version with dots
+
+$\pmast 2 \pmcdot 47 \pmthm \pmdottt \pmnot \pmdot p \pmor q  \pmdott \pmimp \pmdot p \pmor \pmnot q    $
+
+*2.47 CNApqANpq
+
+PM Version with parentheses
+
+$\pmast 2 \pmcdot 48 \pmthm \pmdott \pmnot ( p \pmor q ) \pmdot \pmimp \pmdot p \pmor \pmnot q      $
+
+*2.48 CNApqApNq
+
+My Version with dots
+
+$\pmast 2 \pmcdot 48 \pmthm \pmdottt \pmnot \pmdot p \pmor q  \pmdott \pmimp \pmdot p \pmor \pmnot q    $
+
+*2.48 CNApqApNq
+
+PM Version with parentheses
+
+$\pmast 2 \pmcdot 49 \pmthm \pmdott \pmnot ( p \pmor q ) \pmdot \pmimp \pmdot \pmnot p \pmor \pmnot q      $
+
+*2.49 CNApqANpNq
+
+My Version with dots
+
+$\pmast 2 \pmcdot 49 \pmthm \pmdottt \pmnot \pmdot p \pmor q  \pmdott \pmimp \pmdot \pmnot p \pmor \pmnot q    $
+
+*2.49 CNApqANpNq
 
 
+PM Version with parentheses
+
+$\pmast 2 \pmcdot 5 \pmthm \pmdott \pmnot ( p \pmimp q ) \pmdot \pmimp \pmdot \pmnot p \pmimp q      $
+
+*2.5 CNCpqCNpq
+
+My Version with dots
+
+$\pmast 2 \pmcdot 5 \pmthm \pmdottt \pmnot \pmdot p \pmimp q  \pmdott \pmimp \pmdot \pmnot p \pmimp  q    $
+
+*2.5 CNCpqCNpq
 
 
+PM Version with parentheses
 
+$\pmast 2 \pmcdot 51 \pmthm \pmdott \pmnot ( p \pmimp q ) \pmdot \pmimp \pmdot  p \pmimp \pmnot q      $
+
+*2.51 CNCpqCpNq
+
+My Version with dots
+
+$\pmast 2 \pmcdot 51 \pmthm \pmdottt \pmnot \pmdot p \pmimp q  \pmdott \pmimp \pmdot p \pmimp  \pmnot q    $
+
+*2.51 CNCpqCpNq
+
+PM Version with parentheses
+
+$\pmast 2 \pmcdot 52 \pmthm \pmdott \pmnot ( p \pmimp q ) \pmdot \pmimp \pmdot  \pmnot p \pmimp \pmnot q      $
+
+*2.52 CNCpqCNpNq
+
+My Version with dots
+
+$\pmast 2 \pmcdot 52 \pmthm \pmdottt \pmnot \pmdot p \pmimp q  \pmdott \pmimp \pmdot \pmnot p \pmimp  \pmnot q    $
+
+*2.52 CNCpqCNpNq
+
+PM Version with parentheses
+
+$\pmast 2 \pmcdot 521 \pmthm \pmdott \pmnot ( p \pmimp q ) \pmdot \pmimp \pmdot  q \pmimp p      $
+
+
+*2.521 CNCpqCqp
+
+My Version with dots
+
+$\pmast 2 \pmcdot 521 \pmthm \pmdottt \pmnot \pmdot p \pmimp q  \pmdott \pmimp \pmdot q \pmimp p    $
+
+*2.521 CNCpqCqp
+
+$\pmast 2 \pmcdot 53 \pmthm \pmdott p \pmor q \pmdot \pmimp \pmdot \pmnot p \pmimp q     $
+
+*2.53 CApqCNpq
+
+$\pmast 2 \pmcdot 54 \pmthm \pmdott \pmnot p \pmimp q \pmdot \pmimp \pmdot  p \pmor q     $
+
+*2.54 CCNpqApq
+
+$\pmast 2 \pmcdot 55 \pmthm \pmdottt \pmnot p \pmdot \pmimp \pmdott p \pmor q \pmdot \pmimp \pmdot q    $
+
+*2.55 CNpCApqq
+
+$\pmast 2 \pmcdot 56 \pmthm \pmdottt \pmnot q \pmdot \pmimp \pmdott p \pmor q \pmdot \pmimp \pmdot p      $
+
+*2.56 CNqCApqp
+
+$\pmast 2 \pmcdot 6 \pmthm \pmdottt \pmnot p \pmimp q \pmdot \pmimp \pmdott p \pmimp q \pmdot \pmimp \pmdot q    $
+
+*2.6 CCNpqCCpqq
+
+$\pmast 2 \pmcdot 61 \pmthm \pmdottt p \pmimp q \pmdot \pmimp \pmdott \pmnot p \pmimp q \pmdot \pmimp \pmdot q  $
+
+*2.61 CCpqCCNpqq
+
+$\pmast 2 \pmcdot 62 \pmthm \pmdottt p \pmor q \pmdot \pmimp \pmdott p \pmimp q \pmdot \pmimp \pmdot q    $
+
+*2.62 CApqCCpqq
+
+$\pmast 2 \pmcdot 621 \pmthm \pmdottt p \pmimp q \pmdot \pmimp \pmdott p \pmor q \pmdot \pmimp \pmdot q    $
+
+*2.621 CCpqCApqq
 
 
 $\pmast 3 \pmcdot 47 \pmthm \pmdottt p \pmimp r \pmand q \pmimp s \pmdot \pmimp \pmdott p \pmand q \pmdot \pmimp \pmdot r \pmand s $
