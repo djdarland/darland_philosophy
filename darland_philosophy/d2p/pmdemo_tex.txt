@@ -1093,6 +1093,76 @@ $\pmast 2 \pmcdot 621 \pmthm \pmdottt p \pmimp q \pmdot \pmimp \pmdott p \pmor q
 
 *2.621 CCpqCApqq
 
+$\pmast 2 \pmcdot 63 \pmthm \pmdottt p \pmor q \pmdot \pmimp \pmdott \pmnot p \pmor q \pmdot \pmimp \pmdot q    $
+
+*2.63 CApqCANpqq
+
+$\pmast 2 \pmcdot 64 \pmthm \pmdottt p \pmor q \pmdot \pmimp \pmdott p \pmor \pmnot q \pmdot \pmimp \pmdot p $
+
+*2.64 CApqCApNqp
+
+$\pmast 2 \pmcdot 65 \pmthm \pmdottt p \pmimp q \pmdot \pmimp \pmdott p \pmimp \pmnot q \pmdot \pmimp \pmdot \pmnot p      $
+
+*2.65 CCpqCCpNqNp
+
+$\pmast 2 \pmcdot 67 \pmthm \pmdottt p \pmor q \pmdot \pmimp \pmdot q \pmdott \pmimp \pmdot p \pmimp q     $
+
+*2.67 CCApqqCpq
+
+$\pmast 2 \pmcdot 68 \pmthm \pmdottt p \pmimp q \pmdot \pmimp \pmdot q \pmdott \pmimp \pmdot p \pmor q     $
+
+*2.68 CCCpqqApq
+
+$\pmast 2 \pmcdot 69 \pmthm \pmdottt p \pmimp q \pmdot \pmimp \pmdot q \pmdott \pmimp \pmdott q \pmimp p \pmdot \pmimp \pmdot p           $
+
+*2.69 CCCpqqCCqpp
+
+$\pmast 2 \pmcdot 73 \pmthm \pmdottt p \pmimp q \pmdot \pmimp \pmdott p \pmor q \pmor r \pmdot \pmimp \pmdot q \pmor r    $
+
+*2.73 CCpqCAApqrAqr
+
+$\pmast 2 \pmcdot 74 \pmthm \pmdottt q \pmimp p \pmdot \pmimp \pmdott p \pmor q \pmor r \pmdot \pmimp \pmdot p \pmor r     $
+
+*2.74 CCqpCAApqrApr
+
+$\pmast 2 \pmcdot 75 \pmthm \pmdotttt p \pmor q \pmdot \pmimp \pmdottt p \pmdot \pmor \pmdot q \pmimp r \pmdott \pmimp \pmdot p \pmor r $
+
+*2.75 CApqCApCqrApr
+
+$\pmast 2 \pmcdot 76 \pmthm \pmdottt p \pmdot \pmor \pmdot q \pmimp r \pmdott \pmimp \pmdott p \pmor q \pmdot \pmimp \pmdot p \pmor r      $
+
+*2.76 CApCqrCApqApr
+
+$\pmast 2 \pmcdot 77 \pmthm \pmdottt p \pmdot \pmimp \pmdot q \pmimp r \pmdott \pmimp \pmdott p \pmimp q \pmdot \pmimp \pmdot p \pmimp r    $
+
+*2.77 CCpCqrCCpqCpr
+
+$\pmast 2 \pmcdot 8 \pmthm \pmdottt q \pmor r \pmdot \pmimp \pmdott \pmnot r \pmor s \pmdot \pmimp \pmdot q \pmor s            $
+
+*2.8 CAqrCANrsAqs
+
+$\pmast 2 \pmcdot 81 \pmthm \pmdotttt q \pmdot \pmimp \pmdot r \pmimp s \pmdott \pmimp \pmdottt p \pmor q \pmdot \pmimp \pmdott p \pmor r \pmdot \pmimp \pmdot p \pmor s $
+
+*2.81 CCqCrsCApqCAprAps
+
+This is another case where *2.33 is needed. I believe my program works according to *2.33 (but not *4.34 - as shown in another case). I think Dan's translation mistaken in this case - although equivalent.
+
+$\pmast 2 \pmcdot 82 \pmthm \pmdottt p \pmor q \pmor r \pmdot \pmimp \pmdott p \pmor \pmnot r \pmor s \pmdot \pmimp \pmdot p \pmor q \pmor s   $
+
+*2.82 CApAqrCApANrsApAqs
+
+$\pmast 2 \pmcdot 83 \pmthm \pmdotttt p \pmdot \pmimp \pmdot q \pmimp r \pmdott \pmimp \pmdottt p \pmdot \pmimp \pmdot r \pmimp s \pmdott \pmimp \pmdott p \pmdot \pmimp \pmdot q \pmimp s      $
+
+*2.83 CCpCqrCCpCrsCpCqs
+
+$\pmast 2 \pmcdot 85 \pmthm \pmdottt p \pmor q \pmdot \pmimp \pmdot p \pmor r \pmdott \pmimp \pmdott  p  \pmdot  \pmor \pmdot q \pmimp r      $
+
+*2.85 CCApqAprApCqr
+
+$\pmast 2 \pmcdot 86 \pmthm \pmdottt p \pmimp q \pmdot \pmimp \pmdot p \pmimp r \pmdott \pmimp \pmdott p \pmdot \pmimp \pmdot q \pmimp r $
+
+*2.86 CCCpqCprCpCqr
+
 
 $\pmast 3 \pmcdot 47 \pmthm \pmdottt p \pmimp r \pmand q \pmimp s \pmdot \pmimp \pmdott p \pmand q \pmdot \pmimp \pmdot r \pmand s $
 
