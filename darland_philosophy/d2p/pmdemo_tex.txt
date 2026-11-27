@@ -726,6 +726,8 @@ $``\pmsome{x,y},'' ``\pmsome{x,y,z}$''... or ``[$\pmdsc{x}(\pmpf{\phi}{x})$]'' o
 
 I've added a rule for dots following a negation. The scope of the negation goes until an equal or greater number of dots is reached.
 
+For propositions where PM used parentheses, I am entering both the PM version with parentheses and an alternate vesion using dots.
+
 % $\pmast 1 \pmcdot 01 \pmthm \pmdot p \pmdot \pmimp \pmdot q \pmdott \pmiddf \pmdott \pmnot p \pmor q $
 
 % *1.01 Cpq=ANpq
@@ -982,7 +984,7 @@ $\pmast 2 \pmcdot 47 \pmthm \pmdott \pmnot ( p \pmor q ) \pmdot \pmimp \pmdot \p
 
 My Version with dots
 
-$\pmast 2 \pmcdot 47 \pmthm \pmdottt \pmnot \pmdot p \pmor q  \pmdott \pmimp \pmdot p \pmor \pmnot q    $
+$\pmast 2 \pmcdot 47 \pmthm \pmdottt \pmnot \pmdot p \pmor q  \pmdott \pmimp \pmdot \pmnot p \pmor q    $
 
 *2.47 CNApqANpq
 
@@ -1163,23 +1165,213 @@ $\pmast 2 \pmcdot 86 \pmthm \pmdottt p \pmimp q \pmdot \pmimp \pmdot p \pmimp r 
 
 *2.86 CCCpqCprCpCqr
 
+PM Version with parentheses
+
+$\pmast 3 \pmcdot 1 \pmthm \pmdott p \pmand q \pmdot \pmimp \pmdot \pmnot ( \pmnot p \pmor \pmnot q )    $
+
+*3.1 CKpqNANpNq
+
+My Version with dots
+
+$\pmast 3 \pmcdot 1 \pmthm \pmdott p \pmand q \pmdot \pmimp \pmdot \pmnot \pmdot \pmnot p \pmor \pmnot q    $
+
+*3.1 CKpqNANpNq
+
+PM Version with parentheses
+$\pmast 3 \pmcdot 11 \pmthm \pmdott \pmnot ( \pmnot p \pmor \pmnot q ) \pmdot \pmimp \pmdot  p   \pmand q   $
+
+*3.11 CNANpNqKpq
+
+My Version with dots
+
+$\pmast 3 \pmcdot 11 \pmthm \pmdottt \pmnot \pmdot \pmnot p \pmor \pmnot q \pmdott \pmimp \pmdot  p   \pmand q   $
+
+*3.11 CNANpNqKpq
+
+$\pmast 3 \pmcdot 12 \pmthm \pmdott \pmnot p \pmdot \pmor \pmdot \pmnot q \pmdot \pmor \pmdot p \pmand q    $
+
+*3.12 AANpNqKpq
+
+PM Version with parentheses
+
+$\pmast 3 \pmcdot 13 \pmthm \pmdott \pmnot ( p \pmand q ) \pmdot \pmimp \pmdot   \pmnot p \pmor \pmnot q   $
+
+*3.13 CNKpqANpNq
+
+My Version with dots
+
+$\pmast 3 \pmcdot 13 \pmthm \pmdottt \pmnot \pmdott p \pmand q \pmdott \pmimp \pmdot   \pmnot p \pmor \pmnot q   $
+
+*3.13 CNKpqANpNq
+
+PM Version with parentheses
+
+$\pmast 3 \pmcdot 14 \pmthm \pmdott \pmnot p \pmor \pmnot q \pmdot \pmimp \pmdot \pmnot ( p \pmand q )     $
+
+*3.14 CANpNqNKpq
+
+My Version with dots
+
+$\pmast 3 \pmcdot 14 \pmthm \pmdott \pmnot p \pmor \pmnot q \pmdot \pmimp \pmdott \pmnot \pmdott p \pmand q     $
+
+*3.14 CANpNqNKpq
+
+$\pmast 3 \pmcdot 2 \pmthm \pmdottt p \pmdot \pmimp \pmdott q \pmdot \pmimp \pmdot p \pmand q      $
+
+*3.2 CpCqKpq
+
+$\pmast 3 \pmcdot 21 \pmthm \pmdottt q \pmdot \pmimp \pmdott p \pmdot \pmimp \pmdot p \pmand q    $
+
+*3.21 CqCpKpq
+
+
+$\pmast 3 \pmcdot 22 \pmthm \pmdott p \pmand q \pmdot \pmimp \pmdot q \pmand p    $
+
+*3.22 CKpqKqp
+
+PM Version with parentheses
+
+$\pmast 3 \pmcdot 24 \pmthm \pmdot \pmnot ( p \pmand \pmnot p) $
+
+*3.24 NKpNp
+
+My Version with dots
+
+$\pmast 3 \pmcdot 24 \pmthm \pmdott \pmnot \pmdot p \pmand \pmnot p $
+
+*3.24 NKpNp
+
+$\pmast 3 \pmcdot 26 \pmthm \pmdot p \pmand q \pmdot \pmimp \pmdot p   $
+
+*3.26 Missing from Dan's
+
+$\pmast 3 \pmcdot 27 \pmthm \pmdot p \pmand q \pmdot \pmimp \pmdot q   $
+
+*3.27 CKpqq Simp
+
+$\pmast 3 \pmcdot 3 \pmthm \pmdottt p \pmand q \pmdot \pmimp \pmdot r \pmdott \pmimp \pmdott p \pmimp \pmdot q \pmimp r    $
+
+*3.3 CCKpqrCpCqr Exp
+
+$\pmast 3 \pmcdot 31 \pmthm \pmdottt p \pmdot \pmimp \pmdot q \pmimp r \pmdott \pmimp \pmdott p \pmand q \pmdot \pmimp \pmdot r      $
+
+*3.31 CCpCqrCKpqr Imp
+
+The following errors in PM on scope of conjunction had caused me to make a mistake - that is what caused my program to do *4.34 wrong (in *5.53) and some other problems in *3
+
+PM Version fails
+
+$\pmast 3 \pmcdot 33 \pmthm \pmdott p \pmimp q \pmand q \pmimp r \pmdot \pmimp \pmdot p \pmimp r   $
+
+*3.33 CKCpqCqrCpr Syll
+
+My Version works
+
+$\pmast 3 \pmcdot 33 \pmthm \pmdottt p \pmimp q \pmandd q \pmimp r \pmdot \pmimp \pmdot p \pmimp r   $
+
+*3.33 CKCpqCqrCpr Syll
+
+PM Version fails
+
+$\pmast 3 \pmcdot 34 \pmthm \pmdott q \pmimp r \pmand p \pmimp q \pmdot \pmimp \pmdot p \pmimp r   $
+
+*3.34 CKCqrCpqCpr Syll
+
+My Version works
+
+$\pmast 3 \pmcdot 34 \pmthm \pmdottt q \pmimp r \pmandd p \pmimp q \pmdot \pmimp \pmdot p \pmimp r   $
+
+*3.34 CKCqrCpqCpr Syll
+
+$\pmast 3 \pmcdot 4 \pmthm \pmdott p \pmand q \pmdot \pmimp \pmdot p \pmimp q $
+
+*3.4 CKpqCpq
+
+$\pmast 3 \pmcdot 41 \pmthm \pmdottt p \pmimp r \pmdot \pmimp \pmdott p \pmand q \pmdot \pmimp \pmdot r    $
+
+*3.41 CCprCKpqr
+
+$\pmast 3 \pmcdot 42 \pmthm \pmdottt q \pmimp r \pmdot \pmimp \pmdott p \pmand q \pmdot \pmimp \pmdot r    $
+
+*3.42 CCqrCKpqr
+
+PM Version fails
+
+$\pmast 3 \pmcdot 43 \pmthm \pmdottt p \pmimp q \pmand p \pmimp r \pmdot \pmimp  \pmdott p \pmdot \pmimp \pmdot q \pmand r  $
+
+*3.43 CKCpqCprCpKqr Comp
+
+My Version works
+
+$\pmast 3 \pmcdot 43 \pmthm \pmdottt p \pmimp q \pmandd p \pmimp r \pmdott \pmimp  \pmdott p \pmdot \pmimp \pmdot q \pmand r  $
+
+*3.43 CKCpqCprCpKqr Comp
+
+PM Version fails
+
+$\pmast 3 \pmcdot 44 \pmthm \pmdottt q \pmimp p \pmand r \pmimp p \pmdot \pmimp  \pmdott q \pmor r \pmdot \pmimp \pmdot p   $
+
+*3.44 CKCqpCrpCAqrp
+My Version works
+
+$\pmast 3 \pmcdot 44 \pmthm \pmdottt q \pmimp p \pmandd r \pmimp p \pmdot \pmimp  \pmdott q \pmor r \pmdot \pmimp \pmdot p   $
+
+*3.44 CKCqpCrpCAqrp
+
+$\pmast 3 \pmcdot 45 \pmthm \pmdottt p \pmimp q \pmdot \pmimp \pmdott p \pmand r \pmdot \pmimp \pmdot q \pmand  r    $
+
+*3.45 CCpqCKprKqr Fact
+
+
+
+
+PM Version Fails
 
 $\pmast 3 \pmcdot 47 \pmthm \pmdottt p \pmimp r \pmand q \pmimp s \pmdot \pmimp \pmdott p \pmand q \pmdot \pmimp \pmdot r \pmand s $
 
+*3.47 CKCprCqsCKpqKrs
 
+My Version works
 
+$\pmast 3 \pmcdot 47 \pmthm \pmdottt p \pmimp r \pmandd q \pmimp s \pmdot \pmimp \pmdott p \pmand q \pmdot \pmimp \pmdot r \pmand s $
 
 *3.47 CKCprCqsCKpqKrs
+
+PM Version Fails
 
 $\pmast 4 \pmcdot 22 \pmthm \pmdott p \pmiff q \pmand q \pmiff r \pmdot \pmimp \pmdot p \pmiff r$
 
 *4.22 CKEpqEqrEpr
 
+My Version Works
+
+$\pmast 4 \pmcdot 22 \pmthm \pmdott p \pmiff q \pmandd q \pmiff r \pmdot \pmimp \pmdot p \pmiff r$
+
+*4.22 CKEpqEqrEpr
+
+PM Version fails
+
 $\pmast 4 \pmcdot 41 \pmthm \pmdottt p \pmdot \pmor \pmdot q \pmand r \pmdott \pmiff \pmdot p \pmor q \pmand p \pmor r$
 
 *4.41 EApKqrKApqApr
 
+My Version Works
+
+$\pmast 4 \pmcdot 41 \pmthm \pmdottt p \pmdot \pmor \pmdot q \pmand r \pmdott \pmiff \pmdot p \pmor q \pmandd p \pmor r$
+
+*4.41 EApKqrKApqApr
+
+PM Version fails
+
 $\pmast 4 \pmcdot 43 \pmthm \pmdottt p \pmdot \pmiff \pmdott p \pmor q \pmand p \pmor \pmnot q$
+
+*4.43 EpKApqApNq
+
+
+My Version works
+
+$\pmast 4 \pmcdot 43 \pmthm \pmdottt p \pmdot \pmiff \pmdott p \pmor q \pmandd p \pmor \pmnot q$
+
 
 *4.43 EpKApqApNq
 
@@ -1187,7 +1379,15 @@ $\pmast 4 \pmcdot 44 \pmthm \pmdottt p \pmdot \pmiff \pmdott p \pmdot \pmor \pmd
 
 *4.44 EpApKpq
 
+PM Version fails
+
 $\pmast 4 \pmcdot 45 \pmthm \pmdott p \pmdot \pmiff \pmdot p \pmand p \pmor q$
+
+*4.45 EpKpApq
+
+My Version works
+
+$\pmast 4 \pmcdot 45 \pmthm \pmdott p \pmdot \pmiff \pmdot p \pmandd p \pmor q$
 
 *4.45 EpKpApq
 
@@ -1277,11 +1477,27 @@ $\pmast 4 \pmcdot 74 \pmthm \pmdottt  \pmnot p \pmdot \pmimp \pmdott q \pmdot \p
 
 *4.74 CNpEqApq
 
+PM Version fails
+
 $\pmast 4 \pmcdot 76 \pmthm \pmdottt p \pmimp q \pmand p \pmimp r \pmdot \pmiff \pmdott p \pmdot \pmimp \pmdot q \pmand r   $
 
 *4.76 EKCpqCprCpKqr
 
+My Version works
+
+$\pmast 4 \pmcdot 76 \pmthm \pmdottt p \pmimp q \pmandd p \pmimp r \pmdot \pmiff \pmdott p \pmdot \pmimp \pmdot q \pmand r   $
+
+*4.76 EKCpqCprCpKqr
+
+PM Version fails
+
 $\pmast 4 \pmcdot 77 \pmthm \pmdottt q \pmimp p \pmand r \pmimp p \pmdot \pmiff \pmdott q \pmor r \pmdot \pmimp \pmdot p   $
+
+*4.77 EKCqpCrpCAqrp
+
+My Version works
+
+$\pmast 4 \pmcdot 77 \pmthm \pmdottt q \pmimp p \pmandd r \pmimp p \pmdot \pmiff \pmdott q \pmor r \pmdot \pmimp \pmdot p   $
 
 *4.77 EKCqpCrpCAqrp
 
@@ -1301,11 +1517,27 @@ $\pmast 4 \pmcdot 81 \pmthm \pmdott \pmnot p \pmimp p \pmdot \pmiff \pmdot p $
 
 *4.81 ECNppp
 
+PM Version fails
+
 $\pmast 4 \pmcdot 82 \pmthm \pmdott p \pmimp q \pmand p \pmimp \pmnot q \pmdot \pmiff \pmdot \pmnot p $
 
 *4.82 EKCpqCpNqNp
 
+My Version works
+
+$\pmast 4 \pmcdot 82 \pmthm \pmdott p \pmimp q \pmandd p \pmimp \pmnot q \pmdot \pmiff \pmdot \pmnot p $
+
+*4.82 EKCpqCpNqNp
+
+PM Version fails
+
 $\pmast 4 \pmcdot 83 \pmthm \pmdott p \pmimp q \pmand \pmnot p \pmimp q \pmdot \pmiff \pmdot q $
+
+*4.83 EKCpqCNpqq
+
+My Version works
+
+$\pmast 4 \pmcdot 83 \pmthm \pmdott p \pmimp q \pmandd \pmnot p \pmimp q \pmdot \pmiff \pmdot q $
 
 *4.83 EKCpqCNpqq
 
@@ -1349,9 +1581,25 @@ $\pmast 5 \pmcdot 15 \pmthm \pmdott p \pmiff q \pmdot \pmor \pmdot p \pmiff \pmn
 
 *5.15 AEpqEpNq
 
+PM Version fails
+
 $\pmast 5 \pmcdot 16 \pmthm \pmdottt \pmnot \pmdott p \pmiff q \pmand p \pmiff \pmnot q $
 
 *5.16 NKEpqEpNq
+
+My Version works
+
+$\pmast 5 \pmcdot 16 \pmthm \pmdottt \pmnot \pmdott p \pmiff q \pmandd p \pmiff \pmnot q $
+
+*5.16 NKEpqEpNq
+
+PM Version with parentheses
+
+$\pmast 5 \pmcdot 17 \pmthm \pmdott p \pmor q \pmand \pmnot ( p \pmand q ) \pmdot \pmiff \pmdot p \pmiff \pmnot q     $
+
+*5.17 EKApqNKpqEpNq
+
+My version with dots 
 
 $\pmast 5 \pmcdot 17 \pmthm \pmdot p \pmor q \pmand \pmnot \pmdott p \pmand q \pmdotttt \pmiff \pmdot p \pmiff \pmnot q  $
 
@@ -1377,7 +1625,7 @@ $\pmast 5 \pmcdot 23 \pmthm \pmdottt p \pmiff q \pmdot \pmiff \pmdott p \pmand q
 
 *5.23 EEpqAKpqKNpNq
 
-$\pmast 5 \pmcdot 24 \pmthm \pmdotttt \pmnot \pmdott p \pmand q \pmdot \pmor \pmdot \pmnot p \pmand \pmnot q \pmdottt \pmiff \pmdott p \pmand \pmnot q \pmdot \pmor \pmdot q \pmand \pmnot p  $
+$\pmast 5 \pmcdot 24 \pmthm \pmdotttt \pmnot \pmdott p \pmandd q \pmdot \pmor \pmdot \pmnot p \pmand \pmnot q \pmdottt \pmiff \pmdott p \pmand \pmnot q \pmdot \pmor \pmdot q \pmand \pmnot p  $
 
 *5.24 ENAKpqKNpNqAKpNqKqNp
 
@@ -1389,7 +1637,15 @@ $\pmast 5 \pmcdot 3 \pmthm \pmdottt p \pmand q \pmdot \pmimp \pmdot r \pmdott \p
 
 *5.3 ECKpqrCKpqKpr
 
+PM Version fails
+
 $\pmast 5 \pmcdot 31 \pmthm \pmdottt r \pmand p \pmimp q \pmdott \pmimp \pmdott p \pmdot \pmimp \pmdot q \pmand r   $
+
+*5.31 CKrCpqCpKqr
+
+My Version works
+
+$\pmast 5 \pmcdot 31 \pmthm \pmdottt r \pmandd p \pmimp q \pmdott \pmimp \pmdott p \pmdot \pmimp \pmdot q \pmand r   $
 
 *5.31 CKrCpqCpKqr
 
@@ -1397,17 +1653,42 @@ $\pmast 5 \pmcdot 32 \pmthm \pmdottt p \pmdot \pmimp \pmdot q \pmiff r \pmdott \
 
 *5.32 ECpEqrEKpqKpr
 
+PM Version fails
+
 $\pmast 5 \pmcdot 33 \pmthm \pmdottt p \pmand q \pmimp r \pmdot \pmiff \pmdott p \pmandd p \pmand q \pmdot \pmimp \pmdot r$
 
 *5.33 EKpCqrKpCKpqr
+
+I don't understand W and R's intent
+
+$\pmast 5 \pmcdot 33 \pmthm \pmdottt p \pmandd q \pmimp r \pmdot \pmiff \pmdott p \pmandd p \pmand q \pmdot \pmimp \pmdot r$
+
+*5.33 EKpCqrKpCKpqr
+
+PM Version fails
 
 $\pmast 5 \pmcdot 35 \pmthm \pmdottt p \pmimp q \pmand p \pmimp r \pmdot \pmimp \pmdott p \pmdot \pmimp \pmdot q \pmiff r    $
 
 
 *5.35 CKCpqCprCpEqr
 
+My version works
+
+$\pmast 5 \pmcdot 35 \pmthm \pmdottt p \pmimp q \pmandd p \pmimp r \pmdot \pmimp \pmdott p \pmdot \pmimp \pmdot q \pmiff r    $
+
+
+*5.35 CKCpqCprCpEqr
+
+
+PM Version fails
 
 $\pmast 5 \pmcdot 36 \pmthm \pmdott p \pmand p \pmiff q \pmdot \pmiff \pmdot q \pmand p \pmiff q  $
+
+*5.36 EKpEpqKqEpq
+
+My Version works
+
+$\pmast 5 \pmcdot 36 \pmthm \pmdott p \pmandd p \pmiff q \pmdot \pmiff \pmdot q \pmandd p \pmiff q  $
 
 *5.36 EKpEpqKqEpq
 
@@ -1436,23 +1717,33 @@ $\pmast 5 \pmcdot 501 \pmthm \pmdottt p \pmdot \pmimp \pmdott q \pmdot \pmiff \p
 *5.501 CpEqEpq
 
 The order of evaluation under PM rules ambiguous without the definitions
-*2.33 and *4.34 (which Greg Landini pointed out to me), which my program doesn't account for. The two interpretations of *5.53 are equivalent although different. 
+*2.33 and *4.34 (which Greg Landini pointed out to me), which my program didn't account for at first. Now Fixed.
+
+PM Version fails
 
 $\pmast 5 \pmcdot 53 \pmthm \pmdottt p \pmor q \pmor r \pmdot \pmimp \pmdot s \pmdott \pmiff \pmdott p \pmimp s \pmand q \pmimp s \pmand r \pmimp s $
 
 *5.53 ECAApqrsKKCpsCqsCrs
 
-Dan's interpretation of *5.54 differs from mine. I favor mine as the disjunction is separated by more dots. Dan has now communicated his agreement with my programs output.
+My Version works
+
+$\pmast 5 \pmcdot 53 \pmthm \pmdottt p \pmor q \pmor r \pmdot \pmimp \pmdot s \pmdott \pmiff \pmdott p \pmimp s \pmandd q \pmimp s \pmandd r \pmimp s $
+
+*5.53 ECAApqrsKKCpsCqsCrs
+
+Dan's old interpretation of *5.54 differed from mine. I favor mine as the disjunction is separated by more dots. Dan has now communicated his agreement with my programs output.
 
 $\pmast 5 \pmcdot 54 \pmthm \pmdottt p \pmand q \pmdot \pmiff \pmdot p \pmdott \pmor \pmdott p \pmand q \pmdot \pmiff \pmdot q  $
 
-*5.54 EKpqApEKpqq
+*5.54 AEKpqpEKpqq - Dan now agrees
+*5.54 EKpqApEKpqq - Dan's old
 
 Dan's interpretation of *5.55 differs from mine. I favor mine as the disjunction is separated by more dots.  Dan has now communicated his agreement with my programs output.
 
 $\pmast 5 \pmcdot 55 \pmthm \pmdottt p \pmor q \pmdot \pmiff \pmdot p \pmdott \pmor \pmdott p \pmor q \pmdot \pmiff \pmdot q    $
 
-*5.55 EApqApEApqq
+*5.55 AEApqpEApqq - Dan now agrees
+*5.55 EApqApEApqq - Dan's old
 
 $\pmast 5 \pmcdot 6 \pmthm \pmdottt p \pmand \pmnot q \pmdot \pmimp \pmdot r \pmdott \pmiff \pmdott p \pmdot \pmimp \pmdot q \pmor r     $
 
@@ -1478,13 +1769,25 @@ Dan's interpretation of *5.71 differs from my program's. My program looks to me 
 
 $\pmast 5 \pmcdot 71 \pmthm \pmdottt q \pmimp \pmnot r \pmdot \pmimp \pmdott p \pmor q \pmand r \pmdot \pmiff \pmdot p \pmand r   $
 
-*5.71 CqNrEApKqrKpr
+*5.71 CCqNrEKApqrKpr - Dan now agrees 
+*5.71 CqNrEApKqrKpr  - Dan's old
+
 
 $\pmast 5 \pmcdot 74 \pmthm \pmdottt p \pmdot \pmimp \pmdot q \pmiff r \pmdott \pmiff \pmdott p \pmimp q \pmdot \pmiff \pmdot p \pmimp r $
 
 *5.74 ECpEqrECpqCpr
 
+Seems my program's *5.75 differs from Dan's
+
+PM Version fails
+
 $\pmast 5 \pmcdot 75 \pmthm \pmdottt r \pmimp \pmnot q \pmandd p \pmdot \pmiff \pmdot q \pmor r \pmdott \pmimp \pmdott p \pmand \pmnot q \pmdot \pmiff \pmdot r       $
+
+*5.75 CKCrNqEpAqrEKpNqr
+
+I don't understand W and R's intent in *5.75
+
+$\pmast 5 \pmcdot 75 \pmthm \pmdottt r \pmimp \pmnot q \pmandd p \pmdot \pmiff \pmdot q \pmor r \pmdott \pmimp \pmdott p \pmandd \pmnot q \pmdot \pmiff \pmdot r       $
 
 *5.75 CKCrNqEpAqrEKpNqr
 

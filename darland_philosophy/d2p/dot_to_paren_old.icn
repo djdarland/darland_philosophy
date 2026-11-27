@@ -8,7 +8,7 @@ $define LUK 1
 $define POLISH_INCLUDED 1
 $define BEGIN "%begin"
 
-global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, qneg, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, max_exe, delim_q2, delim_l2, max_iter, stk, reverse_polish, head, qiddf, dbg, stack
+global dot, dott, dottt, dotttt, dottttt, dotttttt, and, andd, anddd, andddd, anddddd, anddddd, andddddd, dot_flag, qexist, qall, qdsc, qneg, lineno, sno_s, val_s, echo, sno_tmp, val_tmp, last_sep, qor, qimp, qiff, lextra, qextra, max_exe, delim_q2, delim_l2, max_iter, stk, reverse_polish, head, qiddf, dbg, stack, nextra
 
 procedure main()
    # next 2 lines used to get debugging from unicon
@@ -23,8 +23,9 @@ procedure init()
    write(dbg, "Started Debugging")
    max_iter := MAX_LOOP
    max_exe := 10000000
-   lextra := 1
-   qextra := 1
+   nextra := 1
+   lextra := 2
+   qextra := 2
    delim_l2 := ' abcdefghijklmnopqrstuvwxyz$\\'
    delim_q2 := ' abcdefghijklmnopqrstuvwxyz$\\'
    delim_n2 := ' abcdefghijklmnopqrstuvwxyz$\\'
@@ -177,13 +178,13 @@ procedure process2(linein)
    # Next change "TEMP" back to quantifier symbol
    linein := sub_temp(linein, qall)
    #         # write("% POST02 linein after all  = ", linein) 
-   linein := sub_ndot(linein, qneg, dotttttt,   (" " || repl("!",6 + qextra) || " "))
-   linein := sub_ndot(linein, qneg, dottttt,   (" " || repl("!",5 + qextra) || " "))
-   linein := sub_ndot(linein, qneg, dotttt,   (" " || repl("!",4 + qextra) || " "))
-   linein := sub_ndot(linein, qneg, dottt,   (" " || repl("!",3 + qextra) || " "))
-   linein := sub_ndot(linein, qneg, dott,   (" " || repl("!",2 + qextra) || " "))
-   linein := sub_ndot(linein, qneg, dot,   (" " || repl("!",1 + qextra) || " "))
-   linein := sub_ndot(linein, qneg, " ",   (" " || repl("!", qextra) || " "))
+   linein := sub_ndot(linein, qneg, dotttttt,   (" " || repl("!",6 + nextra) || " "))
+   linein := sub_ndot(linein, qneg, dottttt,   (" " || repl("!",5 + nextra) || " "))
+   linein := sub_ndot(linein, qneg, dotttt,   (" " || repl("!",4 + nextra) || " "))
+   linein := sub_ndot(linein, qneg, dottt,   (" " || repl("!",3 + nextra) || " "))
+   linein := sub_ndot(linein, qneg, dott,   (" " || repl("!",2 + nextra) || " "))
+   linein := sub_ndot(linein, qneg, dot,   (" " || repl("!",1 + nextra) || " "))
+   linein := sub_ndot(linein, qneg, " ",   (" " || repl("!", nextra) || " "))
    # Next change "TEMP" back to quantifier symbol
    linein := sub_temp(linein, qneg)
    #         # write("% POST02 linein after all  = ", linein)
@@ -238,12 +239,12 @@ procedure process2(linein)
    
    # Next change dots associated with conjunction to ";"
    # Group III on page 9 to *56
-   linein := sub_dot(linein, andddddd, ";;;;;; \\land :::::::")
-   linein := sub_dot(linein, anddddd,  ";;;;; \\land ::::::")
-   linein := sub_dot(linein, andddd,   ";;;; \\land :::::")
-   linein := sub_dot(linein, anddd,    ";;; \\land ::::")
-   linein := sub_dot(linein, andd,     ";; \\land :::")
-   linein := sub_dot(linein, and,      "; \\land ::")
+   linein := sub_dot(linein, andddddd, ";;;;; \\land :::::")
+   linein := sub_dot(linein, anddddd,  ";;;; \\land ::::")
+   linein := sub_dot(linein, andddd,   ";;; \\land :::")
+   linein := sub_dot(linein, anddd,    ";; \\land ::")
+   linein := sub_dot(linein, andd,     "; \\land :")
+   linein := sub_dot(linein, and,      " \\land ")
    #         # write("% POST06 linein after and = ", linein)
    linein := front || linein
    # next compute number of left parens to start with
