@@ -79665,286 +79665,288 @@ Dennis1  E    C   p     E   q   r     E    K   p    q     K   p    r
 Dennis2$\pmast 5 \pmcdot 32 \pmthm((p \pmimp (q \pmiff r)) \pmiff ((p \land q) \pmiff (p \land r)))$
 Exit to_Polish stmt below
   ((((  p  ))) \pmimp (((  q \pmiff r  )))) \pmiff ((((  p  \land  q  ))) \pmiff (((  p  \land  r ))))
-HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
+HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmandddddd
 HEREHERE dots_out = ;;;;; \land :::::
-HEREHEREHERE  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
-HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
+HEREHEREHERE  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r $
+HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmanddddd
 HEREHERE dots_out = ;;;; \land ::::
-HEREHEREHERE  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
-HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
+HEREHEREHERE  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r $
+HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmandddd
 HEREHERE dots_out = ;;; \land :::
-HEREHEREHERE  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
-HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
+HEREHEREHERE  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r $
+HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmanddd
 HEREHERE dots_out = ;; \land ::
-HEREHEREHERE  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
-HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
+HEREHEREHERE  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r $
+HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmandd
 HEREHERE dots_out = ; \land :
 HEREAGAIN part1 =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p 
-HEREAGAIN part2 =  p \pmand q  ... \pmimp ^^^  r$
-HEREHEREHERE  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p ; \land : p \pmand q  ... \pmimp ^^^  r$
-HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p ; \land : p \pmand q  ... \pmimp ^^^  r$
+HEREAGAIN part2 =  p \pmand q  ... \pmimp ^^^  r $
+HEREHEREHERE  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p ; \land : p \pmand q  ... \pmimp ^^^  r $
+HEREHERE linein =  ^^^  p \pmand q \pmimp r  ... \pmiff ^^^^  p ; \land : p \pmand q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmand
 HEREHERE dots_out =  \land 
 HEREAGAIN part1 =  ^^^  p 
-HEREAGAIN part2 =  q \pmimp r  ... \pmiff ^^^^  p ; \land : p \pmand q  ... \pmimp ^^^  r$
+HEREAGAIN part2 =  q \pmimp r  ... \pmiff ^^^^  p ; \land : p \pmand q  ... \pmimp ^^^  r $
 HEREAGAIN part1 =  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p 
-HEREAGAIN part2 =  q  ... \pmimp ^^^  r$
-HEREHEREHERE  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREAGAIN part2 =  q  ... \pmimp ^^^  r $
+HEREHEREHERE  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmdotttttt
 HEREHERE dots_out = !!!!!!
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmdottttt
 HEREHERE dots_out = !!!!!
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmdotttt
 HEREHERE dots_out = !!!!
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmdottt
 HEREHERE dots_out = !!!
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmdott
 HEREHERE dots_out = !!
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
 HEREHERE dot_str = \pmdot
 HEREHERE dots_out = !
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HERE BA li = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HERE AA li = $\pmast 5 \pmcdot 33 \pmthm  (((((((((((((((((((  p  \land  q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r))))))))))))))))))))$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
+HERE BA li = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p  \land  q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r $
+HERE AA li = $\pmast 5 \pmcdot 33 \pmthm  (((((((((((((((((((  p  \land  q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r ))))))))))))))))))))$
 Enter to_Polish infix below
-$\pmast 5 \pmcdot 33 \pmthm  (((  p  \land  q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r))))$
+$\pmast 5 \pmcdot 33 \pmthm  (((  p  \land  q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r ))))$
 A0001 head1 = $\pmast 5 \pmcdot 33 \
 A0002 head2 = pmthm
 A0003 head = $\pmast 5 \pmcdot 33 \pmthm
-A0004 stmt =   (((  p  \land  q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r))))$
-A0005 reverse stmt = $))))r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+A0004 stmt =   (((  p  \land  q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r ))))$
+A0005 reverse stmt = $)))) r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
 A0006 tail1 = 
 A0007 tail2 = $
-A0008 rest = ))))r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+A0008 rest = )))) r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
 infixToPolish B0001
-B002 infix =   (((  p  \land  q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r))))
-B003 reverse infix = ))))r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 1 *infix = 92
-B005 infix = ()))r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 2 *infix = 92
-B005 infix = (())r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 3 *infix = 92
-B005 infix = ((()r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 4 *infix = 92
-B005 infix = ((((r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 5 *infix = 92
-B005 infix = ((((r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 6 *infix = 92
-B005 infix = ((((r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 7 *infix = 92
-B005 infix = ((((r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 8 *infix = 92
-B005 infix = ((((r  )(( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 9 *infix = 92
-B005 infix = ((((r  ))( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 10 *infix = 92
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 11 *infix = 92
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 12 *infix = 92
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 13 *infix = 92
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 14 *infix = 92
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 15 *infix = 92
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 16 *infix = 92
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 17 *infix = 92
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 18 *infix = 92
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 19 *infix = 92
-B005 infix = ((((r  ))) pmimp\ ())  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 20 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (()  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 21 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 22 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 23 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 24 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 25 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 26 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 27 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 28 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 29 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 30 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 31 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 32 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 33 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 34 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 35 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 36 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 37 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 38 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 39 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 40 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 41 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 42 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 43 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 44 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 45 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 46 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 47 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 48 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 49 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 50 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  ))(( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 51 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 52 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 53 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 54 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 55 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 56 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 57 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 58 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 59 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 60 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
-B004 iii = 61 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ ())  r pmimp\ q  dnal\  p  (((  
-B004 iii = 62 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (()  r pmimp\ q  dnal\  p  (((  
-B004 iii = 63 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 64 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 65 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 66 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 67 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 68 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 69 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 70 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 71 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 72 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 73 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 74 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 75 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 76 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 77 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 78 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 79 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 80 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 81 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 82 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 83 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 84 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 85 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 86 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 87 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
-B004 iii = 88 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )((  
-B004 iii = 89 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  ))(  
-B004 iii = 90 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
-B004 iii = 91 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
-B004 iii = 92 *infix = 92
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+B002 infix =   (((  p  \land  q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r ))))
+B003 reverse infix = )))) r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 1 *infix = 93
+B005 infix = ())) r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 2 *infix = 93
+B005 infix = (()) r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 3 *infix = 93
+B005 infix = ((() r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 4 *infix = 93
+B005 infix = (((( r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 5 *infix = 93
+B005 infix = (((( r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 6 *infix = 93
+B005 infix = (((( r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 7 *infix = 93
+B005 infix = (((( r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 8 *infix = 93
+B005 infix = (((( r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 9 *infix = 93
+B005 infix = (((( r  )(( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 10 *infix = 93
+B005 infix = (((( r  ))( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 11 *infix = 93
+B005 infix = (((( r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 12 *infix = 93
+B005 infix = (((( r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 13 *infix = 93
+B005 infix = (((( r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 14 *infix = 93
+B005 infix = (((( r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 15 *infix = 93
+B005 infix = (((( r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 16 *infix = 93
+B005 infix = (((( r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 17 *infix = 93
+B005 infix = (((( r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 18 *infix = 93
+B005 infix = (((( r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 19 *infix = 93
+B005 infix = (((( r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 20 *infix = 93
+B005 infix = (((( r  ))) pmimp\ ())  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 21 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (()  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 22 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 23 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 24 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 25 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 26 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 27 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 28 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 29 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 30 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 31 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 32 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 33 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 34 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 35 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 36 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 37 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 38 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 39 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 40 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 41 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 42 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 43 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 44 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 45 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 46 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 47 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 48 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 49 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 50 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )((( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 51 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  ))(( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 52 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))( ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 53 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 54 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 55 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 56 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 57 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 58 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 59 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 60 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 61 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q  dnal\  p  (((  
+B004 iii = 62 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ ())  r pmimp\ q  dnal\  p  (((  
+B004 iii = 63 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (()  r pmimp\ q  dnal\  p  (((  
+B004 iii = 64 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 65 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 66 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 67 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 68 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 69 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 70 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 71 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 72 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 73 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 74 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 75 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 76 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 77 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 78 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 79 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 80 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 81 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 82 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 83 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 84 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 85 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 86 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 87 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 88 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  (((  
+B004 iii = 89 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )((  
+B004 iii = 90 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  ))(  
+B004 iii = 91 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+B004 iii = 92 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+B004 iii = 93 *infix = 93
+B005 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
 before infixToReverse_Polish
 Enter infixToReverse_Polish
-C0001 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+C0001 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+C0002 *infix = 93
+C0003 nxt = (
+C0005 is (
+C0014 infix = (((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+C0015 infix = ((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
 C0002 *infix = 92
 C0003 nxt = (
 C0005 is (
-C0014 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
-C0015 infix = (((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+C0014 infix = ((( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+C0015 infix = (( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
 C0002 *infix = 91
 C0003 nxt = (
 C0005 is (
-C0014 infix = (((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
-C0015 infix = ((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+C0014 infix = (( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+C0015 infix = ( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
 C0002 *infix = 90
 C0003 nxt = (
 C0005 is (
-C0014 infix = ((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
-C0015 infix = (r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+C0014 infix = ( r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+C0015 infix =  r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
 C0002 *infix = 89
-C0003 nxt = (
-C0005 is (
-C0014 infix = (r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
-C0015 infix = r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
-C0002 *infix = 88
-C0003 nxt = r
+C0003 nxt =  r
 C0004 is operand
-C0014 infix = r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
+C0014 infix =  r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
 C0015 infix =   ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q  dnal\  p  )))  
 C0002 *infix = 87
 C0003 nxt =   )
@@ -80126,342 +80128,300 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
-Dennis1  E    C    K   p    q   r     C    K   p    K   p    q    r 
+Dennis1  E    C    K   p    q   r     C    K   p    K   p    q    r  
 Dennis2$\pmast 5 \pmcdot 33 \pmthm(((p \land q) \pmimp r) \pmiff ((p \land (p \land q)) \pmimp r))$
 Exit to_Polish stmt below
-  (((  p  \land  q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r))))
-HEREHERE linein =  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
+  (((  p  \land  q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r ))))
+HEREHERE linein =  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q \pmimp r    $
 HEREHERE dot_str = \pmandddddd
 HEREHERE dots_out = ;;;;; \land :::::
-HEREHEREHERE  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
-HEREHERE linein =  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
+HEREHEREHERE  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q \pmimp r    $
+HEREHERE linein =  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q \pmimp r    $
 HEREHERE dot_str = \pmanddddd
 HEREHERE dots_out = ;;;; \land ::::
-HEREHEREHERE  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
-HEREHERE linein =  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
+HEREHEREHERE  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q \pmimp r    $
+HEREHERE linein =  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q \pmimp r    $
 HEREHERE dot_str = \pmandddd
 HEREHERE dots_out = ;;; \land :::
-HEREHEREHERE  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
-HEREHERE linein =  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
+HEREHEREHERE  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q \pmimp r    $
+HEREHERE linein =  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q \pmimp r    $
 HEREHERE dot_str = \pmanddd
 HEREHERE dots_out = ;; \land ::
-HEREHEREHERE  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
-HEREHERE linein =  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
+HEREHEREHERE  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q \pmimp r    $
+HEREHERE linein =  ^^^  p \pmandd q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q \pmimp r    $
 HEREHERE dot_str = \pmandd
 HEREHERE dots_out = ; \land :
 HEREAGAIN part1 =  ^^^  p 
-HEREAGAIN part2 =  q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q  ... \pmimp ^^^  r$
+HEREAGAIN part2 =  q \pmimp r  ... \pmiff ^^^^  p \pmandd p \pmand q \pmimp r    $
 HEREAGAIN part1 =  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p 
-HEREAGAIN part2 =  p \pmand q  ... \pmimp ^^^  r$
-HEREHEREHERE  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p \pmand q  ... \pmimp ^^^  r$
-HEREHERE linein =  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p \pmand q  ... \pmimp ^^^  r$
+HEREAGAIN part2 =  p \pmand q \pmimp r    $
+HEREHEREHERE  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p \pmand q \pmimp r    $
+HEREHERE linein =  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p \pmand q \pmimp r    $
 HEREHERE dot_str = \pmand
 HEREHERE dots_out =  \land 
 HEREAGAIN part1 =  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p 
-HEREAGAIN part2 =  q  ... \pmimp ^^^  r$
-HEREHEREHERE  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREAGAIN part2 =  q \pmimp r    $
+HEREHEREHERE  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
 HEREHERE dot_str = \pmdotttttt
 HEREHERE dots_out = !!!!!!
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
 HEREHERE dot_str = \pmdottttt
 HEREHERE dots_out = !!!!!
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
 HEREHERE dot_str = \pmdotttt
 HEREHERE dots_out = !!!!
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
 HEREHERE dot_str = \pmdottt
 HEREHERE dots_out = !!!
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
 HEREHERE dot_str = \pmdott
 HEREHERE dots_out = !!
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
+HEREHERE linein = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
 HEREHERE dot_str = \pmdot
 HEREHERE dots_out = !
-HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HERE BA li = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q  ... \pmimp ^^^  r$
-HERE AA li = $\pmast 5 \pmcdot 33 \pmthm  (((((((((((((((((((  p ) \land ( q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r))))))))))))))))))))$
+HEREHEREHERE $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
+HERE BA li = $\pmast 5 \pmcdot 33 \pmthm  ^^^  p ; \land : q \pmimp r  ... \pmiff ^^^^  p ; \land : p  \land  q \pmimp r    $
+HERE AA li = $\pmast 5 \pmcdot 33 \pmthm  (((((((((((((  p ) \land ( q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q \pmimp r    ))))))))))))))$
 Enter to_Polish infix below
-$\pmast 5 \pmcdot 33 \pmthm  (((  p ) \land ( q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r))))$
+$\pmast 5 \pmcdot 33 \pmthm  (((  p ) \land ( q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q \pmimp r    ))))$
 A0001 head1 = $\pmast 5 \pmcdot 33 \
 A0002 head2 = pmthm
 A0003 head = $\pmast 5 \pmcdot 33 \pmthm
-A0004 stmt =   (((  p ) \land ( q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r))))$
-A0005 reverse stmt = $))))r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+A0004 stmt =   (((  p ) \land ( q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q \pmimp r    ))))$
+A0005 reverse stmt = $))))    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
 A0006 tail1 = 
 A0007 tail2 = $
-A0008 rest = ))))r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+A0008 rest = ))))    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
 infixToPolish B0001
-B002 infix =   (((  p ) \land ( q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r))))
-B003 reverse infix = ))))r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 1 *infix = 94
-B005 infix = ()))r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 2 *infix = 94
-B005 infix = (())r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 3 *infix = 94
-B005 infix = ((()r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 4 *infix = 94
-B005 infix = ((((r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 5 *infix = 94
-B005 infix = ((((r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 6 *infix = 94
-B005 infix = ((((r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 7 *infix = 94
-B005 infix = ((((r  ((( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 8 *infix = 94
-B005 infix = ((((r  )(( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 9 *infix = 94
-B005 infix = ((((r  ))( pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 10 *infix = 94
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 11 *infix = 94
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 12 *infix = 94
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 13 *infix = 94
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 14 *infix = 94
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 15 *infix = 94
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 16 *infix = 94
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 17 *infix = 94
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 18 *infix = 94
-B005 infix = ((((r  ))) pmimp\ )))  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 19 *infix = 94
-B005 infix = ((((r  ))) pmimp\ ())  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 20 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (()  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 21 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 22 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 23 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 24 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 25 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 26 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 27 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 28 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 29 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 30 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 31 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 32 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 33 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 34 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 35 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 36 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 37 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 38 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 39 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 40 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 41 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 42 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 43 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 44 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 45 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 46 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 47 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 48 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 49 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 50 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  ))(( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 51 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 52 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 53 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 54 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 55 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 56 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 57 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 58 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 59 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 60 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 61 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ ())  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 62 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (()  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 63 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 64 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 65 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 66 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 67 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 68 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 69 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 70 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 71 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 72 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 73 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 74 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 75 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 76 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
-B004 iii = 77 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
-B004 iii = 78 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
-B004 iii = 79 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
-B004 iii = 80 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
-B004 iii = 81 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
-B004 iii = 82 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
-B004 iii = 83 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
-B004 iii = 84 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
-B004 iii = 85 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  (((  
-B004 iii = 86 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  (((  
-B004 iii = 87 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  (((  
-B004 iii = 88 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  (((  
-B004 iii = 89 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  (((  
-B004 iii = 90 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )((  
-B004 iii = 91 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  ))(  
-B004 iii = 92 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-B004 iii = 93 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-B004 iii = 94 *infix = 94
-B005 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+B002 infix =   (((  p ) \land ( q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q \pmimp r    ))))
+B003 reverse infix = ))))    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 1 *infix = 88
+B005 infix = ()))    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 2 *infix = 88
+B005 infix = (())    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 3 *infix = 88
+B005 infix = ((()    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 4 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 5 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 6 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 7 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 8 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 9 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 10 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 11 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 12 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 13 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 14 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 15 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 16 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 17 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 18 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 19 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 20 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 21 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 22 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 23 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 24 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 25 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 26 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 27 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 28 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 29 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ( dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 30 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 31 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 32 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 33 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 34 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 35 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 36 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 37 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ) p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 38 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 39 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 40 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 41 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 42 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  (((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 43 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )((( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 44 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  ))(( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 45 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))( ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 46 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 47 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 48 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 49 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 50 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 51 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 52 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 53 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 54 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ )))  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 55 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ ())  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 56 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (()  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 57 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 58 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 59 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 60 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 61 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 62 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 63 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 64 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 65 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 66 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 67 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 68 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 69 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 70 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ( dnal\ ) p  (((  
+B004 iii = 71 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
+B004 iii = 72 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
+B004 iii = 73 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
+B004 iii = 74 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
+B004 iii = 75 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
+B004 iii = 76 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
+B004 iii = 77 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
+B004 iii = 78 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ) p  (((  
+B004 iii = 79 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  (((  
+B004 iii = 80 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  (((  
+B004 iii = 81 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  (((  
+B004 iii = 82 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  (((  
+B004 iii = 83 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  (((  
+B004 iii = 84 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )((  
+B004 iii = 85 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  ))(  
+B004 iii = 86 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+B004 iii = 87 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+B004 iii = 88 *infix = 88
+B005 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
 before infixToReverse_Polish
 Enter infixToReverse_Polish
-C0001 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0002 *infix = 94
+C0001 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0002 *infix = 88
 C0003 nxt = (
 C0005 is (
-C0014 infix = ((((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix = (((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0002 *infix = 93
+C0014 infix = ((((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0015 infix = (((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0002 *infix = 87
 C0003 nxt = (
 C0005 is (
-C0014 infix = (((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix = ((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0002 *infix = 92
-C0003 nxt = (
-C0005 is (
-C0014 infix = ((r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix = (r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0002 *infix = 91
-C0003 nxt = (
-C0005 is (
-C0014 infix = (r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix = r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0002 *infix = 90
-C0003 nxt = r
-C0004 is operand
-C0014 infix = r  ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix =   ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0002 *infix = 89
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   ))) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix = )) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0014 infix = (((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0015 infix = ((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
 C0002 *infix = 86
-C0003 nxt = )
-C0006 is )
-C0014 infix = )) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix = ) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0003 nxt = (
+C0005 is (
+C0014 infix = ((    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0015 infix = (    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
 C0002 *infix = 85
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix =  pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0003 nxt = (
+C0005 is (
+C0014 infix = (    r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0015 infix =     r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
 C0002 *infix = 84
+C0003 nxt =     r
+C0004 is operand
+C0014 infix =     r pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0015 infix =  pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0002 *infix = 79
 C0003 nxt =  pmimp\
-C0008 *stk = 1
+C0008 *stk = 4
 C0009 top_stack() = (
 C0012 nxt =  pmimp\
 C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix =  (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0002 *infix = 77
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  (((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix = ((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0002 *infix = 75
-C0003 nxt = (
-C0005 is (
-C0014 infix = ((  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix = (  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0002 *infix = 74
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0015 infix =   q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
-C0002 *infix = 73
-C0003 nxt =   q
+C0014 infix =  pmimp\ q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0015 infix =  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0002 *infix = 72
+C0003 nxt =  q
 C0004 is operand
-C0014 infix =   q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
+C0014 infix =  q  dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
 C0015 infix =   dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
 C0002 *infix = 70
 C0003 nxt =   dnal\
 C0008 *stk = 5
-C0009 top_stack() = (
+C0009 top_stack() = pmimp\
 C0012 nxt =   dnal\
 C0013 nxt =   dnal\
 C0014 infix =   dnal\  p ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
@@ -80476,11 +80436,13 @@ C0003 nxt =  )
 C0006 is )
 C0007 *stk = 6
 C0007 top_stack = dnal\
+C0007 *stk = 5
+C0007 top_stack = pmimp\
 C0014 infix =  ) dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
 C0015 infix =  dnal\ ( p  )))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
 C0002 *infix = 58
 C0003 nxt =  dnal\
-C0008 *stk = 4
+C0008 *stk = 3
 C0009 top_stack() = (
 C0012 nxt =  dnal\
 C0013 nxt =  dnal\
@@ -80504,7 +80466,7 @@ C0015 infix = ))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))
 C0002 *infix = 45
 C0003 nxt = )
 C0006 is )
-C0007 *stk = 5
+C0007 *stk = 4
 C0007 top_stack = dnal\
 C0014 infix = ))) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
 C0015 infix = )) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
@@ -80516,8 +80478,6 @@ C0015 infix = ) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))
 C0002 *infix = 43
 C0003 nxt = )
 C0006 is )
-C0007 *stk = 2
-C0007 top_stack = pmimp\
 C0014 infix = ) ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
 C0015 infix =  ffimp\ (((  r pmimp\ q ) dnal\ ( p  )))  
 C0002 *infix = 42
@@ -80605,10 +80565,10 @@ C0014 infix = )
 C0015 infix =   
 C0016 *stk = 1
 C0017 top_stack() = ffimp\
-Dennis1  E    K   p    C   q   r     C    K   p    K   p    q    r 
-Dennis2$\pmast 5 \pmcdot 33 \pmthm((p \land (q \pmimp r)) \pmiff ((p \land (p \land q)) \pmimp r))$
+Dennis1  E    K   p    C   q   r     K   p    C    K   p    q   r     
+Dennis2$\pmast 5 \pmcdot 33 \pmthm((p \land (q \pmimp r)) \pmiff (p \land ((p \land q) \pmimp r)))$
 Exit to_Polish stmt below
-  (((  p ) \land ( q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q  ))) \pmimp (((  r))))
+  (((  p ) \land ( q \pmimp r  ))) \pmiff ((((  p ) \land ( p  \land  q \pmimp r    ))))
 HEREHERE linein =  ^^^  p \pmimp q \pmand p \pmimp r  ... \pmimp ^^^^  p  ... \pmimp ^^^  q \pmiff r    $
 HEREHERE dot_str = \pmandddddd
 HEREHERE dots_out = ;;;;; \land :::::
@@ -90800,628 +90760,6 @@ Dennis1  C    E    K    C   r    N   q   p     A   q   r     E    K   p     N   
 Dennis2$\pmast 5 \pmcdot 75 \pmthm((((r \pmimp ( \pmnot q)) \land p) \pmiff (q \pmor r)) \pmimp ((p \land ( \pmnot q)) \pmiff r))$
 Exit to_Polish stmt below
   ((((  r \pmimp \pmnot q ) \land ( p  ))) \pmiff (((  q \pmor r  )))) \pmimp ((((  p  \land  \pmnot q  ))) \pmiff (((  r       ))))
-HEREHERE linein =  ^^^  r \pmimp \pmnot q \pmandd p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p \pmandd \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmandddddd
-HEREHERE dots_out = ;;;;; \land :::::
-HEREHEREHERE  ^^^  r \pmimp \pmnot q \pmandd p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p \pmandd \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE linein =  ^^^  r \pmimp \pmnot q \pmandd p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p \pmandd \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmanddddd
-HEREHERE dots_out = ;;;; \land ::::
-HEREHEREHERE  ^^^  r \pmimp \pmnot q \pmandd p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p \pmandd \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE linein =  ^^^  r \pmimp \pmnot q \pmandd p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p \pmandd \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmandddd
-HEREHERE dots_out = ;;; \land :::
-HEREHEREHERE  ^^^  r \pmimp \pmnot q \pmandd p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p \pmandd \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE linein =  ^^^  r \pmimp \pmnot q \pmandd p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p \pmandd \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmanddd
-HEREHERE dots_out = ;; \land ::
-HEREHEREHERE  ^^^  r \pmimp \pmnot q \pmandd p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p \pmandd \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE linein =  ^^^  r \pmimp \pmnot q \pmandd p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p \pmandd \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmandd
-HEREHERE dots_out = ; \land :
-HEREAGAIN part1 =  ^^^  r \pmimp \pmnot q 
-HEREAGAIN part2 =  p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p \pmandd \pmnot q  ... \pmiff ^^^  r       $
-HEREAGAIN part1 =  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p 
-HEREAGAIN part2 =  \pmnot q  ... \pmiff ^^^  r       $
-HEREHEREHERE  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE linein =  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmand
-HEREHERE dots_out =  \land 
-HEREHEREHERE  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE linein = $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmdotttttt
-HEREHERE dots_out = !!!!!!
-HEREHEREHERE $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE linein = $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmdottttt
-HEREHERE dots_out = !!!!!
-HEREHEREHERE $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE linein = $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmdotttt
-HEREHERE dots_out = !!!!
-HEREHEREHERE $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE linein = $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmdottt
-HEREHERE dots_out = !!!
-HEREHEREHERE $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE linein = $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmdott
-HEREHERE dots_out = !!
-HEREHEREHERE $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE linein = $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HEREHERE dot_str = \pmdot
-HEREHERE dots_out = !
-HEREHEREHERE $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HERE BA li = $\pmast 5 \pmcdot 75 \pmthm  ^^^  r \pmimp \pmnot q ; \land : p  ... \pmiff ^^^  q \pmor r  .... \pmimp ^^^^  p ; \land : \pmnot q  ... \pmiff ^^^  r       $
-HERE AA li = $\pmast 5 \pmcdot 75 \pmthm  ((((((((((((((((((((((((((  r \pmimp \pmnot q ) \land ( p  ))) \pmiff (((  q \pmor r  )))) \pmimp ((((  p ) \land ( \pmnot q  ))) \pmiff (((  r       ))))))))))))))))))))))))))$
-Enter to_Polish infix below
-$\pmast 5 \pmcdot 75 \pmthm  ((((  r \pmimp \pmnot q ) \land ( p  ))) \pmiff (((  q \pmor r  )))) \pmimp ((((  p ) \land ( \pmnot q  ))) \pmiff (((  r       ))))$
-A0001 head1 = $\pmast 5 \pmcdot 75 \
-A0002 head2 = pmthm
-A0003 head = $\pmast 5 \pmcdot 75 \pmthm
-A0004 stmt =   ((((  r \pmimp \pmnot q ) \land ( p  ))) \pmiff (((  q \pmor r  )))) \pmimp ((((  p ) \land ( \pmnot q  ))) \pmiff (((  r       ))))$
-A0005 reverse stmt = $))))       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-A0006 tail1 = 
-A0007 tail2 = $
-A0008 rest = ))))       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-infixToPolish B0001
-B002 infix =   ((((  r \pmimp \pmnot q ) \land ( p  ))) \pmiff (((  q \pmor r  )))) \pmimp ((((  p ) \land ( \pmnot q  ))) \pmiff (((  r       ))))
-B003 reverse infix = ))))       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 1 *infix = 134
-B005 infix = ()))       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 2 *infix = 134
-B005 infix = (())       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 3 *infix = 134
-B005 infix = ((()       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 4 *infix = 134
-B005 infix = ((((       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 5 *infix = 134
-B005 infix = ((((       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 6 *infix = 134
-B005 infix = ((((       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 7 *infix = 134
-B005 infix = ((((       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 8 *infix = 134
-B005 infix = ((((       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 9 *infix = 134
-B005 infix = ((((       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 10 *infix = 134
-B005 infix = ((((       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 11 *infix = 134
-B005 infix = ((((       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 12 *infix = 134
-B005 infix = ((((       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 13 *infix = 134
-B005 infix = ((((       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 14 *infix = 134
-B005 infix = ((((       r  ((( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 15 *infix = 134
-B005 infix = ((((       r  )(( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 16 *infix = 134
-B005 infix = ((((       r  ))( ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 17 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 18 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 19 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 20 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 21 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 22 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 23 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 24 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 25 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ )))  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 26 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ ())  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 27 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (()  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 28 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 29 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 30 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 31 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 32 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 33 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 34 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 35 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 36 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 37 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 38 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 39 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ( dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 40 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 41 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 42 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 43 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 44 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 45 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 46 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 47 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ) p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 48 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 49 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 50 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 51 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 52 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  (((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 53 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )((( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 54 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  ))(( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 55 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))( pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 56 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 57 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 58 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 59 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 60 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 61 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 62 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 63 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 64 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ))))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 65 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ()))  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 66 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ (())  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 67 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((()  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 68 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 69 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 70 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 71 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 72 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 73 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 74 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 75 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 76 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 77 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 78 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 79 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 80 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 81 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ((( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 82 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  )(( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 83 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))( ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 84 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 85 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 86 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 87 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 88 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 89 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 90 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 91 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 92 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ )))  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 93 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ ())  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 94 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (()  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 95 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 96 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 97 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 98 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 99 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ( dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 100 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 101 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 102 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 103 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 104 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 105 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 106 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 107 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ) q tonmp\ pmimp\ r  ((((  
-B004 iii = 108 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 109 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 110 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 111 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 112 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 113 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 114 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 115 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 116 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 117 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 118 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 119 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 120 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 121 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 122 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 123 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 124 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 125 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 126 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 127 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 128 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ((((  
-B004 iii = 129 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  )(((  
-B004 iii = 130 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))((  
-B004 iii = 131 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  )))(  
-B004 iii = 132 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-B004 iii = 133 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-B004 iii = 134 *infix = 134
-B005 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-before infixToReverse_Polish
-Enter infixToReverse_Polish
-C0001 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 134
-C0003 nxt = (
-C0005 is (
-C0014 infix = ((((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = (((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 133
-C0003 nxt = (
-C0005 is (
-C0014 infix = (((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = ((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 132
-C0003 nxt = (
-C0005 is (
-C0014 infix = ((       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = (       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 131
-C0003 nxt = (
-C0005 is (
-C0014 infix = (       r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =        r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 130
-C0003 nxt =        r
-C0004 is operand
-C0014 infix =        r  ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =   ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 122
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   ))) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = )) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 119
-C0003 nxt = )
-C0006 is )
-C0014 infix = )) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = ) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 118
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 117
-C0003 nxt =  ffimp\
-C0008 *stk = 1
-C0009 top_stack() = (
-C0012 nxt =  ffimp\
-C0013 nxt =  ffimp\
-C0014 infix =  ffimp\ (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 110
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  (((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = ((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 108
-C0003 nxt = (
-C0005 is (
-C0014 infix = ((  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = (  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 107
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =   q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 106
-C0003 nxt =   q
-C0004 is operand
-C0014 infix =   q tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 103
-C0003 nxt =  tonmp\
-C0004 is operand
-C0014 infix =  tonmp\ ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 96
-C0003 nxt =  )
-C0006 is )
-C0014 infix =  ) dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 94
-C0003 nxt =  dnal\
-C0008 *stk = 4
-C0009 top_stack() = (
-C0012 nxt =  dnal\
-C0013 nxt =  dnal\
-C0014 infix =  dnal\ ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 88
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ( p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 86
-C0003 nxt =  p
-C0004 is operand
-C0014 infix =  p  )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =   )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 84
-C0003 nxt =   )
-C0006 is )
-C0014 infix =   )))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = ))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 81
-C0003 nxt = )
-C0006 is )
-C0007 *stk = 5
-C0007 top_stack = dnal\
-C0014 infix = ))) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = )) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 80
-C0003 nxt = )
-C0006 is )
-C0014 infix = )) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = ) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 79
-C0003 nxt = )
-C0006 is )
-C0007 *stk = 2
-C0007 top_stack = ffimp\
-C0014 infix = ) pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 78
-C0003 nxt =  pmimp\
-C0008 *stk = 0
-C0009 top_stack() = 
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 71
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ((((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = (((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 69
-C0003 nxt = (
-C0005 is (
-C0014 infix = (((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = ((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 68
-C0003 nxt = (
-C0005 is (
-C0014 infix = ((  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = (  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 67
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =   r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 66
-C0003 nxt =   r
-C0004 is operand
-C0014 infix =   r romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 63
-C0003 nxt =  romp\
-C0008 *stk = 5
-C0009 top_stack() = (
-C0012 nxt =  romp\
-C0013 nxt =  romp\
-C0014 infix =  romp\ q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 57
-C0003 nxt =  q
-C0004 is operand
-C0014 infix =  q  ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =   ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 55
-C0003 nxt =   )
-C0006 is )
-C0007 *stk = 6
-C0007 top_stack = romp\
-C0014 infix =   ))) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = )) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 52
-C0003 nxt = )
-C0006 is )
-C0014 infix = )) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = ) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 51
-C0003 nxt = )
-C0006 is )
-C0014 infix = ) ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 50
-C0003 nxt =  ffimp\
-C0008 *stk = 2
-C0009 top_stack() = (
-C0012 nxt =  ffimp\
-C0013 nxt =  ffimp\
-C0014 infix =  ffimp\ (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 43
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  (((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = ((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 41
-C0003 nxt = (
-C0005 is (
-C0014 infix = ((  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix = (  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 40
-C0003 nxt = (
-C0005 is (
-C0014 infix = (  p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =   p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 39
-C0003 nxt =   p
-C0004 is operand
-C0014 infix =   p ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 36
-C0003 nxt =  )
-C0006 is )
-C0014 infix =  ) dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 34
-C0003 nxt =  dnal\
-C0008 *stk = 5
-C0009 top_stack() = (
-C0012 nxt =  dnal\
-C0013 nxt =  dnal\
-C0014 infix =  dnal\ ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  ( q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 28
-C0003 nxt =  (
-C0005 is (
-C0014 infix =  ( q tonmp\ pmimp\ r  ))))  
-C0015 infix =  q tonmp\ pmimp\ r  ))))  
-C0002 *infix = 26
-C0003 nxt =  q
-C0004 is operand
-C0014 infix =  q tonmp\ pmimp\ r  ))))  
-C0015 infix =  tonmp\ pmimp\ r  ))))  
-C0002 *infix = 24
-C0003 nxt =  tonmp\
-C0004 is operand
-C0014 infix =  tonmp\ pmimp\ r  ))))  
-C0015 infix =  pmimp\ r  ))))  
-C0002 *infix = 17
-C0003 nxt =  pmimp\
-C0008 *stk = 7
-C0009 top_stack() = (
-C0012 nxt =  pmimp\
-C0013 nxt =  pmimp\
-C0014 infix =  pmimp\ r  ))))  
-C0015 infix =  r  ))))  
-C0002 *infix = 10
-C0003 nxt =  r
-C0004 is operand
-C0014 infix =  r  ))))  
-C0015 infix =   ))))  
-C0002 *infix = 8
-C0003 nxt =   )
-C0006 is )
-C0007 *stk = 8
-C0007 top_stack = pmimp\
-C0014 infix =   ))))  
-C0015 infix = )))  
-C0002 *infix = 5
-C0003 nxt = )
-C0006 is )
-C0007 *stk = 6
-C0007 top_stack = dnal\
-C0014 infix = )))  
-C0015 infix = ))  
-C0002 *infix = 4
-C0003 nxt = )
-C0006 is )
-C0014 infix = ))  
-C0015 infix = )  
-C0002 *infix = 3
-C0003 nxt = )
-C0006 is )
-C0007 *stk = 3
-C0007 top_stack = ffimp\
-C0014 infix = )  
-C0015 infix =   
-C0016 *stk = 1
-C0017 top_stack() = pmimp\
-Dennis1  C    E    K    C   r    N   q   p     A   q   r     E    K   p    N   q    r        
-Dennis2$\pmast 5 \pmcdot 75 \pmthm((((r \pmimp ( \pmnot q)) \land p) \pmiff (q \pmor r)) \pmimp ((p \land ( \pmnot q)) \pmiff r))$
-Exit to_Polish stmt below
-  ((((  r \pmimp \pmnot q ) \land ( p  ))) \pmiff (((  q \pmor r  )))) \pmimp ((((  p ) \land ( \pmnot q  ))) \pmiff (((  r       ))))
 HEREHERE linein =  ^  p \pmor q  ... \pmiff ^^^  r \pmimp s$
 HEREHERE dot_str = \pmandddddd
 HEREHERE dots_out = ;;;;; \land :::::
